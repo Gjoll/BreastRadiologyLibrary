@@ -15,11 +15,19 @@ using System.Data;
 using System.Globalization;
 using System.Linq;
 using Newtonsoft.Json.Linq;
+using BreastRadLib.Manual;
 
 namespace BreastRadiology.XUnitTests
 {
     [TestClass]
-    public sealed class BuildGG
+    public sealed class BreastRadiologyDocumentTests
     {
+        [TestMethod]
+        public void CreateBreastRadiologyDocument()
+        {
+            BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+            Debug.Assert(doc.Index != null);
+        }
     }
 }
+

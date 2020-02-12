@@ -14,15 +14,14 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public ServiceRecommendation(ServiceRequest resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public ServiceRecommendation() : base()
+		public ServiceRecommendation(ServiceRequest resource) : base(resource)
 		{
 			//+ Constructor
 			//- Constructor
+		}
+
+		public ServiceRecommendation() : this(new ServiceRequest())
+		{
 		}
 
 		public void Write()

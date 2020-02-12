@@ -28,12 +28,7 @@ namespace BreastRadLib
         public MemberList<IMGBreastDensity> MGBreastDensity {get;}
 		//- Fields
 
-		public MGFinding(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public MGFinding() : base()
+		public MGFinding(Observation resource) : base(resource)
 		{
 			//+ Constructor
 		
@@ -51,6 +46,10 @@ namespace BreastRadLib
             this.MGAbnormalityFatNecrosis = CreateHasMemberList<IMGAbnormalityFatNecrosis>(0, -1);
             this.MGBreastDensity = CreateHasMemberList<IMGBreastDensity>(1, 1);
 			//- Constructor
+		}
+
+		public MGFinding() : this(new Observation())
+		{
 		}
 
 		public void Write()

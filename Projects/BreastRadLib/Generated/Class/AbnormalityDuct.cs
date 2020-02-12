@@ -16,17 +16,16 @@ namespace BreastRadLib
         public MemberList<IConsistentWith> ConsistentWith {get;}
 		//- Fields
 
-		public AbnormalityDuct(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public AbnormalityDuct() : base()
+		public AbnormalityDuct(Observation resource) : base(resource)
 		{
 			//+ Constructor
 		
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
 			//- Constructor
+		}
+
+		public AbnormalityDuct() : this(new Observation())
+		{
 		}
 
 		public void Write()

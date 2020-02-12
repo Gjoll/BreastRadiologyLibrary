@@ -17,18 +17,17 @@ namespace BreastRadLib
         public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}
 		//- Fields
 
-		public AbnormalityLymphNode(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public AbnormalityLymphNode() : base()
+		public AbnormalityLymphNode(Observation resource) : base(resource)
 		{
 			//+ Constructor
 		
             this.TumorSatellite = CreateHasMemberList<ITumorSatellite>(0, -1);
             this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
 			//- Constructor
+		}
+
+		public AbnormalityLymphNode() : this(new Observation())
+		{
 		}
 
 		public void Write()

@@ -17,13 +17,13 @@ namespace BreastRadLib.Manual
         /// Contains the Fhir Bundle, and a dictionary of each of the items in the
         /// bundle to allow quick access of each item.
         /// </summary>
-        ResourceBag resourceBag;
+        ResourceBag resourceBag = new ResourceBag();
         
         /// <summary>
         /// Fhir documents main composition item. This is the 'index' of the
         /// fhir document, and must be the first item in the bundle.
         /// </summary>
-        CompositionBase compositionBase;
+        public BreastRadComposition Index;
 
         /// <summary>
         /// Private constructor. Use the static helper methods.
@@ -39,8 +39,8 @@ namespace BreastRadLib.Manual
         public static BreastRadiologyDocument Create()
         {
             BreastRadiologyDocument retVal = new BreastRadiologyDocument();
-            retVal.compositionBase = new CompositionBase(new Composition());
-            retVal.resourceBag.AddResource(retVal.compositionBase.Resource);
+            retVal.Index = new BreastRadComposition(new Composition());
+            retVal.resourceBag.AddResource(retVal.Index.Resource);
             return retVal;
         }
 

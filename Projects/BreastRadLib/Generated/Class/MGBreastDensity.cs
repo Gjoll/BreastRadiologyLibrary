@@ -14,15 +14,14 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public MGBreastDensity(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public MGBreastDensity() : base()
+		public MGBreastDensity(Observation resource) : base(resource)
 		{
 			//+ Constructor
 			//- Constructor
+		}
+
+		public MGBreastDensity() : this(new Observation())
+		{
 		}
 
 		public void Write()

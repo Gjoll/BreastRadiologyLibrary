@@ -14,15 +14,14 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public NMFinding(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public NMFinding() : base()
+		public NMFinding(Observation resource) : base(resource)
 		{
 			//+ Constructor
 			//- Constructor
+		}
+
+		public NMFinding() : this(new Observation())
+		{
 		}
 
 		public void Write()

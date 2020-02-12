@@ -14,15 +14,14 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public BreastBodyLocationExtension(Extension resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public BreastBodyLocationExtension() : base()
+		public BreastBodyLocationExtension(Extension resource) : base(resource)
 		{
 			//+ Constructor
 			//- Constructor
+		}
+
+		public BreastBodyLocationExtension() : this(new Extension())
+		{
 		}
 
 		public void Write()

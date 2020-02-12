@@ -18,12 +18,7 @@ namespace BreastRadLib
         public MemberList<IConsistentWith> ConsistentWith {get;}
 		//- Fields
 
-		public AbnormalityMass(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public AbnormalityMass() : base()
+		public AbnormalityMass(Observation resource) : base(resource)
 		{
 			//+ Constructor
 		
@@ -31,6 +26,10 @@ namespace BreastRadLib
             this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
 			//- Constructor
+		}
+
+		public AbnormalityMass() : this(new Observation())
+		{
 		}
 
 		public void Write()

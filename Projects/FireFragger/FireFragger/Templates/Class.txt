@@ -16,15 +16,14 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public %ClassName%(%FhirBase% resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public %ClassName%() : base()
+		public %ClassName%(%FhirBase% resource) : base(resource)
 		{
 			//+ Constructor
 			//- Constructor
+		}
+
+		public %ClassName%() : this(new %FhirBase%())
+		{
 		}
 
 		public void Write()

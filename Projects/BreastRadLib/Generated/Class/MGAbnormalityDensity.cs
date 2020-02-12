@@ -17,18 +17,17 @@ namespace BreastRadLib
         public MemberList<IConsistentWith> ConsistentWith {get;}
 		//- Fields
 
-		public MGAbnormalityDensity(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public MGAbnormalityDensity() : base()
+		public MGAbnormalityDensity(Observation resource) : base(resource)
 		{
 			//+ Constructor
 		
             this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
 			//- Constructor
+		}
+
+		public MGAbnormalityDensity() : this(new Observation())
+		{
 		}
 
 		public void Write()

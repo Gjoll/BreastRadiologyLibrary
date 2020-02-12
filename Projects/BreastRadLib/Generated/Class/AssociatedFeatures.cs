@@ -18,12 +18,7 @@ namespace BreastRadLib
         public MemberList<IObservedFeature> ObservedFeature {get;}
 		//- Fields
 
-		public AssociatedFeatures(Observation resource) : this()
-		{
-			this.SetResource(resource);
-		}
-
-		public AssociatedFeatures() : base()
+		public AssociatedFeatures(Observation resource) : base(resource)
 		{
 			//+ Constructor
 		
@@ -31,6 +26,10 @@ namespace BreastRadLib
             this.MGAbnormalityCalcification = CreateHasMemberList<IMGAbnormalityCalcification>(0, -1);
             this.ObservedFeature = CreateHasMemberList<IObservedFeature>(0, -1);
 			//- Constructor
+		}
+
+		public AssociatedFeatures() : this(new Observation())
+		{
 		}
 
 		public void Write()
