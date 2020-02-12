@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FireWall": {
+      "commandName": "Project",
+      "commandLineArgs": "-c -out \"^Projects\\BreastRadLib\" -c -f \"^HL7\\BreastRadiologyProfiles\\IG\\Content\\Fragments\""
+    }
+  }
+}

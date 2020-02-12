@@ -1,0 +1,10 @@
+﻿		//+ Fields
+		%HasMemberFields:lb:prefix=        %
+		//- Fields
+
+		//+ Constructor
+		%HasMemberDefinitions:lb:prefix=            %
+		//- Constructor
+
+		//+ Methods
+		//- Methods
