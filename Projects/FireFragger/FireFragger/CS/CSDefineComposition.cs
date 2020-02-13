@@ -48,22 +48,23 @@ namespace FireFragger
         }
 
         void CreateKnownResourceType(String className, 
-            String fhirType,
             String pName, 
-            String fName)
+            String fName,
+            bool nullFlag)
         {
+            String nullText = nullFlag ? "" : " = null";
+
             this.ClassFields
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Append new blank {pName}")
                 .SummaryClose()
-                .AppendCode($"public {className} Append{pName}({fhirType} resource = null)")
+                .AppendCode($"public {className} Append{pName}({className} brClass{nullText})")
                 .OpenBrace()
-                .AppendCode($"if (resource == null)")
-                .AppendCode($"    resource = new {fhirType}();")
-                .AppendCode($"{className} retVal = new {className}(this.doc, resource);")
-                .AppendCode($"this.{fName}.Add(retVal);")
-                .AppendCode($"return retVal;")
+                .AppendCode($"if (brClass == null)")
+                .AppendCode($"    brClass = new {className}(this.doc);")
+                .AppendCode($"this.{fName}.Add(brClass);")
+                .AppendCode($"return brClass;")
                 .CloseBrace()
                 ;
         }
@@ -188,20 +189,16 @@ namespace FireFragger
                         if (brClass == "ResourceBase")
                             CreateUnknownResourceType("ResourceBase", "DomainResource", propertyName, fieldName);
                         else
-                            CreateKnownResourceType(brClass, FhirType(references[0]), propertyName, fieldName);
+                            CreateKnownResourceType(brClass, propertyName, fieldName, true);
                     }
                     else
                     {
                         foreach (String target in references)
                         {
                             if (target.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
-                            {
-                                CreateKnownResourceType("ResourceBase", FhirType(target), propertyName, fieldName);
-                            }
+                                CreateUnknownResourceType("ResourceBase", FhirType(target), propertyName, fieldName);
                             else
-                            {
-                                CreateKnownResourceType(BRClass(target), FhirType(target), propertyName, fieldName);
-                            }
+                                CreateKnownResourceType(BRClass(target), propertyName, fieldName, false);
                         }
                     }
 
