@@ -7,23 +7,25 @@ namespace BreastRadLib
 {
     public class ResourceBag
     {
-        Bundle bundle;
+        public Bundle Bundle { get; }
         Dictionary<String, Bundle.EntryComponent> resources = new Dictionary<string, Bundle.EntryComponent>(StringComparer.OrdinalIgnoreCase);
 
         public ResourceBag()
         {
-            this.bundle = new Bundle();
-            this.bundle.Type = Bundle.BundleType.Document;
+            this.Bundle = new Bundle();
+            this.Bundle.Type = Bundle.BundleType.Document;
         }
 
         public ResourceBag(Bundle bundle)
         {
-            if (this.bundle.Type != Bundle.BundleType.Document)
-                throw new Exception($"Expected bundle type 'Document', got '{this.bundle.Type}'");
-            this.bundle = bundle;
+            if (this.Bundle.Type != Bundle.BundleType.Document)
+                throw new Exception($"Expected bundle type 'Document', got '{this.Bundle.Type}'");
+            this.Bundle = bundle;
             foreach (Bundle.EntryComponent entry in bundle.Entry)
                 resources.Add(entry.FullUrl, entry);
         }
+
+        public IEnumerable<Bundle.EntryComponent> Entries => this.resources.Values;
 
         public bool TryGetEntry(String url, out Bundle.EntryComponent entry) => this.resources.TryGetValue(url, out entry);
 
@@ -38,7 +40,7 @@ namespace BreastRadLib
                 throw new Exception($"Id is already set");
 
             resource.Id = $"{Guid.NewGuid().ToString()}";
-            Bundle.EntryComponent entry = bundle.AddResourceEntry(resource, resource.Id);
+            Bundle.EntryComponent entry = Bundle.AddResourceEntry(resource, resource.Id);
             resources.Add(resource.Id, entry);
         }
     }

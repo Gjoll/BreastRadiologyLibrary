@@ -16,7 +16,7 @@ namespace BreastRadLib
         public MemberList<IConsistentWith> ConsistentWith {get;}
 		//- Fields
 
-		public AbnormalityDuct(Observation resource) : base(resource)
+		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
 		
@@ -24,17 +24,17 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public AbnormalityDuct() : this(new Observation())
+		public AbnormalityDuct(BreastRadiologyDocument doc) : this(doc, new Observation())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

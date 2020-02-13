@@ -17,7 +17,7 @@ namespace BreastRadLib
         public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}
 		//- Fields
 
-		public AbnormalityLymphNode(Observation resource) : base(resource)
+		public AbnormalityLymphNode(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
 		
@@ -26,17 +26,17 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public AbnormalityLymphNode() : this(new Observation())
+		public AbnormalityLymphNode(BreastRadiologyDocument doc) : this(doc, new Observation())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

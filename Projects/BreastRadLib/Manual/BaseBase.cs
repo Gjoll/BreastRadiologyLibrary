@@ -17,15 +17,28 @@ namespace BreastRadLib
     {
         public abstract String Id { get; set; }
 
+        public Base BaseResource => resource;
         protected Base resource;
+        protected BreastRadiologyDocument doc;
 
-        public BaseBase()
+        public BaseBase(BreastRadiologyDocument doc)
         {
+            this.doc = doc;
+            this.doc.Register(this);
         }
 
         public abstract void SetResource(Base r);
+        
+        public virtual void Write()
+        {
+        }
 
-        public BaseBase(Base resource)
+        public virtual void Read()
+        {
+        }
+
+
+        public BaseBase(BreastRadiologyDocument doc, Base resource) : this(doc)
         {
             this.resource = resource;
         }

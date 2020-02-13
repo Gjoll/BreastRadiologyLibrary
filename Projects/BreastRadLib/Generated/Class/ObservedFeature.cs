@@ -14,23 +14,23 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public ObservedFeature(Observation resource) : base(resource)
+		public ObservedFeature(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
 			//- Constructor
 		}
 
-		public ObservedFeature() : this(new Observation())
+		public ObservedFeature(BreastRadiologyDocument doc) : this(doc, new Observation())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

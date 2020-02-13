@@ -14,23 +14,23 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public BreastRadReport(DiagnosticReport resource) : base(resource)
+		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource) : base(doc, resource)
 		{
 			//+ Constructor
 			//- Constructor
 		}
 
-		public BreastRadReport() : this(new DiagnosticReport())
+		public BreastRadReport(BreastRadiologyDocument doc) : this(doc, new DiagnosticReport())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

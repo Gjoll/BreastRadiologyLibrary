@@ -73,6 +73,7 @@ namespace FireFragger
                 Int32 max = ToMax(entryNode.ElementDefinition.Max);
                 Int32 min = entryNode.ElementDefinition.Min.Value;
                 String propertyName = sliceName.ToMachineName();
+                String fieldName = sliceName.ToLocalName();
                 String sectionCodeName = $"{propertyName}SectionCode";
 
                 this.ClassFields
@@ -87,27 +88,69 @@ namespace FireFragger
                 if (max == 1)
                 {
                     this.ClassFields
-                        .AppendCode($"public {reference} {propertyName} {{ get; set; }}")
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary("propertyName field")
+                        .SummaryClose()
+                        .AppendCode($"{reference} {fieldName};")
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary("Access propertyName")
+                        .SummaryClose()
+                        .AppendCode($"public {reference} {propertyName} => this.{fieldName};")
+
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary("Create new blank {propertyName}")
+                        .SummaryClose()
+                        .AppendCode($"public {reference} Create{propertyName}()")
+                        .OpenBrace()
+                        .AppendCode($"if (this.{propertyName} != null)")
+                        .AppendCode($"    throw new Exception(\"{propertyName} already has a value\");")
+                        .AppendCode($"{reference} retVal = new {reference}(this.doc);")
+                        .AppendCode($"this.{fieldName} = retVal;")
+                        .AppendCode($"return retVal;")
+                        .CloseBrace()
                         ;
 
                     this.ClassReadCode
                         .BlankLine()
-                        .AppendCode($"this.{propertyName} = ReadSection<{reference}>(resourceBag, this.{sectionCodeName});")
+                        .AppendCode($"this.{fieldName} = ReadSection<{reference}>(this.{sectionCodeName});")
                         ;
                 }
                 else
                 {
                     this.ClassFields
-                        .AppendCode($"public List<{reference}> {propertyName} {{ get; }} = new List<{reference}>();")
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary("propertyName field")
+                        .SummaryClose()
+                        .AppendCode($"List<{reference}> {fieldName} = new List<{reference}>();")
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary("Access propertyName")
+                        .SummaryClose()
+                        .AppendCode($"public IEnumerable<{reference}> {propertyName} => this.{fieldName};")
+
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary("Append new blank {propertyName}")
+                        .SummaryClose()
+                        .AppendCode($"public {reference} Append{propertyName}()")
+                        .OpenBrace()
+                        .AppendCode($"{reference} retVal = new {reference}(this.doc);")
+                        .AppendCode($"this.{fieldName}.Add(retVal);")
+                        .AppendCode($"return retVal;")
+                        .CloseBrace()
                         ;
 
                     this.ClassReadCode
-                        .AppendCode($"ReadSection<{reference}>(resourceBag, {sectionCodeName}, {min}, {max}, this.{propertyName});")
+                        .AppendCode($"ReadSection<{reference}>({sectionCodeName}, {min}, {max}, this.{fieldName});")
                         ;
                 }
 
                 this.ClassWriteCode
-                    .AppendCode($"WriteSection<{reference}>(\"{title}\", {sectionCodeName}, {min}, {max}, this.{propertyName});")
+                    .AppendCode($"WriteSection<{reference}>(\"{title}\", {sectionCodeName}, {min}, {max}, this.{fieldName});")
                     ;
 
                 if (max == 1)

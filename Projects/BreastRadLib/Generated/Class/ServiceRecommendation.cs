@@ -14,23 +14,23 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public ServiceRecommendation(ServiceRequest resource) : base(resource)
+		public ServiceRecommendation(BreastRadiologyDocument doc, ServiceRequest resource) : base(doc, resource)
 		{
 			//+ Constructor
 			//- Constructor
 		}
 
-		public ServiceRecommendation() : this(new ServiceRequest())
+		public ServiceRecommendation(BreastRadiologyDocument doc) : this(doc, new ServiceRequest())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

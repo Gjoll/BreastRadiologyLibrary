@@ -16,7 +16,7 @@ namespace BreastRadLib
         public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}
 		//- Fields
 
-		public AbnormalityFibroadenoma(Observation resource) : base(resource)
+		public AbnormalityFibroadenoma(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
 		
@@ -24,17 +24,17 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public AbnormalityFibroadenoma() : this(new Observation())
+		public AbnormalityFibroadenoma(BreastRadiologyDocument doc) : this(doc, new Observation())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

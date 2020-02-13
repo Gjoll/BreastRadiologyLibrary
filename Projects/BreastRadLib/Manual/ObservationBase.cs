@@ -15,11 +15,11 @@ namespace BreastRadLib
 
         List<IMemberList> hasMemberLists = new List<IMemberList>();
 
-        public ObservationBase(Observation resource) : base(resource)
+        public ObservationBase(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
         {
         }
 
-        public ObservationBase() : base()
+        public ObservationBase(BreastRadiologyDocument doc) : base(doc)
         {
         }
 

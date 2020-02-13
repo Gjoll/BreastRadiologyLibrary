@@ -163,7 +163,7 @@ namespace FireFragger
                 String url = fi.StructDef.Url.Trim().ToLower();
                 this.resourceFactoryProfileBlock
                     .AppendCode($"case \"{url}\":")
-                    .AppendCode($"    return new {ClassName(fi)}();")
+                    .AppendCode($"    return new {ClassName(fi)}(doc);")
                     ;
             }
 

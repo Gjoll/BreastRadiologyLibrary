@@ -14,23 +14,23 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public TumorSatellite(Observation resource) : base(resource)
+		public TumorSatellite(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
 			//- Constructor
 		}
 
-		public TumorSatellite() : this(new Observation())
+		public TumorSatellite(BreastRadiologyDocument doc) : this(doc, new Observation())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

@@ -13,10 +13,10 @@ namespace BreastRadLib
     {
         public ClinicalImpression Resource => (ClinicalImpression)this.resource;
 
-        public ClinicalImpressionBase(ClinicalImpression resource) : base(resource)
+        public ClinicalImpressionBase(BreastRadiologyDocument doc, ClinicalImpression resource) : base(doc, resource)
         {
         }
-        public ClinicalImpressionBase() : base()
+        public ClinicalImpressionBase(BreastRadiologyDocument doc) : base(doc)
         {
         }
 

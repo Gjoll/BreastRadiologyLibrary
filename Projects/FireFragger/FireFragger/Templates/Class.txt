@@ -16,23 +16,23 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public %ClassName%(%FhirBase% resource) : base(resource)
+		public %ClassName%(BreastRadiologyDocument doc, %FhirBase% resource) : base(doc, resource)
 		{
 			//+ Constructor
 			//- Constructor
 		}
 
-		public %ClassName%() : this(new %FhirBase%())
+		public %ClassName%(BreastRadiologyDocument doc) : this(doc, new %FhirBase%())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

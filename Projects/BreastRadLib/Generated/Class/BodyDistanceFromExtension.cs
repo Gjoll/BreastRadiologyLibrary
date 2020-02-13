@@ -14,23 +14,23 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public BodyDistanceFromExtension(Extension resource) : base(resource)
+		public BodyDistanceFromExtension(BreastRadiologyDocument doc, Extension resource) : base(doc, resource)
 		{
 			//+ Constructor
 			//- Constructor
 		}
 
-		public BodyDistanceFromExtension() : this(new Extension())
+		public BodyDistanceFromExtension(BreastRadiologyDocument doc) : this(doc, new Extension())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

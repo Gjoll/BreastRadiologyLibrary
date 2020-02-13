@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BreastRadLib.Manual
+namespace BreastRadLib
 {
     /// <summary>
     /// This is the base of the Breast Radiology Report
@@ -14,10 +14,15 @@ namespace BreastRadLib.Manual
     public class BreastRadiologyDocument
     {
         /// <summary>
+        /// 
+        /// </summary>
+        Dictionary<Base, BaseBase> items = new Dictionary<Base, BaseBase>();
+
+        /// <summary>
         /// Contains the Fhir Bundle, and a dictionary of each of the items in the
         /// bundle to allow quick access of each item.
         /// </summary>
-        ResourceBag resourceBag = new ResourceBag();
+        public ResourceBag ResourceBag { get; }  = new ResourceBag();
         
         /// <summary>
         /// Fhir documents main composition item. This is the 'index' of the
@@ -32,6 +37,11 @@ namespace BreastRadLib.Manual
         {
         }
 
+        public void Register(BaseBase baseItem)
+        {
+            this.items.Add(baseItem.BaseResource, baseItem);
+        }
+
         /// <summary>
         /// Create a new BreastRadiologyDocument.
         /// </summary>
@@ -39,10 +49,22 @@ namespace BreastRadLib.Manual
         public static BreastRadiologyDocument Create()
         {
             BreastRadiologyDocument retVal = new BreastRadiologyDocument();
-            retVal.Index = new BreastRadComposition(new Composition());
-            retVal.resourceBag.AddResource(retVal.Index.Resource);
+            retVal.Index = new BreastRadComposition(retVal, new Composition());
+            retVal.ResourceBag.AddResource(retVal.Index.Resource);
             return retVal;
         }
 
+        /// <summary>
+        /// Write FhirDocument to a bundle and return it.
+        /// </summary>
+        /// <returns></returns>
+        public Bundle Write()
+        {
+            foreach (BaseBase baseItem in this.items.Values)
+            {
+                baseItem.Write();
+            }
+            return this.ResourceBag.Bundle;
+        }
     }
 }

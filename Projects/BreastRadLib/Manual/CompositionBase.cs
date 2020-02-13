@@ -14,11 +14,11 @@ namespace BreastRadLib
     {
         public Composition Resource => (Composition)this.resource;
 
-        public CompositionBase(Composition resource) : base(resource)
+        public CompositionBase(BreastRadiologyDocument doc, Composition resource) : base(doc, resource)
         {
         }
 
-        public CompositionBase() : base()
+        public CompositionBase(BreastRadiologyDocument doc) : base(doc)
         {
         }
         protected void ClearSection()
@@ -51,8 +51,7 @@ namespace BreastRadLib
             return null;
         }
 
-        protected void ReadSection<T>(ResourceBag resourceBag,
-            Coding code,
+        protected void ReadSection<T>(Coding code,
             Int32 min,
             Int32 max,
             List<T> items)
@@ -64,13 +63,13 @@ namespace BreastRadLib
                 return;
             foreach (ResourceReference resRef in section.Entry)
             {
-                if (resourceBag.TryGetEntry(resRef.Reference, out var entry) == false)
+                if (this.doc.ResourceBag.TryGetEntry(resRef.Reference, out var entry) == false)
                     throw new Exception($"Error referencing section resource '{resRef.Reference}'");
                 Resource referencedResource = entry.Resource;
                 if (referencedResource.Meta.Profile.Count() != 1)
                     throw new Exception($"Invalid Meta.profile. Expected 1, got {referencedResource.Meta.Profile.Count()}");
                 String profile = referencedResource.Meta.Profile.First();
-                T item = ResourceFactory.CreateBreastRadProfileResource(profile) as T;
+                T item = ResourceFactory.CreateBreastRadProfileResource(this.doc, profile) as T;
                 if (item == null)
                     throw new Exception($"Error creating resource of profile {profile}");
             }
@@ -88,8 +87,7 @@ namespace BreastRadLib
             this.resource = r;
         }
 
-        protected T ReadSection<T>(ResourceBag resourceBag,
-            Coding code)
+        protected T ReadSection<T>(Coding code)
             where T : IBaseBase
         {
             throw new NotImplementedException();

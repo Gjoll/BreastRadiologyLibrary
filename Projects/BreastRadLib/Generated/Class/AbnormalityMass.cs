@@ -18,7 +18,7 @@ namespace BreastRadLib
         public MemberList<IConsistentWith> ConsistentWith {get;}
 		//- Fields
 
-		public AbnormalityMass(Observation resource) : base(resource)
+		public AbnormalityMass(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
 		
@@ -28,17 +28,17 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public AbnormalityMass() : this(new Observation())
+		public AbnormalityMass(BreastRadiologyDocument doc) : this(doc, new Observation())
 		{
 		}
 
-		public void Write()
+		public override void Write()
 		{
 		//+ WriteCode
 		//- WriteCode
 		}
 
-		public void Read(ResourceBag resourceBag)
+		public override void Read()
 		{
 		//+ ReadCode
 		//- ReadCode

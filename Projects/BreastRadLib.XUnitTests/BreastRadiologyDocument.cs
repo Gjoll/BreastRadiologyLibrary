@@ -15,7 +15,7 @@ using System.Data;
 using System.Globalization;
 using System.Linq;
 using Newtonsoft.Json.Linq;
-using BreastRadLib.Manual;
+using BreastRadLib;
 
 namespace BreastRadiology.XUnitTests
 {
@@ -27,6 +27,9 @@ namespace BreastRadiology.XUnitTests
         {
             BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
             Debug.Assert(doc.Index != null);
+
+            BreastRadReport report  = doc.Index.CreateReport();
+            Bundle b = doc.Write();
         }
     }
 }
