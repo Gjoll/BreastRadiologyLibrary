@@ -12,132 +12,138 @@ namespace BreastRadLib
 	public class BreastRadComposition : CompositionBase, IHeaderFragment
 	{
 		//+ Fields
-		                                                                                                                                          // CSDefineComposition.cs:116
+		                                                                                                                                          // CSDefineComposition.cs:130
 		/// <summary>
 		/// Section report
 		/// Composition.section:report
 		/// </summary>
-		Coding ReportSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionReport");// CSDefineComposition.cs:121
-		                                                                                                                                          // CSDefineComposition.cs:127
+		Coding ReportSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionReport");// CSDefineComposition.cs:135
+		                                                                                                                                          // CSDefineComposition.cs:141
 		/// <summary>
 		/// propertyName field
 		/// </summary>
-		BreastRadReport report;                                                                                                                   // CSDefineComposition.cs:131
-		                                                                                                                                          // CSDefineComposition.cs:132
+		BreastRadReport report;                                                                                                                   // CSDefineComposition.cs:145
+		                                                                                                                                          // CSDefineComposition.cs:146
 		/// <summary>
 		/// Access propertyName
 		/// </summary>
-		public BreastRadReport Report => this.report;                                                                                             // CSDefineComposition.cs:136
-		                                                                                                                                          // CSDefineComposition.cs:138
+		public BreastRadReport Report => this.report;                                                                                             // CSDefineComposition.cs:150
+		                                                                                                                                          // CSDefineComposition.cs:152
 		/// <summary>
 		/// Create new blank {propertyName}
 		/// </summary>
-		public BreastRadReport CreateReport()                                                                                                     // CSDefineComposition.cs:142
-		{                                                                                                                                         // CSDefineComposition.cs:143
-		    if (this.Report != null)                                                                                                              // CSDefineComposition.cs:144
-		        throw new Exception("Report already has a value");                                                                                // CSDefineComposition.cs:145
-		    BreastRadReport retVal = new BreastRadReport(this.doc);                                                                               // CSDefineComposition.cs:146
-		    this.report = retVal;                                                                                                                 // CSDefineComposition.cs:147
-		    return retVal;                                                                                                                        // CSDefineComposition.cs:148
-		}                                                                                                                                         // CSDefineComposition.cs:149
-		                                                                                                                                          // CSDefineComposition.cs:116
+		public BreastRadReport CreateReport()                                                                                                     // CSDefineComposition.cs:156
+		{                                                                                                                                         // CSDefineComposition.cs:157
+		    if (this.Report != null)                                                                                                              // CSDefineComposition.cs:158
+		        throw new Exception("Report already has a value");                                                                                // CSDefineComposition.cs:159
+		    BreastRadReport retVal = new BreastRadReport(this.doc);                                                                               // CSDefineComposition.cs:160
+		    this.report = retVal;                                                                                                                 // CSDefineComposition.cs:161
+		    return retVal;                                                                                                                        // CSDefineComposition.cs:162
+		}                                                                                                                                         // CSDefineComposition.cs:163
+		                                                                                                                                          // CSDefineComposition.cs:130
 		/// <summary>
 		/// Section impressions
 		/// Composition.section:impressions
 		/// </summary>
-		Coding ImpressionsSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionImpressions");// CSDefineComposition.cs:121
-		                                                                                                                                          // CSDefineComposition.cs:160
+		Coding ImpressionsSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionImpressions");// CSDefineComposition.cs:135
+		                                                                                                                                          // CSDefineComposition.cs:174
 		/// <summary>
 		/// propertyName field
 		/// </summary>
-		List<ClinicalImpressionBase> impressions = new List<ClinicalImpressionBase>();                                                            // CSDefineComposition.cs:164
-		                                                                                                                                          // CSDefineComposition.cs:165
+		List<ResourceBase> impressions = new List<ResourceBase>();                                                                                // CSDefineComposition.cs:178
+		                                                                                                                                          // CSDefineComposition.cs:179
 		/// <summary>
 		/// Access propertyName
 		/// </summary>
-		public IEnumerable<ClinicalImpressionBase> Impressions => this.impressions;                                                               // CSDefineComposition.cs:169
-		                                                                                                                                          // CSDefineComposition.cs:44
+		public IEnumerable<ResourceBase> Impressions => this.impressions;                                                                         // CSDefineComposition.cs:183
+		                                                                                                                                          // CSDefineComposition.cs:28
 		/// <summary>
-		/// Append new blank Impressions
+		/// Append new blank Impressions of type ResourceBase
 		/// </summary>
-		public ClinicalImpressionBase AppendImpressions()                                                                                         // CSDefineComposition.cs:48
-		{                                                                                                                                         // CSDefineComposition.cs:49
-		    ClinicalImpressionBase retVal = new ClinicalImpressionBase(this.doc);                                                                 // CSDefineComposition.cs:50
-		    this.impressions.Add(retVal);                                                                                                         // CSDefineComposition.cs:51
-		    return retVal;                                                                                                                        // CSDefineComposition.cs:52
-		}                                                                                                                                         // CSDefineComposition.cs:53
-		                                                                                                                                          // CSDefineComposition.cs:116
+		public ResourceBase AppendImpressions(DomainResource resource)                                                                            // CSDefineComposition.cs:32
+		{                                                                                                                                         // CSDefineComposition.cs:33
+		    ResourceBase retVal = new ResourceBase(this.doc, resource);                                                                           // CSDefineComposition.cs:34
+		    this.impressions.Add(retVal);                                                                                                         // CSDefineComposition.cs:35
+		    return retVal;                                                                                                                        // CSDefineComposition.cs:36
+		}                                                                                                                                         // CSDefineComposition.cs:37
+		                                                                                                                                          // CSDefineComposition.cs:130
 		/// <summary>
 		/// Section relatedResources
 		/// Composition.section:relatedResources
 		/// </summary>
-		Coding RelatedResourcesSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionRelatedResources");// CSDefineComposition.cs:121
-		                                                                                                                                          // CSDefineComposition.cs:160
+		Coding RelatedResourcesSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionRelatedResources");// CSDefineComposition.cs:135
+		                                                                                                                                          // CSDefineComposition.cs:174
 		/// <summary>
 		/// propertyName field
 		/// </summary>
-		List<ResourceBase> relatedResources = new List<ResourceBase>();                                                                           // CSDefineComposition.cs:164
-		                                                                                                                                          // CSDefineComposition.cs:165
+		List<ResourceBase> relatedResources = new List<ResourceBase>();                                                                           // CSDefineComposition.cs:178
+		                                                                                                                                          // CSDefineComposition.cs:179
 		/// <summary>
 		/// Access propertyName
 		/// </summary>
-		public IEnumerable<ResourceBase> RelatedResources => this.relatedResources;                                                               // CSDefineComposition.cs:169
-		                                                                                                                                          // CSDefineComposition.cs:44
+		public IEnumerable<ResourceBase> RelatedResources => this.relatedResources;                                                               // CSDefineComposition.cs:183
+		                                                                                                                                          // CSDefineComposition.cs:28
 		/// <summary>
-		/// Append new blank RelatedResources
+		/// Append new blank RelatedResources of type ResourceBase
 		/// </summary>
-		public ResourceBase AppendRelatedResources()                                                                                              // CSDefineComposition.cs:48
-		{                                                                                                                                         // CSDefineComposition.cs:49
-		    ResourceBase retVal = new ResourceBase(this.doc);                                                                                     // CSDefineComposition.cs:50
-		    this.relatedResources.Add(retVal);                                                                                                    // CSDefineComposition.cs:51
-		    return retVal;                                                                                                                        // CSDefineComposition.cs:52
-		}                                                                                                                                         // CSDefineComposition.cs:53
-		                                                                                                                                          // CSDefineComposition.cs:116
+		public ResourceBase AppendRelatedResources(DomainResource resource)                                                                       // CSDefineComposition.cs:32
+		{                                                                                                                                         // CSDefineComposition.cs:33
+		    ResourceBase retVal = new ResourceBase(this.doc, resource);                                                                           // CSDefineComposition.cs:34
+		    this.relatedResources.Add(retVal);                                                                                                    // CSDefineComposition.cs:35
+		    return retVal;                                                                                                                        // CSDefineComposition.cs:36
+		}                                                                                                                                         // CSDefineComposition.cs:37
+		                                                                                                                                          // CSDefineComposition.cs:130
 		/// <summary>
 		/// Section recommendations
 		/// Composition.section:recommendations
 		/// </summary>
-		Coding RecommendationsSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeRecommendations");// CSDefineComposition.cs:121
-		                                                                                                                                          // CSDefineComposition.cs:160
+		Coding RecommendationsSectionCode = new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeRecommendations");// CSDefineComposition.cs:135
+		                                                                                                                                          // CSDefineComposition.cs:174
 		/// <summary>
 		/// propertyName field
 		/// </summary>
-		List<ResourceBase> recommendations = new List<ResourceBase>();                                                                            // CSDefineComposition.cs:164
-		                                                                                                                                          // CSDefineComposition.cs:165
+		List<ResourceBase> recommendations = new List<ResourceBase>();                                                                            // CSDefineComposition.cs:178
+		                                                                                                                                          // CSDefineComposition.cs:179
 		/// <summary>
 		/// Access propertyName
 		/// </summary>
-		public IEnumerable<ResourceBase> Recommendations => this.recommendations;                                                                 // CSDefineComposition.cs:169
-		                                                                                                                                          // CSDefineComposition.cs:28
+		public IEnumerable<ResourceBase> Recommendations => this.recommendations;                                                                 // CSDefineComposition.cs:183
+		                                                                                                                                          // CSDefineComposition.cs:56
 		/// <summary>
-		/// Append new blank Recommendations_MedicationRequest of type MedicationRequestBase
+		/// Append new blank Recommendations
 		/// </summary>
-		public MedicationRequestBase AppendRecommendations_MedicationRequest(xxyyz resource)                                                      // CSDefineComposition.cs:32
-		{                                                                                                                                         // CSDefineComposition.cs:33
-		    MedicationRequestBase retVal = new MedicationRequestBase(this.doc, resource);                                                         // CSDefineComposition.cs:34
-		    this.recommendations.Add(retVal);                                                                                                     // CSDefineComposition.cs:35
-		    return retVal;                                                                                                                        // CSDefineComposition.cs:36
-		}                                                                                                                                         // CSDefineComposition.cs:37
-		                                                                                                                                          // CSDefineComposition.cs:28
+		public ResourceBase AppendRecommendations(MedicationRequest resource = null)                                                              // CSDefineComposition.cs:60
+		{                                                                                                                                         // CSDefineComposition.cs:61
+		    if (resource == null)                                                                                                                 // CSDefineComposition.cs:62
+		        resource = new MedicationRequest();                                                                                               // CSDefineComposition.cs:63
+		    ResourceBase retVal = new ResourceBase(this.doc, resource);                                                                           // CSDefineComposition.cs:64
+		    this.recommendations.Add(retVal);                                                                                                     // CSDefineComposition.cs:65
+		    return retVal;                                                                                                                        // CSDefineComposition.cs:66
+		}                                                                                                                                         // CSDefineComposition.cs:67
+		                                                                                                                                          // CSDefineComposition.cs:56
 		/// <summary>
-		/// Append new blank Recommendations_ServiceRequest of type ServiceRequestBase
+		/// Append new blank Recommendations
 		/// </summary>
-		public ServiceRequestBase AppendRecommendations_ServiceRequest(xxyyz resource)                                                            // CSDefineComposition.cs:32
-		{                                                                                                                                         // CSDefineComposition.cs:33
-		    ServiceRequestBase retVal = new ServiceRequestBase(this.doc, resource);                                                               // CSDefineComposition.cs:34
-		    this.recommendations.Add(retVal);                                                                                                     // CSDefineComposition.cs:35
-		    return retVal;                                                                                                                        // CSDefineComposition.cs:36
-		}                                                                                                                                         // CSDefineComposition.cs:37
-		                                                                                                                                          // CSDefineComposition.cs:28
+		public ResourceBase AppendRecommendations(ServiceRequest resource = null)                                                                 // CSDefineComposition.cs:60
+		{                                                                                                                                         // CSDefineComposition.cs:61
+		    if (resource == null)                                                                                                                 // CSDefineComposition.cs:62
+		        resource = new ServiceRequest();                                                                                                  // CSDefineComposition.cs:63
+		    ResourceBase retVal = new ResourceBase(this.doc, resource);                                                                           // CSDefineComposition.cs:64
+		    this.recommendations.Add(retVal);                                                                                                     // CSDefineComposition.cs:65
+		    return retVal;                                                                                                                        // CSDefineComposition.cs:66
+		}                                                                                                                                         // CSDefineComposition.cs:67
+		                                                                                                                                          // CSDefineComposition.cs:56
 		/// <summary>
-		/// Append new blank Recommendations_ServiceRecommendation of type ServiceRecommendationBase
+		/// Append new blank Recommendations
 		/// </summary>
-		public ServiceRecommendationBase AppendRecommendations_ServiceRecommendation(xxyyz resource)                                              // CSDefineComposition.cs:32
-		{                                                                                                                                         // CSDefineComposition.cs:33
-		    ServiceRecommendationBase retVal = new ServiceRecommendationBase(this.doc, resource);                                                 // CSDefineComposition.cs:34
-		    this.recommendations.Add(retVal);                                                                                                     // CSDefineComposition.cs:35
-		    return retVal;                                                                                                                        // CSDefineComposition.cs:36
-		}                                                                                                                                         // CSDefineComposition.cs:37
+		public ServiceRecommendation AppendRecommendations(ServiceRequest resource = null)                                                        // CSDefineComposition.cs:60
+		{                                                                                                                                         // CSDefineComposition.cs:61
+		    if (resource == null)                                                                                                                 // CSDefineComposition.cs:62
+		        resource = new ServiceRequest();                                                                                                  // CSDefineComposition.cs:63
+		    ServiceRecommendation retVal = new ServiceRecommendation(this.doc, resource);                                                         // CSDefineComposition.cs:64
+		    this.recommendations.Add(retVal);                                                                                                     // CSDefineComposition.cs:65
+		    return retVal;                                                                                                                        // CSDefineComposition.cs:66
+		}                                                                                                                                         // CSDefineComposition.cs:67
 		//- Fields
 
 		public BreastRadComposition(BreastRadiologyDocument doc, Composition resource) : base(doc, resource)
@@ -154,22 +160,22 @@ namespace BreastRadLib
 		{
 		//+ WriteCode
 		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                        // CSDefineBase.cs:109
-		ClearSection();                                                                                                                           // CSDefineComposition.cs:70
-		WriteSection<BreastRadReport>("Breast Radiology Report", ReportSectionCode, 1, 1, this.report);                                           // CSDefineComposition.cs:196
-		WriteSection<ClinicalImpressionBase>("Clinical Impressions", ImpressionsSectionCode, 0, -1, this.impressions);                            // CSDefineComposition.cs:196
-		WriteSection<ResourceBase>("Related Resources", RelatedResourcesSectionCode, 0, -1, this.relatedResources);                               // CSDefineComposition.cs:196
-		WriteSection<ResourceBase>("Recommendations", RecommendationsSectionCode, 0, -1, this.recommendations);                                   // CSDefineComposition.cs:196
+		ClearSection();                                                                                                                           // CSDefineComposition.cs:92
+		WriteSection<BreastRadReport>("Breast Radiology Report", ReportSectionCode, 1, 1, this.report);                                           // CSDefineComposition.cs:214
+		WriteSection<ResourceBase>("Clinical Impressions", ImpressionsSectionCode, 0, -1, this.impressions);                                      // CSDefineComposition.cs:214
+		WriteSection<ResourceBase>("Related Resources", RelatedResourcesSectionCode, 0, -1, this.relatedResources);                               // CSDefineComposition.cs:214
+		WriteSection<ResourceBase>("Recommendations", RecommendationsSectionCode, 0, -1, this.recommendations);                                   // CSDefineComposition.cs:214
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
 		//+ ReadCode
-		                                                                                                                                          // CSDefineComposition.cs:153
-		this.report = ReadSection<BreastRadReport>(this.ReportSectionCode);                                                                       // CSDefineComposition.cs:154
-		ReadSection<ClinicalImpressionBase>(ImpressionsSectionCode, 0, -1, this.impressions);                                                     // CSDefineComposition.cs:191
-		ReadSection<ResourceBase>(RelatedResourcesSectionCode, 0, -1, this.relatedResources);                                                     // CSDefineComposition.cs:191
-		ReadSection<ResourceBase>(RecommendationsSectionCode, 0, -1, this.recommendations);                                                       // CSDefineComposition.cs:191
+		                                                                                                                                          // CSDefineComposition.cs:167
+		this.report = ReadSection<BreastRadReport>(this.ReportSectionCode);                                                                       // CSDefineComposition.cs:168
+		ReadSection<ResourceBase>(ImpressionsSectionCode, 0, -1, this.impressions);                                                               // CSDefineComposition.cs:209
+		ReadSection<ResourceBase>(RelatedResourcesSectionCode, 0, -1, this.relatedResources);                                                     // CSDefineComposition.cs:209
+		ReadSection<ResourceBase>(RecommendationsSectionCode, 0, -1, this.recommendations);                                                       // CSDefineComposition.cs:209
 		//- ReadCode
 		}
 

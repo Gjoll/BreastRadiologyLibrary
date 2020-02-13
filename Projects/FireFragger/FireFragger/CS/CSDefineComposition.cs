@@ -38,20 +38,42 @@ namespace FireFragger
                 ;
         }
 
-        void CreateKnownResourceType(String className, String pName, String fName)
+        String FhirType(String url)
+        {
+            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+                return url.LastUriPart();
+            if (this.csBuilder.SDFragments.TryGetValue(url, out FragInfo fragInfo) == false)
+                throw new Exception($"{url.LastUriPart()} not found");
+            return fragInfo.BaseDefinitionName;
+        }
+
+        void CreateKnownResourceType(String className, 
+            String fhirType,
+            String pName, 
+            String fName)
         {
             this.ClassFields
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Append new blank {pName}")
                 .SummaryClose()
-                .AppendCode($"public {className} Append{pName}()")
+                .AppendCode($"public {className} Append{pName}({fhirType} resource = null)")
                 .OpenBrace()
-                .AppendCode($"{className} retVal = new {className}(this.doc);")
+                .AppendCode($"if (resource == null)")
+                .AppendCode($"    resource = new {fhirType}();")
+                .AppendCode($"{className} retVal = new {className}(this.doc, resource);")
                 .AppendCode($"this.{fName}.Add(retVal);")
                 .AppendCode($"return retVal;")
                 .CloseBrace()
                 ;
+        }
+
+        String BRClass(String url)
+        {
+            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+                return "ResourceBase";
+            String reference = url.LastUriPart();
+            return reference;
         }
 
         void DefineSections()
@@ -91,20 +113,12 @@ namespace FireFragger
                 Coding code = sectionCode.Coding[0];
 
                 String[] references = this.References(entryNode);
-                String reference;
-
-                String TargetClass(String url)
-                {
-                    reference = url.LastUriPart();
-                    if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
-                        reference += "Base";
-                    return reference;
-                }
+                String brClass;
 
                 if (references.Length == 1)
-                    reference = TargetClass(references[0]);
+                    brClass = BRClass(references[0]);
                 else
-                    reference = "ResourceBase";
+                    brClass = "ResourceBase";
 
                 Int32 max = ToMax(entryNode.ElementDefinition.Max);
                 Int32 min = entryNode.ElementDefinition.Min.Value;
@@ -128,22 +142,22 @@ namespace FireFragger
                         .SummaryOpen()
                         .Summary("propertyName field")
                         .SummaryClose()
-                        .AppendCode($"{reference} {fieldName};")
+                        .AppendCode($"{brClass} {fieldName};")
                         .BlankLine()
                         .SummaryOpen()
                         .Summary("Access propertyName")
                         .SummaryClose()
-                        .AppendCode($"public {reference} {propertyName} => this.{fieldName};")
+                        .AppendCode($"public {brClass} {propertyName} => this.{fieldName};")
 
                         .BlankLine()
                         .SummaryOpen()
                         .Summary("Create new blank {propertyName}")
                         .SummaryClose()
-                        .AppendCode($"public {reference} Create{propertyName}()")
+                        .AppendCode($"public {brClass} Create{propertyName}()")
                         .OpenBrace()
                         .AppendCode($"if (this.{propertyName} != null)")
                         .AppendCode($"    throw new Exception(\"{propertyName} already has a value\");")
-                        .AppendCode($"{reference} retVal = new {reference}(this.doc);")
+                        .AppendCode($"{brClass} retVal = new {brClass}(this.doc);")
                         .AppendCode($"this.{fieldName} = retVal;")
                         .AppendCode($"return retVal;")
                         .CloseBrace()
@@ -151,7 +165,7 @@ namespace FireFragger
 
                     this.ClassReadCode
                         .BlankLine()
-                        .AppendCode($"this.{fieldName} = ReadSection<{reference}>(this.{sectionCodeName});")
+                        .AppendCode($"this.{fieldName} = ReadSection<{brClass}>(this.{sectionCodeName});")
                         ;
                 }
                 else
@@ -161,48 +175,52 @@ namespace FireFragger
                         .SummaryOpen()
                         .Summary("propertyName field")
                         .SummaryClose()
-                        .AppendCode($"List<{reference}> {fieldName} = new List<{reference}>();")
+                        .AppendCode($"List<{brClass}> {fieldName} = new List<{brClass}>();")
                         .BlankLine()
                         .SummaryOpen()
                         .Summary("Access propertyName")
                         .SummaryClose()
-                        .AppendCode($"public IEnumerable<{reference}> {propertyName} => this.{fieldName};")
+                        .AppendCode($"public IEnumerable<{brClass}> {propertyName} => this.{fieldName};")
                         ;
-
 
                     if (references.Length == 1)
                     {
-                        if (reference == "Resource")
-                            CreateUnknownResourceType("ResourceBase", "Resource", propertyName, fieldName);
+                        if (brClass == "ResourceBase")
+                            CreateUnknownResourceType("ResourceBase", "DomainResource", propertyName, fieldName);
                         else
-                            CreateKnownResourceType(reference, propertyName, fieldName);
+                            CreateKnownResourceType(brClass, FhirType(references[0]), propertyName, fieldName);
                     }
                     else
                     {
                         foreach (String target in references)
                         {
-                            String shortName = target.LastUriPart();
-                            String targetName = $"{shortName}Base";
-                            CreateUnknownResourceType(targetName, "xxyyz", $"{propertyName}_{shortName}", fieldName);
+                            if (target.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+                            {
+                                CreateKnownResourceType("ResourceBase", FhirType(target), propertyName, fieldName);
+                            }
+                            else
+                            {
+                                CreateKnownResourceType(BRClass(target), FhirType(target), propertyName, fieldName);
+                            }
                         }
                     }
 
                     this.ClassReadCode
-                        .AppendCode($"ReadSection<{reference}>({sectionCodeName}, {min}, {max}, this.{fieldName});")
+                        .AppendCode($"ReadSection<{brClass}>({sectionCodeName}, {min}, {max}, this.{fieldName});")
                         ;
                 }
 
                 this.ClassWriteCode
-                    .AppendCode($"WriteSection<{reference}>(\"{title}\", {sectionCodeName}, {min}, {max}, this.{fieldName});")
+                    .AppendCode($"WriteSection<{brClass}>(\"{title}\", {sectionCodeName}, {min}, {max}, this.{fieldName});")
                     ;
 
                 if (max == 1)
                     this.InterfaceFields
-                            .AppendCode($"{reference} {propertyName} {{ get; set; }}")
+                            .AppendCode($"{brClass} {propertyName} {{ get; set; }}")
                         ;
                 else
                     this.InterfaceFields
-                            .AppendCode($"List<{reference}> {propertyName} {{ get; }}")
+                            .AppendCode($"List<{brClass}> {propertyName} {{ get; }}")
                         ;
             }
         }
