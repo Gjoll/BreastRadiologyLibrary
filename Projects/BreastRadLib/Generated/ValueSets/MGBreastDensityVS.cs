@@ -33,7 +33,7 @@ namespace BreastRadLib
 		}                                                                                                                                         // CSBuilder.cs:366
 		public TCoding Code_AlmostEntirelyFat = new TCoding(MGBreastDensityCS.Code_AlmostEntirelyFat);                                            // CSBuilder.cs:384
 		public TCoding Code_ScatteredAreasOfFibroglandularDensity = new TCoding(MGBreastDensityCS.Code_ScatteredAreasOfFibroglandularDensity);    // CSBuilder.cs:384
-		public TCoding Code_HetrogeneouslyDense = new TCoding(MGBreastDensityCS.Code_HetrogeneouslyDense);                                        // CSBuilder.cs:384
+		public TCoding Code_HeterogeneouslyDense = new TCoding(MGBreastDensityCS.Code_HeterogeneouslyDense);                                      // CSBuilder.cs:384
 		public TCoding Code_ExtremelyDense = new TCoding(MGBreastDensityCS.Code_ExtremelyDense);                                                  // CSBuilder.cs:384
 		                                                                                                                                          // CSBuilder.cs:339
 		public List<Coding> Members;                                                                                                              // CSBuilder.cs:340
@@ -43,7 +43,7 @@ namespace BreastRadLib
 		    this.Members = new List<Coding>();                                                                                                    // CSBuilder.cs:344
 		    this.Members.Add(this.Code_AlmostEntirelyFat);                                                                                        // CSBuilder.cs:387
 		    this.Members.Add(this.Code_ScatteredAreasOfFibroglandularDensity);                                                                    // CSBuilder.cs:387
-		    this.Members.Add(this.Code_HetrogeneouslyDense);                                                                                      // CSBuilder.cs:387
+		    this.Members.Add(this.Code_HeterogeneouslyDense);                                                                                     // CSBuilder.cs:387
 		    this.Members.Add(this.Code_ExtremelyDense);                                                                                           // CSBuilder.cs:387
 		}                                                                                                                                         // CSBuilder.cs:346
 		//- Fields

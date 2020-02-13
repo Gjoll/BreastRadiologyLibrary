@@ -18,8 +18,9 @@ namespace BreastRadLib
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
 		/// A medical procedure that removes something from an area of the body.
-		/// These substances can be air, body fluids, or bone fragments.###URL#https://medlineplus.gov/ency/article/002216.htm
+		/// These substances can be air, body fluids, or bone fragments.
 		/// 
+		/// -- https://medlineplus.gov/ency/article/002216.htm
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:435
@@ -39,30 +40,38 @@ namespace BreastRadLib
 		public static Coding Code_Concern = new Coding(System, "Concern", "Concern");                                                             // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// A ductogram, also called a galactogram, is a special type of mammogram used for imaging the breast ducts.
-		/// It can aid in diagnosing the cause of abnormal nipple discharges.Ductography (also called galactography or ductogalactography) is a special type of contrast enhanced mammography used for imaging the breast ducts.
-		/// Ductography can aid in diagnosing the cause of an abnormal nipple discharge and is valuable in diagnosing intraductal papillomas and other conditions.###URL#https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts
+		/// A ductogram, also called a galactogram, is a special type of mammogram used for imaging
+		/// the breast ducts.
+		/// It can aid in diagnosing the cause of abnormal nipple discharges.
+		/// Ductography (also called galactography or ductogalactography) is a special type of
+		/// contrast enhanced mammography used for imaging the breast ducts.
+		/// Ductography can aid in diagnosing the cause of an abnormal nipple discharge and is
+		/// valuable in diagnosing intraductal papillomas and other conditions.
 		/// 
+		/// -- https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// A medical finding that wasn't the abnormality of the original  mammogram, MRI, nuclear medicine, or ultrasound was intended to find.
+		/// A medical finding that wasn't the abnormality of the original  mammogram, MRI, nuclear
+		/// medicine, or ultrasound was intended to find.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_IncidentalFinding = new Coding(System, "IncidentalFinding", "Incidental finding");                              // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// The original MRI, Nuclear Medicine, or Ultrasound corresponds with the findings on the Mammogram.
+		/// The original MRI, Nuclear Medicine, or Ultrasound corresponds with the findings on
+		/// the Mammogram.
 		/// 
 		/// Valid for the following modalities: US MRI NM.
 		/// </summary>
 		public static Coding Code_Mammo = new Coding(System, "Mammo", "Mammo");                                                                   // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// The original Mammogram, Nuclear Medicine, or Ultrasound corresponds with the findings on the MRI.
+		/// The original Mammogram, Nuclear Medicine, or Ultrasound corresponds with the findings
+		/// on the MRI.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
@@ -83,14 +92,16 @@ namespace BreastRadLib
 		public static Coding Code_OutsideExam = new Coding(System, "OutsideExam", "Outside exam");                                                // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// Mammogram, MRI, Nuclear Medicine, or ultrasound corresponds with the pain the patient is experiencing.
+		/// Mammogram, MRI, Nuclear Medicine, or ultrasound corresponds with the pain the patient
+		/// is experiencing.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Pain = new Coding(System, "Pain", "Pain");                                                                      // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// The Mammogram, Ultrasound, Nuclear Medicine, MRI correspond with the palpated (physical exam to touch) lump.
+		/// The Mammogram, Ultrasound, Nuclear Medicine, MRI correspond with the palpated (physical
+		/// exam to touch) lump.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
@@ -126,7 +137,9 @@ namespace BreastRadLib
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
 		/// The initial Mammogram corresponds with the Scinti results.
-		/// Scintigraphy definition is - a diagnostic technique in which a two-dimensional picture of internal body tissue is produced through the detection of radiation emitted by a radioactive substance administered into the body.
+		/// Scintigraphy definition is - a diagnostic technique in which a two-dimensional picture
+		/// of internal body tissue is produced through the detection of radiation emitted by
+		/// a radioactive substance administered into the body.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -168,6 +181,8 @@ namespace BreastRadLib
 		public static Coding Code_SizeGreaterThanPalp = new Coding(System, "Size>Palp", "Size > palp");                                           // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
+		/// The mammogram findings correspond with where the skin marker was placed on the breast.
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_SkinMarker = new Coding(System, "SkinMarker", "Skin marker");                                                   // CSBuilder.cs:435
@@ -192,7 +207,8 @@ namespace BreastRadLib
 		public static Coding Code_Tenderness = new Coding(System, "Tenderness", "Tenderness");                                                    // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// The results of the Ultrasound correspond with where the trigger point is around the tumor/lesion.
+		/// The results of the Ultrasound correspond with where the trigger point is around the
+		/// tumor/lesion.
 		/// The trigger point is the point where the site of the pain is.
 		/// 
 		/// Valid for the following modalities: US.
@@ -200,7 +216,8 @@ namespace BreastRadLib
 		public static Coding Code_TriggerPoint = new Coding(System, "TriggerPoint", "Trigger point");                                             // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// The results of the MRI, Mammogram and/or Nuclear Medicine exam, correspond with this Ultrasound.
+		/// The results of the MRI, Mammogram and/or Nuclear Medicine exam, correspond with this
+		/// Ultrasound.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>

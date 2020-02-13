@@ -18,14 +18,16 @@ namespace BreastRadLib
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
 		/// A medical procedure that removes something from an area of the body.
-		/// These substances can be air, body fluids, or bone fragments.###URL#https://medlineplus.gov/ency/article/002216.htm
+		/// These substances can be air, body fluids, or bone fragments.
 		/// 
+		/// -- https://medlineplus.gov/ency/article/002216.htm
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// An examination of tissue removed from the body to discover the presence, cause or extent of a disease.
+		/// An examination under a microscope  of the specific tissue removed from the body.
+		/// The examination is used to check for abnormalities or cancer cells.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>

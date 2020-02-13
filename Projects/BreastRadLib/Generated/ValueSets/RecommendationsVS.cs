@@ -67,7 +67,7 @@ namespace BreastRadLib
 		public TCoding Code_Followup3Months = new TCoding(RecommendationsCodeSystemCS.Code_Followup3Months);                                      // CSBuilder.cs:384
 		public TCoding Code_Followup6Months = new TCoding(RecommendationsCodeSystemCS.Code_Followup6Months);                                      // CSBuilder.cs:384
 		public TCoding Code_IfPreviousShowNoChange = new TCoding(RecommendationsCodeSystemCS.Code_IfPreviousShowNoChange);                        // CSBuilder.cs:384
-		public TCoding Code_LateralMagnificaionView = new TCoding(RecommendationsCodeSystemCS.Code_LateralMagnificaionView);                      // CSBuilder.cs:384
+		public TCoding Code_LateralMagnificationView = new TCoding(RecommendationsCodeSystemCS.Code_LateralMagnificationView);                    // CSBuilder.cs:384
 		public TCoding Code_LateralMedialView = new TCoding(RecommendationsCodeSystemCS.Code_LateralMedialView);                                  // CSBuilder.cs:384
 		public TCoding Code_LateralView = new TCoding(RecommendationsCodeSystemCS.Code_LateralView);                                              // CSBuilder.cs:384
 		public TCoding Code_LateralWithCompressionView = new TCoding(RecommendationsCodeSystemCS.Code_LateralWithCompressionView);                // CSBuilder.cs:384
@@ -104,7 +104,7 @@ namespace BreastRadLib
 		public TCoding Code_RepeatMLOView = new TCoding(RecommendationsCodeSystemCS.Code_RepeatMLOView);                                          // CSBuilder.cs:384
 		public TCoding Code_RolledLateralView = new TCoding(RecommendationsCodeSystemCS.Code_RolledLateralView);                                  // CSBuilder.cs:384
 		public TCoding Code_RolledMedialView = new TCoding(RecommendationsCodeSystemCS.Code_RolledMedialView);                                    // CSBuilder.cs:384
-		public TCoding Code_ScintiBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_ScintiBiopsy);                                            // CSBuilder.cs:384
+		public TCoding Code_ScintimammogramGuidedBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_ScintimammogramGuidedBiopsy);              // CSBuilder.cs:384
 		public TCoding Code_Scintimammography = new TCoding(RecommendationsCodeSystemCS.Code_Scintimammography);                                  // CSBuilder.cs:384
 		public TCoding Code_SpotCompression = new TCoding(RecommendationsCodeSystemCS.Code_SpotCompression);                                      // CSBuilder.cs:384
 		public TCoding Code_SpotMagnificationViews = new TCoding(RecommendationsCodeSystemCS.Code_SpotMagnificationViews);                        // CSBuilder.cs:384
@@ -170,7 +170,7 @@ namespace BreastRadLib
 		    this.Members.Add(this.Code_Followup3Months);                                                                                          // CSBuilder.cs:387
 		    this.Members.Add(this.Code_Followup6Months);                                                                                          // CSBuilder.cs:387
 		    this.Members.Add(this.Code_IfPreviousShowNoChange);                                                                                   // CSBuilder.cs:387
-		    this.Members.Add(this.Code_LateralMagnificaionView);                                                                                  // CSBuilder.cs:387
+		    this.Members.Add(this.Code_LateralMagnificationView);                                                                                 // CSBuilder.cs:387
 		    this.Members.Add(this.Code_LateralMedialView);                                                                                        // CSBuilder.cs:387
 		    this.Members.Add(this.Code_LateralView);                                                                                              // CSBuilder.cs:387
 		    this.Members.Add(this.Code_LateralWithCompressionView);                                                                               // CSBuilder.cs:387
@@ -207,7 +207,7 @@ namespace BreastRadLib
 		    this.Members.Add(this.Code_RepeatMLOView);                                                                                            // CSBuilder.cs:387
 		    this.Members.Add(this.Code_RolledLateralView);                                                                                        // CSBuilder.cs:387
 		    this.Members.Add(this.Code_RolledMedialView);                                                                                         // CSBuilder.cs:387
-		    this.Members.Add(this.Code_ScintiBiopsy);                                                                                             // CSBuilder.cs:387
+		    this.Members.Add(this.Code_ScintimammogramGuidedBiopsy);                                                                              // CSBuilder.cs:387
 		    this.Members.Add(this.Code_Scintimammography);                                                                                        // CSBuilder.cs:387
 		    this.Members.Add(this.Code_SpotCompression);                                                                                          // CSBuilder.cs:387
 		    this.Members.Add(this.Code_SpotMagnificationViews);                                                                                   // CSBuilder.cs:387

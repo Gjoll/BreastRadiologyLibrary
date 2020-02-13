@@ -23,9 +23,13 @@ namespace BreastRadLib
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
 		/// Breast ductography (a.k.a.
-		/// galactography) is an imaging technique which is used to evaluate lesions causing nipple discharge.
-		/// It helps in precisely locating the mass within breast tissue and gives useful information for surgical approach and planning.A blunt-tipped sialogram needle (30-gauge) is used for performing the ductogram.
+		/// galactography) is an imaging technique which is used to evaluate lesions causing
+		/// nipple discharge.
+		/// It helps in precisely locating the mass within breast tissue and gives useful information
+		/// for surgical approach and planning.
+		/// A blunt-tipped sialogram needle (30-gauge) is used for performing the ductogram.
 		/// The abnormal duct is identified and cannulated.
+		/// 
 		/// -- https://radiopaedia.org/articles/breast-ductography-1?lang=us
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
@@ -40,20 +44,23 @@ namespace BreastRadLib
 		public static Coding Code_Mammogram = new Coding(System, "Mammogram", "Mammogram");                                                       // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// Magnetic Resonance Imaging (MRI) is a test that uses powerful magnets, radio waves, and a computer to make detailed pictures inside your body.
-		/// It helps a doctor to diagnose a disease or injury.
+		/// Magnetic Resonance Imaging (MRI) is a test that uses powerful magnets, radio waves,
+		/// and a computer to make detailed pictures inside your body.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
+		/// The findings on the Mammogram were not previously seen on the outside exam.
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_OutsideExam = new Coding(System, "OutsideExam", "Outside exam");                                                // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// This is a type of breast imaging that is used to detect cancer cells in the breasts of some women who have had abnormal mammograms.
+		/// This is a type of breast imaging that is used to detect cancer cells in the breasts
+		/// of some women who have had abnormal mammograms.
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>

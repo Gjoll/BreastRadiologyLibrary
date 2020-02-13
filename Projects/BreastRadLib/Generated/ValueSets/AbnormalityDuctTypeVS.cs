@@ -32,7 +32,7 @@ namespace BreastRadLib
 		    }                                                                                                                                     // CSBuilder.cs:365
 		}                                                                                                                                         // CSBuilder.cs:366
 		public TCoding Code_DuctNormal = new TCoding(AbnormalityDuctTypeCS.Code_DuctNormal);                                                      // CSBuilder.cs:384
-		public TCoding Code_SolitaryDilatedDuct = new TCoding(AbnormalityDuctTypeCS.Code_SolitaryDilatedDuct);                                    // CSBuilder.cs:384
+		public TCoding Code_DuctDilatedATLASSolitaryDilatedDuct = new TCoding(AbnormalityDuctTypeCS.Code_DuctDilatedATLASSolitaryDilatedDuct);    // CSBuilder.cs:384
 		public TCoding Code_DuctEctasia = new TCoding(AbnormalityDuctTypeCS.Code_DuctEctasia);                                                    // CSBuilder.cs:384
 		                                                                                                                                          // CSBuilder.cs:339
 		public List<Coding> Members;                                                                                                              // CSBuilder.cs:340
@@ -41,7 +41,7 @@ namespace BreastRadLib
 		{                                                                                                                                         // CSBuilder.cs:343
 		    this.Members = new List<Coding>();                                                                                                    // CSBuilder.cs:344
 		    this.Members.Add(this.Code_DuctNormal);                                                                                               // CSBuilder.cs:387
-		    this.Members.Add(this.Code_SolitaryDilatedDuct);                                                                                      // CSBuilder.cs:387
+		    this.Members.Add(this.Code_DuctDilatedATLASSolitaryDilatedDuct);                                                                      // CSBuilder.cs:387
 		    this.Members.Add(this.Code_DuctEctasia);                                                                                              // CSBuilder.cs:387
 		}                                                                                                                                         // CSBuilder.cs:346
 		//- Fields

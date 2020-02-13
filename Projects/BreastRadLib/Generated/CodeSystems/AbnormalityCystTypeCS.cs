@@ -17,7 +17,8 @@ namespace BreastRadLib
 		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityCystTypeCS";                                         // CSBuilder.cs:409
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// A cyst is a sac-like pocket of membranous tissue that contains fluid, air, or other substances.
+		/// A cyst is a sac-like pocket of membranous tissue that contains fluid, air, or other
+		/// substances.
 		/// Cysts can grow almost anywhere in your body or under your skin.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
@@ -25,10 +26,14 @@ namespace BreastRadLib
 		public static Coding Code_Cyst = new Coding(System, "Cyst", "Cyst");                                                                      // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// Complex cysts have irregular or scalloped borders, thick walls, and some evidence of solid areas and/or debris in the fluid.
+		/// Complex cysts have irregular or scalloped borders, thick walls, and some evidence
+		/// of solid areas and/or debris in the fluid.
 		/// These solid areas echo back the sound waves from the ultrasound.
-		/// A complex cyst is sometimes aspirated, or drained with a fine needle, so that the fluid inside can be tested.
-		/// If blood or any unusual cells are present, further testing may be needed to rule out breast cancer.
+		/// A complex cyst is sometimes aspirated, or drained with a fine needle, so that the
+		/// fluid inside can be tested.
+		/// If blood or any unusual cells are present, further testing may be needed to rule
+		/// out breast cancer.
+		/// 
 		/// -- https://www.breastcancer.org/symptoms/benign/cysts
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -36,8 +41,11 @@ namespace BreastRadLib
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
 		/// Complicated cysts are "in between" simple and complex.
-		/// Although they share most of the features of simple cysts, they tend to have some debris inside them and echo back some of the ultrasound waves.
-		/// However, they don't have the thick walls or obvious solid components that a complex cyst has.
+		/// Although they share most of the features of simple cysts, they tend to have some
+		/// debris inside them and echo back some of the ultrasound waves.
+		/// However, they don't have the thick walls or obvious solid components that a complex
+		/// cyst has.
+		/// 
 		/// -- https://www.breastcancer.org/symptoms/benign/cysts
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -61,7 +69,8 @@ namespace BreastRadLib
 		public static Coding Code_CystOil = new Coding(System, "CystOil", "Cyst oil");                                                            // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// A simple cyst is a sac-like pocket of membranous tissue that only contains clear fluid.
+		/// A simple cyst is a sac-like pocket of membranous tissue that only contains clear
+		/// fluid.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

@@ -22,6 +22,38 @@ namespace FireFragger
         {
         }
 
+        void CreateUnknownResourceType(String className, String resourceName, String propertyName, String fieldName)
+        {
+            this.ClassFields
+                .BlankLine()
+                .SummaryOpen()
+                .Summary($"Append new blank {propertyName} of type {className}")
+                .SummaryClose()
+                .AppendCode($"public {className} Append{propertyName}({resourceName} resource)")
+                .OpenBrace()
+                .AppendCode($"{className} retVal = new {className}(this.doc, resource);")
+                .AppendCode($"this.{fieldName}.Add(retVal);")
+                .AppendCode($"return retVal;")
+                .CloseBrace()
+                ;
+        }
+
+        void CreateKnownResourceType(String className, String pName, String fName)
+        {
+            this.ClassFields
+                .BlankLine()
+                .SummaryOpen()
+                .Summary($"Append new blank {pName}")
+                .SummaryClose()
+                .AppendCode($"public {className} Append{pName}()")
+                .OpenBrace()
+                .AppendCode($"{className} retVal = new {className}(this.doc);")
+                .AppendCode($"this.{fName}.Add(retVal);")
+                .AppendCode($"return retVal;")
+                .CloseBrace()
+                ;
+        }
+
         void DefineSections()
         {
             Int32 ToMax(String max)
@@ -137,39 +169,21 @@ namespace FireFragger
                         .AppendCode($"public IEnumerable<{reference}> {propertyName} => this.{fieldName};")
                         ;
 
+
                     if (references.Length == 1)
                     {
-                        this.ClassFields
-                            .BlankLine()
-                            .SummaryOpen()
-                            .Summary("Append new blank {propertyName}")
-                            .SummaryClose()
-                            .AppendCode($"public {reference} Append{propertyName}()")
-                            .OpenBrace()
-                            .AppendCode($"{reference} retVal = new {reference}(this.doc);")
-                            .AppendCode($"this.{fieldName}.Add(retVal);")
-                            .AppendCode($"return retVal;")
-                            .CloseBrace()
-                            ;
+                        if (reference == "Resource")
+                            CreateUnknownResourceType("ResourceBase", "Resource", propertyName, fieldName);
+                        else
+                            CreateKnownResourceType(reference, propertyName, fieldName);
                     }
                     else
                     {
                         foreach (String target in references)
                         {
-                            String className = TargetClass(target);
-
-                            this.ClassFields
-                                .BlankLine()
-                                .SummaryOpen()
-                                .Summary($"Append new blank {propertyName} of type {className}")
-                                .SummaryClose()
-                                .AppendCode($"public {reference} Append{propertyName}({className} resource)")
-                                .OpenBrace()
-                                .AppendCode($"{reference} retVal = new {reference}(this.doc, resource);")
-                                .AppendCode($"this.{fieldName}.Add(retVal);")
-                                .AppendCode($"return retVal;")
-                                .CloseBrace()
-                                ;
+                            String shortName = target.LastUriPart();
+                            String targetName = $"{shortName}Base";
+                            CreateUnknownResourceType(targetName, "xxyyz", $"{propertyName}_{shortName}", fieldName);
                         }
                     }
 

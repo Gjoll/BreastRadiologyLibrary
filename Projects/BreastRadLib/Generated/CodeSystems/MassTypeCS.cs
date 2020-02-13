@@ -42,11 +42,20 @@ namespace BreastRadLib
 		public static Coding Code_MassPartiallySolid = new Coding(System, "MassPartiallySolid", "Mass partially solid");                          // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
+		/// The mammogram and/or ultrasound show a skin lesion.
+		/// 
+		/// This finding may be described in the mammography report or annotated on the mammographic image when it projects over the breast (especially on two different projections) and may be mistaken for an intramammary lesion.
+		/// 
+		/// -- Breast Imaging Reporting and Data System—Ultrasound, Second Edition
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MassSkinATLASIsSkinLesion = new Coding(System, "MassSkinATLASIsSkinLesion", "Mass skin ATLAS is skin lesion");  // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
+		/// The mammogram and/or ultrasound show solid mass of the breast.
+		/// This can be nodules, fibrocystic tissue, phylloides tumor, breast cancer or metastatic.
+		/// May need a biopsy confirmation.
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MassSolid = new Coding(System, "MassSolid", "Mass solid");                                                      // CSBuilder.cs:435

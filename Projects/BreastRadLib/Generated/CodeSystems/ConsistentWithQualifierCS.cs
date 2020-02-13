@@ -18,7 +18,8 @@ namespace BreastRadLib
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
 		/// More than one possibility for your diagnosis.
-		/// The process of weighing the probability of one disease versus that of other diseases possibly accounting for a patient's illness.
+		/// The process of weighing the probability of one disease versus that of other diseases
+		/// possibly accounting for a patient's illness.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>

@@ -24,28 +24,29 @@ namespace BreastRadLib
 		public static Coding Code_IrregularInShape = new Coding(System, "IrregularInShape", "Irregular in shape");                                // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// A mass that has an undulating  (having a smoothly rising and falling form or outline) contour.
+		/// A mass that has an undulating  (having a smoothly rising and falling form or outline)
+		/// contour.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_LobulatedInShape = new Coding(System, "LobulatedInShape", "Lobulated in shape");                                // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// A mass that is elliptical or egg-shaped.
+		/// There is a mass that is elliptical or egg-shaped.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_OvalInShape = new Coding(System, "OvalInShape", "Oval in shape");                                               // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// is a three-dimensional lesion that occupies a space within the breast.
-		/// [-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013]
+		/// There is a mass that is reniform (kidney shape) in shape.
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Reniform = new Coding(System, "Reniform", "Reniform");                                                          // CSBuilder.cs:435
 		                                                                                                                                          // CSBuilder.cs:421
 		/// <summary>
-		/// A mass that is spherical, ball-shaped, circular or global.
+		/// There is a mass that is spherical, ball-shaped, circular or global.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
