@@ -17,20 +17,8 @@ namespace BreastRadLib
         {
         }
 
-        public DiagnosticReportBase(BreastRadiologyDocument doc) : base(doc)
+        public DiagnosticReportBase(BreastRadiologyDocument doc) : base(doc, new DiagnosticReport())
         {
-        }
-
-        /// <summary>
-        /// Set the fhir resource to the indicated value.
-        /// </summary>
-        /// <param name="resource"></param>
-        public override void SetResource(Base resource)
-        {
-            DiagnosticReport r = resource as DiagnosticReport;
-            if (r == null)
-                throw new Exception("resource must be of type DiagnosticReport");
-            this.resource = r;
         }
     }
 }

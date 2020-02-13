@@ -21,24 +21,8 @@ namespace BreastRadLib
             set => this.domainResource.Id = value;
         }
 
-        public ResourceBase(BreastRadiologyDocument doc) : base(doc)
-        {
-        }
-
         public ResourceBase(BreastRadiologyDocument doc, DomainResource resource) : base(doc, resource)
         {
-        }
-
-        /// <summary>
-        /// Set the fhir resource to the indicated value.
-        /// </summary>
-        /// <param name="resource"></param>
-        public override void SetResource(Base resource)
-        {
-            Resource r = resource as Resource;
-            if (r == null)
-                throw new Exception("resource must be of type Resource");
-            this.resource = r;
         }
 
         protected void SetProfileUrl(String profileUrl)

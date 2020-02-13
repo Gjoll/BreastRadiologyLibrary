@@ -23,20 +23,8 @@ namespace BreastRadLib
         {
         }
 
-        public ExtensionBase(BreastRadiologyDocument doc) : base(doc)
+        public ExtensionBase(BreastRadiologyDocument doc) : base(doc, new Extension())
         {
-        }
-
-        /// <summary>
-        /// Set the fhir resource to the indicated value.
-        /// </summary>
-        /// <param name="resource"></param>
-        public override void SetResource(Base resource)
-        {
-            Extension r = resource as Extension;
-            if (r == null)
-                throw new Exception("resource must be of type Extension");
-            this.resource = r;
         }
     }
 }

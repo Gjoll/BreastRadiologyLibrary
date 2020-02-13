@@ -5,21 +5,21 @@ using System.Text;
 
 namespace BreastRadLib
 {
-    public interface IObservationBase : IResourceBase
+    public interface IMedicationRequestBase : IResourceBase
     {
     }
 
-    public class ObservationBase: ResourceBase, IObservationBase
+    public class MedicationRequestBase: ResourceBase, IMedicationRequestBase
     {
-        public Observation Resource => (Observation) this.resource;
+        public MedicationRequest Resource => (MedicationRequest) this.resource;
 
         List<IMemberList> hasMemberLists = new List<IMemberList>();
 
-        public ObservationBase(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
+        public MedicationRequestBase(BreastRadiologyDocument doc, MedicationRequest resource) : base(doc, resource)
         {
         }
 
-        public ObservationBase(BreastRadiologyDocument doc) : base(doc, new Observation())
+        public MedicationRequestBase(BreastRadiologyDocument doc) : base(doc, new MedicationRequest())
         {
         }
 

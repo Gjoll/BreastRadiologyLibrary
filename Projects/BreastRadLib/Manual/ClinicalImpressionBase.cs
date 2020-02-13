@@ -16,20 +16,9 @@ namespace BreastRadLib
         public ClinicalImpressionBase(BreastRadiologyDocument doc, ClinicalImpression resource) : base(doc, resource)
         {
         }
-        public ClinicalImpressionBase(BreastRadiologyDocument doc) : base(doc)
-        {
-        }
 
-        /// <summary>
-        /// Set the fhir resource to the indicated value.
-        /// </summary>
-        /// <param name="resource"></param>
-        public override void SetResource(Base resource)
+        public ClinicalImpressionBase(BreastRadiologyDocument doc) : base(doc, new ClinicalImpression())
         {
-            ClinicalImpression r = resource as ClinicalImpression;
-            if (r == null)
-                throw new Exception("resource must be of type ClinicalImpression");
-            this.resource = r;
         }
     }
 }

@@ -17,20 +17,8 @@ namespace BreastRadLib
         {
         }
 
-        public ServiceRequestBase(BreastRadiologyDocument doc) : base(doc)
+        public ServiceRequestBase(BreastRadiologyDocument doc) : base(doc, new ServiceRequest())
         {
-        }
-
-        /// <summary>
-        /// Set the fhir resource to the indicated value.
-        /// </summary>
-        /// <param name="resource"></param>
-        public override void SetResource(Base resource)
-        {
-            ServiceRequest r = resource as ServiceRequest;
-            if (r == null)
-                throw new Exception("resource must be of type ServiceRequest");
-            this.resource = r;
         }
     }
 }

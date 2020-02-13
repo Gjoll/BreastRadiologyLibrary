@@ -53,20 +53,24 @@ namespace FireFragger
                 ElementTreeNode entryNode = GetChild("entry");
 
                 String title = titleNode.ElementDefinition.Fixed.ToString();
-                CodeableConcept sectionCode = (CodeableConcept) codeNode.ElementDefinition.Pattern;
+                CodeableConcept sectionCode = (CodeableConcept)codeNode.ElementDefinition.Pattern;
                 if (sectionCode.Coding.Count != 1)
                     throw new Exception("Invalid section code");
                 Coding code = sectionCode.Coding[0];
 
                 String[] references = this.References(entryNode);
                 String reference;
-                if (references.Length == 1)
+
+                String TargetClass(String url)
                 {
-                    String url = references[0];
                     reference = url.LastUriPart();
                     if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
                         reference += "Base";
+                    return reference;
                 }
+
+                if (references.Length == 1)
+                    reference = TargetClass(references[0]);
                 else
                     reference = "ResourceBase";
 
@@ -131,18 +135,43 @@ namespace FireFragger
                         .Summary("Access propertyName")
                         .SummaryClose()
                         .AppendCode($"public IEnumerable<{reference}> {propertyName} => this.{fieldName};")
-
-                        .BlankLine()
-                        .SummaryOpen()
-                        .Summary("Append new blank {propertyName}")
-                        .SummaryClose()
-                        .AppendCode($"public {reference} Append{propertyName}()")
-                        .OpenBrace()
-                        .AppendCode($"{reference} retVal = new {reference}(this.doc);")
-                        .AppendCode($"this.{fieldName}.Add(retVal);")
-                        .AppendCode($"return retVal;")
-                        .CloseBrace()
                         ;
+
+                    if (references.Length == 1)
+                    {
+                        this.ClassFields
+                            .BlankLine()
+                            .SummaryOpen()
+                            .Summary("Append new blank {propertyName}")
+                            .SummaryClose()
+                            .AppendCode($"public {reference} Append{propertyName}()")
+                            .OpenBrace()
+                            .AppendCode($"{reference} retVal = new {reference}(this.doc);")
+                            .AppendCode($"this.{fieldName}.Add(retVal);")
+                            .AppendCode($"return retVal;")
+                            .CloseBrace()
+                            ;
+                    }
+                    else
+                    {
+                        foreach (String target in references)
+                        {
+                            String className = TargetClass(target);
+
+                            this.ClassFields
+                                .BlankLine()
+                                .SummaryOpen()
+                                .Summary($"Append new blank {propertyName} of type {className}")
+                                .SummaryClose()
+                                .AppendCode($"public {reference} Append{propertyName}({className} resource)")
+                                .OpenBrace()
+                                .AppendCode($"{reference} retVal = new {reference}(this.doc, resource);")
+                                .AppendCode($"this.{fieldName}.Add(retVal);")
+                                .AppendCode($"return retVal;")
+                                .CloseBrace()
+                                ;
+                        }
+                    }
 
                     this.ClassReadCode
                         .AppendCode($"ReadSection<{reference}>({sectionCodeName}, {min}, {max}, this.{fieldName});")

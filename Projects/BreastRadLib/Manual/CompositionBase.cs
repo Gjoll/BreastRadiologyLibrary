@@ -18,9 +18,10 @@ namespace BreastRadLib
         {
         }
 
-        public CompositionBase(BreastRadiologyDocument doc) : base(doc)
+        public CompositionBase(BreastRadiologyDocument doc) : base(doc, new Composition())
         {
         }
+
         protected void ClearSection()
         {
             this.Resource.Section.Clear();
@@ -73,18 +74,6 @@ namespace BreastRadLib
                 if (item == null)
                     throw new Exception($"Error creating resource of profile {profile}");
             }
-        }
-
-        /// <summary>
-        /// Set the fhir resource to the indicated value.
-        /// </summary>
-        /// <param name="resource"></param>
-        public override void SetResource(Base resource)
-        {
-            Composition r = resource as Composition;
-            if (r == null)
-                throw new Exception("resource must be of type Composition");
-            this.resource = r;
         }
 
         protected T ReadSection<T>(Coding code)
