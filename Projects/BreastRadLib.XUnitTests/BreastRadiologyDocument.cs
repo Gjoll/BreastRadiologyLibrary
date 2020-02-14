@@ -30,6 +30,8 @@ namespace BreastRadiology.XUnitTests
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
                 Debug.Assert(doc.Index != null);
                 BreastRadReport report = doc.Index.CreateReport();
+                Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
+                Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
                 Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
                 Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
                 b = doc.Write();
@@ -40,6 +42,8 @@ namespace BreastRadiology.XUnitTests
                 Debug.Assert(doc.Index != null);
                 BreastRadReport report = doc.Index.Report;
                 Debug.Assert(report != null);
+                Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
+                Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
                 Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
                 Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
             }
