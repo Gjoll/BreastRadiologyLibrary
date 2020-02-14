@@ -19,6 +19,7 @@ namespace BreastRadLib
 		public AbnormalityFibroadenoma(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                                    // CSDefineBase.cs:112
 		
             this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
 			//- Constructor
@@ -31,7 +32,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                                     // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

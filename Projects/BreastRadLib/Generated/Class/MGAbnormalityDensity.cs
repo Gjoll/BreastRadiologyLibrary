@@ -20,6 +20,7 @@ namespace BreastRadLib
 		public MGAbnormalityDensity(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                                       // CSDefineBase.cs:112
 		
             this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
@@ -33,7 +34,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                                        // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

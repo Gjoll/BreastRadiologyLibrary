@@ -154,7 +154,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                        // CSDefineBase.cs:112
 		ClearSection();                                                                                                                           // CSDefineComposition.cs:93
 		WriteSection<BreastRadReport>("Breast Radiology Report", ReportSectionCode, 1, 1, this.report);                                           // CSDefineComposition.cs:211
 		WriteSection<ResourceBase>("Clinical Impressions", ImpressionsSectionCode, 0, -1, this.impressions);                                      // CSDefineComposition.cs:211

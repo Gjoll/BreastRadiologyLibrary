@@ -21,6 +21,7 @@ namespace BreastRadLib
 		public AbnormalityCyst(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                                            // CSDefineBase.cs:112
 		
             this.TumorSatellite = CreateHasMemberList<ITumorSatellite>(0, -1);
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
@@ -35,7 +36,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                                             // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

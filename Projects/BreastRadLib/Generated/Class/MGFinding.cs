@@ -31,6 +31,7 @@ namespace BreastRadLib
 		public MGFinding(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // CSDefineBase.cs:112
 		
             this.AbnormalityCyst = CreateHasMemberList<IAbnormalityCyst>(0, -1);
             this.AbnormalityDuct = CreateHasMemberList<IAbnormalityDuct>(0, -1);
@@ -55,7 +56,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                   // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

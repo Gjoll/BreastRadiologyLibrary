@@ -29,6 +29,7 @@ namespace BreastRadiology.XUnitTests
             Debug.Assert(doc.Index != null);
 
             BreastRadReport report  = doc.Index.CreateReport();
+            //Debug.Assert(report.Resource.
             Bundle b = doc.Write();
 
             BreastRadiologyDocument doc2 = BreastRadiologyDocument.Read(b);

@@ -21,6 +21,7 @@ namespace BreastRadLib
 		public AbnormalityMass(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // CSDefineBase.cs:112
 		
             this.TumorSatellite = CreateHasMemberList<ITumorSatellite>(0, -1);
             this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
@@ -35,7 +36,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                             // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

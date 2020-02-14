@@ -22,6 +22,7 @@ namespace BreastRadLib
 		public SectionFindingsRightBreast(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // CSDefineBase.cs:112
 		
             this.MGFinding = CreateHasMemberList<IMGFinding>(0, -1);
             this.MRIFinding = CreateHasMemberList<IMRIFinding>(0, -1);
@@ -37,7 +38,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                  // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

@@ -17,6 +17,7 @@ namespace BreastRadLib
 		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:112
 			//- Constructor
 		}
 
@@ -27,7 +28,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                             // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

@@ -17,6 +17,7 @@ namespace BreastRadLib
 		public ConsistentWith(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // CSDefineBase.cs:112
 			//- Constructor
 		}
 
@@ -27,7 +28,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                              // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

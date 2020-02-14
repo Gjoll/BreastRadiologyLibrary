@@ -19,6 +19,7 @@ namespace BreastRadLib
 		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:112
 		
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
 			//- Constructor
@@ -31,7 +32,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                             // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

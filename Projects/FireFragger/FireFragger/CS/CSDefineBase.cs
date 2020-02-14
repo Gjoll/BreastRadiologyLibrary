@@ -108,7 +108,7 @@ namespace FireFragger
                 return;
 
             String profileUrl = this.fragBase.StructDef.Url;
-            this.ClassWriteCode
+            this.ClassConstructor
                 .AppendCode($"SetProfileUrl(\"{profileUrl}\");")
                 ;
         }
