@@ -27,8 +27,7 @@ namespace BreastRadLib
 		/// Angiolipoma is a rare type of lipoma - a growth made of fat and blood vessels that
 		/// develops under your skin.
 		/// Unlike other types of lipomas, angiolipomas are often painful or tender.
-		/// 
-		/// -- https://www.healthline.com/health/angiolipoma
+		/// [https://www.healthline.com/health/angiolipoma]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_Angiolipoma = new Coding(System, "Angiolipoma", "Angiolipoma");                                                 // CSBuilder.cs:446
@@ -39,8 +38,7 @@ namespace BreastRadLib
 		/// The epithelial cells are undergoing an unexpected change.
 		/// These breast changes may show on a mammogram and biopsy as a mass or benign lesion,
 		/// or possibly even develop into a palpable mass.
-		/// 
-		/// -- https://breast-cancer.ca/apo-meta/
+		/// [https://breast-cancer.ca/apo-meta/]
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_ApocrineMetaplasia = new Coding(System, "ApocrineMetaplasia", "Apocrine metaplasia");                           // CSBuilder.cs:446
@@ -54,8 +52,7 @@ namespace BreastRadLib
 		/// Common causes are improper handling of the films
 		/// errors while processing the films
 		/// patient movement while taking the image.
-		/// 
-		/// -- https://radiopaedia.org/articles/x-ray-artifacts?lang=us
+		/// [https://radiopaedia.org/articles/x-ray-artifacts?lang=us]
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_Artifact = new Coding(System, "Artifact", "Artifact");                                                          // CSBuilder.cs:446
@@ -68,8 +65,7 @@ namespace BreastRadLib
 		/// Over the course of your lifetime, if the atypical hyperplasia cells keep dividing
 		/// and become more abnormal, this can transition into noninvasive breast cancer (carcinoma
 		/// in situ) or invasive breast cancer.
-		/// 
-		/// -- https://www.mayoclinic.org/diseases-conditions/atypical-hyperplasia/symptoms-causes/syc-20369773
+		/// [https://www.mayoclinic.org/diseases-conditions/atypical-hyperplasia/symptoms-causes/syc-20369773]
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_AtypicalHyperplasia = new Coding(System, "AtypicalHyperplasia", "Atypical hyperplasia");                        // CSBuilder.cs:446
@@ -81,8 +77,7 @@ namespace BreastRadLib
 		/// Lymph nodes are small structures located all over the body around blood vessels that
 		/// act as filters and can accumulate germs or cancer cells.
 		/// They are a part of the lymph system of the body.
-		/// 
-		/// -- https://www.verywellhealth.com/axillary-lymph-nodes-2252131
+		/// [https://www.verywellhealth.com/axillary-lymph-nodes-2252131]
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_AxillaryLymphNode = new Coding(System, "AxillaryLymphNode", "Axillary lymph node");                             // CSBuilder.cs:446
@@ -137,8 +132,7 @@ namespace BreastRadLib
 		/// fluid inside can be tested.
 		/// If blood or any unusual cells are present, further testing may be needed to rule
 		/// out breast cancer.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/cysts
+		/// [https://www.breastcancer.org/symptoms/benign/cysts]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_CystComplex = new Coding(System, "CystComplex", "Cyst complex");                                                // CSBuilder.cs:446
@@ -149,8 +143,7 @@ namespace BreastRadLib
 		/// debris inside them and echo back some of the ultrasound waves.
 		/// However, they don't have the thick walls or obvious solid components that a complex
 		/// cyst has.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/cysts
+		/// [https://www.breastcancer.org/symptoms/benign/cysts]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_CystComplicated = new Coding(System, "CystComplicated", "Cyst complicated");                                    // CSBuilder.cs:446
@@ -181,8 +174,7 @@ namespace BreastRadLib
 		/// The sound waves sent out by the ultrasound test pass right through them, indicating
 		/// there are no solid areas.
 		/// Simple cysts are always benign.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/cysts
+		/// [https://www.breastcancer.org/symptoms/benign/cysts]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_CystSimple = new Coding(System, "CystSimple", "Cyst simple");                                                   // CSBuilder.cs:446
@@ -195,8 +187,7 @@ namespace BreastRadLib
 		/// fluid inside can be tested.
 		/// If blood or any unusual cells are present, further testing may be needed to rule
 		/// out breast cancer.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/cysts
+		/// [https://www.breastcancer.org/symptoms/benign/cysts]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_CystsComplex = new Coding(System, "CystsComplex", "Cysts complex");                                             // CSBuilder.cs:446
@@ -207,8 +198,7 @@ namespace BreastRadLib
 		/// debris inside them and echo back some of the ultrasound waves.
 		/// However, they don't have the thick walls or obvious solid components that a complex
 		/// cyst has.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/cysts
+		/// [https://www.breastcancer.org/symptoms/benign/cysts]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_CystsComplicated = new Coding(System, "CystsComplicated", "Cysts complicated");                                 // CSBuilder.cs:446
@@ -228,8 +218,7 @@ namespace BreastRadLib
 		/// DCIS is considered the earliest form of breast cancer.
 		/// DCIS is noninvasive, meaning it hasn't spread out of the milk duct and has a low
 		/// risk of becoming invasive.
-		/// 
-		/// -- https://www.mayoclinic.org/diseases-conditions/dcis/symptoms-causes/syc-20371889
+		/// [https://www.mayoclinic.org/diseases-conditions/dcis/symptoms-causes/syc-20371889]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_DCIS = new Coding(System, "DCIS", "DCIS");                                                                      // CSBuilder.cs:446
@@ -247,8 +236,7 @@ namespace BreastRadLib
 		/// the development of breast cancer.
 		/// In addition, it has been suggested that aluminum may have direct activity in breast
 		/// tissue.
-		/// 
-		/// -- https://www.cancer.gov/about-cancer/causes-prevention/risk/myths/antiperspirants-fact-sheet
+		/// [https://www.cancer.gov/about-cancer/causes-prevention/risk/myths/antiperspirants-fact-sheet]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Deodorant = new Coding(System, "Deodorant", "Deodorant");                                                       // CSBuilder.cs:446
@@ -259,8 +247,7 @@ namespace BreastRadLib
 		/// Calcifications may also form in moles and other skin lesions.
 		/// Often, these calcifications are in groups as they extend into small glands in the
 		/// skin.
-		/// 
-		/// -- https://radiopaedia.org/articles/skin-calcification-in-breast?lang=us
+		/// [https://radiopaedia.org/articles/skin-calcification-in-breast?lang=us]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_DermalCalcification = new Coding(System, "DermalCalcification", "Dermal calcification");                        // CSBuilder.cs:446
@@ -269,8 +256,7 @@ namespace BreastRadLib
 		/// An abnormal dilation of a duct by lipids and cellular debris.
 		/// In  mammary duct the condition, which tends mainly to affect postmenopausal women,
 		/// may be accompanied by inflammation and infiltration by plasma cells.
-		/// 
-		/// -- https://www.hoafredericksburg.com/duct-ectasia/
+		/// [https://www.hoafredericksburg.com/duct-ectasia/]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_DuctEctasia = new Coding(System, "DuctEctasia", "Duct ectasia");                                                // CSBuilder.cs:446
@@ -281,8 +267,7 @@ namespace BreastRadLib
 		/// It can be caused by benign or malignant diseases, as a result of a tumor in the dermal
 		/// lymphatics of the breast, lymphatic congestion caused by breast, lymphatic drainage
 		/// obstruction, or by congestive heart failure.
-		/// 
-		/// -- https://www.researchgate.net/publication/7988898_Unilateral_Breast_Edema_Spectrum_of_Etiologies_and_Imaging_Appearances
+		/// [https://www.researchgate.net/publication/7988898_Unilateral_Breast_Edema_Spectrum_of_Etiologies_and_Imaging_Appearances]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_Edema = new Coding(System, "Edema", "Edema");                                                                   // CSBuilder.cs:446
@@ -309,8 +294,7 @@ namespace BreastRadLib
 		/// Sometimes a lump can form if an area of the fatty breast tissue is damaged.
 		/// This is called fat necrosis (necrosis is a medical term used to describe damaged
 		/// or dead tissue).
-		/// 
-		/// -- https://breastcancernow.org/information-support/have-i-got-breast-cancer/breast-pain-other-benign-conditions/fat-necrosis
+		/// [https://breastcancernow.org/information-support/have-i-got-breast-cancer/breast-pain-other-benign-conditions/fat-necrosis]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_FatNecrosis = new Coding(System, "FatNecrosis", "Fat necrosis");                                                // CSBuilder.cs:446
@@ -321,8 +305,7 @@ namespace BreastRadLib
 		/// of connective tissue.
 		/// All components are found in normal breast tissue, which is why the lesions are considered
 		/// hamartomatous.
-		/// 
-		/// -- https://radiopaedia.org/articles/breast-hamartoma?lang=us
+		/// [https://radiopaedia.org/articles/breast-hamartoma?lang=us]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Fibroadenolipoma = new Coding(System, "Fibroadenolipoma", "Fibroadenolipoma");                                  // CSBuilder.cs:446
@@ -333,8 +316,7 @@ namespace BreastRadLib
 		/// Fibroadenomas are most common in women in their 20s and 30s, but they can be found
 		/// in women of any age.
 		/// They tend to shrink after a woman goes through menopause.
-		/// 
-		/// -- https://www.cancer.org/cancer/breast-cancer/non-cancerous-breast-conditions/fibroadenomas-of-the-breast.html
+		/// [https://www.cancer.org/cancer/breast-cancer/non-cancerous-breast-conditions/fibroadenomas-of-the-breast.html]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Fibroadenoma = new Coding(System, "Fibroadenoma", "Fibroadenoma");                                              // CSBuilder.cs:446
@@ -355,8 +337,7 @@ namespace BreastRadLib
 		/// feel tender, lumpy or ropy.
 		/// Fibrocystic breasts are composed of tissue that feels lumpy or rope-like in texture.
 		/// This is called nodular or glandular breast tissue.
-		/// 
-		/// -- https://www.mayoclinic.org/diseases-conditions/fibrocystic-breasts/symptoms-causes/syc-20350438
+		/// [https://www.mayoclinic.org/diseases-conditions/fibrocystic-breasts/symptoms-causes/syc-20350438]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_FibrocysticChange = new Coding(System, "FibrocysticChange", "Fibrocystic change");                              // CSBuilder.cs:446
@@ -367,8 +348,7 @@ namespace BreastRadLib
 		/// feel tender, lumpy or ropy.
 		/// Fibrocystic breasts are composed of tissue that feels lumpy or rope-like in texture.
 		/// This is called nodular or glandular breast tissue.
-		/// 
-		/// -- https://www.mayoclinic.org/diseases-conditions/fibrocystic-breasts/symptoms-causes/syc-20350438
+		/// [https://www.mayoclinic.org/diseases-conditions/fibrocystic-breasts/symptoms-causes/syc-20350438]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_FibroglandularTissue = new Coding(System, "FibroglandularTissue", "Fibroglandular tissue");                     // CSBuilder.cs:446
@@ -377,8 +357,7 @@ namespace BreastRadLib
 		/// Fibrosis may refer to the connective tissue deposition that occurs as part of normal
 		/// healing or to the excess tissue deposition that occurs as a pathological process.
 		/// When fibrosis occurs in response to injury, the term "scarring" is used.
-		/// 
-		/// -- https://www.news-medical.net/health/What-is-Fibrosis.aspx
+		/// [https://www.news-medical.net/health/What-is-Fibrosis.aspx]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Fibrosis = new Coding(System, "Fibrosis", "Fibrosis");                                                          // CSBuilder.cs:446
@@ -388,8 +367,7 @@ namespace BreastRadLib
 		/// back of the chest wall, supports the breast and gives it shape.
 		/// Strands of supportive tissue surround the breast and form a prominent ridge called
 		/// the inframammary ridge.
-		/// 
-		/// -- https://www.stjoeshealth.org/find-a-service-or-specialty/womens-health/
+		/// [https://www.stjoeshealth.org/find-a-service-or-specialty/womens-health/]
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_FibrousRidge = new Coding(System, "FibrousRidge", "Fibrous ridge");                                             // CSBuilder.cs:446
@@ -401,8 +379,7 @@ namespace BreastRadLib
 		/// on the neck, breasts, buttocks, and face.
 		/// Boils (also referred to as furuncles) are pus-filled lesions that are painful and
 		/// usually firm.
-		/// 
-		/// -- https://www.hopkinsmedicine.org/health/conditions-and-diseases/folliculitis-boils-and-carbuncles
+		/// [https://www.hopkinsmedicine.org/health/conditions-and-diseases/folliculitis-boils-and-carbuncles]
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_Folliculitis = new Coding(System, "Folliculitis", "Folliculitis");                                              // CSBuilder.cs:446
@@ -411,8 +388,7 @@ namespace BreastRadLib
 		/// Gynecomastia is an enlargement or swelling of breast tissue in males.
 		/// It is most commonly caused by male estrogen levels that are too high or are out of
 		/// balance with testosterone levels.
-		/// 
-		/// -- https://my.clevelandclinic.org/health/diseases/16227-enlarged-male-breast-tissue-gynecomastia
+		/// [https://my.clevelandclinic.org/health/diseases/16227-enlarged-male-breast-tissue-gynecomastia]
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_Gynecomastia = new Coding(System, "Gynecomastia", "Gynecomastia");                                              // CSBuilder.cs:446
@@ -420,8 +396,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// A benign (not cancer) growth made up of an abnormal mixture of cells and tissues
 		/// normally found in the area of the body where the growth occurs.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hamartoma
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hamartoma]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Hamartoma = new Coding(System, "Hamartoma", "Hamartoma");                                                       // CSBuilder.cs:446
@@ -432,8 +407,7 @@ namespace BreastRadLib
 		/// The mass it forms is not cancerous, but it can sometimes lead to inflammation, fever,
 		/// skin discoloration, and may leave behind scar tissue that mimics the shape of a breast
 		/// tumor.
-		/// 
-		/// -- https://www.verywellhealth.com/breast-hematomas-430281
+		/// [https://www.verywellhealth.com/breast-hematomas-430281]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Hematoma = new Coding(System, "Hematoma", "Hematoma");                                                          // CSBuilder.cs:446
@@ -443,8 +417,7 @@ namespace BreastRadLib
 		/// H2 blockers,
 		/// illicit drugs, and endocrine active tumors stimulate development of rudimentary breast
 		/// tissue.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition
+		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition]
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_HormonalStimulation = new Coding(System, "HormonalStimulation", "Hormonal stimulation");                        // CSBuilder.cs:446
@@ -452,8 +425,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Intracystic tumors of the breast are uncommon and, at the time of ultrasonography
 		/// and aspiration cytology, it is difficult to distinguish cancer from a benign tumor.
-		/// 
-		/// -- https://www.ncbi.nlm.nih.gov/pubmed/11911303
+		/// [https://www.ncbi.nlm.nih.gov/pubmed/11911303]
 		/// Valid for the following modalities: US NM.
 		/// </summary>
 		public static Coding Code_IntracysticLesion = new Coding(System, "IntracysticLesion", "Intracystic lesion");                              // CSBuilder.cs:446
@@ -467,8 +439,7 @@ namespace BreastRadLib
 		/// axilla (armpit area), although they may occur anywhere in the breast.
 		/// They usually are seen adjacent to a vein, because the lymphatic drainage of the breast
 		/// parallels the venous drainage.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition
+		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_IntramammaryNode = new Coding(System, "IntramammaryNode", "Intramammary node");                                 // CSBuilder.cs:446
@@ -513,8 +484,7 @@ namespace BreastRadLib
 		/// and groin.
 		/// For example, there are about 20-40 lymph nodes in the axilla.
 		/// Also called lymph gland.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/lymph-node
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/lymph-node]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_LymphNode = new Coding(System, "LymphNode", "Lymph node");                                                      // CSBuilder.cs:446
@@ -550,8 +520,7 @@ namespace BreastRadLib
 		/// pathology of lymph nodes, not necessarily resulting in increased size; this includes
 		/// abnormal number of nodes, or derangement of internal architecture (e.g.
 		/// cystic or necrotic nodes).
-		/// 
-		/// -- https://radiopaedia.org/articles/lymph-node-enlargement?lang=us
+		/// [https://radiopaedia.org/articles/lymph-node-enlargement?lang=us]
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_LymphNodePathological = new Coding(System, "LymphNodePathological", "Lymph node pathological");                 // CSBuilder.cs:446
@@ -562,8 +531,7 @@ namespace BreastRadLib
 		/// Different types of solid mass/ tumors are named for the type of cells that form them.
 		/// Examples of solid tumors are sarcomas, carcinomas, and lymphomas.
 		/// Leukemias (cancer of the blood) generally do not form solid mass/tumors.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/solid-tumor
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/solid-tumor]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_MassSolid = new Coding(System, "MassSolid", "Mass solid");                                                      // CSBuilder.cs:446
@@ -580,8 +548,7 @@ namespace BreastRadLib
 		/// in the body.
 		/// They may form on the skin, in the tissues below the skin, and/or in an organ.
 		/// There are many types of vascular tumors.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/solid-tumor https://www.cancer.gov/publications/dictionaries/cancer-terms/def/vascular-tumor
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/solid-tumor https://www.cancer.gov/publications/dictionaries/cancer-terms/def/vascular-tumor]
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_MassSolidWTumorVasc = new Coding(System, "MassSolidW/tumorVasc", "Mass solid w/tumor vasc");                    // CSBuilder.cs:446
@@ -597,8 +564,7 @@ namespace BreastRadLib
 		/// The term milk of calcium (MOC) is given to dependent, sedimented calcification within
 		/// a cystic structure or hollow organ.
 		/// This sort of colloidal calcium suspension layering can occur in various regions.
-		/// 
-		/// -- https://radiopaedia.org/articles/milk-of-calcium-disambiguation?lang=us
+		/// [https://radiopaedia.org/articles/milk-of-calcium-disambiguation?lang=us]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_MilkOfCalcium = new Coding(System, "MilkOfCalcium", "Milk of calcium");                                         // CSBuilder.cs:446
@@ -607,8 +573,7 @@ namespace BreastRadLib
 		/// Multifocal breast cancer occurs when there are two or more tumors in the same breast.
 		/// All of the tumors begin in one original tumor.
 		/// The tumors are also all in the same quadrant - or section - of the breast.
-		/// 
-		/// -- https://www.healthline.com/health/breast-cancer/multifocal-breast-cancer
+		/// [https://www.healthline.com/health/breast-cancer/multifocal-breast-cancer]
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_MultiFocalCancer = new Coding(System, "Multi-focalCancer", "Multi-focal cancer");                               // CSBuilder.cs:446
@@ -620,8 +585,7 @@ namespace BreastRadLib
 		/// 1% of malignant breast neoplasms.
 		/// Breast papillary lesions are usually detected by imaging or clinically by the presence
 		/// of a palpable breast mass or unilateral spontaneous nipple discharge.
-		/// 
-		/// -- https://ecancer.org/es/journal/article/461-breast-papillary-lesions-an-analysis-of-70-cases
+		/// [https://ecancer.org/es/journal/article/461-breast-papillary-lesions-an-analysis-of-70-cases]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_PapillaryLesion = new Coding(System, "PapillaryLesion", "Papillary lesion");                                    // CSBuilder.cs:446
@@ -631,8 +595,7 @@ namespace BreastRadLib
 		/// the milk ducts of the breast.
 		/// They are made up of gland tissue along with fibrous tissue and blood vessels (called
 		/// fibrovascular tissue).
-		/// 
-		/// -- https://www.cancer.org/cancer/breast-cancer/non-cancerous-breast-conditions/intraductal-papillomas.html
+		/// [https://www.cancer.org/cancer/breast-cancer/non-cancerous-breast-conditions/intraductal-papillomas.html]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Papilloma = new Coding(System, "Papilloma", "Papilloma");                                                       // CSBuilder.cs:446
@@ -648,8 +611,7 @@ namespace BreastRadLib
 		/// and some are borderline (in between noncancerous and cancerous).
 		/// All three kinds of phyllodes tumors tend to grow quickly, and they require surgery
 		/// to reduce the risk of a phyllodes tumor coming back in the breast (local recurrence).
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/types/phyllodes
+		/// [https://www.breastcancer.org/symptoms/types/phyllodes]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_PhyllodesTumor = new Coding(System, "PhyllodesTumor", "Phyllodes tumor");                                       // CSBuilder.cs:446
@@ -663,8 +625,7 @@ namespace BreastRadLib
 		/// Changes in breast appearance.
 		/// Scar tissue and fluid retention can make breast tissue appear a little firmer or
 		/// rounder than before surgery and/or radiation.
-		/// 
-		/// -- https://www.breastcancer.org/treatment/side_effects/scar_tissue
+		/// [https://www.breastcancer.org/treatment/side_effects/scar_tissue]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_PostLumpectomyScar = new Coding(System, "PostLumpectomyScar", "Post lumpectomy scar");                          // CSBuilder.cs:446
@@ -708,8 +669,7 @@ namespace BreastRadLib
 		/// such as cysts and epithelial hyperplasia (overgrowth of their inner lining).
 		/// Often, more than one radial scar is present.
 		/// Another term for this condition is complex sclerosing lesions.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/radial-scars
+		/// [https://www.breastcancer.org/symptoms/benign/radial-scars]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_RadialScar = new Coding(System, "RadialScar", "Radial scar");                                                   // CSBuilder.cs:446
@@ -731,8 +691,7 @@ namespace BreastRadLib
 		/// Systemic radiation therapy uses a radioactive substance, such as a radiolabeled monoclonal
 		/// antibody, that travels in the blood to tissues throughout the body.
 		/// Also called irradiation and radiotherapy.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44971
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44971]
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_RadiationTherapy = new Coding(System, "RadiationTherapy", "Radiation therapy");                                 // CSBuilder.cs:446
@@ -740,8 +699,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Scar tissue forms as part of the healing process after a skin injury.
 		/// A scar is fibrous tissue made of collagen that replaces the injured skin.
-		/// 
-		/// -- https://www.breastcancer.org/treatment/side_effects/scar_tissue
+		/// [https://www.breastcancer.org/treatment/side_effects/scar_tissue]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_Scar = new Coding(System, "Scar", "Scar");                                                                      // CSBuilder.cs:446
@@ -773,8 +731,7 @@ namespace BreastRadLib
 		/// They classically appear as solid or discontinuous, smooth, linear and rod-like calcifications.
 		/// Usually bilateral and symmetric and may appear lucent-centered.
 		/// Also known as plasma cell mastitis.
-		/// 
-		/// -- https://radiopaedia.org/cases/secretory-calcifications?lang=us
+		/// [https://radiopaedia.org/cases/secretory-calcifications?lang=us]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_SecretoryCalcification = new Coding(System, "SecretoryCalcification", "Secretory calcification");               // CSBuilder.cs:446
@@ -784,8 +741,7 @@ namespace BreastRadLib
 		/// Sentinel node biopsy involves injecting a tracer material that helps the surgeon
 		/// locate the sentinel nodes during surgery.
 		/// The sentinel nodes are removed and analyzed in a laboratory.
-		/// 
-		/// -- https://www.mayoclinic.org/tests-procedures/sentinel-node-biopsy/about/pac-20385264
+		/// [https://www.mayoclinic.org/tests-procedures/sentinel-node-biopsy/about/pac-20385264]
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_SentinelNode = new Coding(System, "SentinelNode", "Sentinel node");                                             // CSBuilder.cs:446
@@ -795,8 +751,7 @@ namespace BreastRadLib
 		/// to the breast or following procedures such as breast surgery or radiation therapy.
 		/// Serous fluid is a pale yellow, transparent fluid that contains protein, but no blood
 		/// cells or pus.
-		/// 
-		/// -- https://www.verywellhealth.com/seroma-medical-definition-430372
+		/// [https://www.verywellhealth.com/seroma-medical-definition-430372]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Seroma = new Coding(System, "Seroma", "Seroma");                                                                // CSBuilder.cs:446
@@ -807,8 +762,7 @@ namespace BreastRadLib
 		/// Primary skin lesions are abnormal skin conditions present at birth or acquired over
 		/// a person's lifetime.
 		/// Secondary skin lesions are the result of irritated or manipulated primary skin lesions.
-		/// 
-		/// -- https://www.healthline.com/health/skin-lesions
+		/// [https://www.healthline.com/health/skin-lesions]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_SkinLesion = new Coding(System, "SkinLesion", "Skin lesion");                                                   // CSBuilder.cs:446
@@ -817,8 +771,7 @@ namespace BreastRadLib
 		/// The branch of medicine that employs operations in the treatment of disease or injury.
 		/// Surgery can involve cutting, abrading, suturing, or otherwise physically changing
 		/// body tissues and organs.
-		/// 
-		/// -- https://www.medicinenet.com/script/main/art.asp?articlekey=5603
+		/// [https://www.medicinenet.com/script/main/art.asp?articlekey=5603]
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_Surgery = new Coding(System, "Surgery", "Surgery");                                                             // CSBuilder.cs:446
@@ -839,8 +792,7 @@ namespace BreastRadLib
 		/// is questionable,
 		/// then additional spot-compression magnification views may be needed to further characterize
 		/// their nature.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 38
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 38]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_VascularCalcifications = new Coding(System, "VascularCalcifications", "Vascular calcifications");               // CSBuilder.cs:446
@@ -850,8 +802,7 @@ namespace BreastRadLib
 		/// blood from moving through very well.
 		/// As more fluid and pressure build, some of the blood leaks out of your veins and into
 		/// your skin.
-		/// 
-		/// -- https://www.webmd.com/skin-problems-and-treatments/eczema/venous-stasis-dermatitis#1
+		/// [https://www.webmd.com/skin-problems-and-treatments/eczema/venous-stasis-dermatitis#1]
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_VenousStasis = new Coding(System, "VenousStasis", "Venous stasis");                                             // CSBuilder.cs:446

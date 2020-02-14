@@ -33,8 +33,7 @@ namespace BreastRadLib
 		/// fluid inside can be tested.
 		/// If blood or any unusual cells are present, further testing may be needed to rule
 		/// out breast cancer.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/cysts
+		/// [https://www.breastcancer.org/symptoms/benign/cysts]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_CystComplex = new Coding(System, "CystComplex", "Cyst complex");                                                // CSBuilder.cs:446
@@ -45,8 +44,7 @@ namespace BreastRadLib
 		/// debris inside them and echo back some of the ultrasound waves.
 		/// However, they don't have the thick walls or obvious solid components that a complex
 		/// cyst has.
-		/// 
-		/// -- https://www.breastcancer.org/symptoms/benign/cysts
+		/// [https://www.breastcancer.org/symptoms/benign/cysts]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_CystComplicated = new Coding(System, "CystComplicated", "Cyst complicated");                                    // CSBuilder.cs:446

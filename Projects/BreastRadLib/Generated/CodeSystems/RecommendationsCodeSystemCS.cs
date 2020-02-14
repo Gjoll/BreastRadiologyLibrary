@@ -85,8 +85,7 @@ namespace BreastRadLib
 		/// An optimal axillary view require to be clearly displayed the most lateral portion
 		/// of the breast including the axillary tail, as well the pectoral muscle and the nipple
 		/// in profile.
-		/// 
-		/// -- https://radiopaedia.org/articles/axillary-view?lang=us
+		/// [https://radiopaedia.org/articles/axillary-view?lang=us]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_AxillaView = new Coding(System, "AxillaView", "Axilla view");                                                   // CSBuilder.cs:446
@@ -97,8 +96,7 @@ namespace BreastRadLib
 		/// It is actually an extension of the upper lateral quadrant of the breast.
 		/// It passes into the axilla through an opening in the deep fascia called foramen of
 		/// Langer.
-		/// 
-		/// -- https://en.wikipedia.org/wiki/Tail_of_Spence
+		/// [https://en.wikipedia.org/wiki/Tail_of_Spence]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_AxillaryTailView = new Coding(System, "AxillaryTailView", "Axillary tail view");                                // CSBuilder.cs:446
@@ -242,8 +240,7 @@ namespace BreastRadLib
 		/// The vast majority of cysts are benign (non-cancerous), though some are quite tender.
 		/// Aspirating the fluid from a cyst may alleviate symptoms or discomfort.
 		/// In some cases, specimens are sent to pathology.
-		/// 
-		/// -- www.carolmilgardbreastcenter.org > Cyst_Aspiration
+		/// [www.carolmilgardbreastcenter.org > Cyst_Aspiration]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_CystAspiration = new Coding(System, "CystAspiration", "Cyst aspiration");                                       // CSBuilder.cs:446
@@ -261,8 +258,7 @@ namespace BreastRadLib
 		/// This is a fine needle aspiration and is a type of biopsy procedure.
 		/// In fine needle aspiration, a thin needle is inserted into an area of abnormal-appearing
 		/// tissue or body fluid.
-		/// 
-		/// -- https://www.webmd.com > a-to-z-guides > fine-needle-aspiration
+		/// [https://www.webmd.com > a-to-z-guides > fine-needle-aspiration]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_DiagnosticAspiration = new Coding(System, "DiagnosticAspiration", "Diagnostic aspiration");                     // CSBuilder.cs:446
@@ -272,8 +268,7 @@ namespace BreastRadLib
 		/// mammograms are used after suspicious results on a screening mammogram or after some
 		/// signs of breast cancer alert the physician to check the tissue.These signs may include
 		/// a lump or breast pain.
-		/// 
-		/// -- https://www.nationalbreastcancer.org/diagnostic-mammogram
+		/// [https://www.nationalbreastcancer.org/diagnostic-mammogram]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_DiagnosticMammogram = new Coding(System, "DiagnosticMammogram", "Diagnostic Mammogram");                        // CSBuilder.cs:446
@@ -282,8 +277,7 @@ namespace BreastRadLib
 		/// The recommendation is for a drainage tube to be attached to breast.
 		/// A drainage tube is a tube used to remove pus, blood or other fluids from a wound.
 		/// This is a common practice by surgeons or interventional radiologists.
-		/// 
-		/// -- https://en.wikipedia.org/wiki/Drain_(surgery)
+		/// [https://en.wikipedia.org/wiki/Drain_(surgery)]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_DrainageTube = new Coding(System, "DrainageTube", "Drainage tube");                                             // CSBuilder.cs:446
@@ -296,8 +290,7 @@ namespace BreastRadLib
 		/// contrast enhanced mammography used for imaging the breast ducts.
 		/// Ductography can aid in diagnosing the cause of an abnormal nipple discharge and is
 		/// valuable in diagnosing intraductal papillomas and other conditions.
-		/// 
-		/// -- https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts
+		/// [https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Ductography = new Coding(System, "Ductography", "Ductography");                                                 // CSBuilder.cs:446
@@ -317,8 +310,7 @@ namespace BreastRadLib
 		/// A negative 15degrees tube tilt is suggested.
 		/// An optimal XCCM view requires the most medial portion of the breast and the nipple
 		/// in profile to be clearly displayed.
-		/// 
-		/// -- https://radiopaedia.org/articles/xccl-view?lang=us
+		/// [https://radiopaedia.org/articles/xccl-view?lang=us]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_ExaggeratedCCViews = new Coding(System, "ExaggeratedCCViews", "Exaggerated CC views");                          // CSBuilder.cs:446
@@ -329,8 +321,7 @@ namespace BreastRadLib
 		/// tissue or body fluid.
 		/// As with other types of biopsies, the sample collected during fine needle aspiration
 		/// can help make a diagnosis or rule out conditions such as cancer.
-		/// 
-		/// -- https://www.webmd.com/a-to-z-guides/fine-needle-aspiration#1
+		/// [https://www.webmd.com/a-to-z-guides/fine-needle-aspiration#1]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_FNABiopsy = new Coding(System, "FNABiopsy", "FNA biopsy");                                                      // CSBuilder.cs:446
@@ -415,8 +406,7 @@ namespace BreastRadLib
 		/// Palpation of the lymph nodes provides information about the possible presence of
 		/// a malignant or inflammatory process and the localization or generalization of that
 		/// process.
-		/// 
-		/// -- https://stanfordmedicine25.stanford.edu/the25/lymph.html
+		/// [https://stanfordmedicine25.stanford.edu/the25/lymph.html]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_LymphNodeAssessment = new Coding(System, "LymphNodeAssessment", "Lymph node assessment");                       // CSBuilder.cs:446
@@ -529,8 +519,7 @@ namespace BreastRadLib
 		/// A technically adequate exam has the nipple in profile, allows visualization of the
 		/// inframammary fold and includes the pectoralis muscle extending down to the posterior
 		/// nipple line (an oblique line drawn straight back from the nipple.)
-		/// 
-		/// -- https://www.mammoguide.com/mammo-techniques.html
+		/// [https://www.mammoguide.com/mammo-techniques.html]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_NippleInProfileView = new Coding(System, "NippleInProfileView", "Nipple in profile view");                      // CSBuilder.cs:446
@@ -556,8 +545,7 @@ namespace BreastRadLib
 		/// It's less invasive than surgical biopsy, leaves little to no scarring and can be
 		/// an excellent way to evaluate calcium deposits or tiny masses that are not visible
 		/// on ultrasound.
-		/// 
-		/// -- https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr
+		/// [https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_PossStereotacticBx = new Coding(System, "Poss.StereotacticBx", "Poss. Stereotactic Bx");                        // CSBuilder.cs:446
@@ -570,8 +558,7 @@ namespace BreastRadLib
 		/// breast tissue into the needle.
 		/// A small cylinder (core) of tissue is taken out in the needle.
 		/// Several cores are often removed.
-		/// 
-		/// -- https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/breast-biopsy/core-needle-biopsy-of-the-breast.html
+		/// [https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/breast-biopsy/core-needle-biopsy-of-the-breast.html]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_PossibleCoreBiopsy = new Coding(System, "PossibleCoreBiopsy", "Possible core biopsy");                          // CSBuilder.cs:446
@@ -588,8 +575,7 @@ namespace BreastRadLib
 		/// During this type of biopsy, small samples of tissue are removed from the breast using
 		/// a hollow needle, which is precisely guided to the correct location using x-rays and
 		/// computer generated coordinates of the concerning area of breast tissue.
-		/// 
-		/// -- https://www.genesishealth.com/care-treatment/cancer/treat/breast/diagnosis/sterotactic_vacuum/
+		/// [https://www.genesishealth.com/care-treatment/cancer/treat/breast/diagnosis/sterotactic_vacuum/]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_PossibleStereotacticVacuumBiopsy = new Coding(System, "PossibleStereotacticVacuumBiopsy", "Possible stereotactic vacuum biopsy");// CSBuilder.cs:446
@@ -654,8 +640,7 @@ namespace BreastRadLib
 		/// The breast is positioned on the image receptor as for the cranio-caudal view, then
 		/// is rotated medially or laterally around the axis of the nipple prior to applying
 		/// compression.
-		/// 
-		/// -- https://radiopaedia.org/articles/rolled-cc-view-1?lang=us
+		/// [https://radiopaedia.org/articles/rolled-cc-view-1?lang=us]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_RolledLateralView = new Coding(System, "RolledLateralView", "Rolled lateral view");                             // CSBuilder.cs:446
@@ -673,8 +658,7 @@ namespace BreastRadLib
 		/// Scintimammography uses small amounts of radioactive material, a special camera and a computer to help investigate a breast abnormality.
 		/// 
 		/// This helps to guide the radiologist's biopsy equipment to the site of the imaging abnormality.
-		/// 
-		/// -- https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr
+		/// [https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_ScintimammogramGuidedBiopsy = new Coding(System, "ScintimammogramGuidedBiopsy", "Scintimammogram Guided Biopsy");// CSBuilder.cs:446
@@ -689,8 +673,7 @@ namespace BreastRadLib
 		/// Scintimammography can detect cancer even when dense breast tissue and breast implants
 		/// are present.
 		/// It can reduce unnecessary procedures by helping determine whether a biopsy is needed.
-		/// 
-		/// -- https://www.radiologyinfo.org/en/info.cfm?pg=scintimammo
+		/// [https://www.radiologyinfo.org/en/info.cfm?pg=scintimammo]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Scintimammography = new Coding(System, "Scintimammography", "Scintimammography");                               // CSBuilder.cs:446
@@ -706,8 +689,7 @@ namespace BreastRadLib
 		/// It is used to distinguish between the presence of a true lesion and an overlap of
 		/// tissues, as well to better show the borders of an abnormality or questionable area
 		/// or a little cluster of faint microcalcifications in a dense area.
-		/// 
-		/// -- https://radiopaedia.org/articles/spot-view-mammography?lang=us
+		/// [https://radiopaedia.org/articles/spot-view-mammography?lang=us]
 		/// Valid for the following modalities: MG US NM.
 		/// </summary>
 		public static Coding Code_SpotCompression = new Coding(System, "SpotCompression", "Spot compression");                                    // CSBuilder.cs:446
@@ -743,8 +725,7 @@ namespace BreastRadLib
 		/// This test may also be called an open biopsy.
 		/// Surgical biopsies can be excisional (removal of an entire lump or abnormal area)
 		/// or incisional (removal of a piece of a lump or abnormal area).
-		/// 
-		/// -- https://www.cancer.ca/en/cancer-information/diagnosis-and-treatment/tests-and-procedures/surgical-biopsy/?region=on
+		/// [https://www.cancer.ca/en/cancer-information/diagnosis-and-treatment/tests-and-procedures/surgical-biopsy/?region=on]
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_SurgicalBiopsy = new Coding(System, "SurgicalBiopsy", "Surgical biopsy");                                       // CSBuilder.cs:446

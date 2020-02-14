@@ -9,7 +9,6 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
-using FhirKhit.SliceGen.CSApi;
 
 namespace FireFragger
 {
@@ -104,17 +103,30 @@ namespace FireFragger
             }
         }
 
+
+        Int32 defIndex = 1;
+
         void DefineDefaultElement(ElementDefinition elementDefinition)
         {
             if (elementDefinition.Min == 0)
                 return;
             if (elementDefinition.DefaultValue == null)
                 return;
-            FhirConstruct.Construct(this.ClassMethods,
-                elementDefinition.DefaultValue,
-                "methodName",                                                                                                              // GenerateFhirConstruct.cs:354
-                "",
-                out String propertyType);
+            String[] pathElements = elementDefinition.Path.Split('.').ToArray();
+            if (pathElements.Length != 2)
+                return;
+
+            this.ClassMethods
+                .SummaryOpen()
+                .Summary($"Method to create default value for element")
+                .Summary($"{elementDefinition.ElementId}")
+                .SummaryClose()
+                ;
+            String methodName = $"DefaultValue_{defIndex++}";
+            FhirConstruct.Construct(this.ClassMethods, elementDefinition.DefaultValue, methodName, out String propertyType);
+            this.ClassConstructor
+                .AppendLine($"this.Resource.{pathElements[1].ToMachineName()} = {methodName}();")
+                ;
         }
 
         void DefineDefaultElements()

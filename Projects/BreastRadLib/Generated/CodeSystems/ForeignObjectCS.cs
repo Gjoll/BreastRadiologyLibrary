@@ -41,8 +41,7 @@ namespace BreastRadLib
 		/// This review serves to familiarize the breast interventionalist with the tissue markers
 		/// most widely available in the United States today and to provide guidance regarding
 		/// selection of appropriate markers for various clinical settings.
-		/// 
-		/// -- https://www.ncbi.nlm.nih.gov/pubmed/30059952
+		/// [https://www.ncbi.nlm.nih.gov/pubmed/30059952]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_BiopsyClip = new Coding(System, "BiopsyClip", "Biopsy clip");                                                   // CSBuilder.cs:446
@@ -58,8 +57,7 @@ namespace BreastRadLib
 		/// This review serves to familiarize the breast interventionalist with the tissue markers
 		/// most widely available in the United States today and to provide guidance regarding
 		/// selection of appropriate markers for various clinical settings.
-		/// 
-		/// -- https://www.ncbi.nlm.nih.gov/pubmed/30059952
+		/// [https://www.ncbi.nlm.nih.gov/pubmed/30059952]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_BiopsyClips = new Coding(System, "BiopsyClips", "Biopsy clips");                                                // CSBuilder.cs:446
@@ -274,8 +272,7 @@ namespace BreastRadLib
 		/// This is placed for most core biopsies to mark the area in case surgery will be needed in the future.
 		/// 
 		/// These marker clips are placed at most facilities around the country, and are considered a standard part of the breast biopsy procedure.
-		/// 
-		/// -- https://med.nyu.edu/radiology/about-nyu-langone-radiology/subspecialty-sections/breast-imaging/image-guided-procedures
+		/// [https://med.nyu.edu/radiology/about-nyu-langone-radiology/subspecialty-sections/breast-imaging/image-guided-procedures]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_TitaniumClip = new Coding(System, "TitaniumClip", "Titanium clip");                                             // CSBuilder.cs:446
@@ -285,8 +282,7 @@ namespace BreastRadLib
 		/// This is placed for most core biopsies to mark the area in case surgery will be needed in the future.
 		/// 
 		/// These marker clips are placed at most facilities around the country, and are considered a standard part of the breast biopsy procedure.
-		/// 
-		/// -- https://med.nyu.edu/radiology/about-nyu-langone-radiology/subspecialty-sections/breast-imaging/image-guided-procedures
+		/// [https://med.nyu.edu/radiology/about-nyu-langone-radiology/subspecialty-sections/breast-imaging/image-guided-procedures]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_TitaniumClips = new Coding(System, "TitaniumClips", "Titanium clips");                                          // CSBuilder.cs:446

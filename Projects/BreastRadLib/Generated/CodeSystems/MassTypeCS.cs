@@ -45,8 +45,7 @@ namespace BreastRadLib
 		/// The mammogram and/or ultrasound show a skin lesion.
 		/// 
 		/// This finding may be described in the mammography report or annotated on the mammographic image when it projects over the breast (especially on two different projections) and may be mistaken for an intramammary lesion.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Ultrasound, Second Edition
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MassSkinATLASIsSkinLesion = new Coding(System, "MassSkinATLASIsSkinLesion", "Mass skin ATLAS is skin lesion");  // CSBuilder.cs:446

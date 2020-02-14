@@ -22,8 +22,7 @@ namespace BreastRadLib
 		/// If the mass blurs a tissue plane between fat and fibroglandular tissue or if the
 		/// mass produces
 		/// distortion of the ducts, these findings may be termed architectural distortion.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 139
+		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 139]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_ArchitecturalDistortion = new Coding(System, "ArchitecturalDistortion", "Architectural distortion");            // CSBuilder.cs:446
@@ -31,8 +30,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Enlarged axillary (under the armpit) lymph nodes.
 		/// Additional evaluation is needed to determine the cause.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 110
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 110]
 		/// Valid for the following modalities: MG MRI.
 		/// </summary>
 		public static Coding Code_AxillaryAdenopathy = new Coding(System, "AxillaryAdenopathy", "Axillary adenopathy");                           // CSBuilder.cs:446
@@ -45,8 +43,7 @@ namespace BreastRadLib
 		/// pre-operative localization and helps confirm surgical target removal.
 		/// Numerous breast tissue markers are currently available, with varied shapes, composition,
 		/// and associated bio-absorbable components.
-		/// 
-		/// -- https://www.ncbi.nlm.nih.gov/pubmed/30059952
+		/// [https://www.ncbi.nlm.nih.gov/pubmed/30059952]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_BiopsyClip = new Coding(System, "BiopsyClip", "Biopsy clip");                                                   // CSBuilder.cs:446
@@ -59,8 +56,7 @@ namespace BreastRadLib
 		/// pre-operative localization and helps confirm surgical target removal.
 		/// Numerous breast tissue markers are currently available, with varied shapes, composition,
 		/// and associated bio-absorbable components.
-		/// 
-		/// -- https://www.ncbi.nlm.nih.gov/pubmed/30059952
+		/// [https://www.ncbi.nlm.nih.gov/pubmed/30059952]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_BiopsyClips = new Coding(System, "BiopsyClips", "Biopsy clips");                                                // CSBuilder.cs:446
@@ -74,8 +70,7 @@ namespace BreastRadLib
 		/// It puts radioactive seeds (about the size of a grain of rice) in or near the tumor
 		/// permanently.
 		/// After several months, the seeds lose their radioactivity.
-		/// 
-		/// -- https://www.radiologyinfo.org/en/info.cfm?pg=brachy
+		/// [https://www.radiologyinfo.org/en/info.cfm?pg=brachy]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_BrachytherapyTube = new Coding(System, "BrachytherapyTube", "Brachytherapy tube");                              // CSBuilder.cs:446
@@ -141,8 +136,7 @@ namespace BreastRadLib
 		/// with less harm to nearby healthy tissue.
 		/// Also called gold fiducial marker seeds, gold fiducial markers, and gold-seed fiducial
 		/// markers.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gold-seeds
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/gold-seeds]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_GoldSeed = new Coding(System, "GoldSeed", "Gold Seed");                                                         // CSBuilder.cs:446
@@ -196,8 +190,7 @@ namespace BreastRadLib
 		/// The tent sign is a term referring to a characteristic appearance of the posterior
 		/// edge of the breast parenchyma when a mass (usually an infiltrating lesion) causes
 		/// its retraction and forms an inverted "V" that resembles the tip of a circus tent.
-		/// 
-		/// -- https://radiopaedia.org/articles/tent-sign-breast?lang=us
+		/// [https://radiopaedia.org/articles/tent-sign-breast?lang=us]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_PectoralisMuscleTenting = new Coding(System, "PectoralisMuscleTenting", "Pectoralis muscle tenting");           // CSBuilder.cs:446
@@ -217,8 +210,7 @@ namespace BreastRadLib
 		/// to the breast or following procedures such as breast surgery or radiation therapy.
 		/// Serous fluid is a pale yellow, transparent fluid that contains protein, but no blood
 		/// cells or pus.
-		/// 
-		/// -- https://www.verywellhealth.com/seroma-medical-definition-430372
+		/// [https://www.verywellhealth.com/seroma-medical-definition-430372]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Seroma = new Coding(System, "Seroma", "Seroma");                                                                // CSBuilder.cs:446
@@ -246,8 +238,7 @@ namespace BreastRadLib
 		/// the breast that pulls at the nipple or nearby skin.
 		/// Skin and nipple retraction are more obvious when a woman raises her arms above her
 		/// head or leans forward.
-		/// 
-		/// -- https://www.drholmesmd.com/blog/early-signs-of-breast-cancer
+		/// [https://www.drholmesmd.com/blog/early-signs-of-breast-cancer]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SkinRetraction = new Coding(System, "SkinRetraction", "Skin retraction");                                       // CSBuilder.cs:446
@@ -256,8 +247,7 @@ namespace BreastRadLib
 		/// The presence of skin thickening on mammography is variably defined, usually being
 		/// more than 2 mm in thickness.
 		/// It can result from a number of both benign and malignant causes.
-		/// 
-		/// -- https://radiopaedia.org/articles/skin-thickening-on-mammography-differential?lang=us
+		/// [https://radiopaedia.org/articles/skin-thickening-on-mammography-differential?lang=us]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SkinThickening = new Coding(System, "SkinThickening", "Skin thickening");                                       // CSBuilder.cs:446
@@ -286,8 +276,7 @@ namespace BreastRadLib
 		/// an imaging finding of breast edema, usually secondary to dilated lymphatics.
 		/// Skin thickening and trabecular thickening often occur together, and they have similar
 		/// differential diagnoses.
-		/// 
-		/// -- https://oxfordmedicine.com/view/10.1093/med/9780190270261.001.0001/med-9780190270261-chapter-48
+		/// [https://oxfordmedicine.com/view/10.1093/med/9780190270261.001.0001/med-9780190270261-chapter-48]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_TrabecularThickening = new Coding(System, "TrabecularThickening", "Trabecular thickening");                     // CSBuilder.cs:446

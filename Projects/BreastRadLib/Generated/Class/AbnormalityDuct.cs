@@ -19,7 +19,8 @@ namespace BreastRadLib
 		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:112
+			this.Resource.Code = DefaultValue_1();
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:145
 		
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
 			//- Constructor
@@ -42,6 +43,28 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
+		/// <summary>
+		/// Method to create default value for element
+		/// Observation.code
+		/// </summary>
+		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "abnormalityDuctObservation";                                                                           // FhirConstruct.cs:786
+		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:792
+		        temp4.DisplayElement.Value = "Abnormality Duct observation";                                                                      // FhirConstruct.cs:794
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
+		    retVal.TextElement.Value = "Abnormality Duct observation";                                                                            // FhirConstruct.cs:821
+		    return retVal = new CodeableConcept();                                                                                                // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods
 	}
 }

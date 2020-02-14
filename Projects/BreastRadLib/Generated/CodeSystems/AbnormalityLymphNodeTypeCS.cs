@@ -46,8 +46,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The mammogram and/or ultrasound show enlargement of the cortex.
 		/// Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform.
-		/// 
-		/// -- www.ncbi.nlm.nih.gov > pmc > articles > PMC4337126
+		/// [www.ncbi.nlm.nih.gov > pmc > articles > PMC4337126]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_NodeFocalCortex = new Coding(System, "NodeFocalCortex", "Node focal cortex");                                   // CSBuilder.cs:446
@@ -72,8 +71,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Abnormal lymph node viewed on ultrasound and/or ultrasound.
 		/// Enlarged lymph nodes may warrant comment, clinical correlation and additional evaluation, especially if new or considerably larger or rounder when compared to previous examination.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Ultrasound, Second Edition
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_NodeLymph = new Coding(System, "NodeLymph", "Node lymph");                                                      // CSBuilder.cs:446

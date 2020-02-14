@@ -19,8 +19,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// A medical procedure that removes something from an area of the body.
 		/// These substances can be air, body fluids, or bone fragments.
-		/// 
-		/// -- https://medlineplus.gov/ency/article/002216.htm
+		/// [https://medlineplus.gov/ency/article/002216.htm]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:446
@@ -47,8 +46,7 @@ namespace BreastRadLib
 		/// contrast enhanced mammography used for imaging the breast ducts.
 		/// Ductography can aid in diagnosing the cause of an abnormal nipple discharge and is
 		/// valuable in diagnosing intraductal papillomas and other conditions.
-		/// 
-		/// -- https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts
+		/// [https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // CSBuilder.cs:446

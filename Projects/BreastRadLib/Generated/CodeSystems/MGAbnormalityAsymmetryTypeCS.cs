@@ -31,8 +31,7 @@ namespace BreastRadLib
 		/// In contrast to global asymmetry, it occupies a volume of less than one quadrant of
 		/// the breast and is of more concern.
 		/// The frequency of finding focal asymmetry at screening mammography is less than 1%.
-		/// 
-		/// -- https://pubs.rsna.org/doi/10.1148/rg.e33
+		/// [https://pubs.rsna.org/doi/10.1148/rg.e33]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_AsymmetryFocal = new Coding(System, "AsymmetryFocal", "Asymmetry focal");                                       // CSBuilder.cs:446
@@ -53,8 +52,7 @@ namespace BreastRadLib
 		/// at mammography.
 		/// A developing asymmetry should be viewed with suspicion because it is an uncommon
 		/// manifestation of breast cancer.
-		/// 
-		/// -- https://pubs.rsna.org/doi/full/10.1148/rg.2016150123
+		/// [https://pubs.rsna.org/doi/full/10.1148/rg.2016150123]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_DevelopingAsymmetry = new Coding(System, "DevelopingAsymmetry", "Developing Asymmetry");                        // CSBuilder.cs:446

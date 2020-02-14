@@ -20,8 +20,7 @@ namespace BreastRadLib
 		/// The axilla (also, armpit, underarm or oxter) is the area on the human body directly
 		/// under the joint where the arm connects to the shoulder.
 		/// It also contains many sweat glands.
-		/// 
-		/// -- https://en.wikipedia.org/wiki/Axilla
+		/// [https://en.wikipedia.org/wiki/Axilla]
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_Axilla = new Coding(System, "Axilla", "Axilla");                                                                // CSBuilder.cs:446
@@ -32,30 +31,26 @@ namespace BreastRadLib
 		/// It is actually an extension of the upper lateral quadrant of the breast.
 		/// It passes into the axilla through an opening in the deep fascia called foramen of
 		/// Langer.
-		/// 
-		/// -- https://en.wikipedia.org/wiki/Tail_of_Spence
+		/// [https://en.wikipedia.org/wiki/Tail_of_Spence]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_AxillaryTail = new Coding(System, "AxillaryTail", "Axillary tail");                                             // CSBuilder.cs:446
 		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// There are three levels of axillary lymph nodes (the nodes in the underarm or "axilla" area): Level I is the bottom level, below the lower edge of the pectoralis minor muscle.
-		/// 
-		/// -- https://www.breastcancer.org/treatment/surgery/lymph_node_removal/axillary_dissection
+		/// [https://www.breastcancer.org/treatment/surgery/lymph_node_removal/axillary_dissection]
 		/// </summary>
 		public static Coding Code_AxillaI = new Coding(System, "AxillaI", "Axilla I");                                                            // CSBuilder.cs:446
 		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// There are three levels of axillary lymph nodes (the nodes in the underarm or "axilla" area):Level II is lying underneath the pectoralis minor muscle.
-		/// 
-		/// -- https://www.breastcancer.org/treatment/surgery/lymph_node_removal/axillary_dissection
+		/// [https://www.breastcancer.org/treatment/surgery/lymph_node_removal/axillary_dissection]
 		/// </summary>
 		public static Coding Code_AxillaII = new Coding(System, "AxillaII", "Axilla II");                                                         // CSBuilder.cs:446
 		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// There are three levels of axillary lymph nodes (the nodes in the underarm or "axilla" area): Level III is above the pectoralis minor muscle.
-		/// 
-		/// -- https://www.breastcancer.org/treatment/surgery/lymph_node_removal/axillary_dissection
+		/// [https://www.breastcancer.org/treatment/surgery/lymph_node_removal/axillary_dissection]
 		/// </summary>
 		public static Coding Code_AxillaIII = new Coding(System, "AxillaIII", "Axilla III");                                                      // CSBuilder.cs:446
 		                                                                                                                                          // CSBuilder.cs:432

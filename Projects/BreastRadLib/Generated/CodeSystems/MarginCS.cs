@@ -29,8 +29,7 @@ namespace BreastRadLib
 		/// the lesion and the surrounding tissue.
 		/// For US, to describe a mass as circumscribed, its entire margin must be sharply defined.
 		/// Most circumscribed lesions have round or oval shapes.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 49
+		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 49]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_CircumscribedMargin = new Coding(System, "CircumscribedMargin", "Circumscribed margin");                        // CSBuilder.cs:446
@@ -43,8 +42,7 @@ namespace BreastRadLib
 		/// physician believes it is likely due to immediately adjacent breast tissue.
 		/// Use of this descriptor
 		/// usually implies a suspicious finding.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 23
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 23]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_IndistinctMargin = new Coding(System, "IndistinctMargin", "Indistinct margin");                                 // CSBuilder.cs:446
@@ -52,8 +50,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Intraductal tumor extension is a characteristic feature of primary breast carcinoma,
 		/// and is an important consideration in patients undergoing breast conservative surgery.
-		/// 
-		/// -- https://www.ncbi.nlm.nih.gov/pubmed/8630874
+		/// [https://www.ncbi.nlm.nih.gov/pubmed/8630874]
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_IntraductalExtension = new Coding(System, "IntraductalExtension", "Intraductal extension");                     // CSBuilder.cs:446
@@ -86,8 +83,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The margin is characterized by short-cycle undulations or scalloped appearance,and
 		/// the margin of the mass is not circumscribed.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 54
+		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 54]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MicrolobulatedMargin = new Coding(System, "MicrolobulatedMargin", "Microlobulated margin");                     // CSBuilder.cs:446
@@ -97,8 +93,7 @@ namespace BreastRadLib
 		/// angular, microlobulated, or spiculated in any portion
 		/// of the margin There is not a clear demarcation between the mass and the surrounding
 		/// tissue.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 153
+		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 153]
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_NonCircumscribedMargin = new Coding(System, "NonCircumscribedMargin", "Non circumscribed margin");              // CSBuilder.cs:446
@@ -124,8 +119,7 @@ namespace BreastRadLib
 		/// The margin is characterized by sharp lines radiating from the mass, often a sign
 		/// of malignancy,
 		/// but the significant feature is that the margin of the mass is not circumscribed.
-		/// 
-		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 55
+		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 55]
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SpiculatedMargin = new Coding(System, "SpiculatedMargin", "Spiculated margin");                                 // CSBuilder.cs:446

@@ -19,8 +19,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// These are round or oval calcifications that range from under 1 mm to over a centimeter.
 		/// They are the result of fat necrosis, calcified debris in ducts, and occasional fibroadenomas.
-		/// 
-		/// -- https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis#benign-calcifications-lucent-centered
+		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis#benign-calcifications-lucent-centered]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_CentralLucent = new Coding(System, "CentralLucent", "Central lucent");                                          // CSBuilder.cs:446
@@ -47,8 +46,7 @@ namespace BreastRadLib
 		/// tissue and not much fat in the breasts.
 		/// Having dense breast tissue is common.
 		/// Some women have more dense breast tissue than others.
-		/// 
-		/// -- https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/mammograms/breast-density-and-your-mammogram-report.html
+		/// [https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/mammograms/breast-density-and-your-mammogram-report.html]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // CSBuilder.cs:446

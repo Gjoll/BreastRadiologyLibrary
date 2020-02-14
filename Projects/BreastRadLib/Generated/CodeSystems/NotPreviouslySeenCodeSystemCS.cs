@@ -29,8 +29,7 @@ namespace BreastRadLib
 		/// for surgical approach and planning.
 		/// A blunt-tipped sialogram needle (30-gauge) is used for performing the ductogram.
 		/// The abnormal duct is identified and cannulated.
-		/// 
-		/// -- https://radiopaedia.org/articles/breast-ductography-1?lang=us
+		/// [https://radiopaedia.org/articles/breast-ductography-1?lang=us]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // CSBuilder.cs:446

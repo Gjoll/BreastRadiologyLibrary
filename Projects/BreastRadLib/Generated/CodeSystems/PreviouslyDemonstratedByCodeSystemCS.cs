@@ -19,8 +19,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// A medical procedure that removes something from an area of the body.
 		/// These substances can be air, body fluids, or bone fragments.
-		/// 
-		/// -- https://medlineplus.gov/ency/article/002216.htm
+		/// [https://medlineplus.gov/ency/article/002216.htm]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:446

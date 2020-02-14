@@ -23,8 +23,7 @@ namespace BreastRadLib
 		/// Fatty breast tissue is more common in older women than in younger women.
 		/// Fatty breast tissue is one of four categories used to describe a level of breast
 		/// density seen on a mammogram.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/search?contains=false&q=fatty
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/search?contains=false&q=fatty]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_AlmostEntirelyFat = new Coding(System, "AlmostEntirelyFat", "Almost entirely fat");                             // CSBuilder.cs:446
@@ -37,8 +36,7 @@ namespace BreastRadLib
 		/// Scattered fibroglandular breast tissue is one of four categories used to describe
 		/// a level of breast density seen on a mammogram.
 		/// About 40% of women have this type of breast tissue.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/scattered-fibroglandular-breast-tissue
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/scattered-fibroglandular-breast-tissue]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_ScatteredAreasOfFibroglandularDensity = new Coding(System, "ScatteredAreasOfFibroglandularDensity", "Scattered areas of fibroglandular density");// CSBuilder.cs:446
@@ -51,8 +49,7 @@ namespace BreastRadLib
 		/// Heterogeneously dense breast tissue is one of four categories used to describe a
 		/// level of breast density seen on a mammogram.
 		/// About 40% of women have this type of breast tissue.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/heterogeneously-dense-breast-tissue
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/heterogeneously-dense-breast-tissue]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_HeterogeneouslyDense = new Coding(System, "HeterogeneouslyDense", "Heterogeneously dense");                     // CSBuilder.cs:446
@@ -68,8 +65,7 @@ namespace BreastRadLib
 		/// Extremely dense breast tissue is one of four categories used to describe a level
 		/// of breast density seen on a mammogram.
 		/// About 10% of women have this type of breast tissue.
-		/// 
-		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/extremely-dense-breast-tissue
+		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/extremely-dense-breast-tissue]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_ExtremelyDense = new Coding(System, "ExtremelyDense", "Extremely dense");                                       // CSBuilder.cs:446
