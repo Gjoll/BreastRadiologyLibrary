@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class MassTypeCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MassTypeCS";                                                    // CSBuilder.cs:393
-		                                                                                                                                          // CSBuilder.cs:405
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MassTypeCS";                                                    // CSBuilder.cs:365
+		                                                                                                                                          // CSBuilder.cs:377
 		/// <summary>
 		/// A breast mass has been identified in the breast.
 		/// This is also known as a breast lump.
@@ -22,23 +22,23 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Mass = new Coding(System, "Mass", "Mass");                                                                      // CSBuilder.cs:419
-		                                                                                                                                          // CSBuilder.cs:405
+		public static Coding Code_Mass = new Coding(System, "Mass", "Mass");                                                                      // CSBuilder.cs:391
+		                                                                                                                                          // CSBuilder.cs:377
 		/// <summary>
 		/// An intraductal mass has been identified in the breast.
 		/// It is a lump that originates in one or more of the milk ducts in the breast.
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_MassIntraductal = new Coding(System, "MassIntraductal", "Mass intraductal");                                    // CSBuilder.cs:419
-		                                                                                                                                          // CSBuilder.cs:405
+		public static Coding Code_MassIntraductal = new Coding(System, "MassIntraductal", "Mass intraductal");                                    // CSBuilder.cs:391
+		                                                                                                                                          // CSBuilder.cs:377
 		/// <summary>
 		/// A mass that is partially solid has been identified in the breast.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MassPartiallySolid = new Coding(System, "MassPartiallySolid", "Mass partially solid");                          // CSBuilder.cs:419
-		                                                                                                                                          // CSBuilder.cs:405
+		public static Coding Code_MassPartiallySolid = new Coding(System, "MassPartiallySolid", "Mass partially solid");                          // CSBuilder.cs:391
+		                                                                                                                                          // CSBuilder.cs:377
 		/// <summary>
 		/// The mammogram and/or ultrasound show a skin lesion.
 		/// 
@@ -46,8 +46,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MassSkinATLASIsSkinLesion = new Coding(System, "MassSkinATLASIsSkinLesion", "Mass skin ATLAS is skin lesion");  // CSBuilder.cs:419
-		                                                                                                                                          // CSBuilder.cs:405
+		public static Coding Code_MassSkinATLASIsSkinLesion = new Coding(System, "MassSkinATLASIsSkinLesion", "Mass skin ATLAS is skin lesion");  // CSBuilder.cs:391
+		                                                                                                                                          // CSBuilder.cs:377
 		/// <summary>
 		/// The mammogram and/or ultrasound show solid mass of the breast.
 		/// This can be nodules, fibrocystic tissue, phylloides tumor, breast cancer or metastatic.
@@ -55,7 +55,7 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MassSolid = new Coding(System, "MassSolid", "Mass solid");                                                      // CSBuilder.cs:419
+		public static Coding Code_MassSolid = new Coding(System, "MassSolid", "Mass solid");                                                      // CSBuilder.cs:391
 		//- Fields
 	}
 }

@@ -114,16 +114,6 @@ namespace FireFragger
                 case StructureDefinition sd:
                     {
                         SDInfo fi = new SDInfo(this, sd);
-                        fi.InterfaceEditor.TryAddUserMacro("InterfaceName", InterfaceName(fi));
-                        fi.InterfaceEditor.Load(Path.Combine("Templates", "Interface.txt"));
-
-                        if (this.IsFragment(sd) == false)
-                        {
-                            fi.ClassEditor = new CodeEditor();
-                            AddMacros(fi.ClassEditor, fi);
-                            fi.ClassEditor.TryAddUserMacro("ClassName", ClassName(fi));
-                            fi.ClassEditor.Load(Path.Combine("Templates", "Class.txt"));
-                        }
                         this.SDFragments.Add(sd.Url.Trim(), fi);
                     }
                     break;
@@ -190,30 +180,12 @@ namespace FireFragger
             }
         }
 
-        void AddMacros(CodeEditor ce,
-            SDInfo fi)
-        {
-            ce.TryAddUserMacro("FhirBase", fi.StructDef.BaseDefinition.LastUriPart());
-        }
-
         void DefineInterfaces(SDInfo fi)
         {
             StringBuilder interfaces = new StringBuilder();
             foreach (SDInfo refFrag in fi.ReferencedFragments)
-            {
                 interfaces.Append($", {InterfaceName(refFrag)}");
-            }
-
-            AddMacros(fi.InterfaceEditor, fi);
-            fi.InterfaceEditor.TryAddUserMacro("Interfaces", interfaces.ToString());
-            fi.InterfaceEditor.Blocks.Find("*Header").Reload();
-
-            if (fi.ClassEditor != null)
-            {
-                AddMacros(fi.ClassEditor, fi);
-                fi.ClassEditor.TryAddUserMacro("Interfaces", interfaces.ToString());
-                fi.ClassEditor.Blocks.Find("*Header").Reload();
-            }
+            fi.SetInterfaces(interfaces.ToString());
         }
 
 
@@ -497,12 +469,6 @@ namespace FireFragger
                     }
                 }
             }
-        }
-
-        bool IsFragment(DomainResource r)
-        {
-            Extension isFragmentExtension = r.GetExtension(Global.IsFragmentExtensionUrl);
-            return (isFragmentExtension != null);
         }
 
         public void Dispose()
