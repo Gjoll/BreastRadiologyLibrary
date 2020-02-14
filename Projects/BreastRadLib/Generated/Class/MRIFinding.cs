@@ -27,6 +27,7 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
+		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                                  // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

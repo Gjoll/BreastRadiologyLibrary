@@ -10,19 +10,19 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
 	//+ Header
-	public class ConsistentWithCodeSystemCS                                                                                                    // CSBuilder.cs:405
+	public class ConsistentWithCodeSystemCS                                                                                                    // CSBuilder.cs:416
 	//- Header
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithCodeSystemCS";                                    // CSBuilder.cs:409
-		                                                                                                                                          // CSBuilder.cs:421
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithCodeSystemCS";                                    // CSBuilder.cs:420
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An area within the body tissue that is swollen and contains an accumulation of pus.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Abscess = new Coding(System, "Abscess", "Abscess");                                                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Abscess = new Coding(System, "Abscess", "Abscess");                                                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Angiolipoma is a rare type of lipoma - a growth made of fat and blood vessels that
 		/// develops under your skin.
@@ -31,8 +31,8 @@ namespace BreastRadLib
 		/// -- https://www.healthline.com/health/angiolipoma
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_Angiolipoma = new Coding(System, "Angiolipoma", "Angiolipoma");                                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Angiolipoma = new Coding(System, "Angiolipoma", "Angiolipoma");                                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A benign condition; Apocrine Metaplasia refers to a particular type of cell change.
 		/// This is a type of 'umbrella term' that relates to a variety of cystic breast disorders.
@@ -43,8 +43,8 @@ namespace BreastRadLib
 		/// -- https://breast-cancer.ca/apo-meta/
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_ApocrineMetaplasia = new Coding(System, "ApocrineMetaplasia", "Apocrine metaplasia");                           // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ApocrineMetaplasia = new Coding(System, "ApocrineMetaplasia", "Apocrine metaplasia");                           // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// X-ray artifacts can present in a variety of ways including abnormal shadows noted
 		/// on a radiograph or degraded image quality, and have been produced by artificial means
@@ -58,8 +58,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/x-ray-artifacts?lang=us
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_Artifact = new Coding(System, "Artifact", "Artifact");                                                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Artifact = new Coding(System, "Artifact", "Artifact");                                                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Atypical hyperplasia is a precancerous condition that affects cells in the breast.
 		/// Atypical hyperplasia describes an accumulation of abnormal cells in the breast.
@@ -72,8 +72,8 @@ namespace BreastRadLib
 		/// -- https://www.mayoclinic.org/diseases-conditions/atypical-hyperplasia/symptoms-causes/syc-20369773
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_AtypicalHyperplasia = new Coding(System, "AtypicalHyperplasia", "Atypical hyperplasia");                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_AtypicalHyperplasia = new Coding(System, "AtypicalHyperplasia", "Atypical hyperplasia");                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Axillary lymph nodes are the lymph nodes located in the armpits.
 		/// They can become enlarged in many conditions including infections, lymphomas, and
@@ -85,16 +85,16 @@ namespace BreastRadLib
 		/// -- https://www.verywellhealth.com/axillary-lymph-nodes-2252131
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_AxillaryLymphNode = new Coding(System, "AxillaryLymphNode", "Axillary lymph node");                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_AxillaryLymphNode = new Coding(System, "AxillaryLymphNode", "Axillary lymph node");                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Carcinoma is a type of cancer that starts in cells that make up the skin or the tissue
 		/// lining organs.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Carcinoma = new Coding(System, "Carcinoma", "Carcinoma");                                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Carcinoma = new Coding(System, "Carcinoma", "Carcinoma");                                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Imaging tests used in diagnosing cancer may include a computerized tomography (CT)
 		/// scan, bone scan, magnetic resonance imaging (MRI), (PET) scan, ultrasound and X-ray,
@@ -109,8 +109,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_CarcinomaKnown = new Coding(System, "CarcinomaKnown", "Carcinoma known");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CarcinomaKnown = new Coding(System, "CarcinomaKnown", "Carcinoma known");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A breast cyst is a non-cancerous (benign) fluid-filled sac in the breast.
 		/// Some cysts are too small to feel and others may be large and uncomfortable.
@@ -118,8 +118,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_ClusterOfCysts = new Coding(System, "ClusterOfCysts", "Cluster of cysts");                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ClusterOfCysts = new Coding(System, "ClusterOfCysts", "Cluster of cysts");                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A breast cyst is a non-cancerous (benign) fluid-filled sac in the breast.
 		/// Some cysts are too small to feel and others may be large and uncomfortable.
@@ -127,8 +127,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG MRI.
 		/// </summary>
-		public static Coding Code_Cyst = new Coding(System, "Cyst", "Cyst");                                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Cyst = new Coding(System, "Cyst", "Cyst");                                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Complex cysts have irregular or scalloped borders, thick walls, and some evidence
 		/// of solid areas and/or debris in the fluid.
@@ -141,8 +141,8 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/symptoms/benign/cysts
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_CystComplex = new Coding(System, "CystComplex", "Cyst complex");                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystComplex = new Coding(System, "CystComplex", "Cyst complex");                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Complicated cysts are "in between" simple and complex.
 		/// Although they share most of the features of simple cysts, they tend to have some
@@ -153,16 +153,16 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/symptoms/benign/cysts
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_CystComplicated = new Coding(System, "CystComplicated", "Cyst complicated");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystComplicated = new Coding(System, "CystComplicated", "Cyst complicated");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Oil cysts are filled with fluid that may feel smooth and squishy.
 		/// They are caused by the breakdown of fatty tissue.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CystOil = new Coding(System, "CystOil", "Cyst oil");                                                            // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystOil = new Coding(System, "CystOil", "Cyst oil");                                                            // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Sebaceous cysts are common noncancerous cysts of the skin.
 		/// Cysts are abnormalities in the body that may contain liquid or semiliquid material.
@@ -173,8 +173,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_CystSebaceous = new Coding(System, "CystSebaceous", "Cyst sebaceous");                                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystSebaceous = new Coding(System, "CystSebaceous", "Cyst sebaceous");                                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Simple cysts have smooth, thin, regularly shaped walls and are completely filled
 		/// with fluid.
@@ -185,8 +185,8 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/symptoms/benign/cysts
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_CystSimple = new Coding(System, "CystSimple", "Cyst simple");                                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystSimple = new Coding(System, "CystSimple", "Cyst simple");                                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Complex cysts have irregular or scalloped borders, thick walls, and some evidence
 		/// of solid areas and/or debris in the fluid.
@@ -199,8 +199,8 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/symptoms/benign/cysts
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_CystsComplex = new Coding(System, "CystsComplex", "Cysts complex");                                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystsComplex = new Coding(System, "CystsComplex", "Cysts complex");                                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Complicated cysts are "in between" simple and complex.
 		/// Although they share most of the features of simple cysts, they tend to have some
@@ -211,8 +211,8 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/symptoms/benign/cysts
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_CystsComplicated = new Coding(System, "CystsComplicated", "Cysts complicated");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystsComplicated = new Coding(System, "CystsComplicated", "Cysts complicated");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Microcysts are tiny, microscopic cysts.
 		/// Clustered microcysts are a cluster of these tiny cysts and they only have fluid inside
@@ -220,8 +220,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_CystsMicroClustered = new Coding(System, "CystsMicroClustered", "Cysts micro clustered");                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystsMicroClustered = new Coding(System, "CystsMicroClustered", "Cysts micro clustered");                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct
 		/// in the breast.
@@ -232,15 +232,15 @@ namespace BreastRadLib
 		/// -- https://www.mayoclinic.org/diseases-conditions/dcis/symptoms-causes/syc-20371889
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_DCIS = new Coding(System, "DCIS", "DCIS");                                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_DCIS = new Coding(System, "DCIS", "DCIS");                                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Debris is a substance that is anything other than a liquid inside of the cyst.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Debris = new Coding(System, "Debris", "Debris");                                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Debris = new Coding(System, "Debris", "Debris");                                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Because estrogen can promote the growth of breast cancer cells, some scientists have
 		/// suggested that the aluminum-based compounds in antiperspirants may contribute to
@@ -251,8 +251,8 @@ namespace BreastRadLib
 		/// -- https://www.cancer.gov/about-cancer/causes-prevention/risk/myths/antiperspirants-fact-sheet
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Deodorant = new Coding(System, "Deodorant", "Deodorant");                                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Deodorant = new Coding(System, "Deodorant", "Deodorant");                                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Skin calcifications in the breast usually form in dermal sweat glands after low grade
 		/// folliculitis and inspissation of sebaceous material.
@@ -263,8 +263,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/skin-calcification-in-breast?lang=us
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_DermalCalcification = new Coding(System, "DermalCalcification", "Dermal calcification");                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_DermalCalcification = new Coding(System, "DermalCalcification", "Dermal calcification");                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An abnormal dilation of a duct by lipids and cellular debris.
 		/// In  mammary duct the condition, which tends mainly to affect postmenopausal women,
@@ -273,8 +273,8 @@ namespace BreastRadLib
 		/// -- https://www.hoafredericksburg.com/duct-ectasia/
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_DuctEctasia = new Coding(System, "DuctEctasia", "Duct ectasia");                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_DuctEctasia = new Coding(System, "DuctEctasia", "Duct ectasia");                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Breast edema is defined as a mammographic pattern of skin thickening, increased parenchymal
 		/// density, and interstitial marking.
@@ -285,8 +285,8 @@ namespace BreastRadLib
 		/// -- https://www.researchgate.net/publication/7988898_Unilateral_Breast_Edema_Spectrum_of_Etiologies_and_Imaging_Appearances
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_Edema = new Coding(System, "Edema", "Edema");                                                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Edema = new Coding(System, "Edema", "Edema");                                                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Fat Lobule.
 		/// The normal breast is composed of numerous fat lobules mixed with dense fibroglandular
@@ -300,8 +300,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_FatLobule = new Coding(System, "FatLobule", "Fat lobule");                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FatLobule = new Coding(System, "FatLobule", "Fat lobule");                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Breasts are made up of lobules (milk-producing glands) and ducts (tubes that carry
 		/// milk to the nipple).
@@ -313,8 +313,8 @@ namespace BreastRadLib
 		/// -- https://breastcancernow.org/information-support/have-i-got-breast-cancer/breast-pain-other-benign-conditions/fat-necrosis
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_FatNecrosis = new Coding(System, "FatNecrosis", "Fat necrosis");                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FatNecrosis = new Coding(System, "FatNecrosis", "Fat necrosis");                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Another name for Hamartomas, Hamartomas represent benign proliferation of fibrous,
 		/// glandular, and fatty tissue (hence fibro-adeno-lipoma) surrounded by a thin capsule
@@ -325,8 +325,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/breast-hamartoma?lang=us
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Fibroadenolipoma = new Coding(System, "Fibroadenolipoma", "Fibroadenolipoma");                                  // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Fibroadenolipoma = new Coding(System, "Fibroadenolipoma", "Fibroadenolipoma");                                  // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Fibroadenomas are common benign (non-cancerous) breast tumors made up of both glandular
 		/// tissue and stromal (connective) tissue.
@@ -337,8 +337,8 @@ namespace BreastRadLib
 		/// -- https://www.cancer.org/cancer/breast-cancer/non-cancerous-breast-conditions/fibroadenomas-of-the-breast.html
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Fibroadenoma = new Coding(System, "Fibroadenoma", "Fibroadenoma");                                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Fibroadenoma = new Coding(System, "Fibroadenoma", "Fibroadenoma");                                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// These are non-cancerous breast lumps.
 		/// Fibroadenomas usually go away with age.
@@ -347,8 +347,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_FibroadenomaDegenerating = new Coding(System, "FibroadenomaDegenerating", "Fibroadenoma degenerating");         // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FibroadenomaDegenerating = new Coding(System, "FibroadenomaDegenerating", "Fibroadenoma degenerating");         // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Fibrocystic breast changes lead to the development of fluid-filled round or oval
 		/// sacs (cysts) and more prominent scar-like (fibrous) tissue, which can make breasts
@@ -359,8 +359,8 @@ namespace BreastRadLib
 		/// -- https://www.mayoclinic.org/diseases-conditions/fibrocystic-breasts/symptoms-causes/syc-20350438
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_FibrocysticChange = new Coding(System, "FibrocysticChange", "Fibrocystic change");                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FibrocysticChange = new Coding(System, "FibrocysticChange", "Fibrocystic change");                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Fibrocystic breast changes lead to the development of fluid-filled round or oval
 		/// sacs (cysts) and more prominent scar-like (fibrous) tissue, which can make breasts
@@ -371,8 +371,8 @@ namespace BreastRadLib
 		/// -- https://www.mayoclinic.org/diseases-conditions/fibrocystic-breasts/symptoms-causes/syc-20350438
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_FibroglandularTissue = new Coding(System, "FibroglandularTissue", "Fibroglandular tissue");                     // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FibroglandularTissue = new Coding(System, "FibroglandularTissue", "Fibroglandular tissue");                     // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Fibrosis may refer to the connective tissue deposition that occurs as part of normal
 		/// healing or to the excess tissue deposition that occurs as a pathological process.
@@ -381,8 +381,8 @@ namespace BreastRadLib
 		/// -- https://www.news-medical.net/health/What-is-Fibrosis.aspx
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Fibrosis = new Coding(System, "Fibrosis", "Fibrosis");                                                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Fibrosis = new Coding(System, "Fibrosis", "Fibrosis");                                                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Fibrous tissue, which extends under the skin, from the front of the breast to the
 		/// back of the chest wall, supports the breast and gives it shape.
@@ -392,8 +392,8 @@ namespace BreastRadLib
 		/// -- https://www.stjoeshealth.org/find-a-service-or-specialty/womens-health/
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_FibrousRidge = new Coding(System, "FibrousRidge", "Fibrous ridge");                                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FibrousRidge = new Coding(System, "FibrousRidge", "Fibrous ridge");                                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Folliculitis is the inflammation of hair follicles due to an infection, injury, or
 		/// irritation.
@@ -405,8 +405,8 @@ namespace BreastRadLib
 		/// -- https://www.hopkinsmedicine.org/health/conditions-and-diseases/folliculitis-boils-and-carbuncles
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_Folliculitis = new Coding(System, "Folliculitis", "Folliculitis");                                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Folliculitis = new Coding(System, "Folliculitis", "Folliculitis");                                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Gynecomastia is an enlargement or swelling of breast tissue in males.
 		/// It is most commonly caused by male estrogen levels that are too high or are out of
@@ -415,8 +415,8 @@ namespace BreastRadLib
 		/// -- https://my.clevelandclinic.org/health/diseases/16227-enlarged-male-breast-tissue-gynecomastia
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_Gynecomastia = new Coding(System, "Gynecomastia", "Gynecomastia");                                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Gynecomastia = new Coding(System, "Gynecomastia", "Gynecomastia");                                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A benign (not cancer) growth made up of an abnormal mixture of cells and tissues
 		/// normally found in the area of the body where the growth occurs.
@@ -424,8 +424,8 @@ namespace BreastRadLib
 		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hamartoma
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Hamartoma = new Coding(System, "Hamartoma", "Hamartoma");                                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Hamartoma = new Coding(System, "Hamartoma", "Hamartoma");                                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A breast hematoma is a collection of blood that forms under the skin's surface.
 		/// It's not unlike having a large bruise in your breast.
@@ -436,8 +436,8 @@ namespace BreastRadLib
 		/// -- https://www.verywellhealth.com/breast-hematomas-430281
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Hematoma = new Coding(System, "Hematoma", "Hematoma");                                                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Hematoma = new Coding(System, "Hematoma", "Hematoma");                                                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Hormonal effects of certain medications including antihypertensives, antidepressants,
 		/// H2 blockers,
@@ -447,8 +447,8 @@ namespace BreastRadLib
 		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_HormonalStimulation = new Coding(System, "HormonalStimulation", "Hormonal stimulation");                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_HormonalStimulation = new Coding(System, "HormonalStimulation", "Hormonal stimulation");                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Intracystic tumors of the breast are uncommon and, at the time of ultrasonography
 		/// and aspiration cytology, it is difficult to distinguish cancer from a benign tumor.
@@ -456,8 +456,8 @@ namespace BreastRadLib
 		/// -- https://www.ncbi.nlm.nih.gov/pubmed/11911303
 		/// Valid for the following modalities: US NM.
 		/// </summary>
-		public static Coding Code_IntracysticLesion = new Coding(System, "IntracysticLesion", "Intracystic lesion");                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_IntracysticLesion = new Coding(System, "IntracysticLesion", "Intracystic lesion");                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// These are lymph  nodes within the breast tissue.
 		/// They are generally 1 cm or smaller
@@ -471,8 +471,8 @@ namespace BreastRadLib
 		/// -- Breast Imaging Reporting and Data System—Mammography, Fifth Edition
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_IntramammaryNode = new Coding(System, "IntramammaryNode", "Intramammary node");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_IntramammaryNode = new Coding(System, "IntramammaryNode", "Intramammary node");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A lipoma is a slow-growing, fatty lump that's most often situated between your skin
 		/// and the underlying muscle layer.
@@ -484,8 +484,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Lipoma = new Coding(System, "Lipoma", "Lipoma");                                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Lipoma = new Coding(System, "Lipoma", "Lipoma");                                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// With a lumpectomy, the surgeon removes only the tumor and a small amount of normal
 		/// surrounding tissue.
@@ -494,15 +494,15 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_LumpectomyCavity = new Coding(System, "LumpectomyCavity", "Lumpectomy cavity");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LumpectomyCavity = new Coding(System, "LumpectomyCavity", "Lumpectomy cavity");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The area of the breast where the incision is made during the lumpectomy.
 		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_LumpectomySite = new Coding(System, "LumpectomySite", "Lumpectomy site");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LumpectomySite = new Coding(System, "LumpectomySite", "Lumpectomy site");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A small bean-shaped structure that is part of the body's immune system.
 		/// Lymph nodes filter substances that travel through the lymphatic fluid, and they contain
@@ -517,8 +517,8 @@ namespace BreastRadLib
 		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/lymph-node
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_LymphNode = new Coding(System, "LymphNode", "Lymph node");                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LymphNode = new Coding(System, "LymphNode", "Lymph node");                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Enlarged or swollen lymph nodes usually indicate a common infection, but they can
 		/// also signal a medical condition, such as an immune disorder or, rarely, a type of
@@ -529,8 +529,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_LymphNodeEnlarged = new Coding(System, "LymphNodeEnlarged", "Lymph node enlarged");                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LymphNodeEnlarged = new Coding(System, "LymphNodeEnlarged", "Lymph node enlarged");                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Lymph nodes filter substances that travel through the lymphatic fluid, and they contain
 		/// lymphocytes (white blood cells) that help the body fight infection and disease.
@@ -543,8 +543,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_LymphNodeNormal = new Coding(System, "LymphNodeNormal", "Lymph node normal");                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LymphNodeNormal = new Coding(System, "LymphNodeNormal", "Lymph node normal");                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Lymphadenopathy (or adenopathy) is, if anything, a broader term, referring to any
 		/// pathology of lymph nodes, not necessarily resulting in increased size; this includes
@@ -554,8 +554,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/lymph-node-enlargement?lang=us
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_LymphNodePathological = new Coding(System, "LymphNodePathological", "Lymph node pathological");                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LymphNodePathological = new Coding(System, "LymphNodePathological", "Lymph node pathological");                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An abnormal mass of tissue that usually does not contain cysts or liquid areas.
 		/// Solid masses or tumors may be benign (not cancer), or malignant (cancer).
@@ -566,8 +566,8 @@ namespace BreastRadLib
 		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/solid-tumor
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_MassSolid = new Coding(System, "MassSolid", "Mass solid");                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MassSolid = new Coding(System, "MassSolid", "Mass solid");                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An abnormal mass of tissue that usually does not contain cysts or liquid areas.
 		/// Solid masses or tumors may be benign (not cancer), or malignant (cancer).
@@ -584,15 +584,15 @@ namespace BreastRadLib
 		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/solid-tumor https://www.cancer.gov/publications/dictionaries/cancer-terms/def/vascular-tumor
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_MassSolidWTumorVasc = new Coding(System, "MassSolidW/tumorVasc", "Mass solid w/tumor vasc");                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MassSolidWTumorVasc = new Coding(System, "MassSolidW/tumorVasc", "Mass solid w/tumor vasc");                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Infection of the breast tissue resulting in pain, swelling, warmth and redness.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Mastitis = new Coding(System, "Mastitis", "Mastitis");                                                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Mastitis = new Coding(System, "Mastitis", "Mastitis");                                                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The term milk of calcium (MOC) is given to dependent, sedimented calcification within
 		/// a cystic structure or hollow organ.
@@ -601,8 +601,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/milk-of-calcium-disambiguation?lang=us
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_MilkOfCalcium = new Coding(System, "MilkOfCalcium", "Milk of calcium");                                         // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MilkOfCalcium = new Coding(System, "MilkOfCalcium", "Milk of calcium");                                         // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Multifocal breast cancer occurs when there are two or more tumors in the same breast.
 		/// All of the tumors begin in one original tumor.
@@ -611,8 +611,8 @@ namespace BreastRadLib
 		/// -- https://www.healthline.com/health/breast-cancer/multifocal-breast-cancer
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_MultiFocalCancer = new Coding(System, "Multi-focalCancer", "Multi-focal cancer");                               // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MultiFocalCancer = new Coding(System, "Multi-focalCancer", "Multi-focal cancer");                               // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Breast papillary lesions are characterised by growth inside the milk ducts, and they
 		/// represent a heterogeneous pathology.
@@ -624,8 +624,8 @@ namespace BreastRadLib
 		/// -- https://ecancer.org/es/journal/article/461-breast-papillary-lesions-an-analysis-of-70-cases
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_PapillaryLesion = new Coding(System, "PapillaryLesion", "Papillary lesion");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PapillaryLesion = new Coding(System, "PapillaryLesion", "Papillary lesion");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Intraductal papillomas are benign (non-cancerous), wart-like tumors that grow within
 		/// the milk ducts of the breast.
@@ -635,8 +635,8 @@ namespace BreastRadLib
 		/// -- https://www.cancer.org/cancer/breast-cancer/non-cancerous-breast-conditions/intraductal-papillomas.html
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Papilloma = new Coding(System, "Papilloma", "Papilloma");                                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Papilloma = new Coding(System, "Papilloma", "Papilloma");                                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Phyllodes tumors of the breast are rare, accounting for less than 1% of all breast
 		/// tumors.
@@ -652,8 +652,8 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/symptoms/types/phyllodes
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_PhyllodesTumor = new Coding(System, "PhyllodesTumor", "Phyllodes tumor");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PhyllodesTumor = new Coding(System, "PhyllodesTumor", "Phyllodes tumor");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// This is scarring that occurs from the lumpectomy site.
 		/// It can include nerve pain or numbness if scar tissue forms around nerves.
@@ -667,8 +667,8 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/treatment/side_effects/scar_tissue
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PostLumpectomyScar = new Coding(System, "PostLumpectomyScar", "Post lumpectomy scar");                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PostLumpectomyScar = new Coding(System, "PostLumpectomyScar", "Post lumpectomy scar");                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Post surgical scarring happens because of the incisions needed to surgically remove
 		/// tumor, cells, etc.
@@ -677,29 +677,29 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG NM.
 		/// </summary>
-		public static Coding Code_PostSurgicalScar = new Coding(System, "PostSurgicalScar", "Post surgical scar");                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PostSurgicalScar = new Coding(System, "PostSurgicalScar", "Post surgical scar");                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Findings on mammogram are  consistent with previous biopsy.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PreviousBiopsy = new Coding(System, "PreviousBiopsy", "Previous biopsy");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PreviousBiopsy = new Coding(System, "PreviousBiopsy", "Previous biopsy");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Findings on mammogram are consistent with previous surgery.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PreviousSurgery = new Coding(System, "PreviousSurgery", "Previous surgery");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PreviousSurgery = new Coding(System, "PreviousSurgery", "Previous surgery");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Findings on mammogram are consistent with previous trauma to breast.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PreviousTrauma = new Coding(System, "PreviousTrauma", "Previous trauma");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PreviousTrauma = new Coding(System, "PreviousTrauma", "Previous trauma");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Radial scar is a growth that looks like a scar when the tissue is viewed under a
 		/// microscope.
@@ -712,16 +712,16 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/symptoms/benign/radial-scars
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_RadialScar = new Coding(System, "RadialScar", "Radial scar");                                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_RadialScar = new Coding(System, "RadialScar", "Radial scar");                                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Radiation levels during radiation therapy may change as a result of side effects
 		/// or to complete a more aggressive cancer treatment.
 		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_RadiationChanges = new Coding(System, "RadiationChanges", "Radiation changes");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_RadiationChanges = new Coding(System, "RadiationChanges", "Radiation changes");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The use of high-energy radiation from x-rays, gamma rays, neutrons, protons, and
 		/// other sources to kill cancer cells and shrink tumors.
@@ -735,8 +735,8 @@ namespace BreastRadLib
 		/// -- https://www.cancer.gov/publications/dictionaries/cancer-terms/def/44971
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_RadiationTherapy = new Coding(System, "RadiationTherapy", "Radiation therapy");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_RadiationTherapy = new Coding(System, "RadiationTherapy", "Radiation therapy");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Scar tissue forms as part of the healing process after a skin injury.
 		/// A scar is fibrous tissue made of collagen that replaces the injured skin.
@@ -744,8 +744,8 @@ namespace BreastRadLib
 		/// -- https://www.breastcancer.org/treatment/side_effects/scar_tissue
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_Scar = new Coding(System, "Scar", "Scar");                                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Scar = new Coding(System, "Scar", "Scar");                                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// In cases when the appropriate history is not available, a postsurgical scar may mimic
 		/// a malignancy.
@@ -756,8 +756,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_ScarWithShadowing = new Coding(System, "ScarWithShadowing", "Scar with shadowing");                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ScarWithShadowing = new Coding(System, "ScarWithShadowing", "Scar with shadowing");                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Sclerosing adenosis is a type of adenosis in which enlarged acini become slightly
 		/// distorted by surrounded stromal fibrosis ("sclerosis").
@@ -766,8 +766,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SclerosingAdenosis = new Coding(System, "SclerosingAdenosis", "Sclerosing adenosis");                           // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SclerosingAdenosis = new Coding(System, "SclerosingAdenosis", "Sclerosing adenosis");                           // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Secretory calcifications are benign calcifications usually in women older than 60.
 		/// They classically appear as solid or discontinuous, smooth, linear and rod-like calcifications.
@@ -777,8 +777,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/cases/secretory-calcifications?lang=us
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SecretoryCalcification = new Coding(System, "SecretoryCalcification", "Secretory calcification");               // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SecretoryCalcification = new Coding(System, "SecretoryCalcification", "Secretory calcification");               // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The sentinel nodes are the first few lymph nodes into which a tumor drains.
 		/// Sentinel node biopsy involves injecting a tracer material that helps the surgeon
@@ -788,8 +788,8 @@ namespace BreastRadLib
 		/// -- https://www.mayoclinic.org/tests-procedures/sentinel-node-biopsy/about/pac-20385264
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_SentinelNode = new Coding(System, "SentinelNode", "Sentinel node");                                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SentinelNode = new Coding(System, "SentinelNode", "Sentinel node");                                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A breast seroma is a collection (pocket) of serous fluid that can develop after trauma
 		/// to the breast or following procedures such as breast surgery or radiation therapy.
@@ -799,8 +799,8 @@ namespace BreastRadLib
 		/// -- https://www.verywellhealth.com/seroma-medical-definition-430372
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Seroma = new Coding(System, "Seroma", "Seroma");                                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Seroma = new Coding(System, "Seroma", "Seroma");                                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A skin lesion is a part of the skin that has an abnormal growth or appearance compared
 		/// to the skin around it.
@@ -811,8 +811,8 @@ namespace BreastRadLib
 		/// -- https://www.healthline.com/health/skin-lesions
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SkinLesion = new Coding(System, "SkinLesion", "Skin lesion");                                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SkinLesion = new Coding(System, "SkinLesion", "Skin lesion");                                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The branch of medicine that employs operations in the treatment of disease or injury.
 		/// Surgery can involve cutting, abrading, suturing, or otherwise physically changing
@@ -821,15 +821,15 @@ namespace BreastRadLib
 		/// -- https://www.medicinenet.com/script/main/art.asp?articlekey=5603
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_Surgery = new Coding(System, "Surgery", "Surgery");                                                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Surgery = new Coding(System, "Surgery", "Surgery");                                                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Previous injury to breast consistent with surgery, infection, etc.
 		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_Trauma = new Coding(System, "Trauma", "Trauma");                                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Trauma = new Coding(System, "Trauma", "Trauma");                                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Parallel tracks, or linear tubular calcifications that are clearly associated with
 		/// blood vessels.
@@ -843,8 +843,8 @@ namespace BreastRadLib
 		/// -- Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 38
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_VascularCalcifications = new Coding(System, "VascularCalcifications", "Vascular calcifications");               // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_VascularCalcifications = new Coding(System, "VascularCalcifications", "Vascular calcifications");               // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Venous stasis dermatitis happens when there's a problem with your veins, that keeps
 		/// blood from moving through very well.
@@ -854,7 +854,7 @@ namespace BreastRadLib
 		/// -- https://www.webmd.com/skin-problems-and-treatments/eczema/venous-stasis-dermatitis#1
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_VenousStasis = new Coding(System, "VenousStasis", "Venous stasis");                                             // CSBuilder.cs:435
+		public static Coding Code_VenousStasis = new Coding(System, "VenousStasis", "Venous stasis");                                             // CSBuilder.cs:446
 		//- Fields
 	}
 }

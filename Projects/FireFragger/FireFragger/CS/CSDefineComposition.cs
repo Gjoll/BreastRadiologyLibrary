@@ -166,7 +166,7 @@ namespace FireFragger
 
                     this.ClassReadCode
                         .BlankLine()
-                        .AppendCode($"this.{fieldName} = ReadSection<{brClass}>(this.{sectionCodeName});")
+                        .AppendCode($"this.{fieldName} = ReadSection<{brClass}>(\"{title}\", this.{sectionCodeName}, {min});")
                         ;
                 }
                 else
@@ -203,7 +203,7 @@ namespace FireFragger
                     }
 
                     this.ClassReadCode
-                        .AppendCode($"ReadSection<{brClass}>({sectionCodeName}, {min}, {max}, this.{fieldName});")
+                        .AppendCode($"ReadSection<{brClass}>(\"{title}\", {sectionCodeName}, {min}, {max}, this.{fieldName});")
                         ;
                 }
 
@@ -237,7 +237,6 @@ namespace FireFragger
             this.InterfaceFields.Clear();
             this.InterfaceMethods.Clear();
             this.MergeFragments();
-            this.DefineBase();
             this.DefineSections();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,

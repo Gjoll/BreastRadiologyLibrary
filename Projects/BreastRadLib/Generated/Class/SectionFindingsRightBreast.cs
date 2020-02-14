@@ -37,6 +37,7 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
+		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                  // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

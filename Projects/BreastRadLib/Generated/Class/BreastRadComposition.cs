@@ -154,7 +154,7 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                        // CSDefineBase.cs:109
+		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                        // CSDefineBase.cs:112
 		ClearSection();                                                                                                                           // CSDefineComposition.cs:93
 		WriteSection<BreastRadReport>("Breast Radiology Report", ReportSectionCode, 1, 1, this.report);                                           // CSDefineComposition.cs:211
 		WriteSection<ResourceBase>("Clinical Impressions", ImpressionsSectionCode, 0, -1, this.impressions);                                      // CSDefineComposition.cs:211
@@ -167,10 +167,10 @@ namespace BreastRadLib
 		{
 		//+ ReadCode
 		                                                                                                                                          // CSDefineComposition.cs:168
-		this.report = ReadSection<BreastRadReport>(this.ReportSectionCode);                                                                       // CSDefineComposition.cs:169
-		ReadSection<ResourceBase>(ImpressionsSectionCode, 0, -1, this.impressions);                                                               // CSDefineComposition.cs:206
-		ReadSection<ResourceBase>(RelatedResourcesSectionCode, 0, -1, this.relatedResources);                                                     // CSDefineComposition.cs:206
-		ReadSection<ResourceBase>(RecommendationsSectionCode, 0, -1, this.recommendations);                                                       // CSDefineComposition.cs:206
+		this.report = ReadSection<BreastRadReport>("Breast Radiology Report", this.ReportSectionCode, 1);                                         // CSDefineComposition.cs:169
+		ReadSection<ResourceBase>("Clinical Impressions", ImpressionsSectionCode, 0, -1, this.impressions);                                       // CSDefineComposition.cs:206
+		ReadSection<ResourceBase>("Related Resources", RelatedResourcesSectionCode, 0, -1, this.relatedResources);                                // CSDefineComposition.cs:206
+		ReadSection<ResourceBase>("Recommendations", RecommendationsSectionCode, 0, -1, this.recommendations);                                    // CSDefineComposition.cs:206
 		//- ReadCode
 		}
 

@@ -102,8 +102,11 @@ namespace FireFragger
                 }
             }
         }
-        protected void DefineBase()
+        public void DefineBase()
         {
+            if (this.fragBase.ClassEditor == null)
+                return;
+
             String profileUrl = this.fragBase.StructDef.Url;
             this.ClassWriteCode
                 .AppendCode($"SetProfileUrl(\"{profileUrl}\");")

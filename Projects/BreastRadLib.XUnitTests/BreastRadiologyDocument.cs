@@ -30,6 +30,8 @@ namespace BreastRadiology.XUnitTests
 
             BreastRadReport report  = doc.Index.CreateReport();
             Bundle b = doc.Write();
+
+            BreastRadiologyDocument doc2 = BreastRadiologyDocument.Read(b);
         }
     }
 }

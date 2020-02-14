@@ -10,12 +10,12 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
 	//+ Header
-	public class PreviouslyDemonstratedByCodeSystemCS                                                                                          // CSBuilder.cs:405
+	public class PreviouslyDemonstratedByCodeSystemCS                                                                                          // CSBuilder.cs:416
 	//- Header
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/PreviouslyDemonstratedByCodeSystemCS";                          // CSBuilder.cs:409
-		                                                                                                                                          // CSBuilder.cs:421
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/PreviouslyDemonstratedByCodeSystemCS";                          // CSBuilder.cs:420
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A medical procedure that removes something from an area of the body.
 		/// These substances can be air, body fluids, or bone fragments.
@@ -23,29 +23,29 @@ namespace BreastRadLib
 		/// -- https://medlineplus.gov/ency/article/002216.htm
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An examination under a microscope  of the specific tissue removed from the body.
 		/// The examination is used to check for abnormalities or cancer cells.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Findings on the Mammogram was previously demonstrated by the MRI.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Findings on the Mammogram was previously demonstrated by the Ultrasound.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_US = new Coding(System, "US", "US");                                                                            // CSBuilder.cs:435
+		public static Coding Code_US = new Coding(System, "US", "US");                                                                            // CSBuilder.cs:446
 		//- Fields
 	}
 }

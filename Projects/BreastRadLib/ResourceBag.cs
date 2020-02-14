@@ -18,9 +18,10 @@ namespace BreastRadLib
 
         public ResourceBag(Bundle bundle)
         {
+            this.Bundle = bundle;
+
             if (this.Bundle.Type != Bundle.BundleType.Document)
                 throw new Exception($"Expected bundle type 'Document', got '{this.Bundle.Type}'");
-            this.Bundle = bundle;
             foreach (Bundle.EntryComponent entry in bundle.Entry)
                 resources.Add(entry.FullUrl, entry);
         }
@@ -36,12 +37,14 @@ namespace BreastRadLib
         /// <param name="resource"></param>
         public void AddResource(DomainResource resource)
         {
-            if (String.IsNullOrEmpty(resource.Id) == false)
-                throw new Exception($"Id is already set");
+            if (String.IsNullOrEmpty(resource.Id) == true)
+                resource.Id = $"{Guid.NewGuid().ToString()}";
 
-            resource.Id = $"{Guid.NewGuid().ToString()}";
-            Bundle.EntryComponent entry = Bundle.AddResourceEntry(resource, resource.Id);
-            resources.Add(resource.Id, entry);
+            if (resources.ContainsKey(resource.Id) == false)
+            {
+                Bundle.EntryComponent entry = Bundle.AddResourceEntry(resource, resource.Id);
+                resources.Add(resource.Id, entry);
+            }
         }
     }
 }

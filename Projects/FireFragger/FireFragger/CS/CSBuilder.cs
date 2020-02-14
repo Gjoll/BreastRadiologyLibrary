@@ -171,8 +171,16 @@ namespace FireFragger
             CSDefineBase csDef = null;
             switch (fi.StructDef.BaseDefinition)
             {
+                case Global.ExtensionUrl:
+                case Global.ResourceUrl:
+                    break;
+
                 case Global.ObservationUrl:
                     csDef = new CSDefineObservation(this, fi);
+                    break;
+
+                case Global.DiagnosticReportUrl:
+                    csDef = new CSDefineDiagnosticReport(this, fi);
                     break;
 
                 case Global.CompositionUrl:
@@ -191,7 +199,10 @@ namespace FireFragger
             }
 
             if (csDef != null)
+            {
+                csDef.DefineBase();
                 csDef.Build();
+            }
         }
 
         void AddMacros(CodeEditor ce,

@@ -35,6 +35,7 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
+		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                             // CSDefineBase.cs:112
 		//- WriteCode
 		}
 

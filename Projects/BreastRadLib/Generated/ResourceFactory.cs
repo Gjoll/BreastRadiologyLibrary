@@ -8,7 +8,7 @@ namespace BreastRadLib
     {
         public static BaseBase CreateBreastRadProfileResource(BreastRadiologyDocument doc, String profile)
         {
-            switch (profile)
+            switch (profile.ToLower().Trim())
             {
                 //+ Profile
                 case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/usfinding":                                               // CSBuilder.cs:165

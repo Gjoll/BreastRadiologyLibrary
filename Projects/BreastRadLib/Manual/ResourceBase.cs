@@ -15,6 +15,8 @@ namespace BreastRadLib
         DomainResource domainResource => (DomainResource)this.resource;
         String profileUrl;
 
+        protected Meta Meta => GetMeta();
+
         public override String Id
         {
             get => this.domainResource.Id;
@@ -25,10 +27,17 @@ namespace BreastRadLib
         {
         }
 
+        Meta GetMeta()
+        {
+            if (this.domainResource.Meta == null)
+                this.domainResource.Meta = new Meta();
+            return this.domainResource.Meta;
+        }
+
         protected void SetProfileUrl(String profileUrl)
         {
             this.profileUrl = profileUrl;
-            List<String> metaProfiles = this.domainResource.Meta.Profile.ToList();
+            List<String> metaProfiles = this.Meta.Profile.ToList();
             if (metaProfiles.Contains(profileUrl) == false)
                 metaProfiles.Add(profileUrl);
             this.domainResource.Meta.Profile = metaProfiles;

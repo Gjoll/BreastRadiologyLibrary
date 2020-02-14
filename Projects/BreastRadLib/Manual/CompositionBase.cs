@@ -52,7 +52,8 @@ namespace BreastRadLib
             return null;
         }
 
-        protected void ReadSection<T>(Coding code,
+        protected void ReadSection<T>(String title,
+            Coding code,
             Int32 min,
             Int32 max,
             List<T> items)
@@ -73,25 +74,51 @@ namespace BreastRadLib
                 T item = ResourceFactory.CreateBreastRadProfileResource(this.doc, profile) as T;
                 if (item == null)
                     throw new Exception($"Error creating resource of profile {profile}");
+                items.Add(item);
             }
+
+            if (items.Count < min)
+                throw new Exception($"Error reading Composition.section '{title}'. Min cardinality sb {min}, is {items.Count}");
+            if ((max > 0) && (items.Count > max))
+                throw new Exception($"Error reading Composition.section '{title}'. Max cardinality sb {max}, is {items.Count}");
         }
 
-        protected T ReadSection<T>(Coding code)
-            where T : IBaseBase
+        protected T ReadSection<T>(String title, Coding code, Int32 min)
+            where T : ResourceBase
         {
-            throw new NotImplementedException();
+            List<T> items = new List<T>();
+            this.ReadSection(title, code, min, 1, items);
+            if (items.Count == 1)
+                return items[0];
+            return null;
         }
 
         protected void WriteSection<T>(String title, Coding code, Int32 min, Int32 max, T item)
             where T : IBaseBase
         {
-            throw new NotImplementedException();
+            List<T> items = new List<T>();
+            items.Add(item);
+            this.WriteSection(title, code, min, max, items);
         }
 
         protected void WriteSection<T>(String title, Coding code, Int32 min, Int32 max, List<T> items)
             where T : IBaseBase
         {
-            throw new NotImplementedException();
+            if (items.Count < min)
+                throw new Exception($"Error writing Composition.section '{title}'. Min cardinality sb {min}, is {items.Count}");
+            if ((max > 0) && (items.Count > max))
+                throw new Exception($"Error writing Composition.section '{title}'. Max cardinality sb {max}, is {items.Count}");
+
+            Composition.SectionComponent section = new Composition.SectionComponent
+            {
+                Code = new CodeableConcept(code.System, code.Code, code.Display),
+                Title = title
+            };
+
+            foreach (T item in items)
+                section.Entry.Add(new ResourceReference(item.Id));
+
+            this.Resource.Section.Add(section);
         }
     }
 }

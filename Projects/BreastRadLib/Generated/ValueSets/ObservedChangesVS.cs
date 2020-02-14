@@ -10,7 +10,7 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
 	//+ Header
-	public class ObservedChangesVS                                                                                                             // CSBuilder.cs:333
+	public class ObservedChangesVS                                                                                                             // CSBuilder.cs:344
 	//- Header
 	{
 		//+ Fields
@@ -18,54 +18,54 @@ namespace BreastRadLib
 		/// This class creates a type for codings of this class, that implicitly converts to Coding
 		/// Allows type checking for these codes.
 		/// </summary>
-		public class TCoding                                                                                                                      // CSBuilder.cs:354
-		{                                                                                                                                         // CSBuilder.cs:355
-		    Coding value;                                                                                                                         // CSBuilder.cs:356
-		    public static implicit operator Coding(TCoding tCode)                                                                                 // CSBuilder.cs:357
-		    {                                                                                                                                     // CSBuilder.cs:358
-		        return tCode.value;                                                                                                               // CSBuilder.cs:359
-		    }                                                                                                                                     // CSBuilder.cs:360
-		                                                                                                                                          // CSBuilder.cs:361
-		    public TCoding(Coding value)                                                                                                          // CSBuilder.cs:362
-		    {                                                                                                                                     // CSBuilder.cs:363
-		        this.value= value;                                                                                                                // CSBuilder.cs:364
-		    }                                                                                                                                     // CSBuilder.cs:365
-		}                                                                                                                                         // CSBuilder.cs:366
-		public TCoding Code_DecreaseInCalcifications = new TCoding(ObservedChangesCS.Code_DecreaseInCalcifications);                              // CSBuilder.cs:384
-		public TCoding Code_DecreaseInNumber = new TCoding(ObservedChangesCS.Code_DecreaseInNumber);                                              // CSBuilder.cs:384
-		public TCoding Code_DecreaseInSize = new TCoding(ObservedChangesCS.Code_DecreaseInSize);                                                  // CSBuilder.cs:384
-		public TCoding Code_IncreaseInCalcifications = new TCoding(ObservedChangesCS.Code_IncreaseInCalcifications);                              // CSBuilder.cs:384
-		public TCoding Code_IncreaseInNumber = new TCoding(ObservedChangesCS.Code_IncreaseInNumber);                                              // CSBuilder.cs:384
-		public TCoding Code_IncreaseInSize = new TCoding(ObservedChangesCS.Code_IncreaseInSize);                                                  // CSBuilder.cs:384
-		public TCoding Code_LessProminent = new TCoding(ObservedChangesCS.Code_LessProminent);                                                    // CSBuilder.cs:384
-		public TCoding Code_MoreProminent = new TCoding(ObservedChangesCS.Code_MoreProminent);                                                    // CSBuilder.cs:384
-		public TCoding Code_New = new TCoding(ObservedChangesCS.Code_New);                                                                        // CSBuilder.cs:384
-		public TCoding Code_NoLongerSeen = new TCoding(ObservedChangesCS.Code_NoLongerSeen);                                                      // CSBuilder.cs:384
-		public TCoding Code_NotSignificantChanged = new TCoding(ObservedChangesCS.Code_NotSignificantChanged);                                    // CSBuilder.cs:384
-		public TCoding Code_PartiallyRemoved = new TCoding(ObservedChangesCS.Code_PartiallyRemoved);                                              // CSBuilder.cs:384
-		public TCoding Code_RepresentsChange = new TCoding(ObservedChangesCS.Code_RepresentsChange);                                              // CSBuilder.cs:384
-		public TCoding Code_Stable = new TCoding(ObservedChangesCS.Code_Stable);                                                                  // CSBuilder.cs:384
-		                                                                                                                                          // CSBuilder.cs:339
-		public List<Coding> Members;                                                                                                              // CSBuilder.cs:340
-		                                                                                                                                          // CSBuilder.cs:341
-		public ObservedChangesVS()                                                                                                                // CSBuilder.cs:342
-		{                                                                                                                                         // CSBuilder.cs:343
-		    this.Members = new List<Coding>();                                                                                                    // CSBuilder.cs:344
-		    this.Members.Add(this.Code_DecreaseInCalcifications);                                                                                 // CSBuilder.cs:387
-		    this.Members.Add(this.Code_DecreaseInNumber);                                                                                         // CSBuilder.cs:387
-		    this.Members.Add(this.Code_DecreaseInSize);                                                                                           // CSBuilder.cs:387
-		    this.Members.Add(this.Code_IncreaseInCalcifications);                                                                                 // CSBuilder.cs:387
-		    this.Members.Add(this.Code_IncreaseInNumber);                                                                                         // CSBuilder.cs:387
-		    this.Members.Add(this.Code_IncreaseInSize);                                                                                           // CSBuilder.cs:387
-		    this.Members.Add(this.Code_LessProminent);                                                                                            // CSBuilder.cs:387
-		    this.Members.Add(this.Code_MoreProminent);                                                                                            // CSBuilder.cs:387
-		    this.Members.Add(this.Code_New);                                                                                                      // CSBuilder.cs:387
-		    this.Members.Add(this.Code_NoLongerSeen);                                                                                             // CSBuilder.cs:387
-		    this.Members.Add(this.Code_NotSignificantChanged);                                                                                    // CSBuilder.cs:387
-		    this.Members.Add(this.Code_PartiallyRemoved);                                                                                         // CSBuilder.cs:387
-		    this.Members.Add(this.Code_RepresentsChange);                                                                                         // CSBuilder.cs:387
-		    this.Members.Add(this.Code_Stable);                                                                                                   // CSBuilder.cs:387
-		}                                                                                                                                         // CSBuilder.cs:346
+		public class TCoding                                                                                                                      // CSBuilder.cs:365
+		{                                                                                                                                         // CSBuilder.cs:366
+		    Coding value;                                                                                                                         // CSBuilder.cs:367
+		    public static implicit operator Coding(TCoding tCode)                                                                                 // CSBuilder.cs:368
+		    {                                                                                                                                     // CSBuilder.cs:369
+		        return tCode.value;                                                                                                               // CSBuilder.cs:370
+		    }                                                                                                                                     // CSBuilder.cs:371
+		                                                                                                                                          // CSBuilder.cs:372
+		    public TCoding(Coding value)                                                                                                          // CSBuilder.cs:373
+		    {                                                                                                                                     // CSBuilder.cs:374
+		        this.value= value;                                                                                                                // CSBuilder.cs:375
+		    }                                                                                                                                     // CSBuilder.cs:376
+		}                                                                                                                                         // CSBuilder.cs:377
+		public TCoding Code_DecreaseInCalcifications = new TCoding(ObservedChangesCS.Code_DecreaseInCalcifications);                              // CSBuilder.cs:395
+		public TCoding Code_DecreaseInNumber = new TCoding(ObservedChangesCS.Code_DecreaseInNumber);                                              // CSBuilder.cs:395
+		public TCoding Code_DecreaseInSize = new TCoding(ObservedChangesCS.Code_DecreaseInSize);                                                  // CSBuilder.cs:395
+		public TCoding Code_IncreaseInCalcifications = new TCoding(ObservedChangesCS.Code_IncreaseInCalcifications);                              // CSBuilder.cs:395
+		public TCoding Code_IncreaseInNumber = new TCoding(ObservedChangesCS.Code_IncreaseInNumber);                                              // CSBuilder.cs:395
+		public TCoding Code_IncreaseInSize = new TCoding(ObservedChangesCS.Code_IncreaseInSize);                                                  // CSBuilder.cs:395
+		public TCoding Code_LessProminent = new TCoding(ObservedChangesCS.Code_LessProminent);                                                    // CSBuilder.cs:395
+		public TCoding Code_MoreProminent = new TCoding(ObservedChangesCS.Code_MoreProminent);                                                    // CSBuilder.cs:395
+		public TCoding Code_New = new TCoding(ObservedChangesCS.Code_New);                                                                        // CSBuilder.cs:395
+		public TCoding Code_NoLongerSeen = new TCoding(ObservedChangesCS.Code_NoLongerSeen);                                                      // CSBuilder.cs:395
+		public TCoding Code_NotSignificantChanged = new TCoding(ObservedChangesCS.Code_NotSignificantChanged);                                    // CSBuilder.cs:395
+		public TCoding Code_PartiallyRemoved = new TCoding(ObservedChangesCS.Code_PartiallyRemoved);                                              // CSBuilder.cs:395
+		public TCoding Code_RepresentsChange = new TCoding(ObservedChangesCS.Code_RepresentsChange);                                              // CSBuilder.cs:395
+		public TCoding Code_Stable = new TCoding(ObservedChangesCS.Code_Stable);                                                                  // CSBuilder.cs:395
+		                                                                                                                                          // CSBuilder.cs:350
+		public List<Coding> Members;                                                                                                              // CSBuilder.cs:351
+		                                                                                                                                          // CSBuilder.cs:352
+		public ObservedChangesVS()                                                                                                                // CSBuilder.cs:353
+		{                                                                                                                                         // CSBuilder.cs:354
+		    this.Members = new List<Coding>();                                                                                                    // CSBuilder.cs:355
+		    this.Members.Add(this.Code_DecreaseInCalcifications);                                                                                 // CSBuilder.cs:398
+		    this.Members.Add(this.Code_DecreaseInNumber);                                                                                         // CSBuilder.cs:398
+		    this.Members.Add(this.Code_DecreaseInSize);                                                                                           // CSBuilder.cs:398
+		    this.Members.Add(this.Code_IncreaseInCalcifications);                                                                                 // CSBuilder.cs:398
+		    this.Members.Add(this.Code_IncreaseInNumber);                                                                                         // CSBuilder.cs:398
+		    this.Members.Add(this.Code_IncreaseInSize);                                                                                           // CSBuilder.cs:398
+		    this.Members.Add(this.Code_LessProminent);                                                                                            // CSBuilder.cs:398
+		    this.Members.Add(this.Code_MoreProminent);                                                                                            // CSBuilder.cs:398
+		    this.Members.Add(this.Code_New);                                                                                                      // CSBuilder.cs:398
+		    this.Members.Add(this.Code_NoLongerSeen);                                                                                             // CSBuilder.cs:398
+		    this.Members.Add(this.Code_NotSignificantChanged);                                                                                    // CSBuilder.cs:398
+		    this.Members.Add(this.Code_PartiallyRemoved);                                                                                         // CSBuilder.cs:398
+		    this.Members.Add(this.Code_RepresentsChange);                                                                                         // CSBuilder.cs:398
+		    this.Members.Add(this.Code_Stable);                                                                                                   // CSBuilder.cs:398
+		}                                                                                                                                         // CSBuilder.cs:357
 		//- Fields
 	}
 }

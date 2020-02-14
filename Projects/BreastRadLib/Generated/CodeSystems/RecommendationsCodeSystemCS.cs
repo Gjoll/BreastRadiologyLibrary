@@ -10,12 +10,12 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
 	//+ Header
-	public class RecommendationsCodeSystemCS                                                                                                   // CSBuilder.cs:405
+	public class RecommendationsCodeSystemCS                                                                                                   // CSBuilder.cs:416
 	//- Header
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RecommendationsCodeSystemCS";                                   // CSBuilder.cs:409
-		                                                                                                                                          // CSBuilder.cs:421
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RecommendationsCodeSystemCS";                                   // CSBuilder.cs:420
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Advanced Technology that takes multiple images, or X-rays, of breast tissue to recreate
 		/// a 3-dimensional picture of the breast.
@@ -23,8 +23,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_3DImaging = new Coding(System, "3DImaging", "3D Imaging");                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_3DImaging = new Coding(System, "3DImaging", "3D Imaging");                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Advanced Technology that takes multiple images, or X-rays, of breast tissue to recreate
 		/// a 3-dimensional picture of the breast.
@@ -32,8 +32,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_3DSpotCC = new Coding(System, "3DSpotCC", "3D spot CC");                                                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_3DSpotCC = new Coding(System, "3DSpotCC", "3D spot CC");                                                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Advanced Technology that takes multiple images, or X-rays, of breast tissue to recreate
 		/// a 3-dimensional picture of the breast.
@@ -41,8 +41,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_3DSpotLM = new Coding(System, "3DSpotLM", "3D spot LM");                                                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_3DSpotLM = new Coding(System, "3DSpotLM", "3D spot LM");                                                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Advanced Technology that takes multiple images, or X-rays, of breast tissue to recreate
 		/// a 3-dimensional picture of the breast.
@@ -50,8 +50,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_3DSpotML = new Coding(System, "3DSpotML", "3D spot ML");                                                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_3DSpotML = new Coding(System, "3DSpotML", "3D spot ML");                                                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Advanced Technology that takes multiple images, or X-rays, of breast tissue to recreate
 		/// a 3-dimensional picture of the breast.
@@ -59,23 +59,23 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_3DSpotMLO = new Coding(System, "3DSpotMLO", "3D spot MLO");                                                     // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_3DSpotMLO = new Coding(System, "3DSpotMLO", "3D spot MLO");                                                     // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Additional views in Mammography, MRI and US, help increase the chances of finding
 		/// any possible tumors in the breast.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_AdditionalViews = new Coding(System, "AdditionalViews", "Additional views");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_AdditionalViews = new Coding(System, "AdditionalViews", "Additional views");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Additional views in a Mammogram, MRI or Ultrasound are recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_AddlitionalViewsWithPossibleUltrasound = new Coding(System, "AddlitionalViewsWithPossibleUltrasound", "Addlitional views with possible ultrasound");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_AddlitionalViewsWithPossibleUltrasound = new Coding(System, "AddlitionalViewsWithPossibleUltrasound", "Addlitional views with possible ultrasound");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An axillary view (also known as a "Cleopatra view") is a type of view in mammography. It is
 		/// an exaggerated craniocaudal view for better imaging of the lateral portion of the
@@ -89,8 +89,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/axillary-view?lang=us
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_AxillaView = new Coding(System, "AxillaView", "Axilla view");                                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_AxillaView = new Coding(System, "AxillaView", "Axilla view");                                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The tail of Spence (Spence's tail, axillary process, axillary tail) is an extension
 		/// of the tissue of the breast that extends into the axilla.
@@ -101,8 +101,8 @@ namespace BreastRadLib
 		/// -- https://en.wikipedia.org/wiki/Tail_of_Spence
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_AxillaryTailView = new Coding(System, "AxillaryTailView", "Axillary tail view");                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_AxillaryTailView = new Coding(System, "AxillaryTailView", "Axillary tail view");                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A biopsy is recommended.
 		/// An examination under a microscope  of the specific tissue removed from the body.
@@ -110,15 +110,15 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Based on the clinical exam, a biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_BiopsyBaseOnClinical = new Coding(System, "BiopsyBaseOnClinical", "Biopsy base on clinical");                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_BiopsyBaseOnClinical = new Coding(System, "BiopsyBaseOnClinical", "Biopsy base on clinical");                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// It is recommended that a Caudocranial view is captured by Ultrasound and/or Mammogram.
 		/// It is useful for the study of breasts in the lower quadrants.
@@ -132,22 +132,22 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CaudocranialView = new Coding(System, "CaudocranialView", "Caudocranial view");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CaudocranialView = new Coding(System, "CaudocranialView", "Caudocranial view");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a CC with compression view to be completed on an Ultrasound and/or Mammogram.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CCWithCompressionView = new Coding(System, "CCWithCompressionView", "CC with compression view");                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CCWithCompressionView = new Coding(System, "CCWithCompressionView", "CC with compression view");                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a CC with magnification view to be completed on an Ultrasound and/or Mammogram.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CCWithMagnificationView = new Coding(System, "CCWithMagnificationView", "CC with magnification view");          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CCWithMagnificationView = new Coding(System, "CCWithMagnificationView", "CC with magnification view");          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// It is recommended that a cleavage view is captured via Mammogram and/or Ultrasound.
 		/// Also called "valley view" is a mammogram view that images the most central portions
@@ -157,36 +157,36 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CleavageView = new Coding(System, "CleavageView", "Cleavage view");                                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CleavageView = new Coding(System, "CleavageView", "Cleavage view");                                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A clinical consultation is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_ClinicalConsultation = new Coding(System, "ClinicalConsultation", "Clinical consultation");                     // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ClinicalConsultation = new Coding(System, "ClinicalConsultation", "Clinical consultation");                     // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a clinicial correlation and/or comparison to be completed.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_ClinicalCorrelation = new Coding(System, "ClinicalCorrelation", "Clinical correlation");                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ClinicalCorrelation = new Coding(System, "ClinicalCorrelation", "Clinical correlation");                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a clinical follow-up to be completed.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_ClinicalFollowUp = new Coding(System, "ClinicalFollow-up", "Clinical follow-up");                               // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ClinicalFollowUp = new Coding(System, "ClinicalFollow-up", "Clinical follow-up");                               // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a compare to prior exams to be completed.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CompareToPriorExams = new Coding(System, "CompareToPriorExams", "Compare to prior exams");                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CompareToPriorExams = new Coding(System, "CompareToPriorExams", "Compare to prior exams");                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// It is recommended that a compression view is admininstered via Mammogram or Ultrasound.
 		/// All mammograms use compression of the breast.
@@ -197,8 +197,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CompressionViews = new Coding(System, "CompressionViews", "Compression views");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CompressionViews = new Coding(System, "CompressionViews", "Compression views");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A cone compression is recommended to catch a specific spot or view during the mammogram
 		/// and/or ultrasound.
@@ -207,8 +207,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_ConeCompression = new Coding(System, "ConeCompression", "Cone compression");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ConeCompression = new Coding(System, "ConeCompression", "Cone compression");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// It is recommended that a core biopsy procedure is administered.
 		/// It is a procedure where a needle is passed through the skin to take a sample of tissue
@@ -217,15 +217,15 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_CoreBiopsy = new Coding(System, "CoreBiopsy", "Core Biopsy");                                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CoreBiopsy = new Coding(System, "CoreBiopsy", "Core Biopsy");                                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Cranial-Caudal (CC) is a view from above the breast during a mammogram or ultrasound.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_CraniocaudalView = new Coding(System, "CraniocaudalView", "Craniocaudal view");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CraniocaudalView = new Coding(System, "CraniocaudalView", "Craniocaudal view");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Uses imaging guidance, a needle-like applicator called a cryoprobe, and liquid nitrogen
 		/// or argon gas to create intense cold to freeze and destroy diseased tissue, including
@@ -235,8 +235,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Cryoablation = new Coding(System, "Cryoablation", "Cryoablation");                                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Cryoablation = new Coding(System, "Cryoablation", "Cryoablation");                                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A cyst aspiration is a procedure used to drain fluid from a breast cyst.
 		/// The vast majority of cysts are benign (non-cancerous), though some are quite tender.
@@ -246,8 +246,8 @@ namespace BreastRadLib
 		/// -- www.carolmilgardbreastcenter.org > Cyst_Aspiration
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_CystAspiration = new Coding(System, "CystAspiration", "Cyst aspiration");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystAspiration = new Coding(System, "CystAspiration", "Cyst aspiration");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// One way to get relief from the pain of a cyst is to remove fluid from
 		/// the cyst, thereby decreasing the pressure.
@@ -255,8 +255,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_CystAspirationForRelief = new Coding(System, "CystAspirationForRelief", "Cyst aspiration for relief");          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_CystAspirationForRelief = new Coding(System, "CystAspirationForRelief", "Cyst aspiration for relief");          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// This is a fine needle aspiration and is a type of biopsy procedure.
 		/// In fine needle aspiration, a thin needle is inserted into an area of abnormal-appearing
@@ -265,8 +265,8 @@ namespace BreastRadLib
 		/// -- https://www.webmd.com > a-to-z-guides > fine-needle-aspiration
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_DiagnosticAspiration = new Coding(System, "DiagnosticAspiration", "Diagnostic aspiration");                     // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_DiagnosticAspiration = new Coding(System, "DiagnosticAspiration", "Diagnostic aspiration");                     // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// While screening mammograms are used as a routine check-up for breast health,  diagnostic
 		/// mammograms are used after suspicious results on a screening mammogram or after some
@@ -276,8 +276,8 @@ namespace BreastRadLib
 		/// -- https://www.nationalbreastcancer.org/diagnostic-mammogram
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_DiagnosticMammogram = new Coding(System, "DiagnosticMammogram", "Diagnostic Mammogram");                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_DiagnosticMammogram = new Coding(System, "DiagnosticMammogram", "Diagnostic Mammogram");                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a drainage tube to be attached to breast.
 		/// A drainage tube is a tube used to remove pus, blood or other fluids from a wound.
@@ -286,8 +286,8 @@ namespace BreastRadLib
 		/// -- https://en.wikipedia.org/wiki/Drain_(surgery)
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_DrainageTube = new Coding(System, "DrainageTube", "Drainage tube");                                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_DrainageTube = new Coding(System, "DrainageTube", "Drainage tube");                                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A ductogram, also called a galactogram, is a special type of mammogram used for imaging
 		/// the breast ducts.
@@ -300,8 +300,8 @@ namespace BreastRadLib
 		/// -- https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Ductography = new Coding(System, "Ductography", "Ductography");                                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Ductography = new Coding(System, "Ductography", "Ductography");                                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An XCCL view is a supplementary mammographic view.
 		/// It is a type of exaggerated cranio-caudal view.
@@ -321,8 +321,8 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/xccl-view?lang=us
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_ExaggeratedCCViews = new Coding(System, "ExaggeratedCCViews", "Exaggerated CC views");                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ExaggeratedCCViews = new Coding(System, "ExaggeratedCCViews", "Exaggerated CC views");                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// FNA stands for Fine needle aspiration and this is a type of biopsy procedure.
 		/// In fine needle aspiration, a thin needle is inserted into an area of abnormal-appearing
@@ -333,43 +333,43 @@ namespace BreastRadLib
 		/// -- https://www.webmd.com/a-to-z-guides/fine-needle-aspiration#1
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_FNABiopsy = new Coding(System, "FNABiopsy", "FNA biopsy");                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FNABiopsy = new Coding(System, "FNABiopsy", "FNA biopsy");                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// It is recommended to make a follow-up appointment.
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_FollowUp = new Coding(System, "Follow-up", "Follow-up");                                                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_FollowUp = new Coding(System, "Follow-up", "Follow-up");                                                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// It is recommended to make a follow-up appointment in 3 months.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Followup3Months = new Coding(System, "Followup3Months", "Followup 3 months");                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Followup3Months = new Coding(System, "Followup3Months", "Followup 3 months");                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// It is recommended to make a follow-up appointment in 6 months.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Followup6Months = new Coding(System, "Followup6Months", "Followup 6 months");                                   // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Followup6Months = new Coding(System, "Followup6Months", "Followup 6 months");                                   // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a if previous show no change to be completed.
 		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_IfPreviousShowNoChange = new Coding(System, "IfPreviousShowNoChange", "If previous show no change");            // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_IfPreviousShowNoChange = new Coding(System, "IfPreviousShowNoChange", "If previous show no change");            // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a Lateral magnification view to be completed on Mammogram and/or Ultrasound.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_LateralMagnificationView = new Coding(System, "LateralMagnificationView", "Lateral magnification view");        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LateralMagnificationView = new Coding(System, "LateralMagnificationView", "Lateral magnification view");        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// There are different views of the breast in mammography.
 		/// For the LM view, the tube is lateral and the detector is placed medially
@@ -377,8 +377,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_LateralMedialView = new Coding(System, "LateralMedialView", "Lateral medial view");                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LateralMedialView = new Coding(System, "LateralMedialView", "Lateral medial view");                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// There are different views of the breast in mammography.
 		/// The lateral view is a view obtained at virtually every diagnostic evaluation.
@@ -387,29 +387,29 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_LateralView = new Coding(System, "LateralView", "Lateral view");                                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LateralView = new Coding(System, "LateralView", "Lateral view");                                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a Lateral with compression view to be completed on Mammogram.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_LateralWithCompressionView = new Coding(System, "LateralWithCompressionView", "Lateral with compression view"); // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LateralWithCompressionView = new Coding(System, "LateralWithCompressionView", "Lateral with compression view"); // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a lateromedial oblique view to be completed on Mammogram and/or Ultrasound.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_LateromedialOblique = new Coding(System, "LateromedialOblique", "Lateromedial oblique");                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LateromedialOblique = new Coding(System, "LateromedialOblique", "Lateromedial oblique");                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a lateromedial view to be completed on Mammogram and/or Ultrasound.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_LateromedialView = new Coding(System, "LateromedialView", "Lateromedial view");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LateromedialView = new Coding(System, "LateromedialView", "Lateromedial view");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Lymph Node Exam.
 		/// Palpation of the lymph nodes provides information about the possible presence of
@@ -419,8 +419,8 @@ namespace BreastRadLib
 		/// -- https://stanfordmedicine25.stanford.edu/the25/lymph.html
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_LymphNodeAssessment = new Coding(System, "LymphNodeAssessment", "Lymph node assessment");                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_LymphNodeAssessment = new Coding(System, "LymphNodeAssessment", "Lymph node assessment");                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A magnification view in mammography is performed to evaluate and count microcalcifications and
 		/// its extension (as well the assessment of the borders and the tissue structures of
@@ -431,100 +431,100 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_MagnificationViews = new Coding(System, "MagnificationViews", "Magnification views");                           // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MagnificationViews = new Coding(System, "MagnificationViews", "Magnification views");                           // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An X-Ray picture of the breast.
 		/// It's used to look for early signs of breast cancer.
 		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_Mammogram = new Coding(System, "Mammogram", "Mammogram");                                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Mammogram = new Coding(System, "Mammogram", "Mammogram");                                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A three month follow-up is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Mammogram3MonthFollowUp = new Coding(System, "Mammogram3MonthFollow-up", "Mammogram 3 month follow-up");        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Mammogram3MonthFollowUp = new Coding(System, "Mammogram3MonthFollow-up", "Mammogram 3 month follow-up");        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A six month follow-up is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Mammogram6MonthFollowUp = new Coding(System, "Mammogram6MonthFollow-up", "Mammogram 6 month follow-up");        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Mammogram6MonthFollowUp = new Coding(System, "Mammogram6MonthFollow-up", "Mammogram 6 month follow-up");        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A three month follow-up with ultrasound is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MammogramAndUltrasound3MonthFollowUp = new Coding(System, "MammogramAndUltrasound3MonthFollow-up", "Mammogram and ultrasound 3 month follow-up");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MammogramAndUltrasound3MonthFollowUp = new Coding(System, "MammogramAndUltrasound3MonthFollow-up", "Mammogram and ultrasound 3 month follow-up");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A six month follow-up with ultrasound is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MammogramAndUltrasound6MonthFollowUp = new Coding(System, "MammogramAndUltrasound6MonthFollow-up", "Mammogram and ultrasound 6 month follow-up");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MammogramAndUltrasound6MonthFollowUp = new Coding(System, "MammogramAndUltrasound6MonthFollow-up", "Mammogram and ultrasound 6 month follow-up");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A mediolateral oblique view is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_MediolateralObliqueView = new Coding(System, "MediolateralObliqueView", "Mediolateral oblique view");           // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MediolateralObliqueView = new Coding(System, "MediolateralObliqueView", "Mediolateral oblique view");           // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A mediolateral view is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_MediolateralView = new Coding(System, "MediolateralView", "Mediolateral view");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MediolateralView = new Coding(System, "MediolateralView", "Mediolateral view");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An additional MLO with compression view of the breast is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MLOWithCompressionView = new Coding(System, "MLOWithCompressionView", "MLO with compression view");             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MLOWithCompressionView = new Coding(System, "MLOWithCompressionView", "MLO with compression view");             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An additional MLO with magnification view of the breast is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MLOWithMagnificationView = new Coding(System, "MLOWithMagnificationView", "MLO with magnification view");       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MLOWithMagnificationView = new Coding(System, "MLOWithMagnificationView", "MLO with magnification view");       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An MRI is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An MRI with biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_MRIBiopsy = new Coding(System, "MRIBiopsy", "MRI biopsy");                                                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MRIBiopsy = new Coding(System, "MRIBiopsy", "MRI biopsy");                                                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An MRI follow-up is recommended.
 		/// 
 		/// Valid for the following modalities: MRI NM.
 		/// </summary>
-		public static Coding Code_MRIFollowUp = new Coding(System, "MRIFollow-up", "MRI follow-up");                                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_MRIFollowUp = new Coding(System, "MRIFollow-up", "MRI follow-up");                                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A Needle localization and surgical biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_NeedleLocationAndSurgicalBiopsy = new Coding(System, "NeedleLocationAndSurgicalBiopsy", "Needle location and surgical biopsy");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_NeedleLocationAndSurgicalBiopsy = new Coding(System, "NeedleLocationAndSurgicalBiopsy", "Needle location and surgical biopsy");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A technically adequate exam has the nipple in profile, allows visualization of the
 		/// inframammary fold and includes the pectoralis muscle extending down to the posterior
@@ -533,22 +533,22 @@ namespace BreastRadLib
 		/// -- https://www.mammoguide.com/mammo-techniques.html
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_NippleInProfileView = new Coding(System, "NippleInProfileView", "Nipple in profile view");                      // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_NippleInProfileView = new Coding(System, "NippleInProfileView", "Nipple in profile view");                      // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An additional off angle CC view of the breast is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_OffAngleCCView = new Coding(System, "OffAngleCCView", "Off angle CC view");                                     // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_OffAngleCCView = new Coding(System, "OffAngleCCView", "Off angle CC view");                                     // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An additional off angle MLO  view of the breast is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_OffAngleMLOView = new Coding(System, "OffAngleMLOView", "Off angle MLO view");                                  // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_OffAngleMLOView = new Coding(System, "OffAngleMLOView", "Off angle MLO view");                                  // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Stereotactic breast biopsy uses mammography - a specific type of breast imaging that
 		/// uses low-dose x-rays - to help locate a breast abnormality and remove a tissue sample
@@ -560,8 +560,8 @@ namespace BreastRadLib
 		/// -- https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PossStereotacticBx = new Coding(System, "Poss.StereotacticBx", "Poss. Stereotactic Bx");                        // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossStereotacticBx = new Coding(System, "Poss.StereotacticBx", "Poss. Stereotactic Bx");                        // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A core needle biopsy (CNB)  uses a hollow needle to take out pieces of breast tissue from
 		/// a suspicious area in an imaging test.
@@ -574,15 +574,15 @@ namespace BreastRadLib
 		/// -- https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/breast-biopsy/core-needle-biopsy-of-the-breast.html
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_PossibleCoreBiopsy = new Coding(System, "PossibleCoreBiopsy", "Possible core biopsy");                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleCoreBiopsy = new Coding(System, "PossibleCoreBiopsy", "Possible core biopsy");                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A possible diagnostic mammogram is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PossibleDiagnosticMammogram = new Coding(System, "PossibleDiagnosticMammogram", "Possible Diagnostic Mammogram");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleDiagnosticMammogram = new Coding(System, "PossibleDiagnosticMammogram", "Possible Diagnostic Mammogram");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Based on the results of the mammogram, a possible stereotactic vacuum biopsy is recommended.
 		/// During this type of biopsy, small samples of tissue are removed from the breast using
@@ -592,57 +592,57 @@ namespace BreastRadLib
 		/// -- https://www.genesishealth.com/care-treatment/cancer/treat/breast/diagnosis/sterotactic_vacuum/
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PossibleStereotacticVacuumBiopsy = new Coding(System, "PossibleStereotacticVacuumBiopsy", "Possible stereotactic vacuum biopsy");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleStereotacticVacuumBiopsy = new Coding(System, "PossibleStereotacticVacuumBiopsy", "Possible stereotactic vacuum biopsy");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A possible surgical consultation may be recommended.
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_PossibleSurgicalConsult = new Coding(System, "PossibleSurgicalConsult", "Possible surgical consult");           // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleSurgicalConsult = new Coding(System, "PossibleSurgicalConsult", "Possible surgical consult");           // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A possible surgical evaluation is recommended.
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_PossibleSurgicalEvaluation = new Coding(System, "PossibleSurgicalEvaluation", "Possible surgical evaluation");  // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleSurgicalEvaluation = new Coding(System, "PossibleSurgicalEvaluation", "Possible surgical evaluation");  // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A possible ultrasound is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PossibleUltrasound = new Coding(System, "PossibleUltrasound", "Possible ultrasound");                           // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleUltrasound = new Coding(System, "PossibleUltrasound", "Possible ultrasound");                           // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A possible ultrasound guided biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PossibleUltrasoundGuidedBiopsy = new Coding(System, "PossibleUltrasoundGuidedBiopsy", "Possible ultrasound guided biopsy");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleUltrasoundGuidedBiopsy = new Coding(System, "PossibleUltrasoundGuidedBiopsy", "Possible ultrasound guided biopsy");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A possible vacuum biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PossibleVacuumBiopsy = new Coding(System, "PossibleVacuumBiopsy", "Possible vacuum biopsy");                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_PossibleVacuumBiopsy = new Coding(System, "PossibleVacuumBiopsy", "Possible vacuum biopsy");                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Another CC view of Mammogram is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_RepeatCCView = new Coding(System, "RepeatCCView", "Repeat CC view");                                            // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_RepeatCCView = new Coding(System, "RepeatCCView", "Repeat CC view");                                            // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Another MLO view of Mammogram is recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_RepeatMLOView = new Coding(System, "RepeatMLOView", "Repeat MLO view");                                         // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_RepeatMLOView = new Coding(System, "RepeatMLOView", "Repeat MLO view");                                         // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A rolled CC lateral view is recommended.
 		/// A rolled CC view Is performed to locate a lesion only visible in the cranio-caudal
@@ -658,15 +658,15 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/rolled-cc-view-1?lang=us
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_RolledLateralView = new Coding(System, "RolledLateralView", "Rolled lateral view");                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_RolledLateralView = new Coding(System, "RolledLateralView", "Rolled lateral view");                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A rolled medial view is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_RolledMedialView = new Coding(System, "RolledMedialView", "Rolled medial view");                                // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_RolledMedialView = new Coding(System, "RolledMedialView", "Rolled medial view");                                // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A Scintimammogram guided biopsy is recommended.
 		/// This is performed by taking samples of an abnormality under guidance from the Scintimammogram.
@@ -677,8 +677,8 @@ namespace BreastRadLib
 		/// -- https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_ScintimammogramGuidedBiopsy = new Coding(System, "ScintimammogramGuidedBiopsy", "Scintimammogram Guided Biopsy");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_ScintimammogramGuidedBiopsy = new Coding(System, "ScintimammogramGuidedBiopsy", "Scintimammogram Guided Biopsy");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A scintimammogram is recommended.
 		/// Scintimammography is also known as nuclear medicine breast imaging, Breast Specific
@@ -693,8 +693,8 @@ namespace BreastRadLib
 		/// -- https://www.radiologyinfo.org/en/info.cfm?pg=scintimammo
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Scintimammography = new Coding(System, "Scintimammography", "Scintimammography");                               // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Scintimammography = new Coding(System, "Scintimammography", "Scintimammography");                               // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A spot compression is recommended.
 		/// A spot view (also known as a spot compression view or focal compression view) is
@@ -710,22 +710,22 @@ namespace BreastRadLib
 		/// -- https://radiopaedia.org/articles/spot-view-mammography?lang=us
 		/// Valid for the following modalities: MG US NM.
 		/// </summary>
-		public static Coding Code_SpotCompression = new Coding(System, "SpotCompression", "Spot compression");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SpotCompression = new Coding(System, "SpotCompression", "Spot compression");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Spot magnification views are recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SpotMagnificationViews = new Coding(System, "SpotMagnificationViews", "Spot magnification views");              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SpotMagnificationViews = new Coding(System, "SpotMagnificationViews", "Spot magnification views");              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A stereotactic biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_StereotacticBx = new Coding(System, "StereotacticBx", "Stereotactic bx");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_StereotacticBx = new Coding(System, "StereotacticBx", "Stereotactic bx");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A superolateral IO view is recommended.
 		/// The view of the upper outer quadrant of the breast.
@@ -734,8 +734,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_SuperolateralIOView = new Coding(System, "SuperolateralIOView", "Superolateral IO view");                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SuperolateralIOView = new Coding(System, "SuperolateralIOView", "Superolateral IO view");                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A surgical biopsy is recommended.
 		/// A surgical biopsy is a procedure that involves the surgical removal of tissue from
@@ -747,124 +747,124 @@ namespace BreastRadLib
 		/// -- https://www.cancer.ca/en/cancer-information/diagnosis-and-treatment/tests-and-procedures/surgical-biopsy/?region=on
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_SurgicalBiopsy = new Coding(System, "SurgicalBiopsy", "Surgical biopsy");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SurgicalBiopsy = new Coding(System, "SurgicalBiopsy", "Surgical biopsy");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A surgical consult is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_SurgicalConsult = new Coding(System, "SurgicalConsult", "Surgical consult");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SurgicalConsult = new Coding(System, "SurgicalConsult", "Surgical consult");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A surgical consult and biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_SurgicalConsultAndBiopsy = new Coding(System, "SurgicalConsultAndBiopsy", "Surgical consult and biopsy");       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SurgicalConsultAndBiopsy = new Coding(System, "SurgicalConsultAndBiopsy", "Surgical consult and biopsy");       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a surgical evaluation.
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_SurgicalEvaluation = new Coding(System, "SurgicalEvaluation", "Surgical evaluation");                           // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SurgicalEvaluation = new Coding(System, "SurgicalEvaluation", "Surgical evaluation");                           // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a surgical excision.
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_SurgicalExcision = new Coding(System, "SurgicalExcision", "Surgical excision");                                 // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SurgicalExcision = new Coding(System, "SurgicalExcision", "Surgical excision");                                 // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a surgical oncologic evaluation.
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_SurgicalOncologicEvaluation = new Coding(System, "SurgicalOncologicEvaluation", "Surgical oncologic evaluation");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SurgicalOncologicEvaluation = new Coding(System, "SurgicalOncologicEvaluation", "Surgical oncologic evaluation");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// The recommendation is for a surgical oncologic consult.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_SurgicalOncologicalConsult = new Coding(System, "SurgicalOncologicalConsult", "Surgical oncological consult");  // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_SurgicalOncologicalConsult = new Coding(System, "SurgicalOncologicalConsult", "Surgical oncological consult");  // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A tangential view is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_TangentialView = new Coding(System, "TangentialView", "Tangential view");                                       // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_TangentialView = new Coding(System, "TangentialView", "Tangential view");                                       // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Tangential views are recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_TangentialViews = new Coding(System, "TangentialViews", "Tangential views");                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_TangentialViews = new Coding(System, "TangentialViews", "Tangential views");                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An ultrasound is recommended.
 		/// 
 		/// Valid for the following modalities: MG MRI NM.
 		/// </summary>
-		public static Coding Code_Ultrasound = new Coding(System, "Ultrasound", "Ultrasound");                                                    // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Ultrasound = new Coding(System, "Ultrasound", "Ultrasound");                                                    // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An additional ultrasound is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Ultrasound2ndLook = new Coding(System, "Ultrasound2ndLook", "Ultrasound 2nd Look");                             // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Ultrasound2ndLook = new Coding(System, "Ultrasound2ndLook", "Ultrasound 2nd Look");                             // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An additional ultrasound is recommended in a 3 month follow-up.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Ultrasound3MonthFollowUp = new Coding(System, "Ultrasound3MonthFollow-up", "Ultrasound 3 month follow-up");     // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Ultrasound3MonthFollowUp = new Coding(System, "Ultrasound3MonthFollow-up", "Ultrasound 3 month follow-up");     // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An additional ultrasound is recommended in a 3 month follow-up.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Ultrasound6MonthFollowUp = new Coding(System, "Ultrasound6MonthFollow-up", "Ultrasound 6 month follow-up");     // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_Ultrasound6MonthFollowUp = new Coding(System, "Ultrasound6MonthFollow-up", "Ultrasound 6 month follow-up");     // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An ultrasound guided biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_UltrasoundGuidedBx = new Coding(System, "UltrasoundGuidedBx", "Ultrasound guided bx");                          // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_UltrasoundGuidedBx = new Coding(System, "UltrasoundGuidedBx", "Ultrasound guided bx");                          // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An ultrasound localized and surgical biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_UltrasoundLocationAndSurgicalBiopsy = new Coding(System, "UltrasoundLocationAndSurgicalBiopsy", "Ultrasound location and surgical biopsy");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_UltrasoundLocationAndSurgicalBiopsy = new Coding(System, "UltrasoundLocationAndSurgicalBiopsy", "Ultrasound location and surgical biopsy");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// An ultrasound with possible additional views are recommended.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_UltrasoundWithPossibleAddlitonalViews = new Coding(System, "UltrasoundWithPossibleAddlitonalViews", "Ultrasound with possible addlitonal views");// CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_UltrasoundWithPossibleAddlitonalViews = new Coding(System, "UltrasoundWithPossibleAddlitonalViews", "Ultrasound with possible addlitonal views");// CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_UnspecifiedOther = new Coding(System, "Unspecified/Other", "Unspecified / other");                              // CSBuilder.cs:435
-		                                                                                                                                          // CSBuilder.cs:421
+		public static Coding Code_UnspecifiedOther = new Coding(System, "Unspecified/Other", "Unspecified / other");                              // CSBuilder.cs:446
+		                                                                                                                                          // CSBuilder.cs:432
 		/// <summary>
 		/// A vacuum biopsy is recommended.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_VacuumBx = new Coding(System, "VacuumBx", "Vacuum Bx");                                                         // CSBuilder.cs:435
+		public static Coding Code_VacuumBx = new Coding(System, "VacuumBx", "Vacuum Bx");                                                         // CSBuilder.cs:446
 		//- Fields
 	}
 }

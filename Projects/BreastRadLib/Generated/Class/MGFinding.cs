@@ -55,6 +55,7 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
+		SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                   // CSDefineBase.cs:112
 		//- WriteCode
 		}
 
