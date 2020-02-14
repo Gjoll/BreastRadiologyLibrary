@@ -9,6 +9,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using FhirKhit.SliceGen.CSApi;
 
 namespace FireFragger
 {
@@ -102,11 +103,31 @@ namespace FireFragger
                 }
             }
         }
+
+        void DefineDefaultElement(ElementDefinition elementDefinition)
+        {
+            if (elementDefinition.Min == 0)
+                return;
+            if (elementDefinition.DefaultValue == null)
+                return;
+            FhirConstruct.Construct(this.ClassMethods,
+                elementDefinition.DefaultValue,
+                "methodName",                                                                                                              // GenerateFhirConstruct.cs:354
+                "",
+                out String propertyType);
+        }
+
+        void DefineDefaultElements()
+        {
+            foreach (ElementDefinition elementDefinition in this.fragBase.DiffNodes.ElementDefinitions)
+                DefineDefaultElement(elementDefinition);
+        }
+
         public void DefineBase()
         {
             if (this.fragBase.ClassEditor == null)
                 return;
-
+            DefineDefaultElements();
             String profileUrl = this.fragBase.StructDef.Url;
             this.ClassConstructor
                 .AppendCode($"SetProfileUrl(\"{profileUrl}\");")
