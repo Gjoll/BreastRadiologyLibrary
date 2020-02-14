@@ -13,7 +13,26 @@ namespace BreastRadLib
 	public class %ClassName%
 	//-*Header
 	{
+		/// <summary>
+		/// This class creates a type for codings of this class, that implicitly converts to Coding
+		/// Allows type checking for these codes.
+		/// </summary>
+		public class TCoding
+		{
+		    public Coding Value {get;}
+			public static implicit operator Coding(TCoding tCode) => tCode.Value;
+			public static implicit operator CodeableConcept(TCoding tCode) => new CodeableConcept(tCode.Value.System, tCode.Value.Code, tCode.Value.Display);
+
+			public TCoding(Coding value)
+		    {
+		        this.Value= value;
+		    }
+		}
+
 		//+ Fields
 		//- Fields
+
+		//+ Methods
+		//- Methods
 	}
 }

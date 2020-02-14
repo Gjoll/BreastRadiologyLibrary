@@ -130,6 +130,7 @@ namespace FireFragger
         {
             const String fcn = "BuildFragment";
 
+            String fhirType = fi.BaseDefinitionName;
             this.ConversionInfo(this.GetType().Name,
                fcn,
                $"Processing fragment {fi.StructDef.Name}");
@@ -138,7 +139,7 @@ namespace FireFragger
                 String url = fi.StructDef.Url.Trim().ToLower();
                 this.resourceFactoryProfileBlock
                     .AppendCode($"case \"{url}\":")
-                    .AppendCode($"    return new {ClassName(fi)}(doc);")
+                    .AppendCode($"    return new {ClassName(fi)}(doc, ({fhirType}) resource);")
                     ;
             }
 
@@ -291,45 +292,21 @@ namespace FireFragger
 
         void BuildValueSet(VSInfo vi)
         {
-            CodeBlockNested vsHdr = vi.ClassCode.Blocks.Find("Header");
-            CodeBlockNested vsFields = vi.ClassCode.Blocks.Find("Fields");
-
-            vsFields
-                .DefineBlock(out CodeBlockNested definitionsBlock)
+            vi.ClassCode.Blocks.Find("Fields")
                 .DefineBlock(out CodeBlockNested fieldsBlock)
-                .BlankLine()
-                .AppendCode($"public List<Coding> Members;")
-                .BlankLine()
-                .AppendCode($"public {ValueSetName(vi)}()")
-                .OpenBrace()
-                .AppendCode($"this.Members = new List<Coding>();")
-                .DefineBlock(out CodeBlockNested constructorBlock)
-                .CloseBrace()
                 ;
 
-            definitionsBlock
-                .AppendLine("/// <summary>")
-                .AppendLine("/// This class creates a type for codings of this class, that implicitly converts to Coding")
-                .AppendLine("/// Allows type checking for these codes.")
-                .AppendLine("/// </summary>")
-                 .AppendCode($"public class TCoding")
-                .OpenBrace()
-                .AppendCode($"Coding value;")
-                .AppendCode($"public static implicit operator Coding(TCoding tCode)")
-                .OpenBrace()
-                .AppendCode($"return tCode.value;")
-                .CloseBrace()
-                .BlankLine()
-                .AppendCode($"public TCoding(Coding value)")
-                .OpenBrace()
-                .AppendCode($"this.value= value;")
-                .CloseBrace()
-                .CloseBrace()
+            vi.ClassCode.Blocks.Find("Methods")
+                .DefineBlock(out CodeBlockNested methodBlock)
                 ;
 
             if (vi.ValueSet.Compose.Exclude.Count > 0)
                 throw new NotImplementedException("Have not implemented ValueSet.Compose.Exclude");
 
+            methodBlock
+                .AppendCode($"public static IEnumerable<TCoding> Codes()")
+                .OpenBrace()
+                ;
             foreach (ValueSet.ConceptSetComponent component in vi.ValueSet.Compose.Include)
             {
                 if (component.Filter.Count > 0)
@@ -342,13 +319,17 @@ namespace FireFragger
                         throw new Exception($"CodeSystem {component.System} not found");
                     String codingReference = $"{CSBuilder.CodeSystemName(ci)}.{codeName}";
                     fieldsBlock
-                        .AppendCode($"public TCoding {codeName} = new TCoding({codingReference});")
+                        .AppendCode($"public static TCoding {codeName} = new TCoding({codingReference});")
                         ;
-                    constructorBlock
-                        .AppendCode($"this.Members.Add(this.{codeName});")
+                    methodBlock
+                        .AppendCode($"yield return {codeName};")
                         ;
                 }
             }
+
+            methodBlock
+                .CloseBrace()
+                ;
         }
 
         void BuildValueSets()

@@ -106,7 +106,8 @@ namespace FireFragger
 
         Int32 defIndex = 1;
 
-        void DefineDefaultElement(ElementDefinition elementDefinition)
+        void DefineDefaultElement(CodeBlockNested constructCode,
+            ElementDefinition elementDefinition)
         {
             if (elementDefinition.Min == 0)
                 return;
@@ -124,22 +125,57 @@ namespace FireFragger
                 ;
             String methodName = $"DefaultValue_{defIndex++}";
             FhirConstruct.Construct(this.ClassMethods, elementDefinition.DefaultValue, methodName, out String propertyType);
-            this.ClassConstructor
-                .AppendLine($"this.Resource.{pathElements[1].ToMachineName()} = {methodName}();")
+            constructCode
+                .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;
         }
 
-        void DefineDefaultElements()
+        void DefineBinding(ElementDefinition elementDefinition)
+        {
+            if (elementDefinition.Binding == null)
+                return;
+
+            ElementDefinition.ElementDefinitionBindingComponent bindingComp = elementDefinition.Binding;
+            String valueSet = bindingComp.ValueSet;
+
+            // currently we only do local value sets.
+            if (valueSet.StartsWith("http://hl7.org/fhir/us/breast-radiology/ValueSet/RecommendationsVS") == false)
+                return;
+            String vsClassName = CSBuilder.MachineName(valueSet.LastUriPart());
+            String fieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
+            String methodName = $"Set{elementDefinition.Path.LastPathPart().ToMachineName()}";
+            String fhirFieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
+            String thisClass = CSBuilder.ClassName(this.fragBase);
+            this.ClassMethods
+                .SummaryOpen()
+                .Summary($"Set {elementDefinition.ElementId} to one of the predefined items")
+                .SummaryClose()
+                .AppendCode($"public {thisClass} {methodName}({vsClassName}.TCoding code)")
+                .OpenBrace()
+                .AppendCode($"this.Resource.{fhirFieldName} = code;")
+                .AppendCode($"return this;")
+                .CloseBrace()
+                ;
+        }
+
+        void DefineCodeElements()
         {
             foreach (ElementDefinition elementDefinition in this.fragBase.DiffNodes.ElementDefinitions)
-                DefineDefaultElement(elementDefinition);
+            {
+                String[] pathElements = elementDefinition.Path.Split('.').ToArray();
+                if (pathElements.Length == 2)
+                {
+                    DefineDefaultElement(this.ClassConstructor, elementDefinition);
+                    DefineBinding(elementDefinition);
+                }
+            }
         }
 
         public void DefineBase()
         {
             if (this.fragBase.ClassEditor == null)
                 return;
-            DefineDefaultElements();
+            DefineCodeElements();
             String profileUrl = this.fragBase.StructDef.Url;
             this.ClassConstructor
                 .AppendCode($"SetProfileUrl(\"{profileUrl}\");")

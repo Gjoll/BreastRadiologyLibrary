@@ -71,7 +71,7 @@ namespace BreastRadLib
                 if (referencedResource.Meta.Profile.Count() != 1)
                     throw new Exception($"Invalid Meta.profile. Expected 1, got {referencedResource.Meta.Profile.Count()}");
                 String profile = referencedResource.Meta.Profile.First();
-                T item = ResourceFactory.CreateBreastRadProfileResource(this.doc, profile) as T;
+                T item = ResourceFactory.CreateBreastRadProfileResource(this.doc, profile, referencedResource) as T;
 
                 if (item == null)
                     throw new Exception($"Error creating resource of profile {profile}");

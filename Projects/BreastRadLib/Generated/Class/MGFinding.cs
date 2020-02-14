@@ -31,8 +31,8 @@ namespace BreastRadLib
 		public MGFinding(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // CSDefineBase.cs:145
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // CSDefineBase.cs:181
 		
             this.AbnormalityCyst = CreateHasMemberList<IAbnormalityCyst>(0, -1);
             this.AbnormalityDuct = CreateHasMemberList<IAbnormalityDuct>(0, -1);

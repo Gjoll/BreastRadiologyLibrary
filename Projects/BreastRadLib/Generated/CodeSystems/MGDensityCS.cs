@@ -12,16 +12,16 @@ namespace BreastRadLib
 	public class MGDensityCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGDensityCS";                                                   // CSBuilder.cs:365
-		                                                                                                                                          // CSBuilder.cs:377
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGDensityCS";                                                   // CSBuilder.cs:346
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// These are round or oval calcifications that range from under 1 mm to over a centimeter.
 		/// They are the result of fat necrosis, calcified debris in ducts, and occasional fibroadenomas.
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis#benign-calcifications-lucent-centered]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_CentralLucent = new Coding(System, "CentralLucent", "Central lucent");                                          // CSBuilder.cs:391
-		                                                                                                                                          // CSBuilder.cs:377
+		public static Coding Code_CentralLucent = new Coding(System, "CentralLucent", "Central lucent");                                          // CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// (historically, "isodense")
 		/// X-ray attenuation of the mass is the same as the expected attenuation of an equal volume of
@@ -30,15 +30,15 @@ namespace BreastRadLib
 		/// -- -- Bi-Rads® Atlas — Mammography Fifth Ed. 2013
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_EqualDensity = new Coding(System, "EqualDensity", "Equal density");                                             // CSBuilder.cs:391
-		                                                                                                                                          // CSBuilder.cs:377
+		public static Coding Code_EqualDensity = new Coding(System, "EqualDensity", "Equal density");                                             // CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// The mammogram shows a lot of fatty tissue  meaning the density of the breast is likely low density.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_FatContaining = new Coding(System, "FatContaining", "Fat containing");                                          // CSBuilder.cs:391
-		                                                                                                                                          // CSBuilder.cs:377
+		public static Coding Code_FatContaining = new Coding(System, "FatContaining", "Fat containing");                                          // CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// Your breast tissue may be called dense if you have a lot of fibrous or glandular
 		/// tissue and not much fat in the breasts.
@@ -47,14 +47,14 @@ namespace BreastRadLib
 		/// [https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/mammograms/breast-density-and-your-mammogram-report.html]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // CSBuilder.cs:391
-		                                                                                                                                          // CSBuilder.cs:377
+		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// The mammogram shows the breast is low density, containg a lot of fatty tissue.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_LowDensity = new Coding(System, "LowDensity", "Low density");                                                   // CSBuilder.cs:391
+		public static Coding Code_LowDensity = new Coding(System, "LowDensity", "Low density");                                                   // CSBuilder.cs:372
 		//- Fields
 	}
 }

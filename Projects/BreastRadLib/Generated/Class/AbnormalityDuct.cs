@@ -19,8 +19,8 @@ namespace BreastRadLib
 		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:145
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:181
 		
             this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
 			//- Constructor
