@@ -12,10 +12,9 @@ namespace BreastRadLib
 	public class AssociatedFeatures : ObservationBase, IObservationSectionFragment
 	{
 		//+ Fields
-		
-        public MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion {get;}
-        public MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification {get;}
-        public MemberList<IObservedFeature> ObservedFeature {get;}
+		public MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion {get;}                                      // CSDefineObservation.cs:59
+		public MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification {get;}                                                          // CSDefineObservation.cs:59
+		public MemberList<IObservedFeature> ObservedFeature {get;}                                                                                // CSDefineObservation.cs:59
 		//- Fields
 
 		public AssociatedFeatures(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
@@ -23,10 +22,9 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // CSDefineBase.cs:181
-		
-            this.MGAbnormalityArchitecturalDistortion = CreateHasMemberList<IMGAbnormalityArchitecturalDistortion>(0, -1);
-            this.MGAbnormalityCalcification = CreateHasMemberList<IMGAbnormalityCalcification>(0, -1);
-            this.ObservedFeature = CreateHasMemberList<IObservedFeature>(0, -1);
+			this.MGAbnormalityArchitecturalDistortion = CreateHasMemberList<IMGAbnormalityArchitecturalDistortion>(0, -1);                           // CSDefineObservation.cs:73
+			this.MGAbnormalityCalcification = CreateHasMemberList<IMGAbnormalityCalcification>(0, -1);                                               // CSDefineObservation.cs:73
+			this.ObservedFeature = CreateHasMemberList<IObservedFeature>(0, -1);                                                                     // CSDefineObservation.cs:73
 			//- Constructor
 		}
 

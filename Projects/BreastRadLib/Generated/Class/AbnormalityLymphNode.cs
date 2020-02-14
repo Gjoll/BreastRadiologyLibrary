@@ -12,9 +12,8 @@ namespace BreastRadLib
 	public class AbnormalityLymphNode : ObservationBase, IObservationLeafFragment, ITumorSatelliteFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment
 	{
 		//+ Fields
-		
-        public MemberList<ITumorSatellite> TumorSatellite {get;}
-        public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}
+		public MemberList<ITumorSatellite> TumorSatellite {get;}                                                                                  // CSDefineObservation.cs:59
+		public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}                                                                          // CSDefineObservation.cs:59
 		//- Fields
 
 		public AbnormalityLymphNode(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
@@ -22,9 +21,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                                       // CSDefineBase.cs:181
-		
-            this.TumorSatellite = CreateHasMemberList<ITumorSatellite>(0, -1);
-            this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
+			this.TumorSatellite = CreateHasMemberList<ITumorSatellite>(0, -1);                                                                       // CSDefineObservation.cs:73
+			this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);                                                                // CSDefineObservation.cs:73
 			//- Constructor
 		}
 

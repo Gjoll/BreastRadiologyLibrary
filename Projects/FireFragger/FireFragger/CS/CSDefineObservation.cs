@@ -24,9 +24,16 @@ namespace FireFragger
 
         void DefineHasMembers(SDInfo fragInfo)
         {
-            List<String> interfaceFields = new List<string>();
-            List<String> classFields = new List<string>();
-            List<String> classInstantiations = new List<string>();
+            CodeBlockNested classHasMemberFields = null;
+            CodeBlockNested classHasMemberConstruction = null;
+            CodeBlockNested interfaceHasMemberFields = null;
+
+            if (fragInfo.ClassEditor != null)
+            {
+                classHasMemberFields = fragInfo.ClassEditor.Blocks.Find("Fields").AppendBlock("");
+                classHasMemberConstruction = fragInfo.ClassEditor.Blocks.Find("Constructor").AppendBlock("");
+            }
+            interfaceHasMemberFields = fragInfo.InterfaceEditor.Blocks.Find("Fields").AppendBlock("");
 
             HashSet<string> items = new HashSet<string>();
 
@@ -49,9 +56,9 @@ namespace FireFragger
                 String refInterfaceName = CSBuilder.InterfaceName(refFrag);
                 String fieldName = CSBuilder.PropertyName(slice.Name);
 
-                classFields.Add($"public MemberList<{refInterfaceName}> {fieldName} {{get;}}");
+                classHasMemberFields?.AppendCode($"public MemberList<{refInterfaceName}> {fieldName} {{get;}}");
                 if (level == 0)
-                    interfaceFields.Add($"MemberList<{refInterfaceName}> {fieldName} {{get;}}");
+                    interfaceHasMemberFields.AppendCode($"MemberList<{refInterfaceName}> {fieldName} {{get;}}");
 
                 Int32 min = 0;
                 if (slice.ElementDefinition.Min.HasValue)
@@ -62,7 +69,8 @@ namespace FireFragger
                     if (slice.ElementDefinition.Max != "*")
                         max = Int32.Parse(slice.ElementDefinition.Max);
                 }
-                classInstantiations.Add($"this.{fieldName} = CreateHasMemberList<{refInterfaceName}>({min}, {max});");
+
+                classHasMemberConstruction?.AppendCode($"this.{fieldName} = CreateHasMemberList<{refInterfaceName}>({min}, {max});");
             }
 
             void Build(SDInfo fi, Int32 level)
@@ -81,26 +89,6 @@ namespace FireFragger
                 return;
 
             VisitFragments(Build, fragInfo);
-
-            if (classFields.Count == 0)
-                return;
-
-            {
-                CodeEditor hasMemberClassFrag = new CodeEditor();
-                hasMemberClassFrag.Load(Path.Combine("Templates", "HasMemberClassFrag.txt"));
-                fragInfo.ClassEditor.AddUserMacro("HasMemberFields", classFields);
-                fragInfo.ClassEditor.AddUserMacro("HasMemberDefinitions", classInstantiations);
-                CodeBlockMerger cbm = new CodeBlockMerger(fragInfo.ClassEditor);
-                cbm.Merge(hasMemberClassFrag);
-            }
-
-            {
-                CodeEditor hasMemberInterfaceFrag = new CodeEditor();
-                hasMemberInterfaceFrag.Load(Path.Combine("Templates", "HasMemberInterfaceFrag.txt"));
-                fragInfo.InterfaceEditor.AddUserMacro("HasMemberFields", interfaceFields);
-                CodeBlockMerger cbm = new CodeBlockMerger(fragInfo.InterfaceEditor);
-                cbm.Merge(hasMemberInterfaceFrag);
-            }
         }
 
         public override void Build()

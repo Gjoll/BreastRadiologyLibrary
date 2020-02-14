@@ -12,8 +12,7 @@ namespace BreastRadLib
 	public class AbnormalityDuct : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
-		
-        public MemberList<IConsistentWith> ConsistentWith {get;}
+		public MemberList<IConsistentWith> ConsistentWith {get;}                                                                                  // CSDefineObservation.cs:59
 		//- Fields
 
 		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
@@ -21,8 +20,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:181
-		
-            this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
+			this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);                                                                       // CSDefineObservation.cs:73
 			//- Constructor
 		}
 

@@ -12,8 +12,7 @@ namespace BreastRadLib
 	public class AbnormalityFibroadenoma : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment
 	{
 		//+ Fields
-		
-        public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}
+		public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}                                                                          // CSDefineObservation.cs:59
 		//- Fields
 
 		public AbnormalityFibroadenoma(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
@@ -21,8 +20,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                                    // CSDefineBase.cs:181
-		
-            this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
+			this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);                                                                // CSDefineObservation.cs:73
 			//- Constructor
 		}
 

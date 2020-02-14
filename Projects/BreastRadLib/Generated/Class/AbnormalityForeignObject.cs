@@ -12,9 +12,8 @@ namespace BreastRadLib
 	public class AbnormalityForeignObject : ObservationBase, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IBiRadFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
-		
-        public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}
-        public MemberList<IConsistentWith> ConsistentWith {get;}
+		public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}                                                                          // CSDefineObservation.cs:59
+		public MemberList<IConsistentWith> ConsistentWith {get;}                                                                                  // CSDefineObservation.cs:59
 		//- Fields
 
 		public AbnormalityForeignObject(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
@@ -22,9 +21,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                                   // CSDefineBase.cs:181
-		
-            this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);
-            this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);
+			this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);                                                                // CSDefineObservation.cs:73
+			this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);                                                                       // CSDefineObservation.cs:73
 			//- Constructor
 		}
 

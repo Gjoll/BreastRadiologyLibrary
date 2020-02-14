@@ -12,20 +12,19 @@ namespace BreastRadLib
 	public class MGFinding : ObservationBase, IObservationSectionFragment
 	{
 		//+ Fields
-		
-        public MemberList<IAbnormalityCyst> AbnormalityCyst {get;}
-        public MemberList<IAbnormalityDuct> AbnormalityDuct {get;}
-        public MemberList<IAbnormalityForeignObject> AbnormalityForeignObject {get;}
-        public MemberList<IAbnormalityLymphNode> AbnormalityLymphNode {get;}
-        public MemberList<IAbnormalityMass> AbnormalityMass {get;}
-        public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}
-        public MemberList<IAbnormalityFibroadenoma> AbnormalityFibroadenoma {get;}
-        public MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion {get;}
-        public MemberList<IMGAbnormalityAsymmetry> MGAbnormalityAsymmetry {get;}
-        public MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification {get;}
-        public MemberList<IMGAbnormalityDensity> MGAbnormalityDensity {get;}
-        public MemberList<IMGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis {get;}
-        public MemberList<IMGBreastDensity> MGBreastDensity {get;}
+		public MemberList<IAbnormalityCyst> AbnormalityCyst {get;}                                                                                // CSDefineObservation.cs:59
+		public MemberList<IAbnormalityDuct> AbnormalityDuct {get;}                                                                                // CSDefineObservation.cs:59
+		public MemberList<IAbnormalityForeignObject> AbnormalityForeignObject {get;}                                                              // CSDefineObservation.cs:59
+		public MemberList<IAbnormalityLymphNode> AbnormalityLymphNode {get;}                                                                      // CSDefineObservation.cs:59
+		public MemberList<IAbnormalityMass> AbnormalityMass {get;}                                                                                // CSDefineObservation.cs:59
+		public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}                                                                          // CSDefineObservation.cs:59
+		public MemberList<IAbnormalityFibroadenoma> AbnormalityFibroadenoma {get;}                                                                // CSDefineObservation.cs:59
+		public MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion {get;}                                      // CSDefineObservation.cs:59
+		public MemberList<IMGAbnormalityAsymmetry> MGAbnormalityAsymmetry {get;}                                                                  // CSDefineObservation.cs:59
+		public MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification {get;}                                                          // CSDefineObservation.cs:59
+		public MemberList<IMGAbnormalityDensity> MGAbnormalityDensity {get;}                                                                      // CSDefineObservation.cs:59
+		public MemberList<IMGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis {get;}                                                              // CSDefineObservation.cs:59
+		public MemberList<IMGBreastDensity> MGBreastDensity {get;}                                                                                // CSDefineObservation.cs:59
 		//- Fields
 
 		public MGFinding(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
@@ -33,20 +32,19 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // CSDefineBase.cs:181
-		
-            this.AbnormalityCyst = CreateHasMemberList<IAbnormalityCyst>(0, -1);
-            this.AbnormalityDuct = CreateHasMemberList<IAbnormalityDuct>(0, -1);
-            this.AbnormalityForeignObject = CreateHasMemberList<IAbnormalityForeignObject>(0, -1);
-            this.AbnormalityLymphNode = CreateHasMemberList<IAbnormalityLymphNode>(0, -1);
-            this.AbnormalityMass = CreateHasMemberList<IAbnormalityMass>(0, -1);
-            this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, -1);
-            this.AbnormalityFibroadenoma = CreateHasMemberList<IAbnormalityFibroadenoma>(0, -1);
-            this.MGAbnormalityArchitecturalDistortion = CreateHasMemberList<IMGAbnormalityArchitecturalDistortion>(0, -1);
-            this.MGAbnormalityAsymmetry = CreateHasMemberList<IMGAbnormalityAsymmetry>(0, -1);
-            this.MGAbnormalityCalcification = CreateHasMemberList<IMGAbnormalityCalcification>(0, -1);
-            this.MGAbnormalityDensity = CreateHasMemberList<IMGAbnormalityDensity>(0, -1);
-            this.MGAbnormalityFatNecrosis = CreateHasMemberList<IMGAbnormalityFatNecrosis>(0, -1);
-            this.MGBreastDensity = CreateHasMemberList<IMGBreastDensity>(1, 1);
+			this.AbnormalityCyst = CreateHasMemberList<IAbnormalityCyst>(0, -1);                                                                     // CSDefineObservation.cs:73
+			this.AbnormalityDuct = CreateHasMemberList<IAbnormalityDuct>(0, -1);                                                                     // CSDefineObservation.cs:73
+			this.AbnormalityForeignObject = CreateHasMemberList<IAbnormalityForeignObject>(0, -1);                                                   // CSDefineObservation.cs:73
+			this.AbnormalityLymphNode = CreateHasMemberList<IAbnormalityLymphNode>(0, -1);                                                           // CSDefineObservation.cs:73
+			this.AbnormalityMass = CreateHasMemberList<IAbnormalityMass>(0, -1);                                                                     // CSDefineObservation.cs:73
+			this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, -1);                                                               // CSDefineObservation.cs:73
+			this.AbnormalityFibroadenoma = CreateHasMemberList<IAbnormalityFibroadenoma>(0, -1);                                                     // CSDefineObservation.cs:73
+			this.MGAbnormalityArchitecturalDistortion = CreateHasMemberList<IMGAbnormalityArchitecturalDistortion>(0, -1);                           // CSDefineObservation.cs:73
+			this.MGAbnormalityAsymmetry = CreateHasMemberList<IMGAbnormalityAsymmetry>(0, -1);                                                       // CSDefineObservation.cs:73
+			this.MGAbnormalityCalcification = CreateHasMemberList<IMGAbnormalityCalcification>(0, -1);                                               // CSDefineObservation.cs:73
+			this.MGAbnormalityDensity = CreateHasMemberList<IMGAbnormalityDensity>(0, -1);                                                           // CSDefineObservation.cs:73
+			this.MGAbnormalityFatNecrosis = CreateHasMemberList<IMGAbnormalityFatNecrosis>(0, -1);                                                   // CSDefineObservation.cs:73
+			this.MGBreastDensity = CreateHasMemberList<IMGBreastDensity>(1, 1);                                                                      // CSDefineObservation.cs:73
 			//- Constructor
 		}
 

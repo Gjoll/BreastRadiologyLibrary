@@ -12,7 +12,6 @@ namespace BreastRadLib
 	public interface IAbnormalityFibroadenoma : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment
 	{
 		//+ Fields
-		
 		//- Fields
 
 		//+ Methods
