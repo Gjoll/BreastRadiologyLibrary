@@ -18,11 +18,11 @@ namespace FireFragger
     class CSDefineObservation : CSDefineBase
     {
         public CSDefineObservation(CSBuilder csBuilder,
-                    FragInfo fragBase) : base(csBuilder, fragBase)
+                    SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
 
-        void DefineHasMembers(FragInfo fragInfo)
+        void DefineHasMembers(SDInfo fragInfo)
         {
             List<String> interfaceFields = new List<string>();
             List<String> classFields = new List<string>();
@@ -30,7 +30,7 @@ namespace FireFragger
 
             HashSet<string> items = new HashSet<string>();
 
-            void BuildSlice(FragInfo fi, ElementTreeSlice slice, Int32 level)
+            void BuildSlice(SDInfo fi, ElementTreeSlice slice, Int32 level)
             {
                 if (slice.ElementDefinition.Type.Count != 1)
                     throw new Exception($"invalid hasMember type count");
@@ -39,7 +39,7 @@ namespace FireFragger
                 if (slice.ElementDefinition.Type[0].TargetProfile.Count() != 1)
                     throw new Exception($"invalid hasMember targetProfile count");
                 String reference = slice.ElementDefinition.Type[0].TargetProfile.First();
-                if (this.csBuilder.SDFragments.TryGetValue(reference.Trim(), out FragInfo refFrag) == false)
+                if (this.csBuilder.SDFragments.TryGetValue(reference.Trim(), out SDInfo refFrag) == false)
                     throw new Exception($"missing hasMember reference {reference}");
                 if (items.Contains(slice.Name))
                     return;
@@ -65,7 +65,7 @@ namespace FireFragger
                 classInstantiations.Add($"this.{fieldName} = CreateHasMemberList<{refInterfaceName}>({min}, {max});");
             }
 
-            void Build(FragInfo fi, Int32 level)
+            void Build(SDInfo fi, Int32 level)
             {
                 if (fi.BaseDefinitionUrl != Global.ObservationUrl)
                     return;

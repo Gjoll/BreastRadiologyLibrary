@@ -20,8 +20,8 @@ namespace FireFragger
         public Dictionary<String, CSInfo> CodeSystems;
         public Dictionary<String, CSInfo> LocalCodeSystems;
         public Dictionary<String, VSInfo> ValueSets;
-        public Dictionary<String, FragInfo> SDFragments;
-        public List<FragInfo> orderedFragments;
+        public Dictionary<String, SDInfo> SDFragments;
+        public List<SDInfo> orderedFragments;
 
 
         public String OutputDir { get; set; } = ".";
@@ -34,7 +34,7 @@ namespace FireFragger
             this.CodeSystems = new Dictionary<string, CSInfo>(comparer);
             this.LocalCodeSystems = new Dictionary<string, CSInfo>(comparer);
             this.ValueSets = new Dictionary<string, VSInfo>(comparer);
-            this.SDFragments = new Dictionary<string, FragInfo>(comparer);
+            this.SDFragments = new Dictionary<string, SDInfo>(comparer);
         }
 
         public static String MachineName(String s)
@@ -46,8 +46,8 @@ namespace FireFragger
             .ToMachineName();
         }
         public static String CodeName(string code) => $"Code_{MachineName(code)}";
-        public static String InterfaceName(FragInfo fi) => $"I{MachineName(fi.StructDef.Name)}";
-        public static String ClassName(FragInfo fi) => $"{MachineName(fi.StructDef.Name)}";
+        public static String InterfaceName(SDInfo fi) => $"I{MachineName(fi.StructDef.Name)}";
+        public static String ClassName(SDInfo fi) => $"{MachineName(fi.StructDef.Name)}";
         public static String CodeSystemName(CSInfo ci) => $"{MachineName(ci.CodeSystem.Name)}";
         public static String ValueSetName(VSInfo vi) => $"{MachineName(vi.ValueSet.Name)}";
         public static String PropertyName(string name) => $"{MachineName(name)}";
@@ -99,36 +99,21 @@ namespace FireFragger
             {
                 case CodeSystem cs:
                     {
-                        CSInfo ci = new CSInfo
-                        {
-                            CodeSystem = cs,
-                        };
+                        CSInfo ci = new CSInfo(cs);
                         CodeSystems.Add(cs.Url, ci);
                     }
                     break;
 
                 case ValueSet vs:
                     {
-                        VSInfo vi = new VSInfo
-                        {
-                            ValueSet = vs,
-                            ClassCode = new CodeEditor()
-                        };
-                        vi.ClassCode.Load(Path.Combine("Templates", "ValueSet.txt"));
+                        VSInfo vi = new VSInfo(vs);
                         ValueSets.Add(vs.Url, vi);
                     }
                     break;
 
                 case StructureDefinition sd:
                     {
-                        ElementTreeLoader l = new ElementTreeLoader(this);
-
-                        FragInfo fi = new FragInfo
-                        {
-                            StructDef = sd,
-                            InterfaceEditor = new CodeEditor(),
-                            DiffNodes = l.Create(sd.Differential.Element)
-                        };
+                        SDInfo fi = new SDInfo(this, sd);
                         fi.InterfaceEditor.TryAddUserMacro("InterfaceName", InterfaceName(fi));
                         fi.InterfaceEditor.Load(Path.Combine("Templates", "Interface.txt"));
 
@@ -151,7 +136,7 @@ namespace FireFragger
             }
         }
 
-        void BuildFragment(FragInfo fi)
+        void BuildFragment(SDInfo fi)
         {
             const String fcn = "BuildFragment";
 
@@ -206,15 +191,15 @@ namespace FireFragger
         }
 
         void AddMacros(CodeEditor ce,
-            FragInfo fi)
+            SDInfo fi)
         {
             ce.TryAddUserMacro("FhirBase", fi.StructDef.BaseDefinition.LastUriPart());
         }
 
-        void DefineInterfaces(FragInfo fi)
+        void DefineInterfaces(SDInfo fi)
         {
             StringBuilder interfaces = new StringBuilder();
-            foreach (FragInfo refFrag in fi.ReferencedFragments)
+            foreach (SDInfo refFrag in fi.ReferencedFragments)
             {
                 interfaces.Append($", {InterfaceName(refFrag)}");
             }
@@ -248,13 +233,13 @@ namespace FireFragger
         /// </summary>
         void OrderFragments()
         {
-            orderedFragments = new List<FragInfo>();
+            orderedFragments = new List<SDInfo>();
             Int32 index;
 
             // Return true if fi references fiRef.
-            bool ReferencesFragment(FragInfo fi, FragInfo fiRef)
+            bool ReferencesFragment(SDInfo fi, SDInfo fiRef)
             {
-                foreach (FragInfo temp in fi.ReferencedFragments)
+                foreach (SDInfo temp in fi.ReferencedFragments)
                 {
                     if (temp == fiRef)
                         return true;
@@ -265,7 +250,7 @@ namespace FireFragger
                 return false;
             }
 
-            Int32 Search(FragInfo fi)
+            Int32 Search(SDInfo fi)
             {
                 Int32 retVal = 0;
                 for (Int32 i = 0; i < orderedFragments.Count; i++)
@@ -274,7 +259,7 @@ namespace FireFragger
                 return retVal;
             }
 
-            foreach (FragInfo fi in this.SDFragments.Values)
+            foreach (SDInfo fi in this.SDFragments.Values)
             {
                 index = Search(fi);
                 orderedFragments.Insert(index, fi);
@@ -284,7 +269,7 @@ namespace FireFragger
         void BuildFragments()
         {
             OrderFragments();
-            foreach (FragInfo fi in this.orderedFragments)
+            foreach (SDInfo fi in this.orderedFragments)
                 BuildFragment(fi);
         }
 
@@ -304,14 +289,11 @@ namespace FireFragger
                     {
                         if (this.LocalCodeSystems.TryGetValue(component.System, out ci) == false)
                         {
-                            ci = new CSInfo
+                            ci = new CSInfo(new CodeSystem
                             {
-                                CodeSystem = new CodeSystem
-                                {
-                                    Name = component.System.LastUriPart(),
-                                    Url = component.System
-                                }
-                            };
+                                Name = component.System.LastUriPart(),
+                                Url = component.System
+                            });
                             this.LocalCodeSystems.Add(component.System, ci);
                         }
 
@@ -339,10 +321,6 @@ namespace FireFragger
         {
             CodeBlockNested vsHdr = vi.ClassCode.Blocks.Find("Header");
             CodeBlockNested vsFields = vi.ClassCode.Blocks.Find("Fields");
-
-            vsHdr
-                .AppendCode($"public class {ValueSetName(vi)}")
-                ;
 
             vsFields
                 .DefineBlock(out CodeBlockNested definitionsBlock)
@@ -409,12 +387,7 @@ namespace FireFragger
 
         void BuildCodeSystem(CSInfo ci)
         {
-            CodeBlockNested csHdr = ci.ClassCode.Blocks.Find("Header");
             CodeBlockNested csFields = ci.ClassCode.Blocks.Find("Fields");
-
-            csHdr
-                .AppendCode($"public class {CodeSystemName(ci)}")
-                ;
 
             csFields
                 .AppendCode($"const string System = \"{ci.CodeSystem.Url}\";");
@@ -460,7 +433,7 @@ namespace FireFragger
         {
             this.resourceFactoryEditor.Save();
             this.fc.Mark(this.resourceFactoryEditor.SavePath);
-            foreach (FragInfo fi in this.SDFragments.Values)
+            foreach (SDInfo fi in this.SDFragments.Values)
             {
                 Save(fi.InterfaceEditor, Path.Combine(this.OutputDir, "Generated", "Interfaces", $"{InterfaceName(fi)}.cs"));
                 if (fi.ClassEditor != null)
@@ -504,14 +477,14 @@ namespace FireFragger
         {
             const String fcn = "BuildReferences";
 
-            foreach (FragInfo fi in this.SDFragments.Values)
+            foreach (SDInfo fi in this.SDFragments.Values)
             {
                 foreach (Extension e in fi.StructDef.Extension.ToArray())
                 {
                     if (e.Url.ToLower().Trim() == Global.FragmentUrl)
                     {
                         FhirUrl extUrl = (FhirUrl)e.Value;
-                        if (SDFragments.TryGetValue(extUrl.Value.Trim(), out FragInfo reference) == false)
+                        if (SDFragments.TryGetValue(extUrl.Value.Trim(), out SDInfo reference) == false)
                         {
                             this.ConversionError(this.GetType().Name,
                                fcn,

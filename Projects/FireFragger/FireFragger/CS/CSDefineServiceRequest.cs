@@ -18,7 +18,7 @@ namespace FireFragger
     class CSDefineServiceRequest : CSDefineBase
     {
         public CSDefineServiceRequest(CSBuilder csBuilder,
-                    FragInfo fragBase) : base(csBuilder, fragBase)
+                    SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
 

@@ -9,44 +9,42 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadLib
 {
-	//+ Header
-	public class BreastLocationQuadrantCS                                                                                                      // CSBuilder.cs:416
-	//- Header
+	public class BreastLocationQuadrantCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationQuadrantCS";                                      // CSBuilder.cs:420
-		                                                                                                                                          // CSBuilder.cs:432
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationQuadrantCS";                                      // CSBuilder.cs:393
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// The lower inside (closest to the cleavage of your breasts) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_InferiorMedialQuadrent = new Coding(System, "InferiorMedialQuadrent", "Inferior medial quadrent (lower inner)");// CSBuilder.cs:446
-		                                                                                                                                          // CSBuilder.cs:432
+		public static Coding Code_InferiorMedialQuadrent = new Coding(System, "InferiorMedialQuadrent", "Inferior medial quadrent (lower inner)");// CSBuilder.cs:419
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// The upper inside (closest to the armpit of each breast) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_InferiorLateralQuadrent = new Coding(System, "InferiorLateralQuadrent", "Inferior lateral quadrent (lower outer)");// CSBuilder.cs:446
-		                                                                                                                                          // CSBuilder.cs:432
+		public static Coding Code_InferiorLateralQuadrent = new Coding(System, "InferiorLateralQuadrent", "Inferior lateral quadrent (lower outer)");// CSBuilder.cs:419
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// The upper inside (closest to the cleavage of your breasts) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_SuperiorMedialQuadrent = new Coding(System, "SuperiorMedialQuadrent", "Superior medial quadrent (upper inner)");// CSBuilder.cs:446
-		                                                                                                                                          // CSBuilder.cs:432
+		public static Coding Code_SuperiorMedialQuadrent = new Coding(System, "SuperiorMedialQuadrent", "Superior medial quadrent (upper inner)");// CSBuilder.cs:419
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// The upper outside (closest to your armpit on each breast) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_SuperiorLateralQuadrent = new Coding(System, "SuperiorLateralQuadrent", "Superior lateral quadrent (upper outer)");// CSBuilder.cs:446
+		public static Coding Code_SuperiorLateralQuadrent = new Coding(System, "SuperiorLateralQuadrent", "Superior lateral quadrent (upper outer)");// CSBuilder.cs:419
 		//- Fields
 	}
 }

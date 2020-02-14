@@ -15,7 +15,7 @@ namespace FireFragger
     abstract class CSDefineBase
     {
         protected CSBuilder csBuilder;
-        protected FragInfo fragBase;
+        protected SDInfo fragBase;
 
         protected CodeBlockNested ClassFields => fragBase.ClassEditor.Blocks.Find("Fields", false);
         protected CodeBlockNested ClassConstructor => fragBase.ClassEditor.Blocks.Find("Constructor", false);
@@ -26,23 +26,23 @@ namespace FireFragger
         protected CodeBlockNested InterfaceFields => fragBase.InterfaceEditor.Blocks.Find("Fields", false);
         protected CodeBlockNested InterfaceMethods => fragBase.InterfaceEditor.Blocks.Find("Methods", false);
 
-        protected delegate void VisitFragment(FragInfo fi, Int32 level);
+        protected delegate void VisitFragment(SDInfo fi, Int32 level);
         protected String FhirBase => this.fragBase.StructDef.BaseDefinition.LastUriPart();
 
         protected void VisitFragments(VisitFragment vi,
-            FragInfo fragBase)
+            SDInfo fragBase)
         {
-            HashSet<FragInfo> visitedFrags = new HashSet<FragInfo>();
+            HashSet<SDInfo> visitedFrags = new HashSet<SDInfo>();
 
             void Visit(VisitFragment vi,
-                FragInfo fi,
+                SDInfo fi,
                 Int32 level)
             {
                 if (visitedFrags.Contains(fi))
                     return;
                 vi(fi, level);
                 visitedFrags.Add(fi);
-                foreach (FragInfo refFrag in fragBase.ReferencedFragments)
+                foreach (SDInfo refFrag in fragBase.ReferencedFragments)
                     Visit(vi, refFrag, level + 1);
             }
 
@@ -65,7 +65,7 @@ namespace FireFragger
         }
 
         public CSDefineBase(CSBuilder csBuilder,
-                    FragInfo fragBase)
+                    SDInfo fragBase)
         {
             this.csBuilder = csBuilder;
             this.fragBase = fragBase;
@@ -75,11 +75,11 @@ namespace FireFragger
 
         protected void MergeFragments()
         {
-            foreach (FragInfo fiRef in this.fragBase.ReferencedFragments)
+            foreach (SDInfo fiRef in this.fragBase.ReferencedFragments)
                 MergeFragment(fiRef);
         }
 
-        protected void MergeFragment(FragInfo fi)
+        protected void MergeFragment(SDInfo fi)
         {
             const String fcn = "MergeFragment";
 

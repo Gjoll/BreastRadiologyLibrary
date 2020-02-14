@@ -29,11 +29,18 @@ namespace BreastRadiology.XUnitTests
             {
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
                 Debug.Assert(doc.Index != null);
-                BreastRadReport report = doc.Index.CreateReport();
-                Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
-                Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
-                Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
-                Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
+                {
+                    BreastRadReport report = doc.Index.CreateReport();
+                    Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
+                    Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
+                    Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
+                    Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
+                }
+                {
+                    ServiceRecommendation rec = doc.Index.AppendRecommendations();
+                    Debug.Assert(rec.Resource.Meta.Profile.Count() == 1);
+                    Debug.Assert(rec.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");
+                }
                 b = doc.Write();
             }
 

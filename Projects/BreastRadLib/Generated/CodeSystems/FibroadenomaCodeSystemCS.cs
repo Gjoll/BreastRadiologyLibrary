@@ -9,13 +9,11 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadLib
 {
-	//+ Header
-	public class FibroadenomaCodeSystemCS                                                                                                      // CSBuilder.cs:416
-	//- Header
+	public class FibroadenomaCodeSystemCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/FibroadenomaCodeSystemCS";                                      // CSBuilder.cs:420
-		                                                                                                                                          // CSBuilder.cs:432
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/FibroadenomaCodeSystemCS";                                      // CSBuilder.cs:393
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// A fibroadenoma is a benign, or noncancerous, breast tumor.
 		/// Unlike a breast cancer, which grows larger over time and can spread to other organs,
@@ -26,8 +24,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Fibroadenoma = new Coding(System, "Fibroadenoma", "Fibroadenoma");                                              // CSBuilder.cs:446
-		                                                                                                                                          // CSBuilder.cs:432
+		public static Coding Code_Fibroadenoma = new Coding(System, "Fibroadenoma", "Fibroadenoma");                                              // CSBuilder.cs:419
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// These are non-cancerous breast lumps.
 		/// Fibroadenomas usually go away with age.
@@ -36,7 +34,7 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_FibroadenomaDegeneration = new Coding(System, "FibroadenomaDegeneration", "Fibroadenoma degeneration");         // CSBuilder.cs:446
+		public static Coding Code_FibroadenomaDegeneration = new Coding(System, "FibroadenomaDegeneration", "Fibroadenoma degeneration");         // CSBuilder.cs:419
 		//- Fields
 	}
 }

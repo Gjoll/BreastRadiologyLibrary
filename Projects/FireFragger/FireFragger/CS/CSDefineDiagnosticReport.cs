@@ -18,7 +18,7 @@ namespace FireFragger
     class CSDefineDiagnosticReport : CSDefineBase
     {
         public CSDefineDiagnosticReport(CSBuilder csBuilder,
-                    FragInfo fragBase) : base(csBuilder, fragBase)
+                    SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
 

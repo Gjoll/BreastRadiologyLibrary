@@ -18,7 +18,7 @@ namespace FireFragger
     class CSDefineComposition : CSDefineBase
     {
         public CSDefineComposition(CSBuilder csBuilder,
-                    FragInfo fragBase) : base(csBuilder, fragBase)
+                    SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
 
@@ -42,7 +42,7 @@ namespace FireFragger
         {
             if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
                 return url.LastUriPart();
-            if (this.csBuilder.SDFragments.TryGetValue(url, out FragInfo fragInfo) == false)
+            if (this.csBuilder.SDFragments.TryGetValue(url, out SDInfo fragInfo) == false)
                 throw new Exception($"{url.LastUriPart()} not found");
             return fragInfo.BaseDefinitionName;
         }

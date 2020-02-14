@@ -7,9 +7,9 @@ using System.Text;
 
 namespace FireFragger
 {
-    class FragInfo
+    class SDInfo
     {
-        public List<FragInfo> ReferencedFragments = new List<FragInfo>();
+        public List<SDInfo> ReferencedFragments = new List<SDInfo>();
         public StructureDefinition StructDef;
         public CodeEditor InterfaceEditor;
         public CodeEditor ClassEditor;
@@ -17,5 +17,13 @@ namespace FireFragger
 
         public String BaseDefinitionUrl => this.StructDef.BaseDefinition;
         public String BaseDefinitionName => this.BaseDefinitionUrl.LastUriPart();
+
+        public SDInfo(IConversionInfo ci, StructureDefinition sd)
+        {
+            this.StructDef = sd;
+            ElementTreeLoader l = new ElementTreeLoader(ci);
+            InterfaceEditor = new CodeEditor();
+            DiffNodes = l.Create(sd.Differential.Element);
+        }
     };
 }

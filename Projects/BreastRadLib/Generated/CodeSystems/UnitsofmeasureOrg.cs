@@ -9,24 +9,22 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadLib
 {
-	//+ Header
-	public class UnitsofmeasureOrg                                                                                                             // CSBuilder.cs:416
-	//- Header
+	public class UnitsofmeasureOrg
 	{
 		//+ Fields
-		const string System = "http://unitsofmeasure.org";                                                                                        // CSBuilder.cs:420
-		                                                                                                                                          // CSBuilder.cs:432
+		const string System = "http://unitsofmeasure.org";                                                                                        // CSBuilder.cs:393
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// </summary>
-		public static Coding Code_M = new Coding(System, "m", "meter");                                                                           // CSBuilder.cs:446
-		                                                                                                                                          // CSBuilder.cs:432
+		public static Coding Code_M = new Coding(System, "m", "meter");                                                                           // CSBuilder.cs:419
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// </summary>
-		public static Coding Code_Cm = new Coding(System, "cm", "centimeter");                                                                    // CSBuilder.cs:446
-		                                                                                                                                          // CSBuilder.cs:432
+		public static Coding Code_Cm = new Coding(System, "cm", "centimeter");                                                                    // CSBuilder.cs:419
+		                                                                                                                                          // CSBuilder.cs:405
 		/// <summary>
 		/// </summary>
-		public static Coding Code_Mm = new Coding(System, "mm", "millimeter");                                                                    // CSBuilder.cs:446
+		public static Coding Code_Mm = new Coding(System, "mm", "millimeter");                                                                    // CSBuilder.cs:419
 		//- Fields
 	}
 }

@@ -12,10 +12,12 @@ namespace FireFragger
         public CodeSystem CodeSystem;
         public CodeEditor ClassCode { get; }
 
-        public CSInfo()
+        public CSInfo(CodeSystem cs)
         {
-            ClassCode = new CodeEditor();
-            this.ClassCode.Load(Path.Combine("Templates", "ValueSet.txt"));
+            this.CodeSystem = cs;
+            this.ClassCode = new CodeEditor();
+            this.ClassCode.TryAddUserMacro("ClassName", CSBuilder.CodeSystemName(this));
+            this.ClassCode.Load(Path.Combine("Templates", "CodeSystem.txt"));
         }
     };
 }
