@@ -70,7 +70,7 @@ namespace BreastRadLib
 		    }                                                                                                                                     // FhirConstruct.cs:814
 		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
 		    retVal.TextElement.Value = "Findings Left Breast observation";                                                                        // FhirConstruct.cs:821
-		    return retVal = new CodeableConcept();                                                                                                // FhirConstruct.cs:829
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
 		/// <summary>
 		/// Method to create default value for element
@@ -92,7 +92,7 @@ namespace BreastRadLib
 		    }                                                                                                                                     // FhirConstruct.cs:814
 		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
 		    retVal.TextElement.Value = "Left breast structure (body structure)";                                                                  // FhirConstruct.cs:821
-		    return retVal = new CodeableConcept();                                                                                                // FhirConstruct.cs:829
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods
 	}

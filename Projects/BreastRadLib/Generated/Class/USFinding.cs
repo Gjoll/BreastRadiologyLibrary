@@ -55,7 +55,7 @@ namespace BreastRadLib
 		        temp4.CodeElement.Value = "usFindingObservation";                                                                                 // FhirConstruct.cs:786
 		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
 		    }                                                                                                                                     // FhirConstruct.cs:814
-		    return retVal = new CodeableConcept();                                                                                                // FhirConstruct.cs:829
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods
 	}

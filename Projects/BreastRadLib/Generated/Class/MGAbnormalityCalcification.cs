@@ -65,7 +65,7 @@ namespace BreastRadLib
 		    }                                                                                                                                     // FhirConstruct.cs:814
 		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
 		    retVal.TextElement.Value = "Abnormality Calcification observation";                                                                   // FhirConstruct.cs:821
-		    return retVal = new CodeableConcept();                                                                                                // FhirConstruct.cs:829
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods
 	}

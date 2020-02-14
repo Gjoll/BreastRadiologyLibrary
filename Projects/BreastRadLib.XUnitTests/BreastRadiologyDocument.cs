@@ -25,14 +25,24 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void CreateBreastRadiologyDocument()
         {
-            BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
-            Debug.Assert(doc.Index != null);
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+                Debug.Assert(doc.Index != null);
+                BreastRadReport report = doc.Index.CreateReport();
+                Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
+                Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
+                b = doc.Write();
+            }
 
-            BreastRadReport report  = doc.Index.CreateReport();
-            //Debug.Assert(report.Resource.
-            Bundle b = doc.Write();
-
-            BreastRadiologyDocument doc2 = BreastRadiologyDocument.Read(b);
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
+                Debug.Assert(doc.Index != null);
+                BreastRadReport report = doc.Index.Report;
+                Debug.Assert(report != null);
+                Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
+                Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
+            }
         }
     }
 }
