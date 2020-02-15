@@ -11,22 +11,25 @@ namespace BreastRadLib
 {
 	public class SectionFindingsRightBreast : ObservationBase, IFindingBreastFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		public MemberList<IMGFinding> MGFinding {get;}                                                                                            // CSDefineObservation.cs:59
-		public MemberList<IMRIFinding> MRIFinding {get;}                                                                                          // CSDefineObservation.cs:59
-		public MemberList<INMFinding> NMFinding {get;}                                                                                            // CSDefineObservation.cs:59
-		public MemberList<IUSFinding> USFinding {get;}                                                                                            // CSDefineObservation.cs:59
+		public MemberList<IMGFinding> MGFinding {get;}                                                                                            // CSDefineObservation.cs:160
+		public MemberList<IMRIFinding> MRIFinding {get;}                                                                                          // CSDefineObservation.cs:160
+		public MemberList<INMFinding> NMFinding {get;}                                                                                            // CSDefineObservation.cs:160
+		public MemberList<IUSFinding> USFinding {get;}                                                                                            // CSDefineObservation.cs:160
 		//- Fields
 
 		public SectionFindingsRightBreast(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // CSDefineBase.cs:181
-			this.MGFinding = CreateHasMemberList<IMGFinding>(0, -1);                                                                                 // CSDefineObservation.cs:73
-			this.MRIFinding = CreateHasMemberList<IMRIFinding>(0, -1);                                                                               // CSDefineObservation.cs:73
-			this.NMFinding = CreateHasMemberList<INMFinding>(0, -1);                                                                                 // CSDefineObservation.cs:73
-			this.USFinding = CreateHasMemberList<IUSFinding>(0, -1);                                                                                 // CSDefineObservation.cs:73
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // CSDefineBase.cs:182
+			this.MGFinding = CreateHasMemberList<IMGFinding>(0, -1);                                                                                 // CSDefineObservation.cs:174
+			this.MRIFinding = CreateHasMemberList<IMRIFinding>(0, -1);                                                                               // CSDefineObservation.cs:174
+			this.NMFinding = CreateHasMemberList<INMFinding>(0, -1);                                                                                 // CSDefineObservation.cs:174
+			this.USFinding = CreateHasMemberList<IUSFinding>(0, -1);                                                                                 // CSDefineObservation.cs:174
 			//- Constructor
 		}
 

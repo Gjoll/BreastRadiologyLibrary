@@ -11,16 +11,19 @@ namespace BreastRadLib
 {
 	public class AbnormalityDuct : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		public MemberList<IConsistentWith> ConsistentWith {get;}                                                                                  // CSDefineObservation.cs:59
+		public MemberList<IConsistentWith> ConsistentWith {get;}                                                                                  // CSDefineObservation.cs:160
 		//- Fields
 
 		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:181
-			this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);                                                                       // CSDefineObservation.cs:73
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:182
+			this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);                                                                       // CSDefineObservation.cs:174
 			//- Constructor
 		}
 

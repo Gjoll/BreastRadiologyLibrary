@@ -13,6 +13,9 @@ namespace BreastRadLib
 	public class %ClassName% : %FhirBase%Base%Interfaces%
 	//-*Header
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

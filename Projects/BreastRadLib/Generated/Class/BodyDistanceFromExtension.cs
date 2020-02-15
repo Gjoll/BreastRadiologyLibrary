@@ -11,6 +11,9 @@ namespace BreastRadLib
 {
 	public class BodyDistanceFromExtension : ExtensionBase, IHeaderFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

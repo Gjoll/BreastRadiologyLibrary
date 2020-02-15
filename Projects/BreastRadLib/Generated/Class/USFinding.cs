@@ -11,14 +11,17 @@ namespace BreastRadLib
 {
 	public class USFinding : ObservationBase, IObservationSectionFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 
 		public USFinding(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
 		{
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:129
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");                                                  // CSDefineBase.cs:181
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");                                                  // CSDefineBase.cs:182
 			//- Constructor
 		}
 

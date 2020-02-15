@@ -52,17 +52,16 @@ namespace BreastRadLib
             return null;
         }
 
-        protected void ReadSection<T>(String title,
+        protected List<T> ReadSection<T>(String title,
             Coding code,
             Int32 min,
-            Int32 max,
-            List<T> items)
+            Int32 max)
             where T : ResourceBase
         {
-            items.Clear();
+            List<T> items = new List<T>();
             Composition.SectionComponent section = this.FindSection(code);
             if (section == null)
-                return;
+                return items;
             foreach (ResourceReference resRef in section.Entry)
             {
                 if (this.doc.ResourceBag.TryGetEntry(resRef.Reference, out var entry) == false)
@@ -82,16 +81,7 @@ namespace BreastRadLib
                 throw new Exception($"Error reading Composition.section '{title}'. Min cardinality sb {min}, is {items.Count}");
             if ((max > 0) && (items.Count > max))
                 throw new Exception($"Error reading Composition.section '{title}'. Max cardinality sb {max}, is {items.Count}");
-        }
-
-        protected T ReadSection<T>(String title, Coding code, Int32 min)
-            where T : ResourceBase
-        {
-            List<T> items = new List<T>();
-            this.ReadSection(title, code, min, 1, items);
-            if (items.Count == 1)
-                return items[0];
-            return null;
+            return items;
         }
 
         protected void WriteSection<T>(String title, Coding code, Int32 min, Int32 max, T item)
