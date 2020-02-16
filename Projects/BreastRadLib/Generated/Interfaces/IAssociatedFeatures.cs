@@ -12,9 +12,9 @@ namespace BreastRadLib
 	public interface IAssociatedFeatures : IObservationBase, IObservationSectionFragment
 	{
 		//+ Fields
-		MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion {get;}                                             // CSDefineObservation.cs:162
-		MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification {get;}                                                                 // CSDefineObservation.cs:162
-		MemberList<IObservedFeature> ObservedFeature {get;}                                                                                       // CSDefineObservation.cs:162
+		MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get; }                                           // CSDefineObservation.cs:162
+		MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification { get; }                                                               // CSDefineObservation.cs:162
+		MemberList<IObservedFeature> ObservedFeature { get; }                                                                                     // CSDefineObservation.cs:162
 		//- Fields
 
 		//+ Methods

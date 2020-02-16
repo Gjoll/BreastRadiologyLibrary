@@ -15,13 +15,33 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		public MemberList<ITumorSatellite> TumorSatellite {get;}                                                                                  // CSDefineObservation.cs:160
-		public MemberList<IConsistentWith> ConsistentWith {get;}                                                                                  // CSDefineObservation.cs:160
-		public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}                                                                          // CSDefineObservation.cs:160
+		public MemberList<ITumorSatellite> TumorSatellite { get; protected set; }                                                                 // CSDefineObservation.cs:160
+		public MemberList<IConsistentWith> ConsistentWith { get; protected set; }                                                                 // CSDefineObservation.cs:160
+		public MemberList<IAssociatedFeatures> AssociatedFeatures { get; protected set; }                                                         // CSDefineObservation.cs:160
 		//- Fields
 
-		public AbnormalityCyst(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
+		/// <summary>
+		/// No parameters constructor.
+		// Caller must call Create();
+		/// </summary>
+		public AbnormalityCyst() : base()
 		{
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public AbnormalityCyst(BreastRadiologyDocument doc, Observation resource) : base()
+		{
+		}
+
+		/// <summary>
+		/// Init object.
+		/// </summary>
+		public void Create(BreastRadiologyDocument doc, Observation resource)
+		{
+			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                                            // CSDefineBase.cs:182

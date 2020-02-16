@@ -22,26 +22,6 @@ namespace FireFragger
         {
         }
 
-        void CreateUnknownResourceType(CodeBlockNested fields,
-            String className,
-            String resourceName,
-            String propertyName,
-            String fieldName)
-        {
-            fields
-                .BlankLine()
-                .SummaryOpen()
-                .Summary($"Append new blank {propertyName} of type {className}")
-                .SummaryClose()
-                .AppendCode($"public {className} Append{propertyName}({resourceName} resource)")
-                .OpenBrace()
-                .AppendCode($"{className} retVal = new {className}(this.doc, resource);")
-                .AppendCode($"this.{fieldName}.Add(retVal);")
-                .AppendCode($"return retVal;")
-                .CloseBrace()
-                ;
-        }
-
         String FhirType(String url)
         {
             if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
@@ -49,29 +29,6 @@ namespace FireFragger
             if (this.csBuilder.SDFragments.TryGetValue(url, out SDInfo fragInfo) == false)
                 throw new Exception($"{url.LastUriPart()} not found");
             return fragInfo.BaseDefinitionName;
-        }
-
-        void CreateKnownResourceType(CodeBlockNested fields,
-            String className,
-            String pName,
-            String fName,
-            bool nullFlag)
-        {
-            String nullText = nullFlag ? "" : " = null";
-
-            fields
-                .BlankLine()
-                .SummaryOpen()
-                .Summary($"Append new blank {pName}")
-                .SummaryClose()
-                .AppendCode($"public {className} Append{pName}({className} brClass{nullText})")
-                .OpenBrace()
-                .AppendCode($"if (brClass == null)")
-                .AppendCode($"    brClass = new {className}(this.doc);")
-                .AppendCode($"this.{fName}.Add(brClass);")
-                .AppendCode($"return brClass;")
-                .CloseBrace()
-                ;
         }
 
         String BRClass(String url)
@@ -102,12 +59,11 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public class {className} : SectionBase<{brClass}>")
                 .OpenBrace()
-                .AppendCode($"// Definitions")
-                .DefineBlock(out CodeBlockNested definitionsBlock)
-                .BlankLine()
-                .AppendCode($"// Fields")
-                .DefineBlock(out CodeBlockNested fieldsBlock)
-                .BlankLine()
+                //.AppendCode($"// Definitions")
+                //.DefineBlock(out CodeBlockNested definitionsBlock)
+                //.BlankLine()
+                //.DefineBlock(out CodeBlockNested fieldsBlock)
+                //.BlankLine()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)
                 .BlankLine()
@@ -133,19 +89,8 @@ namespace FireFragger
 
             if (max == 1)
             {
-                void DefineCreate(String fhirType)
-                {
-                    methodsBlock
-                        .BlankLine()
-                        .SummaryOpen()
-                        .Summary($"Create new blank {propertyName} of type {fhirType}")
-                        .SummaryClose()
-                        .AppendCode($"public {brClass} Create({fhirType} item) => CreateSingleItem(item);")
-                        .BlankLine()
-                        ;
-                }
-
                 propertiesBlock
+                    .SummaryOpen()
                     .Summary("Access propertyName")
                     .SummaryClose()
                     .AppendCode($"public {brClass} Item")
@@ -156,48 +101,40 @@ namespace FireFragger
 
                 foreach (String target in references)
                 {
+                    String targetName = target.LastUriPart();
                     String fhirType = FhirType(target);
-                    DefineCreate(fhirType);
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Create new blank {propertyName} of type {fhirType}")
+                        .SummaryClose()
+                        .AppendCode($"public {brClass} Create{targetName}({fhirType} item) => CreateSingleItem(item);")
+                        .BlankLine()
+                        ;
                 }
             }
             else
             {
-                //$propertiesBlock
-                //    .Summary("Access propertyName")
-                //    .SummaryClose()
-                //    .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
-                //    ;
+                propertiesBlock
+                    .SummaryOpen()
+                    .Summary("Access propertyName")
+                    .SummaryClose()
+                    .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
+                    ;
 
-                //if (references.Length == 1)
-                //{
-                //    if (brClass == "ResourceBase")
-                //        CreateUnknownResourceType(fieldsBlock, "ResourceBase", "DomainResource", propertyName, "items");
-                //    else
-                //        CreateKnownResourceType(fieldsBlock, brClass, propertyName, "items", true);
-                //}
-                //else
-                //{
-                //    foreach (String target in references)
-                //    {
-                //        if (target.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
-                //            CreateUnknownResourceType(fieldsBlock, "ResourceBase", FhirType(target), propertyName, "items");
-                //        else
-                //            CreateKnownResourceType(fieldsBlock, BRClass(target), propertyName, "items", false);
-                //    }
-                //}
-
-                //methodsBlock
-                //    .AppendCode($"public void Read(List<{brClass}> items)")
-                //    .OpenBrace()
-                //    .AppendCode($"if (this.items.Count > 0)")
-                //    .AppendCode($"    throw new Exception(\"Item already has a value\");")
-                //    .AppendCode($"if (items.Count < Min)")
-                //    .AppendCode($"    throw new Exception(\"Minimum cardinality error. Expected at least {{Min}}, got {{items.Count}}\");")
-                //    .AppendCode($"if (items.Count > Max)")
-                //    .AppendCode($"    throw new Exception(\"Maximum cardinality error. Expected no more than {{Max}}, got {{items.Count}}\");")
-                //    .AppendCode($"this.items = items;")
-                //    .CloseBrace()
-                //    ;
+                foreach (String target in references)
+                {
+                    String targetName = target.LastUriPart();
+                    String fhirType = FhirType(target);
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Create new blank {propertyName} of type {fhirType} and add to end of list")
+                        .SummaryClose()
+                        .AppendCode($"public {brClass} Add{targetName}({fhirType} item) => AppendItem(item);")
+                        .BlankLine()
+                        ;
+                }
             }
             return className;
         }
@@ -266,23 +203,13 @@ namespace FireFragger
                     .AppendCode($"{className}.{sectionClassName} {propertyName} {{ get ; }}")
                     ;
 
-                //this.ClassWriteCode
-                //    .AppendCode($"WriteSection<{brClass}>(\"{title}\",")
-                //    .AppendCode($"    this.{propertyName}.SectionCode,")
-                //    .AppendCode($"    this.{propertyName}.Min,")
-                //    .AppendCode($"    this.{propertyName}.Max);")
-                //    .AppendCode($"    this.{fieldName});")
-                //    ;
+                this.ClassWriteCode
+                    .AppendCode($"this.WriteSection(this.{propertyName});")
+                    ;
 
-                //$this.ClassReadCode
-                //    .OpenBrace()
-                //    .AppendCode($"var items = ReadSection<{brClass}>(this.{propertyName}.SectionTitle,")
-                //    .AppendCode($"    this.{propertyName}.SectionCode,")
-                //    .AppendCode($"    this.{propertyName}.Min,")
-                //    .AppendCode($"    this.{propertyName}.Max);")
-                //    .AppendCode($"this.{propertyName}.Read(items);")
-                //    .CloseBrace()
-                //    ;
+                this.ClassReadCode
+                    .AppendCode($"this.ReadSection(this.{propertyName});")
+                    ;
             }
         }
 

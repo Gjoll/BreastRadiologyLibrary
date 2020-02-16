@@ -17,8 +17,28 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource) : base(doc, resource)
+		/// <summary>
+		/// No parameters constructor.
+		// Caller must call Create();
+		/// </summary>
+		public BreastRadReport() : base()
 		{
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource) : base()
+		{
+		}
+
+		/// <summary>
+		/// Init object.
+		/// </summary>
+		public void Create(BreastRadiologyDocument doc, DiagnosticReport resource)
+		{
+			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:182

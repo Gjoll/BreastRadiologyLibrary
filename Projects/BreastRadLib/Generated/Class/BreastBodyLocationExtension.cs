@@ -17,8 +17,28 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public BreastBodyLocationExtension(BreastRadiologyDocument doc, Extension resource) : base(doc, resource)
+		/// <summary>
+		/// No parameters constructor.
+		// Caller must call Create();
+		/// </summary>
+		public BreastBodyLocationExtension() : base()
 		{
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public BreastBodyLocationExtension(BreastRadiologyDocument doc, Extension resource) : base()
+		{
+		}
+
+		/// <summary>
+		/// Init object.
+		/// </summary>
+		public void Create(BreastRadiologyDocument doc, Extension resource)
+		{
+			base.Create(doc, resource);
 			//+ Constructor
 			//- Constructor
 		}

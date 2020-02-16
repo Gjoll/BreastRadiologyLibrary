@@ -17,8 +17,28 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
-		public ServiceRecommendation(BreastRadiologyDocument doc, ServiceRequest resource) : base(doc, resource)
+		/// <summary>
+		/// No parameters constructor.
+		// Caller must call Create();
+		/// </summary>
+		public ServiceRecommendation() : base()
 		{
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public ServiceRecommendation(BreastRadiologyDocument doc, ServiceRequest resource) : base()
+		{
+		}
+
+		/// <summary>
+		/// Init object.
+		/// </summary>
+		public void Create(BreastRadiologyDocument doc, ServiceRequest resource)
+		{
+			base.Create(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:182
 			//- Constructor

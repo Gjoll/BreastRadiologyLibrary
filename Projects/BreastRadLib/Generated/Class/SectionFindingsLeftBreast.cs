@@ -15,14 +15,34 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		public MemberList<IMGFinding> MGFinding {get;}                                                                                            // CSDefineObservation.cs:160
-		public MemberList<IMRIFinding> MRIFinding {get;}                                                                                          // CSDefineObservation.cs:160
-		public MemberList<INMFinding> NMFinding {get;}                                                                                            // CSDefineObservation.cs:160
-		public MemberList<IUSFinding> USFinding {get;}                                                                                            // CSDefineObservation.cs:160
+		public MemberList<IMGFinding> MGFinding { get; protected set; }                                                                           // CSDefineObservation.cs:160
+		public MemberList<IMRIFinding> MRIFinding { get; protected set; }                                                                         // CSDefineObservation.cs:160
+		public MemberList<INMFinding> NMFinding { get; protected set; }                                                                           // CSDefineObservation.cs:160
+		public MemberList<IUSFinding> USFinding { get; protected set; }                                                                           // CSDefineObservation.cs:160
 		//- Fields
 
-		public SectionFindingsLeftBreast(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
+		/// <summary>
+		/// No parameters constructor.
+		// Caller must call Create();
+		/// </summary>
+		public SectionFindingsLeftBreast() : base()
 		{
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public SectionFindingsLeftBreast(BreastRadiologyDocument doc, Observation resource) : base()
+		{
+		}
+
+		/// <summary>
+		/// Init object.
+		/// </summary>
+		public void Create(BreastRadiologyDocument doc, Observation resource)
+		{
+			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
 			this.Resource.BodySite = DefaultValue_2();                                                                                               // CSDefineBase.cs:130

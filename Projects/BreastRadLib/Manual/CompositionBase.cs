@@ -18,9 +18,16 @@ namespace BreastRadLib
         public class SectionBase<BaseType>
                 where BaseType : ResourceBase, new()
         {
-            // Definitions
+            /// <summary>
+            /// Parent document
+            /// </summary>
+            public Int32 Count => this.items.Count;
 
-            // Fields
+            /// <summary>
+            /// For internal use only. Access all items.
+            /// </summary>
+            public IEnumerable<BaseType> RawItems => this.items;
+
             /// <summary>
             /// Parent document
             /// </summary>
@@ -79,17 +86,27 @@ namespace BreastRadLib
             }
 
             /// <summary>
+            /// Append new item to end of items list.
+            /// </summary>
+            /// <param name="item"></param>
+            protected BaseType AppendItem<T>(T item)
+                where T : Resource
+            {
+                BaseType itemContainer = new BaseType();
+                this.items.Add(itemContainer);
+                return itemContainer;
+            }
+
+            /// <summary>
             /// Set single item
             /// </summary>
             /// <param name="item"></param>
-            protected T CreateSingleItem<T>(T item)
+            protected BaseType CreateSingleItem<T>(T item)
                 where T : Resource
             {
                 if (this.items.Count > 0)
                     throw new Exception("Item already has a value");
-                BaseType itemContainer = new BaseType();
-                this.items.Add(itemContainer);
-                return item;
+                return AppendItem(item);
             }
 
             public void Read<T>(List<BaseType> items)
@@ -151,17 +168,14 @@ namespace BreastRadLib
             return null;
         }
 
-        protected List<T> ReadSection<T>(String title,
-            Coding code,
-            Int32 min,
-            Int32 max)
-            where T : ResourceBase
+        protected void ReadSection<T>(SectionBase<T> section)
+            where T : ResourceBase, new()
         {
             List<T> items = new List<T>();
-            Composition.SectionComponent section = this.FindSection(code);
-            if (section == null)
-                return items;
-            foreach (ResourceReference resRef in section.Entry)
+            Composition.SectionComponent sectionComponent = this.FindSection(section.Code);
+            if (sectionComponent == null)
+                return;
+            foreach (ResourceReference resRef in sectionComponent.Entry)
             {
                 if (this.doc.ResourceBag.TryGetEntry(resRef.Reference, out var entry) == false)
                     throw new Exception($"Error referencing section resource '{resRef.Reference}'");
@@ -176,39 +190,30 @@ namespace BreastRadLib
                 items.Add(item);
             }
 
-            if (items.Count < min)
-                throw new Exception($"Error reading Composition.section '{title}'. Min cardinality sb {min}, is {items.Count}");
-            if ((max > 0) && (items.Count > max))
-                throw new Exception($"Error reading Composition.section '{title}'. Max cardinality sb {max}, is {items.Count}");
-            return items;
+            if (items.Count < section.Min)
+                throw new Exception($"Error reading Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {items.Count}");
+            if ((section.Max > 0) && (items.Count > section.Max))
+                throw new Exception($"Error reading Composition.section '{section.Title}'. Max cardinality sb {section.Max}, is {items.Count}");
         }
 
-        protected void WriteSection<T>(String title, Coding code, Int32 min, Int32 max, T item)
-            where T : IBaseBase
+        protected void WriteSection<T>(SectionBase<T> section)
+            where T : ResourceBase, new()
         {
-            List<T> items = new List<T>();
-            items.Add(item);
-            this.WriteSection(title, code, min, max, items);
-        }
+            if (section.Count < section.Min)
+                throw new Exception($"Error writing Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {section.Count}");
+            if ((section.Max > 0) && (section.Count > section.Max))
+                throw new Exception($"Error writing Composition.section '{section.Title}'. Max cardinality sb {section.Max}, is {section.Count}");
 
-        protected void WriteSection<T>(String title, Coding code, Int32 min, Int32 max, List<T> items)
-            where T : IBaseBase
-        {
-            if (items.Count < min)
-                throw new Exception($"Error writing Composition.section '{title}'. Min cardinality sb {min}, is {items.Count}");
-            if ((max > 0) && (items.Count > max))
-                throw new Exception($"Error writing Composition.section '{title}'. Max cardinality sb {max}, is {items.Count}");
-
-            Composition.SectionComponent section = new Composition.SectionComponent
+            Composition.SectionComponent sectionComponent = new Composition.SectionComponent
             {
-                Code = new CodeableConcept(code.System, code.Code, code.Display),
-                Title = title
+                Code = new CodeableConcept(section.Code.System, section.Code.Code, section.Code.Display),
+                Title = section.Title
             };
 
-            foreach (T item in items)
-                section.Entry.Add(new ResourceReference(item.Id));
+            foreach (var item in section.RawItems)
+                sectionComponent.Entry.Add(new ResourceReference(item.Id));
 
-            this.Resource.Section.Add(section);
+            this.Resource.Section.Add(sectionComponent);
         }
     }
 }

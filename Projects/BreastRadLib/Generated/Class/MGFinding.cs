@@ -15,23 +15,43 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		public MemberList<IAbnormalityCyst> AbnormalityCyst {get;}                                                                                // CSDefineObservation.cs:160
-		public MemberList<IAbnormalityDuct> AbnormalityDuct {get;}                                                                                // CSDefineObservation.cs:160
-		public MemberList<IAbnormalityForeignObject> AbnormalityForeignObject {get;}                                                              // CSDefineObservation.cs:160
-		public MemberList<IAbnormalityLymphNode> AbnormalityLymphNode {get;}                                                                      // CSDefineObservation.cs:160
-		public MemberList<IAbnormalityMass> AbnormalityMass {get;}                                                                                // CSDefineObservation.cs:160
-		public MemberList<IAssociatedFeatures> AssociatedFeatures {get;}                                                                          // CSDefineObservation.cs:160
-		public MemberList<IAbnormalityFibroadenoma> AbnormalityFibroadenoma {get;}                                                                // CSDefineObservation.cs:160
-		public MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion {get;}                                      // CSDefineObservation.cs:160
-		public MemberList<IMGAbnormalityAsymmetry> MGAbnormalityAsymmetry {get;}                                                                  // CSDefineObservation.cs:160
-		public MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification {get;}                                                          // CSDefineObservation.cs:160
-		public MemberList<IMGAbnormalityDensity> MGAbnormalityDensity {get;}                                                                      // CSDefineObservation.cs:160
-		public MemberList<IMGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis {get;}                                                              // CSDefineObservation.cs:160
-		public MemberList<IMGBreastDensity> MGBreastDensity {get;}                                                                                // CSDefineObservation.cs:160
+		public MemberList<IAbnormalityCyst> AbnormalityCyst { get; protected set; }                                                               // CSDefineObservation.cs:160
+		public MemberList<IAbnormalityDuct> AbnormalityDuct { get; protected set; }                                                               // CSDefineObservation.cs:160
+		public MemberList<IAbnormalityForeignObject> AbnormalityForeignObject { get; protected set; }                                             // CSDefineObservation.cs:160
+		public MemberList<IAbnormalityLymphNode> AbnormalityLymphNode { get; protected set; }                                                     // CSDefineObservation.cs:160
+		public MemberList<IAbnormalityMass> AbnormalityMass { get; protected set; }                                                               // CSDefineObservation.cs:160
+		public MemberList<IAssociatedFeatures> AssociatedFeatures { get; protected set; }                                                         // CSDefineObservation.cs:160
+		public MemberList<IAbnormalityFibroadenoma> AbnormalityFibroadenoma { get; protected set; }                                               // CSDefineObservation.cs:160
+		public MemberList<IMGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get; protected set; }                     // CSDefineObservation.cs:160
+		public MemberList<IMGAbnormalityAsymmetry> MGAbnormalityAsymmetry { get; protected set; }                                                 // CSDefineObservation.cs:160
+		public MemberList<IMGAbnormalityCalcification> MGAbnormalityCalcification { get; protected set; }                                         // CSDefineObservation.cs:160
+		public MemberList<IMGAbnormalityDensity> MGAbnormalityDensity { get; protected set; }                                                     // CSDefineObservation.cs:160
+		public MemberList<IMGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis { get; protected set; }                                             // CSDefineObservation.cs:160
+		public MemberList<IMGBreastDensity> MGBreastDensity { get; protected set; }                                                               // CSDefineObservation.cs:160
 		//- Fields
 
-		public MGFinding(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
+		/// <summary>
+		/// No parameters constructor.
+		// Caller must call Create();
+		/// </summary>
+		public MGFinding() : base()
 		{
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public MGFinding(BreastRadiologyDocument doc, Observation resource) : base()
+		{
+		}
+
+		/// <summary>
+		/// Init object.
+		/// </summary>
+		public void Create(BreastRadiologyDocument doc, Observation resource)
+		{
+			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // CSDefineBase.cs:182

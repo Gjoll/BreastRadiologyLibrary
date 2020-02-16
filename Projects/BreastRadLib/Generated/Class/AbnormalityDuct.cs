@@ -15,11 +15,31 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		public MemberList<IConsistentWith> ConsistentWith {get;}                                                                                  // CSDefineObservation.cs:160
+		public MemberList<IConsistentWith> ConsistentWith { get; protected set; }                                                                 // CSDefineObservation.cs:160
 		//- Fields
 
-		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base(doc, resource)
+		/// <summary>
+		/// No parameters constructor.
+		// Caller must call Create();
+		/// </summary>
+		public AbnormalityDuct() : base()
 		{
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public AbnormalityDuct(BreastRadiologyDocument doc, Observation resource) : base()
+		{
+		}
+
+		/// <summary>
+		/// Init object.
+		/// </summary>
+		public void Create(BreastRadiologyDocument doc, Observation resource)
+		{
+			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:182
