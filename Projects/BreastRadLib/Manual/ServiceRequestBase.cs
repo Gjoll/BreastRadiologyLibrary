@@ -13,12 +13,18 @@ namespace BreastRadLib
     {
         public ServiceRequest Resource => (ServiceRequest)this.resource;
 
-        public ServiceRequestBase(BreastRadiologyDocument doc, ServiceRequest resource) : base(doc, resource)
+        public ServiceRequestBase() : base()
         {
         }
 
-        public ServiceRequestBase(BreastRadiologyDocument doc) : base(doc, new ServiceRequest())
+        public ServiceRequestBase(BreastRadiologyDocument doc, ServiceRequest resource) : base()
         {
+            this.Create(doc, resource);
+        }
+
+        public ServiceRequestBase(BreastRadiologyDocument doc) : base()
+        {
+            this.Create(doc, new ServiceRequest());
         }
     }
 }

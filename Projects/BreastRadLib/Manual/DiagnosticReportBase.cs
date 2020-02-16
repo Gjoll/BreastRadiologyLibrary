@@ -13,12 +13,18 @@ namespace BreastRadLib
     {
         public DiagnosticReport Resource => (DiagnosticReport)this.resource;
 
-        public DiagnosticReportBase(BreastRadiologyDocument doc, DiagnosticReport resource) : base(doc, resource)
+        public DiagnosticReportBase() : base()
         {
         }
 
-        public DiagnosticReportBase(BreastRadiologyDocument doc) : base(doc, new DiagnosticReport())
+        public DiagnosticReportBase(BreastRadiologyDocument doc, DiagnosticReport resource) : base()
         {
+            this.Create(doc, resource);
+        }
+
+        public DiagnosticReportBase(BreastRadiologyDocument doc) : base()
+        {
+            this.Create(doc, new DiagnosticReport());
         }
     }
 }

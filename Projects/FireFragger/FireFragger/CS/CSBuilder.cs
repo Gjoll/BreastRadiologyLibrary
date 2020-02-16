@@ -402,6 +402,7 @@ namespace FireFragger
 
         public void Build()
         {
+            CodeEditor.DebugFlag = true;
             this.resourceFactoryEditor = new CodeEditor();
             this.resourceFactoryEditor.Load(Path.Combine(this.OutputDir, "Generated", "ResourceFactory.cs"));
             this.resourceFactoryProfileBlock = this.resourceFactoryEditor.Blocks.Find("Profile");

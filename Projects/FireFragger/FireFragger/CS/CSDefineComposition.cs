@@ -100,7 +100,7 @@ namespace FireFragger
                 .Summary($"Accessor class for '{title}'")
                 .Summary($"[Fhir Element '{sectionSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className}")
+                .AppendCode($"public class {className} : SectionBase<{brClass}>")
                 .OpenBrace()
                 .AppendCode($"// Definitions")
                 .DefineBlock(out CodeBlockNested definitionsBlock)
@@ -117,152 +117,87 @@ namespace FireFragger
                 .SummaryOpen()
                 .Summary($"Accessor class constructor")
                 .SummaryClose()
-                .AppendCode($"public {className}(BreastRadiologyDocument doc)")
+                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                 .OpenBrace()
-                .AppendLine($"this.doc = doc;")
+                .AppendCode($"this.Create(doc, \"{title}\", {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
                 .DefineBlock(out CodeBlockNested constructorBlock)
                 .CloseBrace()
                 .CloseBrace()
                 ;
 
+            //propertiesBlock
+            //    ;
 
-            propertiesBlock
-                .SummaryOpen()
-                .Summary("Access Min cardinality")
-                .SummaryClose()
-                .AppendCode($"public Int32 Min => {min};")
+            //fieldsBlock
+            //    ;
 
-                .BlankLine()
-                .SummaryOpen()
-                .Summary("Access Max cardinality")
-                .SummaryClose()
-                .AppendCode($"public Int32 Max => {max};")
-
-                .BlankLine()
-                .SummaryOpen()
-                .Summary("Section Title")
-                .SummaryClose()
-                .AppendCode($"public String SectionTitle => \"{title}\";")
-
-                .BlankLine()
-                .SummaryOpen()
-                .Summary("Section Code system")
-                .SummaryClose()
-                .AppendCode($"public String SectionCodeSystem => \"{code.System}\";")
-
-                .BlankLine()
-                .SummaryOpen()
-                .Summary("Section Code")
-                .SummaryClose()
-                .AppendCode($"public String SectionCodeCode => \"{code.Code}\";")
-
-                .BlankLine()
-                .SummaryOpen()
-                .Summary("Section coding")
-                .SummaryClose()
-                .AppendCode($"public Coding SectionCode => new Coding(SectionCodeSystem, SectionCodeCode);")
-                ;
-
-            fieldsBlock
-                .SummaryOpen()
-                .Summary("Parent document")
-                .SummaryClose()
-                .AppendCode($"BreastRadiologyDocument doc;")
-                ;
             if (max == 1)
             {
-                fieldsBlock
-                    .BlankLine()
-                    .SummaryOpen()
-                    .Summary("Section item")
-                    .SummaryClose()
-                    .AppendCode($"{brClass} item;")
-                    ;
+                void DefineCreate(String fhirType)
+                {
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Create new blank {propertyName} of type {fhirType}")
+                        .SummaryClose()
+                        .AppendCode($"public {brClass} Create({fhirType} item) => CreateSingleItem(item);")
+                        .BlankLine()
+                        ;
+                }
 
                 propertiesBlock
                     .Summary("Access propertyName")
                     .SummaryClose()
                     .AppendCode($"public {brClass} Item")
                     .OpenBrace()
-                    .AppendCode($"get => this.item;")
-                    .AppendCode($"set => this.item = value;")
+                    .AppendCode($"get => this.GetSingleItem<{brClass}> ();")
                     .CloseBrace()
                     ;
 
-                methodsBlock
-                    .BlankLine()
-                    .SummaryOpen()
-                    .Summary($"Create new blank {propertyName}")
-                    .SummaryClose()
-                    .AppendCode($"public {brClass} Create()")
-                    .OpenBrace()
-                    .AppendCode($"if (this.Item != null)")
-                    .AppendCode($"    throw new Exception(\"Item already has a value\");")
-                    .AppendCode($"{brClass} retVal = new {brClass}(this.doc);")
-                    .AppendCode($"this.item = retVal;")
-                    .AppendCode($"return retVal;")
-                    .CloseBrace()
-                    .AppendCode($"public void Read(List<{brClass}> items)")
-                    .OpenBrace()
-                    .AppendCode($"if (this.Item != null)")
-                    .AppendCode($"    throw new Exception(\"Item already has a value\");")
-                    .AppendCode($"if (items.Count == 0)")
-                    .AppendCode($"    return;")
-                    .AppendCode($"if (items.Count == 1)")
-                    .OpenBrace()
-                    .AppendCode($"this.item = items[0];")
-                    .CloseBrace()
-                    .AppendCode($"throw new Exception(\"Unexpected multiple items. Expected single item\");")
-                    .CloseBrace()
-                    ;
-                ;
+                foreach (String target in references)
+                {
+                    String fhirType = FhirType(target);
+                    DefineCreate(fhirType);
+                }
             }
             else
             {
-                fieldsBlock
-                    .BlankLine()
-                    .SummaryOpen()
-                    .Summary("Section items list")
-                    .SummaryClose()
-                    .AppendCode($"List<{brClass}> items = new List<{brClass}>();")
-                    ;
+                //$propertiesBlock
+                //    .Summary("Access propertyName")
+                //    .SummaryClose()
+                //    .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
+                //    ;
 
-                propertiesBlock
-                    .Summary("Access propertyName")
-                    .SummaryClose()
-                    .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
-                    ;
+                //if (references.Length == 1)
+                //{
+                //    if (brClass == "ResourceBase")
+                //        CreateUnknownResourceType(fieldsBlock, "ResourceBase", "DomainResource", propertyName, "items");
+                //    else
+                //        CreateKnownResourceType(fieldsBlock, brClass, propertyName, "items", true);
+                //}
+                //else
+                //{
+                //    foreach (String target in references)
+                //    {
+                //        if (target.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+                //            CreateUnknownResourceType(fieldsBlock, "ResourceBase", FhirType(target), propertyName, "items");
+                //        else
+                //            CreateKnownResourceType(fieldsBlock, BRClass(target), propertyName, "items", false);
+                //    }
+                //}
 
-                if (references.Length == 1)
-                {
-                    if (brClass == "ResourceBase")
-                        CreateUnknownResourceType(fieldsBlock, "ResourceBase", "DomainResource", propertyName, "items");
-                    else
-                        CreateKnownResourceType(fieldsBlock, brClass, propertyName, "items", true);
-                }
-                else
-                {
-                    foreach (String target in references)
-                    {
-                        if (target.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
-                            CreateUnknownResourceType(fieldsBlock, "ResourceBase", FhirType(target), propertyName, "items");
-                        else
-                            CreateKnownResourceType(fieldsBlock, BRClass(target), propertyName, "items", false);
-                    }
-                }
-
-                methodsBlock
-                    .AppendCode($"public void Read(List<{brClass}> items)")
-                    .OpenBrace()
-                    .AppendCode($"if (this.items.Count > 0)")
-                    .AppendCode($"    throw new Exception(\"Item already has a value\");")
-                    .AppendCode($"if (items.Count < Min)")
-                    .AppendCode($"    throw new Exception(\"Minimum cardinality error. Expected at least {{Min}}, got {{items.Count}}\");")
-                    .AppendCode($"if (items.Count > Max)")
-                    .AppendCode($"    throw new Exception(\"Maximum cardinality error. Expected no more than {{Max}}, got {{items.Count}}\");")
-                    .AppendCode($"this.items = items;")
-                    .CloseBrace()
-                    ;
+                //methodsBlock
+                //    .AppendCode($"public void Read(List<{brClass}> items)")
+                //    .OpenBrace()
+                //    .AppendCode($"if (this.items.Count > 0)")
+                //    .AppendCode($"    throw new Exception(\"Item already has a value\");")
+                //    .AppendCode($"if (items.Count < Min)")
+                //    .AppendCode($"    throw new Exception(\"Minimum cardinality error. Expected at least {{Min}}, got {{items.Count}}\");")
+                //    .AppendCode($"if (items.Count > Max)")
+                //    .AppendCode($"    throw new Exception(\"Maximum cardinality error. Expected no more than {{Max}}, got {{items.Count}}\");")
+                //    .AppendCode($"this.items = items;")
+                //    .CloseBrace()
+                //    ;
             }
             return className;
         }
@@ -321,7 +256,7 @@ namespace FireFragger
                     DefineSectionLocalClass(sectionSlice, code, max, min, title, propertyName, references, brClass);
 
                 this.ClassFields
-                    .AppendCode($"{sectionClassName} {propertyName} {{ get ; }}")
+                    .AppendCode($"public {sectionClassName} {propertyName} {{ get ; protected set; }}")
                     ;
                 this.ClassConstructor
                     .AppendCode($"this.{propertyName} = new {sectionClassName}(doc);")
@@ -332,18 +267,22 @@ namespace FireFragger
                     ;
 
                 //this.ClassWriteCode
-                //    .AppendCode($"WriteSection<{brClass}>(\"{title}\", {sectionCodeName}, {min}, {max}, this.{fieldName});")
+                //    .AppendCode($"WriteSection<{brClass}>(\"{title}\",")
+                //    .AppendCode($"    this.{propertyName}.SectionCode,")
+                //    .AppendCode($"    this.{propertyName}.Min,")
+                //    .AppendCode($"    this.{propertyName}.Max);")
+                //    .AppendCode($"    this.{fieldName});")
                 //    ;
 
-                this.ClassReadCode
-                    .OpenBrace()
-                    .AppendCode($"var items = ReadSection<{brClass}>(this.{propertyName}.SectionTitle,")
-                    .AppendCode($"    this.{propertyName}.SectionCode,")
-                    .AppendCode($"    this.{propertyName}.Min,")
-                    .AppendCode($"    this.{propertyName}.Max);")
-                    .AppendCode($"this.{propertyName}.Read(items);")
-                    .CloseBrace()
-                    ;
+                //$this.ClassReadCode
+                //    .OpenBrace()
+                //    .AppendCode($"var items = ReadSection<{brClass}>(this.{propertyName}.SectionTitle,")
+                //    .AppendCode($"    this.{propertyName}.SectionCode,")
+                //    .AppendCode($"    this.{propertyName}.Min,")
+                //    .AppendCode($"    this.{propertyName}.Max);")
+                //    .AppendCode($"this.{propertyName}.Read(items);")
+                //    .CloseBrace()
+                //    ;
             }
         }
 

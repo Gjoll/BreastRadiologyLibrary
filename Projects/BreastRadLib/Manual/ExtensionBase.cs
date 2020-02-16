@@ -19,12 +19,18 @@ namespace BreastRadLib
             set => this.Resource.ElementId = value;
         }
 
-        public ExtensionBase(BreastRadiologyDocument doc, Extension resource) : base(doc, resource)
+        public ExtensionBase() : base()
         {
         }
 
-        public ExtensionBase(BreastRadiologyDocument doc) : base(doc, new Extension())
+        public ExtensionBase(BreastRadiologyDocument doc, Extension resource) : base()
         {
+            this.Create(doc, resource);
+        }
+
+        public ExtensionBase(BreastRadiologyDocument doc) : base()
+        {
+            this.Create(doc, new Extension());
         }
     }
 }

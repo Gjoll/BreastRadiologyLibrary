@@ -81,9 +81,9 @@ namespace FireFragger
                         default:
                             break;
                     }
-                    //$classComponentFields?.AppendCode($"public ComponentList<{valueXType.Code}> {fieldName} {{get;}}");
+                    //$classComponentFields?.AppendCode($"public ComponentList<{valueXType.Code}> {fieldName} {{ get; protected set; }}");
                     //if (level == 0)
-                    //    interfaceComponentFields.AppendCode($"ComponentList<{valueXType.Code}> {fieldName} {{get;}}");
+                    //    interfaceComponentFields.AppendCode($"ComponentList<{valueXType.Code}> {fieldName} {{ get; protected set; }}");
 
                     Int32 min = 0;
                     if (slice.ElementDefinition.Min.HasValue)
@@ -157,9 +157,9 @@ namespace FireFragger
                 String refInterfaceName = CSBuilder.InterfaceName(refFrag);
                 String fieldName = CSBuilder.PropertyName(slice.Name);
 
-                classHasMemberFields?.AppendCode($"public MemberList<{refInterfaceName}> {fieldName} {{get;}}");
+                classHasMemberFields?.AppendCode($"public MemberList<{refInterfaceName}> {fieldName} {{ get; protected set; }}");
                 if (level == 0)
-                    interfaceHasMemberFields.AppendCode($"MemberList<{refInterfaceName}> {fieldName} {{get;}}");
+                    interfaceHasMemberFields.AppendCode($"MemberList<{refInterfaceName}> {fieldName} {{ get; }}");
 
                 Int32 min = 0;
                 if (slice.ElementDefinition.Min.HasValue)

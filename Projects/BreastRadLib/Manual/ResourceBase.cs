@@ -23,7 +23,12 @@ namespace BreastRadLib
             set => this.domainResource.Id = value;
         }
 
-        public ResourceBase(BreastRadiologyDocument doc, DomainResource resource) : base(doc, resource)
+        public ResourceBase(BreastRadiologyDocument doc, DomainResource resource) : base()
+        {
+            this.Create(doc, resource);
+        }
+
+        public ResourceBase() : base()
         {
         }
 

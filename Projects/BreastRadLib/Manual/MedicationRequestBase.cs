@@ -15,12 +15,18 @@ namespace BreastRadLib
 
         List<IMemberList> hasMemberLists = new List<IMemberList>();
 
-        public MedicationRequestBase(BreastRadiologyDocument doc, MedicationRequest resource) : base(doc, resource)
+        public MedicationRequestBase() : base()
         {
         }
 
-        public MedicationRequestBase(BreastRadiologyDocument doc) : base(doc, new MedicationRequest())
+        public MedicationRequestBase(BreastRadiologyDocument doc, MedicationRequest resource) : base()
         {
+            this.Create(doc, resource);
+        }
+
+        public MedicationRequestBase(BreastRadiologyDocument doc) : base()
+        {
+            this.Create(doc, new MedicationRequest());
         }
 
         protected MemberList<T> CreateHasMemberList<T>(Int32 min, Int32 max)

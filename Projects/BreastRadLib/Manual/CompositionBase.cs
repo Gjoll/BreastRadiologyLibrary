@@ -12,14 +12,113 @@ namespace BreastRadLib
 
     public class CompositionBase : ResourceBase, ICompositionBase
     {
+        /// <summary>
+        /// Base class for all section accessors
+        /// </summary>
+        public class SectionBase<BaseType>
+                where BaseType : ResourceBase, new()
+        {
+            // Definitions
+
+            // Fields
+            /// <summary>
+            /// Parent document
+            /// </summary>
+            protected BreastRadiologyDocument doc;
+
+            /// <summary>
+            /// Section item list
+            /// </summary>
+            protected List<BaseType> items = new List<BaseType>();
+
+            // Properties
+            /// <summary>
+            /// Access Min cardinality
+            /// </summary>
+            public Int32 Min { get; protected set; }
+
+            /// <summary>
+            /// Access Max cardinality
+            /// </summary>
+            public Int32 Max { get; protected set; }
+
+            /// <summary>
+            /// Section Title
+            /// </summary>
+            public String Title { get; protected set; }
+
+            /// <summary>
+            /// Section coding
+            /// </summary>
+            public Coding Code { get; protected set; }
+
+            protected SectionBase()
+            {
+            }
+
+            protected void Create(BreastRadiologyDocument doc,
+                String title,
+                Int32 min,
+                Int32 max,
+                Coding code)
+            {
+                this.Title = title;
+                this.Min = min;
+                this.Max = max;
+                this.Code = code;
+            }
+
+            /// <summary>
+            /// Get single item or null.
+            /// </summary>
+            /// <returns></returns>
+            protected T GetSingleItem<T>()
+                where T : BaseType
+            {
+                return (T) this.items.FirstOrDefault();
+            }
+
+            /// <summary>
+            /// Set single item
+            /// </summary>
+            /// <param name="item"></param>
+            protected T CreateSingleItem<T>(T item)
+                where T : Resource
+            {
+                if (this.items.Count > 0)
+                    throw new Exception("Item already has a value");
+                BaseType itemContainer = new BaseType();
+                this.items.Add(itemContainer);
+                return item;
+            }
+
+            public void Read<T>(List<BaseType> items)
+            {
+                if (this.items.Count > 0)
+                    throw new Exception("Items already set");
+                if (items.Count < this.Min)
+                    throw new Exception($"Items count {items.Count} is less than required min {this.Min}");
+                if (items.Count < this.Max)
+                    throw new Exception($"Items count {items.Count} is greater than required max {this.Min}");
+                this.items.AddRange(items);
+            }                                                                                                                                     // CSDefineComposition.cs:163
+
+        }
+
         public Composition Resource => (Composition)this.resource;
 
-        public CompositionBase(BreastRadiologyDocument doc, Composition resource) : base(doc, resource)
+        public CompositionBase() : base()
         {
         }
 
-        public CompositionBase(BreastRadiologyDocument doc) : base(doc, new Composition())
+        public CompositionBase(BreastRadiologyDocument doc, Composition resource) : base()
         {
+            this.Create(doc, resource);
+        }
+
+        public CompositionBase(BreastRadiologyDocument doc) : base()
+        {
+            this.Create(doc, new Composition());
         }
 
         protected void ClearSection()
