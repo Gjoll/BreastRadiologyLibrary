@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
-
+using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
@@ -29,8 +29,18 @@ namespace BreastRadLib
 		/// Parametersize constructur.
 		/// User must not call Create().
 		/// </summary>
-		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource) : base()
+		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource)
 		{
+			this.Create(doc, resource);
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public BreastRadReport(BreastRadiologyDocument doc)
+		{
+		this.Create(doc, new DiagnosticReport());
 		}
 
 		/// <summary>
@@ -43,10 +53,6 @@ namespace BreastRadLib
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:182
 			//- Constructor
-		}
-
-		public BreastRadReport(BreastRadiologyDocument doc) : this(doc, new DiagnosticReport())
-		{
 		}
 
 		public override void Write()

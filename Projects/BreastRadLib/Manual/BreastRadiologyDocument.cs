@@ -52,7 +52,7 @@ namespace BreastRadLib
         {
             BreastRadiologyDocument retVal = new BreastRadiologyDocument();
             retVal.ResourceBag = new ResourceBag();
-            retVal.Index = new BreastRadComposition(retVal, new Composition());
+            retVal.Index = new BreastRadComposition(retVal);
             retVal.ResourceBag.AddResource(retVal.Index.Resource);
             return retVal;
         }

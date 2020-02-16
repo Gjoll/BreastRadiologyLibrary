@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
-
+using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
@@ -31,8 +31,18 @@ namespace BreastRadLib
 		/// Parametersize constructur.
 		/// User must not call Create().
 		/// </summary>
-		public %ClassName%(BreastRadiologyDocument doc, %FhirBase% resource) : base()
+		public %ClassName%(BreastRadiologyDocument doc, %FhirBase% resource)
 		{
+			this.Create(doc, resource);
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public %ClassName%(BreastRadiologyDocument doc)
+		{
+		this.Create(doc, new %FhirBase%());
 		}
 
 		/// <summary>
@@ -43,10 +53,6 @@ namespace BreastRadLib
 			base.Create(doc, resource);
 			//+ Constructor
 			//- Constructor
-		}
-
-		public %ClassName%(BreastRadiologyDocument doc) : this(doc, new %FhirBase%())
-		{
 		}
 
 		public override void Write()

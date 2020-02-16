@@ -26,7 +26,11 @@ namespace BreastRadLib
             /// <summary>
             /// For internal use only. Access all items.
             /// </summary>
-            public IEnumerable<BaseType> RawItems => this.items;
+            internal List<BaseType> RawItems
+            {
+                get => this.items;
+                set => this.items = value;
+            }
 
             /// <summary>
             /// Parent document
@@ -69,6 +73,7 @@ namespace BreastRadLib
                 Int32 max,
                 Coding code)
             {
+                this.doc = doc;
                 this.Title = title;
                 this.Min = min;
                 this.Max = max;
@@ -125,11 +130,6 @@ namespace BreastRadLib
 
         public CompositionBase() : base()
         {
-        }
-
-        public CompositionBase(BreastRadiologyDocument doc, Composition resource) : base()
-        {
-            this.Create(doc, resource);
         }
 
         public CompositionBase(BreastRadiologyDocument doc) : base()
@@ -193,6 +193,7 @@ namespace BreastRadLib
                 throw new Exception($"Error reading Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {items.Count}");
             if ((section.Max > 0) && (items.Count > section.Max))
                 throw new Exception($"Error reading Composition.section '{section.Title}'. Max cardinality sb {section.Max}, is {items.Count}");
+            section.RawItems = items;
         }
 
         protected void WriteSection<T>(SectionBase<T> section)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
-
+using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
@@ -42,8 +42,18 @@ namespace BreastRadLib
 		/// Parametersize constructur.
 		/// User must not call Create().
 		/// </summary>
-		public MGFinding(BreastRadiologyDocument doc, Observation resource) : base()
+		public MGFinding(BreastRadiologyDocument doc, Observation resource)
 		{
+			this.Create(doc, resource);
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public MGFinding(BreastRadiologyDocument doc)
+		{
+		this.Create(doc, new Observation());
 		}
 
 		/// <summary>
@@ -69,10 +79,6 @@ namespace BreastRadLib
 			this.MGAbnormalityFatNecrosis = CreateHasMemberList<IMGAbnormalityFatNecrosis>(0, -1);                                                   // CSDefineObservation.cs:174
 			this.MGBreastDensity = CreateHasMemberList<IMGBreastDensity>(1, 1);                                                                      // CSDefineObservation.cs:174
 			//- Constructor
-		}
-
-		public MGFinding(BreastRadiologyDocument doc) : this(doc, new Observation())
-		{
 		}
 
 		public override void Write()

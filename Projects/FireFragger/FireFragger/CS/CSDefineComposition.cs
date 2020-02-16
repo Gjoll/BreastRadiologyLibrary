@@ -109,8 +109,23 @@ namespace FireFragger
                         .SummaryOpen()
                         .Summary($"Create new blank {propertyName} of type {fhirType}")
                         .SummaryClose()
-                        .AppendCode($"public {brClass} Create{targetName}({fhirType} fhirItem)")
-                        .OpenBrace()
+                        ;
+                    if (fhirType == "Resource")
+                    {
+                        methodsBlock
+                            .AppendCode($"public {propertyType} Create{targetName}({fhirType} fhirItem)")
+                            .OpenBrace()
+                            ;
+                    }
+                    else
+                    {
+                        methodsBlock
+                            .AppendCode($"public {propertyType} Create{targetName}({fhirType} fhirItem = null)")
+                            .OpenBrace()
+                            .AppendCode($"if (fhirItem == null) fhirItem = new {fhirType}();")
+                            ;
+                    }
+                    methodsBlock
                         .AppendCode($"{propertyType} brItem = new {propertyType}();")
                         .AppendCode($"brItem.Create(this.doc, fhirItem);")
                         .AppendCode($"this.AppendItem(brItem);")
@@ -126,6 +141,16 @@ namespace FireFragger
                     .Summary("Access propertyName")
                     .SummaryClose()
                     .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary("Access first item in list or defrault if no first item")
+                    .SummaryClose()
+                    .AppendCode($"public {brClass} First() => this.items.First();")
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary("Access first item in list")
+                    .SummaryClose()
+                    .AppendCode($"public {brClass} FirstOrDefault() => this.items.FirstOrDefault();")
                     ;
 
                 foreach (String target in references)
@@ -138,8 +163,24 @@ namespace FireFragger
                         .SummaryOpen()
                         .Summary($"Create new blank {propertyName} of type {fhirType} and add to end of list")
                         .SummaryClose()
-                        .AppendCode($"public {brClass} Add{targetName}({fhirType} fhirItem)")
-                        .OpenBrace()
+                        ;
+
+                    if (fhirType == "Resource")
+                    {
+                        methodsBlock
+                            .AppendCode($"public {propertyType} Add{targetName}({fhirType} fhirItem)")
+                            .OpenBrace()
+                            ;
+                    }
+                    else
+                    {
+                        methodsBlock
+                            .AppendCode($"public {propertyType} Add{targetName}({fhirType} fhirItem = null)")
+                            .OpenBrace()
+                            .AppendCode($"if (fhirItem == null) fhirItem = new {fhirType}();")
+                            ;
+                    }
+                    methodsBlock
                         .AppendCode($"{propertyType} brItem = new {propertyType}();")
                         .AppendCode($"brItem.Create(this.doc, fhirItem);")
                         .AppendCode($"this.AppendItem(brItem);")

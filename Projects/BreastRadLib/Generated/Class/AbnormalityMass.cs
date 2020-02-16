@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
-
+using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
@@ -32,8 +32,18 @@ namespace BreastRadLib
 		/// Parametersize constructur.
 		/// User must not call Create().
 		/// </summary>
-		public AbnormalityMass(BreastRadiologyDocument doc, Observation resource) : base()
+		public AbnormalityMass(BreastRadiologyDocument doc, Observation resource)
 		{
+			this.Create(doc, resource);
+		}
+
+		/// <summary>
+		/// Parametersize constructur.
+		/// User must not call Create().
+		/// </summary>
+		public AbnormalityMass(BreastRadiologyDocument doc)
+		{
+		this.Create(doc, new Observation());
 		}
 
 		/// <summary>
@@ -49,10 +59,6 @@ namespace BreastRadLib
 			this.AssociatedFeatures = CreateHasMemberList<IAssociatedFeatures>(0, 1);                                                                // CSDefineObservation.cs:174
 			this.ConsistentWith = CreateHasMemberList<IConsistentWith>(0, -1);                                                                       // CSDefineObservation.cs:174
 			//- Constructor
-		}
-
-		public AbnormalityMass(BreastRadiologyDocument doc) : this(doc, new Observation())
-		{
 		}
 
 		public override void Write()
