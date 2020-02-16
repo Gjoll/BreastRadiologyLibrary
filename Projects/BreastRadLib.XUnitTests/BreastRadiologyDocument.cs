@@ -26,27 +26,27 @@ namespace BreastRadiology.XUnitTests
         public void CreateBreastRadiologyDocument()
         {
             Assert.IsTrue(false);
-            //Bundle b;
-            //{
-            //    BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
-            //    Debug.Assert(doc.Index != null);
-            //    {
-            //        BreastRadReport report = doc.Index.CreateReport();
-            //        Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
-            //        Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
-            //        Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
-            //        Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
-            //    }
-            //    {
-            //        ServiceRecommendation rec = doc.Index.AppendRecommendations();
-            //        Debug.Assert(rec.Resource.Meta.Profile.Count() == 1);
-            //        Debug.Assert(rec.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");
-            //        rec.SetCode(RecommendationsVS.Code_3DSpotCC);
-            //        Debug.Assert(rec.Resource.Code.Coding[0].System == RecommendationsVS.Code_3DSpotCC.Value.System);
-            //        Debug.Assert(rec.Resource.Code.Coding[0].Code == RecommendationsVS.Code_3DSpotCC.Value.Code);
-            //    }
-            //    b = doc.Write();
-            //}
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+                Debug.Assert(doc.Index != null);
+                //{
+                //    BreastRadReport report = doc.Index.CreateReport();
+                //    Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
+                //    Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
+                //    Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
+                //    Debug.Assert(report.Resource.Code.Coding[0].Code == "10193-1");
+                //}
+                //{
+                //    ServiceRecommendation rec = doc.Index.Recommendations.AddServiceRecommendation();
+                //    Debug.Assert(rec.Resource.Meta.Profile.Count() == 1);
+                //    Debug.Assert(rec.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");
+                //    rec.SetCode(RecommendationsVS.Code_3DSpotCC);
+                //    Debug.Assert(rec.Resource.Code.Coding[0].System == RecommendationsVS.Code_3DSpotCC.Value.System);
+                //    Debug.Assert(rec.Resource.Code.Coding[0].Code == RecommendationsVS.Code_3DSpotCC.Value.Code);
+                //}
+                b = doc.Write();
+            }
 
             //{
             //    BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);

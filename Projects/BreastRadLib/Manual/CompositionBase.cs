@@ -89,10 +89,9 @@ namespace BreastRadLib
             /// Append new item to end of items list.
             /// </summary>
             /// <param name="item"></param>
-            protected BaseType AppendItem<T>(T item)
-                where T : Resource
+            protected BaseType AppendItem<T>(T itemContainer)
+                where T : BaseType
             {
-                BaseType itemContainer = new BaseType();
                 this.items.Add(itemContainer);
                 return itemContainer;
             }
@@ -101,12 +100,12 @@ namespace BreastRadLib
             /// Set single item
             /// </summary>
             /// <param name="item"></param>
-            protected BaseType CreateSingleItem<T>(T item)
-                where T : Resource
+            protected BaseType CreateSingleItem<T>(T itemContainer)
+                where T : BaseType
             {
                 if (this.items.Count > 0)
                     throw new Exception("Item already has a value");
-                return AppendItem(item);
+                return AppendItem(itemContainer);
             }
 
             public void Read<T>(List<BaseType> items)

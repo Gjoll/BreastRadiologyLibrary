@@ -28,12 +28,17 @@ namespace BreastRadLib
 		    }                                                                                                                                     // CSDefineComposition.cs:99
 		                                                                                                                                          // CSDefineComposition.cs:69
 		    // Methods                                                                                                                            // CSDefineComposition.cs:70
-		                                                                                                                                          // CSDefineComposition.cs:107
+		                                                                                                                                          // CSDefineComposition.cs:108
 		    /// <summary>
 		    /// Create new blank Report of type DiagnosticReport
 		    /// </summary>
-		    public BreastRadReport CreateBreastRadReport(DiagnosticReport item) => CreateSingleItem(item);                                        // CSDefineComposition.cs:111
-		                                                                                                                                          // CSDefineComposition.cs:112
+		    public BreastRadReport CreateBreastRadReport(DiagnosticReport fhirItem)                                                               // CSDefineComposition.cs:112
+		    {                                                                                                                                     // CSDefineComposition.cs:113
+		        BreastRadReport brItem = new BreastRadReport();                                                                                   // CSDefineComposition.cs:114
+		        brItem.Create(this.doc, fhirItem);                                                                                                // CSDefineComposition.cs:115
+		        this.AppendItem(brItem);                                                                                                          // CSDefineComposition.cs:116
+		        return brItem;                                                                                                                    // CSDefineComposition.cs:117
+		    }                                                                                                                                     // CSDefineComposition.cs:118
 		                                                                                                                                          // CSDefineComposition.cs:72
 		    /// <summary>
 		    /// Accessor class constructor
@@ -53,15 +58,20 @@ namespace BreastRadLib
 		    /// <summary>
 		    /// Access propertyName
 		    /// </summary>
-		    public IEnumerable<ResourceBase> Items => this.items;                                                                                 // CSDefineComposition.cs:122
+		    public IEnumerable<ResourceBase> Items => this.items;                                                                                 // CSDefineComposition.cs:128
 		                                                                                                                                          // CSDefineComposition.cs:69
 		    // Methods                                                                                                                            // CSDefineComposition.cs:70
-		                                                                                                                                          // CSDefineComposition.cs:130
+		                                                                                                                                          // CSDefineComposition.cs:137
 		    /// <summary>
 		    /// Create new blank Impressions of type ClinicalImpression and add to end of list
 		    /// </summary>
-		    public ResourceBase AddClinicalImpression(ClinicalImpression item) => AppendItem(item);                                               // CSDefineComposition.cs:134
-		                                                                                                                                          // CSDefineComposition.cs:135
+		    public ResourceBase AddClinicalImpression(ClinicalImpression fhirItem)                                                                // CSDefineComposition.cs:141
+		    {                                                                                                                                     // CSDefineComposition.cs:142
+		        ResourceBase brItem = new ResourceBase();                                                                                         // CSDefineComposition.cs:143
+		        brItem.Create(this.doc, fhirItem);                                                                                                // CSDefineComposition.cs:144
+		        this.AppendItem(brItem);                                                                                                          // CSDefineComposition.cs:145
+		        return brItem;                                                                                                                    // CSDefineComposition.cs:146
+		    }                                                                                                                                     // CSDefineComposition.cs:147
 		                                                                                                                                          // CSDefineComposition.cs:72
 		    /// <summary>
 		    /// Accessor class constructor
@@ -81,15 +91,20 @@ namespace BreastRadLib
 		    /// <summary>
 		    /// Access propertyName
 		    /// </summary>
-		    public IEnumerable<ResourceBase> Items => this.items;                                                                                 // CSDefineComposition.cs:122
+		    public IEnumerable<ResourceBase> Items => this.items;                                                                                 // CSDefineComposition.cs:128
 		                                                                                                                                          // CSDefineComposition.cs:69
 		    // Methods                                                                                                                            // CSDefineComposition.cs:70
-		                                                                                                                                          // CSDefineComposition.cs:130
+		                                                                                                                                          // CSDefineComposition.cs:137
 		    /// <summary>
 		    /// Create new blank RelatedResources of type Resource and add to end of list
 		    /// </summary>
-		    public ResourceBase AddResource(Resource item) => AppendItem(item);                                                                   // CSDefineComposition.cs:134
-		                                                                                                                                          // CSDefineComposition.cs:135
+		    public ResourceBase AddResource(Resource fhirItem)                                                                                    // CSDefineComposition.cs:141
+		    {                                                                                                                                     // CSDefineComposition.cs:142
+		        ResourceBase brItem = new ResourceBase();                                                                                         // CSDefineComposition.cs:143
+		        brItem.Create(this.doc, fhirItem);                                                                                                // CSDefineComposition.cs:144
+		        this.AppendItem(brItem);                                                                                                          // CSDefineComposition.cs:145
+		        return brItem;                                                                                                                    // CSDefineComposition.cs:146
+		    }                                                                                                                                     // CSDefineComposition.cs:147
 		                                                                                                                                          // CSDefineComposition.cs:72
 		    /// <summary>
 		    /// Accessor class constructor
@@ -109,27 +124,42 @@ namespace BreastRadLib
 		    /// <summary>
 		    /// Access propertyName
 		    /// </summary>
-		    public IEnumerable<ResourceBase> Items => this.items;                                                                                 // CSDefineComposition.cs:122
+		    public IEnumerable<ResourceBase> Items => this.items;                                                                                 // CSDefineComposition.cs:128
 		                                                                                                                                          // CSDefineComposition.cs:69
 		    // Methods                                                                                                                            // CSDefineComposition.cs:70
-		                                                                                                                                          // CSDefineComposition.cs:130
+		                                                                                                                                          // CSDefineComposition.cs:137
 		    /// <summary>
 		    /// Create new blank Recommendations of type MedicationRequest and add to end of list
 		    /// </summary>
-		    public ResourceBase AddMedicationRequest(MedicationRequest item) => AppendItem(item);                                                 // CSDefineComposition.cs:134
-		                                                                                                                                          // CSDefineComposition.cs:135
-		                                                                                                                                          // CSDefineComposition.cs:130
+		    public ResourceBase AddMedicationRequest(MedicationRequest fhirItem)                                                                  // CSDefineComposition.cs:141
+		    {                                                                                                                                     // CSDefineComposition.cs:142
+		        ResourceBase brItem = new ResourceBase();                                                                                         // CSDefineComposition.cs:143
+		        brItem.Create(this.doc, fhirItem);                                                                                                // CSDefineComposition.cs:144
+		        this.AppendItem(brItem);                                                                                                          // CSDefineComposition.cs:145
+		        return brItem;                                                                                                                    // CSDefineComposition.cs:146
+		    }                                                                                                                                     // CSDefineComposition.cs:147
+		                                                                                                                                          // CSDefineComposition.cs:137
 		    /// <summary>
 		    /// Create new blank Recommendations of type ServiceRequest and add to end of list
 		    /// </summary>
-		    public ResourceBase AddServiceRequest(ServiceRequest item) => AppendItem(item);                                                       // CSDefineComposition.cs:134
-		                                                                                                                                          // CSDefineComposition.cs:135
-		                                                                                                                                          // CSDefineComposition.cs:130
+		    public ResourceBase AddServiceRequest(ServiceRequest fhirItem)                                                                        // CSDefineComposition.cs:141
+		    {                                                                                                                                     // CSDefineComposition.cs:142
+		        ResourceBase brItem = new ResourceBase();                                                                                         // CSDefineComposition.cs:143
+		        brItem.Create(this.doc, fhirItem);                                                                                                // CSDefineComposition.cs:144
+		        this.AppendItem(brItem);                                                                                                          // CSDefineComposition.cs:145
+		        return brItem;                                                                                                                    // CSDefineComposition.cs:146
+		    }                                                                                                                                     // CSDefineComposition.cs:147
+		                                                                                                                                          // CSDefineComposition.cs:137
 		    /// <summary>
 		    /// Create new blank Recommendations of type ServiceRequest and add to end of list
 		    /// </summary>
-		    public ResourceBase AddServiceRecommendation(ServiceRequest item) => AppendItem(item);                                                // CSDefineComposition.cs:134
-		                                                                                                                                          // CSDefineComposition.cs:135
+		    public ResourceBase AddServiceRecommendation(ServiceRequest fhirItem)                                                                 // CSDefineComposition.cs:141
+		    {                                                                                                                                     // CSDefineComposition.cs:142
+		        ServiceRecommendation brItem = new ServiceRecommendation();                                                                       // CSDefineComposition.cs:143
+		        brItem.Create(this.doc, fhirItem);                                                                                                // CSDefineComposition.cs:144
+		        this.AppendItem(brItem);                                                                                                          // CSDefineComposition.cs:145
+		        return brItem;                                                                                                                    // CSDefineComposition.cs:146
+		    }                                                                                                                                     // CSDefineComposition.cs:147
 		                                                                                                                                          // CSDefineComposition.cs:72
 		    /// <summary>
 		    /// Accessor class constructor
@@ -142,10 +172,10 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		public Report_Accessor Report { get ; protected set; }                                                                                    // CSDefineComposition.cs:196
-		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // CSDefineComposition.cs:196
-		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // CSDefineComposition.cs:196
-		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // CSDefineComposition.cs:196
+		public Report_Accessor Report { get ; protected set; }                                                                                    // CSDefineComposition.cs:208
+		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // CSDefineComposition.cs:208
+		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // CSDefineComposition.cs:208
+		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // CSDefineComposition.cs:208
 		//- Fields
 
 		/// <summary>
@@ -171,10 +201,10 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
-			this.Report = new Report_Accessor(doc);                                                                                                  // CSDefineComposition.cs:199
-			this.Impressions = new Impressions_Accessor(doc);                                                                                        // CSDefineComposition.cs:199
-			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // CSDefineComposition.cs:199
-			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // CSDefineComposition.cs:199
+			this.Report = new Report_Accessor(doc);                                                                                                  // CSDefineComposition.cs:211
+			this.Impressions = new Impressions_Accessor(doc);                                                                                        // CSDefineComposition.cs:211
+			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // CSDefineComposition.cs:211
+			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // CSDefineComposition.cs:211
 			//- Constructor
 		}
 
@@ -185,21 +215,21 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		ClearSection();                                                                                                                           // CSDefineComposition.cs:156
-		this.WriteSection(this.Report);                                                                                                           // CSDefineComposition.cs:207
-		this.WriteSection(this.Impressions);                                                                                                      // CSDefineComposition.cs:207
-		this.WriteSection(this.RelatedResources);                                                                                                 // CSDefineComposition.cs:207
-		this.WriteSection(this.Recommendations);                                                                                                  // CSDefineComposition.cs:207
+		ClearSection();                                                                                                                           // CSDefineComposition.cs:168
+		this.WriteSection(this.Report);                                                                                                           // CSDefineComposition.cs:219
+		this.WriteSection(this.Impressions);                                                                                                      // CSDefineComposition.cs:219
+		this.WriteSection(this.RelatedResources);                                                                                                 // CSDefineComposition.cs:219
+		this.WriteSection(this.Recommendations);                                                                                                  // CSDefineComposition.cs:219
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
 		//+ ReadCode
-		this.ReadSection(this.Report);                                                                                                            // CSDefineComposition.cs:211
-		this.ReadSection(this.Impressions);                                                                                                       // CSDefineComposition.cs:211
-		this.ReadSection(this.RelatedResources);                                                                                                  // CSDefineComposition.cs:211
-		this.ReadSection(this.Recommendations);                                                                                                   // CSDefineComposition.cs:211
+		this.ReadSection(this.Report);                                                                                                            // CSDefineComposition.cs:223
+		this.ReadSection(this.Impressions);                                                                                                       // CSDefineComposition.cs:223
+		this.ReadSection(this.RelatedResources);                                                                                                  // CSDefineComposition.cs:223
+		this.ReadSection(this.Recommendations);                                                                                                   // CSDefineComposition.cs:223
 		//- ReadCode
 		}
 

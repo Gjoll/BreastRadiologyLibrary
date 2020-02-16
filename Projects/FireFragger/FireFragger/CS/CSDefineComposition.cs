@@ -102,14 +102,20 @@ namespace FireFragger
                 foreach (String target in references)
                 {
                     String targetName = target.LastUriPart();
-                    String fhirType = FhirType(target);
+                    String fhirType = this.FhirType(target);
+                    String propertyType = this.BRClass(target);
                     methodsBlock
                         .BlankLine()
                         .SummaryOpen()
                         .Summary($"Create new blank {propertyName} of type {fhirType}")
                         .SummaryClose()
-                        .AppendCode($"public {brClass} Create{targetName}({fhirType} item) => CreateSingleItem(item);")
-                        .BlankLine()
+                        .AppendCode($"public {brClass} Create{targetName}({fhirType} fhirItem)")
+                        .OpenBrace()
+                        .AppendCode($"{propertyType} brItem = new {propertyType}();")
+                        .AppendCode($"brItem.Create(this.doc, fhirItem);")
+                        .AppendCode($"this.AppendItem(brItem);")
+                        .AppendCode($"return brItem;")
+                        .CloseBrace()
                         ;
                 }
             }
@@ -125,14 +131,20 @@ namespace FireFragger
                 foreach (String target in references)
                 {
                     String targetName = target.LastUriPart();
-                    String fhirType = FhirType(target);
+                    String fhirType = this.FhirType(target);
+                    String propertyType = this.BRClass(target);
                     methodsBlock
                         .BlankLine()
                         .SummaryOpen()
                         .Summary($"Create new blank {propertyName} of type {fhirType} and add to end of list")
                         .SummaryClose()
-                        .AppendCode($"public {brClass} Add{targetName}({fhirType} item) => AppendItem(item);")
-                        .BlankLine()
+                        .AppendCode($"public {brClass} Add{targetName}({fhirType} fhirItem)")
+                        .OpenBrace()
+                        .AppendCode($"{propertyType} brItem = new {propertyType}();")
+                        .AppendCode($"brItem.Create(this.doc, fhirItem);")
+                        .AppendCode($"this.AppendItem(brItem);")
+                        .AppendCode($"return brItem;")
+                        .CloseBrace();
                         ;
                 }
             }
