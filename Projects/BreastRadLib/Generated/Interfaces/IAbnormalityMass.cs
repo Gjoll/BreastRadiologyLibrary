@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IAbnormalityMass : IObservationBase, IObservationLeafFragment, ITumorSatelliteFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedSizeFragment, IObservedDistributionFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
+		AbnormalityMass.MassType_Accessor MassType { get ; }                                                                                      // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

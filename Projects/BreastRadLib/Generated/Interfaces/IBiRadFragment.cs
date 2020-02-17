@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IBiRadFragment : IObservationBase
 	{
 		//+ Fields
+		BiRadFragment.BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                        // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

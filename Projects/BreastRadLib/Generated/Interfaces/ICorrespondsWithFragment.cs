@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface ICorrespondsWithFragment : IObservationBase
 	{
 		//+ Fields
+		CorrespondsWithFragment.CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

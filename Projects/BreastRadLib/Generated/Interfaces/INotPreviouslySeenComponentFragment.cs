@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface INotPreviouslySeenComponentFragment : IObservationBase, IBreastBodyLocationRequiredFragment
 	{
 		//+ Fields
+		NotPreviouslySeenComponentFragment.NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                 // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IObservedCountFragment : IObservationBase
 	{
 		//+ Fields
+		ObservedCountFragment.ObsCount_Accessor ObsCount { get ; }                                                                                // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IAbnormalityDuct : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
+		AbnormalityDuct.DuctType_Accessor DuctType { get ; }                                                                                      // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

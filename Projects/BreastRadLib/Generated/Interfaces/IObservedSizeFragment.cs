@@ -11,7 +11,13 @@ namespace BreastRadLib
 {
 	public interface IObservedSizeFragment : IObservationBase
 	{
+		public class ObsSize_Accessor
+		{
+
+		};
+
 		//+ Fields
+		ObsSize_Accessor ObsSize { get ; }                                                                                   // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

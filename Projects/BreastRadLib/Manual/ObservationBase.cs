@@ -9,11 +9,42 @@ namespace BreastRadLib
     {
     }
 
-    public class ObservationBase: ResourceBase, IObservationBase
+    public class ObservationBase : ResourceBase, IObservationBase
     {
-        public Observation Resource => (Observation) this.resource;
+        /// <summary>
+        /// Base class for all component accessors
+        /// </summary>
+        public class ComponentBase<BaseType> : MemberList<BaseType>
+                where BaseType : Base, new()
+        {
+            /// <summary>
+            /// Section coding
+            /// </summary>
+            public Coding Code { get; protected set; }
 
-        List<IMemberList> hasMemberLists = new List<IMemberList>();
+            protected ComponentBase()
+            {
+            }
+
+            protected void Create(BreastRadiologyDocument doc,
+                Int32 min,
+                Int32 max,
+                Coding code)
+            {
+                base.Create(doc, min, max);
+                this.Code = code;
+            }
+
+            protected void SetFirst<T>(T value)
+                where T: Base
+            {
+                this.items.Clear();
+                this.items.Add(value);
+            }
+        }
+
+        public Observation Resource => (Observation)this.resource;
+
 
         public ObservationBase() : base()
         {
@@ -29,30 +60,40 @@ namespace BreastRadLib
             this.Create(doc, new Observation());
         }
 
-        protected MemberList<T> CreateHasMemberList<T>(Int32 min, Int32 max)
-            where T : IResourceBase
+        protected void ClearComponents()
         {
-            MemberList<T> retVal = new MemberList<T>(min, max);
-            hasMemberLists.Add(retVal);
-            return retVal;
+            this.Resource.Component.Clear();
         }
 
-        public void LoadHasMembers(ResourceBag resourceBag)
+        protected void WriteComponents<BaseType>(ComponentBase<BaseType> componentList )
+             where BaseType : ResourceBase, new()
         {
-            //foreach (ResourceReference hasMember in resource.HasMember)
-            //{
-            //    //if (resourceBag.TryGetEntry(hasMember.Url, out Bundle.EntryComponent entry) == false)
-            //    //    throw new Exception("Reference '{hasMember.Url}' not found in bag");
-            //}
         }
 
-        public void Unload(ResourceBag resourceBag)
-        {
-            UnloadHasMembers(resourceBag);
-        }
+        //protected MemberList<T> CreateHasMemberList<T>(Int32 min, Int32 max)
+        //    where T : IResourceBase
+        //{
+        //    MemberList<T> retVal = new MemberList<T>(min, max);
+        //    hasMemberLists.Add(retVal);
+        //    return retVal;
+        //}
 
-        public void UnloadHasMembers(ResourceBag resourceBag)
-        {
-        }
+        //public void LoadHasMembers(ResourceBag resourceBag)
+        //{
+        //    foreach (ResourceReference hasMember in resource.HasMember)
+        //    {
+        //        //if (resourceBag.TryGetEntry(hasMember.Url, out Bundle.EntryComponent entry) == false)
+        //        //    throw new Exception("Reference '{hasMember.Url}' not found in bag");
+        //    }
+        //}
+
+        //public void Unload(ResourceBag resourceBag)
+        //{
+        //    UnloadHasMembers(resourceBag);
+        //}
+
+        //public void UnloadHasMembers(ResourceBag resourceBag)
+        //{
+        //}
     }
 }

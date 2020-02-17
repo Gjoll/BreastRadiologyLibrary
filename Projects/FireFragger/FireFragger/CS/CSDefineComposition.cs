@@ -22,23 +22,6 @@ namespace FireFragger
         {
         }
 
-        String FhirType(String url)
-        {
-            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
-                return url.LastUriPart();
-            if (this.csBuilder.SDFragments.TryGetValue(url, out SDInfo fragInfo) == false)
-                throw new Exception($"{url.LastUriPart()} not found");
-            return fragInfo.BaseDefinitionName;
-        }
-
-        String BRClass(String url)
-        {
-            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
-                return "ResourceBase";
-            String reference = url.LastUriPart();
-            return reference;
-        }
-
         String DefineSectionLocalClass(ElementTreeSlice sectionSlice,
             Coding code,
             Int32 max,
@@ -102,7 +85,7 @@ namespace FireFragger
                 foreach (String target in references)
                 {
                     String targetName = target.LastUriPart();
-                    String fhirType = this.FhirType(target);
+                    String fhirType = this.FhirClass(target);
                     String propertyType = this.BRClass(target);
                     methodsBlock
                         .BlankLine()
@@ -156,7 +139,7 @@ namespace FireFragger
                 foreach (String target in references)
                 {
                     String targetName = target.LastUriPart();
-                    String fhirType = this.FhirType(target);
+                    String fhirType = this.FhirClass(target);
                     String propertyType = this.BRClass(target);
                     methodsBlock
                         .BlankLine()
@@ -195,13 +178,6 @@ namespace FireFragger
 
         void DefineSections()
         {
-            Int32 ToMax(String max)
-            {
-                if (max == "*")
-                    return -1;
-                return Int32.Parse(max);
-            }
-
             if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
                 return;
 
@@ -274,9 +250,9 @@ namespace FireFragger
                fcn,
                $"Building {fragBase.StructDef.Url.LastUriPart()}");
 
-            this.ClassFields.Clear();
-            this.ClassMethods.Clear();
-            this.ClassConstructor.Clear();
+            this.ClassFields?.Clear();
+            this.ClassMethods?.Clear();
+            this.ClassConstructor?.Clear();
 
             this.InterfaceFields.Clear();
             this.InterfaceMethods.Clear();

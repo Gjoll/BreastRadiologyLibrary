@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IPreviouslyDemonstratedByFragment : IObservationBase
 	{
 		//+ Fields
+		PreviouslyDemonstratedByFragment.PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; }                                     // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

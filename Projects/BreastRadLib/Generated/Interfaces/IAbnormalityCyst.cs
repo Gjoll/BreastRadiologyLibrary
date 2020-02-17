@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IAbnormalityCyst : IObservationBase, IObservationLeafFragment, ITumorSatelliteFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment, IAssociatedFeaturesHasMemberFragment
 	{
 		//+ Fields
+		AbnormalityCyst.CystType_Accessor CystType { get ; }                                                                                      // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

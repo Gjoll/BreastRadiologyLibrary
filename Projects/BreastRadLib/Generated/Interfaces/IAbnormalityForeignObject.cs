@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IAbnormalityForeignObject : IObservationBase, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IBiRadFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
+		AbnormalityForeignObject.AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                     // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

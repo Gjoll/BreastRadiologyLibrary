@@ -12,6 +12,7 @@ namespace BreastRadLib
 	public interface IAbnormalityFibroadenoma : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment
 	{
 		//+ Fields
+		AbnormalityFibroadenoma.FibroAdenomaType_Accessor FibroAdenomaType { get ; }                                                              // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

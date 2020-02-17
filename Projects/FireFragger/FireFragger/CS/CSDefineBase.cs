@@ -17,15 +17,15 @@ namespace FireFragger
         protected CSBuilder csBuilder;
         protected SDInfo fragBase;
 
-        protected CodeBlockNested ClassFields => fragBase.ClassEditor.Blocks.Find("Fields", false);
-        protected CodeBlockNested ClassLocalClassDefs => fragBase.ClassEditor.Blocks.Find("LocalClassDefs", false);
-        protected CodeBlockNested ClassConstructor => fragBase.ClassEditor.Blocks.Find("Constructor", false);
-        protected CodeBlockNested ClassMethods => fragBase.ClassEditor.Blocks.Find("Methods", false);
-        protected CodeBlockNested ClassWriteCode => fragBase.ClassEditor.Blocks.Find("WriteCode", false);
-        protected CodeBlockNested ClassReadCode => fragBase.ClassEditor.Blocks.Find("ReadCode", false);
+        protected CodeBlockNested ClassFields => fragBase.ClassEditor?.Blocks.Find("Fields", false);
+        protected CodeBlockNested ClassLocalClassDefs => fragBase.ClassEditor?.Blocks.Find("LocalClassDefs", false);
+        protected CodeBlockNested ClassConstructor => fragBase.ClassEditor?.Blocks.Find("Constructor", false);
+        protected CodeBlockNested ClassMethods => fragBase.ClassEditor?.Blocks.Find("Methods", false);
+        protected CodeBlockNested ClassWriteCode => fragBase.ClassEditor?.Blocks.Find("WriteCode", false);
+        protected CodeBlockNested ClassReadCode => fragBase.ClassEditor?.Blocks.Find("ReadCode", false);
 
-        protected CodeBlockNested InterfaceFields => fragBase.InterfaceEditor.Blocks.Find("Fields", false);
-        protected CodeBlockNested InterfaceMethods => fragBase.InterfaceEditor.Blocks.Find("Methods", false);
+        protected CodeBlockNested InterfaceFields => fragBase.InterfaceEditor?.Blocks.Find("Fields", false);
+        protected CodeBlockNested InterfaceMethods => fragBase.InterfaceEditor?.Blocks.Find("Methods", false);
 
         protected delegate void VisitFragment(SDInfo fi, Int32 level);
         protected String FhirBase => this.fragBase.StructDef.BaseDefinition.LastUriPart();
@@ -182,5 +182,30 @@ namespace FireFragger
                 .AppendCode($"SetProfileUrl(\"{profileUrl}\");")
                 ;
         }
+
+        public String FhirClass(String url)
+        {
+            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+                return url.LastUriPart();
+            if (this.csBuilder.SDFragments.TryGetValue(url, out SDInfo fragInfo) == false)
+                throw new Exception($"{url.LastUriPart()} not found");
+            return fragInfo.BaseDefinitionName;
+        }
+
+        protected String BRClass(String url)
+        {
+            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+                return "ResourceBase";
+            String reference = url.LastUriPart();
+            return reference;
+        }
+
+        protected Int32 ToMax(String max)
+        {
+            if (max == "*")
+                return -1;
+            return Int32.Parse(max);
+        }
+
     }
 }

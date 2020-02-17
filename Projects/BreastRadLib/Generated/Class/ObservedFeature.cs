@@ -12,9 +12,37 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, IBreastBodyLocationRequiredFragment, IObservedCountFragment
 	{
 		//+ LocalClassDefs
+		/// <summary>
+		/// Accessor class for 'featureType'
+		/// [Fhir Element 'Observation.component:featureType]'
+		/// </summary>
+		public class FeatureType_Accessor : ComponentBase<CodeableConcept>                                                                        // CSDefineObservation.cs:215
+		{                                                                                                                                         // CSDefineObservation.cs:216
+		    // Properties                                                                                                                         // CSDefineObservation.cs:222
+		    /// <summary>
+		    /// get {propertyName} value
+		    /// </summary>
+		    public CodeableConcept Value() => this.GetSingleItem<CodeableConcept> ();                                                             // CSDefineObservation.cs:251
+		                                                                                                                                          // CSDefineObservation.cs:224
+		    // Methods                                                                                                                            // CSDefineObservation.cs:225
+		                                                                                                                                          // CSDefineObservation.cs:256
+		    /// <summary>
+		    /// Set FeatureType value
+		    /// </summary>
+		    public void ValueCodeableConcept(CodeableConcept value) => this.SetFirst(value);                                                      // CSDefineObservation.cs:260
+		                                                                                                                                          // CSDefineObservation.cs:227
+		    /// <summary>
+		    /// Accessor class constructor
+		    /// </summary>
+		    public FeatureType_Accessor(BreastRadiologyDocument doc) : base()                                                                     // CSDefineObservation.cs:231
+		    {                                                                                                                                     // CSDefineObservation.cs:232
+		        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "featureType"));// CSDefineObservation.cs:233
+		    }                                                                                                                                     // CSDefineObservation.cs:235
+		}                                                                                                                                         // CSDefineObservation.cs:236
 		//- LocalClassDefs
 
 		//+ Fields
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSDefineObservation.cs:380
 		//- Fields
 
 		/// <summary>
@@ -50,46 +78,26 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:182
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSDefineObservation.cs:383
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 		//+ WriteCode
+		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:331
+		this.WriteComponent(this.FeatureType);                                                                                                    // CSDefineObservation.cs:386
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
 		//+ ReadCode
+		this.ReadComponent(this.FeatureType);                                                                                                     // CSDefineObservation.cs:389
 		//- ReadCode
 		}
 
 		//+ Methods
-		/// <summary>
-		/// Method to create default value for element
-		/// Observation.code
-		/// </summary>
-		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
-		{                                                                                                                                         // FhirConstruct.cs:754
-		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
-		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
-		    {                                                                                                                                     // FhirConstruct.cs:764
-		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
-		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
-		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:770
-		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
-		        temp4.CodeElement.Value = "featureObservation";                                                                                   // FhirConstruct.cs:786
-		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:792
-		        temp4.DisplayElement.Value = "Observed Feature observation";                                                                      // FhirConstruct.cs:794
-		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
-		    }                                                                                                                                     // FhirConstruct.cs:814
-		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
-		    retVal.TextElement.Value = "Observed Feature observation";                                                                            // FhirConstruct.cs:821
-		    return retVal;                                                                                                                        // FhirConstruct.cs:829
-		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods
 	}
 }
