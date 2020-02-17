@@ -16,6 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		public AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; protected set; }                                        // CSDefineObservation.cs:398
 		//- Fields
 
 		/// <summary>
@@ -51,18 +52,22 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
+			this.AbnormalityForeignObjectType = new IAbnormalityForeignObject.AbnormalityForeignObjectType_Accessor(doc);                            // CSDefineObservation.cs:401
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 		//+ WriteCode
+		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
+		this.WriteComponent(this.AbnormalityForeignObjectType);                                                                                   // CSDefineObservation.cs:404
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
 		//+ ReadCode
+		this.ReadComponent(this.AbnormalityForeignObjectType);                                                                                    // CSDefineObservation.cs:407
 		//- ReadCode
 		}
 

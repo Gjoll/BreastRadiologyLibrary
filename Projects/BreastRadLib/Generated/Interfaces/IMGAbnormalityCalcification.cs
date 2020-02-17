@@ -16,6 +16,8 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		CalcificationType_Accessor CalcificationType { get ; }                                                                                    // CSDefineObservation.cs:392
+		CalcificationDistribution_Accessor CalcificationDistribution { get ; }                                                                    // CSDefineObservation.cs:392
 		//- Fields
 
 		//+ Methods

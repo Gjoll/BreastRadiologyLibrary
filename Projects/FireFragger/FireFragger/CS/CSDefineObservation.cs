@@ -263,6 +263,24 @@ namespace FireFragger
             }
             else
             {
+                //propertiesBlock
+                //    .SummaryOpen()
+                //    .Summary("get {propertyName} value")
+                //    .SummaryClose()
+                //    .AppendCode($"public {propertyType} Value() => this.GetSingleItem<{propertyType}> ();")
+                //    ;
+
+                //foreach (String valueType in valueTypes)
+                //{
+                //    methodsBlock
+                //        .BlankLine()
+                //        .SummaryOpen()
+                //        .Summary($"Set {propertyName} value")
+                //        .SummaryClose()
+                //        .AppendCode($"public void Value{valueType}({valueType} value) => this.SetFirst(value);")
+                //        ;
+                //}
+
                 //    propertiesBlock
                 //        .SummaryOpen()
                 //        .Summary("Access propertyName")
@@ -318,7 +336,6 @@ namespace FireFragger
             }
             return className;
         }
-
 
         void DefineComponents()
         {
@@ -378,7 +395,7 @@ namespace FireFragger
                 if (this.fragBase.ClassEditor != null)
                 {
                     this.ClassFields
-                        .AppendCode($"public {interfaceName}.{componentClassName} {propertyName} {{ get ; protected set; }}")
+                        .AppendCode($"public {componentClassName} {propertyName} {{ get ; protected set; }}")
                         ;
                     this.ClassConstructor
                         .AppendCode($"this.{propertyName} = new {interfaceName}.{componentClassName}(doc);")
@@ -392,11 +409,6 @@ namespace FireFragger
                 }
             }
         }
-
-
-
-
-
 
         public override void Build()
         {
@@ -415,7 +427,7 @@ namespace FireFragger
             this.MergeFragments();
 
             //DefineHasMembers(this.fragBase);
-            //DefineComponents();
+            DefineComponents();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {fragBase.StructDef.Url.LastUriPart()}");

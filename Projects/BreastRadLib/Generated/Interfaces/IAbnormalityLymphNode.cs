@@ -16,6 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		LymphNodeType_Accessor LymphNodeType { get ; }                                                                                            // CSDefineObservation.cs:392
 		//- Fields
 
 		//+ Methods

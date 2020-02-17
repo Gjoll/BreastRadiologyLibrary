@@ -15,7 +15,7 @@ namespace BreastRadLib
         /// Base class for all component accessors
         /// </summary>
         public class ComponentBase<BaseType> : MemberList<BaseType>
-                where BaseType : Base, new()
+                where BaseType : Base
         {
             /// <summary>
             /// Section coding

@@ -57,6 +57,7 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
+		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
 		//- WriteCode
 		}
 

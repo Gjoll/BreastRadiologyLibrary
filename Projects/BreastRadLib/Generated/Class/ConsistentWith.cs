@@ -16,6 +16,8 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		public Value_Accessor Value { get ; protected set; }                                                                                      // CSDefineObservation.cs:398
+		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // CSDefineObservation.cs:398
 		//- Fields
 
 		/// <summary>
@@ -51,18 +53,25 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
+			this.Value = new IConsistentWith.Value_Accessor(doc);                                                                                    // CSDefineObservation.cs:401
+			this.Qualifier = new IConsistentWith.Qualifier_Accessor(doc);                                                                            // CSDefineObservation.cs:401
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 		//+ WriteCode
+		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
+		this.WriteComponent(this.Value);                                                                                                          // CSDefineObservation.cs:404
+		this.WriteComponent(this.Qualifier);                                                                                                      // CSDefineObservation.cs:404
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
 		//+ ReadCode
+		this.ReadComponent(this.Value);                                                                                                           // CSDefineObservation.cs:407
+		this.ReadComponent(this.Qualifier);                                                                                                       // CSDefineObservation.cs:407
 		//- ReadCode
 		}
 

@@ -16,6 +16,8 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		public CalcificationType_Accessor CalcificationType { get ; protected set; }                                                              // CSDefineObservation.cs:398
+		public CalcificationDistribution_Accessor CalcificationDistribution { get ; protected set; }                                              // CSDefineObservation.cs:398
 		//- Fields
 
 		/// <summary>
@@ -51,18 +53,25 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
+			this.CalcificationType = new IMGAbnormalityCalcification.CalcificationType_Accessor(doc);                                                // CSDefineObservation.cs:401
+			this.CalcificationDistribution = new IMGAbnormalityCalcification.CalcificationDistribution_Accessor(doc);                                // CSDefineObservation.cs:401
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 		//+ WriteCode
+		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
+		this.WriteComponent(this.CalcificationType);                                                                                              // CSDefineObservation.cs:404
+		this.WriteComponent(this.CalcificationDistribution);                                                                                      // CSDefineObservation.cs:404
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
 		//+ ReadCode
+		this.ReadComponent(this.CalcificationType);                                                                                               // CSDefineObservation.cs:407
+		this.ReadComponent(this.CalcificationDistribution);                                                                                       // CSDefineObservation.cs:407
 		//- ReadCode
 		}
 

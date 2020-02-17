@@ -11,5 +11,59 @@ using BreastRadLib.ObservationLocal;
 namespace BreastRadLib.ConsistentWithLocal
 {
 	//+ LocalClassDefs
+	/// <summary>
+	/// Accessor class for 'value'
+	/// [Fhir Element 'Observation.component:value]'
+	/// </summary>
+	public class Value_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                               // CSDefineObservation.cs:215
+	{                                                                                                                                          // CSDefineObservation.cs:216
+	    // Properties                                                                                                                          // CSDefineObservation.cs:222
+	    /// <summary>
+	    /// get {propertyName} value
+	    /// </summary>
+	    public CodeableConcept Value() => this.GetSingleItem<CodeableConcept> ();                                                              // CSDefineObservation.cs:251
+	                                                                                                                                           // CSDefineObservation.cs:224
+	    // Methods                                                                                                                             // CSDefineObservation.cs:225
+	                                                                                                                                           // CSDefineObservation.cs:256
+	    /// <summary>
+	    /// Set Value value
+	    /// </summary>
+	    public void ValueCodeableConcept(CodeableConcept value) => this.SetFirst(value);                                                       // CSDefineObservation.cs:260
+	                                                                                                                                           // CSDefineObservation.cs:227
+	    /// <summary>
+	    /// Accessor class constructor
+	    /// </summary>
+	    public Value_Accessor(BreastRadiologyDocument doc) : base()                                                                            // CSDefineObservation.cs:231
+	    {                                                                                                                                      // CSDefineObservation.cs:232
+	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithValue"));// CSDefineObservation.cs:233
+	    }                                                                                                                                      // CSDefineObservation.cs:235
+	}                                                                                                                                          // CSDefineObservation.cs:236
+	/// <summary>
+	/// Accessor class for 'qualifier'
+	/// [Fhir Element 'Observation.component:qualifier]'
+	/// </summary>
+	public class Qualifier_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                           // CSDefineObservation.cs:215
+	{                                                                                                                                          // CSDefineObservation.cs:216
+	    // Properties                                                                                                                          // CSDefineObservation.cs:222
+	    /// <summary>
+	    /// get {propertyName} value
+	    /// </summary>
+	    public CodeableConcept Value() => this.GetSingleItem<CodeableConcept> ();                                                              // CSDefineObservation.cs:251
+	                                                                                                                                           // CSDefineObservation.cs:224
+	    // Methods                                                                                                                             // CSDefineObservation.cs:225
+	                                                                                                                                           // CSDefineObservation.cs:256
+	    /// <summary>
+	    /// Set Qualifier value
+	    /// </summary>
+	    public void ValueCodeableConcept(CodeableConcept value) => this.SetFirst(value);                                                       // CSDefineObservation.cs:260
+	                                                                                                                                           // CSDefineObservation.cs:227
+	    /// <summary>
+	    /// Accessor class constructor
+	    /// </summary>
+	    public Qualifier_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:231
+	    {                                                                                                                                      // CSDefineObservation.cs:232
+	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithQualifier"));// CSDefineObservation.cs:233
+	    }                                                                                                                                      // CSDefineObservation.cs:235
+	}                                                                                                                                          // CSDefineObservation.cs:236
 	//- LocalClassDefs
 }

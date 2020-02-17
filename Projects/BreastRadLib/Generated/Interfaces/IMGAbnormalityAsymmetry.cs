@@ -16,6 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		AsymmetryType_Accessor AsymmetryType { get ; }                                                                                            // CSDefineObservation.cs:392
 		//- Fields
 
 		//+ Methods
