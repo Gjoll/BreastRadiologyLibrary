@@ -7,14 +7,16 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.TumorSatelliteLocal;
+//+Usings
+using BreastRadLib.ObservationLeafFragmentLocal;                                                                                            // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;                                                                               // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;                                                                            // CSDefineBase.cs:103
+//-Usings
 
 namespace BreastRadLib
 {
 	public class TumorSatellite : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		//- Fields
 
@@ -56,12 +58,16 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
+		//+ WriteCodeStart
+		//- WriteCodeStart
 		//+ WriteCode
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		//- ReadCode
 		}

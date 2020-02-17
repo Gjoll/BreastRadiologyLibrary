@@ -250,13 +250,7 @@ namespace FireFragger
                fcn,
                $"Building {fragBase.StructDef.Url.LastUriPart()}");
 
-            this.ClassFields?.Clear();
-            this.ClassMethods?.Clear();
-            this.ClassConstructor?.Clear();
-
-            this.InterfaceFields.Clear();
-            this.InterfaceMethods.Clear();
-            this.MergeFragments();
+            base.Build();
             this.DefineSections();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,

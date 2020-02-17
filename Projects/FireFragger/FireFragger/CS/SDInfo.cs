@@ -39,13 +39,13 @@ namespace FireFragger
             this.SubClassEditor.TryAddUserMacro("BaseClass", CSBuilder.ClassName(this));
             this.SubClassEditor.Load(Path.Combine("Templates", "SubClass.txt"));
 
-            if (this.IsFragment() == false)
-            {
-                this.ClassEditor = new CodeEditor();
-                this.AddMacros(this.ClassEditor, this);
-                this.ClassEditor.TryAddUserMacro("ClassName", CSBuilder.ClassName(this));
+            this.ClassEditor = new CodeEditor();
+            this.AddMacros(this.ClassEditor, this);
+            this.ClassEditor.TryAddUserMacro("ClassName", CSBuilder.ClassName(this));
+            if (this.IsFragment())
+                this.ClassEditor.Load(Path.Combine("Templates", "Fragment.txt"));
+            else
                 this.ClassEditor.Load(Path.Combine("Templates", "Class.txt"));
-            }
         }
 
         public void SetInterfaces(String interfaces)
@@ -55,7 +55,7 @@ namespace FireFragger
             if (this.ClassEditor != null)
             {
                 this.ClassEditor.TryAddUserMacro("Interfaces", interfaces);
-                this.ClassEditor.Blocks.Find("*Header").Reload();
+                this.ClassEditor.Blocks.Find("*Header")?.Reload();
             }
         }
 

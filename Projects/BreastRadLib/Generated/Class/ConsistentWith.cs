@@ -7,14 +7,17 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.ConsistentWithLocal;
+//+Usings
+using BreastRadLib.ObservationLeafFragmentLocal;                                                                                            // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;                                                                               // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoValueFragmentLocal;                                                                                // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;                                                                            // CSDefineBase.cs:103
+//-Usings
 
 namespace BreastRadLib
 {
 	public class ConsistentWith : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		public Value_Accessor Value { get ; protected set; }                                                                                      // CSDefineObservation.cs:398
 		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // CSDefineObservation.cs:398
@@ -60,8 +63,10 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
-		//+ WriteCode
+		//+ WriteCodeStart
 		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
+		//- WriteCodeStart
+		//+ WriteCode
 		this.WriteComponent(this.Value);                                                                                                          // CSDefineObservation.cs:404
 		this.WriteComponent(this.Qualifier);                                                                                                      // CSDefineObservation.cs:404
 		//- WriteCode
@@ -69,6 +74,8 @@ namespace BreastRadLib
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		this.ReadComponent(this.Value);                                                                                                           // CSDefineObservation.cs:407
 		this.ReadComponent(this.Qualifier);                                                                                                       // CSDefineObservation.cs:407

@@ -7,14 +7,13 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.BodyDistanceFromExtensionLocal;
+//+Usings
+//-Usings
 
 namespace BreastRadLib
 {
 	public class BodyDistanceFromExtension : ExtensionBase, IHeaderFragment
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		//- Fields
 
@@ -56,12 +55,16 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
+		//+ WriteCodeStart
+		//- WriteCodeStart
 		//+ WriteCode
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		//- ReadCode
 		}

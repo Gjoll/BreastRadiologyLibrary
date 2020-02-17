@@ -7,14 +7,14 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.ServiceRecommendationLocal;
+//+Usings
+using BreastRadLib.HeaderFragmentLocal;                                                                                                     // CSDefineBase.cs:103
+//-Usings
 
 namespace BreastRadLib
 {
 	public class ServiceRecommendation : ServiceRequestBase, IHeaderFragment
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		//- Fields
 
@@ -51,31 +51,26 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:182
 			//- Constructor
 		}
 
 		public override void Write()
 		{
+		//+ WriteCodeStart
+		//- WriteCodeStart
 		//+ WriteCode
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		//- ReadCode
 		}
 
 		//+ Methods
-		/// <summary>
-		/// Set ServiceRequest.code to one of the predefined items
-		/// </summary>
-		public ServiceRecommendation SetCode(RecommendationsVS.TCoding code)                                                                      // CSDefineBase.cs:154
-		{                                                                                                                                         // CSDefineBase.cs:155
-		    this.Resource.Code = code;                                                                                                            // CSDefineBase.cs:156
-		    return this;                                                                                                                          // CSDefineBase.cs:157
-		}                                                                                                                                         // CSDefineBase.cs:158
 		//- Methods
 	}
 }

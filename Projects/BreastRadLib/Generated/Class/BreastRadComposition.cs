@@ -7,14 +7,14 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.BreastRadCompositionLocal;
+//+Usings
+using BreastRadLib.HeaderFragmentLocal;                                                                                                     // CSDefineBase.cs:103
+//-Usings
 
 namespace BreastRadLib
 {
 	public class BreastRadComposition : CompositionBase, IHeaderFragment
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		public Report_Accessor Report { get ; protected set; }                                                                                    // CSDefineComposition.cs:225
 		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // CSDefineComposition.cs:225
@@ -64,6 +64,8 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
+		//+ WriteCodeStart
+		//- WriteCodeStart
 		//+ WriteCode
 		ClearSection();                                                                                                                           // CSDefineComposition.cs:185
 		this.WriteSection(this.Report);                                                                                                           // CSDefineComposition.cs:236
@@ -75,6 +77,8 @@ namespace BreastRadLib
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		this.ReadSection(this.Report);                                                                                                            // CSDefineComposition.cs:240
 		this.ReadSection(this.Impressions);                                                                                                       // CSDefineComposition.cs:240

@@ -7,14 +7,14 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.USFindingLocal;
+//+Usings
+using BreastRadLib.ObservationSectionFragmentLocal;                                                                                         // CSDefineBase.cs:103
+//-Usings
 
 namespace BreastRadLib
 {
 	public class USFinding : ObservationBase, IObservationSectionFragment
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		//- Fields
 
@@ -56,12 +56,16 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
+		//+ WriteCodeStart
+		//- WriteCodeStart
 		//+ WriteCode
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		//- ReadCode
 		}

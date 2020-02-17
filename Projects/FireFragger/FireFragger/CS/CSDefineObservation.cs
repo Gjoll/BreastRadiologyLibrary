@@ -344,8 +344,8 @@ namespace FireFragger
 
             if (this.fragBase.ClassEditor != null)
             {
-                this.ClassWriteCode
-                    .AppendCode($"this.ClearComponents();")
+                this.ClassWriteCodeStart
+                    ?.AppendCode($"this.ClearComponents();")
                     ;
             }
 
@@ -418,13 +418,8 @@ namespace FireFragger
                fcn,
                $"Building {fragBase.StructDef.Url.LastUriPart()}");
 
-            this.ClassFields?.Clear();
-            this.ClassMethods?.Clear();
-            this.ClassConstructor?.Clear();
-
-            this.InterfaceFields.Clear();
-            this.InterfaceMethods.Clear();
-            this.MergeFragments();
+            //Debug.Assert(fragBase.StructDef.Url.LastUriPart().Contains("ObservedChangesFragment") == false);
+            base.Build();
 
             //DefineHasMembers(this.fragBase);
             DefineComponents();

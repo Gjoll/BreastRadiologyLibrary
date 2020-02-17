@@ -24,6 +24,16 @@ namespace FireFragger
 
         public override void Build()
         {
+            const String fcn = "Build";
+
+            this.csBuilder.ConversionInfo(this.GetType().Name,
+               fcn,
+               $"Building {fragBase.StructDef.Url.LastUriPart()}");
+
+            base.Build();
+            this.csBuilder.ConversionInfo(this.GetType().Name,
+               fcn,
+               $"Completed {fragBase.StructDef.Url.LastUriPart()}");
         }
     }
 }

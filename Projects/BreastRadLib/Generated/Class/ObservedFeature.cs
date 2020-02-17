@@ -7,14 +7,19 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.ObservedFeatureLocal;
+//+Usings
+using BreastRadLib.ObservationLeafFragmentLocal;                                                                                            // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;                                                                               // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoValueFragmentLocal;                                                                                // CSDefineBase.cs:103
+using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;                                                                            // CSDefineBase.cs:103
+using BreastRadLib.BreastBodyLocationRequiredFragmentLocal;                                                                                 // CSDefineBase.cs:103
+using BreastRadLib.ObservedCountFragmentLocal;                                                                                              // CSDefineBase.cs:103
+//-Usings
 
 namespace BreastRadLib
 {
 	public class ObservedFeature : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, IBreastBodyLocationRequiredFragment, IObservedCountFragment
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSDefineObservation.cs:398
 		//- Fields
@@ -58,14 +63,18 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
-		//+ WriteCode
+		//+ WriteCodeStart
 		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
+		//- WriteCodeStart
+		//+ WriteCode
 		this.WriteComponent(this.FeatureType);                                                                                                    // CSDefineObservation.cs:404
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		this.ReadComponent(this.FeatureType);                                                                                                     // CSDefineObservation.cs:407
 		//- ReadCode

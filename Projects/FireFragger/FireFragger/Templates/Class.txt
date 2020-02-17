@@ -7,6 +7,8 @@ using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.%ClassName%Local;
+//+Usings
+//-Usings
 
 namespace BreastRadLib
 {
@@ -14,9 +16,6 @@ namespace BreastRadLib
 	public class %ClassName% : %FhirBase%Base%Interfaces%
 	//-*Header
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
 		//+ Fields
 		//- Fields
 
@@ -58,12 +57,16 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
+		//+ WriteCodeStart
+		//- WriteCodeStart
 		//+ WriteCode
 		//- WriteCode
 		}
 
 		public override void Read()
 		{
+		//+ ReadCodeStart
+		//- ReadCodeStart
 		//+ ReadCode
 		//- ReadCode
 		}

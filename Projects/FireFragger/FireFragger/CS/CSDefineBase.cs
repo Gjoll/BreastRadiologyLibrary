@@ -21,7 +21,9 @@ namespace FireFragger
         protected CodeBlockNested LocalClassDefs => fragBase.SubClassEditor?.Blocks.Find("LocalClassDefs", false);
         protected CodeBlockNested ClassConstructor => fragBase.ClassEditor?.Blocks.Find("Constructor", false);
         protected CodeBlockNested ClassMethods => fragBase.ClassEditor?.Blocks.Find("Methods", false);
+        protected CodeBlockNested ClassWriteCodeStart => fragBase.ClassEditor?.Blocks.Find("WriteCodeStart", false);
         protected CodeBlockNested ClassWriteCode => fragBase.ClassEditor?.Blocks.Find("WriteCode", false);
+        protected CodeBlockNested ClassReadCodeStart => fragBase.ClassEditor?.Blocks.Find("ReadCodeStart", false);
         protected CodeBlockNested ClassReadCode => fragBase.ClassEditor?.Blocks.Find("ReadCode", false);
 
         protected CodeBlockNested InterfaceFields => fragBase.InterfaceEditor?.Blocks.Find("Fields", false);
@@ -72,12 +74,35 @@ namespace FireFragger
             this.fragBase = fragBase;
         }
 
-        public abstract void Build();
+        public virtual void Build()
+        {
+            this.ClassFields?.Clear();
+            this.ClassMethods?.Clear();
+            this.ClassConstructor?.Clear();
 
+            this.InterfaceFields.Clear();
+            this.InterfaceMethods.Clear();
+            this.MergeFragments();
+        }
+
+
+        /// <summary>
+        /// Merge code blocks in eah referencedframent into mqin class.
+        /// This is not done for the interfaces, only the class.
+        /// </summary>
         protected void MergeFragments()
         {
+            if (this.fragBase.IsFragment() == true)
+                return;
+
+            CodeBlockNested usingBlock = this.fragBase.ClassEditor.Blocks.Find("Usings", false);
+
             foreach (SDInfo fiRef in this.fragBase.ReferencedFragments)
+            {
+                String fragmentName = CSBuilder.ClassName(fiRef);
+                usingBlock.AppendCode($"using BreastRadLib.{fragmentName}Local;");
                 MergeFragment(fiRef);
+            }
         }
 
         protected void MergeFragment(SDInfo fi)
@@ -87,19 +112,14 @@ namespace FireFragger
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Integrating fragment {fi.StructDef.Url.LastUriPart()}");
+
             if (fi != fragBase)
             {
-                if (fi.InterfaceEditor != null)
-                {
-                    CodeBlockMerger cbm = new CodeBlockMerger(fragBase.InterfaceEditor);
-                    cbm.Merge(this.InterfaceFields);
-                    cbm.Merge(this.InterfaceMethods);
-                }
                 if (fi.ClassEditor != null)
                 {
                     CodeBlockMerger cbm = new CodeBlockMerger(fragBase.ClassEditor);
-                    cbm.Merge(this.ClassFields);
-                    cbm.Merge(this.ClassMethods);
+                    foreach (CodeBlockNested codeBlock in fi.ClassEditor.Blocks.AllNamedBlocks)
+                       cbm.Merge(codeBlock);
                 }
             }
         }
