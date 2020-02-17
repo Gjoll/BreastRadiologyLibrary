@@ -6,13 +6,16 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.ObservedCountFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface IObservedCountFragment : IObservationBase
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		ObservedCountFragment.ObsCount_Accessor ObsCount { get ; }                                                                                // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

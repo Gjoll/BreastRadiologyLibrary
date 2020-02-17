@@ -6,13 +6,16 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.BiRadFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface IBiRadFragment : IObservationBase
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		BiRadFragment.BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                        // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

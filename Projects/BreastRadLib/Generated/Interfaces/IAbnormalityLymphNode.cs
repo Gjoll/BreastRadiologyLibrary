@@ -6,13 +6,16 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.AbnormalityLymphNodeLocal;
 
 namespace BreastRadLib
 {
 	public interface IAbnormalityLymphNode : IObservationBase, IObservationLeafFragment, ITumorSatelliteFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		AbnormalityLymphNode.LymphNodeType_Accessor LymphNodeType { get ; }                                                                       // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

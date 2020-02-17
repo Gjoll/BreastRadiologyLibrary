@@ -6,14 +6,16 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.ObservedDistributionFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface IObservedDistributionFragment : IObservationBase
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		ObservedDistributionFragment.ObsDistribution_Accessor ObsDistribution { get ; }                                                           // CSDefineObservation.cs:374
-		ObservedDistributionFragment.ObsDistRegionSize_Accessor ObsDistRegionSize { get ; }                                                       // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

@@ -6,16 +6,20 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.BreastRadCompositionLocal;
 
 namespace BreastRadLib
 {
 	public interface IBreastRadComposition : ICompositionBase, IHeaderFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		BreastRadComposition.Report_Accessor Report { get ; }                                                                                     // CSDefineComposition.cs:232
-		BreastRadComposition.Impressions_Accessor Impressions { get ; }                                                                           // CSDefineComposition.cs:232
-		BreastRadComposition.RelatedResources_Accessor RelatedResources { get ; }                                                                 // CSDefineComposition.cs:232
-		BreastRadComposition.Recommendations_Accessor Recommendations { get ; }                                                                   // CSDefineComposition.cs:232
+		Report_Accessor Report { get ; }                                                                                                          // CSDefineComposition.cs:232
+		Impressions_Accessor Impressions { get ; }                                                                                                // CSDefineComposition.cs:232
+		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // CSDefineComposition.cs:232
+		Recommendations_Accessor Recommendations { get ; }                                                                                        // CSDefineComposition.cs:232
 		//- Fields
 
 		//+ Methods

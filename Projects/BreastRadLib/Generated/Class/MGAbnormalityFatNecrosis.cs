@@ -6,6 +6,7 @@ using System.Text;
 using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.MGAbnormalityFatNecrosisLocal;
 
 namespace BreastRadLib
 {
@@ -56,7 +57,6 @@ namespace BreastRadLib
 		public override void Write()
 		{
 		//+ WriteCode
-		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:331
 		//- WriteCode
 		}
 

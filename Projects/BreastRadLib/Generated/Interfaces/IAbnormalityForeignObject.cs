@@ -6,13 +6,16 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.AbnormalityForeignObjectLocal;
 
 namespace BreastRadLib
 {
 	public interface IAbnormalityForeignObject : IObservationBase, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IBiRadFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		AbnormalityForeignObject.AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                     // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

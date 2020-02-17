@@ -6,11 +6,15 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.SectionFindingsRightBreastLocal;
 
 namespace BreastRadLib
 {
 	public interface ISectionFindingsRightBreast : IObservationBase, IFindingBreastFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

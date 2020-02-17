@@ -32,10 +32,10 @@ namespace FireFragger
             String brClass)
         {
             String className = $"{propertyName}_Accessor";
-            if (this.ClassLocalClassDefs == null)
+            if (this.LocalClassDefs == null)
                 return className;
 
-            this.ClassLocalClassDefs
+            this.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for '{title}'")
                 .Summary($"[Fhir Element '{sectionSlice.ElementDefinition.ElementId}]'")
@@ -229,7 +229,7 @@ namespace FireFragger
                     ;
                 String className = CSBuilder.ClassName(fragBase);
                 this.InterfaceFields
-                    .AppendCode($"{className}.{sectionClassName} {propertyName} {{ get ; }}")
+                    .AppendCode($"{sectionClassName} {propertyName} {{ get ; }}")
                     ;
 
                 this.ClassWriteCode

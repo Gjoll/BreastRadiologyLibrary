@@ -6,11 +6,15 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.CommonComponentsFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface ICommonComponentsFragment : IObservationBase, IBreastBodyLocationRequiredFragment, IObservedChangesFragment, IBiRadFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

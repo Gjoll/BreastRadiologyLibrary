@@ -6,6 +6,7 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.%ClassName%Local;
 
 namespace BreastRadLib
 {
@@ -13,6 +14,9 @@ namespace BreastRadLib
 	public interface %InterfaceName% : I%FhirBase%Base%Interfaces%
 	//-*Header
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

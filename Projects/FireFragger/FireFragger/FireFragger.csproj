@@ -42,6 +42,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Templates\SubClass.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Templates\CodeSystem.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

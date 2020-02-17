@@ -6,11 +6,15 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.CategoryFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface ICategoryFragment : IObservationBase
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

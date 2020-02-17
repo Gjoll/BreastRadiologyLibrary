@@ -391,6 +391,8 @@ namespace FireFragger
                 Save(fi.InterfaceEditor, Path.Combine(this.OutputDir, "Generated", "Interfaces", $"{InterfaceName(fi)}.cs"));
                 if (fi.ClassEditor != null)
                     Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.cs"));
+                if (fi.SubClassEditor != null)
+                    Save(fi.SubClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}Local.cs"));
             }
 
             foreach (CSInfo ci in this.CodeSystems.Values)

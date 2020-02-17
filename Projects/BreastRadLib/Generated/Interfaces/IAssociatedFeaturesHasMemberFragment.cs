@@ -6,11 +6,15 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface IAssociatedFeaturesHasMemberFragment : IObservationBase, IHeaderFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

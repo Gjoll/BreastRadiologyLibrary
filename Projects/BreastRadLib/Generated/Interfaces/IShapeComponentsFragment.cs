@@ -6,16 +6,16 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.ShapeComponentsFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface IShapeComponentsFragment : IObservationBase, IBreastBodyLocationRequiredFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		ShapeComponentsFragment.Orientation_Accessor Orientation { get ; }                                                                        // CSDefineObservation.cs:374
-		ShapeComponentsFragment.Shape_Accessor Shape { get ; }                                                                                    // CSDefineObservation.cs:374
-		ShapeComponentsFragment.Margin_Accessor Margin { get ; }                                                                                  // CSDefineObservation.cs:374
-		ShapeComponentsFragment.MgDensity_Accessor MgDensity { get ; }                                                                            // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

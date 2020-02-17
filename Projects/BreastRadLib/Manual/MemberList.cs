@@ -10,7 +10,7 @@ namespace BreastRadLib
     /// Base class for all class member lists
     /// </summary>
     public class MemberList<BaseType>
-            where BaseType : Base, new()
+            where BaseType : new()
     {
         /// <summary>
         /// Parent document

@@ -6,11 +6,15 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.BreastBodyLocationExtensionLocal;
 
 namespace BreastRadLib
 {
 	public interface IBreastBodyLocationExtension : IExtensionBase, IHeaderFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

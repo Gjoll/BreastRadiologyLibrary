@@ -6,11 +6,15 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.BreastRadObservationNoValueFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface IBreastRadObservationNoValueFragment : IObservationBase, IBreastRadObservationFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

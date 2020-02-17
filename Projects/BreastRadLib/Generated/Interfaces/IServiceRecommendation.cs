@@ -6,11 +6,15 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.ServiceRecommendationLocal;
 
 namespace BreastRadLib
 {
 	public interface IServiceRecommendation : IServiceRequestBase, IHeaderFragment
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
 		//- Fields
 

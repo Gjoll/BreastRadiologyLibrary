@@ -6,13 +6,16 @@ using System.Text;
 
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.PreviouslyDemonstratedByFragmentLocal;
 
 namespace BreastRadLib
 {
 	public interface IPreviouslyDemonstratedByFragment : IObservationBase
 	{
+		//+ LocalClassDefs
+		//- LocalClassDefs
+
 		//+ Fields
-		PreviouslyDemonstratedByFragment.PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; }                                     // CSDefineObservation.cs:374
 		//- Fields
 
 		//+ Methods

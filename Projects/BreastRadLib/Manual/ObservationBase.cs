@@ -35,8 +35,7 @@ namespace BreastRadLib
                 this.Code = code;
             }
 
-            protected void SetFirst<T>(T value)
-                where T: Base
+            protected void SetFirst(BaseType value)
             {
                 this.items.Clear();
                 this.items.Add(value);
@@ -65,10 +64,10 @@ namespace BreastRadLib
             this.Resource.Component.Clear();
         }
 
-        protected void WriteComponents<BaseType>(ComponentBase<BaseType> componentList )
-             where BaseType : ResourceBase, new()
-        {
-        }
+        //protected void WriteComponents<BaseType>(ComponentBase<BaseType> componentList )
+        //     where BaseType : ResourceBase, new()
+        //{
+        //}
 
         //protected MemberList<T> CreateHasMemberList<T>(Int32 min, Int32 max)
         //    where T : IResourceBase

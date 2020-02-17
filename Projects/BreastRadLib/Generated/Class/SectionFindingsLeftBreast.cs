@@ -6,6 +6,7 @@ using System.Text;
 using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib.SectionFindingsLeftBreastLocal;
 
 namespace BreastRadLib
 {

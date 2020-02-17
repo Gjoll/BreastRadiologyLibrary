@@ -204,15 +204,15 @@ namespace FireFragger
             String propertyType)
         {
             String className = $"{propertyName}_Accessor";
-            if (this.ClassLocalClassDefs == null)
+            if (this.LocalClassDefs == null)
                 return className;
 
-            this.ClassLocalClassDefs
+            this.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for '{componentSlice.Name}'")
                 .Summary($"[Fhir Element '{componentSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : ComponentBase<{propertyType}>")
+                .AppendCode($"public class {className} : ObservationBase.ComponentBase<{propertyType}>")
                 .OpenBrace()
                 //.AppendCode($"// Definitions")
                 //.DefineBlock(out CodeBlockNested definitionsBlock)
@@ -369,18 +369,19 @@ namespace FireFragger
                 String componentClassName =
                     DefineComponentsLocalClass(componentSlice, code, max, min, propertyName, valueTypes.ToArray(), valueBaseType);
 
+                String interfaceName = CSBuilder.InterfaceName(fragBase);
                 String className = CSBuilder.ClassName(fragBase);
                 this.InterfaceFields
-                    .AppendCode($"{className}.{componentClassName} {propertyName} {{ get ; }}")
+                    .AppendCode($"{componentClassName} {propertyName} {{ get ; }}")
                     ;
 
                 if (this.fragBase.ClassEditor != null)
                 {
                     this.ClassFields
-                        .AppendCode($"public {componentClassName} {propertyName} {{ get ; protected set; }}")
+                        .AppendCode($"public {interfaceName}.{componentClassName} {propertyName} {{ get ; protected set; }}")
                         ;
                     this.ClassConstructor
-                        .AppendCode($"this.{propertyName} = new {componentClassName}(doc);")
+                        .AppendCode($"this.{propertyName} = new {interfaceName}.{componentClassName}(doc);")
                         ;
                     this.ClassWriteCode
                         .AppendCode($"this.WriteComponent(this.{propertyName});")
@@ -414,7 +415,7 @@ namespace FireFragger
             this.MergeFragments();
 
             //DefineHasMembers(this.fragBase);
-            DefineComponents();
+            //DefineComponents();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {fragBase.StructDef.Url.LastUriPart()}");

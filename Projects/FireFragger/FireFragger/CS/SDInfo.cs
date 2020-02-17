@@ -14,6 +14,7 @@ namespace FireFragger
         public StructureDefinition StructDef;
         public CodeEditor InterfaceEditor;
         public CodeEditor ClassEditor;
+        public CodeEditor SubClassEditor;
         public ElementTreeNode DiffNodes;
 
         public String BaseDefinitionUrl => this.StructDef.BaseDefinition;
@@ -26,9 +27,17 @@ namespace FireFragger
             InterfaceEditor = new CodeEditor();
             DiffNodes = l.Create(sd.Differential.Element);
 
+            this.InterfaceEditor.TryAddUserMacro("ClassName", CSBuilder.ClassName(this));
             this.InterfaceEditor.TryAddUserMacro("InterfaceName", CSBuilder.InterfaceName(this));
             this.InterfaceEditor.Load(Path.Combine("Templates", "Interface.txt"));
             this.AddMacros(this.InterfaceEditor, this);
+
+            this.SubClassEditor = new CodeEditor();
+            this.AddMacros(this.SubClassEditor, this);
+
+            this.SubClassEditor.TryAddUserMacro("FhirBase", this.StructDef.BaseDefinition.LastUriPart());
+            this.SubClassEditor.TryAddUserMacro("BaseClass", CSBuilder.ClassName(this));
+            this.SubClassEditor.Load(Path.Combine("Templates", "SubClass.txt"));
 
             if (this.IsFragment() == false)
             {
