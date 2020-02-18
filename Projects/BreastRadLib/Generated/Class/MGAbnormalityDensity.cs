@@ -48,8 +48,8 @@ namespace BreastRadLib
 		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:145
 		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:145
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:145
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:250
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:250
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:282
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:282
 		public DensityType_Accessor DensityType { get ; protected set; }                                                                          // CSDefineObservation.cs:145
 		//- Fields
 
@@ -82,8 +82,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, Observation resource)
+		public void Create(BreastRadiologyDocument doc, Observation resource = null)
 		{
+			if (resource == null)
+				resource = new Observation();
 			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
@@ -101,8 +103,8 @@ namespace BreastRadLib
 			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:148
 			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:148
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:148
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:253
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:253
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:285
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:285
 			this.DensityType = new DensityType_Accessor(doc);                                                                                        // CSDefineObservation.cs:148
 			//- Constructor
 		}
@@ -126,8 +128,8 @@ namespace BreastRadLib
 			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:151
 			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:151
 			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:151
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:256
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:256
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:288
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:288
 			this.WriteComponent(this.DensityType);                                                                                                   // CSDefineObservation.cs:151
 			//- WriteCode
 		}
@@ -150,8 +152,8 @@ namespace BreastRadLib
 			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:154
 			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:154
 			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:154
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:259
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:259
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:291
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:291
 			this.ReadComponent(this.DensityType);                                                                                                    // CSDefineObservation.cs:154
 			//- ReadCode
 		}

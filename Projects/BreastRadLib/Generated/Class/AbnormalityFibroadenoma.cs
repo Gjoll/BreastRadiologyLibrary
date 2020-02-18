@@ -43,7 +43,7 @@ namespace BreastRadLib
 		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:145
 		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:145
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:145
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:250
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:282
 		public FibroAdenomaType_Accessor FibroAdenomaType { get ; protected set; }                                                                // CSDefineObservation.cs:145
 		//- Fields
 
@@ -76,8 +76,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, Observation resource)
+		public void Create(BreastRadiologyDocument doc, Observation resource = null)
 		{
+			if (resource == null)
+				resource = new Observation();
 			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
@@ -93,7 +95,7 @@ namespace BreastRadLib
 			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:148
 			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:148
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:148
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:253
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:285
 			this.FibroAdenomaType = new FibroAdenomaType_Accessor(doc);                                                                              // CSDefineObservation.cs:148
 			//- Constructor
 		}
@@ -115,7 +117,7 @@ namespace BreastRadLib
 			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:151
 			this.WriteComponent(this.ObsSize);                                                                                                       // CSDefineObservation.cs:151
 			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:151
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:256
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:288
 			this.WriteComponent(this.FibroAdenomaType);                                                                                              // CSDefineObservation.cs:151
 			//- WriteCode
 		}
@@ -136,7 +138,7 @@ namespace BreastRadLib
 			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:154
 			this.ReadComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:154
 			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:154
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:259
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:291
 			this.ReadComponent(this.FibroAdenomaType);                                                                                               // CSDefineObservation.cs:154
 			//- ReadCode
 		}

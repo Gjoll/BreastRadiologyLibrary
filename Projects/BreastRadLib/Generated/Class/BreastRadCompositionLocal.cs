@@ -23,7 +23,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public BreastRadReport Item                                                                                                            // CSDefineComposition.cs:79
 	    {                                                                                                                                      // CSDefineComposition.cs:80
-	        get => this.GetSingleItem<BreastRadReport> ();                                                                                     // CSDefineComposition.cs:81
+	        get => this.GetSingleItem();                                                                                                       // CSDefineComposition.cs:81
 	    }                                                                                                                                      // CSDefineComposition.cs:82
 	                                                                                                                                           // CSDefineComposition.cs:52
 	    // Methods                                                                                                                             // CSDefineComposition.cs:53
@@ -61,14 +61,14 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    public IEnumerable<ResourceBase> Items => this.items;                                                                                  // CSDefineComposition.cs:126
 	                                                                                                                                           // CSDefineComposition.cs:127
 	    /// <summary>
-	    /// Access first item in list or defrault if no first item
-	    /// </summary>
-	    public ResourceBase First() => this.items.First();                                                                                     // CSDefineComposition.cs:131
-	                                                                                                                                           // CSDefineComposition.cs:132
-	    /// <summary>
 	    /// Access first item in list
 	    /// </summary>
-	    public ResourceBase FirstOrDefault() => this.items.FirstOrDefault();                                                                   // CSDefineComposition.cs:136
+	    public new ResourceBase First() => base.First();                                                                                       // CSDefineComposition.cs:131
+	                                                                                                                                           // CSDefineComposition.cs:132
+	    /// <summary>
+	    /// Access first item in list or default value if empty
+	    /// </summary>
+	    public new ResourceBase FirstOrDefault() => base.FirstOrDefault();                                                                     // CSDefineComposition.cs:136
 	                                                                                                                                           // CSDefineComposition.cs:52
 	    // Methods                                                                                                                             // CSDefineComposition.cs:53
 	                                                                                                                                           // CSDefineComposition.cs:145
@@ -105,14 +105,14 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    public IEnumerable<ResourceBase> Items => this.items;                                                                                  // CSDefineComposition.cs:126
 	                                                                                                                                           // CSDefineComposition.cs:127
 	    /// <summary>
-	    /// Access first item in list or defrault if no first item
-	    /// </summary>
-	    public ResourceBase First() => this.items.First();                                                                                     // CSDefineComposition.cs:131
-	                                                                                                                                           // CSDefineComposition.cs:132
-	    /// <summary>
 	    /// Access first item in list
 	    /// </summary>
-	    public ResourceBase FirstOrDefault() => this.items.FirstOrDefault();                                                                   // CSDefineComposition.cs:136
+	    public new ResourceBase First() => base.First();                                                                                       // CSDefineComposition.cs:131
+	                                                                                                                                           // CSDefineComposition.cs:132
+	    /// <summary>
+	    /// Access first item in list or default value if empty
+	    /// </summary>
+	    public new ResourceBase FirstOrDefault() => base.FirstOrDefault();                                                                     // CSDefineComposition.cs:136
 	                                                                                                                                           // CSDefineComposition.cs:52
 	    // Methods                                                                                                                             // CSDefineComposition.cs:53
 	                                                                                                                                           // CSDefineComposition.cs:145
@@ -148,14 +148,14 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    public IEnumerable<ResourceBase> Items => this.items;                                                                                  // CSDefineComposition.cs:126
 	                                                                                                                                           // CSDefineComposition.cs:127
 	    /// <summary>
-	    /// Access first item in list or defrault if no first item
-	    /// </summary>
-	    public ResourceBase First() => this.items.First();                                                                                     // CSDefineComposition.cs:131
-	                                                                                                                                           // CSDefineComposition.cs:132
-	    /// <summary>
 	    /// Access first item in list
 	    /// </summary>
-	    public ResourceBase FirstOrDefault() => this.items.FirstOrDefault();                                                                   // CSDefineComposition.cs:136
+	    public new ResourceBase First() => base.First();                                                                                       // CSDefineComposition.cs:131
+	                                                                                                                                           // CSDefineComposition.cs:132
+	    /// <summary>
+	    /// Access first item in list or default value if empty
+	    /// </summary>
+	    public new ResourceBase FirstOrDefault() => base.FirstOrDefault();                                                                     // CSDefineComposition.cs:136
 	                                                                                                                                           // CSDefineComposition.cs:52
 	    // Methods                                                                                                                             // CSDefineComposition.cs:53
 	                                                                                                                                           // CSDefineComposition.cs:145

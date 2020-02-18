@@ -47,8 +47,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, ServiceRequest resource)
+		public void Create(BreastRadiologyDocument doc, ServiceRequest resource = null)
 		{
+			if (resource == null)
+				resource = new ServiceRequest();
 			base.Create(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:208

@@ -1,17 +1,17 @@
 		//+ Fields
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:250
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:282
 		//- Fields
 
 			//+ Constructor
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:253
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:285
 			//- Constructor
 
 			//+ WriteCode
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:256
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:288
 			//- WriteCode
 
 			//+ ReadCode
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:259
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:291
 			//- ReadCode
 
 			//+ Methods

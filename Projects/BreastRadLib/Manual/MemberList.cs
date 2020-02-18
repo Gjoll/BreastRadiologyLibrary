@@ -46,6 +46,18 @@ namespace BreastRadLib
         /// </summary>
         public Int32 Max { get; protected set; }
 
+        /// <summary>
+        /// Access first item or default
+        /// </summary>
+        /// <returns></returns>
+        protected BaseType FirstOrDefault() => items.FirstOrDefault();
+
+        /// <summary>
+        /// Access first item
+        /// </summary>
+        /// <returns></returns>
+        protected BaseType First() => items.First();
+
         protected MemberList()
         {
         }
@@ -63,10 +75,9 @@ namespace BreastRadLib
         /// Get single item or null.
         /// </summary>
         /// <returns></returns>
-        protected T GetSingleItem<T>()
-            where T : BaseType
+        protected BaseType GetSingleItem()
         {
-            return (T)this.items.FirstOrDefault();
+            return this.items.FirstOrDefault();
         }
 
         /// <summary>
@@ -82,14 +93,14 @@ namespace BreastRadLib
 
         /// <summary>
         /// Set single item
+        /// if list already has items, an exception is thrown.
         /// </summary>
         /// <param name="item"></param>
-        protected BaseType CreateSingleItem<T>(T itemContainer)
-            where T : BaseType
+        protected void SetSingleItem(BaseType itemContainer)
         {
             if (this.items.Count > 0)
                 throw new Exception("Item already has a value");
-            return AppendItem(itemContainer);
+            AppendItem(itemContainer);
         }
     }
 }

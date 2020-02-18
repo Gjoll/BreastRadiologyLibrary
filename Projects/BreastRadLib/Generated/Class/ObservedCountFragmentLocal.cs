@@ -21,7 +21,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public Base Value => this.GetSingleItem<Base> ();                                                                                      // CSDefineObservation.cs:67
+	    public Base Value => base.GetSingleItem();                                                                                             // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72

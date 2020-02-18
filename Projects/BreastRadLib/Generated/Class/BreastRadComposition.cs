@@ -51,8 +51,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, Composition resource)
+		public void Create(BreastRadiologyDocument doc, Composition resource = null)
 		{
+			if (resource == null)
+				resource = new Composition();
 			base.Create(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // CSDefineBase.cs:208

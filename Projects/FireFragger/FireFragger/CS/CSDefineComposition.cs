@@ -78,7 +78,7 @@ namespace FireFragger
                     .SummaryClose()
                     .AppendCode($"public {brClass} Item")
                     .OpenBrace()
-                    .AppendCode($"get => this.GetSingleItem<{brClass}> ();")
+                    .AppendCode($"get => this.GetSingleItem();")
                     .CloseBrace()
                     ;
 
@@ -126,14 +126,14 @@ namespace FireFragger
                     .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
                     .BlankLine()
                     .SummaryOpen()
-                    .Summary("Access first item in list or defrault if no first item")
-                    .SummaryClose()
-                    .AppendCode($"public {brClass} First() => this.items.First();")
-                    .BlankLine()
-                    .SummaryOpen()
                     .Summary("Access first item in list")
                     .SummaryClose()
-                    .AppendCode($"public {brClass} FirstOrDefault() => this.items.FirstOrDefault();")
+                    .AppendCode($"public new {brClass} First() => base.First();")
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary("Access first item in list or default value if empty")
+                    .SummaryClose()
+                    .AppendCode($"public new {brClass} FirstOrDefault() => base.FirstOrDefault();")
                     ;
 
                 foreach (String target in references)

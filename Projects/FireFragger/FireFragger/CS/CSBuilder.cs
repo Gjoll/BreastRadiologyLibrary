@@ -14,7 +14,7 @@ namespace FireFragger
 {
     class CSBuilder : ConverterBase, IDisposable
     {
-        String BreakOnClass = "TumorSatelliteFragment";
+        String BreakOnClass = "xxyyz";
         CodeEditor resourceFactoryEditor;
         CodeBlockNested resourceFactoryProfileBlock;
 

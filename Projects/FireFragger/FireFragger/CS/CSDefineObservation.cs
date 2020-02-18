@@ -64,7 +64,7 @@ namespace FireFragger
                     .SummaryOpen()
                     .Summary("get {propertyName} value")
                     .SummaryClose()
-                    .AppendCode($"public {propertyType} Value => this.GetSingleItem<{propertyType}> ();")
+                    .AppendCode($"public {propertyType} Value => base.GetSingleItem();")
                     ;
                 foreach (String valueType in valueTypes)
                 {
@@ -163,43 +163,75 @@ namespace FireFragger
             String propertyName,
             String propertyType)
         {
+            String sliceName = hasMemberSlice.ElementDefinition.SliceName;
+
             String className = $"{propertyName}_Accessor";
             if (this.LocalClassDefs == null)
                 return className;
 
             this.LocalClassDefs
                 .SummaryOpen()
-                .Summary($"Accessor class for '{hasMemberSlice.Name}'")
+                .Summary($"Accessor class for ObservationhasMember slice '{sliceName}'")
                 .Summary($"[Fhir Element '{hasMemberSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
                 ;
+
+            this.LocalClassDefs
+                .AppendCode($"public class {className} : ObservationBase.HasMemberBase<{propertyType}>")
+                .OpenBrace()
+                .DefineBlock(out CodeBlockNested accessors)
+                .SummaryOpen()
+                .Summary($"Accessor HasMember slice {className} class constructor")
+                .SummaryClose()
+                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
+                .OpenBrace()
+                .AppendCode($"this.Create(doc, {min}, {max});")
+                .CloseBrace()
+                .CloseBrace()
+                ;
             if (max == 1)
             {
-                this.LocalClassDefs
-                    .AppendCode($"public class {className} : ObservationBase.HasMemberSingle<{propertyType}>")
-                    .OpenBrace()
+                accessors
                     .SummaryOpen()
-                    .Summary($"Accessor class constructor")
+                    .Summary($"Get item")
                     .SummaryClose()
-                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
+                    .AppendCode($"public {propertyName} Get() => base.GetSingleItem();")
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Set item")
+                    .SummaryClose()
+                    .AppendCode($"public {propertyName} Set({propertyType} item = null)")
                     .OpenBrace()
-                    .AppendCode($"this.Create(doc, {min}, {max});")
+                    .AppendCode($"if (item == null)")
+                    .OpenBrace()
+                    .AppendCode($"item = new {propertyType}();")
+                    .AppendCode($"item.Create(this.doc);")
                     .CloseBrace()
+                    .AppendCode($"base.SetSingleItem(item);")
+                    .AppendCode($"return item;")
                     .CloseBrace()
                     ;
             }
             else
             {
-                this.LocalClassDefs
-                    .AppendCode($"public class {className} : ObservationBase.HasMemberMultiple<{propertyType}>")
-                    .OpenBrace()
+                accessors
                     .SummaryOpen()
-                    .Summary($"Accessor class constructor")
+                    .Summary($"Get items")
                     .SummaryClose()
-                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
+                    .AppendCode($"public IEnumerable<{propertyName}> Get() => base.items;")
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Add item")
+                    .SummaryClose()
+                    .AppendCode($"public {propertyName} Add({propertyType} item = null)")
                     .OpenBrace()
-                    .AppendCode($"this.Create(doc, {min}, {max});")
+                    .AppendCode($"if (item == null)")
+                    .OpenBrace()
+                    .AppendCode($"item = new {propertyType}();")
+                    .AppendCode($"item.Create(this.doc);")
                     .CloseBrace()
+                    .AppendCode($"base.AppendItem(item);")
+                    .AppendCode($"return item;")
                     .CloseBrace()
                     ;
             }

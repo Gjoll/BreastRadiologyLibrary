@@ -48,8 +48,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, %FhirBase% resource)
+		public void Create(BreastRadiologyDocument doc, %FhirBase% resource = null)
 		{
+			if (resource == null)
+				resource = new %FhirBase%();
 			base.Create(doc, resource);
 			//+ Constructor
 			//- Constructor

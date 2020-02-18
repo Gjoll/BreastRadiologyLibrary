@@ -48,8 +48,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, DiagnosticReport resource)
+		public void Create(BreastRadiologyDocument doc, DiagnosticReport resource = null)
 		{
+			if (resource == null)
+				resource = new DiagnosticReport();
 			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154

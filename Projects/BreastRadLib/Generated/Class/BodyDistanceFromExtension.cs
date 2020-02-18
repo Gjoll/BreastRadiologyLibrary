@@ -46,8 +46,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, Extension resource)
+		public void Create(BreastRadiologyDocument doc, Extension resource = null)
 		{
+			if (resource == null)
+				resource = new Extension();
 			base.Create(doc, resource);
 			//+ Constructor
 			//- Constructor
