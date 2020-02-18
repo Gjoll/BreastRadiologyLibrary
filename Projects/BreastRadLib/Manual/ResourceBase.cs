@@ -25,7 +25,7 @@ namespace BreastRadLib
 
         public ResourceBase(BreastRadiologyDocument doc, DomainResource resource) : base()
         {
-            this.Create(doc, resource);
+            this.Init(doc, resource);
         }
 
         public ResourceBase() : base()

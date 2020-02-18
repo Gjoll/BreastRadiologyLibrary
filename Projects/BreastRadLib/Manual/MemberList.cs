@@ -62,22 +62,13 @@ namespace BreastRadLib
         {
         }
 
-        protected void Create(BreastRadiologyDocument doc,
+        protected void Init(BreastRadiologyDocument doc,
             Int32 min,
             Int32 max)
         {
             this.doc = doc;
             this.Min = min;
             this.Max = max;
-        }
-
-        /// <summary>
-        /// Get single item or null.
-        /// </summary>
-        /// <returns></returns>
-        protected BaseType GetSingleItem()
-        {
-            return this.items.FirstOrDefault();
         }
 
         /// <summary>

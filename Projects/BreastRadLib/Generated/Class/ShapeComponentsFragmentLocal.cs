@@ -21,7 +21,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.GetSingleItem();                                                                                  // CSDefineObservation.cs:67
+	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
@@ -35,7 +35,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// </summary>
 	    public Orientation_Accessor(BreastRadiologyDocument doc) : base()                                                                      // CSDefineObservation.cs:53
 	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "orientation"));// CSDefineObservation.cs:55
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "orientation"));// CSDefineObservation.cs:55
 	    }                                                                                                                                      // CSDefineObservation.cs:57
 	}                                                                                                                                          // CSDefineObservation.cs:58
 	/// <summary>
@@ -48,7 +48,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.GetSingleItem();                                                                                  // CSDefineObservation.cs:67
+	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
@@ -62,7 +62,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// </summary>
 	    public Shape_Accessor(BreastRadiologyDocument doc) : base()                                                                            // CSDefineObservation.cs:53
 	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "shape"));  // CSDefineObservation.cs:55
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "shape"));    // CSDefineObservation.cs:55
 	    }                                                                                                                                      // CSDefineObservation.cs:57
 	}                                                                                                                                          // CSDefineObservation.cs:58
 	/// <summary>
@@ -75,7 +75,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.GetSingleItem();                                                                                  // CSDefineObservation.cs:67
+	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
@@ -89,7 +89,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// </summary>
 	    public Margin_Accessor(BreastRadiologyDocument doc) : base()                                                                           // CSDefineObservation.cs:53
 	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "margin")); // CSDefineObservation.cs:55
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "margin"));   // CSDefineObservation.cs:55
 	    }                                                                                                                                      // CSDefineObservation.cs:57
 	}                                                                                                                                          // CSDefineObservation.cs:58
 	/// <summary>
@@ -102,7 +102,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.GetSingleItem();                                                                                  // CSDefineObservation.cs:67
+	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
@@ -116,7 +116,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// </summary>
 	    public MgDensity_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:53
 	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgDensity"));// CSDefineObservation.cs:55
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgDensity"));// CSDefineObservation.cs:55
 	    }                                                                                                                                      // CSDefineObservation.cs:57
 	}                                                                                                                                          // CSDefineObservation.cs:58
 	//- LocalClassDefs

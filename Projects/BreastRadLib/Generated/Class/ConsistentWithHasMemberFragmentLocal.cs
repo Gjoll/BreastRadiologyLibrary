@@ -22,7 +22,7 @@ namespace BreastRadLib.ConsistentWithHasMemberFragmentLocal
 	    /// </summary>
 	    public ConsistentWith_Accessor(BreastRadiologyDocument doc) : base()                                                                   // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                             // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                               // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	//- LocalClassDefs

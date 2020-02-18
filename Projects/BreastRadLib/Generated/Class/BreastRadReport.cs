@@ -21,7 +21,7 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// No parameters constructor.
-		// Caller must call Create();
+		// Caller must call Init();
 		/// </summary>
 		public BreastRadReport() : base()
 		{
@@ -29,30 +29,30 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource)
 		{
-			this.Create(doc, resource);
+			this.Init(doc, resource);
 		}
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public BreastRadReport(BreastRadiologyDocument doc)
 		{
-		this.Create(doc, new DiagnosticReport());
+		this.Init(doc, new DiagnosticReport());
 		}
 
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, DiagnosticReport resource = null)
+		public void Init(BreastRadiologyDocument doc, DiagnosticReport resource = null)
 		{
 			if (resource == null)
 				resource = new DiagnosticReport();
-			base.Create(doc, resource);
+			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:208

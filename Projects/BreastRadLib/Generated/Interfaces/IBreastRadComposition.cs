@@ -18,6 +18,8 @@ namespace BreastRadLib
 		//+ Fields
 		Report_Accessor Report { get ; }                                                                                                          // CSDefineComposition.cs:232
 		Impressions_Accessor Impressions { get ; }                                                                                                // CSDefineComposition.cs:232
+		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // CSDefineComposition.cs:232
+		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // CSDefineComposition.cs:232
 		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // CSDefineComposition.cs:232
 		Recommendations_Accessor Recommendations { get ; }                                                                                        // CSDefineComposition.cs:232
 		//- Fields

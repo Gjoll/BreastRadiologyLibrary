@@ -22,7 +22,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	    /// </summary>
 	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base()                                             // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");       // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");         // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	/// <summary>
@@ -36,7 +36,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	    /// </summary>
 	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base()                                                       // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                 // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                   // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	/// <summary>
@@ -50,7 +50,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	    /// </summary>
 	    public ObservedFeature_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                            // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                              // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	//- LocalClassDefs

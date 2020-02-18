@@ -21,31 +21,31 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Access propertyName
 	    /// </summary>
-	    public BreastRadReport Item                                                                                                            // CSDefineComposition.cs:79
-	    {                                                                                                                                      // CSDefineComposition.cs:80
-	        get => this.GetSingleItem();                                                                                                       // CSDefineComposition.cs:81
-	    }                                                                                                                                      // CSDefineComposition.cs:82
+	    public BreastRadReport Get => this.FirstOrDefault();                                                                                   // CSDefineComposition.cs:100
 	                                                                                                                                           // CSDefineComposition.cs:52
 	    // Methods                                                                                                                             // CSDefineComposition.cs:53
-	                                                                                                                                           // CSDefineComposition.cs:91
+	                                                                                                                                           // CSDefineComposition.cs:78
 	    /// <summary>
-	    /// Create new blank Report of type DiagnosticReport
+	    /// Create new blank Report if one doesnt already exist, and return it
 	    /// </summary>
-	    public BreastRadReport CreateBreastRadReport(DiagnosticReport fhirItem = null)                                                         // CSDefineComposition.cs:106
-	    {                                                                                                                                      // CSDefineComposition.cs:107
-	        if (fhirItem == null) fhirItem = new DiagnosticReport();                                                                           // CSDefineComposition.cs:108
-	        BreastRadReport brItem = new BreastRadReport();                                                                                    // CSDefineComposition.cs:112
-	        brItem.Create(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:113
-	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:114
-	        return brItem;                                                                                                                     // CSDefineComposition.cs:115
-	    }                                                                                                                                      // CSDefineComposition.cs:116
+	    public BreastRadReport Create => DoCreate();                                                                                           // CSDefineComposition.cs:82
+	    private BreastRadReport DoCreate()                                                                                                     // CSDefineComposition.cs:83
+	    {                                                                                                                                      // CSDefineComposition.cs:84
+	        if (this.Count == 0)                                                                                                               // CSDefineComposition.cs:85
+	        {                                                                                                                                  // CSDefineComposition.cs:86
+	            BreastRadReport brItem = new BreastRadReport();                                                                                // CSDefineComposition.cs:87
+	            brItem.Init(this.doc);                                                                                                         // CSDefineComposition.cs:88
+	            this.AppendItem(brItem);                                                                                                       // CSDefineComposition.cs:89
+	        }                                                                                                                                  // CSDefineComposition.cs:90
+	        return this.First();                                                                                                               // CSDefineComposition.cs:91
+	    }                                                                                                                                      // CSDefineComposition.cs:92
 	                                                                                                                                           // CSDefineComposition.cs:55
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
 	    public Report_Accessor(BreastRadiologyDocument doc) : base()                                                                           // CSDefineComposition.cs:59
 	    {                                                                                                                                      // CSDefineComposition.cs:60
-	        this.Create(doc, "Breast Radiology Report", 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionReport"));// CSDefineComposition.cs:61
+	        this.Init(doc, "Breast Radiology Report", 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionReport"));// CSDefineComposition.cs:61
 	    }                                                                                                                                      // CSDefineComposition.cs:63
 	}                                                                                                                                          // CSDefineComposition.cs:64
 	/// <summary>
@@ -79,7 +79,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new ClinicalImpression();                                                                         // CSDefineComposition.cs:163
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Create(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -89,7 +89,81 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public Impressions_Accessor(BreastRadiologyDocument doc) : base()                                                                      // CSDefineComposition.cs:59
 	    {                                                                                                                                      // CSDefineComposition.cs:60
-	        this.Create(doc, "Clinical Impressions", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionImpressions"));// CSDefineComposition.cs:61
+	        this.Init(doc, "Clinical Impressions", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionImpressions"));// CSDefineComposition.cs:61
+	    }                                                                                                                                      // CSDefineComposition.cs:63
+	}                                                                                                                                          // CSDefineComposition.cs:64
+	/// <summary>
+	/// Accessor class for 'Findings Right Breast'
+	/// [Fhir Element 'Composition.section:findingsRightBreast]'
+	/// </summary>
+	public class FindingsRightBreast_Accessor : SectionBase<SectionFindingsRightBreast>                                                        // CSDefineComposition.cs:43
+	{                                                                                                                                          // CSDefineComposition.cs:44
+	    // Properties                                                                                                                          // CSDefineComposition.cs:50
+	    /// <summary>
+	    /// Access propertyName
+	    /// </summary>
+	    public SectionFindingsRightBreast Get => this.FirstOrDefault();                                                                        // CSDefineComposition.cs:100
+	                                                                                                                                           // CSDefineComposition.cs:52
+	    // Methods                                                                                                                             // CSDefineComposition.cs:53
+	                                                                                                                                           // CSDefineComposition.cs:78
+	    /// <summary>
+	    /// Create new blank FindingsRightBreast if one doesnt already exist, and return it
+	    /// </summary>
+	    public SectionFindingsRightBreast Create => DoCreate();                                                                                // CSDefineComposition.cs:82
+	    private SectionFindingsRightBreast DoCreate()                                                                                          // CSDefineComposition.cs:83
+	    {                                                                                                                                      // CSDefineComposition.cs:84
+	        if (this.Count == 0)                                                                                                               // CSDefineComposition.cs:85
+	        {                                                                                                                                  // CSDefineComposition.cs:86
+	            SectionFindingsRightBreast brItem = new SectionFindingsRightBreast();                                                          // CSDefineComposition.cs:87
+	            brItem.Init(this.doc);                                                                                                         // CSDefineComposition.cs:88
+	            this.AppendItem(brItem);                                                                                                       // CSDefineComposition.cs:89
+	        }                                                                                                                                  // CSDefineComposition.cs:90
+	        return this.First();                                                                                                               // CSDefineComposition.cs:91
+	    }                                                                                                                                      // CSDefineComposition.cs:92
+	                                                                                                                                           // CSDefineComposition.cs:55
+	    /// <summary>
+	    /// Accessor class constructor
+	    /// </summary>
+	    public FindingsRightBreast_Accessor(BreastRadiologyDocument doc) : base()                                                              // CSDefineComposition.cs:59
+	    {                                                                                                                                      // CSDefineComposition.cs:60
+	        this.Init(doc, "Findings Right Breast", 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeFindingsRightBreast"));// CSDefineComposition.cs:61
+	    }                                                                                                                                      // CSDefineComposition.cs:63
+	}                                                                                                                                          // CSDefineComposition.cs:64
+	/// <summary>
+	/// Accessor class for 'Findings Left Breast'
+	/// [Fhir Element 'Composition.section:findingsLeftBreast]'
+	/// </summary>
+	public class FindingsLeftBreast_Accessor : SectionBase<SectionFindingsLeftBreast>                                                          // CSDefineComposition.cs:43
+	{                                                                                                                                          // CSDefineComposition.cs:44
+	    // Properties                                                                                                                          // CSDefineComposition.cs:50
+	    /// <summary>
+	    /// Access propertyName
+	    /// </summary>
+	    public SectionFindingsLeftBreast Get => this.FirstOrDefault();                                                                         // CSDefineComposition.cs:100
+	                                                                                                                                           // CSDefineComposition.cs:52
+	    // Methods                                                                                                                             // CSDefineComposition.cs:53
+	                                                                                                                                           // CSDefineComposition.cs:78
+	    /// <summary>
+	    /// Create new blank FindingsLeftBreast if one doesnt already exist, and return it
+	    /// </summary>
+	    public SectionFindingsLeftBreast Create => DoCreate();                                                                                 // CSDefineComposition.cs:82
+	    private SectionFindingsLeftBreast DoCreate()                                                                                           // CSDefineComposition.cs:83
+	    {                                                                                                                                      // CSDefineComposition.cs:84
+	        if (this.Count == 0)                                                                                                               // CSDefineComposition.cs:85
+	        {                                                                                                                                  // CSDefineComposition.cs:86
+	            SectionFindingsLeftBreast brItem = new SectionFindingsLeftBreast();                                                            // CSDefineComposition.cs:87
+	            brItem.Init(this.doc);                                                                                                         // CSDefineComposition.cs:88
+	            this.AppendItem(brItem);                                                                                                       // CSDefineComposition.cs:89
+	        }                                                                                                                                  // CSDefineComposition.cs:90
+	        return this.First();                                                                                                               // CSDefineComposition.cs:91
+	    }                                                                                                                                      // CSDefineComposition.cs:92
+	                                                                                                                                           // CSDefineComposition.cs:55
+	    /// <summary>
+	    /// Accessor class constructor
+	    /// </summary>
+	    public FindingsLeftBreast_Accessor(BreastRadiologyDocument doc) : base()                                                               // CSDefineComposition.cs:59
+	    {                                                                                                                                      // CSDefineComposition.cs:60
+	        this.Init(doc, "Findings Left Breast", 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeFindingsLeftBreast"));// CSDefineComposition.cs:61
 	    }                                                                                                                                      // CSDefineComposition.cs:63
 	}                                                                                                                                          // CSDefineComposition.cs:64
 	/// <summary>
@@ -122,7 +196,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    public ResourceBase AddResource(Resource fhirItem)                                                                                     // CSDefineComposition.cs:154
 	    {                                                                                                                                      // CSDefineComposition.cs:155
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Create(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -132,7 +206,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public RelatedResources_Accessor(BreastRadiologyDocument doc) : base()                                                                 // CSDefineComposition.cs:59
 	    {                                                                                                                                      // CSDefineComposition.cs:60
-	        this.Create(doc, "Related Resources", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionRelatedResources"));// CSDefineComposition.cs:61
+	        this.Init(doc, "Related Resources", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionRelatedResources"));// CSDefineComposition.cs:61
 	    }                                                                                                                                      // CSDefineComposition.cs:63
 	}                                                                                                                                          // CSDefineComposition.cs:64
 	/// <summary>
@@ -166,7 +240,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new MedicationRequest();                                                                          // CSDefineComposition.cs:163
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Create(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -178,7 +252,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new ServiceRequest();                                                                             // CSDefineComposition.cs:163
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Create(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -190,7 +264,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new ServiceRequest();                                                                             // CSDefineComposition.cs:163
 	        ServiceRecommendation brItem = new ServiceRecommendation();                                                                        // CSDefineComposition.cs:167
-	        brItem.Create(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -200,7 +274,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public Recommendations_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineComposition.cs:59
 	    {                                                                                                                                      // CSDefineComposition.cs:60
-	        this.Create(doc, "Recommendations", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeRecommendations"));// CSDefineComposition.cs:61
+	        this.Init(doc, "Recommendations", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeRecommendations"));// CSDefineComposition.cs:61
 	    }                                                                                                                                      // CSDefineComposition.cs:63
 	}                                                                                                                                          // CSDefineComposition.cs:64
 	//- LocalClassDefs

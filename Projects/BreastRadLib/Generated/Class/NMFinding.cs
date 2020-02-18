@@ -25,7 +25,7 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// No parameters constructor.
-		// Caller must call Create();
+		// Caller must call Init();
 		/// </summary>
 		public NMFinding() : base()
 		{
@@ -33,30 +33,30 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public NMFinding(BreastRadiologyDocument doc, Observation resource)
 		{
-			this.Create(doc, resource);
+			this.Init(doc, resource);
 		}
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public NMFinding(BreastRadiologyDocument doc)
 		{
-		this.Create(doc, new Observation());
+		this.Init(doc, new Observation());
 		}
 
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, Observation resource = null)
+		public void Init(BreastRadiologyDocument doc, Observation resource = null)
 		{
 			if (resource == null)
 				resource = new Observation();
-			base.Create(doc, resource);
+			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                                  // CSDefineBase.cs:208

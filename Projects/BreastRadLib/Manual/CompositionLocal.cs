@@ -29,13 +29,13 @@ namespace BreastRadLib.CompositionLocal
         {
         }
 
-        protected void Create(BreastRadiologyDocument doc,
+        protected void Init(BreastRadiologyDocument doc,
             String title,
             Int32 min,
             Int32 max,
             Coding code)
         {
-            base.Create(doc, min, max);
+            base.Init(doc, min, max);
             this.Title = title;
             this.Code = code;
         }

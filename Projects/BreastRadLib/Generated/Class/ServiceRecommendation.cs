@@ -20,7 +20,7 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// No parameters constructor.
-		// Caller must call Create();
+		// Caller must call Init();
 		/// </summary>
 		public ServiceRecommendation() : base()
 		{
@@ -28,30 +28,30 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public ServiceRecommendation(BreastRadiologyDocument doc, ServiceRequest resource)
 		{
-			this.Create(doc, resource);
+			this.Init(doc, resource);
 		}
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public ServiceRecommendation(BreastRadiologyDocument doc)
 		{
-		this.Create(doc, new ServiceRequest());
+		this.Init(doc, new ServiceRequest());
 		}
 
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, ServiceRequest resource = null)
+		public void Init(BreastRadiologyDocument doc, ServiceRequest resource = null)
 		{
 			if (resource == null)
 				resource = new ServiceRequest();
-			base.Create(doc, resource);
+			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:208
 			//- Constructor

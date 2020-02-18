@@ -35,9 +35,14 @@ namespace BreastRadLib
 		public static Coding Code_SectionCodeRecommendations = new Coding(System, "sectionCodeRecommendations", "Code to identify the 'Recommendations' section slice");// CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
-		/// Slicing CompositionSection Code - Findings
+		/// Slicing CompositionSection Code - Findings Left Breast
 		/// </summary>
-		public static Coding Code_SectionCodeFindings = new Coding(System, "sectionCodeFindings", "Code to identify the 'Findings' section slice");// CSBuilder.cs:372
+		public static Coding Code_SectionCodeFindingsLeftBreast = new Coding(System, "sectionCodeFindingsLeftBreast", "Code to identify the 'Findings Left Breast' section slice");// CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
+		/// <summary>
+		/// Slicing CompositionSection Code - Findings Right Breast
+		/// </summary>
+		public static Coding Code_SectionCodeFindingsRightBreast = new Coding(System, "sectionCodeFindingsRightBreast", "Code to identify the 'Findings Right Breast' section slice");// CSBuilder.cs:372
 		//- Fields
 	}
 }

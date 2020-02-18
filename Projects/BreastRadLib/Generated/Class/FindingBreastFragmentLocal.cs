@@ -22,7 +22,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// </summary>
 	    public MGFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                  // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                    // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	/// <summary>
@@ -36,7 +36,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// </summary>
 	    public MRIFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                       // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                 // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                   // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	/// <summary>
@@ -50,7 +50,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// </summary>
 	    public NMFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                  // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                    // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	/// <summary>
@@ -64,7 +64,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// </summary>
 	    public USFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:205
 	    {                                                                                                                                      // CSDefineObservation.cs:206
-	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");                                  // CSDefineObservation.cs:207
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");                                    // CSDefineObservation.cs:207
 	    }                                                                                                                                      // CSDefineObservation.cs:208
 	}                                                                                                                                          // CSDefineObservation.cs:209
 	//- LocalClassDefs

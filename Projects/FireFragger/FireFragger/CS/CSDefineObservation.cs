@@ -52,7 +52,7 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                 .OpenBrace()
-                .AppendCode($"this.Create(doc, {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
+                .AppendCode($"this.Init(doc, {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
                 .DefineBlock(out CodeBlockNested constructorBlock)
                 .CloseBrace()
                 .CloseBrace()
@@ -64,7 +64,7 @@ namespace FireFragger
                     .SummaryOpen()
                     .Summary("get {propertyName} value")
                     .SummaryClose()
-                    .AppendCode($"public {propertyType} Value => base.GetSingleItem();")
+                    .AppendCode($"public {propertyType} Value => base.FirstOrDefault();")
                     ;
                 foreach (String valueType in valueTypes)
                 {
@@ -188,7 +188,7 @@ namespace FireFragger
                     .SummaryClose()
                     .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                     .OpenBrace()
-                    .AppendCode($"this.Create(doc, {min}, {max}, \"{profileUrl}\");")
+                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
                     .CloseBrace()
                     .CloseBrace()
                     ;
@@ -204,7 +204,7 @@ namespace FireFragger
                     .SummaryClose()
                     .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                     .OpenBrace()
-                    .AppendCode($"this.Create(doc, {min}, {max}, \"{profileUrl}\");")
+                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
                     .CloseBrace()
                     .CloseBrace()
                     ;

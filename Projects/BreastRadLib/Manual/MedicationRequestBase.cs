@@ -19,12 +19,12 @@ namespace BreastRadLib
 
         public MedicationRequestBase(BreastRadiologyDocument doc, MedicationRequest resource) : base()
         {
-            this.Create(doc, resource);
+            this.Init(doc, resource);
         }
 
         public MedicationRequestBase(BreastRadiologyDocument doc) : base()
         {
-            this.Create(doc, new MedicationRequest());
+            this.Init(doc, new MedicationRequest());
         }
     }
 }

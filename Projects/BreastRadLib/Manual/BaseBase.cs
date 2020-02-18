@@ -26,7 +26,7 @@ namespace BreastRadLib
         {
         }
 
-        public void Create(BreastRadiologyDocument doc, Base resource)
+        public void Init(BreastRadiologyDocument doc, Base resource)
         {
             this.doc = doc;
             this.resource = resource;

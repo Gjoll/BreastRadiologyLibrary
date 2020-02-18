@@ -72,49 +72,49 @@ namespace FireFragger
 
             if (max == 1)
             {
+                void DefineCreate(String fhirType, String propertyType, String targetName)
+                {
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Create new blank {propertyName} if one doesnt already exist, and return it")
+                        .SummaryClose()
+                        .AppendCode($"public {propertyType} Create{targetName} => DoCreate{targetName}();")
+                        .AppendCode($"private {propertyType} DoCreate{targetName}()")
+                        .OpenBrace()
+                        .AppendCode($"if (this.Count == 0)")
+                        .OpenBrace()
+                        .AppendCode($"{propertyType} brItem = new {propertyType}();")
+                        .AppendCode($"brItem.Init(this.doc);")
+                        .AppendCode($"this.AppendItem(brItem);")
+                        .CloseBrace()
+                        .AppendCode($"return this.First();")
+                        .CloseBrace()
+                        ;
+                }
+
                 propertiesBlock
                     .SummaryOpen()
                     .Summary("Access propertyName")
                     .SummaryClose()
-                    .AppendCode($"public {brClass} Item")
-                    .OpenBrace()
-                    .AppendCode($"get => this.GetSingleItem();")
-                    .CloseBrace()
+                    .AppendCode($"public {brClass} Get => this.FirstOrDefault();")
                     ;
 
-                foreach (String target in references)
+                if (references.Length == 1)
                 {
-                    String targetName = target.LastUriPart();
-                    String fhirType = this.FhirClass(target);
-                    String propertyType = this.BRClass(target);
-                    methodsBlock
-                        .BlankLine()
-                        .SummaryOpen()
-                        .Summary($"Create new blank {propertyName} of type {fhirType}")
-                        .SummaryClose()
-                        ;
-                    if (fhirType == "Resource")
+                    String fhirType = this.FhirClass(references[0]);
+                    String propertyType = this.BRClass(references[0]);
+                    DefineCreate(fhirType, propertyType, "");
+                }
+                else
+                {
+                    foreach (String target in references)
                     {
-                        methodsBlock
-                            .AppendCode($"public {propertyType} Create{targetName}({fhirType} fhirItem)")
-                            .OpenBrace()
-                            ;
+                        String targetName = target.LastUriPart();
+                        String fhirType = this.FhirClass(target);
+                        String propertyType = this.BRClass(target);
+                        DefineCreate(fhirType, propertyType, targetName);
                     }
-                    else
-                    {
-                        methodsBlock
-                            .AppendCode($"public {propertyType} Create{targetName}({fhirType} fhirItem = null)")
-                            .OpenBrace()
-                            .AppendCode($"if (fhirItem == null) fhirItem = new {fhirType}();")
-                            ;
-                    }
-                    methodsBlock
-                        .AppendCode($"{propertyType} brItem = new {propertyType}();")
-                        .AppendCode($"brItem.Create(this.doc, fhirItem);")
-                        .AppendCode($"this.AppendItem(brItem);")
-                        .AppendCode($"return brItem;")
-                        .CloseBrace()
-                        ;
                 }
             }
             else
@@ -169,7 +169,7 @@ namespace FireFragger
                         .AppendCode($"this.AppendItem(brItem);")
                         .AppendCode($"return brItem;")
                         .CloseBrace();
-                        ;
+                    ;
                 }
             }
             return className;

@@ -21,7 +21,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.GetSingleItem();                                                                                  // CSDefineObservation.cs:67
+	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
@@ -35,7 +35,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// </summary>
 	    public CalcificationType_Accessor(BreastRadiologyDocument doc) : base()                                                                // CSDefineObservation.cs:53
 	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgCalcificationType"));// CSDefineObservation.cs:55
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgCalcificationType"));// CSDefineObservation.cs:55
 	    }                                                                                                                                      // CSDefineObservation.cs:57
 	}                                                                                                                                          // CSDefineObservation.cs:58
 	/// <summary>
@@ -48,7 +48,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.GetSingleItem();                                                                                  // CSDefineObservation.cs:67
+	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
@@ -62,7 +62,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// </summary>
 	    public CalcificationDistribution_Accessor(BreastRadiologyDocument doc) : base()                                                        // CSDefineObservation.cs:53
 	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Create(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgCalcificationDistribution"));// CSDefineObservation.cs:55
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgCalcificationDistribution"));// CSDefineObservation.cs:55
 	    }                                                                                                                                      // CSDefineObservation.cs:57
 	}                                                                                                                                          // CSDefineObservation.cs:58
 	//- LocalClassDefs

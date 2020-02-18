@@ -22,7 +22,7 @@ namespace BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal
 	    /// </summary>
 	    public AssociatedFeatures_Accessor(BreastRadiologyDocument doc) : base()                                                               // CSDefineObservation.cs:189
 	    {                                                                                                                                      // CSDefineObservation.cs:190
-	        this.Create(doc, 0, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                          // CSDefineObservation.cs:191
+	        this.Init(doc, 0, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                            // CSDefineObservation.cs:191
 	    }                                                                                                                                      // CSDefineObservation.cs:192
 	}                                                                                                                                          // CSDefineObservation.cs:193
 	//- LocalClassDefs

@@ -19,7 +19,7 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// No parameters constructor.
-		// Caller must call Create();
+		// Caller must call Init();
 		/// </summary>
 		public BreastBodyLocationExtension() : base()
 		{
@@ -27,30 +27,30 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public BreastBodyLocationExtension(BreastRadiologyDocument doc, Extension resource)
 		{
-			this.Create(doc, resource);
+			this.Init(doc, resource);
 		}
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public BreastBodyLocationExtension(BreastRadiologyDocument doc)
 		{
-		this.Create(doc, new Extension());
+		this.Init(doc, new Extension());
 		}
 
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, Extension resource = null)
+		public void Init(BreastRadiologyDocument doc, Extension resource = null)
 		{
 			if (resource == null)
 				resource = new Extension();
-			base.Create(doc, resource);
+			base.Init(doc, resource);
 			//+ Constructor
 			//- Constructor
 		}

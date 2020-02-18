@@ -19,12 +19,12 @@ namespace BreastRadLib
 
         public ClinicalImpressionBase(BreastRadiologyDocument doc, ClinicalImpression resource) : base()
         {
-            this.Create(doc, resource);
+            this.Init(doc, resource);
         }
 
         public ClinicalImpressionBase(BreastRadiologyDocument doc) : base()
         {
-            this.Create(doc, new ClinicalImpression());
+            this.Init(doc, new ClinicalImpression());
         }
     }
 }

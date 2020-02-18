@@ -24,13 +24,13 @@ namespace BreastRadLib
             {
             }
 
-            public void Create(BreastRadiologyDocument doc,
+            public void Init(BreastRadiologyDocument doc,
                     Int32 min,
                     Int32 max,
                     String profileUrl)
             {
                 this.ProfileUrl = profileUrl;
-                base.Create(doc, min, max);
+                base.Init(doc, min, max);
             }
         }
 
@@ -43,17 +43,18 @@ namespace BreastRadLib
             /// <summary>
             /// Get item
             /// </summary>
-            public BaseType Get() => base.GetSingleItem();
+            public BaseType Get() => this.FirstOrDefault();
 
             /// <summary>
             /// Create item if it doesn't already exist, and return item.
             /// </summary>
-            public BaseType Create()
+            public BaseType Create => DoCreate();
+            BaseType DoCreate()
             {
                 if (this.items.Count == 0)
                 {
                     BaseType item = new BaseType();
-                    item.Create(this.doc, new Observation());
+                    item.Init(this.doc, new Observation());
                     this.items.Add(item);
                 }
                 return this.items.First();
@@ -67,7 +68,7 @@ namespace BreastRadLib
                 if (item == null)
                 {
                     item = new BaseType();
-                    item.Create(this.doc, new Observation());
+                    item.Init(this.doc, new Observation());
                 }
                 base.SetSingleItem(item);
                 return item;
@@ -104,12 +105,12 @@ namespace BreastRadLib
             {
             }
 
-            protected void Create(BreastRadiologyDocument doc,
+            protected void Init(BreastRadiologyDocument doc,
                 Int32 min,
                 Int32 max,
                 Coding code)
             {
-                base.Create(doc, min, max);
+                base.Init(doc, min, max);
                 this.Code = code;
             }
 
@@ -129,12 +130,12 @@ namespace BreastRadLib
 
         public ObservationBase(BreastRadiologyDocument doc, Observation resource) : base()
         {
-            this.Create(doc, resource);
+            this.Init(doc, resource);
         }
 
         public ObservationBase(BreastRadiologyDocument doc) : base()
         {
-            this.Create(doc, new Observation());
+            this.Init(doc, new Observation());
         }
 
         protected void ClearHasMembers()
@@ -168,7 +169,7 @@ namespace BreastRadLib
                 if (Misc.SameUrl(profile, hasMemberList.ProfileUrl))
                 {
                     BaseType item = new BaseType();
-                    item.Create(this.doc, referencedResource);
+                    item.Init(this.doc, referencedResource);
                     hasMemberList.RawItems.Add(item);
                 }
             }

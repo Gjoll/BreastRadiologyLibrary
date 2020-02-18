@@ -21,7 +21,7 @@ namespace BreastRadLib
 
         public CompositionBase(BreastRadiologyDocument doc) : base()
         {
-            this.Create(doc, new Composition());
+            this.Init(doc, new Composition());
         }
 
         protected void ClearSection()

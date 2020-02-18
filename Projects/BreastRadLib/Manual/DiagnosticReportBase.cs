@@ -19,12 +19,12 @@ namespace BreastRadLib
 
         public DiagnosticReportBase(BreastRadiologyDocument doc, DiagnosticReport resource) : base()
         {
-            this.Create(doc, resource);
+            this.Init(doc, resource);
         }
 
         public DiagnosticReportBase(BreastRadiologyDocument doc) : base()
         {
-            this.Create(doc, new DiagnosticReport());
+            this.Init(doc, new DiagnosticReport());
         }
     }
 }

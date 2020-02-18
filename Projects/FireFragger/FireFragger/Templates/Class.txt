@@ -21,7 +21,7 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// No parameters constructor.
-		// Caller must call Create();
+		// Caller must call Init();
 		/// </summary>
 		public %ClassName%() : base()
 		{
@@ -29,30 +29,30 @@ namespace BreastRadLib
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public %ClassName%(BreastRadiologyDocument doc, %FhirBase% resource)
 		{
-			this.Create(doc, resource);
+			this.Init(doc, resource);
 		}
 
 		/// <summary>
 		/// Parametersize constructur.
-		/// User must not call Create().
+		/// User must not call Init().
 		/// </summary>
 		public %ClassName%(BreastRadiologyDocument doc)
 		{
-		this.Create(doc, new %FhirBase%());
+		this.Init(doc, new %FhirBase%());
 		}
 
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Create(BreastRadiologyDocument doc, %FhirBase% resource = null)
+		public void Init(BreastRadiologyDocument doc, %FhirBase% resource = null)
 		{
 			if (resource == null)
 				resource = new %FhirBase%();
-			base.Create(doc, resource);
+			base.Init(doc, resource);
 			//+ Constructor
 			//- Constructor
 		}

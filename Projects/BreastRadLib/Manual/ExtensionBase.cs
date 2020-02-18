@@ -25,12 +25,12 @@ namespace BreastRadLib
 
         public ExtensionBase(BreastRadiologyDocument doc, Extension resource) : base()
         {
-            this.Create(doc, resource);
+            this.Init(doc, resource);
         }
 
         public ExtensionBase(BreastRadiologyDocument doc) : base()
         {
-            this.Create(doc, new Extension());
+            this.Init(doc, new Extension());
         }
     }
 }
