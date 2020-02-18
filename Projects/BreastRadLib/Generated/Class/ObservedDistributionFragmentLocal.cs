@@ -15,7 +15,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// Accessor class for 'obsDistribution'
 	/// [Fhir Element 'Observation.component:obsDistribution]'
 	/// </summary>
-	public class ObsDistribution_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                     // CSDefineObservation.cs:42
+	public class ObsDistribution_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                    // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>
@@ -42,7 +42,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// Accessor class for 'obsDistRegionSize'
 	/// [Fhir Element 'Observation.component:obsDistRegionSize]'
 	/// </summary>
-	public class ObsDistRegionSize_Accessor : ObservationBase.ComponentBase<Base>                                                              // CSDefineObservation.cs:42
+	public class ObsDistRegionSize_Accessor : ObservationLocal.ComponentBase<Base>                                                             // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>

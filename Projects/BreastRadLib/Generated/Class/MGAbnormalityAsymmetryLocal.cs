@@ -15,7 +15,7 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 	/// Accessor class for 'asymmetryType'
 	/// [Fhir Element 'Observation.component:asymmetryType]'
 	/// </summary>
-	public class AsymmetryType_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                       // CSDefineObservation.cs:42
+	public class AsymmetryType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                      // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>

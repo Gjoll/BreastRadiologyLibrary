@@ -15,7 +15,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	/// Accessor class for 'calcificationType'
 	/// [Fhir Element 'Observation.component:calcificationType]'
 	/// </summary>
-	public class CalcificationType_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                   // CSDefineObservation.cs:42
+	public class CalcificationType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                  // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>
@@ -42,7 +42,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	/// Accessor class for 'calcificationDistribution'
 	/// [Fhir Element 'Observation.component:calcificationDistribution]'
 	/// </summary>
-	public class CalcificationDistribution_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                           // CSDefineObservation.cs:42
+	public class CalcificationDistribution_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                          // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>

@@ -15,7 +15,7 @@ namespace BreastRadLib.ObservedChangesFragmentLocal
 	/// Accessor class for 'obsChanges'
 	/// [Fhir Element 'Observation.component:obsChanges]'
 	/// </summary>
-	public class ObsChanges_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                          // CSDefineObservation.cs:42
+	public class ObsChanges_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                         // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>

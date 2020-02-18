@@ -15,7 +15,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for ObservationhasMember slice 'mGFinding'
 	/// [Fhir Element 'Observation.hasMember:mGFinding]'
 	/// </summary>
-	public class MGFinding_Accessor : ObservationBase.HasMemberMultiple<MGFinding>                                                             // CSDefineObservation.cs:199
+	public class MGFinding_Accessor : ObservationLocal.HasMemberMultiple<MGFinding>                                                            // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGFinding_Accessor class constructor
@@ -29,7 +29,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for ObservationhasMember slice 'mRIFinding'
 	/// [Fhir Element 'Observation.hasMember:mRIFinding]'
 	/// </summary>
-	public class MRIFinding_Accessor : ObservationBase.HasMemberMultiple<MRIFinding>                                                           // CSDefineObservation.cs:199
+	public class MRIFinding_Accessor : ObservationLocal.HasMemberMultiple<MRIFinding>                                                          // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MRIFinding_Accessor class constructor
@@ -43,7 +43,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for ObservationhasMember slice 'nMFinding'
 	/// [Fhir Element 'Observation.hasMember:nMFinding]'
 	/// </summary>
-	public class NMFinding_Accessor : ObservationBase.HasMemberMultiple<NMFinding>                                                             // CSDefineObservation.cs:199
+	public class NMFinding_Accessor : ObservationLocal.HasMemberMultiple<NMFinding>                                                            // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice NMFinding_Accessor class constructor
@@ -57,7 +57,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for ObservationhasMember slice 'uSFinding'
 	/// [Fhir Element 'Observation.hasMember:uSFinding]'
 	/// </summary>
-	public class USFinding_Accessor : ObservationBase.HasMemberMultiple<USFinding>                                                             // CSDefineObservation.cs:199
+	public class USFinding_Accessor : ObservationLocal.HasMemberMultiple<USFinding>                                                            // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice USFinding_Accessor class constructor

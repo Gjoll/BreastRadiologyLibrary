@@ -15,7 +15,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'abnormalityCyst'
 	/// [Fhir Element 'Observation.hasMember:abnormalityCyst]'
 	/// </summary>
-	public class AbnormalityCyst_Accessor : ObservationBase.HasMemberMultiple<AbnormalityCyst>                                                 // CSDefineObservation.cs:199
+	public class AbnormalityCyst_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityCyst>                                                // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityCyst_Accessor class constructor
@@ -29,7 +29,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'abnormalityDuct'
 	/// [Fhir Element 'Observation.hasMember:abnormalityDuct]'
 	/// </summary>
-	public class AbnormalityDuct_Accessor : ObservationBase.HasMemberMultiple<AbnormalityDuct>                                                 // CSDefineObservation.cs:199
+	public class AbnormalityDuct_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityDuct>                                                // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityDuct_Accessor class constructor
@@ -43,7 +43,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'abnormalityForeignObject'
 	/// [Fhir Element 'Observation.hasMember:abnormalityForeignObject]'
 	/// </summary>
-	public class AbnormalityForeignObject_Accessor : ObservationBase.HasMemberMultiple<AbnormalityForeignObject>                               // CSDefineObservation.cs:199
+	public class AbnormalityForeignObject_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityForeignObject>                              // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityForeignObject_Accessor class constructor
@@ -57,7 +57,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'abnormalityLymphNode'
 	/// [Fhir Element 'Observation.hasMember:abnormalityLymphNode]'
 	/// </summary>
-	public class AbnormalityLymphNode_Accessor : ObservationBase.HasMemberMultiple<AbnormalityLymphNode>                                       // CSDefineObservation.cs:199
+	public class AbnormalityLymphNode_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityLymphNode>                                      // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityLymphNode_Accessor class constructor
@@ -71,7 +71,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'abnormalityMass'
 	/// [Fhir Element 'Observation.hasMember:abnormalityMass]'
 	/// </summary>
-	public class AbnormalityMass_Accessor : ObservationBase.HasMemberMultiple<AbnormalityMass>                                                 // CSDefineObservation.cs:199
+	public class AbnormalityMass_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityMass>                                                // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityMass_Accessor class constructor
@@ -85,7 +85,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'associatedFeatures'
 	/// [Fhir Element 'Observation.hasMember:associatedFeatures]'
 	/// </summary>
-	public class AssociatedFeatures_Accessor : ObservationBase.HasMemberMultiple<AssociatedFeatures>                                           // CSDefineObservation.cs:199
+	public class AssociatedFeatures_Accessor : ObservationLocal.HasMemberMultiple<AssociatedFeatures>                                          // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice AssociatedFeatures_Accessor class constructor
@@ -99,7 +99,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'abnormalityFibroadenoma'
 	/// [Fhir Element 'Observation.hasMember:abnormalityFibroadenoma]'
 	/// </summary>
-	public class AbnormalityFibroadenoma_Accessor : ObservationBase.HasMemberMultiple<AbnormalityFibroadenoma>                                 // CSDefineObservation.cs:199
+	public class AbnormalityFibroadenoma_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityFibroadenoma>                                // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityFibroadenoma_Accessor class constructor
@@ -113,7 +113,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>       // CSDefineObservation.cs:199
+	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>      // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityArchitecturalDistortion_Accessor class constructor
@@ -127,7 +127,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityAsymmetry'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityAsymmetry]'
 	/// </summary>
-	public class MGAbnormalityAsymmetry_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityAsymmetry>                                   // CSDefineObservation.cs:199
+	public class MGAbnormalityAsymmetry_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityAsymmetry>                                  // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityAsymmetry_Accessor class constructor
@@ -141,7 +141,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityCalcification>                           // CSDefineObservation.cs:199
+	public class MGAbnormalityCalcification_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityCalcification>                          // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityCalcification_Accessor class constructor
@@ -155,7 +155,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityDensity'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityDensity]'
 	/// </summary>
-	public class MGAbnormalityDensity_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityDensity>                                       // CSDefineObservation.cs:199
+	public class MGAbnormalityDensity_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityDensity>                                      // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityDensity_Accessor class constructor
@@ -169,7 +169,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityFatNecrosis'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityFatNecrosis]'
 	/// </summary>
-	public class MGAbnormalityFatNecrosis_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityFatNecrosis>                               // CSDefineObservation.cs:199
+	public class MGAbnormalityFatNecrosis_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityFatNecrosis>                              // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityFatNecrosis_Accessor class constructor
@@ -183,7 +183,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'mGBreastDensity'
 	/// [Fhir Element 'Observation.hasMember:mGBreastDensity]'
 	/// </summary>
-	public class MGBreastDensity_Accessor : ObservationBase.HasMemberSingle<MGBreastDensity>                                                   // CSDefineObservation.cs:183
+	public class MGBreastDensity_Accessor : ObservationLocal.HasMemberSingle<MGBreastDensity>                                                  // CSDefineObservation.cs:183
 	{                                                                                                                                          // CSDefineObservation.cs:184
 	    /// <summary>
 	    /// Accessor HasMember slice MGBreastDensity_Accessor class constructor

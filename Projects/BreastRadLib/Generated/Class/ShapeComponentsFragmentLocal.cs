@@ -15,7 +15,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// Accessor class for 'orientation'
 	/// [Fhir Element 'Observation.component:orientation]'
 	/// </summary>
-	public class Orientation_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                         // CSDefineObservation.cs:42
+	public class Orientation_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                        // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>
@@ -42,7 +42,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// Accessor class for 'shape'
 	/// [Fhir Element 'Observation.component:shape]'
 	/// </summary>
-	public class Shape_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                               // CSDefineObservation.cs:42
+	public class Shape_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                              // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>
@@ -69,7 +69,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// Accessor class for 'margin'
 	/// [Fhir Element 'Observation.component:margin]'
 	/// </summary>
-	public class Margin_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                              // CSDefineObservation.cs:42
+	public class Margin_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                             // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>
@@ -96,7 +96,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// Accessor class for 'mgDensity'
 	/// [Fhir Element 'Observation.component:mgDensity]'
 	/// </summary>
-	public class MgDensity_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                           // CSDefineObservation.cs:42
+	public class MgDensity_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                          // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>

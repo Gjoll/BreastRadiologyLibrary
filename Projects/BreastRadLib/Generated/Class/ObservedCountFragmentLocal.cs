@@ -15,7 +15,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	/// Accessor class for 'obsCount'
 	/// [Fhir Element 'Observation.component:obsCount]'
 	/// </summary>
-	public class ObsCount_Accessor : ObservationBase.ComponentBase<Base>                                                                       // CSDefineObservation.cs:42
+	public class ObsCount_Accessor : ObservationLocal.ComponentBase<Base>                                                                      // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>

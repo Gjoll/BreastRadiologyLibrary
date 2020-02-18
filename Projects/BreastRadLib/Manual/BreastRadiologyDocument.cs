@@ -44,6 +44,18 @@ namespace BreastRadLib
             this.items.Add(baseItem.BaseResource, baseItem);
         }
 
+        public bool TryGetRegisteredItem<T>(Base fhirBase, out T item)
+            where T : BaseBase
+        {
+            item = null;
+            if (this.items.TryGetValue(fhirBase, out BaseBase temp) == false)
+                return false;
+            item = temp as T;
+            if (item == null)
+                throw new Exception($"Item of class {temp.GetType().Name} can not be converted to class {typeof(T).Name}");
+            return true;
+        }
+
         /// <summary>
         /// Create a new BreastRadiologyDocument.
         /// </summary>
@@ -81,10 +93,25 @@ namespace BreastRadLib
         void LoadBundle(Bundle bundle)
         {
             this.ResourceBag = new ResourceBag(bundle);
-            Composition index = bundle?.Entry?.First().Resource as Composition;
-            if (index == null)
-                throw new Exception($"Invalid bundle. First item is not a Composition");
-            this.Index = new BreastRadComposition(this, index);
+
+            // First entry is always composition item.
+            {
+                Composition index = bundle.Entry?.First().Resource as Composition;
+                if (index == null)
+                    throw new Exception($"Invalid bundle. First item is not a Composition");
+                this.Index = new BreastRadComposition(this, index);
+            }
+            foreach (Bundle.EntryComponent entry in bundle.Entry.Skip(1))
+            {
+                String profile = entry.Resource?.Meta?.Profile?.First();
+                if (profile == null)
+                    throw new Exception("Resource in bundle lacks Meta.Profile element to identify the profile.");
+                var item = ResourceFactory.CreateBreastRadProfileResource(this,
+                    profile,
+                    entry.Resource);
+                if (item == null)
+                    item = new ResourceBase(this, (DomainResource) entry.Resource);
+            }
         }
 
         /// <summary>

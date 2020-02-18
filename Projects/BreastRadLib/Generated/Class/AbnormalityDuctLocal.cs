@@ -15,7 +15,7 @@ namespace BreastRadLib.AbnormalityDuctLocal
 	/// Accessor class for 'ductType'
 	/// [Fhir Element 'Observation.component:ductType]'
 	/// </summary>
-	public class DuctType_Accessor : ObservationBase.ComponentBase<CodeableConcept>                                                            // CSDefineObservation.cs:42
+	public class DuctType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                           // CSDefineObservation.cs:42
 	{                                                                                                                                          // CSDefineObservation.cs:43
 	    // Properties                                                                                                                          // CSDefineObservation.cs:44
 	    /// <summary>

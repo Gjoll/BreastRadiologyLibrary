@@ -15,7 +15,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>       // CSDefineObservation.cs:199
+	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>      // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityArchitecturalDistortion_Accessor class constructor
@@ -29,7 +29,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityCalcification>                           // CSDefineObservation.cs:199
+	public class MGAbnormalityCalcification_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityCalcification>                          // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityCalcification_Accessor class constructor
@@ -43,7 +43,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for ObservationhasMember slice 'observedFeature'
 	/// [Fhir Element 'Observation.hasMember:observedFeature]'
 	/// </summary>
-	public class ObservedFeature_Accessor : ObservationBase.HasMemberMultiple<ObservedFeature>                                                 // CSDefineObservation.cs:199
+	public class ObservedFeature_Accessor : ObservationLocal.HasMemberMultiple<ObservedFeature>                                                // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice ObservedFeature_Accessor class constructor

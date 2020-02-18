@@ -39,7 +39,7 @@ namespace FireFragger
                 .Summary($"Accessor class for '{componentSlice.Name}'")
                 .Summary($"[Fhir Element '{componentSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : ObservationBase.ComponentBase<{propertyType}>")
+                .AppendCode($"public class {className} : ObservationLocal.ComponentBase<{propertyType}>")
                 .OpenBrace()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)
@@ -180,7 +180,7 @@ namespace FireFragger
             if (max == 1)
             {
                 this.LocalClassDefs
-                    .AppendCode($"public class {className} : ObservationBase.HasMemberSingle<{propertyType}>")
+                    .AppendCode($"public class {className} : ObservationLocal.HasMemberSingle<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
                     .SummaryOpen()
@@ -196,7 +196,7 @@ namespace FireFragger
             else
             {
                 this.LocalClassDefs
-                    .AppendCode($"public class {className} : ObservationBase.HasMemberMultiple<{propertyType}>")
+                    .AppendCode($"public class {className} : ObservationLocal.HasMemberMultiple<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
                     .SummaryOpen()

@@ -15,7 +15,7 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	/// Accessor class for ObservationhasMember slice 'tumorSatellite'
 	/// [Fhir Element 'Observation.hasMember:tumorSatellite]'
 	/// </summary>
-	public class TumorSatellite_Accessor : ObservationBase.HasMemberMultiple<TumorSatellite>                                                   // CSDefineObservation.cs:199
+	public class TumorSatellite_Accessor : ObservationLocal.HasMemberMultiple<TumorSatellite>                                                  // CSDefineObservation.cs:199
 	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice TumorSatellite_Accessor class constructor

@@ -65,7 +65,8 @@ namespace BreastRadLib
             {
                 Resource referencedResource = ReferencedResource<Resource>(resRef);
                 String profile = referencedResource.Meta.Profile.First();
-                T item = ResourceFactory.CreateBreastRadProfileResource(this.doc, profile, referencedResource) as T;
+                if (this.doc.TryGetRegisteredItem(referencedResource, out T item) == false)
+                    throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
 
                 if (item == null)
                     throw new Exception($"Error creating resource of profile {profile}");
