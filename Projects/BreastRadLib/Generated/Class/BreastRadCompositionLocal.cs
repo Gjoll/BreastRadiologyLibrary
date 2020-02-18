@@ -79,7 +79,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new ClinicalImpression();                                                                         // CSDefineComposition.cs:163
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                   // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -196,7 +196,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    public ResourceBase AddResource(Resource fhirItem)                                                                                     // CSDefineComposition.cs:154
 	    {                                                                                                                                      // CSDefineComposition.cs:155
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                   // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -240,7 +240,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new MedicationRequest();                                                                          // CSDefineComposition.cs:163
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                   // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -252,7 +252,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new ServiceRequest();                                                                             // CSDefineComposition.cs:163
 	        ResourceBase brItem = new ResourceBase();                                                                                          // CSDefineComposition.cs:167
-	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                   // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171
@@ -264,7 +264,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    {                                                                                                                                      // CSDefineComposition.cs:162
 	        if (fhirItem == null) fhirItem = new ServiceRequest();                                                                             // CSDefineComposition.cs:163
 	        ServiceRecommendation brItem = new ServiceRecommendation();                                                                        // CSDefineComposition.cs:167
-	        brItem.Init(this.doc, fhirItem);                                                                                                 // CSDefineComposition.cs:168
+	        brItem.Init(this.doc, fhirItem);                                                                                                   // CSDefineComposition.cs:168
 	        this.AppendItem(brItem);                                                                                                           // CSDefineComposition.cs:169
 	        return brItem;                                                                                                                     // CSDefineComposition.cs:170
 	    }                                                                                                                                      // CSDefineComposition.cs:171

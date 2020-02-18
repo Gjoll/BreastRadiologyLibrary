@@ -58,7 +58,7 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                 .OpenBrace()
-                .AppendCode($"this.Create(doc, \"{title}\", {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
+                .AppendCode($"this.Init(doc, \"{title}\", {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
                 .DefineBlock(out CodeBlockNested constructorBlock)
                 .CloseBrace()
                 .CloseBrace()
@@ -165,7 +165,7 @@ namespace FireFragger
                     }
                     methodsBlock
                         .AppendCode($"{propertyType} brItem = new {propertyType}();")
-                        .AppendCode($"brItem.Create(this.doc, fhirItem);")
+                        .AppendCode($"brItem.Init(this.doc, fhirItem);")
                         .AppendCode($"this.AppendItem(brItem);")
                         .AppendCode($"return brItem;")
                         .CloseBrace();
