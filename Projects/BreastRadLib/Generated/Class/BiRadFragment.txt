@@ -3,7 +3,6 @@
 		//- Fields
 
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BiRadFragment");                                              // CSDefineBase.cs:206
 			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:401
 			//- Constructor
 

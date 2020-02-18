@@ -80,34 +80,17 @@ namespace BreastRadLib
 			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                                     // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationLeafFragment");                                    // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment");                                           // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment");                               // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment");                       // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoComponentFragment");                    // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment");                        // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment");                         // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedChangesFragment");                                    // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                                     // CSDefineBase.cs:208
 			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:401
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BiRadFragment");                                              // CSDefineBase.cs:206
 			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:401
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonComponentsFragment");                                   // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ShapeComponentsFragment");                                    // CSDefineBase.cs:206
 			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
 			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:401
 			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:401
 			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:401
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NotPreviouslySeenComponentFragment");                         // CSDefineBase.cs:206
 			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:401
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedCountFragment");                                      // CSDefineBase.cs:206
 			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:401
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CorrespondsWithFragment");                                    // CSDefineBase.cs:206
 			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:401
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PreviouslyDemonstratedByFragment");                           // CSDefineBase.cs:206
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:401
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeaturesHasMemberFragment");                        // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWithHasMemberFragment");                            // CSDefineBase.cs:206
 			this.AsymmetryType = new AsymmetryType_Accessor(doc);                                                                                    // CSDefineObservation.cs:401
 			//- Constructor
 		}

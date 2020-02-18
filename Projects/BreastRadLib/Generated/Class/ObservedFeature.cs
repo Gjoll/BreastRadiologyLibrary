@@ -62,15 +62,7 @@ namespace BreastRadLib
 			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationLeafFragment");                                    // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment");                                           // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment");                               // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment");                       // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment");                        // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoComponentFragment");                    // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment");                         // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedCountFragment");                                      // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:208
 			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:401
 			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
 			//- Constructor

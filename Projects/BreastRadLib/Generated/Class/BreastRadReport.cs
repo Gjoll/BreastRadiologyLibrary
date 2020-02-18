@@ -53,8 +53,7 @@ namespace BreastRadLib
 			base.Create(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:206
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment");                                           // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:208
 			//- Constructor
 		}
 

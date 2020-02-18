@@ -3,7 +3,6 @@
 		//- Fields
 
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedChangesFragment");                                    // CSDefineBase.cs:206
 			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:401
 			//- Constructor
 

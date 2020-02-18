@@ -14,7 +14,7 @@ namespace FireFragger
 {
     class CSBuilder : ConverterBase, IDisposable
     {
-        String BreakOnClass = "ServiceRecommendation";
+        String BreakOnClass = "xxyyz";
         CodeEditor resourceFactoryEditor;
         CodeBlockNested resourceFactoryProfileBlock;
 

@@ -55,7 +55,7 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // CSDefineBase.cs:208
 			this.Report = new Report_Accessor(doc);                                                                                                  // CSDefineComposition.cs:228
 			this.Impressions = new Impressions_Accessor(doc);                                                                                        // CSDefineComposition.cs:228
 			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // CSDefineComposition.cs:228

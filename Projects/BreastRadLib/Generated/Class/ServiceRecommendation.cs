@@ -51,7 +51,7 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:208
 			//- Constructor
 		}
 

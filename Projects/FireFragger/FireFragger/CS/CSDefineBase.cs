@@ -202,9 +202,12 @@ namespace FireFragger
                 return;
             DefineCodeElements();
             String profileUrl = this.fragBase.StructDef.Url;
-            this.ClassConstructor
-                .AppendCode($"SetProfileUrl(\"{profileUrl}\");")
-                ;
+            if (this.fragBase.IsFragment() == false)
+            {
+                this.ClassConstructor
+                    .AppendCode($"SetProfileUrl(\"{profileUrl}\");")
+                    ;
+            }
         }
 
         public String FhirClass(String url)
