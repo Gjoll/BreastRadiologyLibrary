@@ -42,11 +42,6 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public class {className} : SectionBase<{brClass}>")
                 .OpenBrace()
-                //.AppendCode($"// Definitions")
-                //.DefineBlock(out CodeBlockNested definitionsBlock)
-                //.BlankLine()
-                //.DefineBlock(out CodeBlockNested fieldsBlock)
-                //.BlankLine()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)
                 .BlankLine()
@@ -63,12 +58,6 @@ namespace FireFragger
                 .CloseBrace()
                 .CloseBrace()
                 ;
-
-            //propertiesBlock
-            //    ;
-
-            //fieldsBlock
-            //    ;
 
             if (max == 1)
             {
@@ -119,11 +108,42 @@ namespace FireFragger
             }
             else
             {
+                void DefineAppend(String fhirType, String propertyType, String targetName)
+                {
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Create new blank {propertyName} of type {fhirType} and add to end of list")
+                        .SummaryClose()
+
+                        .IfElse(propertyType == "ResourceBase",
+                            code1 => code1.AppendCode($"public {propertyType} Append{targetName}(Resource r)"),
+                            code1 => code1.AppendCode($"public {propertyType} Append{targetName}()")
+                        )
+                        .OpenBrace()
+                        .AppendCode($"{propertyType} brItem = new {propertyType}();")
+                        .IfElse(propertyType == "ResourceBase",
+                            code1 => code1.AppendCode($"brItem.Init(this.doc, r);"),
+                            code1 => code1.AppendCode($"brItem.Init(this.doc);")
+                        )
+                        .AppendCode($"this.AppendItem(brItem);")
+                        .AppendCode($"return brItem;")
+                        .CloseBrace();
+                    ;
+                }
+
                 propertiesBlock
                     .SummaryOpen()
                     .Summary("Access propertyName")
                     .SummaryClose()
                     .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary("Access item at indicated location in list")
+                    .SummaryClose()
+                    .AppendCode($"public {brClass} At(Int32 i) => base.items[i];")
+
                     .BlankLine()
                     .SummaryOpen()
                     .Summary("Access first item in list")
@@ -136,40 +156,21 @@ namespace FireFragger
                     .AppendCode($"public new {brClass} FirstOrDefault() => base.FirstOrDefault();")
                     ;
 
-                foreach (String target in references)
+                if (references.Length == 1)
                 {
-                    String targetName = target.LastUriPart();
-                    String fhirType = this.FhirClass(target);
-                    String propertyType = this.BRClass(target);
-                    methodsBlock
-                        .BlankLine()
-                        .SummaryOpen()
-                        .Summary($"Create new blank {propertyName} of type {fhirType} and add to end of list")
-                        .SummaryClose()
-                        ;
-
-                    if (fhirType == "Resource")
+                    String fhirType = this.FhirClass(references[0]);
+                    String propertyType = this.BRClass(references[0]);
+                    DefineAppend(fhirType, propertyType, "");
+                }
+                else
+                {
+                    foreach (String target in references)
                     {
-                        methodsBlock
-                            .AppendCode($"public {propertyType} Add{targetName}({fhirType} fhirItem)")
-                            .OpenBrace()
-                            ;
+                        String targetName = target.LastUriPart();
+                        String fhirType = this.FhirClass(target);
+                        String propertyType = this.BRClass(target);
+                        DefineAppend(fhirType, propertyType, targetName);
                     }
-                    else
-                    {
-                        methodsBlock
-                            .AppendCode($"public {propertyType} Add{targetName}({fhirType} fhirItem = null)")
-                            .OpenBrace()
-                            .AppendCode($"if (fhirItem == null) fhirItem = new {fhirType}();")
-                            ;
-                    }
-                    methodsBlock
-                        .AppendCode($"{propertyType} brItem = new {propertyType}();")
-                        .AppendCode($"brItem.Init(this.doc, fhirItem);")
-                        .AppendCode($"this.AppendItem(brItem);")
-                        .AppendCode($"return brItem;")
-                        .CloseBrace();
-                    ;
                 }
             }
             return className;
