@@ -20,6 +20,10 @@ namespace BreastRadLib
 	public class SectionFindingsRightBreast : ObservationBase, IFindingBreastFragment
 	{
 		//+ Fields
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:250
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSDefineObservation.cs:250
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:250
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:250
 		//- Fields
 
 		/// <summary>
@@ -57,23 +61,35 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // CSDefineBase.cs:208
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:253
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSDefineObservation.cs:253
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:253
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:253
 			//- Constructor
 		}
 
 		public override void Write()
 		{
-		//+ WriteCodeStart
-		//- WriteCodeStart
-		//+ WriteCode
-		//- WriteCode
+			//+ WriteCodeStart
+			//- WriteCodeStart
+			//+ WriteCode
+			this.WriteHasMember(this.MGFinding);                                                                                                     // CSDefineObservation.cs:256
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSDefineObservation.cs:256
+			this.WriteHasMember(this.NMFinding);                                                                                                     // CSDefineObservation.cs:256
+			this.WriteHasMember(this.USFinding);                                                                                                     // CSDefineObservation.cs:256
+			//- WriteCode
 		}
 
 		public override void Read()
 		{
-		//+ ReadCodeStart
-		//- ReadCodeStart
-		//+ ReadCode
-		//- ReadCode
+			//+ ReadCodeStart
+			//- ReadCodeStart
+			//+ ReadCode
+			this.ReadHasMember(this.MGFinding);                                                                                                      // CSDefineObservation.cs:259
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSDefineObservation.cs:259
+			this.ReadHasMember(this.NMFinding);                                                                                                      // CSDefineObservation.cs:259
+			this.ReadHasMember(this.USFinding);                                                                                                      // CSDefineObservation.cs:259
+			//- ReadCode
 		}
 
 		//+ Methods

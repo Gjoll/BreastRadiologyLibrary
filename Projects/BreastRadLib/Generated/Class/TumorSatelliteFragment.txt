@@ -1,14 +1,18 @@
 		//+ Fields
+		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // CSDefineObservation.cs:250
 		//- Fields
 
 			//+ Constructor
+			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // CSDefineObservation.cs:253
 			//- Constructor
 
-		//+ WriteCode
-		//- WriteCode
+			//+ WriteCode
+			this.WriteHasMember(this.TumorSatellite);                                                                                                // CSDefineObservation.cs:256
+			//- WriteCode
 
-		//+ ReadCode
-		//- ReadCode
+			//+ ReadCode
+			this.ReadHasMember(this.TumorSatellite);                                                                                                 // CSDefineObservation.cs:259
+			//- ReadCode
 
-		//+ Methods
-		//- Methods
+			//+ Methods
+			//- Methods

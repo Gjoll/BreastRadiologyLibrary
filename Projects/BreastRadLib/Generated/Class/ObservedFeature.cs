@@ -24,8 +24,8 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, IBreastBodyLocationRequiredFragment, IObservedCountFragment
 	{
 		//+ Fields
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:398
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSDefineObservation.cs:398
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:145
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSDefineObservation.cs:145
 		//- Fields
 
 		/// <summary>
@@ -63,30 +63,30 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:208
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:401
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:148
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSDefineObservation.cs:148
 			//- Constructor
 		}
 
 		public override void Write()
 		{
-		//+ WriteCodeStart
-		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
-		//- WriteCodeStart
-		//+ WriteCode
-		this.WriteComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:404
-		this.WriteComponent(this.FeatureType);                                                                                                    // CSDefineObservation.cs:404
-		//- WriteCode
+			//+ WriteCodeStart
+			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:95
+			//- WriteCodeStart
+			//+ WriteCode
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:151
+			this.WriteComponent(this.FeatureType);                                                                                                   // CSDefineObservation.cs:151
+			//- WriteCode
 		}
 
 		public override void Read()
 		{
-		//+ ReadCodeStart
-		//- ReadCodeStart
-		//+ ReadCode
-		this.ReadComponent(this.ObsCount);                                                                                                        // CSDefineObservation.cs:407
-		this.ReadComponent(this.FeatureType);                                                                                                     // CSDefineObservation.cs:407
-		//- ReadCode
+			//+ ReadCodeStart
+			//- ReadCodeStart
+			//+ ReadCode
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:154
+			this.ReadComponent(this.FeatureType);                                                                                                    // CSDefineObservation.cs:154
+			//- ReadCode
 		}
 
 		//+ Methods

@@ -21,6 +21,9 @@ namespace BreastRadLib
 	public class AssociatedFeatures : ObservationBase, IObservationSectionFragment
 	{
 		//+ Fields
+		public MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; protected set; }                        // CSDefineObservation.cs:250
+		public MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; protected set; }                                            // CSDefineObservation.cs:250
+		public ObservedFeature_Accessor ObservedFeature { get ; protected set; }                                                                  // CSDefineObservation.cs:250
 		//- Fields
 
 		/// <summary>
@@ -58,23 +61,33 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // CSDefineBase.cs:208
+			this.MGAbnormalityArchitecturalDistortion = new MGAbnormalityArchitecturalDistortion_Accessor(doc);                                      // CSDefineObservation.cs:253
+			this.MGAbnormalityCalcification = new MGAbnormalityCalcification_Accessor(doc);                                                          // CSDefineObservation.cs:253
+			this.ObservedFeature = new ObservedFeature_Accessor(doc);                                                                                // CSDefineObservation.cs:253
 			//- Constructor
 		}
 
 		public override void Write()
 		{
-		//+ WriteCodeStart
-		//- WriteCodeStart
-		//+ WriteCode
-		//- WriteCode
+			//+ WriteCodeStart
+			this.ClearHasMembers();                                                                                                                  // CSDefineObservation.cs:217
+			//- WriteCodeStart
+			//+ WriteCode
+			this.WriteHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                          // CSDefineObservation.cs:256
+			this.WriteHasMember(this.MGAbnormalityCalcification);                                                                                    // CSDefineObservation.cs:256
+			this.WriteHasMember(this.ObservedFeature);                                                                                               // CSDefineObservation.cs:256
+			//- WriteCode
 		}
 
 		public override void Read()
 		{
-		//+ ReadCodeStart
-		//- ReadCodeStart
-		//+ ReadCode
-		//- ReadCode
+			//+ ReadCodeStart
+			//- ReadCodeStart
+			//+ ReadCode
+			this.ReadHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                           // CSDefineObservation.cs:259
+			this.ReadHasMember(this.MGAbnormalityCalcification);                                                                                     // CSDefineObservation.cs:259
+			this.ReadHasMember(this.ObservedFeature);                                                                                                // CSDefineObservation.cs:259
+			//- ReadCode
 		}
 
 		//+ Methods

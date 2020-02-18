@@ -1,18 +1,18 @@
 		//+ Fields
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:398
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:145
 		//- Fields
 
 			//+ Constructor
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:401
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:148
 			//- Constructor
 
-		//+ WriteCode
-		this.WriteComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:404
-		//- WriteCode
+			//+ WriteCode
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSDefineObservation.cs:151
+			//- WriteCode
 
-		//+ ReadCode
-		this.ReadComponent(this.NotPreviouslySeen);                                                                                               // CSDefineObservation.cs:407
-		//- ReadCode
+			//+ ReadCode
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:154
+			//- ReadCode
 
-		//+ Methods
-		//- Methods
+			//+ Methods
+			//- Methods

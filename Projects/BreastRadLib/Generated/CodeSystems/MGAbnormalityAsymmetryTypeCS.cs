@@ -12,16 +12,16 @@ namespace BreastRadLib
 	public class MGAbnormalityAsymmetryTypeCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGAbnormalityAsymmetryTypeCS";                                  // CSBuilder.cs:345
-		                                                                                                                                          // CSBuilder.cs:357
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGAbnormalityAsymmetryTypeCS";                                  // CSBuilder.cs:346
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// Breast asymmetry refers to when one breast is a different size or shape than the
 		/// other.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Asymmetry = new Coding(System, "Asymmetry", "Asymmetry");                                                       // CSBuilder.cs:371
-		                                                                                                                                          // CSBuilder.cs:357
+		public static Coding Code_Asymmetry = new Coding(System, "Asymmetry", "Asymmetry");                                                       // CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// Focal asymmetry is visible as a confined asymmetry with a similar shape on two views
 		/// but does not fit the criteria of a mass: that is, it lacks convex outer borders and
@@ -32,8 +32,8 @@ namespace BreastRadLib
 		/// [https://pubs.rsna.org/doi/10.1148/rg.e33]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_AsymmetryFocal = new Coding(System, "AsymmetryFocal", "Asymmetry focal");                                       // CSBuilder.cs:371
-		                                                                                                                                          // CSBuilder.cs:357
+		public static Coding Code_AsymmetryFocal = new Coding(System, "AsymmetryFocal", "Asymmetry focal");                                       // CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// Global asymmetry in breast tissue is a form of breast asymmetry where at least one
 		/// quadrant of a breast has a larger amount of fibroglandular density than the corresponding
@@ -41,8 +41,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_AsymmetryGlobal = new Coding(System, "AsymmetryGlobal", "Asymmetry global");                                    // CSBuilder.cs:371
-		                                                                                                                                          // CSBuilder.cs:357
+		public static Coding Code_AsymmetryGlobal = new Coding(System, "AsymmetryGlobal", "Asymmetry global");                                    // CSBuilder.cs:372
+		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
 		/// A developing asymmetry is a focal asymmetry that is new or increased in conspicuity
 		/// compared with the previous mammogram.
@@ -53,7 +53,7 @@ namespace BreastRadLib
 		/// [https://pubs.rsna.org/doi/full/10.1148/rg.2016150123]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_DevelopingAsymmetry = new Coding(System, "DevelopingAsymmetry", "Developing Asymmetry");                        // CSBuilder.cs:371
+		public static Coding Code_DevelopingAsymmetry = new Coding(System, "DevelopingAsymmetry", "Developing Asymmetry");                        // CSBuilder.cs:372
 		//- Fields
 	}
 }

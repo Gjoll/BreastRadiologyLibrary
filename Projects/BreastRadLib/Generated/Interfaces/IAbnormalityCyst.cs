@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		CystType_Accessor CystType { get ; }                                                                                                      // CSDefineObservation.cs:392
+		CystType_Accessor CystType { get ; }                                                                                                      // CSDefineObservation.cs:139
 		//- Fields
 
 		//+ Methods

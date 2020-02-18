@@ -28,20 +28,20 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Asymmetry = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_Asymmetry);                                          // CSBuilder.cs:321
-		public static TCoding Code_AsymmetryFocal = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_AsymmetryFocal);                                // CSBuilder.cs:321
-		public static TCoding Code_AsymmetryGlobal = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_AsymmetryGlobal);                              // CSBuilder.cs:321
-		public static TCoding Code_DevelopingAsymmetry = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_DevelopingAsymmetry);                      // CSBuilder.cs:321
+		public static TCoding Code_Asymmetry = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_Asymmetry);                                          // CSBuilder.cs:322
+		public static TCoding Code_AsymmetryFocal = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_AsymmetryFocal);                                // CSBuilder.cs:322
+		public static TCoding Code_AsymmetryGlobal = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_AsymmetryGlobal);                              // CSBuilder.cs:322
+		public static TCoding Code_DevelopingAsymmetry = new TCoding(MGAbnormalityAsymmetryTypeCS.Code_DevelopingAsymmetry);                      // CSBuilder.cs:322
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
-		{                                                                                                                                         // CSBuilder.cs:307
-		    yield return Code_Asymmetry;                                                                                                          // CSBuilder.cs:324
-		    yield return Code_AsymmetryFocal;                                                                                                     // CSBuilder.cs:324
-		    yield return Code_AsymmetryGlobal;                                                                                                    // CSBuilder.cs:324
-		    yield return Code_DevelopingAsymmetry;                                                                                                // CSBuilder.cs:324
-		}                                                                                                                                         // CSBuilder.cs:330
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:307
+		{                                                                                                                                         // CSBuilder.cs:308
+		    yield return Code_Asymmetry;                                                                                                          // CSBuilder.cs:325
+		    yield return Code_AsymmetryFocal;                                                                                                     // CSBuilder.cs:325
+		    yield return Code_AsymmetryGlobal;                                                                                                    // CSBuilder.cs:325
+		    yield return Code_DevelopingAsymmetry;                                                                                                // CSBuilder.cs:325
+		}                                                                                                                                         // CSBuilder.cs:331
 		//- Methods
 	}
 }

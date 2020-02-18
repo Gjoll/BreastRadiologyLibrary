@@ -16,6 +16,9 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // CSDefineObservation.cs:244
+		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // CSDefineObservation.cs:244
+		ObservedFeature_Accessor ObservedFeature { get ; }                                                                                        // CSDefineObservation.cs:244
 		//- Fields
 
 		//+ Methods

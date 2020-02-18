@@ -12,10 +12,34 @@ namespace BreastRadLib
     public class ObservationBase : ResourceBase, IObservationBase
     {
         /// <summary>
+        /// Base class for all HasMember accessors
+        /// </summary>
+        public class HasMemberBase<BaseType> : MemberList<BaseType>
+                where BaseType : ObservationBase
+        {
+        }
+
+        /// <summary>
+        /// Base class for all HasMember single accessors
+        /// </summary>
+        public class HasMemberSingle<BaseType> : HasMemberBase<BaseType>
+                where BaseType : ObservationBase
+        {
+        }
+
+        /// <summary>
+        /// Base class for all HasMember multiple accessors
+        /// </summary>
+        public class HasMemberMultiple<BaseType> : HasMemberBase<BaseType>
+                where BaseType : ObservationBase
+        {
+        }
+
+        /// <summary>
         /// Base class for all component accessors
         /// </summary>
         public class ComponentBase<BaseType> : MemberList<BaseType>
-                where BaseType : Base
+            where BaseType : Base
         {
             /// <summary>
             /// Section coding
@@ -59,6 +83,23 @@ namespace BreastRadLib
             this.Create(doc, new Observation());
         }
 
+        protected void ClearHasMembers()
+        {
+            this.Resource.HasMember.Clear();
+        }
+
+        protected void WriteHasMember<BaseType>(HasMemberBase<BaseType> hasMemberList)
+             where BaseType : ObservationBase
+        {
+            throw new NotImplementedException();
+        }
+
+        protected void ReadHasMember<BaseType>(HasMemberBase<BaseType> hasMemberList)
+             where BaseType : ObservationBase
+        {
+            throw new NotImplementedException();
+        }
+
         protected void ClearComponents()
         {
             this.Resource.Component.Clear();
@@ -75,31 +116,5 @@ namespace BreastRadLib
         {
             throw new NotImplementedException();
         }
-
-        //protected MemberList<T> CreateHasMemberList<T>(Int32 min, Int32 max)
-        //    where T : IResourceBase
-        //{
-        //    MemberList<T> retVal = new MemberList<T>(min, max);
-        //    hasMemberLists.Add(retVal);
-        //    return retVal;
-        //}
-
-        //public void LoadHasMembers(ResourceBag resourceBag)
-        //{
-        //    foreach (ResourceReference hasMember in resource.HasMember)
-        //    {
-        //        //if (resourceBag.TryGetEntry(hasMember.Url, out Bundle.EntryComponent entry) == false)
-        //        //    throw new Exception("Reference '{hasMember.Url}' not found in bag");
-        //    }
-        //}
-
-        //public void Unload(ResourceBag resourceBag)
-        //{
-        //    UnloadHasMembers(resourceBag);
-        //}
-
-        //public void UnloadHasMembers(ResourceBag resourceBag)
-        //{
-        //}
     }
 }

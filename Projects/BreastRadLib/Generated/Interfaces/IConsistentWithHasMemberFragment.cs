@@ -16,6 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // CSDefineObservation.cs:244
 		//- Fields
 
 		//+ Methods

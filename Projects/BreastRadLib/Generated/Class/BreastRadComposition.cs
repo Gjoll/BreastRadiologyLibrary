@@ -65,27 +65,27 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
-		//+ WriteCodeStart
-		//- WriteCodeStart
-		//+ WriteCode
-		ClearSection();                                                                                                                           // CSDefineComposition.cs:185
-		this.WriteSection(this.Report);                                                                                                           // CSDefineComposition.cs:236
-		this.WriteSection(this.Impressions);                                                                                                      // CSDefineComposition.cs:236
-		this.WriteSection(this.RelatedResources);                                                                                                 // CSDefineComposition.cs:236
-		this.WriteSection(this.Recommendations);                                                                                                  // CSDefineComposition.cs:236
-		//- WriteCode
+			//+ WriteCodeStart
+			//- WriteCodeStart
+			//+ WriteCode
+			ClearSection();                                                                                                                          // CSDefineComposition.cs:185
+			this.WriteSection(this.Report);                                                                                                          // CSDefineComposition.cs:236
+			this.WriteSection(this.Impressions);                                                                                                     // CSDefineComposition.cs:236
+			this.WriteSection(this.RelatedResources);                                                                                                // CSDefineComposition.cs:236
+			this.WriteSection(this.Recommendations);                                                                                                 // CSDefineComposition.cs:236
+			//- WriteCode
 		}
 
 		public override void Read()
 		{
-		//+ ReadCodeStart
-		//- ReadCodeStart
-		//+ ReadCode
-		this.ReadSection(this.Report);                                                                                                            // CSDefineComposition.cs:240
-		this.ReadSection(this.Impressions);                                                                                                       // CSDefineComposition.cs:240
-		this.ReadSection(this.RelatedResources);                                                                                                  // CSDefineComposition.cs:240
-		this.ReadSection(this.Recommendations);                                                                                                   // CSDefineComposition.cs:240
-		//- ReadCode
+			//+ ReadCodeStart
+			//- ReadCodeStart
+			//+ ReadCode
+			this.ReadSection(this.Report);                                                                                                           // CSDefineComposition.cs:240
+			this.ReadSection(this.Impressions);                                                                                                      // CSDefineComposition.cs:240
+			this.ReadSection(this.RelatedResources);                                                                                                 // CSDefineComposition.cs:240
+			this.ReadSection(this.Recommendations);                                                                                                  // CSDefineComposition.cs:240
+			//- ReadCode
 		}
 
 		//+ Methods

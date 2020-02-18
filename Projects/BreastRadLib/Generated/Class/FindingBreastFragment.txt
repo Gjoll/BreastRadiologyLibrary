@@ -1,14 +1,30 @@
 		//+ Fields
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:250
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSDefineObservation.cs:250
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:250
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:250
 		//- Fields
 
 			//+ Constructor
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:253
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSDefineObservation.cs:253
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:253
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:253
 			//- Constructor
 
-		//+ WriteCode
-		//- WriteCode
+			//+ WriteCode
+			this.WriteHasMember(this.MGFinding);                                                                                                     // CSDefineObservation.cs:256
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSDefineObservation.cs:256
+			this.WriteHasMember(this.NMFinding);                                                                                                     // CSDefineObservation.cs:256
+			this.WriteHasMember(this.USFinding);                                                                                                     // CSDefineObservation.cs:256
+			//- WriteCode
 
-		//+ ReadCode
-		//- ReadCode
+			//+ ReadCode
+			this.ReadHasMember(this.MGFinding);                                                                                                      // CSDefineObservation.cs:259
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSDefineObservation.cs:259
+			this.ReadHasMember(this.NMFinding);                                                                                                      // CSDefineObservation.cs:259
+			this.ReadHasMember(this.USFinding);                                                                                                      // CSDefineObservation.cs:259
+			//- ReadCode
 
-		//+ Methods
-		//- Methods
+			//+ Methods
+			//- Methods

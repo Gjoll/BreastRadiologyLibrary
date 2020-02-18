@@ -63,18 +63,18 @@ namespace BreastRadLib
 
 		public override void Write()
 		{
-		//+ WriteCodeStart
-		//- WriteCodeStart
-		//+ WriteCode
-		//- WriteCode
+			//+ WriteCodeStart
+			//- WriteCodeStart
+			//+ WriteCode
+			//- WriteCode
 		}
 
 		public override void Read()
 		{
-		//+ ReadCodeStart
-		//- ReadCodeStart
-		//+ ReadCode
-		//- ReadCode
+			//+ ReadCodeStart
+			//- ReadCodeStart
+			//+ ReadCode
+			//- ReadCode
 		}
 
 		//+ Methods

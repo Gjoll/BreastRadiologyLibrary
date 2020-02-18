@@ -1,14 +1,18 @@
 		//+ Fields
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:250
 		//- Fields
 
 			//+ Constructor
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:253
 			//- Constructor
 
-		//+ WriteCode
-		//- WriteCode
+			//+ WriteCode
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:256
+			//- WriteCode
 
-		//+ ReadCode
-		//- ReadCode
+			//+ ReadCode
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:259
+			//- ReadCode
 
-		//+ Methods
-		//- Methods
+			//+ Methods
+			//- Methods

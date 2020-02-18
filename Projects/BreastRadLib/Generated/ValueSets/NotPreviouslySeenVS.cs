@@ -28,26 +28,26 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_ClinicalExam = new TCoding(NotPreviouslySeenCodeSystemCS.Code_ClinicalExam);                                   // CSBuilder.cs:321
-		public static TCoding Code_Ductogram = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Ductogram);                                         // CSBuilder.cs:321
-		public static TCoding Code_Mammogram = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Mammogram);                                         // CSBuilder.cs:321
-		public static TCoding Code_MRI = new TCoding(NotPreviouslySeenCodeSystemCS.Code_MRI);                                                     // CSBuilder.cs:321
-		public static TCoding Code_OutsideExam = new TCoding(NotPreviouslySeenCodeSystemCS.Code_OutsideExam);                                     // CSBuilder.cs:321
-		public static TCoding Code_Scintimammography = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Scintimammography);                         // CSBuilder.cs:321
-		public static TCoding Code_Ultrasound = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Ultrasound);                                       // CSBuilder.cs:321
+		public static TCoding Code_ClinicalExam = new TCoding(NotPreviouslySeenCodeSystemCS.Code_ClinicalExam);                                   // CSBuilder.cs:322
+		public static TCoding Code_Ductogram = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Ductogram);                                         // CSBuilder.cs:322
+		public static TCoding Code_Mammogram = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Mammogram);                                         // CSBuilder.cs:322
+		public static TCoding Code_MRI = new TCoding(NotPreviouslySeenCodeSystemCS.Code_MRI);                                                     // CSBuilder.cs:322
+		public static TCoding Code_OutsideExam = new TCoding(NotPreviouslySeenCodeSystemCS.Code_OutsideExam);                                     // CSBuilder.cs:322
+		public static TCoding Code_Scintimammography = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Scintimammography);                         // CSBuilder.cs:322
+		public static TCoding Code_Ultrasound = new TCoding(NotPreviouslySeenCodeSystemCS.Code_Ultrasound);                                       // CSBuilder.cs:322
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
-		{                                                                                                                                         // CSBuilder.cs:307
-		    yield return Code_ClinicalExam;                                                                                                       // CSBuilder.cs:324
-		    yield return Code_Ductogram;                                                                                                          // CSBuilder.cs:324
-		    yield return Code_Mammogram;                                                                                                          // CSBuilder.cs:324
-		    yield return Code_MRI;                                                                                                                // CSBuilder.cs:324
-		    yield return Code_OutsideExam;                                                                                                        // CSBuilder.cs:324
-		    yield return Code_Scintimammography;                                                                                                  // CSBuilder.cs:324
-		    yield return Code_Ultrasound;                                                                                                         // CSBuilder.cs:324
-		}                                                                                                                                         // CSBuilder.cs:330
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:307
+		{                                                                                                                                         // CSBuilder.cs:308
+		    yield return Code_ClinicalExam;                                                                                                       // CSBuilder.cs:325
+		    yield return Code_Ductogram;                                                                                                          // CSBuilder.cs:325
+		    yield return Code_Mammogram;                                                                                                          // CSBuilder.cs:325
+		    yield return Code_MRI;                                                                                                                // CSBuilder.cs:325
+		    yield return Code_OutsideExam;                                                                                                        // CSBuilder.cs:325
+		    yield return Code_Scintimammography;                                                                                                  // CSBuilder.cs:325
+		    yield return Code_Ultrasound;                                                                                                         // CSBuilder.cs:325
+		}                                                                                                                                         // CSBuilder.cs:331
 		//- Methods
 	}
 }

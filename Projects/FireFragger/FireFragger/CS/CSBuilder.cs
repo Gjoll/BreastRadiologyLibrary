@@ -14,7 +14,7 @@ namespace FireFragger
 {
     class CSBuilder : ConverterBase, IDisposable
     {
-        String BreakOnClass = "xxyyz";
+        String BreakOnClass = "TumorSatelliteFragment";
         CodeEditor resourceFactoryEditor;
         CodeBlockNested resourceFactoryProfileBlock;
 
@@ -133,11 +133,12 @@ namespace FireFragger
             this.ConversionInfo(this.GetType().Name,
                fcn,
                $"Processing fragment {fi.StructDef.Name}");
- 
+
+            if (String.Compare(ClassName(fi), BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
+                Debugger.Break();
+
             if (fi.IsFragment() == false)
             {
-                if (String.Compare(ClassName(fi), BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
-                    Debugger.Break();
                 String url = fi.StructDef.Url.Trim().ToLower();
                 this.resourceFactoryProfileBlock
                     .AppendCode($"case \"{url}\":")

@@ -32,18 +32,19 @@ namespace BreastRadLib
 	public class AbnormalityFibroadenoma : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment
 	{
 		//+ Fields
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:398
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:398
-		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:398
-		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSDefineObservation.cs:398
-		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSDefineObservation.cs:398
-		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSDefineObservation.cs:398
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:398
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:398
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:398
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:398
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:398
-		public FibroAdenomaType_Accessor FibroAdenomaType { get ; protected set; }                                                                // CSDefineObservation.cs:398
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:145
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:145
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:145
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSDefineObservation.cs:145
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSDefineObservation.cs:145
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSDefineObservation.cs:145
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:145
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:145
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:145
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:145
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:145
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:250
+		public FibroAdenomaType_Accessor FibroAdenomaType { get ; protected set; }                                                                // CSDefineObservation.cs:145
 		//- Fields
 
 		/// <summary>
@@ -81,60 +82,63 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                                    // CSDefineBase.cs:208
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:401
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:401
-			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
-			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:401
-			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:401
-			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:401
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:401
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:401
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:401
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:401
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:401
-			this.FibroAdenomaType = new FibroAdenomaType_Accessor(doc);                                                                              // CSDefineObservation.cs:401
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:148
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:148
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:148
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:148
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:148
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:148
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:148
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:148
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:148
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:148
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:148
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:253
+			this.FibroAdenomaType = new FibroAdenomaType_Accessor(doc);                                                                              // CSDefineObservation.cs:148
 			//- Constructor
 		}
 
 		public override void Write()
 		{
-		//+ WriteCodeStart
-		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
-		//- WriteCodeStart
-		//+ WriteCode
-		this.WriteComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:404
-		this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:404
-		this.WriteComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:404
-		this.WriteComponent(this.Shape);                                                                                                          // CSDefineObservation.cs:404
-		this.WriteComponent(this.Margin);                                                                                                         // CSDefineObservation.cs:404
-		this.WriteComponent(this.MgDensity);                                                                                                      // CSDefineObservation.cs:404
-		this.WriteComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:404
-		this.WriteComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:404
-		this.WriteComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:404
-		this.WriteComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:404
-		this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:404
-		this.WriteComponent(this.FibroAdenomaType);                                                                                               // CSDefineObservation.cs:404
-		//- WriteCode
+			//+ WriteCodeStart
+			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:95
+			//- WriteCodeStart
+			//+ WriteCode
+			this.WriteComponent(this.ObsChanges);                                                                                                    // CSDefineObservation.cs:151
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSDefineObservation.cs:151
+			this.WriteComponent(this.Orientation);                                                                                                   // CSDefineObservation.cs:151
+			this.WriteComponent(this.Shape);                                                                                                         // CSDefineObservation.cs:151
+			this.WriteComponent(this.Margin);                                                                                                        // CSDefineObservation.cs:151
+			this.WriteComponent(this.MgDensity);                                                                                                     // CSDefineObservation.cs:151
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:151
+			this.WriteComponent(this.ObsDistribution);                                                                                               // CSDefineObservation.cs:151
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:151
+			this.WriteComponent(this.ObsSize);                                                                                                       // CSDefineObservation.cs:151
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:151
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:256
+			this.WriteComponent(this.FibroAdenomaType);                                                                                              // CSDefineObservation.cs:151
+			//- WriteCode
 		}
 
 		public override void Read()
 		{
-		//+ ReadCodeStart
-		//- ReadCodeStart
-		//+ ReadCode
-		this.ReadComponent(this.ObsChanges);                                                                                                      // CSDefineObservation.cs:407
-		this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                        // CSDefineObservation.cs:407
-		this.ReadComponent(this.Orientation);                                                                                                     // CSDefineObservation.cs:407
-		this.ReadComponent(this.Shape);                                                                                                           // CSDefineObservation.cs:407
-		this.ReadComponent(this.Margin);                                                                                                          // CSDefineObservation.cs:407
-		this.ReadComponent(this.MgDensity);                                                                                                       // CSDefineObservation.cs:407
-		this.ReadComponent(this.ObsCount);                                                                                                        // CSDefineObservation.cs:407
-		this.ReadComponent(this.ObsDistribution);                                                                                                 // CSDefineObservation.cs:407
-		this.ReadComponent(this.ObsDistRegionSize);                                                                                               // CSDefineObservation.cs:407
-		this.ReadComponent(this.ObsSize);                                                                                                         // CSDefineObservation.cs:407
-		this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                        // CSDefineObservation.cs:407
-		this.ReadComponent(this.FibroAdenomaType);                                                                                                // CSDefineObservation.cs:407
-		//- ReadCode
+			//+ ReadCodeStart
+			//- ReadCodeStart
+			//+ ReadCode
+			this.ReadComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:154
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:154
+			this.ReadComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:154
+			this.ReadComponent(this.Shape);                                                                                                          // CSDefineObservation.cs:154
+			this.ReadComponent(this.Margin);                                                                                                         // CSDefineObservation.cs:154
+			this.ReadComponent(this.MgDensity);                                                                                                      // CSDefineObservation.cs:154
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:154
+			this.ReadComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:154
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:154
+			this.ReadComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:154
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:154
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:259
+			this.ReadComponent(this.FibroAdenomaType);                                                                                               // CSDefineObservation.cs:154
+			//- ReadCode
 		}
 
 		//+ Methods

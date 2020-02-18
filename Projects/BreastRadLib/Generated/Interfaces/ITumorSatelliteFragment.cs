@@ -16,6 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // CSDefineObservation.cs:244
 		//- Fields
 
 		//+ Methods

@@ -22,179 +22,6 @@ namespace FireFragger
         {
         }
 
-        void DefineComponents(SDInfo fragInfo)
-        {
-            CodeBlockNested classComponentFields = null;
-            CodeBlockNested classComponentConstruction = null;
-            CodeBlockNested classComponentWrite = null;
-            CodeBlockNested classComponentRead = null;
-            CodeBlockNested interfaceComponentFields = null;
-
-            if (fragInfo.ClassEditor != null)
-            {
-                classComponentFields = fragInfo.ClassEditor.Blocks.Find("Fields").AppendBlock("");
-                classComponentConstruction = fragInfo.ClassEditor.Blocks.Find("Constructor").AppendBlock("");
-                classComponentWrite = fragInfo.ClassEditor.Blocks.Find("WriteCode").AppendBlock(""); ;
-                classComponentRead = fragInfo.ClassEditor.Blocks.Find("ReadCode").AppendBlock(""); ;
-
-                classComponentFields.Clear();
-                classComponentConstruction.Clear();
-                classComponentWrite.Clear();
-                classComponentRead.Clear();
-            }
-
-            interfaceComponentFields = fragInfo.InterfaceEditor.Blocks.Find("Fields").AppendBlock("");
-            interfaceComponentFields.Clear();
-
-            HashSet<string> items = new HashSet<string>();
-            void BuildSlice(SDInfo fi, ElementTreeSlice slice, Int32 level)
-            {
-                if (slice.Nodes.TryGetItem("code", out ElementTreeNode codeNode) == false)
-                    throw new Exception($"Cant find component.code");
-                if (slice.Nodes.TryGetItem("value[x]", out ElementTreeNode valueXNode) == false)
-                    throw new Exception($"Can't find component.value[x]");
-
-                if (items.Contains(slice.Name))
-                    return;
-                items.Add(slice.Name);
-
-                //String fieldName;
-
-                if (valueXNode.ElementDefinition.Type.Count == 1)
-                {
-                    //        ElementDefinition.TypeRefComponent valueXType = valueXNode.ElementDefinition.Type[0];
-                    //        fieldName = CSBuilder.PropertyName(slice.Name);
-                    //        switch (valueXNode.ElementDefinition.Max)
-                    //        {
-                    //            case "0": throw new Exception($"Unexpected cardinality 0f 0");
-                    //            case "1":
-                    //                //$classComponentFields?
-                    //                //    .AppendCode($"public {valueXType.Code} {fieldName} {{ get; set; }}")
-                    //                //    ;
-                    //                //classComponentWrite?
-                    //                //    .AppendCode($"this.WriteComponent({fieldName});")
-                    //                //    ;
-                    //                //classComponentWrite?
-                    //                //    .AppendCode($"{fieldName} = this.ReadComponent();")
-                    //                //    ;
-                    //                break;
-                    //            default:
-                    //                break;
-                    //        }
-                    //        //$classComponentFields?.AppendCode($"public ComponentList<{valueXType.Code}> {fieldName} {{ get; protected set; }}");
-                    //        //if (level == 0)
-                    //        //    interfaceComponentFields.AppendCode($"ComponentList<{valueXType.Code}> {fieldName} {{ get; protected set; }}");
-
-                    //        Int32 min = 0;
-                    //        if (slice.ElementDefinition.Min.HasValue)
-                    //            min = slice.ElementDefinition.Min.Value;
-                    //        Int32 max = -1;
-                    //        if (String.IsNullOrEmpty(slice.ElementDefinition.Max) == false)
-                    //        {
-                    //            if (slice.ElementDefinition.Max != "*")
-                    //                max = Int32.Parse(slice.ElementDefinition.Max);
-                    //        }
-
-                    //        //$classComponentConstruction?.AppendCode($"this.{fieldName} = CreateComponentList<{valueXType.Code}>({min}, {max});");
-                }
-                else if (valueXNode.ElementDefinition.Type.Count > 1)
-                {
-                }
-                else
-                    throw new Exception($"invalid component type count");
-            }
-
-            void Build(SDInfo fi, Int32 level)
-            {
-                if (fi.BaseDefinitionUrl != Global.ObservationUrl)
-                    return;
-                if (fi.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
-                    return;
-                if (componentNode.Slices.Count <= 1)
-                    return;
-                foreach (ElementTreeSlice slice in componentNode.Slices.Skip(1))
-                    BuildSlice(fi, slice, level);
-            }
-
-            if (fragInfo.ClassEditor == null)
-                return;
-
-            VisitFragments(Build, fragInfo);
-        }
-
-        void DefineHasMembers(SDInfo fragInfo)
-        {
-            //CodeBlockNested classHasMemberFields = null;
-            //CodeBlockNested classHasMemberConstruction = null;
-            //CodeBlockNested interfaceHasMemberFields = null;
-
-            //if (fragInfo.ClassEditor != null)
-            //{
-            //    classHasMemberFields = fragInfo.ClassEditor.Blocks.Find("Fields").AppendBlock("");
-            //    classHasMemberConstruction = fragInfo.ClassEditor.Blocks.Find("Constructor").AppendBlock("");
-            //}
-            //interfaceHasMemberFields = fragInfo.InterfaceEditor.Blocks.Find("Fields").AppendBlock("");
-
-            //HashSet<string> items = new HashSet<string>();
-
-            //void BuildSlice(SDInfo fi, ElementTreeSlice slice, Int32 level)
-            //{
-            //    if (slice.ElementDefinition.Type.Count != 1)
-            //        throw new Exception($"invalid hasMember type count");
-            //    if (slice.ElementDefinition.Type[0].Code != "Reference")
-            //        throw new Exception($"invalid hasMember type");
-            //    if (slice.ElementDefinition.Type[0].TargetProfile.Count() != 1)
-            //        throw new Exception($"invalid hasMember targetProfile count");
-            //    String reference = slice.ElementDefinition.Type[0].TargetProfile.First();
-            //    if (this.csBuilder.SDFragments.TryGetValue(reference.Trim(), out SDInfo refFrag) == false)
-            //        throw new Exception($"missing hasMember reference {reference}");
-            //    if (items.Contains(slice.Name))
-            //        return;
-
-            //    items.Add(slice.Name);
-            //    String refClassName = CSBuilder.ClassName(refFrag);
-            //    String refInterfaceName = CSBuilder.InterfaceName(refFrag);
-            //    String fieldName = CSBuilder.PropertyName(slice.Name);
-
-            //    classHasMemberFields?.AppendCode($"public MemberList<{refInterfaceName}> {fieldName} {{ get; protected set; }}");
-            //    if (level == 0)
-            //        interfaceHasMemberFields.AppendCode($"MemberList<{refInterfaceName}> {fieldName} {{ get; }}");
-
-            //    Int32 min = 0;
-            //    if (slice.ElementDefinition.Min.HasValue)
-            //        min = slice.ElementDefinition.Min.Value;
-            //    Int32 max = -1;
-            //    if (String.IsNullOrEmpty(slice.ElementDefinition.Max) == false)
-            //    {
-            //        if (slice.ElementDefinition.Max != "*")
-            //            max = Int32.Parse(slice.ElementDefinition.Max);
-            //    }
-
-            //    classHasMemberConstruction?.AppendCode($"this.{fieldName} = CreateHasMemberList<{refInterfaceName}>({min}, {max});");
-            //}
-
-            //void Build(SDInfo fi, Int32 level)
-            //{
-            //    if (fi.BaseDefinitionUrl != Global.ObservationUrl)
-            //        return;
-            //    if (fi.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
-            //        return;
-            //    if (hasMemberNode.Slices.Count <= 1)
-            //        return;
-            //    foreach (ElementTreeSlice slice in hasMemberNode.Slices.Skip(1))
-            //        BuildSlice(fi, slice, level);
-            //}
-
-            //if (fragInfo.ClassEditor == null)
-            //    return;
-
-            //VisitFragments(Build, fragInfo);
-        }
-
-
-
-
-
         String DefineComponentsLocalClass(ElementTreeSlice componentSlice,
             Coding code,
             Int32 max,
@@ -214,11 +41,6 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public class {className} : ObservationBase.ComponentBase<{propertyType}>")
                 .OpenBrace()
-                //.AppendCode($"// Definitions")
-                //.DefineBlock(out CodeBlockNested definitionsBlock)
-                //.BlankLine()
-                //.DefineBlock(out CodeBlockNested fieldsBlock)
-                //.BlankLine()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)
                 .BlankLine()
@@ -236,19 +58,13 @@ namespace FireFragger
                 .CloseBrace()
                 ;
 
-            //propertiesBlock
-            //    ;
-
-            //fieldsBlock
-            //    ;
-
             if (max == 1)
             {
                 propertiesBlock
                     .SummaryOpen()
                     .Summary("get {propertyName} value")
                     .SummaryClose()
-                    .AppendCode($"public {propertyType} Value() => this.GetSingleItem<{propertyType}> ();")
+                    .AppendCode($"public {propertyType} Value => this.GetSingleItem<{propertyType}> ();")
                     ;
                 foreach (String valueType in valueTypes)
                 {
@@ -263,76 +79,7 @@ namespace FireFragger
             }
             else
             {
-                //propertiesBlock
-                //    .SummaryOpen()
-                //    .Summary("get {propertyName} value")
-                //    .SummaryClose()
-                //    .AppendCode($"public {propertyType} Value() => this.GetSingleItem<{propertyType}> ();")
-                //    ;
-
-                //foreach (String valueType in valueTypes)
-                //{
-                //    methodsBlock
-                //        .BlankLine()
-                //        .SummaryOpen()
-                //        .Summary($"Set {propertyName} value")
-                //        .SummaryClose()
-                //        .AppendCode($"public void Value{valueType}({valueType} value) => this.SetFirst(value);")
-                //        ;
-                //}
-
-                //    propertiesBlock
-                //        .SummaryOpen()
-                //        .Summary("Access propertyName")
-                //        .SummaryClose()
-                //        .AppendCode($"public IEnumerable<{propertyType}> Items => this.items;")
-                //        .BlankLine()
-                //        .SummaryOpen()
-                //        .Summary("Access first item in list or defrault if no first item")
-                //        .SummaryClose()
-                //        .AppendCode($"public {propertyType} First() => this.items.First();")
-                //        .BlankLine()
-                //        .SummaryOpen()
-                //        .Summary("Access first item in list")
-                //        .SummaryClose()
-                //        .AppendCode($"public {propertyType} FirstOrDefault() => this.items.FirstOrDefault();")
-                //        ;
-
-                //    foreach (String target in references)
-                //    {
-                //        String targetName = target.LastUriPart();
-                //        String fhirType = this.FhirClass(target);
-                //        String propertyType = this.BRClass(target);
-                //        methodsBlock
-                //            .BlankLine()
-                //            .SummaryOpen()
-                //            .Summary($"Create new blank {propertyName} of type {fhirType} and add to end of list")
-                //            .SummaryClose()
-                //            ;
-
-                //        if (fhirType == "Resource")
-                //        {
-                //            methodsBlock
-                //                .AppendCode($"public {propertyType} Add{targetName}({fhirType} fhirItem)")
-                //                .OpenBrace()
-                //                ;
-                //        }
-                //        else
-                //        {
-                //            methodsBlock
-                //                .AppendCode($"public {propertyType} Add{targetName}({fhirType} fhirItem = null)")
-                //                .OpenBrace()
-                //                .AppendCode($"if (fhirItem == null) fhirItem = new {fhirType}();")
-                //                ;
-                //        }
-                //        methodsBlock
-                //            .AppendCode($"{propertyType} brItem = new {propertyType}();")
-                //            .AppendCode($"brItem.Create(this.doc, fhirItem);")
-                //            .AppendCode($"this.AppendItem(brItem);")
-                //            .AppendCode($"return brItem;")
-                //            .CloseBrace();
-                //        ;
-                //    }
+                throw new NotImplementedException();
             }
             return className;
         }
@@ -410,6 +157,117 @@ namespace FireFragger
             }
         }
 
+        String DefineHasMembersLocalClass(ElementTreeSlice hasMemberSlice,
+            Int32 max,
+            Int32 min,
+            String propertyName,
+            String propertyType)
+        {
+            String className = $"{propertyName}_Accessor";
+            if (this.LocalClassDefs == null)
+                return className;
+
+            this.LocalClassDefs
+                .SummaryOpen()
+                .Summary($"Accessor class for '{hasMemberSlice.Name}'")
+                .Summary($"[Fhir Element '{hasMemberSlice.ElementDefinition.ElementId}]'")
+                .SummaryClose()
+                ;
+            if (max == 1)
+            {
+                this.LocalClassDefs
+                    .AppendCode($"public class {className} : ObservationBase.HasMemberSingle<{propertyType}>")
+                    .OpenBrace()
+                    .SummaryOpen()
+                    .Summary($"Accessor class constructor")
+                    .SummaryClose()
+                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
+                    .OpenBrace()
+                    .AppendCode($"this.Create(doc, {min}, {max});")
+                    .CloseBrace()
+                    .CloseBrace()
+                    ;
+            }
+            else
+            {
+                this.LocalClassDefs
+                    .AppendCode($"public class {className} : ObservationBase.HasMemberMultiple<{propertyType}>")
+                    .OpenBrace()
+                    .SummaryOpen()
+                    .Summary($"Accessor class constructor")
+                    .SummaryClose()
+                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
+                    .OpenBrace()
+                    .AppendCode($"this.Create(doc, {min}, {max});")
+                    .CloseBrace()
+                    .CloseBrace()
+                    ;
+            }
+            return className;
+        }
+
+        void DefineHasMembers()
+        {
+            if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
+                return;
+
+            if (this.fragBase.ClassEditor != null)
+            {
+                this.ClassWriteCodeStart
+                    ?.AppendCode($"this.ClearHasMembers();")
+                    ;
+            }
+
+            foreach (ElementTreeSlice hasMemberSlice in hasMemberNode.Slices.Skip(1))
+            {
+                String sliceName = hasMemberSlice.ElementDefinition.SliceName;
+
+                ElementDefinition sliceDef = hasMemberSlice.ElementDefinition;
+                Int32 max = ToMax(sliceDef.Max);
+                Int32 min = sliceDef.Min.Value;
+                String propertyName = sliceName.ToMachineName();
+
+                if (sliceDef.Type.Count != 1)
+                    throw new Exception($"Error processing hasMember slice {sliceName}. Expected single type. Got {sliceDef.Type.Count}");
+                if (sliceDef.Type[0].Code != "Reference")
+                    throw new Exception($"Error processing hasMember slice {sliceName}. Expected type Reference. Got {sliceDef.Type[0].Code}");
+                if (sliceDef.Type[0].TargetProfile.Count() != 1)
+                    throw new Exception($"Error processing hasMember slice {sliceName}. Expected Target count of 1. Got {sliceDef.Type[0].TargetProfile.Count()}");
+                String valueType = sliceDef.Type[0].TargetProfile.First().LastUriPart();
+
+                String hasMemberClassName =
+                    DefineHasMembersLocalClass(hasMemberSlice, max, min, propertyName, valueType);
+
+                String interfaceName = CSBuilder.InterfaceName(fragBase);
+                String className = CSBuilder.ClassName(fragBase);
+                this.InterfaceFields
+                    .AppendCode($"{hasMemberClassName} {propertyName} {{ get ; }}")
+                    ;
+
+                if (this.fragBase.ClassEditor != null)
+                {
+                    this.ClassFields
+                        .AppendCode($"public {hasMemberClassName} {propertyName} {{ get ; protected set; }}")
+                        ;
+                    this.ClassConstructor
+                        .AppendCode($"this.{propertyName} = new {hasMemberClassName}(doc);")
+                        ;
+                    this.ClassWriteCode
+                        .AppendCode($"this.WriteHasMember(this.{propertyName});")
+                        ;
+                    this.ClassReadCode
+                        .AppendCode($"this.ReadHasMember(this.{propertyName});")
+                        ;
+                }
+            }
+        }
+
+
+
+
+
+
+
         public override void Build()
         {
             const String fcn = "Build";
@@ -421,8 +279,8 @@ namespace FireFragger
             //Debug.Assert(fragBase.StructDef.Url.LastUriPart().Contains("ObservedChangesFragment") == false);
             base.Build();
 
-            //DefineHasMembers(this.fragBase);
             DefineComponents();
+            DefineHasMembers();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {fragBase.StructDef.Url.LastUriPart()}");

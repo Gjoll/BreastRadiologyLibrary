@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		ObsChanges_Accessor ObsChanges { get ; }                                                                                                  // CSDefineObservation.cs:392
+		ObsChanges_Accessor ObsChanges { get ; }                                                                                                  // CSDefineObservation.cs:139
 		//- Fields
 
 		//+ Methods
