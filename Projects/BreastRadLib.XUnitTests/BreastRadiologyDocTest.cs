@@ -69,6 +69,27 @@ namespace BreastRadiology.XUnitTests
                 }
             }
         }
+
+
+
+
+        [TestMethod]
+        public void Observation_HasMemberTest()
+        {
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+                {
+                    BreastRadReport report = doc.Index.Report.CreateBreastRadReport();
+                    //report.Fin
+                }
+                b = doc.Write();
+            }
+
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
+            }
+        }
     }
 }
 

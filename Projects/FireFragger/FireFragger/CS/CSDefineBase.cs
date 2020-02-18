@@ -212,7 +212,7 @@ namespace FireFragger
 
         public String FhirClass(String url)
         {
-            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+            if (Misc.UrlStartsWith(url, "http://hl7.org/fhir/structuredefinition/"))
                 return url.LastUriPart();
             if (this.csBuilder.SDFragments.TryGetValue(url, out SDInfo fragInfo) == false)
                 throw new Exception($"{url.LastUriPart()} not found");
@@ -221,7 +221,7 @@ namespace FireFragger
 
         protected String BRClass(String url)
         {
-            if (url.Trim().ToLower().StartsWith("http://hl7.org/fhir/structuredefinition/"))
+            if (Misc.UrlStartsWith(url, "http://hl7.org/fhir/structuredefinition/"))
                 return "ResourceBase";
             String reference = url.LastUriPart();
             return reference;

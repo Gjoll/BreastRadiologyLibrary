@@ -1,6 +1,7 @@
 ﻿using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BreastRadLib
@@ -17,6 +18,20 @@ namespace BreastRadLib
         public class HasMemberBase<BaseType> : MemberList<BaseType>
                 where BaseType : ObservationBase
         {
+            public String ProfileUrl { get; private set; }
+
+            public HasMemberBase()
+            {
+            }
+
+            public void Create(BreastRadiologyDocument doc,
+                    Int32 min,
+                    Int32 max,
+                    String profileUrl)
+            {
+                this.ProfileUrl = profileUrl;
+                base.Create(doc, min, max);
+            }
         }
 
         /// <summary>
@@ -31,19 +46,35 @@ namespace BreastRadLib
             public BaseType Get() => base.GetSingleItem();
 
             /// <summary>
+            /// Create item if it doesn't already exist, and return item.
+            /// </summary>
+            public BaseType Create()
+            {
+                if (this.items.Count == 0)
+                {
+                    BaseType item = new BaseType();
+                    item.Create(this.doc, new Observation());
+                    this.items.Add(item);
+                }
+                return this.items.First();
+            }
+
+            /// <summary>
             /// Set item
             /// </summary>
-            /// <param name="item"></param>
-            /// <returns></returns>
             public BaseType Set(BaseType item = null)
             {
                 if (item == null)
                 {
-                    //item = new BaseType();
-                    //item.Create(this.doc);
+                    item = new BaseType();
+                    item.Create(this.doc, new Observation());
                 }
                 base.SetSingleItem(item);
                 return item;
+            }
+
+            public HasMemberSingle() : base()
+            {
             }
         }
 
@@ -53,6 +84,9 @@ namespace BreastRadLib
         public class HasMemberMultiple<BaseType> : HasMemberBase<BaseType>
                 where BaseType : ObservationBase
         {
+            public HasMemberMultiple() : base()
+            {
+            }
         }
 
         /// <summary>
@@ -111,13 +145,33 @@ namespace BreastRadLib
         protected void WriteHasMember<BaseType>(HasMemberBase<BaseType> hasMemberList)
              where BaseType : ObservationBase
         {
-            throw new NotImplementedException();
+            foreach (BaseType item in hasMemberList.RawItems)
+            {
+                if (Misc.SameUrl(item.Meta.Profile.FirstOrDefault(), hasMemberList.ProfileUrl))
+                {
+                    this.Resource.HasMember.Add(
+                        new ResourceReference
+                        {
+                            Reference = item.Resource.IdElement.Value
+                        }); ;
+                }
+            }
         }
 
         protected void ReadHasMember<BaseType>(HasMemberBase<BaseType> hasMemberList)
-             where BaseType : ObservationBase
+             where BaseType : ObservationBase, new()
         {
-            throw new NotImplementedException();
+            foreach (ResourceReference resRef in this.Resource.HasMember)
+            {
+                Observation referencedResource = ReferencedResource<Observation>(resRef);
+                String profile = referencedResource.Meta.Profile.First();
+                if (Misc.SameUrl(profile, hasMemberList.ProfileUrl))
+                {
+                    BaseType item = new BaseType();
+                    item.Create(this.doc, referencedResource);
+                    hasMemberList.RawItems.Add(item);
+                }
+            }
         }
 
         protected void ClearComponents()

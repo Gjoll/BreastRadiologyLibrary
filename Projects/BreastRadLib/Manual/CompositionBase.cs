@@ -63,11 +63,7 @@ namespace BreastRadLib
                 return;
             foreach (ResourceReference resRef in sectionComponent.Entry)
             {
-                if (this.doc.ResourceBag.TryGetEntry(resRef.Reference, out var entry) == false)
-                    throw new Exception($"Error referencing section resource '{resRef.Reference}'");
-                Resource referencedResource = entry.Resource;
-                if (referencedResource.Meta.Profile.Count() != 1)
-                    throw new Exception($"Invalid Meta.profile. Expected 1, got {referencedResource.Meta.Profile.Count()}");
+                Resource referencedResource = ReferencedResource<Resource>(resRef);
                 String profile = referencedResource.Meta.Profile.First();
                 T item = ResourceFactory.CreateBreastRadProfileResource(this.doc, profile, referencedResource) as T;
 

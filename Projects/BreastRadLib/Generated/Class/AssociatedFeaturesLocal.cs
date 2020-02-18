@@ -15,43 +15,43 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>       // CSDefineObservation.cs:198
-	{                                                                                                                                          // CSDefineObservation.cs:199
+	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>       // CSDefineObservation.cs:199
+	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityArchitecturalDistortion_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base()                                             // CSDefineObservation.cs:204
-	    {                                                                                                                                      // CSDefineObservation.cs:205
-	        this.Create(doc, 0, -1);                                                                                                           // CSDefineObservation.cs:206
-	    }                                                                                                                                      // CSDefineObservation.cs:207
-	}                                                                                                                                          // CSDefineObservation.cs:208
+	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base()                                             // CSDefineObservation.cs:205
+	    {                                                                                                                                      // CSDefineObservation.cs:206
+	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");       // CSDefineObservation.cs:207
+	    }                                                                                                                                      // CSDefineObservation.cs:208
+	}                                                                                                                                          // CSDefineObservation.cs:209
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityCalcification>                           // CSDefineObservation.cs:198
-	{                                                                                                                                          // CSDefineObservation.cs:199
+	public class MGAbnormalityCalcification_Accessor : ObservationBase.HasMemberMultiple<MGAbnormalityCalcification>                           // CSDefineObservation.cs:199
+	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityCalcification_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base()                                                       // CSDefineObservation.cs:204
-	    {                                                                                                                                      // CSDefineObservation.cs:205
-	        this.Create(doc, 0, -1);                                                                                                           // CSDefineObservation.cs:206
-	    }                                                                                                                                      // CSDefineObservation.cs:207
-	}                                                                                                                                          // CSDefineObservation.cs:208
+	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base()                                                       // CSDefineObservation.cs:205
+	    {                                                                                                                                      // CSDefineObservation.cs:206
+	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                 // CSDefineObservation.cs:207
+	    }                                                                                                                                      // CSDefineObservation.cs:208
+	}                                                                                                                                          // CSDefineObservation.cs:209
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'observedFeature'
 	/// [Fhir Element 'Observation.hasMember:observedFeature]'
 	/// </summary>
-	public class ObservedFeature_Accessor : ObservationBase.HasMemberMultiple<ObservedFeature>                                                 // CSDefineObservation.cs:198
-	{                                                                                                                                          // CSDefineObservation.cs:199
+	public class ObservedFeature_Accessor : ObservationBase.HasMemberMultiple<ObservedFeature>                                                 // CSDefineObservation.cs:199
+	{                                                                                                                                          // CSDefineObservation.cs:200
 	    /// <summary>
 	    /// Accessor HasMember slice ObservedFeature_Accessor class constructor
 	    /// </summary>
-	    public ObservedFeature_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:204
-	    {                                                                                                                                      // CSDefineObservation.cs:205
-	        this.Create(doc, 0, -1);                                                                                                           // CSDefineObservation.cs:206
-	    }                                                                                                                                      // CSDefineObservation.cs:207
-	}                                                                                                                                          // CSDefineObservation.cs:208
+	    public ObservedFeature_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:205
+	    {                                                                                                                                      // CSDefineObservation.cs:206
+	        this.Create(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                            // CSDefineObservation.cs:207
+	    }                                                                                                                                      // CSDefineObservation.cs:208
+	}                                                                                                                                          // CSDefineObservation.cs:209
 	//- LocalClassDefs
 }

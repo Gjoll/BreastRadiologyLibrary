@@ -161,9 +161,10 @@ namespace FireFragger
             Int32 max,
             Int32 min,
             String propertyName,
-            String propertyType)
+            String profileUrl)
         {
             String sliceName = hasMemberSlice.ElementDefinition.SliceName;
+            String propertyType = profileUrl.LastUriPart();
 
             String className = $"{propertyName}_Accessor";
             if (this.LocalClassDefs == null)
@@ -187,7 +188,7 @@ namespace FireFragger
                     .SummaryClose()
                     .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                     .OpenBrace()
-                    .AppendCode($"this.Create(doc, {min}, {max});")
+                    .AppendCode($"this.Create(doc, {min}, {max}, \"{profileUrl}\");")
                     .CloseBrace()
                     .CloseBrace()
                     ;
@@ -203,7 +204,7 @@ namespace FireFragger
                     .SummaryClose()
                     .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                     .OpenBrace()
-                    .AppendCode($"this.Create(doc, {min}, {max});")
+                    .AppendCode($"this.Create(doc, {min}, {max}, \"{profileUrl}\");")
                     .CloseBrace()
                     .CloseBrace()
                     ;
@@ -238,10 +239,10 @@ namespace FireFragger
                     throw new Exception($"Error processing hasMember slice {sliceName}. Expected type Reference. Got {sliceDef.Type[0].Code}");
                 if (sliceDef.Type[0].TargetProfile.Count() != 1)
                     throw new Exception($"Error processing hasMember slice {sliceName}. Expected Target count of 1. Got {sliceDef.Type[0].TargetProfile.Count()}");
-                String valueType = sliceDef.Type[0].TargetProfile.First().LastUriPart();
+                String profileUrl = sliceDef.Type[0].TargetProfile.First();
 
                 String hasMemberClassName =
-                    DefineHasMembersLocalClass(hasMemberSlice, max, min, propertyName, valueType);
+                    DefineHasMembersLocalClass(hasMemberSlice, max, min, propertyName, profileUrl);
 
                 String interfaceName = CSBuilder.InterfaceName(fragBase);
                 String className = CSBuilder.ClassName(fragBase);

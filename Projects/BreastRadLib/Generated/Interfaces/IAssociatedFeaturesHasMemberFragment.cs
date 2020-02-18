@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSDefineObservation.cs:249
+		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSDefineObservation.cs:250
 		//- Fields
 
 		//+ Methods
