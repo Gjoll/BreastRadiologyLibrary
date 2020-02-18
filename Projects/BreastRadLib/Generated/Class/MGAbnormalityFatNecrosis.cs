@@ -8,20 +8,26 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.MGAbnormalityFatNecrosisLocal;
 //+Usings
-using BreastRadLib.ObservationLeafFragmentLocal;                                                                                            // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;                                                                               // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;                                                                            // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoValueFragmentLocal;                                                                                // CSDefineBase.cs:103
-using BreastRadLib.CommonComponentsFragmentLocal;                                                                                           // CSDefineBase.cs:103
-using BreastRadLib.ShapeComponentsFragmentLocal;                                                                                            // CSDefineBase.cs:103
-using BreastRadLib.NotPreviouslySeenComponentFragmentLocal;                                                                                 // CSDefineBase.cs:103
-using BreastRadLib.ObservedCountFragmentLocal;                                                                                              // CSDefineBase.cs:103
-using BreastRadLib.ObservedSizeFragmentLocal;                                                                                               // CSDefineBase.cs:103
-using BreastRadLib.ObservedDistributionFragmentLocal;                                                                                       // CSDefineBase.cs:103
-using BreastRadLib.CorrespondsWithFragmentLocal;                                                                                            // CSDefineBase.cs:103
-using BreastRadLib.PreviouslyDemonstratedByFragmentLocal;                                                                                   // CSDefineBase.cs:103
-using BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal;                                                                                // CSDefineBase.cs:103
-using BreastRadLib.ConsistentWithHasMemberFragmentLocal;                                                                                    // CSDefineBase.cs:103
+using BreastRadLib.ObservationLeafFragmentLocal;
+using BreastRadLib.HeaderFragmentLocal;
+using BreastRadLib.CategoryFragmentLocal;
+using BreastRadLib.BreastRadObservationFragmentLocal;
+using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;
+using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;
+using BreastRadLib.BreastRadObservationNoValueFragmentLocal;
+using BreastRadLib.BreastBodyLocationRequiredFragmentLocal;
+using BreastRadLib.ObservedChangesFragmentLocal;
+using BreastRadLib.BiRadFragmentLocal;
+using BreastRadLib.CommonComponentsFragmentLocal;
+using BreastRadLib.ShapeComponentsFragmentLocal;
+using BreastRadLib.NotPreviouslySeenComponentFragmentLocal;
+using BreastRadLib.ObservedCountFragmentLocal;
+using BreastRadLib.ObservedSizeFragmentLocal;
+using BreastRadLib.ObservedDistributionFragmentLocal;
+using BreastRadLib.CorrespondsWithFragmentLocal;
+using BreastRadLib.PreviouslyDemonstratedByFragmentLocal;
+using BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal;
+using BreastRadLib.ConsistentWithHasMemberFragmentLocal;
 //-Usings
 
 namespace BreastRadLib
@@ -29,6 +35,8 @@ namespace BreastRadLib
 	public class MGAbnormalityFatNecrosis : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, IShapeComponentsFragment, INotPreviouslySeenComponentFragment, IObservedCountFragment, IObservedSizeFragment, IObservedDistributionFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:398
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:398
 		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:398
 		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSDefineObservation.cs:398
 		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSDefineObservation.cs:398
@@ -38,6 +46,7 @@ namespace BreastRadLib
 		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:398
 		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:398
 		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:398
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:398
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:398
 		//- Fields
 
@@ -74,16 +83,19 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
-			this.Orientation = new IShapeComponentsFragment.Orientation_Accessor(doc);                                                               // CSDefineObservation.cs:401
-			this.Shape = new IShapeComponentsFragment.Shape_Accessor(doc);                                                                           // CSDefineObservation.cs:401
-			this.Margin = new IShapeComponentsFragment.Margin_Accessor(doc);                                                                         // CSDefineObservation.cs:401
-			this.MgDensity = new IShapeComponentsFragment.MgDensity_Accessor(doc);                                                                   // CSDefineObservation.cs:401
-			this.NotPreviouslySeen = new INotPreviouslySeenComponentFragment.NotPreviouslySeen_Accessor(doc);                                        // CSDefineObservation.cs:401
-			this.ObsCount = new IObservedCountFragment.ObsCount_Accessor(doc);                                                                       // CSDefineObservation.cs:401
-			this.ObsSize = new IObservedSizeFragment.ObsSize_Accessor(doc);                                                                          // CSDefineObservation.cs:401
-			this.ObsDistribution = new IObservedDistributionFragment.ObsDistribution_Accessor(doc);                                                  // CSDefineObservation.cs:401
-			this.ObsDistRegionSize = new IObservedDistributionFragment.ObsDistRegionSize_Accessor(doc);                                              // CSDefineObservation.cs:401
-			this.PreviouslyDemonstratedBy = new IPreviouslyDemonstratedByFragment.PreviouslyDemonstratedBy_Accessor(doc);                            // CSDefineObservation.cs:401
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:401
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:401
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:401
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:401
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:401
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:401
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:401
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:401
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:401
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:401
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:401
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:401
 			//- Constructor
 		}
 
@@ -93,6 +105,8 @@ namespace BreastRadLib
 		this.ClearComponents();                                                                                                                   // CSDefineObservation.cs:348
 		//- WriteCodeStart
 		//+ WriteCode
+		this.WriteComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:404
+		this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:404
 		this.WriteComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:404
 		this.WriteComponent(this.Shape);                                                                                                          // CSDefineObservation.cs:404
 		this.WriteComponent(this.Margin);                                                                                                         // CSDefineObservation.cs:404
@@ -102,6 +116,7 @@ namespace BreastRadLib
 		this.WriteComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:404
 		this.WriteComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:404
 		this.WriteComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:404
+		this.WriteComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:404
 		this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:404
 		//- WriteCode
 		}
@@ -111,6 +126,8 @@ namespace BreastRadLib
 		//+ ReadCodeStart
 		//- ReadCodeStart
 		//+ ReadCode
+		this.ReadComponent(this.ObsChanges);                                                                                                      // CSDefineObservation.cs:407
+		this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                        // CSDefineObservation.cs:407
 		this.ReadComponent(this.Orientation);                                                                                                     // CSDefineObservation.cs:407
 		this.ReadComponent(this.Shape);                                                                                                           // CSDefineObservation.cs:407
 		this.ReadComponent(this.Margin);                                                                                                          // CSDefineObservation.cs:407
@@ -120,6 +137,7 @@ namespace BreastRadLib
 		this.ReadComponent(this.ObsSize);                                                                                                         // CSDefineObservation.cs:407
 		this.ReadComponent(this.ObsDistribution);                                                                                                 // CSDefineObservation.cs:407
 		this.ReadComponent(this.ObsDistRegionSize);                                                                                               // CSDefineObservation.cs:407
+		this.ReadComponent(this.CorrespondsWith);                                                                                                 // CSDefineObservation.cs:407
 		this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                        // CSDefineObservation.cs:407
 		//- ReadCode
 		}

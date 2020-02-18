@@ -1,0 +1,18 @@
+		//+ Fields
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:398
+		//- Fields
+
+			//+ Constructor
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:401
+			//- Constructor
+
+		//+ WriteCode
+		this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:404
+		//- WriteCode
+
+		//+ ReadCode
+		this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                        // CSDefineObservation.cs:407
+		//- ReadCode
+
+		//+ Methods
+		//- Methods

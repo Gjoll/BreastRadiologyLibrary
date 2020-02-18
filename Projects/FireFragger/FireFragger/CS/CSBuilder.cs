@@ -14,6 +14,7 @@ namespace FireFragger
 {
     class CSBuilder : ConverterBase, IDisposable
     {
+        String BreakOnClass = "BreastRadComposition";
         CodeEditor resourceFactoryEditor;
         CodeBlockNested resourceFactoryProfileBlock;
 
@@ -21,8 +22,6 @@ namespace FireFragger
         public Dictionary<String, CSInfo> LocalCodeSystems;
         public Dictionary<String, VSInfo> ValueSets;
         public Dictionary<String, SDInfo> SDFragments;
-        public List<SDInfo> orderedFragments;
-
 
         public String OutputDir { get; set; } = ".";
         public bool CleanFlag { get; set; } = false;
@@ -134,8 +133,11 @@ namespace FireFragger
             this.ConversionInfo(this.GetType().Name,
                fcn,
                $"Processing fragment {fi.StructDef.Name}");
-            if (fi.ClassEditor != null)
+ 
+            if (fi.IsFragment() == false)
             {
+                if (String.Compare(ClassName(fi), BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
+                    Debugger.Break();
                 String url = fi.StructDef.Url.Trim().ToLower();
                 this.resourceFactoryProfileBlock
                     .AppendCode($"case \"{url}\":")
@@ -184,7 +186,7 @@ namespace FireFragger
         void DefineInterfaces(SDInfo fi)
         {
             StringBuilder interfaces = new StringBuilder();
-            foreach (SDInfo refFrag in fi.ReferencedFragments)
+            foreach (SDInfo refFrag in fi.DirectReferencedFragments)
                 interfaces.Append($", {InterfaceName(refFrag)}");
             fi.SetInterfaces(interfaces.ToString());
         }
@@ -199,50 +201,46 @@ namespace FireFragger
             code.Save(path);
         }
 
-        /// <summary>
-        /// Order fragments so that fragments that are dependent on another fragment come
-        /// after that fragment in the list.
-        /// Circular references will cause an error.
-        /// </summary>
-        void OrderFragments()
-        {
-            orderedFragments = new List<SDInfo>();
-            Int32 index;
-
-            // Return true if fi references fiRef.
-            bool ReferencesFragment(SDInfo fi, SDInfo fiRef)
-            {
-                foreach (SDInfo temp in fi.ReferencedFragments)
-                {
-                    if (temp == fiRef)
-                        return true;
-                    // recursive search...
-                    if (ReferencesFragment(temp, fiRef) == true)
-                        return true;
-                }
-                return false;
-            }
-
-            Int32 Search(SDInfo fi)
-            {
-                Int32 retVal = 0;
-                for (Int32 i = 0; i < orderedFragments.Count; i++)
-                    if (ReferencesFragment(fi, orderedFragments[i]) == false)
-                        break;
-                return retVal;
-            }
-
-            foreach (SDInfo fi in this.SDFragments.Values)
-            {
-                index = Search(fi);
-                orderedFragments.Insert(index, fi);
-            }
-        }
-
         void BuildFragments()
         {
-            OrderFragments();
-            foreach (SDInfo fi in this.orderedFragments)
+            List<SDInfo> unprocessed = new List<SDInfo>();
+            unprocessed.AddRange(this.SDFragments.Values);
+
+            bool Buildable(SDInfo fi)
+            {
+                foreach (SDInfo refFrag in fi.AllReferencedFragments)
+                {
+                    if (unprocessed.Contains(refFrag) == true)
+                        return false;
+                }
+                return true;
+            }
+
+            IEnumerable<SDInfo> OrderedFragments()
+            {
+                bool buildFlag = true;
+                while (unprocessed.Count > 0)
+                {
+                    if (buildFlag == false)
+                        throw new Exception("Unbuildable fragments. Circular reference?");
+                    buildFlag = false;
+                    Int32 index = 0;
+                    while (index < unprocessed.Count)
+                    {
+                        SDInfo fi = unprocessed[index];
+                        if (Buildable(fi))
+                        {
+                            buildFlag = true;
+                            unprocessed.Remove(fi);
+                            yield return fi;
+                        }
+                        else
+                            index += 1;
+                    }
+                }
+            }
+
+            foreach (SDInfo fi in OrderedFragments())
                 BuildFragment(fi);
         }
 
@@ -393,6 +391,8 @@ namespace FireFragger
                 {
                     if (fi.IsFragment() == false)
                         Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.cs"));
+                    else
+                        Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.txt"));
                 }
                 if (fi.SubClassEditor != null)
                     Save(fi.SubClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}Local.cs"));
@@ -432,29 +432,39 @@ namespace FireFragger
             fc?.Dispose();
         }
 
-        void BuildReferences()
+        void BuildReferences(SDInfo fi,
+            List<SDInfo> references,
+            bool recurseFlag)
         {
             const String fcn = "BuildReferences";
 
-            foreach (SDInfo fi in this.SDFragments.Values)
+            foreach (Extension e in fi.StructDef.Extension.ToArray())
             {
-                foreach (Extension e in fi.StructDef.Extension.ToArray())
+                if (e.Url.ToLower().Trim() == Global.FragmentUrl)
                 {
-                    if (e.Url.ToLower().Trim() == Global.FragmentUrl)
+                    FhirUrl extUrl = (FhirUrl)e.Value;
+                    if (SDFragments.TryGetValue(extUrl.Value.Trim(), out SDInfo reference) == false)
                     {
-                        FhirUrl extUrl = (FhirUrl)e.Value;
-                        if (SDFragments.TryGetValue(extUrl.Value.Trim(), out SDInfo reference) == false)
-                        {
-                            this.ConversionError(this.GetType().Name,
-                               fcn,
-                               $"Cant find fragment {extUrl}");
-                        }
-                        else
-                        {
-                            fi.ReferencedFragments.Add(reference);
-                        }
+                        this.ConversionError(this.GetType().Name,
+                           fcn,
+                           $"Can't find fragment {extUrl}");
+                    }
+                    else if (references.Contains(reference) == false)
+                    {
+                        if (recurseFlag)
+                            BuildReferences(reference, references, recurseFlag);
+                        references.Add(reference);
                     }
                 }
+            }
+        }
+
+        void BuildReferences()
+        {
+            foreach (SDInfo fi in this.SDFragments.Values)
+            {
+                BuildReferences(fi, fi.DirectReferencedFragments, false);
+                BuildReferences(fi, fi.AllReferencedFragments, true);
             }
         }
 

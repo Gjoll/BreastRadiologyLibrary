@@ -1,0 +1,14 @@
+		//+ Fields
+		//- Fields
+
+			//+ Constructor
+			//- Constructor
+
+		//+ WriteCode
+		//- WriteCode
+
+		//+ ReadCode
+		//- ReadCode
+
+		//+ Methods
+		//- Methods

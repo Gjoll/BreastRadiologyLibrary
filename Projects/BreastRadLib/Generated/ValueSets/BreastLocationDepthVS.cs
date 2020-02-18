@@ -28,18 +28,18 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_AnteriorDepth = new TCoding(BreastLocationDepthCS.Code_AnteriorDepth);                                         // CSBuilder.cs:322
-		public static TCoding Code_MiddleDepth = new TCoding(BreastLocationDepthCS.Code_MiddleDepth);                                             // CSBuilder.cs:322
-		public static TCoding Code_PosteriorDepth = new TCoding(BreastLocationDepthCS.Code_PosteriorDepth);                                       // CSBuilder.cs:322
+		public static TCoding Code_AnteriorDepth = new TCoding(BreastLocationDepthCS.Code_AnteriorDepth);                                         // CSBuilder.cs:320
+		public static TCoding Code_MiddleDepth = new TCoding(BreastLocationDepthCS.Code_MiddleDepth);                                             // CSBuilder.cs:320
+		public static TCoding Code_PosteriorDepth = new TCoding(BreastLocationDepthCS.Code_PosteriorDepth);                                       // CSBuilder.cs:320
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:307
-		{                                                                                                                                         // CSBuilder.cs:308
-		    yield return Code_AnteriorDepth;                                                                                                      // CSBuilder.cs:325
-		    yield return Code_MiddleDepth;                                                                                                        // CSBuilder.cs:325
-		    yield return Code_PosteriorDepth;                                                                                                     // CSBuilder.cs:325
-		}                                                                                                                                         // CSBuilder.cs:331
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
+		{                                                                                                                                         // CSBuilder.cs:306
+		    yield return Code_AnteriorDepth;                                                                                                      // CSBuilder.cs:323
+		    yield return Code_MiddleDepth;                                                                                                        // CSBuilder.cs:323
+		    yield return Code_PosteriorDepth;                                                                                                     // CSBuilder.cs:323
+		}                                                                                                                                         // CSBuilder.cs:329
 		//- Methods
 	}
 }

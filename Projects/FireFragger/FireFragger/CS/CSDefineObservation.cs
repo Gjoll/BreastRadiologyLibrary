@@ -58,7 +58,7 @@ namespace FireFragger
                     return;
                 items.Add(slice.Name);
 
-                String fieldName;
+                //String fieldName;
 
                 if (valueXNode.ElementDefinition.Type.Count == 1)
                 {
@@ -398,7 +398,7 @@ namespace FireFragger
                         .AppendCode($"public {componentClassName} {propertyName} {{ get ; protected set; }}")
                         ;
                     this.ClassConstructor
-                        .AppendCode($"this.{propertyName} = new {interfaceName}.{componentClassName}(doc);")
+                        .AppendCode($"this.{propertyName} = new {componentClassName}(doc);")
                         ;
                     this.ClassWriteCode
                         .AppendCode($"this.WriteComponent(this.{propertyName});")

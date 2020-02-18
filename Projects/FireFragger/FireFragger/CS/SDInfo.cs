@@ -3,14 +3,17 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 
 namespace FireFragger
 {
+    [DebuggerDisplay("{StructDef.Url}")]
     class SDInfo
     {
-        public List<SDInfo> ReferencedFragments = new List<SDInfo>();
+        public List<SDInfo> DirectReferencedFragments = new List<SDInfo>();
+        public List<SDInfo> AllReferencedFragments = new List<SDInfo>();
         public StructureDefinition StructDef;
         public CodeEditor InterfaceEditor;
         public CodeEditor ClassEditor;

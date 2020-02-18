@@ -45,7 +45,7 @@ namespace FireFragger
                     return;
                 vi(fi, level);
                 visitedFrags.Add(fi);
-                foreach (SDInfo refFrag in fragBase.ReferencedFragments)
+                foreach (SDInfo refFrag in fragBase.AllReferencedFragments)
                     Visit(vi, refFrag, level + 1);
             }
 
@@ -97,10 +97,10 @@ namespace FireFragger
 
             CodeBlockNested usingBlock = this.fragBase.ClassEditor.Blocks.Find("Usings", false);
 
-            foreach (SDInfo fiRef in this.fragBase.ReferencedFragments)
+            foreach (SDInfo fiRef in this.fragBase.AllReferencedFragments)
             {
                 String fragmentName = CSBuilder.ClassName(fiRef);
-                usingBlock.AppendCode($"using BreastRadLib.{fragmentName}Local;");
+                usingBlock.AppendLine($"using BreastRadLib.{fragmentName}Local;");
                 MergeFragment(fiRef);
             }
         }

@@ -8,9 +8,12 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.MGBreastDensityLocal;
 //+Usings
-using BreastRadLib.ObservationLeafFragmentLocal;                                                                                            // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;                                                                            // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;                                                                               // CSDefineBase.cs:103
+using BreastRadLib.ObservationLeafFragmentLocal;
+using BreastRadLib.HeaderFragmentLocal;
+using BreastRadLib.CategoryFragmentLocal;
+using BreastRadLib.BreastRadObservationFragmentLocal;
+using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;
+using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;
 //-Usings
 
 namespace BreastRadLib

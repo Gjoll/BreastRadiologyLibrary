@@ -1,0 +1,30 @@
+		//+ Fields
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:398
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSDefineObservation.cs:398
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSDefineObservation.cs:398
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSDefineObservation.cs:398
+		//- Fields
+
+			//+ Constructor
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:401
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:401
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:401
+			//- Constructor
+
+		//+ WriteCode
+		this.WriteComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:404
+		this.WriteComponent(this.Shape);                                                                                                          // CSDefineObservation.cs:404
+		this.WriteComponent(this.Margin);                                                                                                         // CSDefineObservation.cs:404
+		this.WriteComponent(this.MgDensity);                                                                                                      // CSDefineObservation.cs:404
+		//- WriteCode
+
+		//+ ReadCode
+		this.ReadComponent(this.Orientation);                                                                                                     // CSDefineObservation.cs:407
+		this.ReadComponent(this.Shape);                                                                                                           // CSDefineObservation.cs:407
+		this.ReadComponent(this.Margin);                                                                                                          // CSDefineObservation.cs:407
+		this.ReadComponent(this.MgDensity);                                                                                                       // CSDefineObservation.cs:407
+		//- ReadCode
+
+		//+ Methods
+		//- Methods

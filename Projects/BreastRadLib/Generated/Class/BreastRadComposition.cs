@@ -8,7 +8,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.BreastRadCompositionLocal;
 //+Usings
-using BreastRadLib.HeaderFragmentLocal;                                                                                                     // CSDefineBase.cs:103
+using BreastRadLib.HeaderFragmentLocal;
 //-Usings
 
 namespace BreastRadLib

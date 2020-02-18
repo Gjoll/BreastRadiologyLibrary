@@ -1,0 +1,18 @@
+		//+ Fields
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:398
+		//- Fields
+
+			//+ Constructor
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:401
+			//- Constructor
+
+		//+ WriteCode
+		this.WriteComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:404
+		//- WriteCode
+
+		//+ ReadCode
+		this.ReadComponent(this.ObsChanges);                                                                                                      // CSDefineObservation.cs:407
+		//- ReadCode
+
+		//+ Methods
+		//- Methods

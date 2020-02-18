@@ -8,10 +8,13 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.ConsistentWithLocal;
 //+Usings
-using BreastRadLib.ObservationLeafFragmentLocal;                                                                                            // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;                                                                               // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoValueFragmentLocal;                                                                                // CSDefineBase.cs:103
-using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;                                                                            // CSDefineBase.cs:103
+using BreastRadLib.ObservationLeafFragmentLocal;
+using BreastRadLib.HeaderFragmentLocal;
+using BreastRadLib.CategoryFragmentLocal;
+using BreastRadLib.BreastRadObservationFragmentLocal;
+using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;
+using BreastRadLib.BreastRadObservationNoValueFragmentLocal;
+using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;
 //-Usings
 
 namespace BreastRadLib
@@ -56,8 +59,8 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
-			this.Value = new IConsistentWith.Value_Accessor(doc);                                                                                    // CSDefineObservation.cs:401
-			this.Qualifier = new IConsistentWith.Qualifier_Accessor(doc);                                                                            // CSDefineObservation.cs:401
+			this.Value = new Value_Accessor(doc);                                                                                                    // CSDefineObservation.cs:401
+			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // CSDefineObservation.cs:401
 			//- Constructor
 		}
 

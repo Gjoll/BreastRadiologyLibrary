@@ -1,0 +1,18 @@
+		//+ Fields
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:398
+		//- Fields
+
+			//+ Constructor
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:401
+			//- Constructor
+
+		//+ WriteCode
+		this.WriteComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:404
+		//- WriteCode
+
+		//+ ReadCode
+		this.ReadComponent(this.NotPreviouslySeen);                                                                                               // CSDefineObservation.cs:407
+		//- ReadCode
+
+		//+ Methods
+		//- Methods

@@ -8,8 +8,8 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.BreastRadReportLocal;
 //+Usings
-using BreastRadLib.HeaderFragmentLocal;                                                                                                     // CSDefineBase.cs:103
-using BreastRadLib.CategoryFragmentLocal;                                                                                                   // CSDefineBase.cs:103
+using BreastRadLib.HeaderFragmentLocal;
+using BreastRadLib.CategoryFragmentLocal;
 //-Usings
 
 namespace BreastRadLib

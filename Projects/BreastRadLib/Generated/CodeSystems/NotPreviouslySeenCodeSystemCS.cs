@@ -12,13 +12,13 @@ namespace BreastRadLib
 	public class NotPreviouslySeenCodeSystemCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NotPreviouslySeenCodeSystemCS";                                 // CSBuilder.cs:346
-		                                                                                                                                          // CSBuilder.cs:358
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NotPreviouslySeenCodeSystemCS";                                 // CSBuilder.cs:344
+		                                                                                                                                          // CSBuilder.cs:356
 		/// <summary>
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_ClinicalExam = new Coding(System, "ClinicalExam", "Clinical exam");                                             // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_ClinicalExam = new Coding(System, "ClinicalExam", "Clinical exam");                                             // CSBuilder.cs:370
+		                                                                                                                                          // CSBuilder.cs:356
 		/// <summary>
 		/// Breast ductography (a.k.a.
 		/// galactography) is an imaging technique which is used to evaluate lesions causing
@@ -30,39 +30,39 @@ namespace BreastRadLib
 		/// [https://radiopaedia.org/articles/breast-ductography-1?lang=us]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // CSBuilder.cs:370
+		                                                                                                                                          // CSBuilder.cs:356
 		/// <summary>
 		/// An X-Ray picture of the breast.
 		/// It's used to look for early signs of breast cancer.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Mammogram = new Coding(System, "Mammogram", "Mammogram");                                                       // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Mammogram = new Coding(System, "Mammogram", "Mammogram");                                                       // CSBuilder.cs:370
+		                                                                                                                                          // CSBuilder.cs:356
 		/// <summary>
 		/// Magnetic Resonance Imaging (MRI) is a test that uses powerful magnets, radio waves,
 		/// and a computer to make detailed pictures inside your body.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:370
+		                                                                                                                                          // CSBuilder.cs:356
 		/// <summary>
 		/// The findings on the Mammogram were not previously seen on the outside exam.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_OutsideExam = new Coding(System, "OutsideExam", "Outside exam");                                                // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_OutsideExam = new Coding(System, "OutsideExam", "Outside exam");                                                // CSBuilder.cs:370
+		                                                                                                                                          // CSBuilder.cs:356
 		/// <summary>
 		/// This is a type of breast imaging that is used to detect cancer cells in the breasts
 		/// of some women who have had abnormal mammograms.
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
-		public static Coding Code_Scintimammography = new Coding(System, "Scintimammography", "Scintimammography");                               // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Scintimammography = new Coding(System, "Scintimammography", "Scintimammography");                               // CSBuilder.cs:370
+		                                                                                                                                          // CSBuilder.cs:356
 		/// <summary>
 		/// Uses soundwaves to develop ultrasound images.
 		/// This information is relayed in real time to produce images on a computer screen.
@@ -70,7 +70,7 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Ultrasound = new Coding(System, "Ultrasound", "Ultrasound");                                                    // CSBuilder.cs:372
+		public static Coding Code_Ultrasound = new Coding(System, "Ultrasound", "Ultrasound");                                                    // CSBuilder.cs:370
 		//- Fields
 	}
 }

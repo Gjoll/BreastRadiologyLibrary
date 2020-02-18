@@ -64,10 +64,17 @@ namespace BreastRadLib
             this.Resource.Component.Clear();
         }
 
-        //protected void WriteComponents<BaseType>(ComponentBase<BaseType> componentList )
-        //     where BaseType : ResourceBase, new()
-        //{
-        //}
+        protected void WriteComponent<BaseType>(ComponentBase<BaseType> componentList)
+             where BaseType : Base
+        {
+            throw new NotImplementedException();
+        }
+
+        protected void ReadComponent<BaseType>(ComponentBase<BaseType> componentList)
+             where BaseType : Base
+        {
+            throw new NotImplementedException();
+        }
 
         //protected MemberList<T> CreateHasMemberList<T>(Int32 min, Int32 max)
         //    where T : IResourceBase
