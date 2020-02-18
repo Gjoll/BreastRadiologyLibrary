@@ -46,8 +46,9 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Init(BreastRadiologyDocument doc, Extension resource = null)
+		public override void Init(BreastRadiologyDocument doc, Base baseResource = null)
 		{
+			Extension resource = (Extension) baseResource;
 			if (resource == null)
 				resource = new Extension();
 			base.Init(doc, resource);

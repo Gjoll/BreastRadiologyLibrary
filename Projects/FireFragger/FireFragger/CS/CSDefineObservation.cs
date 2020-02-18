@@ -64,7 +64,7 @@ namespace FireFragger
                     .SummaryOpen()
                     .Summary("get {propertyName} value")
                     .SummaryClose()
-                    .AppendCode($"public {propertyType} Value => base.FirstOrDefault();")
+                    .AppendCode($"public {propertyType} Value() => base.FirstOrDefault();")
                     ;
                 foreach (String valueType in valueTypes)
                 {

@@ -47,8 +47,9 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Init(BreastRadiologyDocument doc, ServiceRequest resource = null)
+		public override void Init(BreastRadiologyDocument doc, Base baseResource = null)
 		{
+			ServiceRequest resource = (ServiceRequest) baseResource;
 			if (resource == null)
 				resource = new ServiceRequest();
 			base.Init(doc, resource);

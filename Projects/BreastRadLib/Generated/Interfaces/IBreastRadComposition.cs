@@ -16,12 +16,12 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		Report_Accessor Report { get ; }                                                                                                          // CSDefineComposition.cs:233
-		Impressions_Accessor Impressions { get ; }                                                                                                // CSDefineComposition.cs:233
-		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // CSDefineComposition.cs:233
-		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // CSDefineComposition.cs:233
-		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // CSDefineComposition.cs:233
-		Recommendations_Accessor Recommendations { get ; }                                                                                        // CSDefineComposition.cs:233
+		Report_Accessor Report { get ; }                                                                                                          // CSDefineComposition.cs:230
+		Impressions_Accessor Impressions { get ; }                                                                                                // CSDefineComposition.cs:230
+		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // CSDefineComposition.cs:230
+		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // CSDefineComposition.cs:230
+		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // CSDefineComposition.cs:230
+		Recommendations_Accessor Recommendations { get ; }                                                                                        // CSDefineComposition.cs:230
 		//- Fields
 
 		//+ Methods

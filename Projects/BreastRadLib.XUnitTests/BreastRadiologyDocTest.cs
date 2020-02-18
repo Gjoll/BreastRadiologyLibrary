@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
                 Debug.Assert(doc.Index != null);
                 {
-                    BreastRadReport report = doc.Index.Report.Create;
+                    BreastRadReport report = doc.Index.Report.Create();
                     Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
                     Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
                     Debug.Assert(report.Resource.Code.Coding[0].System == "http://loinc.org");
@@ -43,7 +43,7 @@ namespace BreastRadiology.XUnitTests
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
                 Debug.Assert(doc.Index != null);
                 {
-                    BreastRadReport report = doc.Index.Report.Create;
+                    BreastRadReport report = doc.Index.Report.Create();
                     Debug.Assert(report != null);
                     Debug.Assert(report.Resource.Meta.Profile.Count() == 1);
                     Debug.Assert(report.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");
@@ -63,20 +63,20 @@ namespace BreastRadiology.XUnitTests
             {
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
                 {
-                    BreastRadReport report = doc.Index.Report.Create;
-                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get == null);
-                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get == null);
+                    BreastRadReport report = doc.Index.Report.Create();
+                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get() == null);
+                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get() == null);
                     {
-                        SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create;
-                        Assert.IsTrue(doc.Index.FindingsLeftBreast.Get != null);
-                        Assert.IsTrue(doc.Index.FindingsLeftBreast.Get.Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
-                        Assert.IsTrue(doc.Index.FindingsLeftBreast.Get.Resource.Code.Coding[0].Code == "findingsLeftBreastObservation");
+                        SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create();
+                        Assert.IsTrue(doc.Index.FindingsLeftBreast.Get() != null);
+                        Assert.IsTrue(doc.Index.FindingsLeftBreast.Get().Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
+                        Assert.IsTrue(doc.Index.FindingsLeftBreast.Get().Resource.Code.Coding[0].Code == "findingsLeftBreastObservation");
                     }
                     {
-                        SectionFindingsRightBreast findRight = doc.Index.FindingsRightBreast.Create;
-                        Assert.IsTrue(doc.Index.FindingsRightBreast.Get != null);
-                        Assert.IsTrue(doc.Index.FindingsRightBreast.Get.Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
-                        Assert.IsTrue(doc.Index.FindingsRightBreast.Get.Resource.Code.Coding[0].Code == "findingsRightBreastObservation");
+                        SectionFindingsRightBreast findRight = doc.Index.FindingsRightBreast.Create();
+                        Assert.IsTrue(doc.Index.FindingsRightBreast.Get() != null);
+                        Assert.IsTrue(doc.Index.FindingsRightBreast.Get().Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
+                        Assert.IsTrue(doc.Index.FindingsRightBreast.Get().Resource.Code.Coding[0].Code == "findingsRightBreastObservation");
                     }
                     {
                         ServiceRecommendation rec = doc.Index.Recommendations.AppendServiceRecommendation();
@@ -100,19 +100,19 @@ namespace BreastRadiology.XUnitTests
 
             {
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
-                BreastRadReport report = doc.Index.Report.Get;
+                BreastRadReport report = doc.Index.Report.Get();
                 Assert.IsTrue(report != null);
                 {
-                    SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get;
-                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get != null);
-                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get.Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
-                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get.Resource.Code.Coding[0].Code == "findingsLeftBreastObservation");
+                    SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
+                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get() != null);
+                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get().Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
+                    Assert.IsTrue(doc.Index.FindingsLeftBreast.Get().Resource.Code.Coding[0].Code == "findingsLeftBreastObservation");
                 }
                 {
-                    SectionFindingsRightBreast findRight = doc.Index.FindingsRightBreast.Get;
-                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get != null);
-                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get.Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
-                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get.Resource.Code.Coding[0].Code == "findingsRightBreastObservation");
+                    SectionFindingsRightBreast findRight = doc.Index.FindingsRightBreast.Get();
+                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get() != null);
+                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get().Resource.Code.Coding[0].System == "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes");
+                    Assert.IsTrue(doc.Index.FindingsRightBreast.Get().Resource.Code.Coding[0].Code == "findingsRightBreastObservation");
                 }
                 Debug.Assert(doc.Index.Recommendations.Count == 2);
                 {
@@ -141,15 +141,29 @@ namespace BreastRadiology.XUnitTests
             {
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
                 {
-                    BreastRadReport report = doc.Index.Report.Create;
-                    SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create;
-                    SectionFindingsLeftBreast findRight = doc.Index.FindingsLeftBreast.Create;
+                    BreastRadReport report = doc.Index.Report.Create();
+                    SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create();
+                    MGFinding mgFinding = findLeft.MGFinding.Append();
+                    MGAbnormalityAsymmetry asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
                 }
                 b = doc.Write();
             }
 
             {
                 BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
+                BreastRadReport report = doc.Index.Report.Get();
+                Debug.Assert(report != null);
+
+                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
+                Debug.Assert(findLeft != null);
+
+                MGFinding mgFinding = findLeft.MGFinding.First();
+                Debug.Assert(mgFinding != null);
+
+                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
+                Debug.Assert(asymmetry.Length == 3);
             }
         }
     }

@@ -49,7 +49,11 @@ namespace BreastRadLib
             /// Create item if it doesn't already exist, and return item.
             /// </summary>
             public BaseType Create => DoCreate();
-            BaseType DoCreate()
+
+            /// <summary>
+            /// Create item if it doesn't already exist, and return item.
+            /// </summary>
+            protected BaseType DoCreate()
             {
                 if (this.items.Count == 0)
                 {
@@ -60,19 +64,6 @@ namespace BreastRadLib
                 return this.items.First();
             }
 
-            /// <summary>
-            /// Set item
-            /// </summary>
-            public BaseType Set(BaseType item = null)
-            {
-                if (item == null)
-                {
-                    item = new BaseType();
-                    item.Init(this.doc, new Observation());
-                }
-                base.SetSingleItem(item);
-                return item;
-            }
 
             public HasMemberSingle() : base()
             {
@@ -83,8 +74,22 @@ namespace BreastRadLib
         /// Base class for all HasMember multiple accessors
         /// </summary>
         public class HasMemberMultiple<BaseType> : HasMemberBase<BaseType>
-                where BaseType : ObservationBase
+                where BaseType : ObservationBase, new()
         {
+            public IEnumerable<BaseType> All() => this.items;
+
+            public BaseType At(Int32 i) => this.items[i];
+
+            public new BaseType First() => (BaseType) base.First();
+
+            public BaseType Append()
+            {
+                BaseType retVal = new BaseType();
+                retVal.Init(this.doc, new Observation());
+                this.items.Add(retVal);
+                return retVal;
+            }
+
             public HasMemberMultiple() : base()
             {
             }

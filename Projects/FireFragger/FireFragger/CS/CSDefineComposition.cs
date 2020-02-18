@@ -42,10 +42,8 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public class {className} : SectionBase<{brClass}>")
                 .OpenBrace()
-                .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)
                 .BlankLine()
-                .AppendCode($"// Methods")
                 .DefineBlock(out CodeBlockNested methodsBlock)
                 .BlankLine()
                 .SummaryOpen()
@@ -63,13 +61,12 @@ namespace FireFragger
             {
                 void DefineCreate(String fhirType, String propertyType, String targetName)
                 {
-                    methodsBlock
+                    propertiesBlock
                         .BlankLine()
                         .SummaryOpen()
                         .Summary($"Create new blank {propertyName} if one doesnt already exist, and return it")
                         .SummaryClose()
-                        .AppendCode($"public {propertyType} Create{targetName} => DoCreate{targetName}();")
-                        .AppendCode($"private {propertyType} DoCreate{targetName}()")
+                        .AppendCode($"public {propertyType} Create{targetName}()")
                         .OpenBrace()
                         .AppendCode($"if (this.Count == 0)")
                         .OpenBrace()
@@ -86,7 +83,7 @@ namespace FireFragger
                     .SummaryOpen()
                     .Summary("Access propertyName")
                     .SummaryClose()
-                    .AppendCode($"public {brClass} Get => this.FirstOrDefault();")
+                    .AppendCode($"public {brClass} Get() => this.FirstOrDefault();")
                     ;
 
                 if (references.Length == 1)
@@ -136,7 +133,7 @@ namespace FireFragger
                     .SummaryOpen()
                     .Summary("Access propertyName")
                     .SummaryClose()
-                    .AppendCode($"public IEnumerable<{brClass}> Items => this.items;")
+                    .AppendCode($"public IEnumerable<{brClass}> All() => this.items;")
 
                     .BlankLine()
                     .SummaryOpen()

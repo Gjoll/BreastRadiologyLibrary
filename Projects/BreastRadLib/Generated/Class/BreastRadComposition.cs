@@ -16,12 +16,12 @@ namespace BreastRadLib
 	public class BreastRadComposition : CompositionBase, IHeaderFragment
 	{
 		//+ Fields
-		public Report_Accessor Report { get ; protected set; }                                                                                    // CSDefineComposition.cs:226
-		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // CSDefineComposition.cs:226
-		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // CSDefineComposition.cs:226
-		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // CSDefineComposition.cs:226
-		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // CSDefineComposition.cs:226
-		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // CSDefineComposition.cs:226
+		public Report_Accessor Report { get ; protected set; }                                                                                    // CSDefineComposition.cs:223
+		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // CSDefineComposition.cs:223
+		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // CSDefineComposition.cs:223
+		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // CSDefineComposition.cs:223
+		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // CSDefineComposition.cs:223
+		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // CSDefineComposition.cs:223
 		//- Fields
 
 		/// <summary>
@@ -53,19 +53,20 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Init(BreastRadiologyDocument doc, Composition resource = null)
+		public override void Init(BreastRadiologyDocument doc, Base baseResource = null)
 		{
+			Composition resource = (Composition) baseResource;
 			if (resource == null)
 				resource = new Composition();
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // CSDefineBase.cs:208
-			this.Report = new Report_Accessor(doc);                                                                                                  // CSDefineComposition.cs:229
-			this.Impressions = new Impressions_Accessor(doc);                                                                                        // CSDefineComposition.cs:229
-			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // CSDefineComposition.cs:229
-			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // CSDefineComposition.cs:229
-			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // CSDefineComposition.cs:229
-			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // CSDefineComposition.cs:229
+			this.Report = new Report_Accessor(doc);                                                                                                  // CSDefineComposition.cs:226
+			this.Impressions = new Impressions_Accessor(doc);                                                                                        // CSDefineComposition.cs:226
+			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // CSDefineComposition.cs:226
+			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // CSDefineComposition.cs:226
+			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // CSDefineComposition.cs:226
+			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // CSDefineComposition.cs:226
 			//- Constructor
 		}
 
@@ -74,13 +75,13 @@ namespace BreastRadLib
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			ClearSection();                                                                                                                          // CSDefineComposition.cs:186
-			this.WriteSection(this.Report);                                                                                                          // CSDefineComposition.cs:237
-			this.WriteSection(this.Impressions);                                                                                                     // CSDefineComposition.cs:237
-			this.WriteSection(this.FindingsRightBreast);                                                                                             // CSDefineComposition.cs:237
-			this.WriteSection(this.FindingsLeftBreast);                                                                                              // CSDefineComposition.cs:237
-			this.WriteSection(this.RelatedResources);                                                                                                // CSDefineComposition.cs:237
-			this.WriteSection(this.Recommendations);                                                                                                 // CSDefineComposition.cs:237
+			ClearSection();                                                                                                                          // CSDefineComposition.cs:183
+			this.WriteSection(this.Report);                                                                                                          // CSDefineComposition.cs:234
+			this.WriteSection(this.Impressions);                                                                                                     // CSDefineComposition.cs:234
+			this.WriteSection(this.FindingsRightBreast);                                                                                             // CSDefineComposition.cs:234
+			this.WriteSection(this.FindingsLeftBreast);                                                                                              // CSDefineComposition.cs:234
+			this.WriteSection(this.RelatedResources);                                                                                                // CSDefineComposition.cs:234
+			this.WriteSection(this.Recommendations);                                                                                                 // CSDefineComposition.cs:234
 			//- WriteCode
 		}
 
@@ -89,12 +90,12 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadSection(this.Report);                                                                                                           // CSDefineComposition.cs:241
-			this.ReadSection(this.Impressions);                                                                                                      // CSDefineComposition.cs:241
-			this.ReadSection(this.FindingsRightBreast);                                                                                              // CSDefineComposition.cs:241
-			this.ReadSection(this.FindingsLeftBreast);                                                                                               // CSDefineComposition.cs:241
-			this.ReadSection(this.RelatedResources);                                                                                                 // CSDefineComposition.cs:241
-			this.ReadSection(this.Recommendations);                                                                                                  // CSDefineComposition.cs:241
+			this.ReadSection(this.Report);                                                                                                           // CSDefineComposition.cs:238
+			this.ReadSection(this.Impressions);                                                                                                      // CSDefineComposition.cs:238
+			this.ReadSection(this.FindingsRightBreast);                                                                                              // CSDefineComposition.cs:238
+			this.ReadSection(this.FindingsLeftBreast);                                                                                               // CSDefineComposition.cs:238
+			this.ReadSection(this.RelatedResources);                                                                                                 // CSDefineComposition.cs:238
+			this.ReadSection(this.Recommendations);                                                                                                  // CSDefineComposition.cs:238
 			//- ReadCode
 		}
 

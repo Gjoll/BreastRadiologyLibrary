@@ -48,8 +48,9 @@ namespace BreastRadLib
 		/// <summary>
 		/// Init object.
 		/// </summary>
-		public void Init(BreastRadiologyDocument doc, %FhirBase% resource = null)
+		public override void Init(BreastRadiologyDocument doc, Base baseResource = null)
 		{
+			%FhirBase% resource = (%FhirBase%) baseResource;
 			if (resource == null)
 				resource = new %FhirBase%();
 			base.Init(doc, resource);

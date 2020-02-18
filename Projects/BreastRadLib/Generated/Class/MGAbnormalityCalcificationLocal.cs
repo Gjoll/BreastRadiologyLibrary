@@ -21,7 +21,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
+	    public CodeableConcept Value() => base.FirstOrDefault();                                                                               // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
@@ -48,7 +48,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:67
+	    public CodeableConcept Value() => base.FirstOrDefault();                                                                               // CSDefineObservation.cs:67
 	                                                                                                                                           // CSDefineObservation.cs:46
 	    // Methods                                                                                                                             // CSDefineObservation.cs:47
 	                                                                                                                                           // CSDefineObservation.cs:72
