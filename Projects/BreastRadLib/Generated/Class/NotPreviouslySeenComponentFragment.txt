@@ -3,6 +3,7 @@
 		//- Fields
 
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NotPreviouslySeenComponentFragment");                         // CSDefineBase.cs:206
 			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:401
 			//- Constructor
 

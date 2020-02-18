@@ -3,6 +3,7 @@
 		//- Fields
 
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CorrespondsWithFragment");                                    // CSDefineBase.cs:206
 			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:401
 			//- Constructor
 

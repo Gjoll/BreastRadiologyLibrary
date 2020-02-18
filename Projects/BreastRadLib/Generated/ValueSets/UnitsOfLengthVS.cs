@@ -28,18 +28,18 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_M = new TCoding(UnitsofmeasureOrg.Code_M);                                                                     // CSBuilder.cs:320
-		public static TCoding Code_Cm = new TCoding(UnitsofmeasureOrg.Code_Cm);                                                                   // CSBuilder.cs:320
-		public static TCoding Code_Mm = new TCoding(UnitsofmeasureOrg.Code_Mm);                                                                   // CSBuilder.cs:320
+		public static TCoding Code_M = new TCoding(UnitsofmeasureOrg.Code_M);                                                                     // CSBuilder.cs:321
+		public static TCoding Code_Cm = new TCoding(UnitsofmeasureOrg.Code_Cm);                                                                   // CSBuilder.cs:321
+		public static TCoding Code_Mm = new TCoding(UnitsofmeasureOrg.Code_Mm);                                                                   // CSBuilder.cs:321
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
-		{                                                                                                                                         // CSBuilder.cs:306
-		    yield return Code_M;                                                                                                                  // CSBuilder.cs:323
-		    yield return Code_Cm;                                                                                                                 // CSBuilder.cs:323
-		    yield return Code_Mm;                                                                                                                 // CSBuilder.cs:323
-		}                                                                                                                                         // CSBuilder.cs:329
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
+		{                                                                                                                                         // CSBuilder.cs:307
+		    yield return Code_M;                                                                                                                  // CSBuilder.cs:324
+		    yield return Code_Cm;                                                                                                                 // CSBuilder.cs:324
+		    yield return Code_Mm;                                                                                                                 // CSBuilder.cs:324
+		}                                                                                                                                         // CSBuilder.cs:330
 		//- Methods
 	}
 }

@@ -14,7 +14,7 @@ namespace FireFragger
 {
     class CSBuilder : ConverterBase, IDisposable
     {
-        String BreakOnClass = "BreastRadComposition";
+        String BreakOnClass = "ServiceRecommendation";
         CodeEditor resourceFactoryEditor;
         CodeBlockNested resourceFactoryProfileBlock;
 
@@ -178,6 +178,7 @@ namespace FireFragger
 
             if (csDef != null)
             {
+                csDef.Clear();
                 csDef.DefineBase();
                 csDef.Build();
             }

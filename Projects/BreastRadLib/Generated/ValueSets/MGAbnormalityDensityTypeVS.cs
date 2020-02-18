@@ -28,20 +28,20 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Density = new TCoding(MGAbnormalityDensityTypeCS.Code_Density);                                                // CSBuilder.cs:320
-		public static TCoding Code_DensityFocalAsymmetry = new TCoding(MGAbnormalityDensityTypeCS.Code_DensityFocalAsymmetry);                    // CSBuilder.cs:320
-		public static TCoding Code_DensityNodular = new TCoding(MGAbnormalityDensityTypeCS.Code_DensityNodular);                                  // CSBuilder.cs:320
-		public static TCoding Code_DensityTubular = new TCoding(MGAbnormalityDensityTypeCS.Code_DensityTubular);                                  // CSBuilder.cs:320
+		public static TCoding Code_Density = new TCoding(MGAbnormalityDensityTypeCS.Code_Density);                                                // CSBuilder.cs:321
+		public static TCoding Code_DensityFocalAsymmetry = new TCoding(MGAbnormalityDensityTypeCS.Code_DensityFocalAsymmetry);                    // CSBuilder.cs:321
+		public static TCoding Code_DensityNodular = new TCoding(MGAbnormalityDensityTypeCS.Code_DensityNodular);                                  // CSBuilder.cs:321
+		public static TCoding Code_DensityTubular = new TCoding(MGAbnormalityDensityTypeCS.Code_DensityTubular);                                  // CSBuilder.cs:321
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
-		{                                                                                                                                         // CSBuilder.cs:306
-		    yield return Code_Density;                                                                                                            // CSBuilder.cs:323
-		    yield return Code_DensityFocalAsymmetry;                                                                                              // CSBuilder.cs:323
-		    yield return Code_DensityNodular;                                                                                                     // CSBuilder.cs:323
-		    yield return Code_DensityTubular;                                                                                                     // CSBuilder.cs:323
-		}                                                                                                                                         // CSBuilder.cs:329
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
+		{                                                                                                                                         // CSBuilder.cs:307
+		    yield return Code_Density;                                                                                                            // CSBuilder.cs:324
+		    yield return Code_DensityFocalAsymmetry;                                                                                              // CSBuilder.cs:324
+		    yield return Code_DensityNodular;                                                                                                     // CSBuilder.cs:324
+		    yield return Code_DensityTubular;                                                                                                     // CSBuilder.cs:324
+		}                                                                                                                                         // CSBuilder.cs:330
 		//- Methods
 	}
 }

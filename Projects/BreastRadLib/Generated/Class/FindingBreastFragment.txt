@@ -2,6 +2,7 @@
 		//- Fields
 
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingBreastFragment");                                      // CSDefineBase.cs:206
 			//- Constructor
 
 		//+ WriteCode

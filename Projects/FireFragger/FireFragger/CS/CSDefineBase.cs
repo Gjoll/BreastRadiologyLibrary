@@ -74,7 +74,7 @@ namespace FireFragger
             this.fragBase = fragBase;
         }
 
-        public virtual void Build()
+        public void Clear()
         {
             this.ClassFields?.Clear();
             this.ClassMethods?.Clear();
@@ -82,6 +82,10 @@ namespace FireFragger
 
             this.InterfaceFields.Clear();
             this.InterfaceMethods.Clear();
+        }
+
+        public virtual void Build()
+        {
             this.MergeFragments();
         }
 

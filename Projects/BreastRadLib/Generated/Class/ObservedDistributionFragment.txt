@@ -4,6 +4,7 @@
 		//- Fields
 
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedDistributionFragment");                               // CSDefineBase.cs:206
 			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:401
 			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:401
 			//- Constructor

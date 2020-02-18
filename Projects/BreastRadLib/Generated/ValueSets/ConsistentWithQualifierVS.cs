@@ -28,20 +28,20 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_DifferentialDiagnosis = new TCoding(ConsistentWithQualifierCS.Code_DifferentialDiagnosis);                     // CSBuilder.cs:320
-		public static TCoding Code_LikelyRepresents = new TCoding(ConsistentWithQualifierCS.Code_LikelyRepresents);                               // CSBuilder.cs:320
-		public static TCoding Code_MostLikely = new TCoding(ConsistentWithQualifierCS.Code_MostLikely);                                           // CSBuilder.cs:320
-		public static TCoding Code_Resembles = new TCoding(ConsistentWithQualifierCS.Code_Resembles);                                             // CSBuilder.cs:320
+		public static TCoding Code_DifferentialDiagnosis = new TCoding(ConsistentWithQualifierCS.Code_DifferentialDiagnosis);                     // CSBuilder.cs:321
+		public static TCoding Code_LikelyRepresents = new TCoding(ConsistentWithQualifierCS.Code_LikelyRepresents);                               // CSBuilder.cs:321
+		public static TCoding Code_MostLikely = new TCoding(ConsistentWithQualifierCS.Code_MostLikely);                                           // CSBuilder.cs:321
+		public static TCoding Code_Resembles = new TCoding(ConsistentWithQualifierCS.Code_Resembles);                                             // CSBuilder.cs:321
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
-		{                                                                                                                                         // CSBuilder.cs:306
-		    yield return Code_DifferentialDiagnosis;                                                                                              // CSBuilder.cs:323
-		    yield return Code_LikelyRepresents;                                                                                                   // CSBuilder.cs:323
-		    yield return Code_MostLikely;                                                                                                         // CSBuilder.cs:323
-		    yield return Code_Resembles;                                                                                                          // CSBuilder.cs:323
-		}                                                                                                                                         // CSBuilder.cs:329
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
+		{                                                                                                                                         // CSBuilder.cs:307
+		    yield return Code_DifferentialDiagnosis;                                                                                              // CSBuilder.cs:324
+		    yield return Code_LikelyRepresents;                                                                                                   // CSBuilder.cs:324
+		    yield return Code_MostLikely;                                                                                                         // CSBuilder.cs:324
+		    yield return Code_Resembles;                                                                                                          // CSBuilder.cs:324
+		}                                                                                                                                         // CSBuilder.cs:330
 		//- Methods
 	}
 }

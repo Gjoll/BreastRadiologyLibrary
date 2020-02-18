@@ -28,70 +28,70 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Aspiration = new TCoding(CorrespondsWithCodeSystemCS.Code_Aspiration);                                         // CSBuilder.cs:320
-		public static TCoding Code_Biopsy = new TCoding(CorrespondsWithCodeSystemCS.Code_Biopsy);                                                 // CSBuilder.cs:320
-		public static TCoding Code_Concern = new TCoding(CorrespondsWithCodeSystemCS.Code_Concern);                                               // CSBuilder.cs:320
-		public static TCoding Code_Ductogram = new TCoding(CorrespondsWithCodeSystemCS.Code_Ductogram);                                           // CSBuilder.cs:320
-		public static TCoding Code_IncidentalFinding = new TCoding(CorrespondsWithCodeSystemCS.Code_IncidentalFinding);                           // CSBuilder.cs:320
-		public static TCoding Code_Mammo = new TCoding(CorrespondsWithCodeSystemCS.Code_Mammo);                                                   // CSBuilder.cs:320
-		public static TCoding Code_MRI = new TCoding(CorrespondsWithCodeSystemCS.Code_MRI);                                                       // CSBuilder.cs:320
-		public static TCoding Code_NippleDischarge = new TCoding(CorrespondsWithCodeSystemCS.Code_NippleDischarge);                               // CSBuilder.cs:320
-		public static TCoding Code_OutsideExam = new TCoding(CorrespondsWithCodeSystemCS.Code_OutsideExam);                                       // CSBuilder.cs:320
-		public static TCoding Code_Pain = new TCoding(CorrespondsWithCodeSystemCS.Code_Pain);                                                     // CSBuilder.cs:320
-		public static TCoding Code_Palpated = new TCoding(CorrespondsWithCodeSystemCS.Code_Palpated);                                             // CSBuilder.cs:320
-		public static TCoding Code_PostOperative = new TCoding(CorrespondsWithCodeSystemCS.Code_PostOperative);                                   // CSBuilder.cs:320
-		public static TCoding Code_PreviousBiopsy = new TCoding(CorrespondsWithCodeSystemCS.Code_PreviousBiopsy);                                 // CSBuilder.cs:320
-		public static TCoding Code_PriorExam = new TCoding(CorrespondsWithCodeSystemCS.Code_PriorExam);                                           // CSBuilder.cs:320
-		public static TCoding Code_Redness = new TCoding(CorrespondsWithCodeSystemCS.Code_Redness);                                               // CSBuilder.cs:320
-		public static TCoding Code_Scinti = new TCoding(CorrespondsWithCodeSystemCS.Code_Scinti);                                                 // CSBuilder.cs:320
-		public static TCoding Code_SizeLessThanMammo = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanMammo);                           // CSBuilder.cs:320
-		public static TCoding Code_SizeLessThanMRI = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanMRI);                               // CSBuilder.cs:320
-		public static TCoding Code_SizeLessThanPalp = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanPalp);                             // CSBuilder.cs:320
-		public static TCoding Code_SizeLessThanUS = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanUS);                                 // CSBuilder.cs:320
-		public static TCoding Code_SizeGreaterThanMammo = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeGreaterThanMammo);                     // CSBuilder.cs:320
-		public static TCoding Code_SizeGreaterThanMRI = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeGreaterThanMRI);                         // CSBuilder.cs:320
-		public static TCoding Code_SizeGreaterThanPalp = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeGreaterThanPalp);                       // CSBuilder.cs:320
-		public static TCoding Code_SkinMarker = new TCoding(CorrespondsWithCodeSystemCS.Code_SkinMarker);                                         // CSBuilder.cs:320
-		public static TCoding Code_Surgery = new TCoding(CorrespondsWithCodeSystemCS.Code_Surgery);                                               // CSBuilder.cs:320
-		public static TCoding Code_SurgicalSite = new TCoding(CorrespondsWithCodeSystemCS.Code_SurgicalSite);                                     // CSBuilder.cs:320
-		public static TCoding Code_Tenderness = new TCoding(CorrespondsWithCodeSystemCS.Code_Tenderness);                                         // CSBuilder.cs:320
-		public static TCoding Code_TriggerPoint = new TCoding(CorrespondsWithCodeSystemCS.Code_TriggerPoint);                                     // CSBuilder.cs:320
-		public static TCoding Code_US = new TCoding(CorrespondsWithCodeSystemCS.Code_US);                                                         // CSBuilder.cs:320
+		public static TCoding Code_Aspiration = new TCoding(CorrespondsWithCodeSystemCS.Code_Aspiration);                                         // CSBuilder.cs:321
+		public static TCoding Code_Biopsy = new TCoding(CorrespondsWithCodeSystemCS.Code_Biopsy);                                                 // CSBuilder.cs:321
+		public static TCoding Code_Concern = new TCoding(CorrespondsWithCodeSystemCS.Code_Concern);                                               // CSBuilder.cs:321
+		public static TCoding Code_Ductogram = new TCoding(CorrespondsWithCodeSystemCS.Code_Ductogram);                                           // CSBuilder.cs:321
+		public static TCoding Code_IncidentalFinding = new TCoding(CorrespondsWithCodeSystemCS.Code_IncidentalFinding);                           // CSBuilder.cs:321
+		public static TCoding Code_Mammo = new TCoding(CorrespondsWithCodeSystemCS.Code_Mammo);                                                   // CSBuilder.cs:321
+		public static TCoding Code_MRI = new TCoding(CorrespondsWithCodeSystemCS.Code_MRI);                                                       // CSBuilder.cs:321
+		public static TCoding Code_NippleDischarge = new TCoding(CorrespondsWithCodeSystemCS.Code_NippleDischarge);                               // CSBuilder.cs:321
+		public static TCoding Code_OutsideExam = new TCoding(CorrespondsWithCodeSystemCS.Code_OutsideExam);                                       // CSBuilder.cs:321
+		public static TCoding Code_Pain = new TCoding(CorrespondsWithCodeSystemCS.Code_Pain);                                                     // CSBuilder.cs:321
+		public static TCoding Code_Palpated = new TCoding(CorrespondsWithCodeSystemCS.Code_Palpated);                                             // CSBuilder.cs:321
+		public static TCoding Code_PostOperative = new TCoding(CorrespondsWithCodeSystemCS.Code_PostOperative);                                   // CSBuilder.cs:321
+		public static TCoding Code_PreviousBiopsy = new TCoding(CorrespondsWithCodeSystemCS.Code_PreviousBiopsy);                                 // CSBuilder.cs:321
+		public static TCoding Code_PriorExam = new TCoding(CorrespondsWithCodeSystemCS.Code_PriorExam);                                           // CSBuilder.cs:321
+		public static TCoding Code_Redness = new TCoding(CorrespondsWithCodeSystemCS.Code_Redness);                                               // CSBuilder.cs:321
+		public static TCoding Code_Scinti = new TCoding(CorrespondsWithCodeSystemCS.Code_Scinti);                                                 // CSBuilder.cs:321
+		public static TCoding Code_SizeLessThanMammo = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanMammo);                           // CSBuilder.cs:321
+		public static TCoding Code_SizeLessThanMRI = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanMRI);                               // CSBuilder.cs:321
+		public static TCoding Code_SizeLessThanPalp = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanPalp);                             // CSBuilder.cs:321
+		public static TCoding Code_SizeLessThanUS = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeLessThanUS);                                 // CSBuilder.cs:321
+		public static TCoding Code_SizeGreaterThanMammo = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeGreaterThanMammo);                     // CSBuilder.cs:321
+		public static TCoding Code_SizeGreaterThanMRI = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeGreaterThanMRI);                         // CSBuilder.cs:321
+		public static TCoding Code_SizeGreaterThanPalp = new TCoding(CorrespondsWithCodeSystemCS.Code_SizeGreaterThanPalp);                       // CSBuilder.cs:321
+		public static TCoding Code_SkinMarker = new TCoding(CorrespondsWithCodeSystemCS.Code_SkinMarker);                                         // CSBuilder.cs:321
+		public static TCoding Code_Surgery = new TCoding(CorrespondsWithCodeSystemCS.Code_Surgery);                                               // CSBuilder.cs:321
+		public static TCoding Code_SurgicalSite = new TCoding(CorrespondsWithCodeSystemCS.Code_SurgicalSite);                                     // CSBuilder.cs:321
+		public static TCoding Code_Tenderness = new TCoding(CorrespondsWithCodeSystemCS.Code_Tenderness);                                         // CSBuilder.cs:321
+		public static TCoding Code_TriggerPoint = new TCoding(CorrespondsWithCodeSystemCS.Code_TriggerPoint);                                     // CSBuilder.cs:321
+		public static TCoding Code_US = new TCoding(CorrespondsWithCodeSystemCS.Code_US);                                                         // CSBuilder.cs:321
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
-		{                                                                                                                                         // CSBuilder.cs:306
-		    yield return Code_Aspiration;                                                                                                         // CSBuilder.cs:323
-		    yield return Code_Biopsy;                                                                                                             // CSBuilder.cs:323
-		    yield return Code_Concern;                                                                                                            // CSBuilder.cs:323
-		    yield return Code_Ductogram;                                                                                                          // CSBuilder.cs:323
-		    yield return Code_IncidentalFinding;                                                                                                  // CSBuilder.cs:323
-		    yield return Code_Mammo;                                                                                                              // CSBuilder.cs:323
-		    yield return Code_MRI;                                                                                                                // CSBuilder.cs:323
-		    yield return Code_NippleDischarge;                                                                                                    // CSBuilder.cs:323
-		    yield return Code_OutsideExam;                                                                                                        // CSBuilder.cs:323
-		    yield return Code_Pain;                                                                                                               // CSBuilder.cs:323
-		    yield return Code_Palpated;                                                                                                           // CSBuilder.cs:323
-		    yield return Code_PostOperative;                                                                                                      // CSBuilder.cs:323
-		    yield return Code_PreviousBiopsy;                                                                                                     // CSBuilder.cs:323
-		    yield return Code_PriorExam;                                                                                                          // CSBuilder.cs:323
-		    yield return Code_Redness;                                                                                                            // CSBuilder.cs:323
-		    yield return Code_Scinti;                                                                                                             // CSBuilder.cs:323
-		    yield return Code_SizeLessThanMammo;                                                                                                  // CSBuilder.cs:323
-		    yield return Code_SizeLessThanMRI;                                                                                                    // CSBuilder.cs:323
-		    yield return Code_SizeLessThanPalp;                                                                                                   // CSBuilder.cs:323
-		    yield return Code_SizeLessThanUS;                                                                                                     // CSBuilder.cs:323
-		    yield return Code_SizeGreaterThanMammo;                                                                                               // CSBuilder.cs:323
-		    yield return Code_SizeGreaterThanMRI;                                                                                                 // CSBuilder.cs:323
-		    yield return Code_SizeGreaterThanPalp;                                                                                                // CSBuilder.cs:323
-		    yield return Code_SkinMarker;                                                                                                         // CSBuilder.cs:323
-		    yield return Code_Surgery;                                                                                                            // CSBuilder.cs:323
-		    yield return Code_SurgicalSite;                                                                                                       // CSBuilder.cs:323
-		    yield return Code_Tenderness;                                                                                                         // CSBuilder.cs:323
-		    yield return Code_TriggerPoint;                                                                                                       // CSBuilder.cs:323
-		    yield return Code_US;                                                                                                                 // CSBuilder.cs:323
-		}                                                                                                                                         // CSBuilder.cs:329
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
+		{                                                                                                                                         // CSBuilder.cs:307
+		    yield return Code_Aspiration;                                                                                                         // CSBuilder.cs:324
+		    yield return Code_Biopsy;                                                                                                             // CSBuilder.cs:324
+		    yield return Code_Concern;                                                                                                            // CSBuilder.cs:324
+		    yield return Code_Ductogram;                                                                                                          // CSBuilder.cs:324
+		    yield return Code_IncidentalFinding;                                                                                                  // CSBuilder.cs:324
+		    yield return Code_Mammo;                                                                                                              // CSBuilder.cs:324
+		    yield return Code_MRI;                                                                                                                // CSBuilder.cs:324
+		    yield return Code_NippleDischarge;                                                                                                    // CSBuilder.cs:324
+		    yield return Code_OutsideExam;                                                                                                        // CSBuilder.cs:324
+		    yield return Code_Pain;                                                                                                               // CSBuilder.cs:324
+		    yield return Code_Palpated;                                                                                                           // CSBuilder.cs:324
+		    yield return Code_PostOperative;                                                                                                      // CSBuilder.cs:324
+		    yield return Code_PreviousBiopsy;                                                                                                     // CSBuilder.cs:324
+		    yield return Code_PriorExam;                                                                                                          // CSBuilder.cs:324
+		    yield return Code_Redness;                                                                                                            // CSBuilder.cs:324
+		    yield return Code_Scinti;                                                                                                             // CSBuilder.cs:324
+		    yield return Code_SizeLessThanMammo;                                                                                                  // CSBuilder.cs:324
+		    yield return Code_SizeLessThanMRI;                                                                                                    // CSBuilder.cs:324
+		    yield return Code_SizeLessThanPalp;                                                                                                   // CSBuilder.cs:324
+		    yield return Code_SizeLessThanUS;                                                                                                     // CSBuilder.cs:324
+		    yield return Code_SizeGreaterThanMammo;                                                                                               // CSBuilder.cs:324
+		    yield return Code_SizeGreaterThanMRI;                                                                                                 // CSBuilder.cs:324
+		    yield return Code_SizeGreaterThanPalp;                                                                                                // CSBuilder.cs:324
+		    yield return Code_SkinMarker;                                                                                                         // CSBuilder.cs:324
+		    yield return Code_Surgery;                                                                                                            // CSBuilder.cs:324
+		    yield return Code_SurgicalSite;                                                                                                       // CSBuilder.cs:324
+		    yield return Code_Tenderness;                                                                                                         // CSBuilder.cs:324
+		    yield return Code_TriggerPoint;                                                                                                       // CSBuilder.cs:324
+		    yield return Code_US;                                                                                                                 // CSBuilder.cs:324
+		}                                                                                                                                         // CSBuilder.cs:330
 		//- Methods
 	}
 }

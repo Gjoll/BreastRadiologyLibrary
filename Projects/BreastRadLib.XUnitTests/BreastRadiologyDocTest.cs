@@ -40,7 +40,7 @@ namespace BreastRadiology.XUnitTests
                     ServiceRecommendation rec = doc.Index.Recommendations.AddServiceRecommendation();
                     Debug.Assert(rec.Resource.Meta.Profile.Count() == 1);
                     Debug.Assert(rec.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");
-                    //$rec.SetCode(RecommendationsVS.Code_3DSpotCC);
+                    //rec.SetCode(RecommendationsVS.Code_3DSpotCC);
                     Debug.Assert(rec.Resource.Code.Coding[0].System == RecommendationsVS.Code_3DSpotCC.Value.System);
                     Debug.Assert(rec.Resource.Code.Coding[0].Code == RecommendationsVS.Code_3DSpotCC.Value.Code);
                 }

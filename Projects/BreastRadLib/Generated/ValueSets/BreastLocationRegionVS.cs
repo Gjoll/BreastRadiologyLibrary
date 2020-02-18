@@ -28,28 +28,28 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Axilla = new TCoding(BreastLocationRegionCS.Code_Axilla);                                                      // CSBuilder.cs:320
-		public static TCoding Code_AxillaryTail = new TCoding(BreastLocationRegionCS.Code_AxillaryTail);                                          // CSBuilder.cs:320
-		public static TCoding Code_AxillaI = new TCoding(BreastLocationRegionCS.Code_AxillaI);                                                    // CSBuilder.cs:320
-		public static TCoding Code_AxillaII = new TCoding(BreastLocationRegionCS.Code_AxillaII);                                                  // CSBuilder.cs:320
-		public static TCoding Code_AxillaIII = new TCoding(BreastLocationRegionCS.Code_AxillaIII);                                                // CSBuilder.cs:320
-		public static TCoding Code_InframammaryFold = new TCoding(BreastLocationRegionCS.Code_InframammaryFold);                                  // CSBuilder.cs:320
-		public static TCoding Code_InSkin = new TCoding(BreastLocationRegionCS.Code_InSkin);                                                      // CSBuilder.cs:320
-		public static TCoding Code_CentralToNipple = new TCoding(BreastLocationRegionCS.Code_CentralToNipple);                                    // CSBuilder.cs:320
+		public static TCoding Code_Axilla = new TCoding(BreastLocationRegionCS.Code_Axilla);                                                      // CSBuilder.cs:321
+		public static TCoding Code_AxillaryTail = new TCoding(BreastLocationRegionCS.Code_AxillaryTail);                                          // CSBuilder.cs:321
+		public static TCoding Code_AxillaI = new TCoding(BreastLocationRegionCS.Code_AxillaI);                                                    // CSBuilder.cs:321
+		public static TCoding Code_AxillaII = new TCoding(BreastLocationRegionCS.Code_AxillaII);                                                  // CSBuilder.cs:321
+		public static TCoding Code_AxillaIII = new TCoding(BreastLocationRegionCS.Code_AxillaIII);                                                // CSBuilder.cs:321
+		public static TCoding Code_InframammaryFold = new TCoding(BreastLocationRegionCS.Code_InframammaryFold);                                  // CSBuilder.cs:321
+		public static TCoding Code_InSkin = new TCoding(BreastLocationRegionCS.Code_InSkin);                                                      // CSBuilder.cs:321
+		public static TCoding Code_CentralToNipple = new TCoding(BreastLocationRegionCS.Code_CentralToNipple);                                    // CSBuilder.cs:321
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
-		{                                                                                                                                         // CSBuilder.cs:306
-		    yield return Code_Axilla;                                                                                                             // CSBuilder.cs:323
-		    yield return Code_AxillaryTail;                                                                                                       // CSBuilder.cs:323
-		    yield return Code_AxillaI;                                                                                                            // CSBuilder.cs:323
-		    yield return Code_AxillaII;                                                                                                           // CSBuilder.cs:323
-		    yield return Code_AxillaIII;                                                                                                          // CSBuilder.cs:323
-		    yield return Code_InframammaryFold;                                                                                                   // CSBuilder.cs:323
-		    yield return Code_InSkin;                                                                                                             // CSBuilder.cs:323
-		    yield return Code_CentralToNipple;                                                                                                    // CSBuilder.cs:323
-		}                                                                                                                                         // CSBuilder.cs:329
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
+		{                                                                                                                                         // CSBuilder.cs:307
+		    yield return Code_Axilla;                                                                                                             // CSBuilder.cs:324
+		    yield return Code_AxillaryTail;                                                                                                       // CSBuilder.cs:324
+		    yield return Code_AxillaI;                                                                                                            // CSBuilder.cs:324
+		    yield return Code_AxillaII;                                                                                                           // CSBuilder.cs:324
+		    yield return Code_AxillaIII;                                                                                                          // CSBuilder.cs:324
+		    yield return Code_InframammaryFold;                                                                                                   // CSBuilder.cs:324
+		    yield return Code_InSkin;                                                                                                             // CSBuilder.cs:324
+		    yield return Code_CentralToNipple;                                                                                                    // CSBuilder.cs:324
+		}                                                                                                                                         // CSBuilder.cs:330
 		//- Methods
 	}
 }

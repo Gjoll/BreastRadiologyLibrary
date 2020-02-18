@@ -6,6 +6,7 @@
 		//- Fields
 
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ShapeComponentsFragment");                                    // CSDefineBase.cs:206
 			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
 			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:401
 			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:401

@@ -3,6 +3,7 @@
 		//- Fields
 
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedSizeFragment");                                       // CSDefineBase.cs:206
 			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:401
 			//- Constructor
 

@@ -28,30 +28,30 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_NodeAxillary = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeAxillary);                                      // CSBuilder.cs:320
-		public static TCoding Code_NodeEnlarged = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeEnlarged);                                      // CSBuilder.cs:320
-		public static TCoding Code_NodeFocalCortex = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeFocalCortex);                                // CSBuilder.cs:320
-		public static TCoding Code_NodeInfraclavicular = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeInfraclavicular);                        // CSBuilder.cs:320
-		public static TCoding Code_NodeIntramammary = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeIntramammary);                              // CSBuilder.cs:320
-		public static TCoding Code_NodeLymph = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeLymph);                                            // CSBuilder.cs:320
-		public static TCoding Code_NodeLymphNormal = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeLymphNormal);                                // CSBuilder.cs:320
-		public static TCoding Code_NodeSupraclavicular = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeSupraclavicular);                        // CSBuilder.cs:320
-		public static TCoding Code_NodeUniformThickness = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeUniformThickness);                      // CSBuilder.cs:320
+		public static TCoding Code_NodeAxillary = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeAxillary);                                      // CSBuilder.cs:321
+		public static TCoding Code_NodeEnlarged = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeEnlarged);                                      // CSBuilder.cs:321
+		public static TCoding Code_NodeFocalCortex = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeFocalCortex);                                // CSBuilder.cs:321
+		public static TCoding Code_NodeInfraclavicular = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeInfraclavicular);                        // CSBuilder.cs:321
+		public static TCoding Code_NodeIntramammary = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeIntramammary);                              // CSBuilder.cs:321
+		public static TCoding Code_NodeLymph = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeLymph);                                            // CSBuilder.cs:321
+		public static TCoding Code_NodeLymphNormal = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeLymphNormal);                                // CSBuilder.cs:321
+		public static TCoding Code_NodeSupraclavicular = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeSupraclavicular);                        // CSBuilder.cs:321
+		public static TCoding Code_NodeUniformThickness = new TCoding(AbnormalityLymphNodeTypeCS.Code_NodeUniformThickness);                      // CSBuilder.cs:321
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
-		{                                                                                                                                         // CSBuilder.cs:306
-		    yield return Code_NodeAxillary;                                                                                                       // CSBuilder.cs:323
-		    yield return Code_NodeEnlarged;                                                                                                       // CSBuilder.cs:323
-		    yield return Code_NodeFocalCortex;                                                                                                    // CSBuilder.cs:323
-		    yield return Code_NodeInfraclavicular;                                                                                                // CSBuilder.cs:323
-		    yield return Code_NodeIntramammary;                                                                                                   // CSBuilder.cs:323
-		    yield return Code_NodeLymph;                                                                                                          // CSBuilder.cs:323
-		    yield return Code_NodeLymphNormal;                                                                                                    // CSBuilder.cs:323
-		    yield return Code_NodeSupraclavicular;                                                                                                // CSBuilder.cs:323
-		    yield return Code_NodeUniformThickness;                                                                                               // CSBuilder.cs:323
-		}                                                                                                                                         // CSBuilder.cs:329
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
+		{                                                                                                                                         // CSBuilder.cs:307
+		    yield return Code_NodeAxillary;                                                                                                       // CSBuilder.cs:324
+		    yield return Code_NodeEnlarged;                                                                                                       // CSBuilder.cs:324
+		    yield return Code_NodeFocalCortex;                                                                                                    // CSBuilder.cs:324
+		    yield return Code_NodeInfraclavicular;                                                                                                // CSBuilder.cs:324
+		    yield return Code_NodeIntramammary;                                                                                                   // CSBuilder.cs:324
+		    yield return Code_NodeLymph;                                                                                                          // CSBuilder.cs:324
+		    yield return Code_NodeLymphNormal;                                                                                                    // CSBuilder.cs:324
+		    yield return Code_NodeSupraclavicular;                                                                                                // CSBuilder.cs:324
+		    yield return Code_NodeUniformThickness;                                                                                               // CSBuilder.cs:324
+		}                                                                                                                                         // CSBuilder.cs:330
 		//- Methods
 	}
 }

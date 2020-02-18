@@ -28,20 +28,20 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Aspiration = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_Aspiration);                                // CSBuilder.cs:320
-		public static TCoding Code_Biopsy = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_Biopsy);                                        // CSBuilder.cs:320
-		public static TCoding Code_MRI = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_MRI);                                              // CSBuilder.cs:320
-		public static TCoding Code_US = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_US);                                                // CSBuilder.cs:320
+		public static TCoding Code_Aspiration = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_Aspiration);                                // CSBuilder.cs:321
+		public static TCoding Code_Biopsy = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_Biopsy);                                        // CSBuilder.cs:321
+		public static TCoding Code_MRI = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_MRI);                                              // CSBuilder.cs:321
+		public static TCoding Code_US = new TCoding(PreviouslyDemonstratedByCodeSystemCS.Code_US);                                                // CSBuilder.cs:321
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:305
-		{                                                                                                                                         // CSBuilder.cs:306
-		    yield return Code_Aspiration;                                                                                                         // CSBuilder.cs:323
-		    yield return Code_Biopsy;                                                                                                             // CSBuilder.cs:323
-		    yield return Code_MRI;                                                                                                                // CSBuilder.cs:323
-		    yield return Code_US;                                                                                                                 // CSBuilder.cs:323
-		}                                                                                                                                         // CSBuilder.cs:329
+		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:306
+		{                                                                                                                                         // CSBuilder.cs:307
+		    yield return Code_Aspiration;                                                                                                         // CSBuilder.cs:324
+		    yield return Code_Biopsy;                                                                                                             // CSBuilder.cs:324
+		    yield return Code_MRI;                                                                                                                // CSBuilder.cs:324
+		    yield return Code_US;                                                                                                                 // CSBuilder.cs:324
+		}                                                                                                                                         // CSBuilder.cs:330
 		//- Methods
 	}
 }

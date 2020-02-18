@@ -79,17 +79,35 @@ namespace BreastRadLib
 		{
 			base.Create(doc, resource);
 			//+ Constructor
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                                    // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationLeafFragment");                                    // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment");                                           // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment");                               // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment");                       // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment");                        // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoComponentFragment");                    // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment");                         // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedChangesFragment");                                    // CSDefineBase.cs:206
 			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:401
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BiRadFragment");                                              // CSDefineBase.cs:206
 			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:401
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonComponentsFragment");                                   // CSDefineBase.cs:206
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ShapeComponentsFragment");                                    // CSDefineBase.cs:206
 			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:401
 			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:401
 			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:401
 			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:401
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedCountFragment");                                      // CSDefineBase.cs:206
 			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:401
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedDistributionFragment");                               // CSDefineBase.cs:206
 			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:401
 			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:401
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedSizeFragment");                                       // CSDefineBase.cs:206
 			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:401
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PreviouslyDemonstratedByFragment");                           // CSDefineBase.cs:206
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:401
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeaturesHasMemberFragment");                        // CSDefineBase.cs:206
 			this.FibroAdenomaType = new FibroAdenomaType_Accessor(doc);                                                                              // CSDefineObservation.cs:401
 			//- Constructor
 		}
@@ -136,6 +154,28 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
+		/// <summary>
+		/// Method to create default value for element
+		/// Observation.code
+		/// </summary>
+		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "abnormalityFibroadenomaObservation";                                                                   // FhirConstruct.cs:786
+		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:792
+		        temp4.DisplayElement.Value = "Abnormality Fibroadenoma observation";                                                              // FhirConstruct.cs:794
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
+		    retVal.TextElement.Value = "Abnormality Fibroadenoma observation";                                                                    // FhirConstruct.cs:821
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods
 	}
 }
