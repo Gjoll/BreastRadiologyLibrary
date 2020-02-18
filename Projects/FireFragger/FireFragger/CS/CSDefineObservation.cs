@@ -176,62 +176,35 @@ namespace FireFragger
                 .SummaryClose()
                 ;
 
-            this.LocalClassDefs
-                .AppendCode($"public class {className} : ObservationBase.HasMemberBase<{propertyType}>")
-                .OpenBrace()
-                .DefineBlock(out CodeBlockNested accessors)
-                .SummaryOpen()
-                .Summary($"Accessor HasMember slice {className} class constructor")
-                .SummaryClose()
-                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
-                .OpenBrace()
-                .AppendCode($"this.Create(doc, {min}, {max});")
-                .CloseBrace()
-                .CloseBrace()
-                ;
             if (max == 1)
             {
-                accessors
-                    .SummaryOpen()
-                    .Summary($"Get item")
-                    .SummaryClose()
-                    .AppendCode($"public {propertyName} Get() => base.GetSingleItem();")
-                    .BlankLine()
-                    .SummaryOpen()
-                    .Summary($"Set item")
-                    .SummaryClose()
-                    .AppendCode($"public {propertyName} Set({propertyType} item = null)")
+                this.LocalClassDefs
+                    .AppendCode($"public class {className} : ObservationBase.HasMemberSingle<{propertyType}>")
                     .OpenBrace()
-                    .AppendCode($"if (item == null)")
+                    .DefineBlock(out CodeBlockNested accessors)
+                    .SummaryOpen()
+                    .Summary($"Accessor HasMember slice {className} class constructor")
+                    .SummaryClose()
+                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                     .OpenBrace()
-                    .AppendCode($"item = new {propertyType}();")
-                    .AppendCode($"item.Create(this.doc);")
+                    .AppendCode($"this.Create(doc, {min}, {max});")
                     .CloseBrace()
-                    .AppendCode($"base.SetSingleItem(item);")
-                    .AppendCode($"return item;")
                     .CloseBrace()
                     ;
             }
             else
             {
-                accessors
-                    .SummaryOpen()
-                    .Summary($"Get items")
-                    .SummaryClose()
-                    .AppendCode($"public IEnumerable<{propertyName}> Get() => base.items;")
-                    .BlankLine()
-                    .SummaryOpen()
-                    .Summary($"Add item")
-                    .SummaryClose()
-                    .AppendCode($"public {propertyName} Add({propertyType} item = null)")
+                this.LocalClassDefs
+                    .AppendCode($"public class {className} : ObservationBase.HasMemberMultiple<{propertyType}>")
                     .OpenBrace()
-                    .AppendCode($"if (item == null)")
+                    .DefineBlock(out CodeBlockNested accessors)
+                    .SummaryOpen()
+                    .Summary($"Accessor HasMember slice {className} class constructor")
+                    .SummaryClose()
+                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
                     .OpenBrace()
-                    .AppendCode($"item = new {propertyType}();")
-                    .AppendCode($"item.Create(this.doc);")
+                    .AppendCode($"this.Create(doc, {min}, {max});")
                     .CloseBrace()
-                    .AppendCode($"base.AppendItem(item);")
-                    .AppendCode($"return item;")
                     .CloseBrace()
                     ;
             }

@@ -23,8 +23,28 @@ namespace BreastRadLib
         /// Base class for all HasMember single accessors
         /// </summary>
         public class HasMemberSingle<BaseType> : HasMemberBase<BaseType>
-                where BaseType : ObservationBase
+                where BaseType : ObservationBase, new()
         {
+            /// <summary>
+            /// Get item
+            /// </summary>
+            public BaseType Get() => base.GetSingleItem();
+
+            /// <summary>
+            /// Set item
+            /// </summary>
+            /// <param name="item"></param>
+            /// <returns></returns>
+            public BaseType Set(BaseType item = null)
+            {
+                if (item == null)
+                {
+                    //item = new BaseType();
+                    //item.Create(this.doc);
+                }
+                base.SetSingleItem(item);
+                return item;
+            }
         }
 
         /// <summary>
