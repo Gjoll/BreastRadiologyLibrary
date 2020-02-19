@@ -96,7 +96,7 @@ namespace BreastRadLib.ObservationLocal
     /// Base class for all component accessors
     /// </summary>
     public class ComponentBase<BaseType> : MemberList<BaseType>
-        where BaseType : Base
+        where BaseType : Element
     {
         /// <summary>
         /// Section coding

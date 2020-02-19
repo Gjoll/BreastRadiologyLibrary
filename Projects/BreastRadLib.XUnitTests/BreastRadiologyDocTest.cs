@@ -179,7 +179,8 @@ namespace BreastRadiology.XUnitTests
                     SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create();
                     MGFinding mgFinding = findLeft.MGFinding.Append();
                     MGAbnormalityAsymmetry asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
-                    //asymmetry.ObsChanges.Append()
+                    asymmetry.ObsChanges.Append(ObservedChangesVS.Code_DecreaseInCalcifications);
+                    asymmetry.ObsChanges.Append(ObservedChangesVS.Code_DecreaseInSize);
                 }
                 b = doc.Write();
             }
@@ -197,6 +198,7 @@ namespace BreastRadiology.XUnitTests
 
                 MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
                 Debug.Assert(asymmetry.Length == 1);
+                Debug.Assert(asymmetry[0].ObsChanges.Count == 2);
             }
         }
     }

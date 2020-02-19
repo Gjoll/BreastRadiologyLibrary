@@ -60,28 +60,28 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// Accessor class for 'obsDistRegionSize'
 	/// [Fhir Element 'Observation.component:obsDistRegionSize]'
 	/// </summary>
-	public class ObsDistRegionSize_Accessor : ObservationLocal.ComponentBase<Base>                                                             // CSDefineObservation.cs:66
+	public class ObsDistRegionSize_Accessor : ObservationLocal.ComponentBase<Element>                                                          // CSDefineObservation.cs:66
 	{                                                                                                                                          // CSDefineObservation.cs:67
 	    // Properties                                                                                                                          // CSDefineObservation.cs:68
 	    /// <summary>
 	    /// Access propertyName
 	    /// </summary>
-	    public IEnumerable<Base> All() => this.items;                                                                                          // CSDefineObservation.cs:136
+	    public IEnumerable<Element> All() => this.items;                                                                                       // CSDefineObservation.cs:136
 	                                                                                                                                           // CSDefineObservation.cs:138
 	    /// <summary>
 	    /// Access item at indicated location in list
 	    /// </summary>
-	    public Base At(Int32 i) => base.items[i];                                                                                              // CSDefineObservation.cs:142
+	    public Element At(Int32 i) => base.items[i];                                                                                           // CSDefineObservation.cs:142
 	                                                                                                                                           // CSDefineObservation.cs:144
 	    /// <summary>
 	    /// Access first item in list
 	    /// </summary>
-	    public new Base First() => base.First();                                                                                               // CSDefineObservation.cs:148
+	    public new Element First() => base.First();                                                                                            // CSDefineObservation.cs:148
 	                                                                                                                                           // CSDefineObservation.cs:149
 	    /// <summary>
 	    /// Access first item in list or default value if empty
 	    /// </summary>
-	    public new Base FirstOrDefault() => base.FirstOrDefault();                                                                             // CSDefineObservation.cs:153
+	    public new Element FirstOrDefault() => base.FirstOrDefault();                                                                          // CSDefineObservation.cs:153
 	                                                                                                                                           // CSDefineObservation.cs:70
 	    // Methods                                                                                                                             // CSDefineObservation.cs:71
 	                                                                                                                                           // CSDefineObservation.cs:120

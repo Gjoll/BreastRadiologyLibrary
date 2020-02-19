@@ -72,7 +72,7 @@ namespace BreastRadLib
         }
 
         protected void WriteComponent<BaseType>(ObservationLocal.ComponentBase<BaseType> componentList)
-             where BaseType : Base
+             where BaseType : Element
         {
             CodeableConcept code = new CodeableConcept(componentList.Code.System,
                 componentList.Code.Code,
@@ -81,14 +81,15 @@ namespace BreastRadLib
             {
                 Observation.ComponentComponent comp = new Observation.ComponentComponent
                 {
-                    Code = code
+                    Code = code,
+                    Value = baseType
                 };
                 this.Resource.Component.Add(comp);
             }
         }
 
         protected void ReadComponent<BaseType>(ObservationLocal.ComponentBase<BaseType> componentList)
-             where BaseType : Base
+             where BaseType : Element
         {
             foreach (Observation.ComponentComponent comp in this.Resource.Component)
             {

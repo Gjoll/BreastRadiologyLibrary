@@ -52,7 +52,7 @@ namespace FireFragger
 
             List<ElementDefinition.TypeRefComponent> types = valueNode.ElementDefinition.Type;
 
-            String propertyType = (types.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Base";
+            String propertyType = (types.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
 
             String className = $"{propertyName}_Accessor";
             if (this.LocalClassDefs == null)
