@@ -12,12 +12,12 @@ namespace FireFragger
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class CSBuildCodedReferenceList : CSCodeBlockDefinitions
+    internal class CSBuildMemberListCodedReference : CSCodeBlockDefinitions
     {
         ElementTreeNode memberNode;
         String MemberName => memberNode.Path.LastPathPart().ToMachineName();
 
-        public CSBuildCodedReferenceList(CSBuilder csBuilder,
+        public CSBuildMemberListCodedReference(CSBuilder csBuilder,
             SDInfo fragBase,
             ElementTreeNode memberNode) : base(csBuilder, fragBase)
         {

@@ -227,7 +227,7 @@ namespace FireFragger
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
                 return;
-            CSBuildCodedReferenceList bcr = new CSBuildCodedReferenceList(this.csBuilder, this.fragBase, hasMemberNode);
+            CSBuildMemberListCodedReference bcr = new CSBuildMemberListCodedReference(this.csBuilder, this.fragBase, hasMemberNode);
             bcr.Define();
         }
 
