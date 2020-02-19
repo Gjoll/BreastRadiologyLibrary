@@ -15,7 +15,7 @@ namespace BreastRadLib.CorrespondsWithFragmentLocal
 	/// Accessor class for 'correspondsWith'
 	/// [Fhir Element 'Observation.component:correspondsWith]'
 	/// </summary>
-	public class CorrespondsWith_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                    // CSDefineObservation.cs:66
+	public class CorrespondsWith_Accessor : MemberListCodedValueBase<CodeableConcept>                                                          // CSDefineObservation.cs:66
 	{                                                                                                                                          // CSDefineObservation.cs:67
 	    // Properties                                                                                                                          // CSDefineObservation.cs:68
 	    /// <summary>

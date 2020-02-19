@@ -15,7 +15,7 @@ namespace BreastRadLib.AbnormalityMassLocal
 	/// Accessor class for 'massType'
 	/// [Fhir Element 'Observation.component:massType]'
 	/// </summary>
-	public class MassType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                           // CSDefineObservation.cs:66
+	public class MassType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                 // CSDefineObservation.cs:66
 	{                                                                                                                                          // CSDefineObservation.cs:67
 	    // Properties                                                                                                                          // CSDefineObservation.cs:68
 	    /// <summary>

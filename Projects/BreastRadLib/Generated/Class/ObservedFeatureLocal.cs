@@ -15,7 +15,7 @@ namespace BreastRadLib.ObservedFeatureLocal
 	/// Accessor class for 'featureType'
 	/// [Fhir Element 'Observation.component:featureType]'
 	/// </summary>
-	public class FeatureType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                        // CSDefineObservation.cs:66
+	public class FeatureType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                              // CSDefineObservation.cs:66
 	{                                                                                                                                          // CSDefineObservation.cs:67
 	    // Properties                                                                                                                          // CSDefineObservation.cs:68
 	    /// <summary>

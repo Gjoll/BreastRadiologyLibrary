@@ -15,7 +15,7 @@ namespace BreastRadLib.AbnormalityLymphNodeLocal
 	/// Accessor class for 'lymphNodeType'
 	/// [Fhir Element 'Observation.component:lymphNodeType]'
 	/// </summary>
-	public class LymphNodeType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                      // CSDefineObservation.cs:66
+	public class LymphNodeType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                            // CSDefineObservation.cs:66
 	{                                                                                                                                          // CSDefineObservation.cs:67
 	    // Properties                                                                                                                          // CSDefineObservation.cs:68
 	    /// <summary>

@@ -15,7 +15,7 @@ namespace BreastRadLib.PreviouslyDemonstratedByFragmentLocal
 	/// Accessor class for 'PreviouslyDemonstratedBy'
 	/// [Fhir Element 'Observation.component:PreviouslyDemonstratedBy]'
 	/// </summary>
-	public class PreviouslyDemonstratedBy_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                           // CSDefineObservation.cs:66
+	public class PreviouslyDemonstratedBy_Accessor : MemberListCodedValueBase<CodeableConcept>                                                 // CSDefineObservation.cs:66
 	{                                                                                                                                          // CSDefineObservation.cs:67
 	    // Properties                                                                                                                          // CSDefineObservation.cs:68
 	    /// <summary>

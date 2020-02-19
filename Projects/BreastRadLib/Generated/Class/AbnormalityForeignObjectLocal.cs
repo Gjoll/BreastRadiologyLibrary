@@ -15,7 +15,7 @@ namespace BreastRadLib.AbnormalityForeignObjectLocal
 	/// Accessor class for 'abnormalityForeignObjectType'
 	/// [Fhir Element 'Observation.component:abnormalityForeignObjectType]'
 	/// </summary>
-	public class AbnormalityForeignObjectType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                       // CSDefineObservation.cs:66
+	public class AbnormalityForeignObjectType_Accessor : MemberListCodedValueBase<CodeableConcept>                                             // CSDefineObservation.cs:66
 	{                                                                                                                                          // CSDefineObservation.cs:67
 	    // Properties                                                                                                                          // CSDefineObservation.cs:68
 	    /// <summary>
