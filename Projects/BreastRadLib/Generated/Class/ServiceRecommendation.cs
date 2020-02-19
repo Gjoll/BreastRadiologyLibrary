@@ -54,7 +54,7 @@ namespace BreastRadLib
 				resource = new ServiceRequest();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:208
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // CSDefineBase.cs:218
 			//- Constructor
 		}
 
@@ -78,11 +78,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set ServiceRequest.code to one of the predefined items
 		/// </summary>
-		public ServiceRecommendation SetCode(RecommendationsVS.TCoding code)                                                                      // CSDefineBase.cs:178
-		{                                                                                                                                         // CSDefineBase.cs:179
-		    this.Resource.Code = code;                                                                                                            // CSDefineBase.cs:180
-		    return this;                                                                                                                          // CSDefineBase.cs:181
-		}                                                                                                                                         // CSDefineBase.cs:182
+		public ServiceRecommendation SetCode(RecommendationsVS.TCoding code)                                                                      // CSDefineBase.cs:188
+		{                                                                                                                                         // CSDefineBase.cs:189
+		    this.Resource.Code = code;                                                                                                            // CSDefineBase.cs:190
+		    return this;                                                                                                                          // CSDefineBase.cs:191
+		}                                                                                                                                         // CSDefineBase.cs:192
 		//- Methods
 	}
 }

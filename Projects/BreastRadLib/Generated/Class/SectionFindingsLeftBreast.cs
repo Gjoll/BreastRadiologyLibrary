@@ -20,10 +20,10 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, IFindingBreastFragment
 	{
 		//+ Fields
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:256
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSDefineObservation.cs:256
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:256
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:256
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:320
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSDefineObservation.cs:320
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:320
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:320
 		//- Fields
 
 		/// <summary>
@@ -64,11 +64,11 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
 			this.Resource.BodySite = DefaultValue_2();                                                                                               // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // CSDefineBase.cs:208
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:259
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSDefineObservation.cs:259
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:259
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:259
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // CSDefineBase.cs:218
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:323
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSDefineObservation.cs:323
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:323
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:323
 			//- Constructor
 		}
 
@@ -77,10 +77,10 @@ namespace BreastRadLib
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // CSDefineObservation.cs:262
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSDefineObservation.cs:262
-			this.WriteHasMember(this.NMFinding);                                                                                                     // CSDefineObservation.cs:262
-			this.WriteHasMember(this.USFinding);                                                                                                     // CSDefineObservation.cs:262
+			this.WriteHasMember(this.MGFinding);                                                                                                     // CSDefineObservation.cs:326
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSDefineObservation.cs:326
+			this.WriteHasMember(this.NMFinding);                                                                                                     // CSDefineObservation.cs:326
+			this.WriteHasMember(this.USFinding);                                                                                                     // CSDefineObservation.cs:326
 			//- WriteCode
 		}
 
@@ -89,10 +89,10 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // CSDefineObservation.cs:265
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSDefineObservation.cs:265
-			this.ReadHasMember(this.NMFinding);                                                                                                      // CSDefineObservation.cs:265
-			this.ReadHasMember(this.USFinding);                                                                                                      // CSDefineObservation.cs:265
+			this.ReadHasMember(this.MGFinding);                                                                                                      // CSDefineObservation.cs:329
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSDefineObservation.cs:329
+			this.ReadHasMember(this.NMFinding);                                                                                                      // CSDefineObservation.cs:329
+			this.ReadHasMember(this.USFinding);                                                                                                      // CSDefineObservation.cs:329
 			//- ReadCode
 		}
 

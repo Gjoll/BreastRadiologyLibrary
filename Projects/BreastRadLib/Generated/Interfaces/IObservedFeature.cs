@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		FeatureType_Accessor FeatureType { get ; }                                                                                                // CSDefineObservation.cs:139
+		FeatureType_Accessor FeatureType { get ; }                                                                                                // CSDefineObservation.cs:203
 		//- Fields
 
 		//+ Methods

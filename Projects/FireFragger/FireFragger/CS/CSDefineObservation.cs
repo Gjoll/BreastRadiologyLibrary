@@ -27,9 +27,31 @@ namespace FireFragger
             Int32 max,
             Int32 min,
             String propertyName,
-            String[] valueTypes,
-            String propertyType)
+            ElementTreeNode valueNode)
         {
+            String[] ParamTypes(ElementDefinition.TypeRefComponent type)
+            {
+                if (BindingClassName(componentSlice.ElementDefinition, out String bindingClassName) == false)
+                    return new string[] { type.Code };
+
+                switch (componentSlice.ElementDefinition.Binding.Strength)
+                {
+                    case BindingStrength.Required:
+                        return new string[] { bindingClassName };
+
+                    case BindingStrength.Preferred:
+                    case BindingStrength.Extensible:
+                        return new string[] { type.Code, bindingClassName };
+
+                    default:
+                        return new string[] { type.Code };
+                }
+            }
+
+            List<ElementDefinition.TypeRefComponent> types = valueNode.ElementDefinition.Type;
+
+            String propertyType = (types.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Base";
+
             String className = $"{propertyName}_Accessor";
             if (this.LocalClassDefs == null)
                 return className;
@@ -60,26 +82,80 @@ namespace FireFragger
 
             if (max == 1)
             {
+                void Define(String suffix, String valueType)
+                {
+                    foreach (String paramType in ParamTypes(types[0]))
+                    {
+                        methodsBlock
+                            .BlankLine()
+                            .SummaryOpen()
+                            .Summary($"Set {propertyName} value")
+                            .SummaryClose()
+                            .AppendCode($"public void Set{suffix}({paramType} value) => this.SetFirst(value);")
+                            ;
+                    }
+                }
+
                 propertiesBlock
                     .SummaryOpen()
                     .Summary("get {propertyName} value")
                     .SummaryClose()
-                    .AppendCode($"public {propertyType} Value() => base.FirstOrDefault();")
+                    .AppendCode($"public {propertyType} Get() => base.FirstOrDefault();")
                     ;
-                foreach (String valueType in valueTypes)
-                {
-                    methodsBlock
-                        .BlankLine()
-                        .SummaryOpen()
-                        .Summary($"Set {propertyName} value")
-                        .SummaryClose()
-                        .AppendCode($"public void Value{valueType}({valueType} value) => this.SetFirst(value);")
-                        ;
-                }
+                if (types.Count == 1)
+                    Define("", types[0].Code);
+                else
+                    foreach (ElementDefinition.TypeRefComponent type in types)
+                        Define(type.Code, type.Code);
             }
             else
             {
-                throw new NotImplementedException();
+                void DefineAppend(String fhirType, String targetName)
+                {
+                    foreach (String paramType in ParamTypes(types[0]))
+                    {
+                        methodsBlock
+                            .BlankLine()
+                            .SummaryOpen()
+                            .Summary($"Append item to end of list")
+                            .SummaryClose()
+                            .AppendCode($"public void Append{targetName}({paramType} value)")
+                            .OpenBrace()
+                            .AppendCode($"this.RawItems.Add(value);")
+                            .CloseBrace();
+                            ;
+                    }
+                }
+
+                propertiesBlock
+                    .SummaryOpen()
+                    .Summary("Access propertyName")
+                    .SummaryClose()
+                    .AppendCode($"public IEnumerable<{propertyType}> All() => this.items;")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary("Access item at indicated location in list")
+                    .SummaryClose()
+                    .AppendCode($"public {propertyType} At(Int32 i) => base.items[i];")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary("Access first item in list")
+                    .SummaryClose()
+                    .AppendCode($"public new {propertyType} First() => base.First();")
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary("Access first item in list or default value if empty")
+                    .SummaryClose()
+                    .AppendCode($"public new {propertyType} FirstOrDefault() => base.FirstOrDefault();")
+                    ;
+
+                if (types.Count == 1)
+                    DefineAppend(propertyType, "");
+                else
+                    foreach (ElementDefinition.TypeRefComponent type in types)
+                        DefineAppend(type.Code, type.Code);
             }
             return className;
         }
@@ -114,24 +190,12 @@ namespace FireFragger
                     throw new Exception("Invalid component code");
                 Coding code = componentCode.Coding[0];
 
-                List<ElementDefinition.TypeRefComponent> types = valueNode.ElementDefinition.Type;
-
-                Int32 max = ToMax(valueNode.ElementDefinition.Max);
-                Int32 min = valueNode.ElementDefinition.Min.Value;
+                Int32 max = ToMax(componentSlice.ElementDefinition.Max);
+                Int32 min = componentSlice.ElementDefinition.Min.Value;
                 String propertyName = sliceName.ToMachineName();
 
-                String valueBaseType;
-                List<String> valueTypes = new List<String>();
-                foreach (ElementDefinition.TypeRefComponent type in types)
-                    valueTypes.Add(type.Code);
-
-                if (valueTypes.Count == 1)
-                    valueBaseType = valueTypes[0];
-                else
-                    valueBaseType = "Base";
-
                 String componentClassName =
-                    DefineComponentsLocalClass(componentSlice, code, max, min, propertyName, valueTypes.ToArray(), valueBaseType);
+                    DefineComponentsLocalClass(componentSlice, code, max, min, propertyName, valueNode);
 
                 String interfaceName = CSBuilder.InterfaceName(fragBase);
                 String className = CSBuilder.ClassName(fragBase);

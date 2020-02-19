@@ -36,23 +36,23 @@ namespace BreastRadLib
 	public class AbnormalityMass : ObservationBase, IObservationLeafFragment, ITumorSatelliteFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedSizeFragment, IObservedDistributionFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
-		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // CSDefineObservation.cs:256
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:145
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:145
-		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:145
-		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSDefineObservation.cs:145
-		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSDefineObservation.cs:145
-		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSDefineObservation.cs:145
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:145
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:145
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:145
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:145
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:145
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:145
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:145
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:256
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:256
-		public MassType_Accessor MassType { get ; protected set; }                                                                                // CSDefineObservation.cs:145
+		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // CSDefineObservation.cs:320
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:209
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:209
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:209
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSDefineObservation.cs:209
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSDefineObservation.cs:209
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSDefineObservation.cs:209
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:209
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:209
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:209
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:209
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:209
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:209
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:209
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:320
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:320
+		public MassType_Accessor MassType { get ; protected set; }                                                                                // CSDefineObservation.cs:209
 		//- Fields
 
 		/// <summary>
@@ -92,50 +92,50 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // CSDefineBase.cs:208
-			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // CSDefineObservation.cs:259
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:148
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:148
-			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:148
-			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:148
-			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:148
-			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:148
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:148
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:148
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:148
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:148
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:148
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:148
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:148
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:259
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:259
-			this.MassType = new MassType_Accessor(doc);                                                                                              // CSDefineObservation.cs:148
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // CSDefineBase.cs:218
+			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // CSDefineObservation.cs:323
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:212
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:212
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:212
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:212
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:212
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:212
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:212
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:212
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:212
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:212
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:212
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:212
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:212
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:323
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:323
+			this.MassType = new MassType_Accessor(doc);                                                                                              // CSDefineObservation.cs:212
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:95
+			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.TumorSatellite);                                                                                                // CSDefineObservation.cs:262
-			this.WriteComponent(this.ObsChanges);                                                                                                    // CSDefineObservation.cs:151
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSDefineObservation.cs:151
-			this.WriteComponent(this.Orientation);                                                                                                   // CSDefineObservation.cs:151
-			this.WriteComponent(this.Shape);                                                                                                         // CSDefineObservation.cs:151
-			this.WriteComponent(this.Margin);                                                                                                        // CSDefineObservation.cs:151
-			this.WriteComponent(this.MgDensity);                                                                                                     // CSDefineObservation.cs:151
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:151
-			this.WriteComponent(this.ObsSize);                                                                                                       // CSDefineObservation.cs:151
-			this.WriteComponent(this.ObsDistribution);                                                                                               // CSDefineObservation.cs:151
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:151
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSDefineObservation.cs:151
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:151
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:151
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:262
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:262
-			this.WriteComponent(this.MassType);                                                                                                      // CSDefineObservation.cs:151
+			this.WriteHasMember(this.TumorSatellite);                                                                                                // CSDefineObservation.cs:326
+			this.WriteComponent(this.ObsChanges);                                                                                                    // CSDefineObservation.cs:215
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSDefineObservation.cs:215
+			this.WriteComponent(this.Orientation);                                                                                                   // CSDefineObservation.cs:215
+			this.WriteComponent(this.Shape);                                                                                                         // CSDefineObservation.cs:215
+			this.WriteComponent(this.Margin);                                                                                                        // CSDefineObservation.cs:215
+			this.WriteComponent(this.MgDensity);                                                                                                     // CSDefineObservation.cs:215
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:215
+			this.WriteComponent(this.ObsSize);                                                                                                       // CSDefineObservation.cs:215
+			this.WriteComponent(this.ObsDistribution);                                                                                               // CSDefineObservation.cs:215
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:215
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSDefineObservation.cs:215
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:215
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:215
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:326
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:326
+			this.WriteComponent(this.MassType);                                                                                                      // CSDefineObservation.cs:215
 			//- WriteCode
 		}
 
@@ -144,23 +144,23 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.TumorSatellite);                                                                                                 // CSDefineObservation.cs:265
-			this.ReadComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:154
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:154
-			this.ReadComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:154
-			this.ReadComponent(this.Shape);                                                                                                          // CSDefineObservation.cs:154
-			this.ReadComponent(this.Margin);                                                                                                         // CSDefineObservation.cs:154
-			this.ReadComponent(this.MgDensity);                                                                                                      // CSDefineObservation.cs:154
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:154
-			this.ReadComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:154
-			this.ReadComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:154
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:154
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:154
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:154
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:154
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:265
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:265
-			this.ReadComponent(this.MassType);                                                                                                       // CSDefineObservation.cs:154
+			this.ReadHasMember(this.TumorSatellite);                                                                                                 // CSDefineObservation.cs:329
+			this.ReadComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:218
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:218
+			this.ReadComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:218
+			this.ReadComponent(this.Shape);                                                                                                          // CSDefineObservation.cs:218
+			this.ReadComponent(this.Margin);                                                                                                         // CSDefineObservation.cs:218
+			this.ReadComponent(this.MgDensity);                                                                                                      // CSDefineObservation.cs:218
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:218
+			this.ReadComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:218
+			this.ReadComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:218
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:218
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:218
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:218
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:218
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:329
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:329
+			this.ReadComponent(this.MassType);                                                                                                       // CSDefineObservation.cs:218
 			//- ReadCode
 		}
 

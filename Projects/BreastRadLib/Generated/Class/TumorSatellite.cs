@@ -60,7 +60,7 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                                             // CSDefineBase.cs:208
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                                             // CSDefineBase.cs:218
 			//- Constructor
 		}
 

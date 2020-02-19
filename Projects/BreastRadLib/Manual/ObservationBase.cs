@@ -74,13 +74,32 @@ namespace BreastRadLib
         protected void WriteComponent<BaseType>(ObservationLocal.ComponentBase<BaseType> componentList)
              where BaseType : Base
         {
-            //throw new NotImplementedException();
+            CodeableConcept code = new CodeableConcept(componentList.Code.System,
+                componentList.Code.Code,
+                componentList.Code.Display);
+            foreach (BaseType baseType in componentList.RawItems)
+            {
+                Observation.ComponentComponent comp = new Observation.ComponentComponent
+                {
+                    Code = code
+                };
+                this.Resource.Component.Add(comp);
+            }
         }
 
         protected void ReadComponent<BaseType>(ObservationLocal.ComponentBase<BaseType> componentList)
              where BaseType : Base
         {
-            //throw new NotImplementedException();
+            foreach (Observation.ComponentComponent comp in this.Resource.Component)
+            {
+                if (Misc.SameCode(comp.Code, componentList.Code))
+                {
+                    BaseType baseType = comp.Value as BaseType;
+                    if (baseType == null)
+                        throw new Exception($"Can cot convert item from {comp.Value.GetType().Name} to {typeof(BaseType).Name}");
+                    componentList.RawItems.Add(baseType);
+                }
+            }
         }
     }
 }

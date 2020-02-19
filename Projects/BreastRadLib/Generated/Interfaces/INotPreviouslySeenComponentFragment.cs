@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // CSDefineObservation.cs:139
+		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // CSDefineObservation.cs:203
 		//- Fields
 
 		//+ Methods

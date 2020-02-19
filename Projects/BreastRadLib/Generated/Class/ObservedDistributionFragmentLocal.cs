@@ -15,60 +15,99 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// Accessor class for 'obsDistribution'
 	/// [Fhir Element 'Observation.component:obsDistribution]'
 	/// </summary>
-	public class ObsDistribution_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                    // CSDefineObservation.cs:42
-	{                                                                                                                                          // CSDefineObservation.cs:43
-	    // Properties                                                                                                                          // CSDefineObservation.cs:44
+	public class ObsDistribution_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                    // CSDefineObservation.cs:64
+	{                                                                                                                                          // CSDefineObservation.cs:65
+	    // Properties                                                                                                                          // CSDefineObservation.cs:66
 	    /// <summary>
-	    /// get {propertyName} value
+	    /// Access propertyName
 	    /// </summary>
-	    public CodeableConcept Value() => base.FirstOrDefault();                                                                               // CSDefineObservation.cs:67
-	                                                                                                                                           // CSDefineObservation.cs:46
-	    // Methods                                                                                                                             // CSDefineObservation.cs:47
-	                                                                                                                                           // CSDefineObservation.cs:72
+	    public IEnumerable<CodeableConcept> All() => this.items;                                                                               // CSDefineObservation.cs:134
+	                                                                                                                                           // CSDefineObservation.cs:136
 	    /// <summary>
-	    /// Set ObsDistribution value
+	    /// Access item at indicated location in list
 	    /// </summary>
-	    public void ValueCodeableConcept(CodeableConcept value) => this.SetFirst(value);                                                       // CSDefineObservation.cs:76
-	                                                                                                                                           // CSDefineObservation.cs:49
+	    public CodeableConcept At(Int32 i) => base.items[i];                                                                                   // CSDefineObservation.cs:140
+	                                                                                                                                           // CSDefineObservation.cs:142
+	    /// <summary>
+	    /// Access first item in list
+	    /// </summary>
+	    public new CodeableConcept First() => base.First();                                                                                    // CSDefineObservation.cs:146
+	                                                                                                                                           // CSDefineObservation.cs:147
+	    /// <summary>
+	    /// Access first item in list or default value if empty
+	    /// </summary>
+	    public new CodeableConcept FirstOrDefault() => base.FirstOrDefault();                                                                  // CSDefineObservation.cs:151
+	                                                                                                                                           // CSDefineObservation.cs:68
+	    // Methods                                                                                                                             // CSDefineObservation.cs:69
+	                                                                                                                                           // CSDefineObservation.cs:118
+	    /// <summary>
+	    /// Append item to end of list
+	    /// </summary>
+	    public void Append(CodeableConcept value)                                                                                              // CSDefineObservation.cs:122
+	    {                                                                                                                                      // CSDefineObservation.cs:123
+	        this.RawItems.Add(value);                                                                                                          // CSDefineObservation.cs:124
+	    }                                                                                                                                      // CSDefineObservation.cs:125
+	                                                                                                                                           // CSDefineObservation.cs:71
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsDistribution_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:53
-	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsDistribution"));// CSDefineObservation.cs:55
-	    }                                                                                                                                      // CSDefineObservation.cs:57
-	}                                                                                                                                          // CSDefineObservation.cs:58
+	    public ObsDistribution_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:75
+	    {                                                                                                                                      // CSDefineObservation.cs:76
+	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsDistribution"));// CSDefineObservation.cs:77
+	    }                                                                                                                                      // CSDefineObservation.cs:79
+	}                                                                                                                                          // CSDefineObservation.cs:80
 	/// <summary>
 	/// Accessor class for 'obsDistRegionSize'
 	/// [Fhir Element 'Observation.component:obsDistRegionSize]'
 	/// </summary>
-	public class ObsDistRegionSize_Accessor : ObservationLocal.ComponentBase<Base>                                                             // CSDefineObservation.cs:42
-	{                                                                                                                                          // CSDefineObservation.cs:43
-	    // Properties                                                                                                                          // CSDefineObservation.cs:44
+	public class ObsDistRegionSize_Accessor : ObservationLocal.ComponentBase<Base>                                                             // CSDefineObservation.cs:64
+	{                                                                                                                                          // CSDefineObservation.cs:65
+	    // Properties                                                                                                                          // CSDefineObservation.cs:66
 	    /// <summary>
-	    /// get {propertyName} value
+	    /// Access propertyName
 	    /// </summary>
-	    public Base Value() => base.FirstOrDefault();                                                                                          // CSDefineObservation.cs:67
-	                                                                                                                                           // CSDefineObservation.cs:46
-	    // Methods                                                                                                                             // CSDefineObservation.cs:47
-	                                                                                                                                           // CSDefineObservation.cs:72
+	    public IEnumerable<Base> All() => this.items;                                                                                          // CSDefineObservation.cs:134
+	                                                                                                                                           // CSDefineObservation.cs:136
 	    /// <summary>
-	    /// Set ObsDistRegionSize value
+	    /// Access item at indicated location in list
 	    /// </summary>
-	    public void ValueQuantity(Quantity value) => this.SetFirst(value);                                                                     // CSDefineObservation.cs:76
-	                                                                                                                                           // CSDefineObservation.cs:72
+	    public Base At(Int32 i) => base.items[i];                                                                                              // CSDefineObservation.cs:140
+	                                                                                                                                           // CSDefineObservation.cs:142
 	    /// <summary>
-	    /// Set ObsDistRegionSize value
+	    /// Access first item in list
 	    /// </summary>
-	    public void ValueRange(Range value) => this.SetFirst(value);                                                                           // CSDefineObservation.cs:76
-	                                                                                                                                           // CSDefineObservation.cs:49
+	    public new Base First() => base.First();                                                                                               // CSDefineObservation.cs:146
+	                                                                                                                                           // CSDefineObservation.cs:147
+	    /// <summary>
+	    /// Access first item in list or default value if empty
+	    /// </summary>
+	    public new Base FirstOrDefault() => base.FirstOrDefault();                                                                             // CSDefineObservation.cs:151
+	                                                                                                                                           // CSDefineObservation.cs:68
+	    // Methods                                                                                                                             // CSDefineObservation.cs:69
+	                                                                                                                                           // CSDefineObservation.cs:118
+	    /// <summary>
+	    /// Append item to end of list
+	    /// </summary>
+	    public void AppendQuantity(Quantity value)                                                                                             // CSDefineObservation.cs:122
+	    {                                                                                                                                      // CSDefineObservation.cs:123
+	        this.RawItems.Add(value);                                                                                                          // CSDefineObservation.cs:124
+	    }                                                                                                                                      // CSDefineObservation.cs:125
+	                                                                                                                                           // CSDefineObservation.cs:118
+	    /// <summary>
+	    /// Append item to end of list
+	    /// </summary>
+	    public void AppendRange(Quantity value)                                                                                                // CSDefineObservation.cs:122
+	    {                                                                                                                                      // CSDefineObservation.cs:123
+	        this.RawItems.Add(value);                                                                                                          // CSDefineObservation.cs:124
+	    }                                                                                                                                      // CSDefineObservation.cs:125
+	                                                                                                                                           // CSDefineObservation.cs:71
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsDistRegionSize_Accessor(BreastRadiologyDocument doc) : base()                                                                // CSDefineObservation.cs:53
-	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsSize"));  // CSDefineObservation.cs:55
-	    }                                                                                                                                      // CSDefineObservation.cs:57
-	}                                                                                                                                          // CSDefineObservation.cs:58
+	    public ObsDistRegionSize_Accessor(BreastRadiologyDocument doc) : base()                                                                // CSDefineObservation.cs:75
+	    {                                                                                                                                      // CSDefineObservation.cs:76
+	        this.Init(doc, 0, 3, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsSize"));  // CSDefineObservation.cs:77
+	    }                                                                                                                                      // CSDefineObservation.cs:79
+	}                                                                                                                                          // CSDefineObservation.cs:80
 	//- LocalClassDefs
 }

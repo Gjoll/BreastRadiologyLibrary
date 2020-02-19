@@ -123,7 +123,7 @@ namespace FireFragger
                 {
                     CodeBlockMerger cbm = new CodeBlockMerger(fragBase.ClassEditor);
                     foreach (CodeBlockNested codeBlock in fi.ClassEditor.Blocks.AllNamedBlocks)
-                       cbm.Merge(codeBlock);
+                        cbm.Merge(codeBlock);
                 }
             }
         }
@@ -155,18 +155,28 @@ namespace FireFragger
                 ;
         }
 
-        void DefineBinding(ElementDefinition elementDefinition)
+        protected bool BindingClassName(ElementDefinition elementDefinition, out String bindingClassName)
         {
+            bindingClassName = null;
             if (elementDefinition.Binding == null)
-                return;
+                return false;
 
             ElementDefinition.ElementDefinitionBindingComponent bindingComp = elementDefinition.Binding;
             String valueSet = bindingComp.ValueSet;
 
             // currently we only do local value sets.
             if (valueSet.StartsWith("http://hl7.org/fhir/us/breast-radiology/ValueSet/RecommendationsVS") == false)
-                return;
+                return false;
             String vsClassName = CSBuilder.MachineName(valueSet.LastUriPart());
+            bindingClassName =  $"{vsClassName}.TCoding";
+            return true;
+        }
+
+        void DefineBinding(ElementDefinition elementDefinition)
+        {
+            if (BindingClassName(elementDefinition, out String bindingClassName) == false)
+                return;
+
             String fieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String methodName = $"Set{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String fhirFieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
@@ -175,7 +185,7 @@ namespace FireFragger
                 .SummaryOpen()
                 .Summary($"Set {elementDefinition.ElementId} to one of the predefined items")
                 .SummaryClose()
-                .AppendCode($"public {thisClass} {methodName}({vsClassName}.TCoding code)")
+                .AppendCode($"public {thisClass} {methodName}({bindingClassName} code)")
                 .OpenBrace()
                 .AppendCode($"this.Resource.{fhirFieldName} = code;")
                 .AppendCode($"return this;")

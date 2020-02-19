@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		FibroAdenomaType_Accessor FibroAdenomaType { get ; }                                                                                      // CSDefineObservation.cs:139
+		FibroAdenomaType_Accessor FibroAdenomaType { get ; }                                                                                      // CSDefineObservation.cs:203
 		//- Fields
 
 		//+ Methods

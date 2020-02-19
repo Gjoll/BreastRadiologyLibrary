@@ -15,28 +15,28 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 	/// Accessor class for 'asymmetryType'
 	/// [Fhir Element 'Observation.component:asymmetryType]'
 	/// </summary>
-	public class AsymmetryType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                      // CSDefineObservation.cs:42
-	{                                                                                                                                          // CSDefineObservation.cs:43
-	    // Properties                                                                                                                          // CSDefineObservation.cs:44
+	public class AsymmetryType_Accessor : ObservationLocal.ComponentBase<CodeableConcept>                                                      // CSDefineObservation.cs:64
+	{                                                                                                                                          // CSDefineObservation.cs:65
+	    // Properties                                                                                                                          // CSDefineObservation.cs:66
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Value() => base.FirstOrDefault();                                                                               // CSDefineObservation.cs:67
-	                                                                                                                                           // CSDefineObservation.cs:46
-	    // Methods                                                                                                                             // CSDefineObservation.cs:47
-	                                                                                                                                           // CSDefineObservation.cs:72
+	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:103
+	                                                                                                                                           // CSDefineObservation.cs:68
+	    // Methods                                                                                                                             // CSDefineObservation.cs:69
+	                                                                                                                                           // CSDefineObservation.cs:90
 	    /// <summary>
 	    /// Set AsymmetryType value
 	    /// </summary>
-	    public void ValueCodeableConcept(CodeableConcept value) => this.SetFirst(value);                                                       // CSDefineObservation.cs:76
-	                                                                                                                                           // CSDefineObservation.cs:49
+	    public void Set(CodeableConcept value) => this.SetFirst(value);                                                                        // CSDefineObservation.cs:94
+	                                                                                                                                           // CSDefineObservation.cs:71
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public AsymmetryType_Accessor(BreastRadiologyDocument doc) : base()                                                                    // CSDefineObservation.cs:53
-	    {                                                                                                                                      // CSDefineObservation.cs:54
-	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgAbnormalityAsymmetryType"));// CSDefineObservation.cs:55
-	    }                                                                                                                                      // CSDefineObservation.cs:57
-	}                                                                                                                                          // CSDefineObservation.cs:58
+	    public AsymmetryType_Accessor(BreastRadiologyDocument doc) : base()                                                                    // CSDefineObservation.cs:75
+	    {                                                                                                                                      // CSDefineObservation.cs:76
+	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgAbnormalityAsymmetryType"));// CSDefineObservation.cs:77
+	    }                                                                                                                                      // CSDefineObservation.cs:79
+	}                                                                                                                                          // CSDefineObservation.cs:80
 	//- LocalClassDefs
 }
