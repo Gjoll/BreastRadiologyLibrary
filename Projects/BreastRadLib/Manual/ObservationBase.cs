@@ -29,35 +29,33 @@ namespace BreastRadLib
             this.Init(doc, new Observation());
         }
 
-        protected void ClearHasMembers()
+        protected void ClearHasMember()
         {
             this.Resource.HasMember.Clear();
         }
 
-        protected void WriteHasMember<BaseType>(ObservationLocal.HasMemberBase<BaseType> hasMemberList)
+        protected void WriteHasMember<BaseType>(CodedReferenceBase<BaseType> hasMemberList)
              where BaseType : ObservationBase
         {
+            hasMemberList.Validate();
             foreach (BaseType item in hasMemberList.RawItems)
             {
-                if (Misc.SameUrl(item.Meta.Profile.FirstOrDefault(), hasMemberList.ProfileUrl))
-                {
-                    this.Resource.HasMember.Add(
-                        new ResourceReference
-                        {
-                            Reference = item.Resource.IdElement.Value
-                        }); ;
-                }
+                this.Resource.HasMember.Add(
+                    new ResourceReference
+                    {
+                        Reference = item.Resource.IdElement.Value
+                    }); ;
             }
         }
 
-        protected void ReadHasMember<BaseType>(ObservationLocal.HasMemberBase<BaseType> hasMemberList)
+        protected void ReadHasMember<BaseType>(CodedReferenceBase<BaseType> hasMemberList)
              where BaseType : ObservationBase, new()
         {
             foreach (ResourceReference resRef in this.Resource.HasMember)
             {
                 Observation referencedResource = ReferencedResource<Observation>(resRef);
                 String profile = referencedResource.Meta.Profile.First();
-                if (Misc.SameUrl(profile, hasMemberList.ProfileUrl))
+                if (BLMisc.SameUrl(profile, hasMemberList.ProfileUrl))
                 {
                     if (this.doc.TryGetRegisteredItem(referencedResource, out BaseType item) == false)
                         throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
@@ -93,7 +91,7 @@ namespace BreastRadLib
         {
             foreach (Observation.ComponentComponent comp in this.Resource.Component)
             {
-                if (Misc.SameCode(comp.Code, componentList.Code))
+                if (BLMisc.SameCode(comp.Code, componentList.Code))
                 {
                     BaseType baseType = comp.Value as BaseType;
                     if (baseType == null)

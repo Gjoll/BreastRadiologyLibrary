@@ -43,8 +43,8 @@ namespace BreastRadLib
 		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:211
 		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:211
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:211
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:322
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:322
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildCodedReferenceList.cs:120
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildCodedReferenceList.cs:120
 		public AsymmetryType_Accessor AsymmetryType { get ; protected set; }                                                                      // CSDefineObservation.cs:211
 		//- Fields
 
@@ -84,8 +84,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                                     // CSDefineBase.cs:235
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                                     // CSDefineBase.cs:217
 			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:214
 			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:214
 			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:214
@@ -96,8 +96,8 @@ namespace BreastRadLib
 			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:214
 			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:214
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:214
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:325
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:325
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildCodedReferenceList.cs:123
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildCodedReferenceList.cs:123
 			this.AsymmetryType = new AsymmetryType_Accessor(doc);                                                                                    // CSDefineObservation.cs:214
 			//- Constructor
 		}
@@ -118,8 +118,8 @@ namespace BreastRadLib
 			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:217
 			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:217
 			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:217
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:328
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:328
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildCodedReferenceList.cs:126
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildCodedReferenceList.cs:126
 			this.WriteComponent(this.AsymmetryType);                                                                                                 // CSDefineObservation.cs:217
 			//- WriteCode
 		}
@@ -139,8 +139,8 @@ namespace BreastRadLib
 			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:220
 			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:220
 			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:220
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:331
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:331
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildCodedReferenceList.cs:129
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildCodedReferenceList.cs:129
 			this.ReadComponent(this.AsymmetryType);                                                                                                  // CSDefineObservation.cs:220
 			//- ReadCode
 		}

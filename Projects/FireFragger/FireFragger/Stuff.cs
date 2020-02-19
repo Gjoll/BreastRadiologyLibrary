@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FireFragger
 {
-    public static class Misc
+    public static class Stuff
     {
         public static bool SameUrl(String url1, String url2)
         {

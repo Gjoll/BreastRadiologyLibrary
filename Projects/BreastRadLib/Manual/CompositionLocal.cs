@@ -25,7 +25,7 @@ namespace BreastRadLib.CompositionLocal
         /// </summary>
         public Coding Code { get; protected set; }
 
-        protected SectionBase()
+        protected SectionBase(String listName) : base(listName)
         {
         }
 

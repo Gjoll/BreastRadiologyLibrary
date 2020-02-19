@@ -38,7 +38,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Value_Accessor(BreastRadiologyDocument doc) : base()                                                                            // CSDefineObservation.cs:77
+	    public Value_Accessor(BreastRadiologyDocument doc) : base("Value_Accessor")                                                            // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithValue"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81
@@ -83,7 +83,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Qualifier_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:77
+	    public Qualifier_Accessor(BreastRadiologyDocument doc) : base("Qualifier_Accessor")                                                    // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithQualifier"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

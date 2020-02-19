@@ -33,7 +33,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public CalcificationType_Accessor(BreastRadiologyDocument doc) : base()                                                                // CSDefineObservation.cs:77
+	    public CalcificationType_Accessor(BreastRadiologyDocument doc) : base("CalcificationType_Accessor")                                    // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgCalcificationType"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81
@@ -60,7 +60,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public CalcificationDistribution_Accessor(BreastRadiologyDocument doc) : base()                                                        // CSDefineObservation.cs:77
+	    public CalcificationDistribution_Accessor(BreastRadiologyDocument doc) : base("CalcificationDistribution_Accessor")                    // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgCalcificationDistribution"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

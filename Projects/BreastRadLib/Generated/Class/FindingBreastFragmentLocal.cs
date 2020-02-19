@@ -12,60 +12,60 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 {
 	//+ LocalClassDefs
 	/// <summary>
-	/// Accessor class for ObservationhasMember slice 'mGFinding'
+	/// Accessor class for slice 'mGFinding'
 	/// [Fhir Element 'Observation.hasMember:mGFinding]'
 	/// </summary>
-	public class MGFinding_Accessor : ObservationLocal.HasMemberMultiple<MGFinding>                                                            // CSDefineObservation.cs:265
-	{                                                                                                                                          // CSDefineObservation.cs:266
+	public class MGFinding_Accessor : CodedReferenceMultiple<MGFinding>                                                                        // CSBuildCodedReferenceList.cs:66
+	{                                                                                                                                          // CSBuildCodedReferenceList.cs:67
 	    /// <summary>
-	    /// Accessor HasMember slice MGFinding_Accessor class constructor
+	    /// MGFinding_Accessor class constructor
 	    /// </summary>
-	    public MGFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:271
-	    {                                                                                                                                      // CSDefineObservation.cs:272
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                    // CSDefineObservation.cs:273
-	    }                                                                                                                                      // CSDefineObservation.cs:274
-	}                                                                                                                                          // CSDefineObservation.cs:275
+	    public MGFinding_Accessor(BreastRadiologyDocument doc) : base("MGFinding_Accessor")                                                    // CSBuildCodedReferenceList.cs:72
+	    {                                                                                                                                      // CSBuildCodedReferenceList.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                    // CSBuildCodedReferenceList.cs:74
+	    }                                                                                                                                      // CSBuildCodedReferenceList.cs:75
+	}                                                                                                                                          // CSBuildCodedReferenceList.cs:76
 	/// <summary>
-	/// Accessor class for ObservationhasMember slice 'mRIFinding'
+	/// Accessor class for slice 'mRIFinding'
 	/// [Fhir Element 'Observation.hasMember:mRIFinding]'
 	/// </summary>
-	public class MRIFinding_Accessor : ObservationLocal.HasMemberMultiple<MRIFinding>                                                          // CSDefineObservation.cs:265
-	{                                                                                                                                          // CSDefineObservation.cs:266
+	public class MRIFinding_Accessor : CodedReferenceMultiple<MRIFinding>                                                                      // CSBuildCodedReferenceList.cs:66
+	{                                                                                                                                          // CSBuildCodedReferenceList.cs:67
 	    /// <summary>
-	    /// Accessor HasMember slice MRIFinding_Accessor class constructor
+	    /// MRIFinding_Accessor class constructor
 	    /// </summary>
-	    public MRIFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                       // CSDefineObservation.cs:271
-	    {                                                                                                                                      // CSDefineObservation.cs:272
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                   // CSDefineObservation.cs:273
-	    }                                                                                                                                      // CSDefineObservation.cs:274
-	}                                                                                                                                          // CSDefineObservation.cs:275
+	    public MRIFinding_Accessor(BreastRadiologyDocument doc) : base("MRIFinding_Accessor")                                                  // CSBuildCodedReferenceList.cs:72
+	    {                                                                                                                                      // CSBuildCodedReferenceList.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                   // CSBuildCodedReferenceList.cs:74
+	    }                                                                                                                                      // CSBuildCodedReferenceList.cs:75
+	}                                                                                                                                          // CSBuildCodedReferenceList.cs:76
 	/// <summary>
-	/// Accessor class for ObservationhasMember slice 'nMFinding'
+	/// Accessor class for slice 'nMFinding'
 	/// [Fhir Element 'Observation.hasMember:nMFinding]'
 	/// </summary>
-	public class NMFinding_Accessor : ObservationLocal.HasMemberMultiple<NMFinding>                                                            // CSDefineObservation.cs:265
-	{                                                                                                                                          // CSDefineObservation.cs:266
+	public class NMFinding_Accessor : CodedReferenceMultiple<NMFinding>                                                                        // CSBuildCodedReferenceList.cs:66
+	{                                                                                                                                          // CSBuildCodedReferenceList.cs:67
 	    /// <summary>
-	    /// Accessor HasMember slice NMFinding_Accessor class constructor
+	    /// NMFinding_Accessor class constructor
 	    /// </summary>
-	    public NMFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:271
-	    {                                                                                                                                      // CSDefineObservation.cs:272
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                    // CSDefineObservation.cs:273
-	    }                                                                                                                                      // CSDefineObservation.cs:274
-	}                                                                                                                                          // CSDefineObservation.cs:275
+	    public NMFinding_Accessor(BreastRadiologyDocument doc) : base("NMFinding_Accessor")                                                    // CSBuildCodedReferenceList.cs:72
+	    {                                                                                                                                      // CSBuildCodedReferenceList.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                    // CSBuildCodedReferenceList.cs:74
+	    }                                                                                                                                      // CSBuildCodedReferenceList.cs:75
+	}                                                                                                                                          // CSBuildCodedReferenceList.cs:76
 	/// <summary>
-	/// Accessor class for ObservationhasMember slice 'uSFinding'
+	/// Accessor class for slice 'uSFinding'
 	/// [Fhir Element 'Observation.hasMember:uSFinding]'
 	/// </summary>
-	public class USFinding_Accessor : ObservationLocal.HasMemberMultiple<USFinding>                                                            // CSDefineObservation.cs:265
-	{                                                                                                                                          // CSDefineObservation.cs:266
+	public class USFinding_Accessor : CodedReferenceMultiple<USFinding>                                                                        // CSBuildCodedReferenceList.cs:66
+	{                                                                                                                                          // CSBuildCodedReferenceList.cs:67
 	    /// <summary>
-	    /// Accessor HasMember slice USFinding_Accessor class constructor
+	    /// USFinding_Accessor class constructor
 	    /// </summary>
-	    public USFinding_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:271
-	    {                                                                                                                                      // CSDefineObservation.cs:272
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");                                    // CSDefineObservation.cs:273
-	    }                                                                                                                                      // CSDefineObservation.cs:274
-	}                                                                                                                                          // CSDefineObservation.cs:275
+	    public USFinding_Accessor(BreastRadiologyDocument doc) : base("USFinding_Accessor")                                                    // CSBuildCodedReferenceList.cs:72
+	    {                                                                                                                                      // CSBuildCodedReferenceList.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");                                    // CSBuildCodedReferenceList.cs:74
+	    }                                                                                                                                      // CSBuildCodedReferenceList.cs:75
+	}                                                                                                                                          // CSBuildCodedReferenceList.cs:76
 	//- LocalClassDefs
 }

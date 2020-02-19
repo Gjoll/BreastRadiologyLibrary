@@ -40,7 +40,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Report_Accessor(BreastRadiologyDocument doc) : base()                                                                           // CSDefineComposition.cs:52
+	    public Report_Accessor(BreastRadiologyDocument doc) : base("Report_Accessor")                                                          // CSDefineComposition.cs:52
 	    {                                                                                                                                      // CSDefineComposition.cs:53
 	        this.Init(doc, "Breast Radiology Report", 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionReport"));// CSDefineComposition.cs:54
 	    }                                                                                                                                      // CSDefineComposition.cs:56
@@ -88,7 +88,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Impressions_Accessor(BreastRadiologyDocument doc) : base()                                                                      // CSDefineComposition.cs:52
+	    public Impressions_Accessor(BreastRadiologyDocument doc) : base("Impressions_Accessor")                                                // CSDefineComposition.cs:52
 	    {                                                                                                                                      // CSDefineComposition.cs:53
 	        this.Init(doc, "Clinical Impressions", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionImpressions"));// CSDefineComposition.cs:54
 	    }                                                                                                                                      // CSDefineComposition.cs:56
@@ -122,7 +122,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public FindingsRightBreast_Accessor(BreastRadiologyDocument doc) : base()                                                              // CSDefineComposition.cs:52
+	    public FindingsRightBreast_Accessor(BreastRadiologyDocument doc) : base("FindingsRightBreast_Accessor")                                // CSDefineComposition.cs:52
 	    {                                                                                                                                      // CSDefineComposition.cs:53
 	        this.Init(doc, "Findings Right Breast", 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeFindingsRightBreast"));// CSDefineComposition.cs:54
 	    }                                                                                                                                      // CSDefineComposition.cs:56
@@ -156,7 +156,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public FindingsLeftBreast_Accessor(BreastRadiologyDocument doc) : base()                                                               // CSDefineComposition.cs:52
+	    public FindingsLeftBreast_Accessor(BreastRadiologyDocument doc) : base("FindingsLeftBreast_Accessor")                                  // CSDefineComposition.cs:52
 	    {                                                                                                                                      // CSDefineComposition.cs:53
 	        this.Init(doc, "Findings Left Breast", 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeFindingsLeftBreast"));// CSDefineComposition.cs:54
 	    }                                                                                                                                      // CSDefineComposition.cs:56
@@ -204,7 +204,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public RelatedResources_Accessor(BreastRadiologyDocument doc) : base()                                                                 // CSDefineComposition.cs:52
+	    public RelatedResources_Accessor(BreastRadiologyDocument doc) : base("RelatedResources_Accessor")                                      // CSDefineComposition.cs:52
 	    {                                                                                                                                      // CSDefineComposition.cs:53
 	        this.Init(doc, "Related Resources", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionRelatedResources"));// CSDefineComposition.cs:54
 	    }                                                                                                                                      // CSDefineComposition.cs:56
@@ -278,7 +278,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Recommendations_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineComposition.cs:52
+	    public Recommendations_Accessor(BreastRadiologyDocument doc) : base("Recommendations_Accessor")                                        // CSDefineComposition.cs:52
 	    {                                                                                                                                      // CSDefineComposition.cs:53
 	        this.Init(doc, "Recommendations", 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes", "sectionCodeRecommendations"));// CSDefineComposition.cs:54
 	    }                                                                                                                                      // CSDefineComposition.cs:56

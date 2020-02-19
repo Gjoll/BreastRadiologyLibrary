@@ -33,7 +33,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Orientation_Accessor(BreastRadiologyDocument doc) : base()                                                                      // CSDefineObservation.cs:77
+	    public Orientation_Accessor(BreastRadiologyDocument doc) : base("Orientation_Accessor")                                                // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "orientation"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81
@@ -60,7 +60,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Shape_Accessor(BreastRadiologyDocument doc) : base()                                                                            // CSDefineObservation.cs:77
+	    public Shape_Accessor(BreastRadiologyDocument doc) : base("Shape_Accessor")                                                            // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "shape"));    // CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81
@@ -87,7 +87,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Margin_Accessor(BreastRadiologyDocument doc) : base()                                                                           // CSDefineObservation.cs:77
+	    public Margin_Accessor(BreastRadiologyDocument doc) : base("Margin_Accessor")                                                          // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "margin"));   // CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81
@@ -114,7 +114,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public MgDensity_Accessor(BreastRadiologyDocument doc) : base()                                                                        // CSDefineObservation.cs:77
+	    public MgDensity_Accessor(BreastRadiologyDocument doc) : base("MgDensity_Accessor")                                                    // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgDensity"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

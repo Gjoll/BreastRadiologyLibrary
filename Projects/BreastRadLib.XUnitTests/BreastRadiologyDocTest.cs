@@ -199,6 +199,8 @@ namespace BreastRadiology.XUnitTests
                 MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
                 Debug.Assert(asymmetry.Length == 1);
                 Debug.Assert(asymmetry[0].ObsChanges.Count == 2);
+                Debug.Assert(BLMisc.SameCode(asymmetry[0].ObsChanges.At(0), ObservedChangesVS.Code_DecreaseInCalcifications));
+                Debug.Assert(BLMisc.SameCode(asymmetry[0].ObsChanges.At(1), ObservedChangesVS.Code_DecreaseInSize));
             }
         }
     }

@@ -11,6 +11,8 @@ namespace BreastRadLib
     /// </summary>
     public class MemberList<BaseType>
     {
+        String listName;
+
         /// <summary>
         /// Parent document
         /// </summary>
@@ -58,10 +60,21 @@ namespace BreastRadLib
         /// <returns></returns>
         protected BaseType First() => items.First();
 
-        protected MemberList()
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="listName"></param>
+        protected MemberList(String listName)
         {
+            this.listName = listName;
         }
 
+        /// <summary>
+        /// Initialize item
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
         protected void Init(BreastRadiologyDocument doc,
             Int32 min,
             Int32 max)
@@ -69,6 +82,17 @@ namespace BreastRadLib
             this.doc = doc;
             this.Min = min;
             this.Max = max;
+        }
+
+        /// <summary>
+        /// Validate list.
+        /// </summary>
+        public void Validate()
+        {
+            //if (this.items.Count < this.Min)
+            //    throw new Exception($"{this.listName} min cardinality is invalid. Found {this.items.Count} items, expected at least {this.Min} items.");
+            //if ((this.Max >= 0) && (this.items.Count > this.Max))
+            //    throw new Exception($"{this.listName} max cardinality is invalid. Found {this.items.Count} items, expected less than {this.Max} items.");
         }
 
         /// <summary>

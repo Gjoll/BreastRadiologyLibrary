@@ -33,7 +33,7 @@ namespace BreastRadLib.AbnormalityForeignObjectLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public AbnormalityForeignObjectType_Accessor(BreastRadiologyDocument doc) : base()                                                     // CSDefineObservation.cs:77
+	    public AbnormalityForeignObjectType_Accessor(BreastRadiologyDocument doc) : base("AbnormalityForeignObjectType_Accessor")              // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityForeignObjectType"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

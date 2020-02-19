@@ -33,7 +33,7 @@ namespace BreastRadLib.ObservedFeatureLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public FeatureType_Accessor(BreastRadiologyDocument doc) : base()                                                                      // CSDefineObservation.cs:77
+	    public FeatureType_Accessor(BreastRadiologyDocument doc) : base("FeatureType_Accessor")                                                // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "featureType"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

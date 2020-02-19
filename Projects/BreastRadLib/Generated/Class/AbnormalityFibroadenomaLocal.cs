@@ -33,7 +33,7 @@ namespace BreastRadLib.AbnormalityFibroadenomaLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public FibroAdenomaType_Accessor(BreastRadiologyDocument doc) : base()                                                                 // CSDefineObservation.cs:77
+	    public FibroAdenomaType_Accessor(BreastRadiologyDocument doc) : base("FibroAdenomaType_Accessor")                                      // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "mgAbnormalityFibroAdenomaType"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

@@ -12,18 +12,18 @@ namespace BreastRadLib.ConsistentWithHasMemberFragmentLocal
 {
 	//+ LocalClassDefs
 	/// <summary>
-	/// Accessor class for ObservationhasMember slice 'consistentWith'
+	/// Accessor class for slice 'consistentWith'
 	/// [Fhir Element 'Observation.hasMember:consistentWith]'
 	/// </summary>
-	public class ConsistentWith_Accessor : ObservationLocal.HasMemberMultiple<ConsistentWith>                                                  // CSDefineObservation.cs:265
-	{                                                                                                                                          // CSDefineObservation.cs:266
+	public class ConsistentWith_Accessor : CodedReferenceMultiple<ConsistentWith>                                                              // CSBuildCodedReferenceList.cs:66
+	{                                                                                                                                          // CSBuildCodedReferenceList.cs:67
 	    /// <summary>
-	    /// Accessor HasMember slice ConsistentWith_Accessor class constructor
+	    /// ConsistentWith_Accessor class constructor
 	    /// </summary>
-	    public ConsistentWith_Accessor(BreastRadiologyDocument doc) : base()                                                                   // CSDefineObservation.cs:271
-	    {                                                                                                                                      // CSDefineObservation.cs:272
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                               // CSDefineObservation.cs:273
-	    }                                                                                                                                      // CSDefineObservation.cs:274
-	}                                                                                                                                          // CSDefineObservation.cs:275
+	    public ConsistentWith_Accessor(BreastRadiologyDocument doc) : base("ConsistentWith_Accessor")                                          // CSBuildCodedReferenceList.cs:72
+	    {                                                                                                                                      // CSBuildCodedReferenceList.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                               // CSBuildCodedReferenceList.cs:74
+	    }                                                                                                                                      // CSBuildCodedReferenceList.cs:75
+	}                                                                                                                                          // CSBuildCodedReferenceList.cs:76
 	//- LocalClassDefs
 }

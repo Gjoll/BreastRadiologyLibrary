@@ -21,9 +21,9 @@ namespace BreastRadLib
 	public class AssociatedFeatures : ObservationBase, IObservationSectionFragment
 	{
 		//+ Fields
-		public MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; protected set; }                        // CSDefineObservation.cs:322
-		public MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; protected set; }                                            // CSDefineObservation.cs:322
-		public ObservedFeature_Accessor ObservedFeature { get ; protected set; }                                                                  // CSDefineObservation.cs:322
+		public MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; protected set; }                        // CSBuildCodedReferenceList.cs:120
+		public MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; protected set; }                                            // CSBuildCodedReferenceList.cs:120
+		public ObservedFeature_Accessor ObservedFeature { get ; protected set; }                                                                  // CSBuildCodedReferenceList.cs:120
 		//- Fields
 
 		/// <summary>
@@ -62,23 +62,23 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // CSDefineBase.cs:235
-			this.MGAbnormalityArchitecturalDistortion = new MGAbnormalityArchitecturalDistortion_Accessor(doc);                                      // CSDefineObservation.cs:325
-			this.MGAbnormalityCalcification = new MGAbnormalityCalcification_Accessor(doc);                                                          // CSDefineObservation.cs:325
-			this.ObservedFeature = new ObservedFeature_Accessor(doc);                                                                                // CSDefineObservation.cs:325
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // CSDefineBase.cs:217
+			this.MGAbnormalityArchitecturalDistortion = new MGAbnormalityArchitecturalDistortion_Accessor(doc);                                      // CSBuildCodedReferenceList.cs:123
+			this.MGAbnormalityCalcification = new MGAbnormalityCalcification_Accessor(doc);                                                          // CSBuildCodedReferenceList.cs:123
+			this.ObservedFeature = new ObservedFeature_Accessor(doc);                                                                                // CSBuildCodedReferenceList.cs:123
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 			//+ WriteCodeStart
-			this.ClearHasMembers();                                                                                                                  // CSDefineObservation.cs:289
+			this.ClearHasMember();                                                                                                                   // CSBuildCodedReferenceList.cs:87
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                          // CSDefineObservation.cs:328
-			this.WriteHasMember(this.MGAbnormalityCalcification);                                                                                    // CSDefineObservation.cs:328
-			this.WriteHasMember(this.ObservedFeature);                                                                                               // CSDefineObservation.cs:328
+			this.WriteHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                          // CSBuildCodedReferenceList.cs:126
+			this.WriteHasMember(this.MGAbnormalityCalcification);                                                                                    // CSBuildCodedReferenceList.cs:126
+			this.WriteHasMember(this.ObservedFeature);                                                                                               // CSBuildCodedReferenceList.cs:126
 			//- WriteCode
 		}
 
@@ -87,9 +87,9 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                           // CSDefineObservation.cs:331
-			this.ReadHasMember(this.MGAbnormalityCalcification);                                                                                     // CSDefineObservation.cs:331
-			this.ReadHasMember(this.ObservedFeature);                                                                                                // CSDefineObservation.cs:331
+			this.ReadHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                           // CSBuildCodedReferenceList.cs:129
+			this.ReadHasMember(this.MGAbnormalityCalcification);                                                                                     // CSBuildCodedReferenceList.cs:129
+			this.ReadHasMember(this.ObservedFeature);                                                                                                // CSBuildCodedReferenceList.cs:129
 			//- ReadCode
 		}
 

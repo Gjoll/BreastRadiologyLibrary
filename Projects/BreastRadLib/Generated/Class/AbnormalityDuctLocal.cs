@@ -33,7 +33,7 @@ namespace BreastRadLib.AbnormalityDuctLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public DuctType_Accessor(BreastRadiologyDocument doc) : base()                                                                         // CSDefineObservation.cs:77
+	    public DuctType_Accessor(BreastRadiologyDocument doc) : base("DuctType_Accessor")                                                      // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityDuctType"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

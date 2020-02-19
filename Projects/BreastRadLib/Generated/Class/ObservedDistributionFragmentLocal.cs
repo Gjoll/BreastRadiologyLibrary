@@ -51,7 +51,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsDistribution_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:77
+	    public ObsDistribution_Accessor(BreastRadiologyDocument doc) : base("ObsDistribution_Accessor")                                        // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsDistribution"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81
@@ -104,7 +104,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsDistRegionSize_Accessor(BreastRadiologyDocument doc) : base()                                                                // CSDefineObservation.cs:77
+	    public ObsDistRegionSize_Accessor(BreastRadiologyDocument doc) : base("ObsDistRegionSize_Accessor")                                    // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 3, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsSize"));  // CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

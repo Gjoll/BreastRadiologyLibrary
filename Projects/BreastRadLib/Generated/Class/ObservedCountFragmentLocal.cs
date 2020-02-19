@@ -38,7 +38,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsCount_Accessor(BreastRadiologyDocument doc) : base()                                                                         // CSDefineObservation.cs:77
+	    public ObsCount_Accessor(BreastRadiologyDocument doc) : base("ObsCount_Accessor")                                                      // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsCount")); // CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

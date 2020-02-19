@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BreastRadLib
 {
-    public static class Misc
+    public static class BLMisc
     {
         public static bool SameUrl(String url1, String url2)
         {

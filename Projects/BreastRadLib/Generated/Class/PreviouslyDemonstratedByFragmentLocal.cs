@@ -59,7 +59,7 @@ namespace BreastRadLib.PreviouslyDemonstratedByFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public PreviouslyDemonstratedBy_Accessor(BreastRadiologyDocument doc) : base()                                                         // CSDefineObservation.cs:77
+	    public PreviouslyDemonstratedBy_Accessor(BreastRadiologyDocument doc) : base("PreviouslyDemonstratedBy_Accessor")                      // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "prevDemBy"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81

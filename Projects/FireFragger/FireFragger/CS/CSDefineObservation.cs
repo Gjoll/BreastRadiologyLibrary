@@ -74,7 +74,7 @@ namespace FireFragger
                 .SummaryOpen()
                 .Summary($"Accessor class constructor")
                 .SummaryClose()
-                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
+                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
                 .OpenBrace()
                 .AppendCode($"this.Init(doc, {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
                 .DefineBlock(out CodeBlockNested constructorBlock)
@@ -223,122 +223,13 @@ namespace FireFragger
             }
         }
 
-        String DefineHasMembersLocalClass(ElementTreeSlice hasMemberSlice,
-            Int32 max,
-            Int32 min,
-            String propertyName,
-            String profileUrl)
-        {
-            String sliceName = hasMemberSlice.ElementDefinition.SliceName;
-            String propertyType = profileUrl.LastUriPart();
-
-            String className = $"{propertyName}_Accessor";
-            if (this.LocalClassDefs == null)
-                return className;
-
-            this.LocalClassDefs
-                .SummaryOpen()
-                .Summary($"Accessor class for ObservationhasMember slice '{sliceName}'")
-                .Summary($"[Fhir Element '{hasMemberSlice.ElementDefinition.ElementId}]'")
-                .SummaryClose()
-                ;
-
-            if (max == 1)
-            {
-                this.LocalClassDefs
-                    .AppendCode($"public class {className} : ObservationLocal.HasMemberSingle<{propertyType}>")
-                    .OpenBrace()
-                    .DefineBlock(out CodeBlockNested accessors)
-                    .SummaryOpen()
-                    .Summary($"Accessor HasMember slice {className} class constructor")
-                    .SummaryClose()
-                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
-                    .OpenBrace()
-                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
-                    .CloseBrace()
-                    .CloseBrace()
-                    ;
-            }
-            else
-            {
-                this.LocalClassDefs
-                    .AppendCode($"public class {className} : ObservationLocal.HasMemberMultiple<{propertyType}>")
-                    .OpenBrace()
-                    .DefineBlock(out CodeBlockNested accessors)
-                    .SummaryOpen()
-                    .Summary($"Accessor HasMember slice {className} class constructor")
-                    .SummaryClose()
-                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
-                    .OpenBrace()
-                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
-                    .CloseBrace()
-                    .CloseBrace()
-                    ;
-            }
-            return className;
-        }
-
         void DefineHasMembers()
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
                 return;
-
-            if (this.fragBase.ClassEditor != null)
-            {
-                this.ClassWriteCodeStart
-                    ?.AppendCode($"this.ClearHasMembers();")
-                    ;
-            }
-
-            foreach (ElementTreeSlice hasMemberSlice in hasMemberNode.Slices.Skip(1))
-            {
-                String sliceName = hasMemberSlice.ElementDefinition.SliceName;
-
-                ElementDefinition sliceDef = hasMemberSlice.ElementDefinition;
-                Int32 max = ToMax(sliceDef.Max);
-                Int32 min = sliceDef.Min.Value;
-                String propertyName = sliceName.ToMachineName();
-
-                if (sliceDef.Type.Count != 1)
-                    throw new Exception($"Error processing hasMember slice {sliceName}. Expected single type. Got {sliceDef.Type.Count}");
-                if (sliceDef.Type[0].Code != "Reference")
-                    throw new Exception($"Error processing hasMember slice {sliceName}. Expected type Reference. Got {sliceDef.Type[0].Code}");
-                if (sliceDef.Type[0].TargetProfile.Count() != 1)
-                    throw new Exception($"Error processing hasMember slice {sliceName}. Expected Target count of 1. Got {sliceDef.Type[0].TargetProfile.Count()}");
-                String profileUrl = sliceDef.Type[0].TargetProfile.First();
-
-                String hasMemberClassName =
-                    DefineHasMembersLocalClass(hasMemberSlice, max, min, propertyName, profileUrl);
-
-                String interfaceName = CSBuilder.InterfaceName(fragBase);
-                String className = CSBuilder.ClassName(fragBase);
-                this.InterfaceFields
-                    .AppendCode($"{hasMemberClassName} {propertyName} {{ get ; }}")
-                    ;
-
-                if (this.fragBase.ClassEditor != null)
-                {
-                    this.ClassFields
-                        .AppendCode($"public {hasMemberClassName} {propertyName} {{ get ; protected set; }}")
-                        ;
-                    this.ClassConstructor
-                        .AppendCode($"this.{propertyName} = new {hasMemberClassName}(doc);")
-                        ;
-                    this.ClassWriteCode
-                        .AppendCode($"this.WriteHasMember(this.{propertyName});")
-                        ;
-                    this.ClassReadCode
-                        .AppendCode($"this.ReadHasMember(this.{propertyName});")
-                        ;
-                }
-            }
+            CSBuildCodedReferenceList bcr = new CSBuildCodedReferenceList(this.csBuilder, this.fragBase, hasMemberNode);
+            bcr.Define();
         }
-
-
-
-
-
-
 
         public override void Build()
         {

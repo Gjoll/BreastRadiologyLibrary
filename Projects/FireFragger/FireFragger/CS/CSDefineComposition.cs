@@ -49,7 +49,7 @@ namespace FireFragger
                 .SummaryOpen()
                 .Summary($"Accessor class constructor")
                 .SummaryClose()
-                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base()")
+                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
                 .OpenBrace()
                 .AppendCode($"this.Init(doc, \"{title}\", {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
                 .DefineBlock(out CodeBlockNested constructorBlock)

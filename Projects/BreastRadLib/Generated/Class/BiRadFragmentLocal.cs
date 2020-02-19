@@ -33,7 +33,7 @@ namespace BreastRadLib.BiRadFragmentLocal
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public BiRadsAssessmentCategory_Accessor(BreastRadiologyDocument doc) : base()                                                         // CSDefineObservation.cs:77
+	    public BiRadsAssessmentCategory_Accessor(BreastRadiologyDocument doc) : base("BiRadsAssessmentCategory_Accessor")                      // CSDefineObservation.cs:77
 	    {                                                                                                                                      // CSDefineObservation.cs:78
 	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "targetBiRads"));// CSDefineObservation.cs:79
 	    }                                                                                                                                      // CSDefineObservation.cs:81
