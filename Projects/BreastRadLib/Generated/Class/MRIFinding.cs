@@ -59,8 +59,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                                 // CSDefineBase.cs:197
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                                 // CSDefineBase.cs:182
 			//- Constructor
 		}
 

@@ -1,4 +1,5 @@
 ﻿using FhirKhit.Tools;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
@@ -74,5 +75,19 @@ namespace FireFragger
             return true;
         }
 
+        protected String[] References(ElementTreeNode entryNode)
+        {
+            List<ElementDefinition.TypeRefComponent> types = entryNode.ElementDefinition.Type;
+            if (types.Count != 1)
+                throw new Exception($"SingleReference. Invalid type count. Epected 1, got {types.Count}.");
+
+            ElementDefinition.TypeRefComponent type = types[0];
+            if (type.Code != "Reference")
+                throw new Exception($"SingleReference. Invalid type code. Expected 'Reference', got {type.Code}.");
+            List<String> retVal = new List<string>();
+            foreach (String targetProfile in type.TargetProfile)
+                retVal.Add(targetProfile);
+            return retVal.ToArray();
+        }
     }
 }

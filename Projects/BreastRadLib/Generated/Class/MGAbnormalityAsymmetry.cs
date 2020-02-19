@@ -84,8 +84,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                                     // CSDefineBase.cs:197
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                                     // CSDefineBase.cs:182
 			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSBuildMemberListCodedValue.cs:217
 			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSBuildMemberListCodedValue.cs:217
 			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSBuildMemberListCodedValue.cs:217

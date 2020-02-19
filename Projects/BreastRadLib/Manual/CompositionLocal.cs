@@ -9,35 +9,4 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadLib.CompositionLocal
 {
-    /// <summary>
-    /// Base class for all section accessors
-    /// </summary>
-    public class SectionBase<BaseType> : MemberList<BaseType>
-            where BaseType : ResourceBase, new()
-    {
-        /// <summary>
-        /// Section Title
-        /// </summary>
-        public String Title { get; protected set; }
-
-        /// <summary>
-        /// Section coding
-        /// </summary>
-        public Coding Code { get; protected set; }
-
-        protected SectionBase(String listName) : base(listName)
-        {
-        }
-
-        protected void Init(BreastRadiologyDocument doc,
-            String title,
-            Int32 min,
-            Int32 max,
-            Coding code)
-        {
-            base.Init(doc, min, max);
-            this.Title = title;
-            this.Code = code;
-        }
-    }
 }

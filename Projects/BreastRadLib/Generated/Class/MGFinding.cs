@@ -72,8 +72,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // CSDefineBase.cs:197
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // CSDefineBase.cs:182
 			this.AbnormalityCyst = new AbnormalityCyst_Accessor(doc);                                                                                // CSBuildMemberListReference.cs:123
 			this.AbnormalityDuct = new AbnormalityDuct_Accessor(doc);                                                                                // CSBuildMemberListReference.cs:123
 			this.AbnormalityForeignObject = new AbnormalityForeignObject_Accessor(doc);                                                              // CSBuildMemberListReference.cs:123
