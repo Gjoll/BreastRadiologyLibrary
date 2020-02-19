@@ -20,10 +20,10 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, IFindingBreastFragment
 	{
 		//+ Fields
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSBuildCodedReferenceList.cs:126
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSBuildCodedReferenceList.cs:126
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSBuildCodedReferenceList.cs:126
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSBuildCodedReferenceList.cs:126
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSBuildMemberListReference.cs:120
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSBuildMemberListReference.cs:120
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSBuildMemberListReference.cs:120
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSBuildMemberListReference.cs:120
 		//- Fields
 
 		/// <summary>
@@ -64,10 +64,10 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // CSDefineBase.cs:217
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSBuildCodedReferenceList.cs:129
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSBuildCodedReferenceList.cs:129
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSBuildCodedReferenceList.cs:129
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSBuildCodedReferenceList.cs:129
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSBuildMemberListReference.cs:123
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
 			//- Constructor
 		}
 
@@ -76,10 +76,10 @@ namespace BreastRadLib
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // CSBuildCodedReferenceList.cs:132
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSBuildCodedReferenceList.cs:132
-			this.WriteHasMember(this.NMFinding);                                                                                                     // CSBuildCodedReferenceList.cs:132
-			this.WriteHasMember(this.USFinding);                                                                                                     // CSBuildCodedReferenceList.cs:132
+			this.WriteHasMember(this.MGFinding);                                                                                                     // CSBuildMemberListReference.cs:126
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSBuildMemberListReference.cs:126
+			this.WriteHasMember(this.NMFinding);                                                                                                     // CSBuildMemberListReference.cs:126
+			this.WriteHasMember(this.USFinding);                                                                                                     // CSBuildMemberListReference.cs:126
 			//- WriteCode
 		}
 
@@ -88,10 +88,10 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // CSBuildCodedReferenceList.cs:135
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSBuildCodedReferenceList.cs:135
-			this.ReadHasMember(this.NMFinding);                                                                                                      // CSBuildCodedReferenceList.cs:135
-			this.ReadHasMember(this.USFinding);                                                                                                      // CSBuildCodedReferenceList.cs:135
+			this.ReadHasMember(this.MGFinding);                                                                                                      // CSBuildMemberListReference.cs:129
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSBuildMemberListReference.cs:129
+			this.ReadHasMember(this.NMFinding);                                                                                                      // CSBuildMemberListReference.cs:129
+			this.ReadHasMember(this.USFinding);                                                                                                      // CSBuildMemberListReference.cs:129
 			//- ReadCode
 		}
 

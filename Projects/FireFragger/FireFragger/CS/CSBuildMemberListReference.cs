@@ -12,12 +12,12 @@ namespace FireFragger
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class CSBuildMemberListCodedReference : CSCodeBlockDefinitions
+    internal class CSBuildMemberListReference : CSCodeBlockDefinitions
     {
         ElementTreeNode memberNode;
         String MemberName => memberNode.Path.LastPathPart().ToMachineName();
 
-        public CSBuildMemberListCodedReference(CSBuilder csBuilder,
+        public CSBuildMemberListReference(CSBuilder csBuilder,
             SDInfo fragBase,
             ElementTreeNode memberNode) : base(csBuilder, fragBase)
         {
@@ -25,7 +25,6 @@ namespace FireFragger
         }
 
         String DefineLocalClass(ElementTreeSlice memberSlice,
-            String title,
             Int32 max,
             Int32 min,
             String propertyName,
@@ -56,7 +55,7 @@ namespace FireFragger
                     .SummaryClose()
                     .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
                     .OpenBrace()
-                    .AppendCode($"this.Init(doc, \"{title}\", {min}, {max}, \"{profileUrl}\");")
+                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
                     .CloseBrace()
                     .CloseBrace()
                     ;
@@ -72,17 +71,12 @@ namespace FireFragger
                     .SummaryClose()
                     .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
                     .OpenBrace()
-                    .AppendCode($"this.Init(doc, \"{title}\", {min}, {max}, \"{profileUrl}\");")
+                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
                     .CloseBrace()
                     .CloseBrace()
                     ;
             }
             return className;
-        }
-
-        protected virtual String GetTitle(ElementTreeSlice memberSlice)
-        {
-            return "";
         }
 
         public void Define()
@@ -112,7 +106,7 @@ namespace FireFragger
                 String profileUrl = sliceDef.Type[0].TargetProfile.First();
 
                 String memberClassName =
-                    DefineLocalClass(memberSlice, GetTitle(memberSlice), max, min, propertyName, profileUrl);
+                    DefineLocalClass(memberSlice, max, min, propertyName, profileUrl);
 
                 String interfaceName = CSBuilder.InterfaceName(fragBase);
                 String className = CSBuilder.ClassName(fragBase);

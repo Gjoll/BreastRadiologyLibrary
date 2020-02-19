@@ -36,7 +36,7 @@ namespace BreastRadLib
 	public class AbnormalityCyst : ObservationBase, IObservationLeafFragment, ITumorSatelliteFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment, IAssociatedFeaturesHasMemberFragment
 	{
 		//+ Fields
-		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // CSBuildCodedReferenceList.cs:126
+		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // CSBuildMemberListReference.cs:120
 		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:211
 		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:211
 		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:211
@@ -50,8 +50,8 @@ namespace BreastRadLib
 		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:211
 		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:211
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:211
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildCodedReferenceList.cs:126
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildCodedReferenceList.cs:126
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListReference.cs:120
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildMemberListReference.cs:120
 		public CystType_Accessor CystType { get ; protected set; }                                                                                // CSDefineObservation.cs:211
 		//- Fields
 
@@ -93,7 +93,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                                            // CSDefineBase.cs:217
-			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // CSBuildCodedReferenceList.cs:129
+			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // CSBuildMemberListReference.cs:123
 			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:214
 			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:214
 			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:214
@@ -107,8 +107,8 @@ namespace BreastRadLib
 			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:214
 			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:214
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:214
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildCodedReferenceList.cs:129
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildCodedReferenceList.cs:129
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListReference.cs:123
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildMemberListReference.cs:123
 			this.CystType = new CystType_Accessor(doc);                                                                                              // CSDefineObservation.cs:214
 			//- Constructor
 		}
@@ -119,7 +119,7 @@ namespace BreastRadLib
 			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:173
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.TumorSatellite);                                                                                                // CSBuildCodedReferenceList.cs:132
+			this.WriteHasMember(this.TumorSatellite);                                                                                                // CSBuildMemberListReference.cs:126
 			this.WriteComponent(this.ObsChanges);                                                                                                    // CSDefineObservation.cs:217
 			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSDefineObservation.cs:217
 			this.WriteComponent(this.Orientation);                                                                                                   // CSDefineObservation.cs:217
@@ -133,8 +133,8 @@ namespace BreastRadLib
 			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSDefineObservation.cs:217
 			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:217
 			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:217
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildCodedReferenceList.cs:132
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildCodedReferenceList.cs:132
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListReference.cs:126
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildMemberListReference.cs:126
 			this.WriteComponent(this.CystType);                                                                                                      // CSDefineObservation.cs:217
 			//- WriteCode
 		}
@@ -144,7 +144,7 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.TumorSatellite);                                                                                                 // CSBuildCodedReferenceList.cs:135
+			this.ReadHasMember(this.TumorSatellite);                                                                                                 // CSBuildMemberListReference.cs:129
 			this.ReadComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:220
 			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:220
 			this.ReadComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:220
@@ -158,8 +158,8 @@ namespace BreastRadLib
 			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:220
 			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:220
 			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:220
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildCodedReferenceList.cs:135
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildCodedReferenceList.cs:135
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListReference.cs:129
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildMemberListReference.cs:129
 			this.ReadComponent(this.CystType);                                                                                                       // CSDefineObservation.cs:220
 			//- ReadCode
 		}

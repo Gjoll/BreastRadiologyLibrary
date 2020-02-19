@@ -16,21 +16,18 @@ namespace BreastRadLib
             where BaseType : ObservationBase
     {
         public String ProfileUrl { get; private set; }
-        public String Title { get; private set; }
 
         public MemberListCodedReferenceBase(String listName) : base(listName)
         {
         }
 
         public void Init(BreastRadiologyDocument doc,
-            string title,
             Int32 min,
             Int32 max,
             String profileUrl)
         {
             this.ProfileUrl = profileUrl;
             base.Init(doc, min, max);
-            this.Title = title;
         }
     }
 

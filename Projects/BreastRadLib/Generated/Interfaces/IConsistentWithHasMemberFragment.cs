@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // CSBuildCodedReferenceList.cs:120
+		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // CSBuildMemberListReference.cs:114
 		//- Fields
 
 		//+ Methods
