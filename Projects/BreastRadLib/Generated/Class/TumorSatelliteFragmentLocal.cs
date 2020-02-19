@@ -15,7 +15,7 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	/// Accessor class for slice 'tumorSatellite'
 	/// [Fhir Element 'Observation.hasMember:tumorSatellite]'
 	/// </summary>
-	public class TumorSatellite_Accessor : MemberListCodedReferenceMultiple<TumorSatellite>                                                    // CSBuildMemberListReference.cs:66
+	public class TumorSatellite_Accessor : MemberListReferenceMultiple<TumorSatellite>                                                         // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// TumorSatellite_Accessor class constructor

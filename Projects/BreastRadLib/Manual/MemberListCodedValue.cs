@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -10,14 +10,14 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
     /// <summary>
-    /// Base class for all CodedReference accessors
+    /// Base class for all CodedValue accessors
     /// </summary>
-    public class MemberListReferenceBase<BaseType> : MemberList<BaseType>
+    public class MemberListCodedValueBase<BaseType> : MemberList<BaseType>
             where BaseType : ObservationBase
     {
         public String ProfileUrl { get; private set; }
 
-        public MemberListReferenceBase(String listName) : base(listName)
+        public MemberListCodedValueBase(String listName) : base(listName)
         {
         }
 
@@ -32,9 +32,9 @@ namespace BreastRadLib
     }
 
     /// <summary>
-    /// Base class for all CodedReference single accessors
+    /// Base class for all CodedValue single accessors
     /// </summary>
-    public class MemberListReferenceSingle<BaseType> : MemberListReferenceBase<BaseType>
+    public class MemberListCodedValueSingle<BaseType> : MemberListCodedValueBase<BaseType>
             where BaseType : ObservationBase, new()
     {
         /// <summary>
@@ -62,15 +62,15 @@ namespace BreastRadLib
         }
 
 
-        public MemberListReferenceSingle(String listName) : base(listName)
+        public MemberListCodedValueSingle(String listName) : base(listName)
         {
         }
     }
 
     /// <summary>
-    /// Base class for all CodedReference multiple accessors
+    /// Base class for all CodedValue multiple accessors
     /// </summary>
-    public class MemberListReferenceMultiple<BaseType> : MemberListReferenceBase<BaseType>
+    public class MemberListCodedValueMultiple<BaseType> : MemberListCodedValueBase<BaseType>
             where BaseType : ObservationBase, new()
     {
         public IEnumerable<BaseType> All() => this.items;
@@ -87,7 +87,7 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public MemberListReferenceMultiple(String listName) : base(listName)
+        public MemberListCodedValueMultiple(String listName) : base(listName)
         {
         }
     }

@@ -15,7 +15,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'abnormalityCyst'
 	/// [Fhir Element 'Observation.hasMember:abnormalityCyst]'
 	/// </summary>
-	public class AbnormalityCyst_Accessor : MemberListCodedReferenceMultiple<AbnormalityCyst>                                                  // CSBuildMemberListReference.cs:66
+	public class AbnormalityCyst_Accessor : MemberListReferenceMultiple<AbnormalityCyst>                                                       // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityCyst_Accessor class constructor
@@ -29,7 +29,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'abnormalityDuct'
 	/// [Fhir Element 'Observation.hasMember:abnormalityDuct]'
 	/// </summary>
-	public class AbnormalityDuct_Accessor : MemberListCodedReferenceMultiple<AbnormalityDuct>                                                  // CSBuildMemberListReference.cs:66
+	public class AbnormalityDuct_Accessor : MemberListReferenceMultiple<AbnormalityDuct>                                                       // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityDuct_Accessor class constructor
@@ -43,7 +43,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'abnormalityForeignObject'
 	/// [Fhir Element 'Observation.hasMember:abnormalityForeignObject]'
 	/// </summary>
-	public class AbnormalityForeignObject_Accessor : MemberListCodedReferenceMultiple<AbnormalityForeignObject>                                // CSBuildMemberListReference.cs:66
+	public class AbnormalityForeignObject_Accessor : MemberListReferenceMultiple<AbnormalityForeignObject>                                     // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityForeignObject_Accessor class constructor
@@ -57,7 +57,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'abnormalityLymphNode'
 	/// [Fhir Element 'Observation.hasMember:abnormalityLymphNode]'
 	/// </summary>
-	public class AbnormalityLymphNode_Accessor : MemberListCodedReferenceMultiple<AbnormalityLymphNode>                                        // CSBuildMemberListReference.cs:66
+	public class AbnormalityLymphNode_Accessor : MemberListReferenceMultiple<AbnormalityLymphNode>                                             // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityLymphNode_Accessor class constructor
@@ -71,7 +71,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'abnormalityMass'
 	/// [Fhir Element 'Observation.hasMember:abnormalityMass]'
 	/// </summary>
-	public class AbnormalityMass_Accessor : MemberListCodedReferenceMultiple<AbnormalityMass>                                                  // CSBuildMemberListReference.cs:66
+	public class AbnormalityMass_Accessor : MemberListReferenceMultiple<AbnormalityMass>                                                       // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityMass_Accessor class constructor
@@ -85,7 +85,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'associatedFeatures'
 	/// [Fhir Element 'Observation.hasMember:associatedFeatures]'
 	/// </summary>
-	public class AssociatedFeatures_Accessor : MemberListCodedReferenceMultiple<AssociatedFeatures>                                            // CSBuildMemberListReference.cs:66
+	public class AssociatedFeatures_Accessor : MemberListReferenceMultiple<AssociatedFeatures>                                                 // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AssociatedFeatures_Accessor class constructor
@@ -99,7 +99,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'abnormalityFibroadenoma'
 	/// [Fhir Element 'Observation.hasMember:abnormalityFibroadenoma]'
 	/// </summary>
-	public class AbnormalityFibroadenoma_Accessor : MemberListCodedReferenceMultiple<AbnormalityFibroadenoma>                                  // CSBuildMemberListReference.cs:66
+	public class AbnormalityFibroadenoma_Accessor : MemberListReferenceMultiple<AbnormalityFibroadenoma>                                       // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityFibroadenoma_Accessor class constructor
@@ -113,7 +113,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListCodedReferenceMultiple<MGAbnormalityArchitecturalDistortion>        // CSBuildMemberListReference.cs:66
+	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListReferenceMultiple<MGAbnormalityArchitecturalDistortion>             // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityArchitecturalDistortion_Accessor class constructor
@@ -127,7 +127,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'mGAbnormalityAsymmetry'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityAsymmetry]'
 	/// </summary>
-	public class MGAbnormalityAsymmetry_Accessor : MemberListCodedReferenceMultiple<MGAbnormalityAsymmetry>                                    // CSBuildMemberListReference.cs:66
+	public class MGAbnormalityAsymmetry_Accessor : MemberListReferenceMultiple<MGAbnormalityAsymmetry>                                         // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityAsymmetry_Accessor class constructor
@@ -141,7 +141,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : MemberListCodedReferenceMultiple<MGAbnormalityCalcification>                            // CSBuildMemberListReference.cs:66
+	public class MGAbnormalityCalcification_Accessor : MemberListReferenceMultiple<MGAbnormalityCalcification>                                 // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityCalcification_Accessor class constructor
@@ -155,7 +155,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'mGAbnormalityDensity'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityDensity]'
 	/// </summary>
-	public class MGAbnormalityDensity_Accessor : MemberListCodedReferenceMultiple<MGAbnormalityDensity>                                        // CSBuildMemberListReference.cs:66
+	public class MGAbnormalityDensity_Accessor : MemberListReferenceMultiple<MGAbnormalityDensity>                                             // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityDensity_Accessor class constructor
@@ -169,7 +169,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'mGAbnormalityFatNecrosis'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityFatNecrosis]'
 	/// </summary>
-	public class MGAbnormalityFatNecrosis_Accessor : MemberListCodedReferenceMultiple<MGAbnormalityFatNecrosis>                                // CSBuildMemberListReference.cs:66
+	public class MGAbnormalityFatNecrosis_Accessor : MemberListReferenceMultiple<MGAbnormalityFatNecrosis>                                     // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityFatNecrosis_Accessor class constructor
@@ -183,7 +183,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'mGBreastDensity'
 	/// [Fhir Element 'Observation.hasMember:mGBreastDensity]'
 	/// </summary>
-	public class MGBreastDensity_Accessor : MemberListCodedReferenceSingle<MGBreastDensity>                                                    // CSBuildMemberListReference.cs:50
+	public class MGBreastDensity_Accessor : MemberListReferenceSingle<MGBreastDensity>                                                         // CSBuildMemberListReference.cs:50
 	{                                                                                                                                          // CSBuildMemberListReference.cs:51
 	    /// <summary>
 	    /// MGBreastDensity_Accessor class constructor

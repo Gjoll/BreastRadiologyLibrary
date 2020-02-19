@@ -15,7 +15,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListCodedReferenceMultiple<MGAbnormalityArchitecturalDistortion>        // CSBuildMemberListReference.cs:66
+	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListReferenceMultiple<MGAbnormalityArchitecturalDistortion>             // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityArchitecturalDistortion_Accessor class constructor
@@ -29,7 +29,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : MemberListCodedReferenceMultiple<MGAbnormalityCalcification>                            // CSBuildMemberListReference.cs:66
+	public class MGAbnormalityCalcification_Accessor : MemberListReferenceMultiple<MGAbnormalityCalcification>                                 // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityCalcification_Accessor class constructor
@@ -43,7 +43,7 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for slice 'observedFeature'
 	/// [Fhir Element 'Observation.hasMember:observedFeature]'
 	/// </summary>
-	public class ObservedFeature_Accessor : MemberListCodedReferenceMultiple<ObservedFeature>                                                  // CSBuildMemberListReference.cs:66
+	public class ObservedFeature_Accessor : MemberListReferenceMultiple<ObservedFeature>                                                       // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// ObservedFeature_Accessor class constructor

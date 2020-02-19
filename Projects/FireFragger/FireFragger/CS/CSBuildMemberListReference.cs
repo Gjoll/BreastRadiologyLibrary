@@ -47,7 +47,7 @@ namespace FireFragger
             if (max == 1)
             {
                 this.LocalClassDefs
-                    .AppendCode($"public class {className} : MemberListCodedReferenceSingle<{propertyType}>")
+                    .AppendCode($"public class {className} : MemberListReferenceSingle<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
                     .SummaryOpen()
@@ -63,7 +63,7 @@ namespace FireFragger
             else
             {
                 this.LocalClassDefs
-                    .AppendCode($"public class {className} : MemberListCodedReferenceMultiple<{propertyType}>")
+                    .AppendCode($"public class {className} : MemberListReferenceMultiple<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
                     .SummaryOpen()

@@ -15,7 +15,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for slice 'mGFinding'
 	/// [Fhir Element 'Observation.hasMember:mGFinding]'
 	/// </summary>
-	public class MGFinding_Accessor : MemberListCodedReferenceMultiple<MGFinding>                                                              // CSBuildMemberListReference.cs:66
+	public class MGFinding_Accessor : MemberListReferenceMultiple<MGFinding>                                                                   // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGFinding_Accessor class constructor
@@ -29,7 +29,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for slice 'mRIFinding'
 	/// [Fhir Element 'Observation.hasMember:mRIFinding]'
 	/// </summary>
-	public class MRIFinding_Accessor : MemberListCodedReferenceMultiple<MRIFinding>                                                            // CSBuildMemberListReference.cs:66
+	public class MRIFinding_Accessor : MemberListReferenceMultiple<MRIFinding>                                                                 // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MRIFinding_Accessor class constructor
@@ -43,7 +43,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for slice 'nMFinding'
 	/// [Fhir Element 'Observation.hasMember:nMFinding]'
 	/// </summary>
-	public class NMFinding_Accessor : MemberListCodedReferenceMultiple<NMFinding>                                                              // CSBuildMemberListReference.cs:66
+	public class NMFinding_Accessor : MemberListReferenceMultiple<NMFinding>                                                                   // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// NMFinding_Accessor class constructor
@@ -57,7 +57,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// Accessor class for slice 'uSFinding'
 	/// [Fhir Element 'Observation.hasMember:uSFinding]'
 	/// </summary>
-	public class USFinding_Accessor : MemberListCodedReferenceMultiple<USFinding>                                                              // CSBuildMemberListReference.cs:66
+	public class USFinding_Accessor : MemberListReferenceMultiple<USFinding>                                                                   // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// USFinding_Accessor class constructor

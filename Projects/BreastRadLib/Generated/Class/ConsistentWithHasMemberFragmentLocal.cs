@@ -15,7 +15,7 @@ namespace BreastRadLib.ConsistentWithHasMemberFragmentLocal
 	/// Accessor class for slice 'consistentWith'
 	/// [Fhir Element 'Observation.hasMember:consistentWith]'
 	/// </summary>
-	public class ConsistentWith_Accessor : MemberListCodedReferenceMultiple<ConsistentWith>                                                    // CSBuildMemberListReference.cs:66
+	public class ConsistentWith_Accessor : MemberListReferenceMultiple<ConsistentWith>                                                         // CSBuildMemberListReference.cs:66
 	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// ConsistentWith_Accessor class constructor

@@ -15,7 +15,7 @@ namespace BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal
 	/// Accessor class for slice 'associatedFeatures'
 	/// [Fhir Element 'Observation.hasMember:associatedFeatures]'
 	/// </summary>
-	public class AssociatedFeatures_Accessor : MemberListCodedReferenceSingle<AssociatedFeatures>                                              // CSBuildMemberListReference.cs:50
+	public class AssociatedFeatures_Accessor : MemberListReferenceSingle<AssociatedFeatures>                                                   // CSBuildMemberListReference.cs:50
 	{                                                                                                                                          // CSBuildMemberListReference.cs:51
 	    /// <summary>
 	    /// AssociatedFeatures_Accessor class constructor
