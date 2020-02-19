@@ -34,7 +34,7 @@ namespace BreastRadLib
             this.Resource.HasMember.Clear();
         }
 
-        protected void WriteHasMember<BaseType>(CodedReferenceBase<BaseType> hasMemberList)
+        protected void WriteHasMember<BaseType>(MemberListCodedReferenceBase<BaseType> hasMemberList)
              where BaseType : ObservationBase
         {
             hasMemberList.Validate();
@@ -48,7 +48,7 @@ namespace BreastRadLib
             }
         }
 
-        protected void ReadHasMember<BaseType>(CodedReferenceBase<BaseType> hasMemberList)
+        protected void ReadHasMember<BaseType>(MemberListCodedReferenceBase<BaseType> hasMemberList)
              where BaseType : ObservationBase, new()
         {
             foreach (ResourceReference resRef in this.Resource.HasMember)

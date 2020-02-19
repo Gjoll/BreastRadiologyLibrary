@@ -48,8 +48,8 @@ namespace BreastRadLib
 		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:211
 		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:211
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:211
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildCodedReferenceList.cs:120
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildCodedReferenceList.cs:120
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildCodedReferenceList.cs:126
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildCodedReferenceList.cs:126
 		//- Fields
 
 		/// <summary>
@@ -103,8 +103,8 @@ namespace BreastRadLib
 			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:214
 			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:214
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:214
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildCodedReferenceList.cs:123
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildCodedReferenceList.cs:123
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildCodedReferenceList.cs:129
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildCodedReferenceList.cs:129
 			//- Constructor
 		}
 
@@ -127,8 +127,8 @@ namespace BreastRadLib
 			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:217
 			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:217
 			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:217
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildCodedReferenceList.cs:126
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildCodedReferenceList.cs:126
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildCodedReferenceList.cs:132
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildCodedReferenceList.cs:132
 			//- WriteCode
 		}
 
@@ -150,8 +150,8 @@ namespace BreastRadLib
 			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:220
 			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:220
 			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:220
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildCodedReferenceList.cs:129
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildCodedReferenceList.cs:129
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildCodedReferenceList.cs:135
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildCodedReferenceList.cs:135
 			//- ReadCode
 		}
 

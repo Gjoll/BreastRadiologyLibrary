@@ -1,17 +1,17 @@
 		//+ Fields
-		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // CSBuildCodedReferenceList.cs:120
+		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // CSBuildCodedReferenceList.cs:126
 		//- Fields
 
 			//+ Constructor
-			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // CSBuildCodedReferenceList.cs:123
+			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // CSBuildCodedReferenceList.cs:129
 			//- Constructor
 
 			//+ WriteCode
-			this.WriteHasMember(this.TumorSatellite);                                                                                                // CSBuildCodedReferenceList.cs:126
+			this.WriteHasMember(this.TumorSatellite);                                                                                                // CSBuildCodedReferenceList.cs:132
 			//- WriteCode
 
 			//+ ReadCode
-			this.ReadHasMember(this.TumorSatellite);                                                                                                 // CSBuildCodedReferenceList.cs:129
+			this.ReadHasMember(this.TumorSatellite);                                                                                                 // CSBuildCodedReferenceList.cs:135
 			//- ReadCode
 
 			//+ Methods

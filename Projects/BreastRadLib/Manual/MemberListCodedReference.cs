@@ -12,29 +12,32 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference accessors
     /// </summary>
-    public class CodedReferenceBase<BaseType> : MemberList<BaseType>
+    public class MemberListCodedReferenceBase<BaseType> : MemberList<BaseType>
             where BaseType : ObservationBase
     {
         public String ProfileUrl { get; private set; }
+        public String Title { get; private set; }
 
-        public CodedReferenceBase(String listName) : base(listName)
+        public MemberListCodedReferenceBase(String listName) : base(listName)
         {
         }
 
         public void Init(BreastRadiologyDocument doc,
-                Int32 min,
-                Int32 max,
-                String profileUrl)
+            string title,
+            Int32 min,
+            Int32 max,
+            String profileUrl)
         {
             this.ProfileUrl = profileUrl;
             base.Init(doc, min, max);
+            this.Title = title;
         }
     }
 
     /// <summary>
     /// Base class for all CodedReference single accessors
     /// </summary>
-    public class CodedReferenceSingle<BaseType> : CodedReferenceBase<BaseType>
+    public class MemberListCodedReferenceSingle<BaseType> : MemberListCodedReferenceBase<BaseType>
             where BaseType : ObservationBase, new()
     {
         /// <summary>
@@ -62,7 +65,7 @@ namespace BreastRadLib
         }
 
 
-        public CodedReferenceSingle(String listName) : base(listName)
+        public MemberListCodedReferenceSingle(String listName) : base(listName)
         {
         }
     }
@@ -70,7 +73,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference multiple accessors
     /// </summary>
-    public class CodedReferenceMultiple<BaseType> : CodedReferenceBase<BaseType>
+    public class MemberListCodedReferenceMultiple<BaseType> : MemberListCodedReferenceBase<BaseType>
             where BaseType : ObservationBase, new()
     {
         public IEnumerable<BaseType> All() => this.items;
@@ -87,39 +90,8 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public CodedReferenceMultiple(String listName) : base(listName)
+        public MemberListCodedReferenceMultiple(String listName) : base(listName)
         {
-        }
-    }
-
-    /// <summary>
-    /// Base class for all component accessors
-    /// </summary>
-    public class ComponentBase<BaseType> : MemberList<BaseType>
-        where BaseType : Element
-    {
-        /// <summary>
-        /// Section coding
-        /// </summary>
-        public Coding Code { get; protected set; }
-
-        protected ComponentBase(String listName) : base(listName)
-        {
-        }
-
-        protected void Init(BreastRadiologyDocument doc,
-            Int32 min,
-            Int32 max,
-            Coding code)
-        {
-            base.Init(doc, min, max);
-            this.Code = code;
-        }
-
-        protected void SetFirst(BaseType value)
-        {
-            this.items.Clear();
-            this.items.Add(value);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSBuildCodedReferenceList.cs:114
+		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSBuildCodedReferenceList.cs:120
 		//- Fields
 
 		//+ Methods

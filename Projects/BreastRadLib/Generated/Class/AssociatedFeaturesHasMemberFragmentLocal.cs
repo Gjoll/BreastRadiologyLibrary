@@ -15,15 +15,15 @@ namespace BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal
 	/// Accessor class for slice 'associatedFeatures'
 	/// [Fhir Element 'Observation.hasMember:associatedFeatures]'
 	/// </summary>
-	public class AssociatedFeatures_Accessor : CodedReferenceSingle<AssociatedFeatures>                                                        // CSBuildCodedReferenceList.cs:50
-	{                                                                                                                                          // CSBuildCodedReferenceList.cs:51
+	public class AssociatedFeatures_Accessor : MemberListCodedReferenceSingle<AssociatedFeatures>                                              // CSBuildCodedReferenceList.cs:51
+	{                                                                                                                                          // CSBuildCodedReferenceList.cs:52
 	    /// <summary>
 	    /// AssociatedFeatures_Accessor class constructor
 	    /// </summary>
-	    public AssociatedFeatures_Accessor(BreastRadiologyDocument doc) : base("AssociatedFeatures_Accessor")                                  // CSBuildCodedReferenceList.cs:56
-	    {                                                                                                                                      // CSBuildCodedReferenceList.cs:57
-	        this.Init(doc, 0, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                            // CSBuildCodedReferenceList.cs:58
-	    }                                                                                                                                      // CSBuildCodedReferenceList.cs:59
-	}                                                                                                                                          // CSBuildCodedReferenceList.cs:60
+	    public AssociatedFeatures_Accessor(BreastRadiologyDocument doc) : base("AssociatedFeatures_Accessor")                                  // CSBuildCodedReferenceList.cs:57
+	    {                                                                                                                                      // CSBuildCodedReferenceList.cs:58
+	        this.Init(doc, "", 0, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                        // CSBuildCodedReferenceList.cs:59
+	    }                                                                                                                                      // CSBuildCodedReferenceList.cs:60
+	}                                                                                                                                          // CSBuildCodedReferenceList.cs:61
 	//- LocalClassDefs
 }
