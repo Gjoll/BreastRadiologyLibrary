@@ -1,17 +1,17 @@
 		//+ Fields
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:211
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSBuildMemberListCodedValue.cs:214
 		//- Fields
 
 			//+ Constructor
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:214
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSBuildMemberListCodedValue.cs:217
 			//- Constructor
 
 			//+ WriteCode
-			this.WriteComponent(this.ObsSize);                                                                                                       // CSDefineObservation.cs:217
+			this.WriteComponent(this.ObsSize);                                                                                                       // CSBuildMemberListCodedValue.cs:220
 			//- WriteCode
 
 			//+ ReadCode
-			this.ReadComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:220
+			this.ReadComponent(this.ObsSize);                                                                                                        // CSBuildMemberListCodedValue.cs:223
 			//- ReadCode
 
 			//+ Methods

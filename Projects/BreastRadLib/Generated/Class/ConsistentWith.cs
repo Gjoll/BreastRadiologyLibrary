@@ -22,8 +22,8 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment
 	{
 		//+ Fields
-		public Value_Accessor Value { get ; protected set; }                                                                                      // CSDefineObservation.cs:211
-		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // CSDefineObservation.cs:211
+		public Value_Accessor Value { get ; protected set; }                                                                                      // CSBuildMemberListCodedValue.cs:214
+		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // CSBuildMemberListCodedValue.cs:214
 		//- Fields
 
 		/// <summary>
@@ -63,20 +63,20 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // CSDefineBase.cs:217
-			this.Value = new Value_Accessor(doc);                                                                                                    // CSDefineObservation.cs:214
-			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // CSDefineObservation.cs:214
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // CSDefineBase.cs:197
+			this.Value = new Value_Accessor(doc);                                                                                                    // CSBuildMemberListCodedValue.cs:217
+			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // CSBuildMemberListCodedValue.cs:217
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:173
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:176
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // CSDefineObservation.cs:217
-			this.WriteComponent(this.Qualifier);                                                                                                     // CSDefineObservation.cs:217
+			this.WriteComponent(this.Value);                                                                                                         // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.Qualifier);                                                                                                     // CSBuildMemberListCodedValue.cs:220
 			//- WriteCode
 		}
 
@@ -85,8 +85,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // CSDefineObservation.cs:220
-			this.ReadComponent(this.Qualifier);                                                                                                      // CSDefineObservation.cs:220
+			this.ReadComponent(this.Value);                                                                                                          // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.Qualifier);                                                                                                      // CSBuildMemberListCodedValue.cs:223
 			//- ReadCode
 		}
 

@@ -63,7 +63,7 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:136
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // CSDefineBase.cs:217
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // CSDefineBase.cs:197
 			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
 			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSBuildMemberListReference.cs:123
 			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
@@ -121,11 +121,11 @@ namespace BreastRadLib
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // CSDefineBase.cs:181
-			{                                                                                                                                        // CSDefineBase.cs:182
-			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 183                              // CodeBlockNested.cs:588
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // CSDefineBase.cs:184
-			}                                                                                                                                        // CSDefineBase.cs:187
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // CSDefineBase.cs:161
+			{                                                                                                                                        // CSDefineBase.cs:162
+			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 163                              // CodeBlockNested.cs:588
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // CSDefineBase.cs:164
+			}                                                                                                                                        // CSDefineBase.cs:167
 		//- Methods
 	}
 }

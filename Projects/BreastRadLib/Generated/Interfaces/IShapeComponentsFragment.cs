@@ -16,10 +16,10 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		Orientation_Accessor Orientation { get ; }                                                                                                // CSDefineObservation.cs:205
-		Shape_Accessor Shape { get ; }                                                                                                            // CSDefineObservation.cs:205
-		Margin_Accessor Margin { get ; }                                                                                                          // CSDefineObservation.cs:205
-		MgDensity_Accessor MgDensity { get ; }                                                                                                    // CSDefineObservation.cs:205
+		Orientation_Accessor Orientation { get ; }                                                                                                // CSBuildMemberListCodedValue.cs:208
+		Shape_Accessor Shape { get ; }                                                                                                            // CSBuildMemberListCodedValue.cs:208
+		Margin_Accessor Margin { get ; }                                                                                                          // CSBuildMemberListCodedValue.cs:208
+		MgDensity_Accessor MgDensity { get ; }                                                                                                    // CSBuildMemberListCodedValue.cs:208
 		//- Fields
 
 		//+ Methods

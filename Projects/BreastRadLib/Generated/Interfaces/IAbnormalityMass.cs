@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		MassType_Accessor MassType { get ; }                                                                                                      // CSDefineObservation.cs:205
+		MassType_Accessor MassType { get ; }                                                                                                      // CSBuildMemberListCodedValue.cs:208
 		//- Fields
 
 		//+ Methods

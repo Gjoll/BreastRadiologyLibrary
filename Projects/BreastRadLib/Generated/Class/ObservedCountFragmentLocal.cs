@@ -15,33 +15,33 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	/// Accessor class for 'obsCount'
 	/// [Fhir Element 'Observation.component:obsCount]'
 	/// </summary>
-	public class ObsCount_Accessor : MemberListCodedValueBase<Element>                                                                         // CSDefineObservation.cs:66
-	{                                                                                                                                          // CSDefineObservation.cs:67
-	    // Properties                                                                                                                          // CSDefineObservation.cs:68
+	public class ObsCount_Accessor : MemberListCodedValueBase<Element>                                                                         // CSBuildMemberListCodedValue.cs:69
+	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:70
+	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:71
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public Element Get() => base.FirstOrDefault();                                                                                         // CSDefineObservation.cs:105
-	                                                                                                                                           // CSDefineObservation.cs:70
-	    // Methods                                                                                                                             // CSDefineObservation.cs:71
-	                                                                                                                                           // CSDefineObservation.cs:92
+	    public Element Get() => base.FirstOrDefault();                                                                                         // CSBuildMemberListCodedValue.cs:108
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:73
+	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:74
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:95
 	    /// <summary>
 	    /// Set ObsCount value
 	    /// </summary>
-	    public void SetQuantity(Quantity value) => this.SetFirst(value);                                                                       // CSDefineObservation.cs:96
-	                                                                                                                                           // CSDefineObservation.cs:92
+	    public void SetQuantity(Quantity value) => this.SetFirst(value);                                                                       // CSBuildMemberListCodedValue.cs:99
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:95
 	    /// <summary>
 	    /// Set ObsCount value
 	    /// </summary>
-	    public void SetRange(Quantity value) => this.SetFirst(value);                                                                          // CSDefineObservation.cs:96
-	                                                                                                                                           // CSDefineObservation.cs:73
+	    public void SetRange(Quantity value) => this.SetFirst(value);                                                                          // CSBuildMemberListCodedValue.cs:99
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:76
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsCount_Accessor(BreastRadiologyDocument doc) : base("ObsCount_Accessor")                                                      // CSDefineObservation.cs:77
-	    {                                                                                                                                      // CSDefineObservation.cs:78
-	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsCount")); // CSDefineObservation.cs:79
-	    }                                                                                                                                      // CSDefineObservation.cs:81
-	}                                                                                                                                          // CSDefineObservation.cs:82
+	    public ObsCount_Accessor(BreastRadiologyDocument doc) : base("ObsCount_Accessor")                                                      // CSBuildMemberListCodedValue.cs:80
+	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:81
+	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsCount")); // CSBuildMemberListCodedValue.cs:82
+	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:84
+	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:85
 	//- LocalClassDefs
 }

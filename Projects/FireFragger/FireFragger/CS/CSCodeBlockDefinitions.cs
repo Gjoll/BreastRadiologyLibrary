@@ -1,4 +1,5 @@
 ﻿using FhirKhit.Tools;
+using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -52,5 +53,26 @@ namespace FireFragger
                 return -1;
             return Int32.Parse(max);
         }
+
+        protected bool BindingClassName(ElementDefinition elementDefinition,
+            out String bindingClassName,
+            out ElementDefinition.ElementDefinitionBindingComponent binding)
+        {
+            bindingClassName = null;
+            binding = elementDefinition.Binding;
+            if (binding == null)
+                return false;
+
+            ElementDefinition.ElementDefinitionBindingComponent bindingComp = elementDefinition.Binding;
+            String valueSet = bindingComp.ValueSet;
+
+            // currently we only do local value sets.
+            if (valueSet.StartsWith(Global.LocalValueSertUrl) == false)
+                return false;
+            String vsClassName = CSBuilder.MachineName(valueSet.LastUriPart());
+            bindingClassName = $"{vsClassName}.TCoding";
+            return true;
+        }
+
     }
 }

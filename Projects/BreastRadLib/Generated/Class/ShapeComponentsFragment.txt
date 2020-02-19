@@ -1,29 +1,29 @@
 		//+ Fields
-		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSDefineObservation.cs:211
-		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSDefineObservation.cs:211
-		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSDefineObservation.cs:211
-		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSDefineObservation.cs:211
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSBuildMemberListCodedValue.cs:214
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSBuildMemberListCodedValue.cs:214
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSBuildMemberListCodedValue.cs:214
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSBuildMemberListCodedValue.cs:214
 		//- Fields
 
 			//+ Constructor
-			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSDefineObservation.cs:214
-			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSDefineObservation.cs:214
-			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSDefineObservation.cs:214
-			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSDefineObservation.cs:214
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSBuildMemberListCodedValue.cs:217
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSBuildMemberListCodedValue.cs:217
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSBuildMemberListCodedValue.cs:217
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSBuildMemberListCodedValue.cs:217
 			//- Constructor
 
 			//+ WriteCode
-			this.WriteComponent(this.Orientation);                                                                                                   // CSDefineObservation.cs:217
-			this.WriteComponent(this.Shape);                                                                                                         // CSDefineObservation.cs:217
-			this.WriteComponent(this.Margin);                                                                                                        // CSDefineObservation.cs:217
-			this.WriteComponent(this.MgDensity);                                                                                                     // CSDefineObservation.cs:217
+			this.WriteComponent(this.Orientation);                                                                                                   // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.Shape);                                                                                                         // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.Margin);                                                                                                        // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.MgDensity);                                                                                                     // CSBuildMemberListCodedValue.cs:220
 			//- WriteCode
 
 			//+ ReadCode
-			this.ReadComponent(this.Orientation);                                                                                                    // CSDefineObservation.cs:220
-			this.ReadComponent(this.Shape);                                                                                                          // CSDefineObservation.cs:220
-			this.ReadComponent(this.Margin);                                                                                                         // CSDefineObservation.cs:220
-			this.ReadComponent(this.MgDensity);                                                                                                      // CSDefineObservation.cs:220
+			this.ReadComponent(this.Orientation);                                                                                                    // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.Shape);                                                                                                          // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.Margin);                                                                                                         // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.MgDensity);                                                                                                      // CSBuildMemberListCodedValue.cs:223
 			//- ReadCode
 
 			//+ Methods

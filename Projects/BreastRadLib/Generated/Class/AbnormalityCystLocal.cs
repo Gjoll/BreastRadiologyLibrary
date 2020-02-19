@@ -15,28 +15,28 @@ namespace BreastRadLib.AbnormalityCystLocal
 	/// Accessor class for 'cystType'
 	/// [Fhir Element 'Observation.component:cystType]'
 	/// </summary>
-	public class CystType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                 // CSDefineObservation.cs:66
-	{                                                                                                                                          // CSDefineObservation.cs:67
-	    // Properties                                                                                                                          // CSDefineObservation.cs:68
+	public class CystType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                 // CSBuildMemberListCodedValue.cs:69
+	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:70
+	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:71
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // CSDefineObservation.cs:105
-	                                                                                                                                           // CSDefineObservation.cs:70
-	    // Methods                                                                                                                             // CSDefineObservation.cs:71
-	                                                                                                                                           // CSDefineObservation.cs:92
+	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // CSBuildMemberListCodedValue.cs:108
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:73
+	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:74
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:95
 	    /// <summary>
 	    /// Set CystType value
 	    /// </summary>
-	    public void Set(AbnormalityCystTypeVS.TCoding value) => this.SetFirst(value);                                                          // CSDefineObservation.cs:96
-	                                                                                                                                           // CSDefineObservation.cs:73
+	    public void Set(AbnormalityCystTypeVS.TCoding value) => this.SetFirst(value);                                                          // CSBuildMemberListCodedValue.cs:99
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:76
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public CystType_Accessor(BreastRadiologyDocument doc) : base("CystType_Accessor")                                                      // CSDefineObservation.cs:77
-	    {                                                                                                                                      // CSDefineObservation.cs:78
-	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityCystType"));// CSDefineObservation.cs:79
-	    }                                                                                                                                      // CSDefineObservation.cs:81
-	}                                                                                                                                          // CSDefineObservation.cs:82
+	    public CystType_Accessor(BreastRadiologyDocument doc) : base("CystType_Accessor")                                                      // CSBuildMemberListCodedValue.cs:80
+	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:81
+	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityCystType"));// CSBuildMemberListCodedValue.cs:82
+	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:84
+	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:85
 	//- LocalClassDefs
 }

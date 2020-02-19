@@ -1,21 +1,21 @@
 		//+ Fields
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:211
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:211
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSBuildMemberListCodedValue.cs:214
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSBuildMemberListCodedValue.cs:214
 		//- Fields
 
 			//+ Constructor
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:214
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:214
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSBuildMemberListCodedValue.cs:217
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSBuildMemberListCodedValue.cs:217
 			//- Constructor
 
 			//+ WriteCode
-			this.WriteComponent(this.ObsDistribution);                                                                                               // CSDefineObservation.cs:217
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:217
+			this.WriteComponent(this.ObsDistribution);                                                                                               // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSBuildMemberListCodedValue.cs:220
 			//- WriteCode
 
 			//+ ReadCode
-			this.ReadComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:220
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:220
+			this.ReadComponent(this.ObsDistribution);                                                                                                // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSBuildMemberListCodedValue.cs:223
 			//- ReadCode
 
 			//+ Methods

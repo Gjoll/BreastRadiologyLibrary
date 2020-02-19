@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		ObsSize_Accessor ObsSize { get ; }                                                                                                        // CSDefineObservation.cs:205
+		ObsSize_Accessor ObsSize { get ; }                                                                                                        // CSBuildMemberListCodedValue.cs:208
 		//- Fields
 
 		//+ Methods
