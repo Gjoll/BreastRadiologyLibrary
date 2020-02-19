@@ -15,183 +15,183 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for ObservationhasMember slice 'abnormalityCyst'
 	/// [Fhir Element 'Observation.hasMember:abnormalityCyst]'
 	/// </summary>
-	public class AbnormalityCyst_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityCyst>                                                // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class AbnormalityCyst_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityCyst>                                                // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityCyst_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityCyst_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                              // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public AbnormalityCyst_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                              // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'abnormalityDuct'
 	/// [Fhir Element 'Observation.hasMember:abnormalityDuct]'
 	/// </summary>
-	public class AbnormalityDuct_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityDuct>                                                // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class AbnormalityDuct_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityDuct>                                                // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityDuct_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityDuct_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                              // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public AbnormalityDuct_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                              // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'abnormalityForeignObject'
 	/// [Fhir Element 'Observation.hasMember:abnormalityForeignObject]'
 	/// </summary>
-	public class AbnormalityForeignObject_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityForeignObject>                              // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class AbnormalityForeignObject_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityForeignObject>                              // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityForeignObject_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityForeignObject_Accessor(BreastRadiologyDocument doc) : base()                                                         // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                     // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public AbnormalityForeignObject_Accessor(BreastRadiologyDocument doc) : base()                                                         // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                     // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'abnormalityLymphNode'
 	/// [Fhir Element 'Observation.hasMember:abnormalityLymphNode]'
 	/// </summary>
-	public class AbnormalityLymphNode_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityLymphNode>                                      // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class AbnormalityLymphNode_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityLymphNode>                                      // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityLymphNode_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityLymphNode_Accessor(BreastRadiologyDocument doc) : base()                                                             // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                         // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public AbnormalityLymphNode_Accessor(BreastRadiologyDocument doc) : base()                                                             // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                         // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'abnormalityMass'
 	/// [Fhir Element 'Observation.hasMember:abnormalityMass]'
 	/// </summary>
-	public class AbnormalityMass_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityMass>                                                // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class AbnormalityMass_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityMass>                                                // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityMass_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityMass_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                              // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public AbnormalityMass_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                              // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'associatedFeatures'
 	/// [Fhir Element 'Observation.hasMember:associatedFeatures]'
 	/// </summary>
-	public class AssociatedFeatures_Accessor : ObservationLocal.HasMemberMultiple<AssociatedFeatures>                                          // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class AssociatedFeatures_Accessor : ObservationLocal.HasMemberMultiple<AssociatedFeatures>                                          // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice AssociatedFeatures_Accessor class constructor
 	    /// </summary>
-	    public AssociatedFeatures_Accessor(BreastRadiologyDocument doc) : base()                                                               // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                           // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public AssociatedFeatures_Accessor(BreastRadiologyDocument doc) : base()                                                               // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                           // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'abnormalityFibroadenoma'
 	/// [Fhir Element 'Observation.hasMember:abnormalityFibroadenoma]'
 	/// </summary>
-	public class AbnormalityFibroadenoma_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityFibroadenoma>                                // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class AbnormalityFibroadenoma_Accessor : ObservationLocal.HasMemberMultiple<AbnormalityFibroadenoma>                                // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice AbnormalityFibroadenoma_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityFibroadenoma_Accessor(BreastRadiologyDocument doc) : base()                                                          // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                      // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public AbnormalityFibroadenoma_Accessor(BreastRadiologyDocument doc) : base()                                                          // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                      // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>      // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class MGAbnormalityArchitecturalDistortion_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityArchitecturalDistortion>      // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityArchitecturalDistortion_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base()                                             // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");         // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base()                                             // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");         // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityAsymmetry'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityAsymmetry]'
 	/// </summary>
-	public class MGAbnormalityAsymmetry_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityAsymmetry>                                  // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class MGAbnormalityAsymmetry_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityAsymmetry>                                  // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityAsymmetry_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityAsymmetry_Accessor(BreastRadiologyDocument doc) : base()                                                           // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                       // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public MGAbnormalityAsymmetry_Accessor(BreastRadiologyDocument doc) : base()                                                           // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                       // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityCalcification>                          // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class MGAbnormalityCalcification_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityCalcification>                          // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityCalcification_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base()                                                       // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                   // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base()                                                       // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                   // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityDensity'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityDensity]'
 	/// </summary>
-	public class MGAbnormalityDensity_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityDensity>                                      // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class MGAbnormalityDensity_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityDensity>                                      // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityDensity_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityDensity_Accessor(BreastRadiologyDocument doc) : base()                                                             // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                         // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public MGAbnormalityDensity_Accessor(BreastRadiologyDocument doc) : base()                                                             // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                         // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'mGAbnormalityFatNecrosis'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityFatNecrosis]'
 	/// </summary>
-	public class MGAbnormalityFatNecrosis_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityFatNecrosis>                              // CSDefineObservation.cs:263
-	{                                                                                                                                          // CSDefineObservation.cs:264
+	public class MGAbnormalityFatNecrosis_Accessor : ObservationLocal.HasMemberMultiple<MGAbnormalityFatNecrosis>                              // CSDefineObservation.cs:265
+	{                                                                                                                                          // CSDefineObservation.cs:266
 	    /// <summary>
 	    /// Accessor HasMember slice MGAbnormalityFatNecrosis_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityFatNecrosis_Accessor(BreastRadiologyDocument doc) : base()                                                         // CSDefineObservation.cs:269
-	    {                                                                                                                                      // CSDefineObservation.cs:270
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");                     // CSDefineObservation.cs:271
-	    }                                                                                                                                      // CSDefineObservation.cs:272
-	}                                                                                                                                          // CSDefineObservation.cs:273
+	    public MGAbnormalityFatNecrosis_Accessor(BreastRadiologyDocument doc) : base()                                                         // CSDefineObservation.cs:271
+	    {                                                                                                                                      // CSDefineObservation.cs:272
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");                     // CSDefineObservation.cs:273
+	    }                                                                                                                                      // CSDefineObservation.cs:274
+	}                                                                                                                                          // CSDefineObservation.cs:275
 	/// <summary>
 	/// Accessor class for ObservationhasMember slice 'mGBreastDensity'
 	/// [Fhir Element 'Observation.hasMember:mGBreastDensity]'
 	/// </summary>
-	public class MGBreastDensity_Accessor : ObservationLocal.HasMemberSingle<MGBreastDensity>                                                  // CSDefineObservation.cs:247
-	{                                                                                                                                          // CSDefineObservation.cs:248
+	public class MGBreastDensity_Accessor : ObservationLocal.HasMemberSingle<MGBreastDensity>                                                  // CSDefineObservation.cs:249
+	{                                                                                                                                          // CSDefineObservation.cs:250
 	    /// <summary>
 	    /// Accessor HasMember slice MGBreastDensity_Accessor class constructor
 	    /// </summary>
-	    public MGBreastDensity_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:253
-	    {                                                                                                                                      // CSDefineObservation.cs:254
-	        this.Init(doc, 1, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                               // CSDefineObservation.cs:255
-	    }                                                                                                                                      // CSDefineObservation.cs:256
-	}                                                                                                                                          // CSDefineObservation.cs:257
+	    public MGBreastDensity_Accessor(BreastRadiologyDocument doc) : base()                                                                  // CSDefineObservation.cs:255
+	    {                                                                                                                                      // CSDefineObservation.cs:256
+	        this.Init(doc, 1, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                               // CSDefineObservation.cs:257
+	    }                                                                                                                                      // CSDefineObservation.cs:258
+	}                                                                                                                                          // CSDefineObservation.cs:259
 	//- LocalClassDefs
 }

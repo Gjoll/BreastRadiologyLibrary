@@ -34,19 +34,19 @@ namespace BreastRadLib
 	public class MGAbnormalityCalcification : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, INotPreviouslySeenComponentFragment, IObservedCountFragment, IObservedSizeFragment, IObservedDistributionFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:209
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:209
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:209
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:209
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:209
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:209
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:209
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:209
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:209
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:320
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:320
-		public CalcificationType_Accessor CalcificationType { get ; protected set; }                                                              // CSDefineObservation.cs:209
-		public CalcificationDistribution_Accessor CalcificationDistribution { get ; protected set; }                                              // CSDefineObservation.cs:209
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSDefineObservation.cs:211
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSDefineObservation.cs:211
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSDefineObservation.cs:211
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:211
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSDefineObservation.cs:211
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSDefineObservation.cs:211
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSDefineObservation.cs:211
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSDefineObservation.cs:211
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSDefineObservation.cs:211
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:322
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSDefineObservation.cs:322
+		public CalcificationType_Accessor CalcificationType { get ; protected set; }                                                              // CSDefineObservation.cs:211
+		public CalcificationDistribution_Accessor CalcificationDistribution { get ; protected set; }                                              // CSDefineObservation.cs:211
 		//- Fields
 
 		/// <summary>
@@ -86,42 +86,42 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                                 // CSDefineBase.cs:218
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:212
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:212
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:212
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:212
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:212
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:212
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:212
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:212
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:212
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:323
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:323
-			this.CalcificationType = new CalcificationType_Accessor(doc);                                                                            // CSDefineObservation.cs:212
-			this.CalcificationDistribution = new CalcificationDistribution_Accessor(doc);                                                            // CSDefineObservation.cs:212
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                                 // CSDefineBase.cs:235
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSDefineObservation.cs:214
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSDefineObservation.cs:214
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSDefineObservation.cs:214
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:214
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSDefineObservation.cs:214
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSDefineObservation.cs:214
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSDefineObservation.cs:214
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSDefineObservation.cs:214
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSDefineObservation.cs:214
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:325
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSDefineObservation.cs:325
+			this.CalcificationType = new CalcificationType_Accessor(doc);                                                                            // CSDefineObservation.cs:214
+			this.CalcificationDistribution = new CalcificationDistribution_Accessor(doc);                                                            // CSDefineObservation.cs:214
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:171
+			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:173
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsChanges);                                                                                                    // CSDefineObservation.cs:215
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSDefineObservation.cs:215
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSDefineObservation.cs:215
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:215
-			this.WriteComponent(this.ObsSize);                                                                                                       // CSDefineObservation.cs:215
-			this.WriteComponent(this.ObsDistribution);                                                                                               // CSDefineObservation.cs:215
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:215
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:215
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:215
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:326
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:326
-			this.WriteComponent(this.CalcificationType);                                                                                             // CSDefineObservation.cs:215
-			this.WriteComponent(this.CalcificationDistribution);                                                                                     // CSDefineObservation.cs:215
+			this.WriteComponent(this.ObsChanges);                                                                                                    // CSDefineObservation.cs:217
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSDefineObservation.cs:217
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSDefineObservation.cs:217
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:217
+			this.WriteComponent(this.ObsSize);                                                                                                       // CSDefineObservation.cs:217
+			this.WriteComponent(this.ObsDistribution);                                                                                               // CSDefineObservation.cs:217
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSDefineObservation.cs:217
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSDefineObservation.cs:217
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSDefineObservation.cs:217
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:328
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSDefineObservation.cs:328
+			this.WriteComponent(this.CalcificationType);                                                                                             // CSDefineObservation.cs:217
+			this.WriteComponent(this.CalcificationDistribution);                                                                                     // CSDefineObservation.cs:217
 			//- WriteCode
 		}
 
@@ -130,19 +130,19 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:218
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:218
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:218
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:218
-			this.ReadComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:218
-			this.ReadComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:218
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:218
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:218
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:218
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:329
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:329
-			this.ReadComponent(this.CalcificationType);                                                                                              // CSDefineObservation.cs:218
-			this.ReadComponent(this.CalcificationDistribution);                                                                                      // CSDefineObservation.cs:218
+			this.ReadComponent(this.ObsChanges);                                                                                                     // CSDefineObservation.cs:220
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSDefineObservation.cs:220
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSDefineObservation.cs:220
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:220
+			this.ReadComponent(this.ObsSize);                                                                                                        // CSDefineObservation.cs:220
+			this.ReadComponent(this.ObsDistribution);                                                                                                // CSDefineObservation.cs:220
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSDefineObservation.cs:220
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSDefineObservation.cs:220
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSDefineObservation.cs:220
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:331
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSDefineObservation.cs:331
+			this.ReadComponent(this.CalcificationType);                                                                                              // CSDefineObservation.cs:220
+			this.ReadComponent(this.CalcificationDistribution);                                                                                      // CSDefineObservation.cs:220
 			//- ReadCode
 		}
 

@@ -16,10 +16,10 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		MGFinding_Accessor MGFinding { get ; }                                                                                                    // CSDefineObservation.cs:314
-		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // CSDefineObservation.cs:314
-		NMFinding_Accessor NMFinding { get ; }                                                                                                    // CSDefineObservation.cs:314
-		USFinding_Accessor USFinding { get ; }                                                                                                    // CSDefineObservation.cs:314
+		MGFinding_Accessor MGFinding { get ; }                                                                                                    // CSDefineObservation.cs:316
+		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // CSDefineObservation.cs:316
+		NMFinding_Accessor NMFinding { get ; }                                                                                                    // CSDefineObservation.cs:316
+		USFinding_Accessor USFinding { get ; }                                                                                                    // CSDefineObservation.cs:316
 		//- Fields
 
 		//+ Methods

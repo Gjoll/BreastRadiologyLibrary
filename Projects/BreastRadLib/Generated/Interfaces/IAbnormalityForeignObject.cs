@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                                              // CSDefineObservation.cs:203
+		AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                                              // CSDefineObservation.cs:205
 		//- Fields
 
 		//+ Methods

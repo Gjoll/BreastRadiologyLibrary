@@ -24,8 +24,8 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, IBreastBodyLocationRequiredFragment, IObservedCountFragment
 	{
 		//+ Fields
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:209
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSDefineObservation.cs:209
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSDefineObservation.cs:211
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSDefineObservation.cs:211
 		//- Fields
 
 		/// <summary>
@@ -65,20 +65,20 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:218
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:212
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSDefineObservation.cs:212
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:235
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSDefineObservation.cs:214
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSDefineObservation.cs:214
 			//- Constructor
 		}
 
 		public override void Write()
 		{
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:171
+			this.ClearComponents();                                                                                                                  // CSDefineObservation.cs:173
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:215
-			this.WriteComponent(this.FeatureType);                                                                                                   // CSDefineObservation.cs:215
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSDefineObservation.cs:217
+			this.WriteComponent(this.FeatureType);                                                                                                   // CSDefineObservation.cs:217
 			//- WriteCode
 		}
 
@@ -87,8 +87,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:218
-			this.ReadComponent(this.FeatureType);                                                                                                    // CSDefineObservation.cs:218
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSDefineObservation.cs:220
+			this.ReadComponent(this.FeatureType);                                                                                                    // CSDefineObservation.cs:220
 			//- ReadCode
 		}
 

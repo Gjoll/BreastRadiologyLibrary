@@ -31,10 +31,12 @@ namespace FireFragger
         {
             String[] ParamTypes(ElementDefinition.TypeRefComponent type)
             {
-                if (BindingClassName(componentSlice.ElementDefinition, out String bindingClassName) == false)
+                if (BindingClassName(valueNode.ElementDefinition, 
+                    out String bindingClassName,
+                    out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
                     return new string[] { type.Code };
 
-                switch (componentSlice.ElementDefinition.Binding.Strength)
+                switch (binding.Strength)
                 {
                     case BindingStrength.Required:
                         return new string[] { bindingClassName };
@@ -178,7 +180,7 @@ namespace FireFragger
 
                 ElementTreeNode GetChild(String name)
                 {
-                    if (this.fragBase.DiffNodes.TryGetElementNode($"{componentSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
+                    if (this.fragBase.SnapNodes.TryGetElementNode($"{componentSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
                         throw new Exception($"Cant find child {name}");
                     return n;
                 }

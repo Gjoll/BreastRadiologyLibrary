@@ -1,30 +1,38 @@
 		//+ Fields
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:320
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSDefineObservation.cs:320
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:320
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:320
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:322
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSDefineObservation.cs:322
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:322
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSDefineObservation.cs:322
 		//- Fields
 
 			//+ Constructor
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:323
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSDefineObservation.cs:323
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:323
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:323
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:325
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSDefineObservation.cs:325
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:325
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSDefineObservation.cs:325
 			//- Constructor
 
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // CSDefineObservation.cs:326
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSDefineObservation.cs:326
-			this.WriteHasMember(this.NMFinding);                                                                                                     // CSDefineObservation.cs:326
-			this.WriteHasMember(this.USFinding);                                                                                                     // CSDefineObservation.cs:326
+			this.WriteHasMember(this.MGFinding);                                                                                                     // CSDefineObservation.cs:328
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSDefineObservation.cs:328
+			this.WriteHasMember(this.NMFinding);                                                                                                     // CSDefineObservation.cs:328
+			this.WriteHasMember(this.USFinding);                                                                                                     // CSDefineObservation.cs:328
 			//- WriteCode
 
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // CSDefineObservation.cs:329
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSDefineObservation.cs:329
-			this.ReadHasMember(this.NMFinding);                                                                                                      // CSDefineObservation.cs:329
-			this.ReadHasMember(this.USFinding);                                                                                                      // CSDefineObservation.cs:329
+			this.ReadHasMember(this.MGFinding);                                                                                                      // CSDefineObservation.cs:331
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSDefineObservation.cs:331
+			this.ReadHasMember(this.NMFinding);                                                                                                      // CSDefineObservation.cs:331
+			this.ReadHasMember(this.USFinding);                                                                                                      // CSDefineObservation.cs:331
 			//- ReadCode
 
 			//+ Methods
+			/// <summary>
+			/// Set Observation.value[x] to one of the predefined items
+			/// </summary>
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // CSDefineBase.cs:199
+			{                                                                                                                                        // CSDefineBase.cs:200
+			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 201                              // CodeBlockNested.cs:588
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // CSDefineBase.cs:202
+			}                                                                                                                                        // CSDefineBase.cs:205
 			//- Methods

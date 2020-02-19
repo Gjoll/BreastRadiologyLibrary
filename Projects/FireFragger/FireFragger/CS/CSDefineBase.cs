@@ -155,17 +155,20 @@ namespace FireFragger
                 ;
         }
 
-        protected bool BindingClassName(ElementDefinition elementDefinition, out String bindingClassName)
+        protected bool BindingClassName(ElementDefinition elementDefinition,
+            out String bindingClassName,
+            out ElementDefinition.ElementDefinitionBindingComponent binding)
         {
             bindingClassName = null;
-            if (elementDefinition.Binding == null)
+            binding = elementDefinition.Binding;
+            if (binding == null)
                 return false;
 
             ElementDefinition.ElementDefinitionBindingComponent bindingComp = elementDefinition.Binding;
             String valueSet = bindingComp.ValueSet;
 
             // currently we only do local value sets.
-            if (valueSet.StartsWith("http://hl7.org/fhir/us/breast-radiology/ValueSet/RecommendationsVS") == false)
+            if (valueSet.StartsWith(Global.LocalValueSertUrl) == false)
                 return false;
             String vsClassName = CSBuilder.MachineName(valueSet.LastUriPart());
             bindingClassName =  $"{vsClassName}.TCoding";
@@ -174,29 +177,43 @@ namespace FireFragger
 
         void DefineBinding(ElementDefinition elementDefinition)
         {
-            if (BindingClassName(elementDefinition, out String bindingClassName) == false)
+            if (BindingClassName(elementDefinition, 
+                out String bindingClassName,
+                out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
                 return;
 
             String fieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String methodName = $"Set{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String fhirFieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
+            switch(fhirFieldName)
+            {
+                case "ValueX":
+                    fhirFieldName = "Value";
+                    break;
+            }
             String thisClass = CSBuilder.ClassName(this.fragBase);
             this.ClassMethods
                 .SummaryOpen()
                 .Summary($"Set {elementDefinition.ElementId} to one of the predefined items")
                 .SummaryClose()
-                .AppendCode($"public {thisClass} {methodName}({bindingClassName} code)")
+                .AppendCode($"public void {methodName}({bindingClassName} code)")
                 .OpenBrace()
-                .AppendCode($"this.Resource.{fhirFieldName} = code;")
-                .AppendCode($"return this;")
+                .IfElse(elementDefinition.Base.Max == "1",
+                    code1 => code1.AppendCode($"this.Resource.{fhirFieldName} = ({elementDefinition.Type[0].Code}) code;"),
+                    code1 => code1.AppendCode($"this.Resource.{fhirFieldName}.Add(({elementDefinition.Type[0].Code}) code);")
+                    )
                 .CloseBrace()
                 ;
         }
 
         void DefineCodeElements()
         {
-            foreach (ElementDefinition elementDefinition in this.fragBase.DiffNodes.ElementDefinitions)
+            foreach (ElementDefinition elementDefinitionDiff in this.fragBase.DiffNodes.ElementDefinitions)
             {
+                if (this.fragBase.SnapNodes.TryGetElementNode(elementDefinitionDiff.ElementId,
+                   out ElementTreeNode snapNode) == false)
+                    throw new Exception($"error finding snapnode");
+                ElementDefinition elementDefinition = snapNode.ElementDefinition;
                 String[] pathElements = elementDefinition.Path.Split('.').ToArray();
                 if (pathElements.Length == 2)
                 {

@@ -1,17 +1,17 @@
 		//+ Fields
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:320
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSDefineObservation.cs:322
 		//- Fields
 
 			//+ Constructor
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:323
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSDefineObservation.cs:325
 			//- Constructor
 
 			//+ WriteCode
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:326
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSDefineObservation.cs:328
 			//- WriteCode
 
 			//+ ReadCode
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:329
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSDefineObservation.cs:331
 			//- ReadCode
 
 			//+ Methods

@@ -42,6 +42,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="specification.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Templates\Fragment.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

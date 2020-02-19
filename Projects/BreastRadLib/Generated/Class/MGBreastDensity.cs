@@ -60,7 +60,7 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // CSDefineBase.cs:218
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // CSDefineBase.cs:235
 			//- Constructor
 		}
 
@@ -103,6 +103,14 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "MG Breast Density observation";                                                                           // FhirConstruct.cs:821
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
+		/// <summary>
+		/// Set Observation.value[x] to one of the predefined items
+		/// </summary>
+		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // CSDefineBase.cs:199
+		{                                                                                                                                         // CSDefineBase.cs:200
+		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 201                               // CodeBlockNested.cs:588
+		    this.Resource.Value = (CodeableConcept) code;                                                                                         // CSDefineBase.cs:202
+		}                                                                                                                                         // CSDefineBase.cs:205
 		//- Methods
 	}
 }

@@ -19,6 +19,7 @@ namespace FireFragger
         public CodeEditor ClassEditor;
         public CodeEditor SubClassEditor;
         public ElementTreeNode DiffNodes;
+        public ElementTreeNode SnapNodes;
 
         public String BaseDefinitionUrl => this.StructDef.BaseDefinition;
         public String BaseDefinitionName => this.BaseDefinitionUrl.LastUriPart();
@@ -27,8 +28,12 @@ namespace FireFragger
         {
             this.StructDef = sd;
             ElementTreeLoader l = new ElementTreeLoader(ci);
+            if (sd.Snapshot == null)
+                SnapshotCreator.Create(sd);
+
             InterfaceEditor = new CodeEditor();
             DiffNodes = l.Create(sd.Differential.Element);
+            SnapNodes = l.Create(sd.Snapshot.Element);
 
             this.InterfaceEditor.TryAddUserMacro("ClassName", CSBuilder.ClassName(this));
             this.InterfaceEditor.TryAddUserMacro("InterfaceName", CSBuilder.InterfaceName(this));

@@ -196,7 +196,7 @@ namespace BreastRadiology.XUnitTests
                 Debug.Assert(mgFinding != null);
 
                 MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
-                Debug.Assert(asymmetry.Length == 3);
+                Debug.Assert(asymmetry.Length == 1);
             }
         }
     }
