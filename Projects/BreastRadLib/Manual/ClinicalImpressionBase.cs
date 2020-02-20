@@ -22,5 +22,11 @@ namespace BreastRadLib
         {
             this.Init(doc, new ClinicalImpression());
         }
+        public override void Write()
+        {
+            base.Write();
+            this.Resource.Encounter = this.doc.Encounter;
+            this.Resource.Subject = this.doc.Subject;
+        }
     }
 }

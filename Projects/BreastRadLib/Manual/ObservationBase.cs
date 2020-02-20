@@ -72,38 +72,39 @@ namespace BreastRadLib
         {
             base.Write();
             this.Resource.Encounter = this.doc.Encounter;
-    }
-
-    protected void WriteComponent<BaseType>(MemberListCodedValueBase<BaseType> componentList)
-         where BaseType : Element
-    {
-        CodeableConcept code = new CodeableConcept(componentList.Code.System,
-            componentList.Code.Code,
-            componentList.Code.Display);
-        foreach (BaseType baseType in componentList.RawItems)
-        {
-            Observation.ComponentComponent comp = new Observation.ComponentComponent
-            {
-                Code = code,
-                Value = baseType
-            };
-            this.Resource.Component.Add(comp);
+            this.Resource.Subject = this.doc.Subject;
         }
-    }
 
-    protected void ReadComponent<BaseType>(MemberListCodedValueBase<BaseType> componentList)
-         where BaseType : Element
-    {
-        foreach (Observation.ComponentComponent comp in this.Resource.Component)
+        protected void WriteComponent<BaseType>(MemberListCodedValueBase<BaseType> componentList)
+             where BaseType : Element
         {
-            if (BLMisc.SameCode(comp.Code, componentList.Code))
+            CodeableConcept code = new CodeableConcept(componentList.Code.System,
+                componentList.Code.Code,
+                componentList.Code.Display);
+            foreach (BaseType baseType in componentList.RawItems)
             {
-                BaseType baseType = comp.Value as BaseType;
-                if (baseType == null)
-                    throw new Exception($"Can cot convert item from {comp.Value.GetType().Name} to {typeof(BaseType).Name}");
-                componentList.RawItems.Add(baseType);
+                Observation.ComponentComponent comp = new Observation.ComponentComponent
+                {
+                    Code = code,
+                    Value = baseType
+                };
+                this.Resource.Component.Add(comp);
+            }
+        }
+
+        protected void ReadComponent<BaseType>(MemberListCodedValueBase<BaseType> componentList)
+             where BaseType : Element
+        {
+            foreach (Observation.ComponentComponent comp in this.Resource.Component)
+            {
+                if (BLMisc.SameCode(comp.Code, componentList.Code))
+                {
+                    BaseType baseType = comp.Value as BaseType;
+                    if (baseType == null)
+                        throw new Exception($"Can cot convert item from {comp.Value.GetType().Name} to {typeof(BaseType).Name}");
+                    componentList.RawItems.Add(baseType);
+                }
             }
         }
     }
-}
 }

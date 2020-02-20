@@ -99,5 +99,12 @@ namespace BreastRadLib
 
             this.Resource.Section.Add(sectionComponent);
         }
+        public override void Write()
+        {
+            base.Write();
+            this.Resource.Encounter = this.doc.Encounter;
+            this.Resource.Subject = this.doc.Subject;
+        }
+
     }
 }
