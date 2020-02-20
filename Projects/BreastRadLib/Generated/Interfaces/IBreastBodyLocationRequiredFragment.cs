@@ -10,7 +10,7 @@ using BreastRadLib.BreastBodyLocationRequiredFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastBodyLocationRequiredFragment : IObservationBase, IHeaderFragment
+	public interface IBreastBodyLocationRequiredFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

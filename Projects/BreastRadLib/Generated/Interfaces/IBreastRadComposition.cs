@@ -10,7 +10,7 @@ using BreastRadLib.BreastRadCompositionLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastRadComposition : ICompositionBase, IHeaderFragment
+	public interface IBreastRadComposition
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

@@ -10,7 +10,7 @@ using BreastRadLib.AssociatedFeaturesLocal;
 
 namespace BreastRadLib
 {
-	public interface IAssociatedFeatures : IObservationBase, IObservationSectionFragment
+	public interface IAssociatedFeatures
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

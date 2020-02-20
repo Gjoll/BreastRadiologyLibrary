@@ -10,7 +10,7 @@ using BreastRadLib.ServiceRecommendationLocal;
 
 namespace BreastRadLib
 {
-	public interface IServiceRecommendation : IServiceRequestBase, IHeaderFragment
+	public interface IServiceRecommendation
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

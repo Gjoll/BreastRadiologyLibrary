@@ -10,7 +10,7 @@ using BreastRadLib.MGAbnormalityCalcificationLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGAbnormalityCalcification : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, INotPreviouslySeenComponentFragment, IObservedCountFragment, IObservedSizeFragment, IObservedDistributionFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
+	public interface IMGAbnormalityCalcification
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

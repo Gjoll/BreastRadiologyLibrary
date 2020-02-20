@@ -10,7 +10,7 @@ using BreastRadLib.USFindingLocal;
 
 namespace BreastRadLib
 {
-	public interface IUSFinding : IObservationBase, IObservationSectionFragment
+	public interface IUSFinding
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

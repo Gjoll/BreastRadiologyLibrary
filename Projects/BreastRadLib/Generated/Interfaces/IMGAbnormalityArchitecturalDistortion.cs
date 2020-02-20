@@ -10,7 +10,7 @@ using BreastRadLib.MGAbnormalityArchitecturalDistortionLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGAbnormalityArchitecturalDistortion : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, IShapeComponentsFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
+	public interface IMGAbnormalityArchitecturalDistortion
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

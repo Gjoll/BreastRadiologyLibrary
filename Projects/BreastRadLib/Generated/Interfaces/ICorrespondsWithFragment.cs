@@ -10,7 +10,7 @@ using BreastRadLib.CorrespondsWithFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface ICorrespondsWithFragment : IObservationBase
+	public interface ICorrespondsWithFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

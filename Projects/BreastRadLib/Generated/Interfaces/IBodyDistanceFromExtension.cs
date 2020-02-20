@@ -10,7 +10,7 @@ using BreastRadLib.BodyDistanceFromExtensionLocal;
 
 namespace BreastRadLib
 {
-	public interface IBodyDistanceFromExtension : IExtensionBase, IHeaderFragment
+	public interface IBodyDistanceFromExtension
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

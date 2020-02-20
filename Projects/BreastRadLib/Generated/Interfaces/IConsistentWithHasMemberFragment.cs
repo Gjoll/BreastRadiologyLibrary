@@ -10,7 +10,7 @@ using BreastRadLib.ConsistentWithHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IConsistentWithHasMemberFragment : IObservationBase, IHeaderFragment
+	public interface IConsistentWithHasMemberFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

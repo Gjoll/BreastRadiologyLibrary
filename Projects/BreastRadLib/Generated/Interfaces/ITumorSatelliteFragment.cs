@@ -10,7 +10,7 @@ using BreastRadLib.TumorSatelliteFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface ITumorSatelliteFragment : IObservationBase, IHeaderFragment
+	public interface ITumorSatelliteFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

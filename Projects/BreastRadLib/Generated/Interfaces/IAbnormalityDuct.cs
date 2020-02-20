@@ -10,7 +10,7 @@ using BreastRadLib.AbnormalityDuctLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityDuct : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment
+	public interface IAbnormalityDuct
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

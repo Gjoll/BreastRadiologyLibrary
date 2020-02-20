@@ -10,7 +10,7 @@ using BreastRadLib.AbnormalityCystLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityCyst : IObservationBase, IObservationLeafFragment, ITumorSatelliteFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment, IAssociatedFeaturesHasMemberFragment
+	public interface IAbnormalityCyst
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

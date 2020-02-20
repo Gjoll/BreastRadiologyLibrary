@@ -10,7 +10,7 @@ using BreastRadLib.CategoryFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface ICategoryFragment : IResourceBase
+	public interface ICategoryFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

@@ -10,7 +10,7 @@ using BreastRadLib.MGFindingLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGFinding : IObservationBase, IObservationSectionFragment
+	public interface IMGFinding
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

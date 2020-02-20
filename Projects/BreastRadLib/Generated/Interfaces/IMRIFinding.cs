@@ -10,7 +10,7 @@ using BreastRadLib.MRIFindingLocal;
 
 namespace BreastRadLib
 {
-	public interface IMRIFinding : IObservationBase, IObservationSectionFragment
+	public interface IMRIFinding
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

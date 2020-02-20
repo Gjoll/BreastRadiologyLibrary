@@ -10,7 +10,7 @@ using BreastRadLib.BreastRadReportLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastRadReport : IDiagnosticReportBase, IHeaderFragment, ICategoryFragment
+	public interface IBreastRadReport
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

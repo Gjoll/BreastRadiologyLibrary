@@ -10,7 +10,7 @@ using BreastRadLib.ShapeComponentsFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IShapeComponentsFragment : IObservationBase, IBreastBodyLocationRequiredFragment
+	public interface IShapeComponentsFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

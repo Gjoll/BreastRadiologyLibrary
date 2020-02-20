@@ -10,7 +10,7 @@ using BreastRadLib.MGAbnormalityAsymmetryLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGAbnormalityAsymmetry : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, IShapeComponentsFragment, INotPreviouslySeenComponentFragment, IObservedCountFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
+	public interface IMGAbnormalityAsymmetry
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

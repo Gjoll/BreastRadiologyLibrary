@@ -10,7 +10,7 @@ using BreastRadLib.AbnormalityFibroadenomaLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityFibroadenoma : IObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment
+	public interface IAbnormalityFibroadenoma
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

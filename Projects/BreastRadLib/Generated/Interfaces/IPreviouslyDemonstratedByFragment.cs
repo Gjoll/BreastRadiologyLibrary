@@ -10,7 +10,7 @@ using BreastRadLib.PreviouslyDemonstratedByFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IPreviouslyDemonstratedByFragment : IObservationBase
+	public interface IPreviouslyDemonstratedByFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

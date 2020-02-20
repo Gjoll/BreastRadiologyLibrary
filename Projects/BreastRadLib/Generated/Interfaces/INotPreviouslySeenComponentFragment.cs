@@ -10,7 +10,7 @@ using BreastRadLib.NotPreviouslySeenComponentFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface INotPreviouslySeenComponentFragment : IObservationBase, IBreastBodyLocationRequiredFragment
+	public interface INotPreviouslySeenComponentFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

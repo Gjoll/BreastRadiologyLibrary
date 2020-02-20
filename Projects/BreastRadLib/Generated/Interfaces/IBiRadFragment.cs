@@ -10,7 +10,7 @@ using BreastRadLib.BiRadFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IBiRadFragment : IObservationBase
+	public interface IBiRadFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

@@ -10,7 +10,7 @@ using BreastRadLib.BreastRadObservationNoValueFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastRadObservationNoValueFragment : IObservationBase, IBreastRadObservationFragment
+	public interface IBreastRadObservationNoValueFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs
