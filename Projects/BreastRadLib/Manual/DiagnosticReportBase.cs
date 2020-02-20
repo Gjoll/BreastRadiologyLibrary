@@ -7,6 +7,7 @@ namespace BreastRadLib
 {
     public interface IDiagnosticReportBase : IResourceBase
     {
+        DiagnosticReport Resource { get; }
     }
 
     public class DiagnosticReportBase : ResourceBase, IDiagnosticReportBase

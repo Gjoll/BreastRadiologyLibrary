@@ -7,6 +7,7 @@ namespace BreastRadLib
 {
     public interface IMedicationRequestBase : IResourceBase
     {
+        MedicationRequest Resource { get; }
     }
 
     public class MedicationRequestBase: ResourceBase, IMedicationRequestBase

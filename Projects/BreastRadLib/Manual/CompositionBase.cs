@@ -9,6 +9,7 @@ namespace BreastRadLib
 {
     public interface ICompositionBase : IResourceBase
     {
+        Composition Resource { get; }
     }
 
     public class CompositionBase : ResourceBase, ICompositionBase

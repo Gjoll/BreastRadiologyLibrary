@@ -8,6 +8,7 @@ namespace BreastRadLib
 {
     public interface IObservationBase : IResourceBase
     {
+        Observation Resource { get; }
     }
 
     public class ObservationBase : ResourceBase, IObservationBase

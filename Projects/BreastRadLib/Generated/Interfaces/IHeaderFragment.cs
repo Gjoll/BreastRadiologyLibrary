@@ -10,7 +10,7 @@ using BreastRadLib.HeaderFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IHeaderFragment : IResourceBase
+	public interface IHeaderFragment
 	{
 		//+ LocalClassDefs
 		//- LocalClassDefs

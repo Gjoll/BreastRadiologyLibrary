@@ -8,14 +8,17 @@ namespace BreastRadLib
 {
     public interface IResourceBase : IBaseBase
     {
+        String profileUrl { get; set; }
+
+        Meta Meta { get; }
     }
 
     public class ResourceBase : BaseBase, IResourceBase
     {
         DomainResource domainResource => (DomainResource)this.resource;
-        String profileUrl;
+        public String profileUrl { get; set; }
 
-        protected Meta Meta => GetMeta();
+        public Meta Meta => GetMeta();
 
         public override String Id
         {
