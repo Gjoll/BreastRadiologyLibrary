@@ -16,12 +16,12 @@ namespace BreastRadLib
 	public class BreastRadComposition : CompositionBase, IHeaderFragment
 	{
 		//+ Fields
-		public Report_Accessor Report { get ; protected set; }                                                                                    // CSBuildMemberListSection.cs:226
-		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // CSBuildMemberListSection.cs:226
-		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // CSBuildMemberListSection.cs:226
-		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // CSBuildMemberListSection.cs:226
-		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // CSBuildMemberListSection.cs:226
-		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // CSBuildMemberListSection.cs:226
+		public Report_Accessor Report { get ; protected set; }                                                                                    // CSBuildMemberListBase.cs:40
+		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // CSBuildMemberListBase.cs:40
+		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // CSBuildMemberListBase.cs:40
+		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // CSBuildMemberListBase.cs:40
+		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // CSBuildMemberListBase.cs:40
+		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // CSBuildMemberListBase.cs:40
 		//- Fields
 
 		/// <summary>
@@ -61,41 +61,52 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // CSDefineBase.cs:182
-			this.Report = new Report_Accessor(doc);                                                                                                  // CSBuildMemberListSection.cs:229
-			this.Impressions = new Impressions_Accessor(doc);                                                                                        // CSBuildMemberListSection.cs:229
-			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // CSBuildMemberListSection.cs:229
-			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // CSBuildMemberListSection.cs:229
-			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // CSBuildMemberListSection.cs:229
-			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // CSBuildMemberListSection.cs:229
+			this.Report = new Report_Accessor(doc);                                                                                                  // CSBuildMemberListBase.cs:43
+			this.Impressions = new Impressions_Accessor(doc);                                                                                        // CSBuildMemberListBase.cs:43
+			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // CSBuildMemberListBase.cs:43
+			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // CSBuildMemberListBase.cs:43
+			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // CSBuildMemberListBase.cs:43
+			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // CSBuildMemberListBase.cs:43
 			//- Constructor
+		}
+
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
 		}
 
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			ClearSection();                                                                                                                          // CSBuildMemberListSection.cs:186
-			this.WriteSection(this.Report);                                                                                                          // CSBuildMemberListSection.cs:237
-			this.WriteSection(this.Impressions);                                                                                                     // CSBuildMemberListSection.cs:237
-			this.WriteSection(this.FindingsRightBreast);                                                                                             // CSBuildMemberListSection.cs:237
-			this.WriteSection(this.FindingsLeftBreast);                                                                                              // CSBuildMemberListSection.cs:237
-			this.WriteSection(this.RelatedResources);                                                                                                // CSBuildMemberListSection.cs:237
-			this.WriteSection(this.Recommendations);                                                                                                 // CSBuildMemberListSection.cs:237
+			ClearSection();                                                                                                                          // CSBuildMemberListSection.cs:182
+			this.WriteSection(this.Report);                                                                                                          // CSBuildMemberListBase.cs:46
+			this.WriteSection(this.Impressions);                                                                                                     // CSBuildMemberListBase.cs:46
+			this.WriteSection(this.FindingsRightBreast);                                                                                             // CSBuildMemberListBase.cs:46
+			this.WriteSection(this.FindingsLeftBreast);                                                                                              // CSBuildMemberListBase.cs:46
+			this.WriteSection(this.RelatedResources);                                                                                                // CSBuildMemberListBase.cs:46
+			this.WriteSection(this.Recommendations);                                                                                                 // CSBuildMemberListBase.cs:46
 			//- WriteCode
 		}
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadSection(this.Report);                                                                                                           // CSBuildMemberListSection.cs:241
-			this.ReadSection(this.Impressions);                                                                                                      // CSBuildMemberListSection.cs:241
-			this.ReadSection(this.FindingsRightBreast);                                                                                              // CSBuildMemberListSection.cs:241
-			this.ReadSection(this.FindingsLeftBreast);                                                                                               // CSBuildMemberListSection.cs:241
-			this.ReadSection(this.RelatedResources);                                                                                                 // CSBuildMemberListSection.cs:241
-			this.ReadSection(this.Recommendations);                                                                                                  // CSBuildMemberListSection.cs:241
+			this.ReadSection(this.Report);                                                                                                           // CSBuildMemberListBase.cs:49
+			this.ReadSection(this.Impressions);                                                                                                      // CSBuildMemberListBase.cs:49
+			this.ReadSection(this.FindingsRightBreast);                                                                                              // CSBuildMemberListBase.cs:49
+			this.ReadSection(this.FindingsLeftBreast);                                                                                               // CSBuildMemberListBase.cs:49
+			this.ReadSection(this.RelatedResources);                                                                                                 // CSBuildMemberListBase.cs:49
+			this.ReadSection(this.Recommendations);                                                                                                  // CSBuildMemberListBase.cs:49
 			//- ReadCode
 		}
 

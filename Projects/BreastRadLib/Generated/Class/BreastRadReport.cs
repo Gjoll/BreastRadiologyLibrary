@@ -60,8 +60,18 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
+		}
+
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
@@ -70,6 +80,7 @@ namespace BreastRadLib
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode

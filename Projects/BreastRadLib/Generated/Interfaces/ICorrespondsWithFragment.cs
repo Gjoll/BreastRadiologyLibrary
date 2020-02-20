@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // CSBuildMemberListCodedValue.cs:208
+		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // CSBuildMemberListBase.cs:34
 		//- Fields
 
 		//+ Methods

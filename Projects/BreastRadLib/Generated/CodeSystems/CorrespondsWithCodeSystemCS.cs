@@ -142,36 +142,50 @@ namespace BreastRadLib
 		public static Coding Code_Scinti = new Coding(System, "Scinti", "Scinti");                                                                // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// size < mammo
+		/// 
 		/// Valid for the following modalities: US MRI NM.
 		/// </summary>
 		public static Coding Code_SizeLessThanMammo = new Coding(System, "Size<Mammo", "Size < mammo");                                           // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// size < MRI
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_SizeLessThanMRI = new Coding(System, "Size<MRI", "Size < MRI");                                                 // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// size < palp
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SizeLessThanPalp = new Coding(System, "Size<Palp", "Size < palp");                                              // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// size < US
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_SizeLessThanUS = new Coding(System, "Size<US", "Size < US");                                                    // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// size > mammo
+		/// 
 		/// Valid for the following modalities: US MRI NM.
 		/// </summary>
 		public static Coding Code_SizeGreaterThanMammo = new Coding(System, "Size>Mammo", "Size > mammo");                                        // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// size > MRI
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_SizeGreaterThanMRI = new Coding(System, "Size>MRI", "Size > MRI");                                              // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// size > palp
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SizeGreaterThanPalp = new Coding(System, "Size>Palp", "Size > palp");                                           // CSBuilder.cs:372
@@ -184,6 +198,8 @@ namespace BreastRadLib
 		public static Coding Code_SkinMarker = new Coding(System, "SkinMarker", "Skin marker");                                                   // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// Surgery
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Surgery = new Coding(System, "Surgery", "Surgery");                                                             // CSBuilder.cs:372

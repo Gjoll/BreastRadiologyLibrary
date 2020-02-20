@@ -26,9 +26,11 @@ namespace BreastRadLib
         {
         }
 
-        public virtual void Init(BreastRadiologyDocument doc, Base resource)
+        public virtual void Init(BreastRadiologyDocument doc, Base resource = null)
         {
             this.doc = doc;
+            if (resource == null)
+                return;
             this.resource = resource;
             this.doc.Register(this);
         }
@@ -48,6 +50,10 @@ namespace BreastRadLib
         }
 
         public virtual void Write()
+        {
+        }
+
+        public virtual void Validate()
         {
         }
 

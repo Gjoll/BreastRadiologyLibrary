@@ -24,16 +24,22 @@ namespace BreastRadLib
 		public static Coding Code_DifferentialDiagnosis = new Coding(System, "DifferentialDiagnosis", "Differential diagnosis");                  // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// Likely represents
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_LikelyRepresents = new Coding(System, "LikelyRepresents", "Likely represents");                                 // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// Most likely
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MostLikely = new Coding(System, "MostLikely", "Most likely");                                                   // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// Resembles
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Resembles = new Coding(System, "Resembles", "Resembles");                                                       // CSBuilder.cs:372

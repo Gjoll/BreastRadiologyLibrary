@@ -64,9 +64,21 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
+		}
+
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode
@@ -74,6 +86,7 @@ namespace BreastRadLib
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode

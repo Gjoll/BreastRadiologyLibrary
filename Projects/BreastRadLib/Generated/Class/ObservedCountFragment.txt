@@ -1,17 +1,27 @@
 		//+ Fields
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListCodedValue.cs:214
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:40
 		//- Fields
 
 			//+ Constructor
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListCodedValue.cs:217
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:43
 			//- Constructor
 
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
+
+			//+ WriteCodeStart
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListBase.cs:46
 			//- WriteCode
 
+			//+ ReadCodeStart
+			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListBase.cs:49
 			//- ReadCode
 
 			//+ Methods

@@ -20,10 +20,10 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, IFindingBreastFragment
 	{
 		//+ Fields
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSBuildMemberListReference.cs:120
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSBuildMemberListReference.cs:120
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSBuildMemberListReference.cs:120
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSBuildMemberListReference.cs:120
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:40
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSBuildMemberListBase.cs:40
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:40
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:40
 		//- Fields
 
 		/// <summary>
@@ -64,34 +64,46 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // CSDefineBase.cs:182
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSBuildMemberListReference.cs:123
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSBuildMemberListReference.cs:123
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:43
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSBuildMemberListBase.cs:43
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:43
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:43
 			//- Constructor
+		}
+
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
 		}
 
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // CSBuildMemberListReference.cs:126
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSBuildMemberListReference.cs:126
-			this.WriteHasMember(this.NMFinding);                                                                                                     // CSBuildMemberListReference.cs:126
-			this.WriteHasMember(this.USFinding);                                                                                                     // CSBuildMemberListReference.cs:126
+			this.WriteHasMember(this.MGFinding);                                                                                                     // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.NMFinding);                                                                                                     // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.USFinding);                                                                                                     // CSBuildMemberListBase.cs:46
 			//- WriteCode
 		}
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // CSBuildMemberListReference.cs:129
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSBuildMemberListReference.cs:129
-			this.ReadHasMember(this.NMFinding);                                                                                                      // CSBuildMemberListReference.cs:129
-			this.ReadHasMember(this.USFinding);                                                                                                      // CSBuildMemberListReference.cs:129
+			this.ReadHasMember(this.MGFinding);                                                                                                      // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.NMFinding);                                                                                                      // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.USFinding);                                                                                                      // CSBuildMemberListBase.cs:49
 			//- ReadCode
 		}
 

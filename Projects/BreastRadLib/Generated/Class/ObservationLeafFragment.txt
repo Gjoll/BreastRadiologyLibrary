@@ -4,9 +4,19 @@
 			//+ Constructor
 			//- Constructor
 
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
+
+			//+ WriteCodeStart
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode
 
+			//+ ReadCodeStart
+			//- ReadCodeStart
 			//+ ReadCode
 			//- ReadCode
 

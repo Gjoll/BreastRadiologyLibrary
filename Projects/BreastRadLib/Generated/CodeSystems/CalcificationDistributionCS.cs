@@ -40,16 +40,25 @@ namespace BreastRadLib
 		public static Coding Code_DiffuseDistribution = new Coding(System, "DiffuseDistribution", "Diffuse distribution");                        // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
-		/// Grouped (or clustered) calcifications, which are defined as at least five calcifications within 1 cm3 of tissue, are most often of intermediate concern for malignancy of the breast.
-		/// Linear calcifications, which suggest deposits in a duct, are suspicious for malignancy.
-		/// [https://www.ajronline.org/doi/full/10.2214/AJR.10.5732]
+		/// This term should be used when relatively few calcifications occupy a
+		/// small portion of breast tissue.
+		/// The lower limit for use of this descriptor is usually when 5 calcifications
+		/// are grouped within 1 cm of each other or when a definable pattern is identified.
+		/// The upper limit for use of this descriptor is when larger numbers of
+		/// 
+		/// calcifications are grouped within 2 cm of each other.
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 74]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_GroupedDistribution = new Coding(System, "GroupedDistribution", "Grouped distribution");                        // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
-		/// Linear distribution is typically seen when DCIS fills the entire duct and its branches with calcifications.
-		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
+		/// These are calcifications arrayed in a line.
+		/// This distribution may elevate suspicion for malignancy, as it suggests deposits in a duct.
+		/// Note that both vascular and large rod-like calcifications also are usually linear in distribution, but that these typically
+		/// 
+		/// benign calcifications have a characteristically benign morphology.
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_LinearDistribution = new Coding(System, "LinearDistribution", "Linear distribution");                           // CSBuilder.cs:372
@@ -67,8 +76,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Scattered distributions are also called diffuse distributions.
 		/// These are calcifications that are distributed randomly throughout the breast.
-		/// Punctate and
-		/// amorphous calcifications in this distribution are almost always benign, especially
+		/// Punctate and amorphous calcifications in this distribution are almost always benign, especially
 		/// if bilateral (in both breasts).
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 70]
 		/// Valid for the following modalities: MG.

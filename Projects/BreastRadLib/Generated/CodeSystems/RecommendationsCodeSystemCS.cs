@@ -834,6 +834,8 @@ namespace BreastRadLib
 		public static Coding Code_UltrasoundWithPossibleAddlitonalViews = new Coding(System, "UltrasoundWithPossibleAddlitonalViews", "Ultrasound with possible addlitonal views");// CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// Unspecified / other
+		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_UnspecifiedOther = new Coding(System, "Unspecified/Other", "Unspecified / other");                              // CSBuilder.cs:372

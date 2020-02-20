@@ -16,6 +16,8 @@ namespace FireFragger
         protected CodeBlockNested LocalClassDefs => fragBase.SubClassEditor?.Blocks.Find("LocalClassDefs", false);
         protected CodeBlockNested ClassConstructor => fragBase.ClassEditor?.Blocks.Find("Constructor", false);
         protected CodeBlockNested ClassMethods => fragBase.ClassEditor?.Blocks.Find("Methods", false);
+        protected CodeBlockNested ClassValidateCodeStart => fragBase.ClassEditor?.Blocks.Find("ValidateCodeStart", false);
+        protected CodeBlockNested ClassValidateCode => fragBase.ClassEditor?.Blocks.Find("ValidateCode", false);
         protected CodeBlockNested ClassWriteCodeStart => fragBase.ClassEditor?.Blocks.Find("WriteCodeStart", false);
         protected CodeBlockNested ClassWriteCode => fragBase.ClassEditor?.Blocks.Find("WriteCode", false);
         protected CodeBlockNested ClassReadCodeStart => fragBase.ClassEditor?.Blocks.Find("ReadCodeStart", false);

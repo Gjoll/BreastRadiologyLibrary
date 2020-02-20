@@ -25,16 +25,20 @@ namespace BreastRadLib
 		/// <summary>
 		/// (historically, "isodense")
 		/// X-ray attenuation of the mass is the same as the expected attenuation of an equal volume of
-		/// fibroglandular breast tissue.
 		/// 
-		/// -- -- Bi-Rads® Atlas — Mammography Fifth Ed. 2013
+		/// fibroglandular breast tissue.
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_EqualDensity = new Coding(System, "EqualDensity", "Equal density");                                             // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
-		/// The mammogram shows a lot of fatty tissue  meaning the density of the breast is likely low density.
+		/// This includes all masses containing fat, such as oil cyst, lipoma or galactocele, as well as mixed
+		/// density masses such as hamartoma.
+		/// A fat-containing mass will almost always represent a
 		/// 
+		/// benign mass.
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_FatContaining = new Coding(System, "FatContaining", "Fat containing");                                          // CSBuilder.cs:372
@@ -50,8 +54,14 @@ namespace BreastRadLib
 		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // CSBuilder.cs:372
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
-		/// The mammogram shows the breast is low density, containg a lot of fatty tissue.
+		/// X-ray attenuation of the mass is less than the expected attenuation of an equal volume of
+		/// fibroglandular breast tissue.
+		/// A low density mass may be a group of microcysts.
+		/// If such a finding
+		/// is identified at mammography, it may very well not be malignant but appropriately may
 		/// 
+		/// be worked up.
+		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_LowDensity = new Coding(System, "LowDensity", "Low density");                                                   // CSBuilder.cs:372

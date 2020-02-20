@@ -15,28 +15,28 @@ namespace BreastRadLib.AbnormalityForeignObjectLocal
 	/// Accessor class for 'abnormalityForeignObjectType'
 	/// [Fhir Element 'Observation.component:abnormalityForeignObjectType]'
 	/// </summary>
-	public class AbnormalityForeignObjectType_Accessor : MemberListCodedValueBase<CodeableConcept>                                             // CSBuildMemberListCodedValue.cs:69
-	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:70
-	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:71
+	public class AbnormalityForeignObjectType_Accessor : MemberListCodedValueBase<CodeableConcept>                                             // CSBuildMemberListCodedValue.cs:65
+	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:66
+	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:67
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // CSBuildMemberListCodedValue.cs:108
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:73
-	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:74
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:95
+	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // CSBuildMemberListCodedValue.cs:104
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:69
+	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:70
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:91
 	    /// <summary>
 	    /// Set AbnormalityForeignObjectType value
 	    /// </summary>
-	    public void Set(ForeignObjectVS.TCoding value) => this.SetFirst(value);                                                                // CSBuildMemberListCodedValue.cs:99
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:76
+	    public void Set(ForeignObjectVS.TCoding value) => this.SetFirst(value);                                                                // CSBuildMemberListCodedValue.cs:95
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:72
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public AbnormalityForeignObjectType_Accessor(BreastRadiologyDocument doc) : base("AbnormalityForeignObjectType_Accessor")              // CSBuildMemberListCodedValue.cs:80
-	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:81
-	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityForeignObjectType"));// CSBuildMemberListCodedValue.cs:82
-	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:84
-	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:85
+	    public AbnormalityForeignObjectType_Accessor(BreastRadiologyDocument doc) : base("AbnormalityForeignObjectType_Accessor")              // CSBuildMemberListCodedValue.cs:76
+	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:77
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityForeignObjectType"));// CSBuildMemberListCodedValue.cs:78
+	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:80
+	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:81
 	//- LocalClassDefs
 }

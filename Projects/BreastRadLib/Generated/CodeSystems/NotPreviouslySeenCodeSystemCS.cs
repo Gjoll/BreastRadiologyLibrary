@@ -15,6 +15,8 @@ namespace BreastRadLib
 		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NotPreviouslySeenCodeSystemCS";                                 // CSBuilder.cs:346
 		                                                                                                                                          // CSBuilder.cs:358
 		/// <summary>
+		/// Not previously seen on clinical exam.
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_ClinicalExam = new Coding(System, "ClinicalExam", "Clinical exam");                                             // CSBuilder.cs:372

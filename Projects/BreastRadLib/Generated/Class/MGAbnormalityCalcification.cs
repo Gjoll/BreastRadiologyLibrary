@@ -34,19 +34,19 @@ namespace BreastRadLib
 	public class MGAbnormalityCalcification : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, INotPreviouslySeenComponentFragment, IObservedCountFragment, IObservedSizeFragment, IObservedDistributionFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSBuildMemberListCodedValue.cs:214
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSBuildMemberListCodedValue.cs:214
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSBuildMemberListCodedValue.cs:214
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListCodedValue.cs:214
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSBuildMemberListCodedValue.cs:214
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSBuildMemberListCodedValue.cs:214
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSBuildMemberListCodedValue.cs:214
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSBuildMemberListCodedValue.cs:214
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSBuildMemberListCodedValue.cs:214
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildMemberListReference.cs:120
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListReference.cs:120
-		public CalcificationType_Accessor CalcificationType { get ; protected set; }                                                              // CSBuildMemberListCodedValue.cs:214
-		public CalcificationDistribution_Accessor CalcificationDistribution { get ; protected set; }                                              // CSBuildMemberListCodedValue.cs:214
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSBuildMemberListBase.cs:40
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSBuildMemberListBase.cs:40
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSBuildMemberListBase.cs:40
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:40
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSBuildMemberListBase.cs:40
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSBuildMemberListBase.cs:40
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSBuildMemberListBase.cs:40
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSBuildMemberListBase.cs:40
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSBuildMemberListBase.cs:40
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildMemberListBase.cs:40
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListBase.cs:40
+		public CalcificationType_Accessor CalcificationType { get ; protected set; }                                                              // CSBuildMemberListBase.cs:40
+		public CalcificationDistribution_Accessor CalcificationDistribution { get ; protected set; }                                              // CSBuildMemberListBase.cs:40
 		//- Fields
 
 		/// <summary>
@@ -87,62 +87,86 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                                 // CSDefineBase.cs:182
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSBuildMemberListCodedValue.cs:217
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSBuildMemberListCodedValue.cs:217
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSBuildMemberListCodedValue.cs:217
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListCodedValue.cs:217
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSBuildMemberListCodedValue.cs:217
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSBuildMemberListCodedValue.cs:217
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSBuildMemberListCodedValue.cs:217
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSBuildMemberListCodedValue.cs:217
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSBuildMemberListCodedValue.cs:217
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildMemberListReference.cs:123
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListReference.cs:123
-			this.CalcificationType = new CalcificationType_Accessor(doc);                                                                            // CSBuildMemberListCodedValue.cs:217
-			this.CalcificationDistribution = new CalcificationDistribution_Accessor(doc);                                                            // CSBuildMemberListCodedValue.cs:217
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSBuildMemberListBase.cs:43
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSBuildMemberListBase.cs:43
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSBuildMemberListBase.cs:43
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:43
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSBuildMemberListBase.cs:43
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSBuildMemberListBase.cs:43
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSBuildMemberListBase.cs:43
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSBuildMemberListBase.cs:43
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSBuildMemberListBase.cs:43
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildMemberListBase.cs:43
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListBase.cs:43
+			this.CalcificationType = new CalcificationType_Accessor(doc);                                                                            // CSBuildMemberListBase.cs:43
+			this.CalcificationDistribution = new CalcificationDistribution_Accessor(doc);                                                            // CSBuildMemberListBase.cs:43
 			//- Constructor
+		}
+
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
 		}
 
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:176
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsChanges);                                                                                                    // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.ObsSize);                                                                                                       // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.ObsDistribution);                                                                                               // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSBuildMemberListCodedValue.cs:220
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildMemberListReference.cs:126
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListReference.cs:126
-			this.WriteComponent(this.CalcificationType);                                                                                             // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.CalcificationDistribution);                                                                                     // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.ObsChanges);                                                                                                    // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.ObsSize);                                                                                                       // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.ObsDistribution);                                                                                               // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.CalcificationType);                                                                                             // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.CalcificationDistribution);                                                                                     // CSBuildMemberListBase.cs:46
 			//- WriteCode
 		}
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsChanges);                                                                                                     // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.ObsSize);                                                                                                        // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.ObsDistribution);                                                                                                // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSBuildMemberListCodedValue.cs:223
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildMemberListReference.cs:129
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListReference.cs:129
-			this.ReadComponent(this.CalcificationType);                                                                                              // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.CalcificationDistribution);                                                                                      // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.ObsChanges);                                                                                                     // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.ObsSize);                                                                                                        // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.ObsDistribution);                                                                                                // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.CalcificationType);                                                                                              // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.CalcificationDistribution);                                                                                      // CSBuildMemberListBase.cs:49
 			//- ReadCode
 		}
 

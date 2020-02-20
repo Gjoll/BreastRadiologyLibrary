@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // CSBuildMemberListReference.cs:114
+		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // CSBuildMemberListBase.cs:34
 		//- Fields
 
 		//+ Methods

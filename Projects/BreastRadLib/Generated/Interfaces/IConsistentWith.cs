@@ -16,8 +16,8 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		Value_Accessor Value { get ; }                                                                                                            // CSBuildMemberListCodedValue.cs:208
-		Qualifier_Accessor Qualifier { get ; }                                                                                                    // CSBuildMemberListCodedValue.cs:208
+		Value_Accessor Value { get ; }                                                                                                            // CSBuildMemberListBase.cs:34
+		Qualifier_Accessor Qualifier { get ; }                                                                                                    // CSBuildMemberListBase.cs:34
 		//- Fields
 
 		//+ Methods

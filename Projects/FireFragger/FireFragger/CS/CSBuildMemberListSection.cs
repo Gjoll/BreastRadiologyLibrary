@@ -12,16 +12,12 @@ namespace FireFragger
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class CSBuildMemberListSection : CSCodeBlockDefinitions
+    internal class CSBuildMemberListSection : CSBuildMemberListBase
     {
-        ElementTreeNode memberNode;
-        String MemberName => memberNode.Path.LastPathPart().ToMachineName();
-
         public CSBuildMemberListSection(CSBuilder csBuilder,
             SDInfo fragBase,
-            ElementTreeNode memberNode) : base(csBuilder, fragBase)
+            ElementTreeNode memberNode) : base(csBuilder, fragBase, memberNode)
         {
-            this.memberNode = memberNode;
         }
 
 
@@ -218,28 +214,9 @@ namespace FireFragger
                     brClass = BRClass(references[0]);
                 else
                     brClass = "ResourceBase";
-
                 String sectionClassName =
                     DefineSectionLocalClass(sectionSlice, code, max, min, title, propertyName, references, brClass);
-
-                this.ClassFields
-                    .AppendCode($"public {sectionClassName} {propertyName} {{ get ; protected set; }}")
-                    ;
-                this.ClassConstructor
-                    .AppendCode($"this.{propertyName} = new {sectionClassName}(doc);")
-                    ;
-                String className = CSBuilder.ClassName(fragBase);
-                this.InterfaceFields
-                    .AppendCode($"{sectionClassName} {propertyName} {{ get ; }}")
-                    ;
-
-                this.ClassWriteCode
-                    .AppendCode($"this.WriteSection(this.{propertyName});")
-                    ;
-
-                this.ClassReadCode
-                    .AppendCode($"this.ReadSection(this.{propertyName});")
-                    ;
+                this.DefineCommon(sectionClassName, propertyName, "Section");
             }
         }
     }

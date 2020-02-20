@@ -4,9 +4,19 @@
 			//+ Constructor
 			//- Constructor
 
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
+
+			//+ WriteCodeStart
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode
 
+			//+ ReadCodeStart
+			//- ReadCodeStart
 			//+ ReadCode
 			//- ReadCode
 

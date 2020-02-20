@@ -5,11 +5,7 @@ using System.Text;
 
 namespace BreastRadLib
 {
-    public interface IImpressionBase : IResourceBase
-    {
-    }
-
-    public class ClinicalImpressionBase : ResourceBase, IImpressionBase
+    public class ClinicalImpressionBase : ResourceBase
     {
         public ClinicalImpression Resource => (ClinicalImpression)this.resource;
 

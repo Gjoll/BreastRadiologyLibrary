@@ -16,8 +16,8 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		CalcificationType_Accessor CalcificationType { get ; }                                                                                    // CSBuildMemberListCodedValue.cs:208
-		CalcificationDistribution_Accessor CalcificationDistribution { get ; }                                                                    // CSBuildMemberListCodedValue.cs:208
+		CalcificationType_Accessor CalcificationType { get ; }                                                                                    // CSBuildMemberListBase.cs:34
+		CalcificationDistribution_Accessor CalcificationDistribution { get ; }                                                                    // CSBuildMemberListBase.cs:34
 		//- Fields
 
 		//+ Methods

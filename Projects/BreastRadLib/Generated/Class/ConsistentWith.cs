@@ -22,8 +22,8 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment
 	{
 		//+ Fields
-		public Value_Accessor Value { get ; protected set; }                                                                                      // CSBuildMemberListCodedValue.cs:214
-		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // CSBuildMemberListCodedValue.cs:214
+		public Value_Accessor Value { get ; protected set; }                                                                                      // CSBuildMemberListBase.cs:40
+		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:40
 		//- Fields
 
 		/// <summary>
@@ -64,29 +64,42 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // CSDefineBase.cs:182
-			this.Value = new Value_Accessor(doc);                                                                                                    // CSBuildMemberListCodedValue.cs:217
-			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // CSBuildMemberListCodedValue.cs:217
+			this.Value = new Value_Accessor(doc);                                                                                                    // CSBuildMemberListBase.cs:43
+			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:43
 			//- Constructor
+		}
+
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
 		}
 
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:176
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.Qualifier);                                                                                                     // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.Value);                                                                                                         // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.Qualifier);                                                                                                     // CSBuildMemberListBase.cs:46
 			//- WriteCode
 		}
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.Qualifier);                                                                                                      // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.Value);                                                                                                          // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.Qualifier);                                                                                                      // CSBuildMemberListBase.cs:49
 			//- ReadCode
 		}
 

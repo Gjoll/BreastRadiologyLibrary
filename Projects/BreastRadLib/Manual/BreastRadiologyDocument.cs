@@ -15,6 +15,19 @@ namespace BreastRadLib
     public class BreastRadiologyDocument
     {
         /// <summary>
+        /// Reference to Subject of document. This is propogated to all observations in this document that reference
+        /// a subject.
+        /// </summary>
+        public ResourceReference Subject { get; set; }
+
+
+        /// <summary>
+        /// Reference to Encounter of document. This is propogated to all observations in this document that reference
+        /// an encounter.
+        /// </summary>
+        public ResourceReference Encounter { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         Dictionary<Base, BaseBase> items = new Dictionary<Base, BaseBase>();
@@ -24,7 +37,7 @@ namespace BreastRadLib
         /// bundle to allow quick access of each item.
         /// </summary>
         public ResourceBag ResourceBag { get; private set; }
-        
+
         /// <summary>
         /// Fhir documents main composition item. This is the 'index' of the
         /// fhir document, and must be the first item in the bundle.
@@ -40,7 +53,7 @@ namespace BreastRadLib
 
         public void Register(BaseBase baseItem)
         {
-            this.ResourceBag.AddResource((DomainResource) baseItem.BaseResource);
+            this.ResourceBag.AddResource((DomainResource)baseItem.BaseResource);
             this.items.Add(baseItem.BaseResource, baseItem);
         }
 
@@ -83,6 +96,9 @@ namespace BreastRadLib
             {
                 baseItem.Read(); ;
             }
+
+            retVal.Subject = retVal.Index.Resource.Subject;
+            retVal.Encounter = retVal.Index.Resource.Encounter;
             return retVal;
         }
 
@@ -110,8 +126,20 @@ namespace BreastRadLib
                     profile,
                     entry.Resource);
                 if (item == null)
-                    item = new ResourceBase(this, (DomainResource) entry.Resource);
+                    item = new ResourceBase(this, (DomainResource)entry.Resource);
             }
+        }
+
+        /// <summary>
+        /// Validate resource.
+        /// Throw exception if obvious error.
+        /// </summary>
+        public void Validate()
+        {
+            //$if (this.Subject == null)
+            //$    throw new Exception($"Document subject not set");
+            //$if (this.Encounter == null)
+            //$    throw new Exception($"Document endounter not set");
         }
 
         /// <summary>
@@ -120,6 +148,7 @@ namespace BreastRadLib
         /// <returns></returns>
         public Bundle Write()
         {
+            this.Validate();
             Bundle retVal = new Bundle();
             retVal.Type = Bundle.BundleType.Document;
 
@@ -128,7 +157,7 @@ namespace BreastRadLib
                 baseItem.Write();
                 if (String.IsNullOrEmpty(baseItem.Id) == true)
                     throw new Exception($"Error saving resource. Resource has no id!");
-                retVal.AddResourceEntry((Resource) baseItem.BaseResource, baseItem.Id);
+                retVal.AddResourceEntry((Resource)baseItem.BaseResource, baseItem.Id);
             }
 
             // Composition must be written first....

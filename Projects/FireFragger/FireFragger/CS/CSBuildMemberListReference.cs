@@ -12,16 +12,12 @@ namespace FireFragger
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class CSBuildMemberListReference : CSCodeBlockDefinitions
+    internal class CSBuildMemberListReference : CSBuildMemberListBase
     {
-        ElementTreeNode memberNode;
-        String MemberName => memberNode.Path.LastPathPart().ToMachineName();
-
         public CSBuildMemberListReference(CSBuilder csBuilder,
             SDInfo fragBase,
-            ElementTreeNode memberNode) : base(csBuilder, fragBase)
+            ElementTreeNode memberNode) : base(csBuilder, fragBase, memberNode)
         {
-            this.memberNode = memberNode;
         }
 
         String DefineLocalClass(ElementTreeSlice memberSlice,
@@ -110,25 +106,7 @@ namespace FireFragger
 
                 String interfaceName = CSBuilder.InterfaceName(fragBase);
                 String className = CSBuilder.ClassName(fragBase);
-                this.InterfaceFields
-                    .AppendCode($"{memberClassName} {propertyName} {{ get ; }}")
-                    ;
-
-                if (this.fragBase.ClassEditor != null)
-                {
-                    this.ClassFields
-                        .AppendCode($"public {memberClassName} {propertyName} {{ get ; protected set; }}")
-                        ;
-                    this.ClassConstructor
-                        .AppendCode($"this.{propertyName} = new {memberClassName}(doc);")
-                        ;
-                    this.ClassWriteCode
-                        .AppendCode($"this.Write{MemberName}(this.{propertyName});")
-                        ;
-                    this.ClassReadCode
-                        .AppendCode($"this.Read{MemberName}(this.{propertyName});")
-                        ;
-                }
+                this.DefineCommon(memberClassName, propertyName, MemberName);
             }
         }
     }

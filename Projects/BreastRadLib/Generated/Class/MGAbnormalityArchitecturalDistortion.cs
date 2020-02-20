@@ -32,17 +32,17 @@ namespace BreastRadLib
 	public class MGAbnormalityArchitecturalDistortion : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, ICommonComponentsFragment, IShapeComponentsFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IAssociatedFeaturesHasMemberFragment, IConsistentWithHasMemberFragment
 	{
 		//+ Fields
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSBuildMemberListCodedValue.cs:214
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSBuildMemberListCodedValue.cs:214
-		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSBuildMemberListCodedValue.cs:214
-		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSBuildMemberListCodedValue.cs:214
-		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSBuildMemberListCodedValue.cs:214
-		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSBuildMemberListCodedValue.cs:214
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSBuildMemberListCodedValue.cs:214
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSBuildMemberListCodedValue.cs:214
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSBuildMemberListCodedValue.cs:214
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildMemberListReference.cs:120
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListReference.cs:120
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSBuildMemberListBase.cs:40
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSBuildMemberListBase.cs:40
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSBuildMemberListBase.cs:40
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSBuildMemberListBase.cs:40
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSBuildMemberListBase.cs:40
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:40
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSBuildMemberListBase.cs:40
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSBuildMemberListBase.cs:40
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSBuildMemberListBase.cs:40
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // CSBuildMemberListBase.cs:40
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListBase.cs:40
 		//- Fields
 
 		/// <summary>
@@ -83,55 +83,77 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");                       // CSDefineBase.cs:182
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSBuildMemberListCodedValue.cs:217
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSBuildMemberListCodedValue.cs:217
-			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSBuildMemberListCodedValue.cs:217
-			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSBuildMemberListCodedValue.cs:217
-			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSBuildMemberListCodedValue.cs:217
-			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSBuildMemberListCodedValue.cs:217
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSBuildMemberListCodedValue.cs:217
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSBuildMemberListCodedValue.cs:217
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSBuildMemberListCodedValue.cs:217
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildMemberListReference.cs:123
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListReference.cs:123
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSBuildMemberListBase.cs:43
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSBuildMemberListBase.cs:43
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSBuildMemberListBase.cs:43
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSBuildMemberListBase.cs:43
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSBuildMemberListBase.cs:43
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:43
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSBuildMemberListBase.cs:43
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSBuildMemberListBase.cs:43
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSBuildMemberListBase.cs:43
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // CSBuildMemberListBase.cs:43
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListBase.cs:43
 			//- Constructor
+		}
+
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
 		}
 
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsChanges);                                                                                                    // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.Orientation);                                                                                                   // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.Shape);                                                                                                         // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.Margin);                                                                                                        // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.MgDensity);                                                                                                     // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSBuildMemberListCodedValue.cs:220
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildMemberListReference.cs:126
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListReference.cs:126
+			this.WriteComponent(this.ObsChanges);                                                                                                    // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.Orientation);                                                                                                   // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.Shape);                                                                                                         // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.Margin);                                                                                                        // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.MgDensity);                                                                                                     // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListBase.cs:46
 			//- WriteCode
 		}
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsChanges);                                                                                                     // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.Orientation);                                                                                                    // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.Shape);                                                                                                          // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.Margin);                                                                                                         // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.MgDensity);                                                                                                      // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSBuildMemberListCodedValue.cs:223
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildMemberListReference.cs:129
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListReference.cs:129
+			this.ReadComponent(this.ObsChanges);                                                                                                     // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.Orientation);                                                                                                    // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.Shape);                                                                                                          // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.Margin);                                                                                                         // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.MgDensity);                                                                                                      // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListBase.cs:49
 			//- ReadCode
 		}
 

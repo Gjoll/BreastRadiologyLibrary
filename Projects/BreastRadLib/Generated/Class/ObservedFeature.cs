@@ -24,8 +24,8 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, IBreastBodyLocationRequiredFragment, IObservedCountFragment
 	{
 		//+ Fields
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListCodedValue.cs:214
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSBuildMemberListCodedValue.cs:214
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:40
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSBuildMemberListBase.cs:40
 		//- Fields
 
 		/// <summary>
@@ -66,29 +66,43 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:182
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListCodedValue.cs:217
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSBuildMemberListCodedValue.cs:217
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:43
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSBuildMemberListBase.cs:43
 			//- Constructor
+		}
+
+		public override void Validate()
+		{
+			base.Validate();
+			//+ ValidateCodeStart
+			//- ValidateCodeStart
+			//+ ValidateCode
+			//- ValidateCode
 		}
 
 		public override void Write()
 		{
+			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:176
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListCodedValue.cs:220
-			this.WriteComponent(this.FeatureType);                                                                                                   // CSBuildMemberListCodedValue.cs:220
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.FeatureType);                                                                                                   // CSBuildMemberListBase.cs:46
 			//- WriteCode
 		}
 
 		public override void Read()
 		{
+			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListCodedValue.cs:223
-			this.ReadComponent(this.FeatureType);                                                                                                    // CSBuildMemberListCodedValue.cs:223
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.FeatureType);                                                                                                    // CSBuildMemberListBase.cs:49
 			//- ReadCode
 		}
 
