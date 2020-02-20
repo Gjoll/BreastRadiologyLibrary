@@ -134,12 +134,28 @@ namespace BreastRadLib
         /// Validate resource.
         /// Throw exception if obvious error.
         /// </summary>
-        public void Validate()
+        public bool Validate(StringBuilder sb)
         {
-            //$if (this.Subject == null)
-            //$    throw new Exception($"Document subject not set");
-            //$if (this.Encounter == null)
-            //$    throw new Exception($"Document endounter not set");
+            bool retVal = true;
+            if (this.Subject == null)
+            {
+                sb.Append($"BreastRadiologyDocument.Subject not set");
+                retVal = false;
+            }
+
+            if (this.Encounter == null)
+            {
+                sb.Append($"BreastRadiologyDocument.Encounter not set");
+                retVal = false;
+            }
+
+            foreach (BaseBase baseItem in this.items.Values)
+            {
+                if (baseItem.Validate(sb) == false)
+                    retVal = false;
+            }
+
+            return retVal;
         }
 
         /// <summary>
@@ -148,7 +164,6 @@ namespace BreastRadLib
         /// <returns></returns>
         public Bundle Write()
         {
-            this.Validate();
             Bundle retVal = new Bundle();
             retVal.Type = Bundle.BundleType.Document;
 

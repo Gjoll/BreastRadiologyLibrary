@@ -101,13 +101,29 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public override void Validate()
+		public override bool Validate(StringBuilder sb)
 		{
-			base.Validate();
+			bool retVal = true;
+			if (base.Validate(sb) == false)
+				retVal = false;
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // CSBuildMemberListBase.cs:52
+			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // CSBuildMemberListBase.cs:52
+			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // CSBuildMemberListBase.cs:52
+			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // CSBuildMemberListBase.cs:52
+			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // CSBuildMemberListBase.cs:52
+			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:52
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:52
+			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:52
+			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // CSBuildMemberListBase.cs:52
+			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // CSBuildMemberListBase.cs:52
+			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // CSBuildMemberListBase.cs:52
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // CSBuildMemberListBase.cs:52
+			if (this.FibroAdenomaType.Validate(sb) == false) retVal = false;                                                                         // CSBuildMemberListBase.cs:52
 			//- ValidateCode
+			return retVal;
 		}
 
 		public override void Write()

@@ -70,13 +70,22 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public override void Validate()
+		public override bool Validate(StringBuilder sb)
 		{
-			base.Validate();
+			bool retVal = true;
+			if (base.Validate(sb) == false)
+				retVal = false;
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // CSBuildMemberListBase.cs:52
+			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // CSBuildMemberListBase.cs:52
+			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // CSBuildMemberListBase.cs:52
+			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // CSBuildMemberListBase.cs:52
+			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // CSBuildMemberListBase.cs:52
+			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:52
 			//- ValidateCode
+			return retVal;
 		}
 
 		public override void Write()

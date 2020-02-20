@@ -53,8 +53,9 @@ namespace BreastRadLib
         {
         }
 
-        public virtual void Validate()
+        public virtual bool Validate(StringBuilder sb)
         {
+            return true;
         }
 
         public virtual void Read()

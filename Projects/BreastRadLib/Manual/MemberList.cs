@@ -87,12 +87,22 @@ namespace BreastRadLib
         /// <summary>
         /// Validate list.
         /// </summary>
-        public void Validate()
+        public bool Validate(StringBuilder sb)
         {
-            //if (this.items.Count < this.Min)
-            //    throw new Exception($"{this.listName} min cardinality is invalid. Found {this.items.Count} items, expected at least {this.Min} items.");
-            //if ((this.Max >= 0) && (this.items.Count > this.Max))
-            //    throw new Exception($"{this.listName} max cardinality is invalid. Found {this.items.Count} items, expected less than {this.Max} items.");
+            bool retVal = true;
+            if (this.items.Count < this.Min)
+            {
+                sb.Append($"{this.listName} min cardinality is invalid. Found {this.items.Count} items, expected at least {this.Min} items.");
+                retVal = false;
+            }
+
+            if ((this.Max >= 0) && (this.items.Count > this.Max))
+            {
+                sb.Append($"{this.listName} max cardinality is invalid. Found {this.items.Count} items, expected less than {this.Max} items.");
+                retVal = false;
+            }
+
+            return retVal;
         }
 
         /// <summary>

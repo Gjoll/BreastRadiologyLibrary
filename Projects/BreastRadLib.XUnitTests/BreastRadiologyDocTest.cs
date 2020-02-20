@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         {
             Bundle b;
             {
-                BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+                BreastRadiologyDocument doc = MakeDoc();
                 Debug.Assert(doc.Index != null);
                 {
                     BreastRadReport report = doc.Index.Report.Create();
@@ -54,14 +54,30 @@ namespace BreastRadiology.XUnitTests
         }
 
 
+        BreastRadiologyDocument MakeDoc()
+        {
+            BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+            doc.Subject = new ResourceReference { Reference = "xxyyz" };
+            doc.Encounter = new ResourceReference { Reference = "xxyyz" };
+            return doc;
+        }
 
+        [TestMethod]
+        public void Document_Validate()
+        {
+            BreastRadiologyDocument doc = MakeDoc();
+            StringBuilder sb = new StringBuilder();
+            bool retVal = doc.Validate(sb);
+            Trace.WriteLine(sb.ToString());
+            Debug.Assert(retVal == true);
+        }
 
         [TestMethod]
         public void Composition_Sections()
         {
             Bundle b;
             {
-                BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+                BreastRadiologyDocument doc = MakeDoc();
                 {
                     BreastRadReport report = doc.Index.Report.Create();
                     Assert.IsTrue(doc.Index.FindingsLeftBreast.Get() == null);
@@ -139,7 +155,7 @@ namespace BreastRadiology.XUnitTests
         {
             Bundle b;
             {
-                BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+                BreastRadiologyDocument doc = MakeDoc();
                 {
                     BreastRadReport report = doc.Index.Report.Create();
                     SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create();
@@ -173,7 +189,7 @@ namespace BreastRadiology.XUnitTests
         {
             Bundle b;
             {
-                BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
+                BreastRadiologyDocument doc = MakeDoc();
                 {
                     BreastRadReport report = doc.Index.Report.Create();
                     SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create();

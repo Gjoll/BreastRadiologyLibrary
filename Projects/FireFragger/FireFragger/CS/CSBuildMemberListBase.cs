@@ -48,6 +48,9 @@ namespace FireFragger
                 this.ClassReadCode
                     .AppendCode($"this.Read{methodSuffix}(this.{propertyName});")
                     ;
+                this.ClassValidateCode
+                    .AppendCode($"if (this.{propertyName}.Validate(sb) == false) retVal = false;")
+                    ;
             }
         }
     }

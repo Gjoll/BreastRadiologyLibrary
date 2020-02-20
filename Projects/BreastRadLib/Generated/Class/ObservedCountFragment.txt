@@ -9,6 +9,7 @@
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:52
 			//- ValidateCode
 
 			//+ WriteCodeStart

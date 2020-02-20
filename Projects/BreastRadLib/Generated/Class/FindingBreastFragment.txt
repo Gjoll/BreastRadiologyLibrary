@@ -15,6 +15,10 @@
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:52
+			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // CSBuildMemberListBase.cs:52
+			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:52
+			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:52
 			//- ValidateCode
 
 			//+ WriteCodeStart

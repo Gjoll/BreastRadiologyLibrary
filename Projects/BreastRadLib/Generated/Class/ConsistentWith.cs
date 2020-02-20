@@ -69,13 +69,18 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public override void Validate()
+		public override bool Validate(StringBuilder sb)
 		{
-			base.Validate();
+			bool retVal = true;
+			if (base.Validate(sb) == false)
+				retVal = false;
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // CSBuildMemberListBase.cs:52
+			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:52
 			//- ValidateCode
+			return retVal;
 		}
 
 		public override void Write()

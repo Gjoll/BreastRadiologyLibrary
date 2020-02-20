@@ -37,7 +37,6 @@ namespace BreastRadLib
         protected void WriteHasMember<BaseType>(MemberListReferenceBase<BaseType> hasMemberList)
              where BaseType : ObservationBase
         {
-            hasMemberList.Validate();
             foreach (BaseType item in hasMemberList.RawItems)
             {
                 this.Resource.HasMember.Add(

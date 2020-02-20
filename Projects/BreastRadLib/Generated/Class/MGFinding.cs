@@ -90,13 +90,29 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
-		public override void Validate()
+		public override bool Validate(StringBuilder sb)
 		{
-			base.Validate();
+			bool retVal = true;
+			if (base.Validate(sb) == false)
+				retVal = false;
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.AbnormalityCyst.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:52
+			if (this.AbnormalityDuct.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:52
+			if (this.AbnormalityForeignObject.Validate(sb) == false) retVal = false;                                                                 // CSBuildMemberListBase.cs:52
+			if (this.AbnormalityLymphNode.Validate(sb) == false) retVal = false;                                                                     // CSBuildMemberListBase.cs:52
+			if (this.AbnormalityMass.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:52
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // CSBuildMemberListBase.cs:52
+			if (this.AbnormalityFibroadenoma.Validate(sb) == false) retVal = false;                                                                  // CSBuildMemberListBase.cs:52
+			if (this.MGAbnormalityArchitecturalDistortion.Validate(sb) == false) retVal = false;                                                     // CSBuildMemberListBase.cs:52
+			if (this.MGAbnormalityAsymmetry.Validate(sb) == false) retVal = false;                                                                   // CSBuildMemberListBase.cs:52
+			if (this.MGAbnormalityCalcification.Validate(sb) == false) retVal = false;                                                               // CSBuildMemberListBase.cs:52
+			if (this.MGAbnormalityDensity.Validate(sb) == false) retVal = false;                                                                     // CSBuildMemberListBase.cs:52
+			if (this.MGAbnormalityFatNecrosis.Validate(sb) == false) retVal = false;                                                                 // CSBuildMemberListBase.cs:52
+			if (this.MGBreastDensity.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:52
 			//- ValidateCode
+			return retVal;
 		}
 
 		public override void Write()
