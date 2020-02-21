@@ -19,6 +19,9 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
+		//+ Properties
+		//- Properties
+
 		/// <summary>
 		/// No parameters constructor.
 		// Caller must call Init();

@@ -151,6 +151,8 @@ namespace FireFragger
             switch (fi.StructDef.BaseDefinition)
             {
                 case Global.ExtensionUrl:
+                    csDef = new CSDefineExtension(this, fi);
+                    break;
                 case Global.ResourceUrl:
                     break;
 

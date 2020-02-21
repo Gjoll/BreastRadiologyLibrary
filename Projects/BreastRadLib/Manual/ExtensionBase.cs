@@ -11,6 +11,7 @@ namespace BreastRadLib
 
     public class ExtensionBase : BaseBase, IExtensionBase
     {
+        public String profileUrl { get; private set; }
         public Extension Resource => (Extension)this.resource;
 
         public override String Id
@@ -31,6 +32,11 @@ namespace BreastRadLib
         public ExtensionBase(BreastRadiologyDocument doc) : base()
         {
             this.Init(doc, new Extension());
+        }
+
+        protected void SetProfileUrl(String profileUrl)
+        {
+            this.profileUrl = profileUrl;
         }
     }
 }
