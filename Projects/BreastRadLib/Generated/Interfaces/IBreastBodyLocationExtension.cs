@@ -16,6 +16,10 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		Quadrant_Accessor Quadrant { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
+		Region_Accessor Region { get ; }                                                                                                          // CSBuildMemberListBase.cs:27
+		ClockDirection_Accessor ClockDirection { get ; }                                                                                          // CSBuildMemberListBase.cs:27
+		Depth_Accessor Depth { get ; }                                                                                                            // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

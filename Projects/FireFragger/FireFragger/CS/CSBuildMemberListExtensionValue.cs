@@ -19,9 +19,7 @@ namespace FireFragger
         }
 
 
-        public void Define(String extensionName,
-            String extensionUrl,
-            ElementTreeSlice extensionSlice)
+        public void DefineStart()
         {
             if (this.fragBase.ClassEditor != null)
             {
@@ -29,7 +27,12 @@ namespace FireFragger
                     ?.AppendCode($"this.ClearExtensions();")
                     ;
             }
+        }
 
+        public void Define(String extensionName,
+        String extensionUrl,
+        ElementTreeSlice extensionSlice)
+        {
             ElementTreeNode GetChild(String name)
             {
                 if (this.fragBase.SnapNodes.TryGetElementNode($"{extensionSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
@@ -89,7 +92,7 @@ namespace FireFragger
                 .Summary($"Accessor class for '{extensionSlice.Name}'")
                 .Summary($"[Fhir Element '{extensionSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtensionValueBase<{propertyType}>")
+                .AppendCode($"public class {className} : MemberListExtensionValueBase")
                 .OpenBrace()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)
@@ -102,7 +105,7 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
                 .OpenBrace()
-                .AppendCode($"this.Init(doc, {min}, {max}, \"{extensionUrl}\"));")
+                .AppendCode($"this.Init(doc, {min}, {max}, \"{extensionUrl}\");")
                 .DefineBlock(out CodeBlockNested constructorBlock)
                 .CloseBrace()
                 .CloseBrace()
@@ -110,17 +113,65 @@ namespace FireFragger
 
             if (max == 1)
             {
-                void Define(String suffix, String valueType)
+                void DefineSet(String suffix, String paramType)
                 {
-                    foreach (String paramType in ParamTypes(types[0]))
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Set {propertyName} value")
+                        .SummaryClose()
+                        .AppendCode($"public void Set{suffix}({paramType} value) => this.SetFirst(({propertyType})value);")
+                        ;
+                }
+
+                void DefineSetQuantityCode(String suffix, String bindingClassName)
+                {
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Set {propertyName} value")
+                        .SummaryClose()
+                        .AppendCode($"public void Set{suffix}(decimal value, {bindingClassName} code)")
+                        .OpenBrace()
+                        .AppendCode($"Quantity q = new Quantity(value, code.Value.System, code.Value.Code);")
+                        .AppendCode($"this.SetFirst(q);")
+                        .CloseBrace()
+                        ;
+                }
+
+                void Define(String suffix, ElementDefinition.TypeRefComponent type)
+                {
+                    switch (type.Code)
                     {
-                        methodsBlock
-                            .BlankLine()
-                            .SummaryOpen()
-                            .Summary($"Set {propertyName} value")
-                            .SummaryClose()
-                            .AppendCode($"public void Set{suffix}({paramType} value) => this.SetFirst(value);")
-                            ;
+                        case "Quantity":
+                            if (this.BindingClassName(valueNode.ElementDefinition,
+                                out String bindingClassName,
+                                out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
+                            {
+                                DefineSet(suffix, "Quantity");
+                            }
+                            else
+                            {
+                                switch (binding.Strength)
+                                {
+                                    case BindingStrength.Required:
+                                        DefineSetQuantityCode(suffix, bindingClassName);
+                                        break;
+                                    case BindingStrength.Preferred:
+                                    case BindingStrength.Extensible:
+                                        DefineSetQuantityCode(suffix, bindingClassName);
+                                        DefineSet(suffix, "Quantity");
+                                        break;
+                                    default:
+                                        DefineSet(suffix, "Quantity");
+                                        break;
+                                }
+                            }
+                            break;
+                        default:
+                            foreach (String paramType in ParamTypes(type))
+                                DefineSet(suffix, paramType);
+                            break;
                     }
                 }
 
@@ -128,30 +179,79 @@ namespace FireFragger
                     .SummaryOpen()
                     .Summary("get {propertyName} value")
                     .SummaryClose()
-                    .AppendCode($"public {propertyType} Get() => base.FirstOrDefault();")
+                    .AppendCode($"public {propertyType} Get() => ({propertyType}) base.FirstOrDefault();")
                     ;
                 if (types.Count == 1)
-                    Define("", types[0].Code);
+                    Define("", types[0]);
                 else
                     foreach (ElementDefinition.TypeRefComponent type in types)
-                        Define(type.Code, type.Code);
+                        Define(type.Code, type);
             }
             else
             {
-                void DefineAppend(String fhirType, String targetName)
+                void DefineAppendQuantityCode(String suffix, String bindingClassName)
                 {
-                    foreach (String paramType in ParamTypes(types[0]))
-                    {
-                        methodsBlock
-                            .BlankLine()
-                            .SummaryOpen()
-                            .Summary($"Append item to end of list")
-                            .SummaryClose()
-                            .AppendCode($"public void Append{targetName}({paramType} value)")
-                            .OpenBrace()
-                            .AppendCode($"this.RawItems.Add(value);")
-                            .CloseBrace();
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Set {propertyName} value")
+                        .SummaryClose()
+                        .AppendCode($"public void Append{suffix}(decimal value, {bindingClassName} code)")
+                        .OpenBrace()
+                        .AppendCode($"Quantity q = new Quantity(value, code.Value.System, code.Value.Code);")
+                        .AppendCode($"this.RawItems.Add(q);")
+                        .CloseBrace()
                         ;
+                }
+
+                void DefineAppend(String suffix, String paramType)
+                {
+                    methodsBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Append item to end of list")
+                        .SummaryClose()
+                        .AppendCode($"public void Append{suffix}({paramType} value)")
+                        .OpenBrace()
+                        .AppendCode($"this.RawItems.Add(({propertyType}) value);")
+                        .CloseBrace();
+                    ;
+                }
+
+                void Define(String suffix, ElementDefinition.TypeRefComponent type)
+                {
+                    switch (type.Code)
+                    {
+                        case "Quantity":
+                            if (this.BindingClassName(valueNode.ElementDefinition,
+                                out String bindingClassName,
+                                out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
+                            {
+                                DefineAppend(suffix, "Quantity");
+                            }
+                            else
+                            {
+                                switch (binding.Strength)
+                                {
+                                    case BindingStrength.Required:
+                                        DefineAppendQuantityCode(suffix, bindingClassName);
+                                        break;
+                                    case BindingStrength.Preferred:
+                                    case BindingStrength.Extensible:
+                                        DefineAppendQuantityCode(suffix, bindingClassName);
+                                        DefineAppend(suffix, "Quantity");
+                                        break;
+                                    default:
+                                        DefineAppend(suffix, "Quantity");
+                                        break;
+                                }
+                            }
+                            break;
+
+                        default:
+                            foreach (String paramType in ParamTypes(type))
+                                DefineAppend(suffix, paramType);
+                            break;
                     }
                 }
 
@@ -159,31 +259,35 @@ namespace FireFragger
                     .SummaryOpen()
                     .Summary("Access propertyName")
                     .SummaryClose()
-                    .AppendCode($"public IEnumerable<{propertyType}> All() => this.items;")
+                    .AppendCode($"public IEnumerable<{propertyType}> All()")
+                    .OpenBrace()
+                    .AppendCode($"foreach (var item in items)")
+                    .AppendCode($"    yield return ({propertyType}) item;")
+                    .CloseBrace()
 
                     .BlankLine()
                     .SummaryOpen()
                     .Summary("Access item at indicated location in list")
                     .SummaryClose()
-                    .AppendCode($"public {propertyType} At(Int32 i) => base.items[i];")
+                    .AppendCode($"public {propertyType} At(Int32 i) => ({propertyType}) base.items[i];")
 
                     .BlankLine()
                     .SummaryOpen()
                     .Summary("Access first item in list")
                     .SummaryClose()
-                    .AppendCode($"public new {propertyType} First() => base.First();")
+                    .AppendCode($"public new {propertyType} First() => ({propertyType}) base.First();")
                     .BlankLine()
                     .SummaryOpen()
                     .Summary("Access first item in list or default value if empty")
                     .SummaryClose()
-                    .AppendCode($"public new {propertyType} FirstOrDefault() => base.FirstOrDefault();")
+                    .AppendCode($"public new {propertyType} FirstOrDefault() => ({propertyType}) base.FirstOrDefault();")
                     ;
 
                 if (types.Count == 1)
-                    DefineAppend(propertyType, "");
+                    Define("", types[0]);
                 else
                     foreach (ElementDefinition.TypeRefComponent type in types)
-                        DefineAppend(type.Code, type.Code);
+                        Define(type.Code, type);
             }
             return className;
         }

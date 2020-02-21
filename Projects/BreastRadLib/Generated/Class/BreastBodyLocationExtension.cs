@@ -16,6 +16,10 @@ namespace BreastRadLib
 	public class BreastBodyLocationExtension : ExtensionBase, IHeaderFragment
 	{
 		//+ Fields
+		public Quadrant_Accessor Quadrant { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:33
+		public Region_Accessor Region { get ; protected set; }                                                                                    // CSBuildMemberListBase.cs:33
+		public ClockDirection_Accessor ClockDirection { get ; protected set; }                                                                    // CSBuildMemberListBase.cs:33
+		public Depth_Accessor Depth { get ; protected set; }                                                                                      // CSBuildMemberListBase.cs:33
 		//- Fields
 
 		//+ Properties
@@ -58,6 +62,10 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // CSDefineBase.cs:182
+			this.Quadrant = new Quadrant_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
+			this.Region = new Region_Accessor(doc);                                                                                                  // CSBuildMemberListBase.cs:36
+			this.ClockDirection = new ClockDirection_Accessor(doc);                                                                                  // CSBuildMemberListBase.cs:36
+			this.Depth = new Depth_Accessor(doc);                                                                                                    // CSBuildMemberListBase.cs:36
 			//- Constructor
 		}
 
@@ -69,6 +77,10 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.Quadrant.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:45
+			if (this.Region.Validate(sb) == false) retVal = false;                                                                                   // CSBuildMemberListBase.cs:45
+			if (this.ClockDirection.Validate(sb) == false) retVal = false;                                                                           // CSBuildMemberListBase.cs:45
+			if (this.Depth.Validate(sb) == false) retVal = false;                                                                                    // CSBuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
@@ -77,8 +89,13 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
+			this.ClearExtensions();                                                                                                                  // CSBuildMemberListExtensionValue.cs:27
 			//- WriteCodeStart
 			//+ WriteCode
+			this.WriteExtension(this.Quadrant);                                                                                                      // CSBuildMemberListBase.cs:39
+			this.WriteExtension(this.Region);                                                                                                        // CSBuildMemberListBase.cs:39
+			this.WriteExtension(this.ClockDirection);                                                                                                // CSBuildMemberListBase.cs:39
+			this.WriteExtension(this.Depth);                                                                                                         // CSBuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
@@ -88,6 +105,10 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
+			this.ReadExtension(this.Quadrant);                                                                                                       // CSBuildMemberListBase.cs:42
+			this.ReadExtension(this.Region);                                                                                                         // CSBuildMemberListBase.cs:42
+			this.ReadExtension(this.ClockDirection);                                                                                                 // CSBuildMemberListBase.cs:42
+			this.ReadExtension(this.Depth);                                                                                                          // CSBuildMemberListBase.cs:42
 			//- ReadCode
 		}
 

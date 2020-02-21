@@ -16,6 +16,8 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
+		LandMark_Accessor LandMark { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
+		DistanceFromLandMark_Accessor DistanceFromLandMark { get ; }                                                                              // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

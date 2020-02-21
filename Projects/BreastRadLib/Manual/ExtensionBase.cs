@@ -38,5 +38,20 @@ namespace BreastRadLib
         {
             this.profileUrl = profileUrl;
         }
+
+        protected void ClearExtensions()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected void ReadExtension(MemberListExtensionValueBase list)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected void WriteExtension(MemberListExtensionValueBase list)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

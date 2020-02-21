@@ -16,6 +16,8 @@ namespace BreastRadLib
 	public class BodyDistanceFromExtension : ExtensionBase, IHeaderFragment
 	{
 		//+ Fields
+		public LandMark_Accessor LandMark { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:33
+		public DistanceFromLandMark_Accessor DistanceFromLandMark { get ; protected set; }                                                        // CSBuildMemberListBase.cs:33
 		//- Fields
 
 		//+ Properties
@@ -58,6 +60,8 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BodyDistanceFromExtension");                                  // CSDefineBase.cs:182
+			this.LandMark = new LandMark_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
+			this.DistanceFromLandMark = new DistanceFromLandMark_Accessor(doc);                                                                      // CSBuildMemberListBase.cs:36
 			//- Constructor
 		}
 
@@ -69,6 +73,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
+			if (this.LandMark.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:45
+			if (this.DistanceFromLandMark.Validate(sb) == false) retVal = false;                                                                     // CSBuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
@@ -77,8 +83,11 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
+			this.ClearExtensions();                                                                                                                  // CSBuildMemberListExtensionValue.cs:27
 			//- WriteCodeStart
 			//+ WriteCode
+			this.WriteExtension(this.LandMark);                                                                                                      // CSBuildMemberListBase.cs:39
+			this.WriteExtension(this.DistanceFromLandMark);                                                                                          // CSBuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
@@ -88,6 +97,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
+			this.ReadExtension(this.LandMark);                                                                                                       // CSBuildMemberListBase.cs:42
+			this.ReadExtension(this.DistanceFromLandMark);                                                                                           // CSBuildMemberListBase.cs:42
 			//- ReadCode
 		}
 

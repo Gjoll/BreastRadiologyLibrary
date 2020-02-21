@@ -12,8 +12,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all component accessors
     /// </summary>
-    public class MemberListExtensionValueBase<BaseType> : MemberList<BaseType>
-        where BaseType : Element
+    public class MemberListExtensionValueBase : MemberList<Element>
     {
         protected MemberListExtensionValueBase(String listName) : base(listName)
         {
@@ -33,7 +32,7 @@ namespace BreastRadLib
             this.Url = url;
         }
 
-        protected void SetFirst(BaseType value)
+        protected void SetFirst(Element value)
         {
             this.items.Clear();
             this.items.Add(value);

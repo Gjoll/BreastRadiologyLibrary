@@ -17,9 +17,12 @@ namespace FireFragger
     /// </summary>
     class CSDefineExtension : CSDefineBase
     {
+        CSBuildMemberListExtensionValue bml;
+
         public CSDefineExtension(CSBuilder csBuilder,
                     SDInfo fragBase) : base(csBuilder, fragBase)
         {
+            this.bml = new CSBuildMemberListExtensionValue(this.csBuilder, this.fragBase);
         }
 
         public override void Build()
@@ -61,13 +64,13 @@ namespace FireFragger
 
         void BuildComplexInternalExtension(ElementTreeSlice extensionSlice)
         {
-            String sliceName = extensionSlice.Name;
+            String extensionName = extensionSlice.Name;
 
             void CheckExtension()
             {
                     ElementTreeNode subSubExtensionNode = extensionSlice.Nodes["extension"];
                     if (subSubExtensionNode.ElementDefinition.Max != "0")
-                        throw new Exception($"Slice '{sliceName}' sub extension node should be zero cardinality");
+                        throw new Exception($"Slice '{extensionName}' sub extension node should be zero cardinality");
             }
             String GetExtensionUrl()
             {
@@ -81,7 +84,7 @@ namespace FireFragger
                 valueXNode = extensionSlice.Nodes["value[x]"];
                 ElementDefinition valueXElement = valueXNode.ElementDefinition;
                 if ((valueXElement.Min.Value != 1) || (valueXElement.Max != "1"))
-                        throw new Exception($"Slice '{sliceName}' value[x] node invalid cardinality");
+                        throw new Exception($"Slice '{extensionName}' value[x] node invalid cardinality");
                 if (valueXElement.Type.Count != 1)
                     throw new Exception($"{extensionSlice.Name} invalid value[x].type count. Expected 1, got {valueXElement.Type.Count}");
                 typeCode = valueXElement.Type[0].Code;
@@ -93,30 +96,13 @@ namespace FireFragger
             CheckExtension();
             String extensionUrl = GetExtensionUrl();
             GetValueNode(out String typeCode, out ElementTreeNode valueNode);
-            switch (typeCode)
-            {
-                case "CodeableConcept":
-                    //BuildPropertyCoding(extensionSlice.ElementDefinition.Max.ToMax(), 
-                    //    sliceName,
-                    //    valueNode,
-                    //    this.ClassProperties);
-                    break;
 
-                case "Quantity":
-                    break;
-
-                case "Range":
-                    break;
-
-                default:
-                    throw new NotImplementedException($"Extension value of type {typeCode} not yet implemented.");
-            }
+            bml.Define(extensionName, extensionUrl, extensionSlice);
         }
 
         void BuildComplexExtension(ElementTreeNode subExtensionNode)
         {
-            CSBuildMemberListExtensionValue bml = new CSBuildMemberListExtensionValue(this.csBuilder, this.fragBase);
-
+            bml.DefineStart();
             foreach (ElementTreeSlice extensionSlice in subExtensionNode.Slices.Skip(1))
             {
                 if (extensionSlice.ElementDefinition.Type.Count != 1)
