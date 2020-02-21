@@ -18,7 +18,7 @@ namespace BreastRadLib
         DomainResource domainResource => (DomainResource)this.resource;
         public String profileUrl { get; private set; }
 
-        public Meta Meta => GetMeta();
+        public Meta Meta => this.GetMeta();
 
         public override String Id
         {

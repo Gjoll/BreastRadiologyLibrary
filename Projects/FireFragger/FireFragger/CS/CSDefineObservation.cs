@@ -26,7 +26,7 @@ namespace FireFragger
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
                 return;
-            CSBuildMemberListCodedValue bml = new CSBuildMemberListCodedValue(this.csBuilder, this.fragBase, componentNode);
+            CSBuildMemberListCodedValue bml = new CSBuildMemberListCodedValue(this.csBuilder, this.fragBase);
             bml.Define();
         }
 
@@ -44,16 +44,16 @@ namespace FireFragger
 
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
-               $"Building {fragBase.StructDef.Url.LastUriPart()}");
+               $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
             //Debug.Assert(fragBase.StructDef.Url.LastUriPart().Contains("ObservedChangesFragment") == false);
             base.Build();
 
-            DefineComponents();
-            DefineHasMembers();
+            this.DefineComponents();
+            this.DefineHasMembers();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
-               $"Completed {fragBase.StructDef.Url.LastUriPart()}");
+               $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
         }
     }
 }

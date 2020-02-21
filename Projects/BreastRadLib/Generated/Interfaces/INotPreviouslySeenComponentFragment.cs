@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // CSBuildMemberListBase.cs:34
+		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

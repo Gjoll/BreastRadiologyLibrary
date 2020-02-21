@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		DuctType_Accessor DuctType { get ; }                                                                                                      // CSBuildMemberListBase.cs:34
+		DuctType_Accessor DuctType { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

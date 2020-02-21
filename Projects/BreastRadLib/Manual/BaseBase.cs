@@ -18,7 +18,7 @@ namespace BreastRadLib
     {
         public abstract String Id { get; set; }
 
-        public Base BaseResource => resource;
+        public Base BaseResource => this.resource;
         protected Base resource;
         protected BreastRadiologyDocument doc;
 

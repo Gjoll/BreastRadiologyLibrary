@@ -24,9 +24,12 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, IBreastBodyLocationRequiredFragment, IObservedCountFragment
 	{
 		//+ Fields
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:40
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSBuildMemberListBase.cs:40
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:33
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // CSBuildMemberListBase.cs:33
 		//- Fields
+
+		//+ Properties
+		//- Properties
 
 		/// <summary>
 		/// No parameters constructor.
@@ -66,8 +69,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // CSDefineBase.cs:182
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:43
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSBuildMemberListBase.cs:43
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // CSBuildMemberListBase.cs:36
 			//- Constructor
 		}
 
@@ -79,8 +82,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:52
-			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // CSBuildMemberListBase.cs:52
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:45
+			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // CSBuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
@@ -89,14 +92,14 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListBase.cs:46
-			this.WriteComponent(this.FeatureType);                                                                                                   // CSBuildMemberListBase.cs:46
+			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListBase.cs:39
+			this.WriteComponent(this.FeatureType);                                                                                                   // CSBuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
@@ -106,8 +109,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListBase.cs:49
-			this.ReadComponent(this.FeatureType);                                                                                                    // CSBuildMemberListBase.cs:49
+			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListBase.cs:42
+			this.ReadComponent(this.FeatureType);                                                                                                    // CSBuildMemberListBase.cs:42
 			//- ReadCode
 		}
 

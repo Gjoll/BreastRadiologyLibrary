@@ -16,10 +16,10 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		MGFinding_Accessor MGFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:34
-		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // CSBuildMemberListBase.cs:34
-		NMFinding_Accessor NMFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:34
-		USFinding_Accessor USFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:34
+		MGFinding_Accessor MGFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:27
+		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // CSBuildMemberListBase.cs:27
+		NMFinding_Accessor NMFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:27
+		USFinding_Accessor USFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

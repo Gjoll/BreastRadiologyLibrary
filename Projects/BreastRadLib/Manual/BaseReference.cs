@@ -24,7 +24,7 @@ namespace BreastRadLib
             if (this.value != null)
                 throw new Exception($"Can not modify value after it has been set.");
             this.value = value;
-            doc.Register(value);
+            this.doc.Register(value);
             return value;
         }
 

@@ -15,8 +15,7 @@ namespace FireFragger
     internal class CSBuildMemberListSection : CSBuildMemberListBase
     {
         public CSBuildMemberListSection(CSBuilder csBuilder,
-            SDInfo fragBase,
-            ElementTreeNode memberNode) : base(csBuilder, fragBase, memberNode)
+            SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
 
@@ -204,18 +203,18 @@ namespace FireFragger
 
                 String[] references = this.References(entryNode);
 
-                Int32 max = ToMax(entryNode.ElementDefinition.Max);
+                Int32 max = this.ToMax(entryNode.ElementDefinition.Max);
                 Int32 min = entryNode.ElementDefinition.Min.Value;
                 String propertyName = sliceName.ToMachineName();
 
                 String brClass;
 
                 if (references.Length == 1)
-                    brClass = BRClass(references[0]);
+                    brClass = this.BRClass(references[0]);
                 else
                     brClass = "ResourceBase";
                 String sectionClassName =
-                    DefineSectionLocalClass(sectionSlice, code, max, min, title, propertyName, references, brClass);
+                    this.DefineSectionLocalClass(sectionSlice, code, max, min, title, propertyName, references, brClass);
                 this.DefineCommon(sectionClassName, propertyName, "Section");
             }
         }

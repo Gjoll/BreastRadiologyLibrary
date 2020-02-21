@@ -15,183 +15,183 @@ namespace BreastRadLib.MGFindingLocal
 	/// Accessor class for slice 'abnormalityCyst'
 	/// [Fhir Element 'Observation.hasMember:abnormalityCyst]'
 	/// </summary>
-	public class AbnormalityCyst_Accessor : MemberListReferenceMultiple<AbnormalityCyst>                                                       // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class AbnormalityCyst_Accessor : MemberListReferenceMultiple<AbnormalityCyst>                                                       // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityCyst_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityCyst_Accessor(BreastRadiologyDocument doc) : base("AbnormalityCyst_Accessor")                                        // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                              // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public AbnormalityCyst_Accessor(BreastRadiologyDocument doc) : base("AbnormalityCyst_Accessor")                                        // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");                              // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'abnormalityDuct'
 	/// [Fhir Element 'Observation.hasMember:abnormalityDuct]'
 	/// </summary>
-	public class AbnormalityDuct_Accessor : MemberListReferenceMultiple<AbnormalityDuct>                                                       // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class AbnormalityDuct_Accessor : MemberListReferenceMultiple<AbnormalityDuct>                                                       // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityDuct_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityDuct_Accessor(BreastRadiologyDocument doc) : base("AbnormalityDuct_Accessor")                                        // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                              // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public AbnormalityDuct_Accessor(BreastRadiologyDocument doc) : base("AbnormalityDuct_Accessor")                                        // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                              // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'abnormalityForeignObject'
 	/// [Fhir Element 'Observation.hasMember:abnormalityForeignObject]'
 	/// </summary>
-	public class AbnormalityForeignObject_Accessor : MemberListReferenceMultiple<AbnormalityForeignObject>                                     // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class AbnormalityForeignObject_Accessor : MemberListReferenceMultiple<AbnormalityForeignObject>                                     // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityForeignObject_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityForeignObject_Accessor(BreastRadiologyDocument doc) : base("AbnormalityForeignObject_Accessor")                      // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                     // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public AbnormalityForeignObject_Accessor(BreastRadiologyDocument doc) : base("AbnormalityForeignObject_Accessor")                      // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                     // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'abnormalityLymphNode'
 	/// [Fhir Element 'Observation.hasMember:abnormalityLymphNode]'
 	/// </summary>
-	public class AbnormalityLymphNode_Accessor : MemberListReferenceMultiple<AbnormalityLymphNode>                                             // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class AbnormalityLymphNode_Accessor : MemberListReferenceMultiple<AbnormalityLymphNode>                                             // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityLymphNode_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityLymphNode_Accessor(BreastRadiologyDocument doc) : base("AbnormalityLymphNode_Accessor")                              // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                         // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public AbnormalityLymphNode_Accessor(BreastRadiologyDocument doc) : base("AbnormalityLymphNode_Accessor")                              // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                         // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'abnormalityMass'
 	/// [Fhir Element 'Observation.hasMember:abnormalityMass]'
 	/// </summary>
-	public class AbnormalityMass_Accessor : MemberListReferenceMultiple<AbnormalityMass>                                                       // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class AbnormalityMass_Accessor : MemberListReferenceMultiple<AbnormalityMass>                                                       // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityMass_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityMass_Accessor(BreastRadiologyDocument doc) : base("AbnormalityMass_Accessor")                                        // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                              // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public AbnormalityMass_Accessor(BreastRadiologyDocument doc) : base("AbnormalityMass_Accessor")                                        // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                              // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'associatedFeatures'
 	/// [Fhir Element 'Observation.hasMember:associatedFeatures]'
 	/// </summary>
-	public class AssociatedFeatures_Accessor : MemberListReferenceMultiple<AssociatedFeatures>                                                 // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class AssociatedFeatures_Accessor : MemberListReferenceMultiple<AssociatedFeatures>                                                 // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AssociatedFeatures_Accessor class constructor
 	    /// </summary>
-	    public AssociatedFeatures_Accessor(BreastRadiologyDocument doc) : base("AssociatedFeatures_Accessor")                                  // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                           // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public AssociatedFeatures_Accessor(BreastRadiologyDocument doc) : base("AssociatedFeatures_Accessor")                                  // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                           // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'abnormalityFibroadenoma'
 	/// [Fhir Element 'Observation.hasMember:abnormalityFibroadenoma]'
 	/// </summary>
-	public class AbnormalityFibroadenoma_Accessor : MemberListReferenceMultiple<AbnormalityFibroadenoma>                                       // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class AbnormalityFibroadenoma_Accessor : MemberListReferenceMultiple<AbnormalityFibroadenoma>                                       // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// AbnormalityFibroadenoma_Accessor class constructor
 	    /// </summary>
-	    public AbnormalityFibroadenoma_Accessor(BreastRadiologyDocument doc) : base("AbnormalityFibroadenoma_Accessor")                        // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                      // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public AbnormalityFibroadenoma_Accessor(BreastRadiologyDocument doc) : base("AbnormalityFibroadenoma_Accessor")                        // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                      // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListReferenceMultiple<MGAbnormalityArchitecturalDistortion>             // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListReferenceMultiple<MGAbnormalityArchitecturalDistortion>             // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityArchitecturalDistortion_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityArchitecturalDistortion_Accessor")// CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");         // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityArchitecturalDistortion_Accessor")// CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");         // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'mGAbnormalityAsymmetry'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityAsymmetry]'
 	/// </summary>
-	public class MGAbnormalityAsymmetry_Accessor : MemberListReferenceMultiple<MGAbnormalityAsymmetry>                                         // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class MGAbnormalityAsymmetry_Accessor : MemberListReferenceMultiple<MGAbnormalityAsymmetry>                                         // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityAsymmetry_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityAsymmetry_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityAsymmetry_Accessor")                          // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                       // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public MGAbnormalityAsymmetry_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityAsymmetry_Accessor")                          // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");                       // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : MemberListReferenceMultiple<MGAbnormalityCalcification>                                 // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class MGAbnormalityCalcification_Accessor : MemberListReferenceMultiple<MGAbnormalityCalcification>                                 // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityCalcification_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityCalcification_Accessor")                  // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                   // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityCalcification_Accessor")                  // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                   // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'mGAbnormalityDensity'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityDensity]'
 	/// </summary>
-	public class MGAbnormalityDensity_Accessor : MemberListReferenceMultiple<MGAbnormalityDensity>                                             // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class MGAbnormalityDensity_Accessor : MemberListReferenceMultiple<MGAbnormalityDensity>                                             // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityDensity_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityDensity_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityDensity_Accessor")                              // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                         // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public MGAbnormalityDensity_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityDensity_Accessor")                              // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                         // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'mGAbnormalityFatNecrosis'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityFatNecrosis]'
 	/// </summary>
-	public class MGAbnormalityFatNecrosis_Accessor : MemberListReferenceMultiple<MGAbnormalityFatNecrosis>                                     // CSBuildMemberListReference.cs:62
-	{                                                                                                                                          // CSBuildMemberListReference.cs:63
+	public class MGAbnormalityFatNecrosis_Accessor : MemberListReferenceMultiple<MGAbnormalityFatNecrosis>                                     // CSBuildMemberListReference.cs:66
+	{                                                                                                                                          // CSBuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityFatNecrosis_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityFatNecrosis_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityFatNecrosis_Accessor")                      // CSBuildMemberListReference.cs:68
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:69
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");                     // CSBuildMemberListReference.cs:70
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:71
-	}                                                                                                                                          // CSBuildMemberListReference.cs:72
+	    public MGAbnormalityFatNecrosis_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityFatNecrosis_Accessor")                      // CSBuildMemberListReference.cs:72
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");                     // CSBuildMemberListReference.cs:74
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
+	}                                                                                                                                          // CSBuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'mGBreastDensity'
 	/// [Fhir Element 'Observation.hasMember:mGBreastDensity]'
 	/// </summary>
-	public class MGBreastDensity_Accessor : MemberListReferenceSingle<MGBreastDensity>                                                         // CSBuildMemberListReference.cs:46
-	{                                                                                                                                          // CSBuildMemberListReference.cs:47
+	public class MGBreastDensity_Accessor : MemberListReferenceSingle<MGBreastDensity>                                                         // CSBuildMemberListReference.cs:50
+	{                                                                                                                                          // CSBuildMemberListReference.cs:51
 	    /// <summary>
 	    /// MGBreastDensity_Accessor class constructor
 	    /// </summary>
-	    public MGBreastDensity_Accessor(BreastRadiologyDocument doc) : base("MGBreastDensity_Accessor")                                        // CSBuildMemberListReference.cs:52
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:53
-	        this.Init(doc, 1, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                               // CSBuildMemberListReference.cs:54
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:55
-	}                                                                                                                                          // CSBuildMemberListReference.cs:56
+	    public MGBreastDensity_Accessor(BreastRadiologyDocument doc) : base("MGBreastDensity_Accessor")                                        // CSBuildMemberListReference.cs:56
+	    {                                                                                                                                      // CSBuildMemberListReference.cs:57
+	        this.Init(doc, 1, 1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                               // CSBuildMemberListReference.cs:58
+	    }                                                                                                                                      // CSBuildMemberListReference.cs:59
+	}                                                                                                                                          // CSBuildMemberListReference.cs:60
 	//- LocalClassDefs
 }

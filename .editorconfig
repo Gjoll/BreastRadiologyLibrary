@@ -11,3 +11,27 @@ dotnet_diagnostic.CA1062.severity = none
 
 # IDE0040: Add accessibility modifiers
 dotnet_style_require_accessibility_modifiers = never:silent
+
+# SA1503: Braces should not be omitted
+dotnet_diagnostic.SA1503.severity = none
+
+# SA1106: Code should not contain empty statements
+dotnet_diagnostic.SA1106.severity = none
+
+# IDE0049: Simplify Names
+dotnet_style_predefined_type_for_member_access = true:none
+
+# IDE0049: Simplify Names
+dotnet_style_predefined_type_for_locals_parameters_members = true:none
+
+# SA1400: Access modifier should be declared
+dotnet_diagnostic.SA1400.severity = none
+
+# SA1121: Use built-in type alias
+dotnet_diagnostic.SA1121.severity = none
+
+# SA1116: Split parameters should start on line after declaration
+dotnet_diagnostic.SA1116.severity = none
+
+# SA1128: Put constructor initializers on their own line
+dotnet_diagnostic.SA1128.severity = none

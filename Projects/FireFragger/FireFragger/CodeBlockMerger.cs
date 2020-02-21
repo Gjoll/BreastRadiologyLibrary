@@ -36,13 +36,13 @@ namespace FireFragger
             CodeBlockNested codeBlockNested = this.code.Blocks.Find(mergeBlockNested.Name);
             if (codeBlockNested == null)
                 throw new Exception($"Base code editor does not contain a top level block named {mergeBlockNested.Name}");
-            Merge(codeBlockNested, mergeBlockNested);
+            this.Merge(codeBlockNested, mergeBlockNested);
         }
 
         public void Merge(CodeEditor mergeCode)
         {
             foreach (CodeBlock mergeBlock in mergeCode.Blocks.AllNamedBlocks)
-                Merge(mergeBlock);
+                this.Merge(mergeBlock);
         }
 
         void Merge(CodeBlockNested codeBlock, CodeBlockNested mergeBlock)
@@ -60,7 +60,7 @@ namespace FireFragger
                         CodeBlockNested codeBlockChildNested = codeBlock.Find(mergeBlockChildNested.Name);
                         if (codeBlockChildNested == null)
                             codeBlockChildNested = codeBlock.AppendBlock(mergeBlockChildNested.Name);
-                        Merge(codeBlockChildNested, mergeBlockChildNested);
+                        this.Merge(codeBlockChildNested, mergeBlockChildNested);
                         break;
                 }
             }

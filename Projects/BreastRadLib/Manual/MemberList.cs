@@ -52,13 +52,13 @@ namespace BreastRadLib
         /// Access first item or default
         /// </summary>
         /// <returns></returns>
-        protected BaseType FirstOrDefault() => items.FirstOrDefault();
+        protected BaseType FirstOrDefault() => this.items.FirstOrDefault();
 
         /// <summary>
         /// Access first item
         /// </summary>
         /// <returns></returns>
-        protected BaseType First() => items.First();
+        protected BaseType First() => this.items.First();
 
         /// <summary>
         /// Constructor.
@@ -125,7 +125,7 @@ namespace BreastRadLib
         {
             if (this.items.Count > 0)
                 throw new Exception("Item already has a value");
-            AppendItem(itemContainer);
+            this.AppendItem(itemContainer);
         }
     }
 }

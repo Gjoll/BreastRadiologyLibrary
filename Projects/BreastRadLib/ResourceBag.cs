@@ -23,7 +23,7 @@ namespace BreastRadLib
             if (this.Bundle.Type != Bundle.BundleType.Document)
                 throw new Exception($"Expected bundle type 'Document', got '{this.Bundle.Type}'");
             foreach (Bundle.EntryComponent entry in bundle.Entry)
-                resources.Add(entry.FullUrl, entry);
+                this.resources.Add(entry.FullUrl, entry);
         }
 
         public IEnumerable<Bundle.EntryComponent> Entries => this.resources.Values;
@@ -40,10 +40,10 @@ namespace BreastRadLib
             if (String.IsNullOrEmpty(resource.Id) == true)
                 resource.Id = $"{Guid.NewGuid().ToString()}";
 
-            if (resources.ContainsKey(resource.Id) == false)
+            if (this.resources.ContainsKey(resource.Id) == false)
             {
-                Bundle.EntryComponent entry = Bundle.AddResourceEntry(resource, resource.Id);
-                resources.Add(resource.Id, entry);
+                Bundle.EntryComponent entry = this.Bundle.AddResourceEntry(resource, resource.Id);
+                this.resources.Add(resource.Id, entry);
             }
         }
     }

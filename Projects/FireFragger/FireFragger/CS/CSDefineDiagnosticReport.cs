@@ -28,12 +28,12 @@ namespace FireFragger
 
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
-               $"Building {fragBase.StructDef.Url.LastUriPart()}");
+               $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
             base.Build();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
-               $"Completed {fragBase.StructDef.Url.LastUriPart()}");
+               $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
         }
     }
 }

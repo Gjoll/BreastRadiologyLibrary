@@ -15,28 +15,28 @@ namespace BreastRadLib.AbnormalityMassLocal
 	/// Accessor class for 'massType'
 	/// [Fhir Element 'Observation.component:massType]'
 	/// </summary>
-	public class MassType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                 // CSBuildMemberListCodedValue.cs:65
-	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:66
-	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:67
+	public class MassType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                 // CSBuildMemberListCodedValue.cs:64
+	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:65
+	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:66
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // CSBuildMemberListCodedValue.cs:104
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:69
-	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:70
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:91
+	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // CSBuildMemberListCodedValue.cs:103
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:68
+	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:69
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:90
 	    /// <summary>
 	    /// Set MassType value
 	    /// </summary>
-	    public void Set(MassTypeValueSetVS.TCoding value) => this.SetFirst(value);                                                             // CSBuildMemberListCodedValue.cs:95
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:72
+	    public void Set(MassTypeValueSetVS.TCoding value) => this.SetFirst(value);                                                             // CSBuildMemberListCodedValue.cs:94
+	                                                                                                                                           // CSBuildMemberListCodedValue.cs:71
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public MassType_Accessor(BreastRadiologyDocument doc) : base("MassType_Accessor")                                                      // CSBuildMemberListCodedValue.cs:76
-	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:77
-	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityMassType"));// CSBuildMemberListCodedValue.cs:78
-	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:80
-	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:81
+	    public MassType_Accessor(BreastRadiologyDocument doc) : base("MassType_Accessor")                                                      // CSBuildMemberListCodedValue.cs:75
+	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:76
+	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "abnormalityMassType"));// CSBuildMemberListCodedValue.cs:77
+	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:79
+	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:80
 	//- LocalClassDefs
 }

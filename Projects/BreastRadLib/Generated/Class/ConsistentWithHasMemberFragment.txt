@@ -1,28 +1,28 @@
 		//+ Fields
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListBase.cs:40
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListBase.cs:33
 		//- Fields
 
 			//+ Constructor
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListBase.cs:43
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListBase.cs:36
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // CSBuildMemberListBase.cs:52
+			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // CSBuildMemberListBase.cs:45
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:83
+			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListBase.cs:46
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListBase.cs:39
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListBase.cs:49
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListBase.cs:42
 			//- ReadCode
 
 			//+ Methods

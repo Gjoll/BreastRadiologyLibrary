@@ -14,10 +14,14 @@ namespace FireFragger
     /// </summary>
     internal class CSBuildMemberListReference : CSBuildMemberListBase
     {
+        protected ElementTreeNode memberNode;
+        protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
+
         public CSBuildMemberListReference(CSBuilder csBuilder,
             SDInfo fragBase,
-            ElementTreeNode memberNode) : base(csBuilder, fragBase, memberNode)
+            ElementTreeNode memberNode) : base(csBuilder, fragBase)
         {
+            this.memberNode = memberNode;
         }
 
         String DefineLocalClass(ElementTreeSlice memberSlice,
@@ -80,16 +84,16 @@ namespace FireFragger
             if (this.fragBase.ClassEditor != null)
             {
                 this.ClassWriteCodeStart
-                    ?.AppendCode($"this.Clear{MemberName}();")
+                    ?.AppendCode($"this.Clear{this.MemberName}();")
                     ;
             }
 
-            foreach (ElementTreeSlice memberSlice in memberNode.Slices.Skip(1))
+            foreach (ElementTreeSlice memberSlice in this.memberNode.Slices.Skip(1))
             {
                 String sliceName = memberSlice.ElementDefinition.SliceName;
 
                 ElementDefinition sliceDef = memberSlice.ElementDefinition;
-                Int32 max = ToMax(sliceDef.Max);
+                Int32 max = this.ToMax(sliceDef.Max);
                 Int32 min = sliceDef.Min.Value;
                 String propertyName = sliceName.ToMachineName();
 
@@ -102,11 +106,9 @@ namespace FireFragger
                 String profileUrl = sliceDef.Type[0].TargetProfile.First();
 
                 String memberClassName =
-                    DefineLocalClass(memberSlice, max, min, propertyName, profileUrl);
+                    this.DefineLocalClass(memberSlice, max, min, propertyName, profileUrl);
 
-                String interfaceName = CSBuilder.InterfaceName(fragBase);
-                String className = CSBuilder.ClassName(fragBase);
-                this.DefineCommon(memberClassName, propertyName, MemberName);
+                this.DefineCommon(memberClassName, propertyName, this.MemberName);
             }
         }
     }

@@ -22,6 +22,34 @@ namespace FireFragger
         {
         }
 
+        public override void Build()
+        {
+            const String fcn = "Build";
+
+            this.csBuilder.ConversionInfo(this.GetType().Name,
+               fcn,
+               $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
+
+            base.Build();
+            if (this.fragBase.SnapNodes.TryGetElementNode("Extension.value[x]", out ElementTreeNode valueXNode) == false)
+                throw new Exception($"Extension.value[x] is missing");
+            if (this.fragBase.SnapNodes.TryGetElementNode("Extension.extension", out ElementTreeNode subExtensionNode) == false)
+                throw new Exception($"Extension.extension is missing");
+            Int32 valueXCardMax = this.ToMax(valueXNode.ElementDefinition.Max);
+            if ((valueXCardMax > 0) && (subExtensionNode.Slices.Count > 0))
+                throw new Exception($"Both Simple and Complex extension found. Not implemented");
+            else if ((valueXCardMax == 0) && (subExtensionNode.Slices.Count == 0))
+                throw new Exception($"Neither Simple and Complex extension found. Not implemented");
+            else if (valueXCardMax > 0)
+                this.BuildSimpleExtension(valueXNode);
+            else
+                this.BuildComplexExtension(subExtensionNode);
+
+            this.csBuilder.ConversionInfo(this.GetType().Name,
+               fcn,
+               $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
+        }
+
         void BuildSimpleExtension(ElementTreeNode valueXNode)
         {
             throw new NotImplementedException("Simple extensions not yet implemented");
@@ -60,7 +88,7 @@ namespace FireFragger
             }
 
             Int32 cardMin = extensionSlice.ElementDefinition.Min.Value;
-            Int32 cardMax = ToMax(extensionSlice.ElementDefinition.Max);
+            Int32 cardMax = this.ToMax(extensionSlice.ElementDefinition.Max);
 
             CheckExtension();
             String extensionUrl = GetExtensionUrl();
@@ -68,10 +96,10 @@ namespace FireFragger
             switch (typeCode)
             {
                 case "CodeableConcept":
-                    BuildPropertyCoding(extensionSlice.ElementDefinition.Max.ToMax(), 
-                        sliceName,
-                        valueNode,
-                        this.ClassProperties);
+                    //BuildPropertyCoding(extensionSlice.ElementDefinition.Max.ToMax(), 
+                    //    sliceName,
+                    //    valueNode,
+                    //    this.ClassProperties);
                     break;
 
                 case "Quantity":
@@ -87,6 +115,8 @@ namespace FireFragger
 
         void BuildComplexExtension(ElementTreeNode subExtensionNode)
         {
+            CSBuildMemberListExtensionValue bml = new CSBuildMemberListExtensionValue(this.csBuilder, this.fragBase);
+
             foreach (ElementTreeSlice extensionSlice in subExtensionNode.Slices.Skip(1))
             {
                 if (extensionSlice.ElementDefinition.Type.Count != 1)
@@ -99,43 +129,15 @@ namespace FireFragger
                         {
                             if (type.Profile.Count() != 1)
                                 throw new Exception($"Multiple extension profiels not supported");
-                            BuildComplexExternalExtension(extensionSlice, type.Profile.First());
+                            this.BuildComplexExternalExtension(extensionSlice, type.Profile.First());
                         }
                         else
-                            BuildComplexInternalExtension(extensionSlice);
+                            this.BuildComplexInternalExtension(extensionSlice);
                         break;
                     default:
                         throw new NotImplementedException();
                 }
             }
-        }
-
-        public override void Build()
-        {
-            const String fcn = "Build";
-
-            this.csBuilder.ConversionInfo(this.GetType().Name,
-               fcn,
-               $"Building {fragBase.StructDef.Url.LastUriPart()}");
-
-            base.Build();
-            if (this.fragBase.SnapNodes.TryGetElementNode("Extension.value[x]", out ElementTreeNode valueXNode) == false)
-                throw new Exception($"Extension.value[x] is missing");
-            if (this.fragBase.SnapNodes.TryGetElementNode("Extension.extension", out ElementTreeNode subExtensionNode) == false)
-                throw new Exception($"Extension.extension is missing");
-            Int32 valueXCardMax = this.ToMax(valueXNode.ElementDefinition.Max);
-            if ((valueXCardMax > 0) && (subExtensionNode.Slices.Count > 0))
-                throw new Exception($"Both Simple and Complex extension found. Not implemented");
-            else if ((valueXCardMax == 0) && (subExtensionNode.Slices.Count == 0))
-                throw new Exception($"Neither Simple and Complex extension found. Not implemented");
-            else if (valueXCardMax > 0)
-                BuildSimpleExtension(valueXNode);
-            else
-                BuildComplexExtension(subExtensionNode);
-
-            this.csBuilder.ConversionInfo(this.GetType().Name,
-               fcn,
-               $"Completed {fragBase.StructDef.Url.LastUriPart()}");
         }
     }
 }

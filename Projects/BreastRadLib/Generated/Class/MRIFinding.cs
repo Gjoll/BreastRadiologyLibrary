@@ -23,6 +23,9 @@ namespace BreastRadLib
 		//+ Fields
 		//- Fields
 
+		//+ Properties
+		//- Properties
+
 		/// <summary>
 		/// No parameters constructor.
 		// Caller must call Init();
@@ -80,7 +83,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:172
+			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

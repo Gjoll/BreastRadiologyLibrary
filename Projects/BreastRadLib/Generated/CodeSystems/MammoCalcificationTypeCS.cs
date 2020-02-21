@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class MammoCalcificationTypeCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoCalcificationTypeCS";                                      // CSBuilder.cs:346
-		                                                                                                                                          // CSBuilder.cs:358
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoCalcificationTypeCS";                                      // CSBuilder.cs:347
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// (historically, "indistinct")
 		/// These are sufficiently small and/or hazy in appearance that a more specific particle shape
@@ -29,8 +29,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Amorphous = new Coding(System, "Amorphous", "Amorphous");                                                       // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Amorphous = new Coding(System, "Amorphous", "Amorphous");                                                       // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The classic large 'popcorn-like' calcifications are produced by involuting fibroadenomas.
 		/// These calcifications usually do not cause a diagnostic problem.
@@ -39,8 +39,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Coarse = new Coding(System, "Coarse", "Coarse");                                                                // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Coarse = new Coding(System, "Coarse", "Coarse");                                                                // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Dystrophic soft tissue calcification is a broad term that encompasses a wide range of pathologies that cause soft-tissue calcification and is caused by calcification of damaged tissues.
 		/// The amorphous calcification that results may be small or large.
@@ -48,8 +48,8 @@ namespace BreastRadLib
 		/// [https://radiopaedia.org/articles/dystrophic-soft-tissue-calcification-1?lang=us]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Dystrophic = new Coding(System, "Dystrophic", "Dystrophic");                                                    // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Dystrophic = new Coding(System, "Dystrophic", "Dystrophic");                                                    // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Eggshell calcifications in the breast are benign peripheral rim like calcifications
 		/// They are typically secondary to fat necrosis or calcification of oil cysts.
@@ -62,16 +62,16 @@ namespace BreastRadLib
 		/// [https://radiopaedia.org/articles/eggshell-calcification-breast-1?lang=us]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Eggshell = new Coding(System, "Eggshell", "Eggshell");                                                          // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Eggshell = new Coding(System, "Eggshell", "Eggshell");                                                          // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These are thin, linear or curvilinear irregular calcifications.
 		/// They may be discontinuous.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Fine = new Coding(System, "Fine", "Fine");                                                                      // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Fine = new Coding(System, "Fine", "Fine");                                                                      // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Calcification happens when calcium builds up in body tissue, blood vessels, or organs.
 		/// This buildup can harden and disrupt your body's normal processes.
@@ -81,8 +81,8 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_GenericCalcification = new Coding(System, "GenericCalcification", "Generic calcification");                     // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_GenericCalcification = new Coding(System, "GenericCalcification", "Generic calcification");                     // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These are irregular, conspicuous calcifications that are generally between 0.5 mm and 1 mm
 		/// and tend to coalesce, but are smaller than dystrophic calcifications.
@@ -99,8 +99,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_CourseHeterogeneous = new Coding(System, "CourseHeterogeneous", "Course Heterogeneous");                        // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_CourseHeterogeneous = new Coding(System, "CourseHeterogeneous", "Course Heterogeneous");                        // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Amorphous calcifications, previously known as indistinct calcifications, are a morphological
 		/// descriptor for breast calcifications that are small and/or hazy such that no clearly
@@ -108,8 +108,8 @@ namespace BreastRadLib
 		/// [https://radiopaedia.org > articles > amorphous-calcifications-breast]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Indistinct = new Coding(System, "Indistinct", "Indistinct");                                                    // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Indistinct = new Coding(System, "Indistinct", "Indistinct");                                                    // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These benign calcifications associated with ductal ectasia may form solid or discontinuous
 		/// smooth linear rods, most of which are 0.5 mm or larger in diameter.
@@ -127,15 +127,15 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_LargeRodlike = new Coding(System, "LargeRodlike", "Large rodlike");                                             // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_LargeRodlike = new Coding(System, "LargeRodlike", "Large rodlike");                                             // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Layering of calcium within the calcification.
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Layering = new Coding(System, "Layering", "Layering");                                                          // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Layering = new Coding(System, "Layering", "Layering");                                                          // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Also called fine linear branching.
 		/// These are thin, linear, irregular calcifications, which may be discontinuous and
@@ -147,16 +147,16 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 66]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_FineLinear = new Coding(System, "FineLinear", "Fine Linear");                                                   // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_FineLinear = new Coding(System, "FineLinear", "Fine Linear");                                                   // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These are round or oval calcifications that range from under 1 mm to over a centimeter.
 		/// They are the result of fat necrosis, calcified debris in ducts, and occasional fibroadenomas.
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_LucentCentered = new Coding(System, "Lucent-centered", "Lucent-centered");                                      // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_LucentCentered = new Coding(System, "Lucent-centered", "Lucent-centered");                                      // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// This is a manifestation of sedimented calcifications in macro- or microcysts, usually but not
 		/// always grouped.
@@ -175,8 +175,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_MilkOfCalcium = new Coding(System, "MilkOfCalcium", "Milk of calcium");                                         // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_MilkOfCalcium = new Coding(System, "MilkOfCalcium", "Milk of calcium");                                         // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These calcifications are usually more conspicuous than amorphous forms and are seen
 		/// to have
@@ -188,8 +188,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 64]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_FinePleomorphic = new Coding(System, "FinePleomorphic", "Fine Pleomorphic");                                    // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_FinePleomorphic = new Coding(System, "FinePleomorphic", "Fine Pleomorphic");                                    // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Calcification is punctate/round.
 		/// It's different than a "round" calcification though as it also means the calcifications are less than .5 mm in size.
@@ -200,8 +200,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Punctate = new Coding(System, "Punctate", "Punctate");                                                          // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Punctate = new Coding(System, "Punctate", "Punctate");                                                          // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Eggshell or Rim Calcifications
 		/// These are very thin benign calcifications that appear as calcium is deposited on
@@ -213,8 +213,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 49]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Rim = new Coding(System, "Rim", "Rim");                                                                         // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Rim = new Coding(System, "Rim", "Rim");                                                                         // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// When multiple, they may vary in size and therefore also in opacity.
 		/// They may be considered
@@ -229,8 +229,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Round = new Coding(System, "Round", "Round");                                                                   // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Round = new Coding(System, "Round", "Round");                                                                   // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These are usually lucent-centered and pathognomonic in their appearance.
 		/// Skin calcifications are most commonly seen along the inframammary fold, parasternally, overlying the axilla and around the areola.
@@ -240,23 +240,23 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 36]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Skin = new Coding(System, "Skin", "Skin");                                                                      // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Skin = new Coding(System, "Skin", "Skin");                                                                      // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Calcifications that have formed a  spherical shape are usually associated with benign
 		/// lesions.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Spherical = new Coding(System, "Spherical", "Spherical");                                                       // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Spherical = new Coding(System, "Spherical", "Spherical");                                                       // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These are typically linear or tubular in appearance, and when present in Mammogram, may show up in a knot pattern.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Suture = new Coding(System, "Suture", "Suture");                                                                // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Suture = new Coding(System, "Suture", "Suture");                                                                // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These are linear or form parallel tracks, that are usually clearly associated with blood vessels.
 		/// Vascular calcifications noted in women
@@ -266,7 +266,7 @@ namespace BreastRadLib
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Vascular = new Coding(System, "Vascular", "Vascular");                                                          // CSBuilder.cs:372
+		public static Coding Code_Vascular = new Coding(System, "Vascular", "Vascular");                                                          // CSBuilder.cs:373
 		//- Fields
 	}
 }

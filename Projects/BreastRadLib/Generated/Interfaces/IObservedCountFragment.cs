@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		ObsCount_Accessor ObsCount { get ; }                                                                                                      // CSBuildMemberListBase.cs:34
+		ObsCount_Accessor ObsCount { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

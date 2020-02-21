@@ -8,6 +8,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib.BodyDistanceFromExtensionLocal;
 //+Usings
+using BreastRadLib.HeaderFragmentLocal;
 //-Usings
 
 namespace BreastRadLib
@@ -16,6 +17,9 @@ namespace BreastRadLib
 	{
 		//+ Fields
 		//- Fields
+
+		//+ Properties
+		//- Properties
 
 		/// <summary>
 		/// No parameters constructor.
@@ -53,6 +57,7 @@ namespace BreastRadLib
 				resource = new Extension();
 			base.Init(doc, resource);
 			//+ Constructor
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BodyDistanceFromExtension");                                  // CSDefineBase.cs:182
 			//- Constructor
 		}
 

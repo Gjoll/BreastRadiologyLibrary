@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class CalcificationDistributionCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationDistributionCS";                                   // CSBuilder.cs:346
-		                                                                                                                                          // CSBuilder.cs:358
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationDistributionCS";                                   // CSBuilder.cs:347
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Grouped (historically, "clustered")
 		/// This term should be used when relatively few calcifications occupy a small portion
@@ -28,8 +28,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 73]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_ClusteredDistribution = new Coding(System, "ClusteredDistribution", "Clustered distribution");                  // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_ClusteredDistribution = new Coding(System, "ClusteredDistribution", "Clustered distribution");                  // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Diffuse or Scattered: diffuse calcifications may be scattered calcifications or multiple similar appearing clusters of calcifications throughout the whole breast.
 		/// Diffuse or scattered distribution is typically seen in benign entities.
@@ -37,8 +37,8 @@ namespace BreastRadLib
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_DiffuseDistribution = new Coding(System, "DiffuseDistribution", "Diffuse distribution");                        // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_DiffuseDistribution = new Coding(System, "DiffuseDistribution", "Diffuse distribution");                        // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// This term should be used when relatively few calcifications occupy a
 		/// small portion of breast tissue.
@@ -50,8 +50,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 74]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_GroupedDistribution = new Coding(System, "GroupedDistribution", "Grouped distribution");                        // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_GroupedDistribution = new Coding(System, "GroupedDistribution", "Grouped distribution");                        // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// These are calcifications arrayed in a line.
 		/// This distribution may elevate suspicion for malignancy, as it suggests deposits in a duct.
@@ -61,8 +61,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_LinearDistribution = new Coding(System, "LinearDistribution", "Linear distribution");                           // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_LinearDistribution = new Coding(System, "LinearDistribution", "Linear distribution");                           // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Scattered in a larger volume (> 2 cc) of breast tissue and not in the expected ductal distribution.
 		/// Regional distribution according to the BI-RADS atlas would favor a non-ductal distribution (i.e.
@@ -71,8 +71,8 @@ namespace BreastRadLib
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_RegionalDistribution = new Coding(System, "RegionalDistribution", "Regional distribution");                     // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_RegionalDistribution = new Coding(System, "RegionalDistribution", "Regional distribution");                     // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Scattered distributions are also called diffuse distributions.
 		/// These are calcifications that are distributed randomly throughout the breast.
@@ -81,8 +81,8 @@ namespace BreastRadLib
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 70]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_ScatteredDistribution = new Coding(System, "ScatteredDistribution", "Scattered distribution");                  // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_ScatteredDistribution = new Coding(System, "ScatteredDistribution", "Scattered distribution");                  // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Segmental: calcium deposits in ducts and branches of a segment or lobe.
 		/// Segmental distribution would favor a ductal distribution (i.e.
@@ -91,7 +91,7 @@ namespace BreastRadLib
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SegmentalDistribution = new Coding(System, "SegmentalDistribution", "Segmental distribution");                  // CSBuilder.cs:372
+		public static Coding Code_SegmentalDistribution = new Coding(System, "SegmentalDistribution", "Segmental distribution");                  // CSBuilder.cs:373
 		//- Fields
 	}
 }

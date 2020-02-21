@@ -14,22 +14,15 @@ namespace FireFragger
     /// </summary>
     internal class CSBuildMemberListBase : CSCodeBlockDefinitions
     {
-        protected ElementTreeNode memberNode;
-        protected String MemberName => memberNode.Path.LastPathPart().ToMachineName();
-
         public CSBuildMemberListBase(CSBuilder csBuilder,
-            SDInfo fragBase,
-            ElementTreeNode memberNode) : base(csBuilder, fragBase)
+            SDInfo fragBase) : base(csBuilder, fragBase)
         {
-            this.memberNode = memberNode;
         }
 
         protected void DefineCommon(String componentClassName,
             String propertyName,
             String methodSuffix)
         {
-            String interfaceName = CSBuilder.InterfaceName(fragBase);
-            String className = CSBuilder.ClassName(fragBase);
             this.InterfaceFields
                 .AppendCode($"{componentClassName} {propertyName} {{ get ; }}")
                 ;

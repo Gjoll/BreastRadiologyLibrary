@@ -29,7 +29,7 @@ namespace FireFragger
             ref Int32 i)
         {
             if (i >= args.Length)
-                Usage();
+                this.Usage();
             String retVal = args[i];
             if (retVal[0] == '"')
                 retVal = retVal.Substring(1);
@@ -67,17 +67,17 @@ namespace FireFragger
                 {
                     case "-f":
                     case "-frags":
-                        csBuilder.AddFragmentDir(ParseDir(GetArg(arg, args, ref i)),
-                                                filter);
+                        this.csBuilder.AddFragmentDir(this.ParseDir(this.GetArg(arg, args, ref i)),
+                                                this.filter);
                         break;
 
                     case "-c":
-                        csBuilder.CleanFlag = true;
+                        this.csBuilder.CleanFlag = true;
                         break;
 
                     case "-o":
                     case "-out":
-                        csBuilder.OutputDir = ParseDir(GetArg(arg, args, ref i));
+                        this.csBuilder.OutputDir = this.ParseDir(this.GetArg(arg, args, ref i));
                         break;
 
                     default:

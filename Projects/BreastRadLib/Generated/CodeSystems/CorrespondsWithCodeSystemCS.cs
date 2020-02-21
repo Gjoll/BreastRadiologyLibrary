@@ -12,30 +12,30 @@ namespace BreastRadLib
 	public class CorrespondsWithCodeSystemCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CorrespondsWithCodeSystemCS";                                   // CSBuilder.cs:346
-		                                                                                                                                          // CSBuilder.cs:358
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CorrespondsWithCodeSystemCS";                                   // CSBuilder.cs:347
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// A medical procedure that removes something from an area of the body.
 		/// These substances can be air, body fluids, or bone fragments.
 		/// [https://medlineplus.gov/ency/article/002216.htm]
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The Mammogram and Biopsy correspond with each other.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The test corresponds with the concern.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Concern = new Coding(System, "Concern", "Concern");                                                             // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Concern = new Coding(System, "Concern", "Concern");                                                             // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// A ductogram, also called a galactogram, is a special type of mammogram used for imaging
 		/// the breast ducts.
@@ -47,90 +47,90 @@ namespace BreastRadLib
 		/// [https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// A medical finding that wasn't the abnormality of the original  mammogram, MRI, nuclear
 		/// medicine, or ultrasound was intended to find.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_IncidentalFinding = new Coding(System, "IncidentalFinding", "Incidental finding");                              // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_IncidentalFinding = new Coding(System, "IncidentalFinding", "Incidental finding");                              // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The original MRI, Nuclear Medicine, or Ultrasound corresponds with the findings on
 		/// the Mammogram.
 		/// 
 		/// Valid for the following modalities: US MRI NM.
 		/// </summary>
-		public static Coding Code_Mammo = new Coding(System, "Mammo", "Mammo");                                                                   // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Mammo = new Coding(System, "Mammo", "Mammo");                                                                   // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The original Mammogram, Nuclear Medicine, or Ultrasound corresponds with the findings
 		/// on the MRI.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The findings on the Mammogram and/or Ultrasound, correspond with the nipple discharge.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_NippleDischarge = new Coding(System, "NippleDischarge", "Nipple discharge");                                    // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_NippleDischarge = new Coding(System, "NippleDischarge", "Nipple discharge");                                    // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Previous exam at another clinic that took place separate from current exam.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_OutsideExam = new Coding(System, "OutsideExam", "Outside exam");                                                // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_OutsideExam = new Coding(System, "OutsideExam", "Outside exam");                                                // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Mammogram, MRI, Nuclear Medicine, or ultrasound corresponds with the pain the patient
 		/// is experiencing.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Pain = new Coding(System, "Pain", "Pain");                                                                      // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Pain = new Coding(System, "Pain", "Pain");                                                                      // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The Mammogram, Ultrasound, Nuclear Medicine, MRI correspond with the palpated (physical
 		/// exam to touch) lump.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_Palpated = new Coding(System, "Palpated", "Palpated");                                                          // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Palpated = new Coding(System, "Palpated", "Palpated");                                                          // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The Mammogram corresponds with the post operative results of the breast incision.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PostOperative = new Coding(System, "PostOperative", "Post operative");                                          // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_PostOperative = new Coding(System, "PostOperative", "Post operative");                                          // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The previous biopsy results correspond with the MRI and/or Ultrasound.
 		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
-		public static Coding Code_PreviousBiopsy = new Coding(System, "PreviousBiopsy", "Previous biopsy");                                       // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_PreviousBiopsy = new Coding(System, "PreviousBiopsy", "Previous biopsy");                                       // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The prior exam of the breast, corresponds with the results of the Mammogram.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_PriorExam = new Coding(System, "PriorExam", "Prior exam");                                                      // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_PriorExam = new Coding(System, "PriorExam", "Prior exam");                                                      // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The redness in the breast, corresponds with the results of the Mammogram and/or Ultrasound.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_Redness = new Coding(System, "Redness", "Redness");                                                             // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Redness = new Coding(System, "Redness", "Redness");                                                             // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The initial Mammogram corresponds with the Scinti results.
 		/// Scintigraphy definition is - a diagnostic technique in which a two-dimensional picture
@@ -139,85 +139,85 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Scinti = new Coding(System, "Scinti", "Scinti");                                                                // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Scinti = new Coding(System, "Scinti", "Scinti");                                                                // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// size < mammo
 		/// 
 		/// Valid for the following modalities: US MRI NM.
 		/// </summary>
-		public static Coding Code_SizeLessThanMammo = new Coding(System, "Size<Mammo", "Size < mammo");                                           // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SizeLessThanMammo = new Coding(System, "Size<Mammo", "Size < mammo");                                           // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// size < MRI
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SizeLessThanMRI = new Coding(System, "Size<MRI", "Size < MRI");                                                 // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SizeLessThanMRI = new Coding(System, "Size<MRI", "Size < MRI");                                                 // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// size < palp
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_SizeLessThanPalp = new Coding(System, "Size<Palp", "Size < palp");                                              // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SizeLessThanPalp = new Coding(System, "Size<Palp", "Size < palp");                                              // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// size < US
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_SizeLessThanUS = new Coding(System, "Size<US", "Size < US");                                                    // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SizeLessThanUS = new Coding(System, "Size<US", "Size < US");                                                    // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// size > mammo
 		/// 
 		/// Valid for the following modalities: US MRI NM.
 		/// </summary>
-		public static Coding Code_SizeGreaterThanMammo = new Coding(System, "Size>Mammo", "Size > mammo");                                        // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SizeGreaterThanMammo = new Coding(System, "Size>Mammo", "Size > mammo");                                        // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// size > MRI
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SizeGreaterThanMRI = new Coding(System, "Size>MRI", "Size > MRI");                                              // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SizeGreaterThanMRI = new Coding(System, "Size>MRI", "Size > MRI");                                              // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// size > palp
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_SizeGreaterThanPalp = new Coding(System, "Size>Palp", "Size > palp");                                           // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SizeGreaterThanPalp = new Coding(System, "Size>Palp", "Size > palp");                                           // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The mammogram findings correspond with where the skin marker was placed on the breast.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_SkinMarker = new Coding(System, "SkinMarker", "Skin marker");                                                   // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SkinMarker = new Coding(System, "SkinMarker", "Skin marker");                                                   // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// Surgery
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Surgery = new Coding(System, "Surgery", "Surgery");                                                             // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Surgery = new Coding(System, "Surgery", "Surgery");                                                             // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The MRI information corresponds with the surgical site.
 		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
-		public static Coding Code_SurgicalSite = new Coding(System, "SurgicalSite", "Surgical site");                                             // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_SurgicalSite = new Coding(System, "SurgicalSite", "Surgical site");                                             // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The mammogram results correspond with where the patient feels tenderness.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_Tenderness = new Coding(System, "Tenderness", "Tenderness");                                                    // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_Tenderness = new Coding(System, "Tenderness", "Tenderness");                                                    // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The results of the Ultrasound correspond with where the trigger point is around the
 		/// tumor/lesion.
@@ -225,15 +225,15 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_TriggerPoint = new Coding(System, "TriggerPoint", "Trigger point");                                             // CSBuilder.cs:372
-		                                                                                                                                          // CSBuilder.cs:358
+		public static Coding Code_TriggerPoint = new Coding(System, "TriggerPoint", "Trigger point");                                             // CSBuilder.cs:373
+		                                                                                                                                          // CSBuilder.cs:359
 		/// <summary>
 		/// The results of the MRI, Mammogram and/or Nuclear Medicine exam, correspond with this
 		/// Ultrasound.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
-		public static Coding Code_US = new Coding(System, "US", "US");                                                                            // CSBuilder.cs:372
+		public static Coding Code_US = new Coding(System, "US", "US");                                                                            // CSBuilder.cs:373
 		//- Fields
 	}
 }

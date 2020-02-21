@@ -12,18 +12,18 @@ namespace FireFragger
         protected CSBuilder csBuilder;
         protected SDInfo fragBase;
 
-        protected CodeBlockNested ClassFields => fragBase.ClassEditor?.Blocks.Find("Fields", false);
-        protected CodeBlockNested LocalClassDefs => fragBase.SubClassEditor?.Blocks.Find("LocalClassDefs", false);
-        protected CodeBlockNested ClassConstructor => fragBase.ClassEditor?.Blocks.Find("Constructor", false);
-        protected CodeBlockNested ClassMethods => fragBase.ClassEditor?.Blocks.Find("Methods", false);
-        protected CodeBlockNested ClassValidateCodeStart => fragBase.ClassEditor?.Blocks.Find("ValidateCodeStart", false);
-        protected CodeBlockNested ClassValidateCode => fragBase.ClassEditor?.Blocks.Find("ValidateCode", false);
-        protected CodeBlockNested ClassWriteCodeStart => fragBase.ClassEditor?.Blocks.Find("WriteCodeStart", false);
-        protected CodeBlockNested ClassWriteCode => fragBase.ClassEditor?.Blocks.Find("WriteCode", false);
-        protected CodeBlockNested ClassReadCodeStart => fragBase.ClassEditor?.Blocks.Find("ReadCodeStart", false);
-        protected CodeBlockNested ClassReadCode => fragBase.ClassEditor?.Blocks.Find("ReadCode", false);
-        protected CodeBlockNested InterfaceFields => fragBase.InterfaceEditor?.Blocks.Find("Fields", false);
-        protected CodeBlockNested InterfaceMethods => fragBase.InterfaceEditor?.Blocks.Find("Methods", false);
+        protected CodeBlockNested ClassFields => this.fragBase.ClassEditor?.Blocks.Find("Fields", false);
+        protected CodeBlockNested LocalClassDefs => this.fragBase.SubClassEditor?.Blocks.Find("LocalClassDefs", false);
+        protected CodeBlockNested ClassConstructor => this.fragBase.ClassEditor?.Blocks.Find("Constructor", false);
+        protected CodeBlockNested ClassMethods => this.fragBase.ClassEditor?.Blocks.Find("Methods", false);
+        protected CodeBlockNested ClassValidateCodeStart => this.fragBase.ClassEditor?.Blocks.Find("ValidateCodeStart", false);
+        protected CodeBlockNested ClassValidateCode => this.fragBase.ClassEditor?.Blocks.Find("ValidateCode", false);
+        protected CodeBlockNested ClassWriteCodeStart => this.fragBase.ClassEditor?.Blocks.Find("WriteCodeStart", false);
+        protected CodeBlockNested ClassWriteCode => this.fragBase.ClassEditor?.Blocks.Find("WriteCode", false);
+        protected CodeBlockNested ClassReadCodeStart => this.fragBase.ClassEditor?.Blocks.Find("ReadCodeStart", false);
+        protected CodeBlockNested ClassReadCode => this.fragBase.ClassEditor?.Blocks.Find("ReadCode", false);
+        protected CodeBlockNested InterfaceFields => this.fragBase.InterfaceEditor?.Blocks.Find("Fields", false);
+        protected CodeBlockNested InterfaceMethods => this.fragBase.InterfaceEditor?.Blocks.Find("Methods", false);
         protected String FhirBase => this.fragBase.StructDef.BaseDefinition.LastUriPart();
 
         public CSCodeBlockDefinitions(CSBuilder csBuilder,

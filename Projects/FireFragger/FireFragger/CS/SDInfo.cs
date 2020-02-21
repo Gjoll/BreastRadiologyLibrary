@@ -21,9 +21,6 @@ namespace FireFragger
         public ElementTreeNode DiffNodes;
         public ElementTreeNode SnapNodes;
 
-        public String BaseDefinitionUrl => this.StructDef.BaseDefinition;
-        public String BaseDefinitionName => this.BaseDefinitionUrl.LastUriPart();
-
         public SDInfo(IConversionInfo ci, StructureDefinition sd)
         {
             this.StructDef = sd;
@@ -31,9 +28,9 @@ namespace FireFragger
             if (sd.Snapshot == null)
                 SnapshotCreator.Create(sd);
 
-            InterfaceEditor = new CodeEditor();
-            DiffNodes = l.Create(sd.Differential.Element);
-            SnapNodes = l.Create(sd.Snapshot.Element);
+            this.InterfaceEditor = new CodeEditor();
+            this.DiffNodes = l.Create(sd.Differential.Element);
+            this.SnapNodes = l.Create(sd.Snapshot.Element);
 
             this.InterfaceEditor.TryAddUserMacro("ClassName", CSBuilder.ClassName(this));
             this.InterfaceEditor.TryAddUserMacro("InterfaceName", CSBuilder.InterfaceName(this));
@@ -56,6 +53,10 @@ namespace FireFragger
                 this.ClassEditor.Load(Path.Combine("Templates", "Class.txt"));
         }
 
+        public String BaseDefinitionUrl => this.StructDef.BaseDefinition;
+        public String BaseDefinitionName => this.BaseDefinitionUrl.LastUriPart();
+
+
         public void SetInterfaces(String interfaces)
         {
             this.InterfaceEditor.TryAddUserMacro("Interfaces", interfaces);
@@ -67,16 +68,16 @@ namespace FireFragger
             }
         }
 
-        void AddMacros(CodeEditor ce,
-            SDInfo fi)
-        {
-            ce.TryAddUserMacro("FhirBase", fi.StructDef.BaseDefinition.LastUriPart());
-        }
-
         public bool IsFragment()
         {
             Extension isFragmentExtension = this.StructDef.GetExtension(Global.IsFragmentExtensionUrl);
             return (isFragmentExtension != null);
+        }
+
+        void AddMacros(CodeEditor ce,
+            SDInfo fi)
+        {
+            ce.TryAddUserMacro("FhirBase", fi.StructDef.BaseDefinition.LastUriPart());
         }
     };
 }

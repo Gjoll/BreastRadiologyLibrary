@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // CSBuildMemberListBase.cs:34
+		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

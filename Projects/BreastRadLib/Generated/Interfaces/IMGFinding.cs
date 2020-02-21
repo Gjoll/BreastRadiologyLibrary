@@ -16,19 +16,19 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		AbnormalityCyst_Accessor AbnormalityCyst { get ; }                                                                                        // CSBuildMemberListBase.cs:34
-		AbnormalityDuct_Accessor AbnormalityDuct { get ; }                                                                                        // CSBuildMemberListBase.cs:34
-		AbnormalityForeignObject_Accessor AbnormalityForeignObject { get ; }                                                                      // CSBuildMemberListBase.cs:34
-		AbnormalityLymphNode_Accessor AbnormalityLymphNode { get ; }                                                                              // CSBuildMemberListBase.cs:34
-		AbnormalityMass_Accessor AbnormalityMass { get ; }                                                                                        // CSBuildMemberListBase.cs:34
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSBuildMemberListBase.cs:34
-		AbnormalityFibroadenoma_Accessor AbnormalityFibroadenoma { get ; }                                                                        // CSBuildMemberListBase.cs:34
-		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // CSBuildMemberListBase.cs:34
-		MGAbnormalityAsymmetry_Accessor MGAbnormalityAsymmetry { get ; }                                                                          // CSBuildMemberListBase.cs:34
-		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // CSBuildMemberListBase.cs:34
-		MGAbnormalityDensity_Accessor MGAbnormalityDensity { get ; }                                                                              // CSBuildMemberListBase.cs:34
-		MGAbnormalityFatNecrosis_Accessor MGAbnormalityFatNecrosis { get ; }                                                                      // CSBuildMemberListBase.cs:34
-		MGBreastDensity_Accessor MGBreastDensity { get ; }                                                                                        // CSBuildMemberListBase.cs:34
+		AbnormalityCyst_Accessor AbnormalityCyst { get ; }                                                                                        // CSBuildMemberListBase.cs:27
+		AbnormalityDuct_Accessor AbnormalityDuct { get ; }                                                                                        // CSBuildMemberListBase.cs:27
+		AbnormalityForeignObject_Accessor AbnormalityForeignObject { get ; }                                                                      // CSBuildMemberListBase.cs:27
+		AbnormalityLymphNode_Accessor AbnormalityLymphNode { get ; }                                                                              // CSBuildMemberListBase.cs:27
+		AbnormalityMass_Accessor AbnormalityMass { get ; }                                                                                        // CSBuildMemberListBase.cs:27
+		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSBuildMemberListBase.cs:27
+		AbnormalityFibroadenoma_Accessor AbnormalityFibroadenoma { get ; }                                                                        // CSBuildMemberListBase.cs:27
+		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // CSBuildMemberListBase.cs:27
+		MGAbnormalityAsymmetry_Accessor MGAbnormalityAsymmetry { get ; }                                                                          // CSBuildMemberListBase.cs:27
+		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // CSBuildMemberListBase.cs:27
+		MGAbnormalityDensity_Accessor MGAbnormalityDensity { get ; }                                                                              // CSBuildMemberListBase.cs:27
+		MGAbnormalityFatNecrosis_Accessor MGAbnormalityFatNecrosis { get ; }                                                                      // CSBuildMemberListBase.cs:27
+		MGBreastDensity_Accessor MGBreastDensity { get ; }                                                                                        // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

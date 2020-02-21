@@ -72,7 +72,7 @@ namespace FireFragger
             {
                 String fragmentName = CSBuilder.ClassName(fiRef);
                 usingBlock.AppendLine($"using BreastRadLib.{fragmentName}Local;");
-                MergeFragment(fiRef);
+                this.MergeFragment(fiRef);
             }
         }
 
@@ -84,11 +84,11 @@ namespace FireFragger
                fcn,
                $"Integrating fragment {fi.StructDef.Url.LastUriPart()}");
 
-            if (fi != fragBase)
+            if (fi != this.fragBase)
             {
                 if (fi.ClassEditor != null)
                 {
-                    CodeBlockMerger cbm = new CodeBlockMerger(fragBase.ClassEditor);
+                    CodeBlockMerger cbm = new CodeBlockMerger(this.fragBase.ClassEditor);
                     foreach (CodeBlockNested codeBlock in fi.ClassEditor.Blocks.AllNamedBlocks)
                         cbm.Merge(codeBlock);
                 }
@@ -115,7 +115,7 @@ namespace FireFragger
                 .Summary($"{elementDefinition.ElementId}")
                 .SummaryClose()
                 ;
-            String methodName = $"DefaultValue_{defIndex++}";
+            String methodName = $"DefaultValue_{this.defIndex++}";
             FhirConstruct.Construct(this.ClassMethods, elementDefinition.DefaultValue, methodName, out String propertyType);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
@@ -124,7 +124,7 @@ namespace FireFragger
 
         void DefineBinding(ElementDefinition elementDefinition)
         {
-            if (BindingClassName(elementDefinition, 
+            if (this.BindingClassName(elementDefinition, 
                 out String bindingClassName,
                 out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
                 return;
@@ -164,8 +164,8 @@ namespace FireFragger
                 String[] pathElements = elementDefinition.Path.Split('.').ToArray();
                 if (pathElements.Length == 2)
                 {
-                    DefineDefaultElement(this.ClassConstructor, elementDefinition);
-                    DefineBinding(elementDefinition);
+                    this.DefineDefaultElement(this.ClassConstructor, elementDefinition);
+                    this.DefineBinding(elementDefinition);
                 }
             }
         }
@@ -174,7 +174,7 @@ namespace FireFragger
         {
             if (this.fragBase.ClassEditor == null)
                 return;
-            DefineCodeElements();
+            this.DefineCodeElements();
             String profileUrl = this.fragBase.StructDef.Url;
             if (this.fragBase.IsFragment() == false)
             {

@@ -64,7 +64,7 @@ namespace BreastRadLib
                 return;
             foreach (ResourceReference resRef in sectionComponent.Entry)
             {
-                Resource referencedResource = ReferencedResource<Resource>(resRef);
+                Resource referencedResource = this.ReferencedResource<Resource>(resRef);
                 String profile = referencedResource.Meta.Profile.First();
                 if (this.doc.TryGetRegisteredItem(referencedResource, out T item) == false)
                     throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");

@@ -9,19 +9,47 @@ using System.Text;
 namespace FireFragger
 {
     /// <summary>
-    /// Build the class that implements a list of coded references, such as
-    /// Observation.hasMember
+    /// Build the class that implements a list of extension values
     /// </summary>
-    internal class CSBuildMemberListCodedValue : CSBuildMemberListBase
+    internal class CSBuildMemberListExtensionValue : CSBuildMemberListBase
     {
-        public CSBuildMemberListCodedValue(CSBuilder csBuilder,
+        public CSBuildMemberListExtensionValue(CSBuilder csBuilder,
             SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
 
 
-        String DefineLocalClass(ElementTreeSlice componentSlice,
-            Coding code,
+        public void Define(String extensionName,
+            String extensionUrl,
+            ElementTreeSlice extensionSlice)
+        {
+            if (this.fragBase.ClassEditor != null)
+            {
+                this.ClassWriteCodeStart
+                    ?.AppendCode($"this.ClearExtensions();")
+                    ;
+            }
+
+            ElementTreeNode GetChild(String name)
+            {
+                if (this.fragBase.SnapNodes.TryGetElementNode($"{extensionSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
+                    throw new Exception($"Cant find child {name}");
+                return n;
+            }
+            ElementTreeNode valueNode = GetChild("value[x]");
+
+            Int32 max = this.ToMax(extensionSlice.ElementDefinition.Max);
+            Int32 min = extensionSlice.ElementDefinition.Min.Value;
+            String propertyName = extensionName.ToMachineName();
+
+            String extensionClassName =
+                this.DefineLocalClass(extensionSlice, extensionUrl, max, min, propertyName, valueNode);
+
+            this.DefineCommon(extensionClassName, propertyName, "Extension");
+        }
+
+        String DefineLocalClass(ElementTreeSlice extensionSlice,
+            String extensionUrl,
             Int32 max,
             Int32 min,
             String propertyName,
@@ -58,10 +86,10 @@ namespace FireFragger
 
             this.LocalClassDefs
                 .SummaryOpen()
-                .Summary($"Accessor class for '{componentSlice.Name}'")
-                .Summary($"[Fhir Element '{componentSlice.ElementDefinition.ElementId}]'")
+                .Summary($"Accessor class for '{extensionSlice.Name}'")
+                .Summary($"[Fhir Element '{extensionSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListCodedValueBase<{propertyType}>")
+                .AppendCode($"public class {className} : MemberListExtensionValueBase<{propertyType}>")
                 .OpenBrace()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)
@@ -74,7 +102,7 @@ namespace FireFragger
                 .SummaryClose()
                 .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
                 .OpenBrace()
-                .AppendCode($"this.Init(doc, {min}, {max}, new Coding(\"{code.System}\", \"{code.Code}\"));")
+                .AppendCode($"this.Init(doc, {min}, {max}, \"{extensionUrl}\"));")
                 .DefineBlock(out CodeBlockNested constructorBlock)
                 .CloseBrace()
                 .CloseBrace()
@@ -158,47 +186,6 @@ namespace FireFragger
                         DefineAppend(type.Code, type.Code);
             }
             return className;
-        }
-
-        public void Define()
-        {
-            if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
-                return;
-
-            if (this.fragBase.ClassEditor != null)
-            {
-                this.ClassWriteCodeStart
-                    ?.AppendCode($"this.ClearComponents();")
-                    ;
-            }
-
-            foreach (ElementTreeSlice componentSlice in componentNode.Slices.Skip(1))
-            {
-                String sliceName = componentSlice.ElementDefinition.SliceName;
-
-                ElementTreeNode GetChild(String name)
-                {
-                    if (this.fragBase.SnapNodes.TryGetElementNode($"{componentSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
-                        throw new Exception($"Cant find child {name}");
-                    return n;
-                }
-                ElementTreeNode codeNode = GetChild("code");
-                ElementTreeNode valueNode = GetChild("value[x]");
-
-                CodeableConcept componentCode = (CodeableConcept)codeNode.ElementDefinition.Pattern;
-                if (componentCode.Coding.Count != 1)
-                    throw new Exception("Invalid component code");
-                Coding code = componentCode.Coding[0];
-
-                Int32 max = this.ToMax(componentSlice.ElementDefinition.Max);
-                Int32 min = componentSlice.ElementDefinition.Min.Value;
-                String propertyName = sliceName.ToMachineName();
-
-                String componentClassName =
-                    this.DefineLocalClass(componentSlice, code, max, min, propertyName, valueNode);
-
-                this.DefineCommon(componentClassName, propertyName, "Component");
-            }
         }
     }
 }

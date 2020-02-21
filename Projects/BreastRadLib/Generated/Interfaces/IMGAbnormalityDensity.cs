@@ -16,7 +16,7 @@ namespace BreastRadLib
 		//- LocalClassDefs
 
 		//+ Fields
-		DensityType_Accessor DensityType { get ; }                                                                                                // CSBuildMemberListBase.cs:34
+		DensityType_Accessor DensityType { get ; }                                                                                                // CSBuildMemberListBase.cs:27
 		//- Fields
 
 		//+ Methods

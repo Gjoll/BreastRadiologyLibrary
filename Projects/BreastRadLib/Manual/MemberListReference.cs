@@ -45,7 +45,7 @@ namespace BreastRadLib
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        public BaseType Create => DoCreate();
+        public BaseType Create => this.DoCreate();
 
         /// <summary>
         /// Create item if it doesn't already exist, and return item.

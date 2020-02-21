@@ -99,14 +99,14 @@ namespace FireFragger
                 case CodeSystem cs:
                     {
                         CSInfo ci = new CSInfo(cs);
-                        CodeSystems.Add(cs.Url, ci);
+                        this.CodeSystems.Add(cs.Url, ci);
                     }
                     break;
 
                 case ValueSet vs:
                     {
                         VSInfo vi = new VSInfo(vs);
-                        ValueSets.Add(vs.Url, vi);
+                        this.ValueSets.Add(vs.Url, vi);
                     }
                     break;
 
@@ -134,7 +134,7 @@ namespace FireFragger
                fcn,
                $"Processing fragment {fi.StructDef.Name}");
 
-            if (String.Compare(ClassName(fi), BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
+            if (String.Compare(ClassName(fi), this.BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
                 Debugger.Break();
 
             if (fi.IsFragment() == false)
@@ -146,7 +146,7 @@ namespace FireFragger
                     ;
             }
 
-            DefineInterfaces(fi);
+            this.DefineInterfaces(fi);
             CSDefineBase csDef = null;
             switch (fi.StructDef.BaseDefinition)
             {
@@ -245,7 +245,7 @@ namespace FireFragger
             }
 
             foreach (SDInfo fi in OrderedFragments())
-                BuildFragment(fi);
+                this.BuildFragment(fi);
         }
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace FireFragger
         void BuildLocalCodeSystems()
         {
             foreach (VSInfo vi in this.ValueSets.Values)
-                BuildLocalCodeSystem(vi);
+                this.BuildLocalCodeSystem(vi);
             foreach (KeyValuePair<string, CSInfo> item in this.LocalCodeSystems)
                 this.CodeSystems.Add(item.Key, item.Value);
             this.LocalCodeSystems = null;
@@ -315,10 +315,9 @@ namespace FireFragger
                     throw new NotImplementedException("Have not implemented ValueSet.Compose.Include.Filter");
                 foreach (ValueSet.ConceptReferenceComponent concept in component.Concept)
                 {
-                    String codeName = CSBuilder.CodeName(concept.Code);
-
                     if (this.CodeSystems.TryGetValue(component.System, out CSInfo ci) == false)
                         throw new Exception($"CodeSystem {component.System} not found");
+                    String codeName = CSBuilder.CodeName(concept.Code);
                     String codingReference = $"{CSBuilder.CodeSystemName(ci)}.{codeName}";
                     fieldsBlock
                         .AppendCode($"public static TCoding {codeName} = new TCoding({codingReference});")
@@ -337,7 +336,7 @@ namespace FireFragger
         void BuildValueSets()
         {
             foreach (VSInfo vi in this.ValueSets.Values)
-                BuildValueSet(vi);
+                this.BuildValueSet(vi);
         }
 
         void BuildCodeSystem(CSInfo ci)
@@ -381,7 +380,7 @@ namespace FireFragger
         void BuildCodeSystems()
         {
             foreach (CSInfo ci in this.CodeSystems.Values)
-                BuildCodeSystem(ci);
+                this.BuildCodeSystem(ci);
         }
 
         void SaveAll()
@@ -390,23 +389,23 @@ namespace FireFragger
             this.fc.Mark(this.resourceFactoryEditor.SavePath);
             foreach (SDInfo fi in this.SDFragments.Values)
             {
-                Save(fi.InterfaceEditor, Path.Combine(this.OutputDir, "Generated", "Interfaces", $"{InterfaceName(fi)}.cs"));
+                this.Save(fi.InterfaceEditor, Path.Combine(this.OutputDir, "Generated", "Interfaces", $"{InterfaceName(fi)}.cs"));
                 if (fi.ClassEditor != null)
                 {
                     if (fi.IsFragment() == false)
-                        Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.cs"));
+                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.cs"));
                     else
-                        Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.txt"));
+                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.txt"));
                 }
                 if (fi.SubClassEditor != null)
-                    Save(fi.SubClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}Local.cs"));
+                    this.Save(fi.SubClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}Local.cs"));
             }
 
             foreach (CSInfo ci in this.CodeSystems.Values)
-                Save(ci.ClassCode, Path.Combine(this.OutputDir, "Generated", "CodeSystems", $"{CodeSystemName(ci)}.cs"));
+                this.Save(ci.ClassCode, Path.Combine(this.OutputDir, "Generated", "CodeSystems", $"{CodeSystemName(ci)}.cs"));
 
             foreach (VSInfo vi in this.ValueSets.Values)
-                Save(vi.ClassCode, Path.Combine(this.OutputDir, "Generated", "ValueSets", $"{ValueSetName(vi)}.cs"));
+                this.Save(vi.ClassCode, Path.Combine(this.OutputDir, "Generated", "ValueSets", $"{ValueSetName(vi)}.cs"));
         }
 
         public void Build()
@@ -423,17 +422,17 @@ namespace FireFragger
             if (this.CleanFlag)
             {
                 this.fc = new FileCleaner();
-                fc.Add(Path.Combine(this.OutputDir, "Generated"));
+                this.fc.Add(Path.Combine(this.OutputDir, "Generated"));
             }
 
-            BuildReferences();
-            BuildLocalCodeSystems();
-            BuildCodeSystems();
-            BuildValueSets();
-            BuildFragments();
-            SaveAll();
+            this.BuildReferences();
+            this.BuildLocalCodeSystems();
+            this.BuildCodeSystems();
+            this.BuildValueSets();
+            this.BuildFragments();
+            this.SaveAll();
 
-            fc?.Dispose();
+            this.fc?.Dispose();
         }
 
         void BuildReferences(SDInfo fi,
@@ -447,7 +446,7 @@ namespace FireFragger
                 if (e.Url.ToLower().Trim() == Global.FragmentUrl)
                 {
                     FhirUrl extUrl = (FhirUrl)e.Value;
-                    if (SDFragments.TryGetValue(extUrl.Value.Trim(), out SDInfo reference) == false)
+                    if (this.SDFragments.TryGetValue(extUrl.Value.Trim(), out SDInfo reference) == false)
                     {
                         this.ConversionError(this.GetType().Name,
                            fcn,
@@ -456,7 +455,7 @@ namespace FireFragger
                     else if (references.Contains(reference) == false)
                     {
                         if (recurseFlag)
-                            BuildReferences(reference, references, recurseFlag);
+                            this.BuildReferences(reference, references, recurseFlag);
                         references.Add(reference);
                     }
                 }
@@ -467,8 +466,8 @@ namespace FireFragger
         {
             foreach (SDInfo fi in this.SDFragments.Values)
             {
-                BuildReferences(fi, fi.DirectReferencedFragments, false);
-                BuildReferences(fi, fi.AllReferencedFragments, true);
+                this.BuildReferences(fi, fi.DirectReferencedFragments, false);
+                this.BuildReferences(fi, fi.AllReferencedFragments, true);
             }
         }
 
