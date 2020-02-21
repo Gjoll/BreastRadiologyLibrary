@@ -10,12 +10,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CommonMark">
-      <HintPath>..\..\..\Lib\CommonMark.dll</HintPath>
-    </Reference>
     <Reference Include="FhirKhit.Tools">
       <HintPath>..\..\..\Lib\FhirKhit.Tools.dll</HintPath>
     </Reference>
@@ -42,9 +40,6 @@
     </Reference>
     <Reference Include="Hl7.FhirPath">
       <HintPath>..\..\..\Lib\Hl7.FhirPath.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -65,8 +65,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:121
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // CSDefineBase.cs:182
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // CSDefineBase.cs:191
 			this.Value = new Value_Accessor(doc);                                                                                                    // CSBuildMemberListBase.cs:36
 			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:36
 			//- Constructor

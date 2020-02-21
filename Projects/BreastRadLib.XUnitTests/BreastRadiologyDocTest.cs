@@ -219,6 +219,41 @@ namespace BreastRadiology.XUnitTests
                 Debug.Assert(BLMisc.SameCode(asymmetry[0].ObsChanges.At(1), ObservedChangesVS.Code_DecreaseInSize));
             }
         }
+
+
+
+
+
+        [TestMethod]
+        public void ExtensionTest()
+        {
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = MakeDoc();
+                {
+                    BreastRadReport report = doc.Index.Report.Create();
+                    SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create();
+                    MGFinding mgFinding = findLeft.MGFinding.Append();
+                    MGAbnormalityAsymmetry asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                }
+                b = doc.Write();
+            }
+
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
+                BreastRadReport report = doc.Index.Report.Get();
+                Debug.Assert(report != null);
+
+                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
+                Debug.Assert(findLeft != null);
+
+                MGFinding mgFinding = findLeft.MGFinding.First();
+                Debug.Assert(mgFinding != null);
+
+                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
+                Debug.Assert(asymmetry.Length == 3);
+            }
+        }
     }
 }
 

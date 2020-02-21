@@ -51,9 +51,18 @@ namespace FireFragger
             this.InterfaceMethods.Clear();
         }
 
+        void DefineExtensions()
+        {
+            String baseName = this.fragBase.DiffNodes.ElementDefinition.Path;
+            if (this.fragBase.DiffNodes.TryGetElementNode($"{baseName}.extension", out ElementTreeNode extensionNode) == false)
+                return;
+            Trace.WriteLine("");
+        }
+
         public virtual void Build()
         {
             this.MergeFragments();
+            this.DefineExtensions();
         }
 
 

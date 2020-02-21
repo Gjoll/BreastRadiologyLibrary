@@ -14,7 +14,7 @@ namespace FireFragger
 {
     class CSBuilder : ConverterBase, IDisposable
     {
-        String BreakOnClass = "xxyyz";
+        String BreakOnClass = "BreastBodyLocationRequiredFragment";
         CodeEditor resourceFactoryEditor;
         CodeBlockNested resourceFactoryProfileBlock;
 
