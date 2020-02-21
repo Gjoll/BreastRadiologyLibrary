@@ -30,10 +30,10 @@ namespace FireFragger
             String brClass)
         {
             String className = $"{propertyName}_Accessor";
-            if (this.LocalClassDefs == null)
+            if (this.fragBase.LocalClassDefs == null)
                 return className;
 
-            this.LocalClassDefs
+            this.fragBase.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for '{title}'")
                 .Summary($"[Fhir Element '{sectionSlice.ElementDefinition.ElementId}]'")
@@ -177,7 +177,7 @@ namespace FireFragger
             if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
                 return;
 
-            this.ClassWriteCode
+            this.fragBase.ClassWriteCode
                 .AppendCode($"ClearSection();")
                 ;
 

@@ -53,10 +53,10 @@ namespace FireFragger
             String propertyType = (types.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
 
             String className = $"{propertyName}_Accessor";
-            if (this.LocalClassDefs == null)
+            if (this.fragBase.LocalClassDefs == null)
                 return className;
 
-            this.LocalClassDefs
+            this.fragBase.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for '{componentSlice.Name}'")
                 .Summary($"[Fhir Element '{componentSlice.ElementDefinition.ElementId}]'")
@@ -167,7 +167,7 @@ namespace FireFragger
 
             if (this.fragBase.ClassEditor != null)
             {
-                this.ClassWriteCodeStart
+                this.fragBase.ClassWriteCodeStart
                     ?.AppendCode($"this.ClearComponents();")
                     ;
             }

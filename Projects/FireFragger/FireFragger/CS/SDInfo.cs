@@ -21,6 +21,20 @@ namespace FireFragger
         public ElementTreeNode DiffNodes;
         public ElementTreeNode SnapNodes;
 
+        public CodeBlockNested ClassFields => this.ClassEditor?.Blocks.Find("Fields", false);
+        public CodeBlockNested LocalClassDefs => this.SubClassEditor?.Blocks.Find("LocalClassDefs", false);
+        public CodeBlockNested ClassConstructor => this.ClassEditor?.Blocks.Find("Constructor", false);
+        public CodeBlockNested ClassMethods => this.ClassEditor?.Blocks.Find("Methods", false);
+        public CodeBlockNested ClassValidateCodeStart => this.ClassEditor?.Blocks.Find("ValidateCodeStart", false);
+        public CodeBlockNested ClassValidateCode => this.ClassEditor?.Blocks.Find("ValidateCode", false);
+        public CodeBlockNested ClassWriteCodeStart => this.ClassEditor?.Blocks.Find("WriteCodeStart", false);
+        public CodeBlockNested ClassWriteCode => this.ClassEditor?.Blocks.Find("WriteCode", false);
+        public CodeBlockNested ClassReadCodeStart => this.ClassEditor?.Blocks.Find("ReadCodeStart", false);
+        public CodeBlockNested ClassReadCode => this.ClassEditor?.Blocks.Find("ReadCode", false);
+        public CodeBlockNested InterfaceFields => this.InterfaceEditor?.Blocks.Find("Fields", false);
+        public CodeBlockNested InterfaceMethods => this.InterfaceEditor?.Blocks.Find("Methods", false);
+        public String FhirBase => this.StructDef.BaseDefinition.LastUriPart();
+
         public SDInfo(IConversionInfo ci, StructureDefinition sd)
         {
             this.StructDef = sd;

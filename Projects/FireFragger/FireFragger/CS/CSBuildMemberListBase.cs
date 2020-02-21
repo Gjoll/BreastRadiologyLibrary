@@ -23,25 +23,25 @@ namespace FireFragger
             String propertyName,
             String methodSuffix)
         {
-            this.InterfaceFields
+            this.fragBase.InterfaceFields
                 .AppendCode($"{componentClassName} {propertyName} {{ get ; }}")
                 ;
 
             if (this.fragBase.ClassEditor != null)
             {
-                this.ClassFields
+                this.fragBase.ClassFields
                     .AppendCode($"public {componentClassName} {propertyName} {{ get ; protected set; }}")
                     ;
-                this.ClassConstructor
+                this.fragBase.ClassConstructor
                     .AppendCode($"this.{propertyName} = new {componentClassName}(doc);")
                     ;
-                this.ClassWriteCode
+                this.fragBase.ClassWriteCode
                     .AppendCode($"this.Write{methodSuffix}(this.{propertyName});")
                     ;
-                this.ClassReadCode
+                this.fragBase.ClassReadCode
                     .AppendCode($"this.Read{methodSuffix}(this.{propertyName});")
                     ;
-                this.ClassValidateCode
+                this.fragBase.ClassValidateCode
                     .AppendCode($"if (this.{propertyName}.Validate(sb) == false) retVal = false;")
                     ;
             }

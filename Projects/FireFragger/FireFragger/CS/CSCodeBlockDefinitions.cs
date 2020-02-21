@@ -12,19 +12,6 @@ namespace FireFragger
         protected CSBuilder csBuilder;
         protected SDInfo fragBase;
 
-        protected CodeBlockNested ClassFields => this.fragBase.ClassEditor?.Blocks.Find("Fields", false);
-        protected CodeBlockNested LocalClassDefs => this.fragBase.SubClassEditor?.Blocks.Find("LocalClassDefs", false);
-        protected CodeBlockNested ClassConstructor => this.fragBase.ClassEditor?.Blocks.Find("Constructor", false);
-        protected CodeBlockNested ClassMethods => this.fragBase.ClassEditor?.Blocks.Find("Methods", false);
-        protected CodeBlockNested ClassValidateCodeStart => this.fragBase.ClassEditor?.Blocks.Find("ValidateCodeStart", false);
-        protected CodeBlockNested ClassValidateCode => this.fragBase.ClassEditor?.Blocks.Find("ValidateCode", false);
-        protected CodeBlockNested ClassWriteCodeStart => this.fragBase.ClassEditor?.Blocks.Find("WriteCodeStart", false);
-        protected CodeBlockNested ClassWriteCode => this.fragBase.ClassEditor?.Blocks.Find("WriteCode", false);
-        protected CodeBlockNested ClassReadCodeStart => this.fragBase.ClassEditor?.Blocks.Find("ReadCodeStart", false);
-        protected CodeBlockNested ClassReadCode => this.fragBase.ClassEditor?.Blocks.Find("ReadCode", false);
-        protected CodeBlockNested InterfaceFields => this.fragBase.InterfaceEditor?.Blocks.Find("Fields", false);
-        protected CodeBlockNested InterfaceMethods => this.fragBase.InterfaceEditor?.Blocks.Find("Methods", false);
-        protected String FhirBase => this.fragBase.StructDef.BaseDefinition.LastUriPart();
 
         public CSCodeBlockDefinitions(CSBuilder csBuilder,
                     SDInfo fragBase)

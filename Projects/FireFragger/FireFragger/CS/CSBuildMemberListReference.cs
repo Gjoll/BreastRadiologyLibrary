@@ -34,10 +34,10 @@ namespace FireFragger
             String propertyType = profileUrl.LastUriPart();
 
             String className = $"{propertyName}_Accessor";
-            if (this.LocalClassDefs == null)
+            if (this.fragBase.LocalClassDefs == null)
                 return className;
 
-            this.LocalClassDefs
+            this.fragBase.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for slice '{sliceName}'")
                 .Summary($"[Fhir Element '{memberSlice.ElementDefinition.ElementId}]'")
@@ -46,7 +46,7 @@ namespace FireFragger
 
             if (max == 1)
             {
-                this.LocalClassDefs
+                this.fragBase.LocalClassDefs
                     .AppendCode($"public class {className} : MemberListReferenceSingle<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
@@ -62,7 +62,7 @@ namespace FireFragger
             }
             else
             {
-                this.LocalClassDefs
+                this.fragBase.LocalClassDefs
                     .AppendCode($"public class {className} : MemberListReferenceMultiple<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
@@ -83,7 +83,7 @@ namespace FireFragger
         {
             if (this.fragBase.ClassEditor != null)
             {
-                this.ClassWriteCodeStart
+                this.fragBase.ClassWriteCodeStart
                     ?.AppendCode($"this.Clear{this.MemberName}();")
                     ;
             }

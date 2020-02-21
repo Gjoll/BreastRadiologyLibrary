@@ -43,12 +43,12 @@ namespace FireFragger
 
         public void Clear()
         {
-            this.ClassFields?.Clear();
-            this.ClassMethods?.Clear();
-            this.ClassConstructor?.Clear();
+            this.fragBase.ClassFields?.Clear();
+            this.fragBase.ClassMethods?.Clear();
+            this.fragBase.ClassConstructor?.Clear();
 
-            this.InterfaceFields.Clear();
-            this.InterfaceMethods.Clear();
+            this.fragBase.InterfaceFields.Clear();
+            this.fragBase.InterfaceMethods.Clear();
         }
 
         void DefineExtensions()
@@ -118,14 +118,14 @@ namespace FireFragger
             if (pathElements.Length != 2)
                 return;
 
-            this.ClassMethods
+            this.fragBase.ClassMethods
                 .SummaryOpen()
                 .Summary($"Method to create default value for element")
                 .Summary($"{elementDefinition.ElementId}")
                 .SummaryClose()
                 ;
             String methodName = $"DefaultValue_{this.defIndex++}";
-            FhirConstruct.Construct(this.ClassMethods, elementDefinition.DefaultValue, methodName, out String propertyType);
+            FhirConstruct.Construct(this.fragBase.ClassMethods, elementDefinition.DefaultValue, methodName, out String propertyType);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;
@@ -148,7 +148,7 @@ namespace FireFragger
                     break;
             }
             String thisClass = CSBuilder.ClassName(this.fragBase);
-            this.ClassMethods
+            this.fragBase.ClassMethods
                 .SummaryOpen()
                 .Summary($"Set {elementDefinition.ElementId} to one of the predefined items")
                 .SummaryClose()
@@ -173,7 +173,7 @@ namespace FireFragger
                 String[] pathElements = elementDefinition.Path.Split('.').ToArray();
                 if (pathElements.Length == 2)
                 {
-                    this.DefineDefaultElement(this.ClassConstructor, elementDefinition);
+                    this.DefineDefaultElement(this.fragBase.ClassConstructor, elementDefinition);
                     this.DefineBinding(elementDefinition);
                 }
             }
@@ -187,7 +187,7 @@ namespace FireFragger
             String profileUrl = this.fragBase.StructDef.Url;
             if (this.fragBase.IsFragment() == false)
             {
-                this.ClassConstructor
+                this.fragBase.ClassConstructor
                     .AppendCode($"SetProfileUrl(\"{profileUrl}\");")
                     ;
             }
