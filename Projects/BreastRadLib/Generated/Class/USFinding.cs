@@ -103,20 +103,12 @@ namespace BreastRadLib
 		/// Method to create default value for element
 		/// Observation.code
 		/// </summary>
-		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
-		{                                                                                                                                         // FhirConstruct.cs:754
-		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
-		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
-		    {                                                                                                                                     // FhirConstruct.cs:764
-		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
-		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
-		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:770
-		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
-		        temp4.CodeElement.Value = "usFindingObservation";                                                                                 // FhirConstruct.cs:786
-		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
-		    }                                                                                                                                     // FhirConstruct.cs:814
-		    return retVal;                                                                                                                        // FhirConstruct.cs:829
-		}                                                                                                                                         // FhirConstruct.cs:830
+		public Extension DefaultValue_1()                                                                                                         // FhirConstruct.cs:3044
+		{                                                                                                                                         // FhirConstruct.cs:3045
+		    Extension retVal = new Extension();                                                                                                   // FhirConstruct.cs:3046
+		    retVal.Url = "http://www.fragment.com/DefaultValue";                                                                                  // FhirConstruct.cs:3051
+		    return retVal;                                                                                                                        // FhirConstruct.cs:3056
+		}                                                                                                                                         // FhirConstruct.cs:3057
 		//- Methods
 	}
 }

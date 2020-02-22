@@ -14,7 +14,7 @@ namespace FireFragger
 
         public static String ResourceMapNameUrl = $"{BaseFragmentUrl}mapname";
         public static String ResourceMapLinkUrl = $"{BaseFragmentUrl}maplink";
-
+        public static String DefaultValueExtensionUrl = $"{BaseFragmentUrl}DefaultValue";
 
         public const String LocalValueSertUrl = "http://hl7.org/fhir/us/breast-radiology/ValueSet/";
         public const String ClinicalImpressionUrl = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression";

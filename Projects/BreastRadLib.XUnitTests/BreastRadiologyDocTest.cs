@@ -1,5 +1,3 @@
-using FhirKhit.Tools;
-using FhirKhit.Tools.R4;
 using Hl7.Fhir.Specification.Source;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

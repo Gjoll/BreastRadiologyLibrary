@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hl7.Fhir.R4" Version="1.5.0" />
+    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.5.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.9.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,27 +21,6 @@
     </Reference>
     <Reference Include="FhirKhit.Tools.R4">
       <HintPath>..\..\..\Lib\FhirKhit.Tools.R4.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.ElementModel">
-      <HintPath>..\..\..\Lib\Hl7.Fhir.ElementModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.R4.Core">
-      <HintPath>..\..\..\..\fhir-net-api\src\Hl7.Fhir.Specification\bin\Debug\netstandard2.0\Hl7.Fhir.R4.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.R4.Specification">
-      <HintPath>..\..\..\..\fhir-net-api\src\Hl7.Fhir.Specification\bin\Debug\netstandard2.0\Hl7.Fhir.R4.Specification.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.Serialization">
-      <HintPath>..\..\..\Lib\Hl7.Fhir.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.Support">
-      <HintPath>..\..\..\Lib\Hl7.Fhir.Support.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.Support.Poco">
-      <HintPath>..\..\..\Lib\Hl7.Fhir.Support.Poco.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.FhirPath">
-      <HintPath>..\..\..\Lib\Hl7.FhirPath.dll</HintPath>
     </Reference>
   </ItemGroup>
 

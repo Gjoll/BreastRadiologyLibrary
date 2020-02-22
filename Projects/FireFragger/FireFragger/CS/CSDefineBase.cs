@@ -112,7 +112,7 @@ namespace FireFragger
         {
             if (elementDefinition.Min == 0)
                 return;
-            if (elementDefinition.DefaultValue == null)
+            if (elementDefinition.DefaultValueExtension() == null)
                 return;
             String[] pathElements = elementDefinition.Path.Split('.').ToArray();
             if (pathElements.Length != 2)
@@ -125,7 +125,7 @@ namespace FireFragger
                 .SummaryClose()
                 ;
             String methodName = $"DefaultValue_{this.defIndex++}";
-            FhirConstruct.Construct(this.fragBase.ClassMethods, elementDefinition.DefaultValue, methodName, out String propertyType);
+            FhirConstruct.Construct(this.fragBase.ClassMethods, elementDefinition.DefaultValueExtension(), methodName, out String propertyType);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;
