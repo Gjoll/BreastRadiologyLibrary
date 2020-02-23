@@ -58,8 +58,8 @@ namespace BreastRadLib
 				resource = new DiagnosticReport();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:130
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:191
+			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:192
 			//- Constructor
 		}
 
@@ -98,20 +98,28 @@ namespace BreastRadLib
 		/// Method to create default value for element
 		/// DiagnosticReport.code
 		/// </summary>
-		public Extension DefaultValue_1()                                                                                                         // FhirConstruct.cs:3044
-		{                                                                                                                                         // FhirConstruct.cs:3045
-		    Extension retVal = new Extension();                                                                                                   // FhirConstruct.cs:3046
-		    retVal.Url = "http://www.fragment.com/DefaultValue";                                                                                  // FhirConstruct.cs:3051
-		    return retVal;                                                                                                                        // FhirConstruct.cs:3056
-		}                                                                                                                                         // FhirConstruct.cs:3057
+		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://loinc.org";                                                                                   // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "10193-1";                                                                                              // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
 		/// <summary>
 		/// Set DiagnosticReport.conclusionCode to one of the predefined items
 		/// </summary>
-		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // CSDefineBase.cs:155
-		{                                                                                                                                         // CSDefineBase.cs:156
-		    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 157                             // CodeBlockNested.cs:594
-		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // CSDefineBase.cs:159
-		}                                                                                                                                         // CSDefineBase.cs:161
+		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // CSDefineBase.cs:156
+		{                                                                                                                                         // CSDefineBase.cs:157
+		    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 158                             // CodeBlockNested.cs:594
+		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // CSDefineBase.cs:160
+		}                                                                                                                                         // CSDefineBase.cs:162
 		//- Methods
 	}
 }

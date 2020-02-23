@@ -59,7 +59,7 @@ namespace BreastRadLib
 				resource = new Extension();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BodyDistanceFromExtension");                                  // CSDefineBase.cs:191
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BodyDistanceFromExtension");                                  // CSDefineBase.cs:192
 			this.LandMark = new LandMark_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
 			this.DistanceFromLandMark = new DistanceFromLandMark_Accessor(doc);                                                                      // CSBuildMemberListBase.cs:36
 			//- Constructor

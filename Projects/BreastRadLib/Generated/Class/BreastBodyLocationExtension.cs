@@ -61,7 +61,7 @@ namespace BreastRadLib
 				resource = new Extension();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // CSDefineBase.cs:191
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // CSDefineBase.cs:192
 			this.Quadrant = new Quadrant_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
 			this.Region = new Region_Accessor(doc);                                                                                                  // CSBuildMemberListBase.cs:36
 			this.ClockDirection = new ClockDirection_Accessor(doc);                                                                                  // CSBuildMemberListBase.cs:36

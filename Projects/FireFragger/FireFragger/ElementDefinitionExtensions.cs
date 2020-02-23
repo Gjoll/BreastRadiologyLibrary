@@ -14,8 +14,8 @@ namespace FireFragger
             switch (extensions.Length)
             {
                 case 0: return null;
-                case 1: return extensions[0];
-                default: throw new Exception($"Multiple default value extensions foundin element {e.ElementId}");
+                case 1: return extensions[0].Value;
+                default: throw new Exception($"Multiple default value extensions found in element {e.ElementId}");
             }
         }
     }
