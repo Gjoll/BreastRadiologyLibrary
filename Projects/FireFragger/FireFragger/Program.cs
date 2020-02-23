@@ -8,11 +8,11 @@ namespace FireFragger
     class Program
     {
         string filter = "*.json";
-        CSBuilder csBuilder;
+        CS.Builder csBuilder;
 
         public Program()
         {
-            this.csBuilder = new CSBuilder();
+            this.csBuilder = new CS.Builder();
             this.csBuilder.StatusErrors += this.StatusErrors;
             this.csBuilder.StatusWarnings += this.StatusWarnings;
             this.csBuilder.StatusInfo += this.StatusInfo;

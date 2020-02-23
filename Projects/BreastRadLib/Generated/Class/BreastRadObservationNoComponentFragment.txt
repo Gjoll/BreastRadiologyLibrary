@@ -1,5 +1,5 @@
-		//+ Fields
-		//- Fields
+		//+ Properties
+		//- Properties
 
 			//+ Constructor
 			//- Constructor
@@ -10,7 +10,7 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

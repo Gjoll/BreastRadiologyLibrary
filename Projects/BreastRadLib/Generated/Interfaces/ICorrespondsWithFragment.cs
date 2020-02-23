@@ -10,14 +10,11 @@ using BreastRadLib.CorrespondsWithFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface ICorrespondsWithFragment
+	public interface ICorrespondsWithFragment 
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
-		//+ Fields
-		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // CSBuildMemberListBase.cs:27
-		//- Fields
+		//+ Properties
+		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,17 +10,16 @@ using BreastRadLib.FindingBreastFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IFindingBreastFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IFindingBreastFragment : IHeaderFragment,
+        IBreastRadObservationNoDeviceFragment
 
-		//+ Fields
-		MGFinding_Accessor MGFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:27
-		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // CSBuildMemberListBase.cs:27
-		NMFinding_Accessor NMFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:27
-		USFinding_Accessor USFinding { get ; }                                                                                                    // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		MGFinding_Accessor MGFinding { get ; }                                                                                                    // BuildMemberListBase.cs:29
+		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // BuildMemberListBase.cs:29
+		NMFinding_Accessor NMFinding { get ; }                                                                                                    // BuildMemberListBase.cs:29
+		USFinding_Accessor USFinding { get ; }                                                                                                    // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

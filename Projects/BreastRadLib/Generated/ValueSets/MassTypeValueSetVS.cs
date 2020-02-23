@@ -28,22 +28,22 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Mass = new TCoding(MassTypeCS.Code_Mass);                                                                      // CSBuilder.cs:323
-		public static TCoding Code_MassIntraductal = new TCoding(MassTypeCS.Code_MassIntraductal);                                                // CSBuilder.cs:323
-		public static TCoding Code_MassPartiallySolid = new TCoding(MassTypeCS.Code_MassPartiallySolid);                                          // CSBuilder.cs:323
-		public static TCoding Code_MassSkinATLASIsSkinLesion = new TCoding(MassTypeCS.Code_MassSkinATLASIsSkinLesion);                            // CSBuilder.cs:323
-		public static TCoding Code_MassSolid = new TCoding(MassTypeCS.Code_MassSolid);                                                            // CSBuilder.cs:323
+		public static TCoding Code_Mass = new TCoding(MassTypeCS.Code_Mass);                                                                      // Builder.cs:349
+		public static TCoding Code_MassIntraductal = new TCoding(MassTypeCS.Code_MassIntraductal);                                                // Builder.cs:349
+		public static TCoding Code_MassPartiallySolid = new TCoding(MassTypeCS.Code_MassPartiallySolid);                                          // Builder.cs:349
+		public static TCoding Code_MassSkinATLASIsSkinLesion = new TCoding(MassTypeCS.Code_MassSkinATLASIsSkinLesion);                            // Builder.cs:349
+		public static TCoding Code_MassSolid = new TCoding(MassTypeCS.Code_MassSolid);                                                            // Builder.cs:349
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:309
-		{                                                                                                                                         // CSBuilder.cs:310
-		    yield return Code_Mass;                                                                                                               // CSBuilder.cs:326
-		    yield return Code_MassIntraductal;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_MassPartiallySolid;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_MassSkinATLASIsSkinLesion;                                                                                          // CSBuilder.cs:326
-		    yield return Code_MassSolid;                                                                                                          // CSBuilder.cs:326
-		}                                                                                                                                         // CSBuilder.cs:332
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
+		{                                                                                                                                         // Builder.cs:336
+		    yield return Code_Mass;                                                                                                               // Builder.cs:352
+		    yield return Code_MassIntraductal;                                                                                                    // Builder.cs:352
+		    yield return Code_MassPartiallySolid;                                                                                                 // Builder.cs:352
+		    yield return Code_MassSkinATLASIsSkinLesion;                                                                                          // Builder.cs:352
+		    yield return Code_MassSolid;                                                                                                          // Builder.cs:352
+		}                                                                                                                                         // Builder.cs:358
 		//- Methods
 	}
 }

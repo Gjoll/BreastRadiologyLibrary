@@ -10,14 +10,24 @@ using BreastRadLib.AbnormalityDuctLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityDuct
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAbnormalityDuct : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoValueFragment,
+        IBreastRadObservationNoComponentFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        IObservedCountFragment,
+        IObservedDistributionFragment,
+        IObservedSizeFragment,
+        INotPreviouslySeenComponentFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IConsistentWithHasMemberFragment
 
-		//+ Fields
-		DuctType_Accessor DuctType { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		DuctType_Accessor DuctType { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

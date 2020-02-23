@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
     /// <summary>
     /// Build the class that implements a list of extension values
     /// </summary>
-    internal class CSBuildMemberListExtensionValue : CSBuildMemberListBase
+    internal class BuildMemberListExtensionValue : BuildMemberListBase
     {
-        public CSBuildMemberListExtensionValue(CSBuilder csBuilder,
+        public BuildMemberListExtensionValue(Builder csBuilder,
             SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }

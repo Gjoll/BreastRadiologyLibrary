@@ -10,13 +10,21 @@ using BreastRadLib.MGAbnormalityArchitecturalDistortionLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGAbnormalityArchitecturalDistortion
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IMGAbnormalityArchitecturalDistortion : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoComponentFragment,
+        IBreastRadObservationNoValueFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        INotPreviouslySeenComponentFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment,
+        IConsistentWithHasMemberFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,13 +10,11 @@ using BreastRadLib.USFindingLocal;
 
 namespace BreastRadLib
 {
-	public interface IUSFinding
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IUSFinding : IObservationSectionFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

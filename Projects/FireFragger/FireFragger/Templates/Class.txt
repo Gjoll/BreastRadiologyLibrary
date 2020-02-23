@@ -13,12 +13,9 @@ using BreastRadLib.%ClassName%Local;
 namespace BreastRadLib
 {
 	//+*Header
-	public class %ClassName% : %FhirBase%Base%Interfaces%
+	public class %ClassName% : %FhirBase%Base, I%ClassName%
 	//-*Header
 	{
-		//+ Fields
-		//- Fields
-
 		//+ Properties
 		//- Properties
 

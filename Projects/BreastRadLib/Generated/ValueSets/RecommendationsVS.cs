@@ -28,206 +28,206 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_3DImaging = new TCoding(RecommendationsCodeSystemCS.Code_3DImaging);                                           // CSBuilder.cs:323
-		public static TCoding Code_3DSpotCC = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotCC);                                             // CSBuilder.cs:323
-		public static TCoding Code_3DSpotLM = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotLM);                                             // CSBuilder.cs:323
-		public static TCoding Code_3DSpotML = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotML);                                             // CSBuilder.cs:323
-		public static TCoding Code_3DSpotMLO = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotMLO);                                           // CSBuilder.cs:323
-		public static TCoding Code_AdditionalViews = new TCoding(RecommendationsCodeSystemCS.Code_AdditionalViews);                               // CSBuilder.cs:323
-		public static TCoding Code_AddlitionalViewsWithPossibleUltrasound = new TCoding(RecommendationsCodeSystemCS.Code_AddlitionalViewsWithPossibleUltrasound);// CSBuilder.cs:323
-		public static TCoding Code_AxillaView = new TCoding(RecommendationsCodeSystemCS.Code_AxillaView);                                         // CSBuilder.cs:323
-		public static TCoding Code_AxillaryTailView = new TCoding(RecommendationsCodeSystemCS.Code_AxillaryTailView);                             // CSBuilder.cs:323
-		public static TCoding Code_Biopsy = new TCoding(RecommendationsCodeSystemCS.Code_Biopsy);                                                 // CSBuilder.cs:323
-		public static TCoding Code_BiopsyBaseOnClinical = new TCoding(RecommendationsCodeSystemCS.Code_BiopsyBaseOnClinical);                     // CSBuilder.cs:323
-		public static TCoding Code_CaudocranialView = new TCoding(RecommendationsCodeSystemCS.Code_CaudocranialView);                             // CSBuilder.cs:323
-		public static TCoding Code_CCWithCompressionView = new TCoding(RecommendationsCodeSystemCS.Code_CCWithCompressionView);                   // CSBuilder.cs:323
-		public static TCoding Code_CCWithMagnificationView = new TCoding(RecommendationsCodeSystemCS.Code_CCWithMagnificationView);               // CSBuilder.cs:323
-		public static TCoding Code_CleavageView = new TCoding(RecommendationsCodeSystemCS.Code_CleavageView);                                     // CSBuilder.cs:323
-		public static TCoding Code_ClinicalConsultation = new TCoding(RecommendationsCodeSystemCS.Code_ClinicalConsultation);                     // CSBuilder.cs:323
-		public static TCoding Code_ClinicalCorrelation = new TCoding(RecommendationsCodeSystemCS.Code_ClinicalCorrelation);                       // CSBuilder.cs:323
-		public static TCoding Code_ClinicalFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_ClinicalFollowUp);                             // CSBuilder.cs:323
-		public static TCoding Code_CompareToPriorExams = new TCoding(RecommendationsCodeSystemCS.Code_CompareToPriorExams);                       // CSBuilder.cs:323
-		public static TCoding Code_CompressionViews = new TCoding(RecommendationsCodeSystemCS.Code_CompressionViews);                             // CSBuilder.cs:323
-		public static TCoding Code_ConeCompression = new TCoding(RecommendationsCodeSystemCS.Code_ConeCompression);                               // CSBuilder.cs:323
-		public static TCoding Code_CoreBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_CoreBiopsy);                                         // CSBuilder.cs:323
-		public static TCoding Code_CraniocaudalView = new TCoding(RecommendationsCodeSystemCS.Code_CraniocaudalView);                             // CSBuilder.cs:323
-		public static TCoding Code_Cryoablation = new TCoding(RecommendationsCodeSystemCS.Code_Cryoablation);                                     // CSBuilder.cs:323
-		public static TCoding Code_CystAspiration = new TCoding(RecommendationsCodeSystemCS.Code_CystAspiration);                                 // CSBuilder.cs:323
-		public static TCoding Code_CystAspirationForRelief = new TCoding(RecommendationsCodeSystemCS.Code_CystAspirationForRelief);               // CSBuilder.cs:323
-		public static TCoding Code_DiagnosticAspiration = new TCoding(RecommendationsCodeSystemCS.Code_DiagnosticAspiration);                     // CSBuilder.cs:323
-		public static TCoding Code_DiagnosticMammogram = new TCoding(RecommendationsCodeSystemCS.Code_DiagnosticMammogram);                       // CSBuilder.cs:323
-		public static TCoding Code_DrainageTube = new TCoding(RecommendationsCodeSystemCS.Code_DrainageTube);                                     // CSBuilder.cs:323
-		public static TCoding Code_Ductography = new TCoding(RecommendationsCodeSystemCS.Code_Ductography);                                       // CSBuilder.cs:323
-		public static TCoding Code_ExaggeratedCCViews = new TCoding(RecommendationsCodeSystemCS.Code_ExaggeratedCCViews);                         // CSBuilder.cs:323
-		public static TCoding Code_FNABiopsy = new TCoding(RecommendationsCodeSystemCS.Code_FNABiopsy);                                           // CSBuilder.cs:323
-		public static TCoding Code_FollowUp = new TCoding(RecommendationsCodeSystemCS.Code_FollowUp);                                             // CSBuilder.cs:323
-		public static TCoding Code_Followup3Months = new TCoding(RecommendationsCodeSystemCS.Code_Followup3Months);                               // CSBuilder.cs:323
-		public static TCoding Code_Followup6Months = new TCoding(RecommendationsCodeSystemCS.Code_Followup6Months);                               // CSBuilder.cs:323
-		public static TCoding Code_IfPreviousShowNoChange = new TCoding(RecommendationsCodeSystemCS.Code_IfPreviousShowNoChange);                 // CSBuilder.cs:323
-		public static TCoding Code_LateralMagnificationView = new TCoding(RecommendationsCodeSystemCS.Code_LateralMagnificationView);             // CSBuilder.cs:323
-		public static TCoding Code_LateralMedialView = new TCoding(RecommendationsCodeSystemCS.Code_LateralMedialView);                           // CSBuilder.cs:323
-		public static TCoding Code_LateralView = new TCoding(RecommendationsCodeSystemCS.Code_LateralView);                                       // CSBuilder.cs:323
-		public static TCoding Code_LateralWithCompressionView = new TCoding(RecommendationsCodeSystemCS.Code_LateralWithCompressionView);         // CSBuilder.cs:323
-		public static TCoding Code_LateromedialOblique = new TCoding(RecommendationsCodeSystemCS.Code_LateromedialOblique);                       // CSBuilder.cs:323
-		public static TCoding Code_LateromedialView = new TCoding(RecommendationsCodeSystemCS.Code_LateromedialView);                             // CSBuilder.cs:323
-		public static TCoding Code_LymphNodeAssessment = new TCoding(RecommendationsCodeSystemCS.Code_LymphNodeAssessment);                       // CSBuilder.cs:323
-		public static TCoding Code_MagnificationViews = new TCoding(RecommendationsCodeSystemCS.Code_MagnificationViews);                         // CSBuilder.cs:323
-		public static TCoding Code_Mammogram = new TCoding(RecommendationsCodeSystemCS.Code_Mammogram);                                           // CSBuilder.cs:323
-		public static TCoding Code_Mammogram3MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Mammogram3MonthFollowUp);               // CSBuilder.cs:323
-		public static TCoding Code_Mammogram6MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Mammogram6MonthFollowUp);               // CSBuilder.cs:323
-		public static TCoding Code_MammogramAndUltrasound3MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_MammogramAndUltrasound3MonthFollowUp);// CSBuilder.cs:323
-		public static TCoding Code_MammogramAndUltrasound6MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_MammogramAndUltrasound6MonthFollowUp);// CSBuilder.cs:323
-		public static TCoding Code_MediolateralObliqueView = new TCoding(RecommendationsCodeSystemCS.Code_MediolateralObliqueView);               // CSBuilder.cs:323
-		public static TCoding Code_MediolateralView = new TCoding(RecommendationsCodeSystemCS.Code_MediolateralView);                             // CSBuilder.cs:323
-		public static TCoding Code_MLOWithCompressionView = new TCoding(RecommendationsCodeSystemCS.Code_MLOWithCompressionView);                 // CSBuilder.cs:323
-		public static TCoding Code_MLOWithMagnificationView = new TCoding(RecommendationsCodeSystemCS.Code_MLOWithMagnificationView);             // CSBuilder.cs:323
-		public static TCoding Code_MRI = new TCoding(RecommendationsCodeSystemCS.Code_MRI);                                                       // CSBuilder.cs:323
-		public static TCoding Code_MRIBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_MRIBiopsy);                                           // CSBuilder.cs:323
-		public static TCoding Code_MRIFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_MRIFollowUp);                                       // CSBuilder.cs:323
-		public static TCoding Code_NeedleLocationAndSurgicalBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_NeedleLocationAndSurgicalBiopsy);// CSBuilder.cs:323
-		public static TCoding Code_NippleInProfileView = new TCoding(RecommendationsCodeSystemCS.Code_NippleInProfileView);                       // CSBuilder.cs:323
-		public static TCoding Code_OffAngleCCView = new TCoding(RecommendationsCodeSystemCS.Code_OffAngleCCView);                                 // CSBuilder.cs:323
-		public static TCoding Code_OffAngleMLOView = new TCoding(RecommendationsCodeSystemCS.Code_OffAngleMLOView);                               // CSBuilder.cs:323
-		public static TCoding Code_PossStereotacticBx = new TCoding(RecommendationsCodeSystemCS.Code_PossStereotacticBx);                         // CSBuilder.cs:323
-		public static TCoding Code_PossibleCoreBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleCoreBiopsy);                         // CSBuilder.cs:323
-		public static TCoding Code_PossibleDiagnosticMammogram = new TCoding(RecommendationsCodeSystemCS.Code_PossibleDiagnosticMammogram);       // CSBuilder.cs:323
-		public static TCoding Code_PossibleStereotacticVacuumBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleStereotacticVacuumBiopsy);// CSBuilder.cs:323
-		public static TCoding Code_PossibleSurgicalConsult = new TCoding(RecommendationsCodeSystemCS.Code_PossibleSurgicalConsult);               // CSBuilder.cs:323
-		public static TCoding Code_PossibleSurgicalEvaluation = new TCoding(RecommendationsCodeSystemCS.Code_PossibleSurgicalEvaluation);         // CSBuilder.cs:323
-		public static TCoding Code_PossibleUltrasound = new TCoding(RecommendationsCodeSystemCS.Code_PossibleUltrasound);                         // CSBuilder.cs:323
-		public static TCoding Code_PossibleUltrasoundGuidedBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleUltrasoundGuidedBiopsy); // CSBuilder.cs:323
-		public static TCoding Code_PossibleVacuumBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleVacuumBiopsy);                     // CSBuilder.cs:323
-		public static TCoding Code_RepeatCCView = new TCoding(RecommendationsCodeSystemCS.Code_RepeatCCView);                                     // CSBuilder.cs:323
-		public static TCoding Code_RepeatMLOView = new TCoding(RecommendationsCodeSystemCS.Code_RepeatMLOView);                                   // CSBuilder.cs:323
-		public static TCoding Code_RolledLateralView = new TCoding(RecommendationsCodeSystemCS.Code_RolledLateralView);                           // CSBuilder.cs:323
-		public static TCoding Code_RolledMedialView = new TCoding(RecommendationsCodeSystemCS.Code_RolledMedialView);                             // CSBuilder.cs:323
-		public static TCoding Code_ScintimammogramGuidedBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_ScintimammogramGuidedBiopsy);       // CSBuilder.cs:323
-		public static TCoding Code_Scintimammography = new TCoding(RecommendationsCodeSystemCS.Code_Scintimammography);                           // CSBuilder.cs:323
-		public static TCoding Code_SpotCompression = new TCoding(RecommendationsCodeSystemCS.Code_SpotCompression);                               // CSBuilder.cs:323
-		public static TCoding Code_SpotMagnificationViews = new TCoding(RecommendationsCodeSystemCS.Code_SpotMagnificationViews);                 // CSBuilder.cs:323
-		public static TCoding Code_StereotacticBx = new TCoding(RecommendationsCodeSystemCS.Code_StereotacticBx);                                 // CSBuilder.cs:323
-		public static TCoding Code_SuperolateralIOView = new TCoding(RecommendationsCodeSystemCS.Code_SuperolateralIOView);                       // CSBuilder.cs:323
-		public static TCoding Code_SurgicalBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalBiopsy);                                 // CSBuilder.cs:323
-		public static TCoding Code_SurgicalConsult = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalConsult);                               // CSBuilder.cs:323
-		public static TCoding Code_SurgicalConsultAndBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalConsultAndBiopsy);             // CSBuilder.cs:323
-		public static TCoding Code_SurgicalEvaluation = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalEvaluation);                         // CSBuilder.cs:323
-		public static TCoding Code_SurgicalExcision = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalExcision);                             // CSBuilder.cs:323
-		public static TCoding Code_SurgicalOncologicEvaluation = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalOncologicEvaluation);       // CSBuilder.cs:323
-		public static TCoding Code_SurgicalOncologicalConsult = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalOncologicalConsult);         // CSBuilder.cs:323
-		public static TCoding Code_TangentialView = new TCoding(RecommendationsCodeSystemCS.Code_TangentialView);                                 // CSBuilder.cs:323
-		public static TCoding Code_TangentialViews = new TCoding(RecommendationsCodeSystemCS.Code_TangentialViews);                               // CSBuilder.cs:323
-		public static TCoding Code_Ultrasound = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound);                                         // CSBuilder.cs:323
-		public static TCoding Code_Ultrasound2ndLook = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound2ndLook);                           // CSBuilder.cs:323
-		public static TCoding Code_Ultrasound3MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound3MonthFollowUp);             // CSBuilder.cs:323
-		public static TCoding Code_Ultrasound6MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound6MonthFollowUp);             // CSBuilder.cs:323
-		public static TCoding Code_UltrasoundGuidedBx = new TCoding(RecommendationsCodeSystemCS.Code_UltrasoundGuidedBx);                         // CSBuilder.cs:323
-		public static TCoding Code_UltrasoundLocationAndSurgicalBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_UltrasoundLocationAndSurgicalBiopsy);// CSBuilder.cs:323
-		public static TCoding Code_UltrasoundWithPossibleAddlitonalViews = new TCoding(RecommendationsCodeSystemCS.Code_UltrasoundWithPossibleAddlitonalViews);// CSBuilder.cs:323
-		public static TCoding Code_UnspecifiedOther = new TCoding(RecommendationsCodeSystemCS.Code_UnspecifiedOther);                             // CSBuilder.cs:323
-		public static TCoding Code_VacuumBx = new TCoding(RecommendationsCodeSystemCS.Code_VacuumBx);                                             // CSBuilder.cs:323
+		public static TCoding Code_3DImaging = new TCoding(RecommendationsCodeSystemCS.Code_3DImaging);                                           // Builder.cs:349
+		public static TCoding Code_3DSpotCC = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotCC);                                             // Builder.cs:349
+		public static TCoding Code_3DSpotLM = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotLM);                                             // Builder.cs:349
+		public static TCoding Code_3DSpotML = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotML);                                             // Builder.cs:349
+		public static TCoding Code_3DSpotMLO = new TCoding(RecommendationsCodeSystemCS.Code_3DSpotMLO);                                           // Builder.cs:349
+		public static TCoding Code_AdditionalViews = new TCoding(RecommendationsCodeSystemCS.Code_AdditionalViews);                               // Builder.cs:349
+		public static TCoding Code_AddlitionalViewsWithPossibleUltrasound = new TCoding(RecommendationsCodeSystemCS.Code_AddlitionalViewsWithPossibleUltrasound);// Builder.cs:349
+		public static TCoding Code_AxillaView = new TCoding(RecommendationsCodeSystemCS.Code_AxillaView);                                         // Builder.cs:349
+		public static TCoding Code_AxillaryTailView = new TCoding(RecommendationsCodeSystemCS.Code_AxillaryTailView);                             // Builder.cs:349
+		public static TCoding Code_Biopsy = new TCoding(RecommendationsCodeSystemCS.Code_Biopsy);                                                 // Builder.cs:349
+		public static TCoding Code_BiopsyBaseOnClinical = new TCoding(RecommendationsCodeSystemCS.Code_BiopsyBaseOnClinical);                     // Builder.cs:349
+		public static TCoding Code_CaudocranialView = new TCoding(RecommendationsCodeSystemCS.Code_CaudocranialView);                             // Builder.cs:349
+		public static TCoding Code_CCWithCompressionView = new TCoding(RecommendationsCodeSystemCS.Code_CCWithCompressionView);                   // Builder.cs:349
+		public static TCoding Code_CCWithMagnificationView = new TCoding(RecommendationsCodeSystemCS.Code_CCWithMagnificationView);               // Builder.cs:349
+		public static TCoding Code_CleavageView = new TCoding(RecommendationsCodeSystemCS.Code_CleavageView);                                     // Builder.cs:349
+		public static TCoding Code_ClinicalConsultation = new TCoding(RecommendationsCodeSystemCS.Code_ClinicalConsultation);                     // Builder.cs:349
+		public static TCoding Code_ClinicalCorrelation = new TCoding(RecommendationsCodeSystemCS.Code_ClinicalCorrelation);                       // Builder.cs:349
+		public static TCoding Code_ClinicalFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_ClinicalFollowUp);                             // Builder.cs:349
+		public static TCoding Code_CompareToPriorExams = new TCoding(RecommendationsCodeSystemCS.Code_CompareToPriorExams);                       // Builder.cs:349
+		public static TCoding Code_CompressionViews = new TCoding(RecommendationsCodeSystemCS.Code_CompressionViews);                             // Builder.cs:349
+		public static TCoding Code_ConeCompression = new TCoding(RecommendationsCodeSystemCS.Code_ConeCompression);                               // Builder.cs:349
+		public static TCoding Code_CoreBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_CoreBiopsy);                                         // Builder.cs:349
+		public static TCoding Code_CraniocaudalView = new TCoding(RecommendationsCodeSystemCS.Code_CraniocaudalView);                             // Builder.cs:349
+		public static TCoding Code_Cryoablation = new TCoding(RecommendationsCodeSystemCS.Code_Cryoablation);                                     // Builder.cs:349
+		public static TCoding Code_CystAspiration = new TCoding(RecommendationsCodeSystemCS.Code_CystAspiration);                                 // Builder.cs:349
+		public static TCoding Code_CystAspirationForRelief = new TCoding(RecommendationsCodeSystemCS.Code_CystAspirationForRelief);               // Builder.cs:349
+		public static TCoding Code_DiagnosticAspiration = new TCoding(RecommendationsCodeSystemCS.Code_DiagnosticAspiration);                     // Builder.cs:349
+		public static TCoding Code_DiagnosticMammogram = new TCoding(RecommendationsCodeSystemCS.Code_DiagnosticMammogram);                       // Builder.cs:349
+		public static TCoding Code_DrainageTube = new TCoding(RecommendationsCodeSystemCS.Code_DrainageTube);                                     // Builder.cs:349
+		public static TCoding Code_Ductography = new TCoding(RecommendationsCodeSystemCS.Code_Ductography);                                       // Builder.cs:349
+		public static TCoding Code_ExaggeratedCCViews = new TCoding(RecommendationsCodeSystemCS.Code_ExaggeratedCCViews);                         // Builder.cs:349
+		public static TCoding Code_FNABiopsy = new TCoding(RecommendationsCodeSystemCS.Code_FNABiopsy);                                           // Builder.cs:349
+		public static TCoding Code_FollowUp = new TCoding(RecommendationsCodeSystemCS.Code_FollowUp);                                             // Builder.cs:349
+		public static TCoding Code_Followup3Months = new TCoding(RecommendationsCodeSystemCS.Code_Followup3Months);                               // Builder.cs:349
+		public static TCoding Code_Followup6Months = new TCoding(RecommendationsCodeSystemCS.Code_Followup6Months);                               // Builder.cs:349
+		public static TCoding Code_IfPreviousShowNoChange = new TCoding(RecommendationsCodeSystemCS.Code_IfPreviousShowNoChange);                 // Builder.cs:349
+		public static TCoding Code_LateralMagnificationView = new TCoding(RecommendationsCodeSystemCS.Code_LateralMagnificationView);             // Builder.cs:349
+		public static TCoding Code_LateralMedialView = new TCoding(RecommendationsCodeSystemCS.Code_LateralMedialView);                           // Builder.cs:349
+		public static TCoding Code_LateralView = new TCoding(RecommendationsCodeSystemCS.Code_LateralView);                                       // Builder.cs:349
+		public static TCoding Code_LateralWithCompressionView = new TCoding(RecommendationsCodeSystemCS.Code_LateralWithCompressionView);         // Builder.cs:349
+		public static TCoding Code_LateromedialOblique = new TCoding(RecommendationsCodeSystemCS.Code_LateromedialOblique);                       // Builder.cs:349
+		public static TCoding Code_LateromedialView = new TCoding(RecommendationsCodeSystemCS.Code_LateromedialView);                             // Builder.cs:349
+		public static TCoding Code_LymphNodeAssessment = new TCoding(RecommendationsCodeSystemCS.Code_LymphNodeAssessment);                       // Builder.cs:349
+		public static TCoding Code_MagnificationViews = new TCoding(RecommendationsCodeSystemCS.Code_MagnificationViews);                         // Builder.cs:349
+		public static TCoding Code_Mammogram = new TCoding(RecommendationsCodeSystemCS.Code_Mammogram);                                           // Builder.cs:349
+		public static TCoding Code_Mammogram3MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Mammogram3MonthFollowUp);               // Builder.cs:349
+		public static TCoding Code_Mammogram6MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Mammogram6MonthFollowUp);               // Builder.cs:349
+		public static TCoding Code_MammogramAndUltrasound3MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_MammogramAndUltrasound3MonthFollowUp);// Builder.cs:349
+		public static TCoding Code_MammogramAndUltrasound6MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_MammogramAndUltrasound6MonthFollowUp);// Builder.cs:349
+		public static TCoding Code_MediolateralObliqueView = new TCoding(RecommendationsCodeSystemCS.Code_MediolateralObliqueView);               // Builder.cs:349
+		public static TCoding Code_MediolateralView = new TCoding(RecommendationsCodeSystemCS.Code_MediolateralView);                             // Builder.cs:349
+		public static TCoding Code_MLOWithCompressionView = new TCoding(RecommendationsCodeSystemCS.Code_MLOWithCompressionView);                 // Builder.cs:349
+		public static TCoding Code_MLOWithMagnificationView = new TCoding(RecommendationsCodeSystemCS.Code_MLOWithMagnificationView);             // Builder.cs:349
+		public static TCoding Code_MRI = new TCoding(RecommendationsCodeSystemCS.Code_MRI);                                                       // Builder.cs:349
+		public static TCoding Code_MRIBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_MRIBiopsy);                                           // Builder.cs:349
+		public static TCoding Code_MRIFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_MRIFollowUp);                                       // Builder.cs:349
+		public static TCoding Code_NeedleLocationAndSurgicalBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_NeedleLocationAndSurgicalBiopsy);// Builder.cs:349
+		public static TCoding Code_NippleInProfileView = new TCoding(RecommendationsCodeSystemCS.Code_NippleInProfileView);                       // Builder.cs:349
+		public static TCoding Code_OffAngleCCView = new TCoding(RecommendationsCodeSystemCS.Code_OffAngleCCView);                                 // Builder.cs:349
+		public static TCoding Code_OffAngleMLOView = new TCoding(RecommendationsCodeSystemCS.Code_OffAngleMLOView);                               // Builder.cs:349
+		public static TCoding Code_PossStereotacticBx = new TCoding(RecommendationsCodeSystemCS.Code_PossStereotacticBx);                         // Builder.cs:349
+		public static TCoding Code_PossibleCoreBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleCoreBiopsy);                         // Builder.cs:349
+		public static TCoding Code_PossibleDiagnosticMammogram = new TCoding(RecommendationsCodeSystemCS.Code_PossibleDiagnosticMammogram);       // Builder.cs:349
+		public static TCoding Code_PossibleStereotacticVacuumBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleStereotacticVacuumBiopsy);// Builder.cs:349
+		public static TCoding Code_PossibleSurgicalConsult = new TCoding(RecommendationsCodeSystemCS.Code_PossibleSurgicalConsult);               // Builder.cs:349
+		public static TCoding Code_PossibleSurgicalEvaluation = new TCoding(RecommendationsCodeSystemCS.Code_PossibleSurgicalEvaluation);         // Builder.cs:349
+		public static TCoding Code_PossibleUltrasound = new TCoding(RecommendationsCodeSystemCS.Code_PossibleUltrasound);                         // Builder.cs:349
+		public static TCoding Code_PossibleUltrasoundGuidedBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleUltrasoundGuidedBiopsy); // Builder.cs:349
+		public static TCoding Code_PossibleVacuumBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_PossibleVacuumBiopsy);                     // Builder.cs:349
+		public static TCoding Code_RepeatCCView = new TCoding(RecommendationsCodeSystemCS.Code_RepeatCCView);                                     // Builder.cs:349
+		public static TCoding Code_RepeatMLOView = new TCoding(RecommendationsCodeSystemCS.Code_RepeatMLOView);                                   // Builder.cs:349
+		public static TCoding Code_RolledLateralView = new TCoding(RecommendationsCodeSystemCS.Code_RolledLateralView);                           // Builder.cs:349
+		public static TCoding Code_RolledMedialView = new TCoding(RecommendationsCodeSystemCS.Code_RolledMedialView);                             // Builder.cs:349
+		public static TCoding Code_ScintimammogramGuidedBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_ScintimammogramGuidedBiopsy);       // Builder.cs:349
+		public static TCoding Code_Scintimammography = new TCoding(RecommendationsCodeSystemCS.Code_Scintimammography);                           // Builder.cs:349
+		public static TCoding Code_SpotCompression = new TCoding(RecommendationsCodeSystemCS.Code_SpotCompression);                               // Builder.cs:349
+		public static TCoding Code_SpotMagnificationViews = new TCoding(RecommendationsCodeSystemCS.Code_SpotMagnificationViews);                 // Builder.cs:349
+		public static TCoding Code_StereotacticBx = new TCoding(RecommendationsCodeSystemCS.Code_StereotacticBx);                                 // Builder.cs:349
+		public static TCoding Code_SuperolateralIOView = new TCoding(RecommendationsCodeSystemCS.Code_SuperolateralIOView);                       // Builder.cs:349
+		public static TCoding Code_SurgicalBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalBiopsy);                                 // Builder.cs:349
+		public static TCoding Code_SurgicalConsult = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalConsult);                               // Builder.cs:349
+		public static TCoding Code_SurgicalConsultAndBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalConsultAndBiopsy);             // Builder.cs:349
+		public static TCoding Code_SurgicalEvaluation = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalEvaluation);                         // Builder.cs:349
+		public static TCoding Code_SurgicalExcision = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalExcision);                             // Builder.cs:349
+		public static TCoding Code_SurgicalOncologicEvaluation = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalOncologicEvaluation);       // Builder.cs:349
+		public static TCoding Code_SurgicalOncologicalConsult = new TCoding(RecommendationsCodeSystemCS.Code_SurgicalOncologicalConsult);         // Builder.cs:349
+		public static TCoding Code_TangentialView = new TCoding(RecommendationsCodeSystemCS.Code_TangentialView);                                 // Builder.cs:349
+		public static TCoding Code_TangentialViews = new TCoding(RecommendationsCodeSystemCS.Code_TangentialViews);                               // Builder.cs:349
+		public static TCoding Code_Ultrasound = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound);                                         // Builder.cs:349
+		public static TCoding Code_Ultrasound2ndLook = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound2ndLook);                           // Builder.cs:349
+		public static TCoding Code_Ultrasound3MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound3MonthFollowUp);             // Builder.cs:349
+		public static TCoding Code_Ultrasound6MonthFollowUp = new TCoding(RecommendationsCodeSystemCS.Code_Ultrasound6MonthFollowUp);             // Builder.cs:349
+		public static TCoding Code_UltrasoundGuidedBx = new TCoding(RecommendationsCodeSystemCS.Code_UltrasoundGuidedBx);                         // Builder.cs:349
+		public static TCoding Code_UltrasoundLocationAndSurgicalBiopsy = new TCoding(RecommendationsCodeSystemCS.Code_UltrasoundLocationAndSurgicalBiopsy);// Builder.cs:349
+		public static TCoding Code_UltrasoundWithPossibleAddlitonalViews = new TCoding(RecommendationsCodeSystemCS.Code_UltrasoundWithPossibleAddlitonalViews);// Builder.cs:349
+		public static TCoding Code_UnspecifiedOther = new TCoding(RecommendationsCodeSystemCS.Code_UnspecifiedOther);                             // Builder.cs:349
+		public static TCoding Code_VacuumBx = new TCoding(RecommendationsCodeSystemCS.Code_VacuumBx);                                             // Builder.cs:349
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:309
-		{                                                                                                                                         // CSBuilder.cs:310
-		    yield return Code_3DImaging;                                                                                                          // CSBuilder.cs:326
-		    yield return Code_3DSpotCC;                                                                                                           // CSBuilder.cs:326
-		    yield return Code_3DSpotLM;                                                                                                           // CSBuilder.cs:326
-		    yield return Code_3DSpotML;                                                                                                           // CSBuilder.cs:326
-		    yield return Code_3DSpotMLO;                                                                                                          // CSBuilder.cs:326
-		    yield return Code_AdditionalViews;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_AddlitionalViewsWithPossibleUltrasound;                                                                             // CSBuilder.cs:326
-		    yield return Code_AxillaView;                                                                                                         // CSBuilder.cs:326
-		    yield return Code_AxillaryTailView;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_Biopsy;                                                                                                             // CSBuilder.cs:326
-		    yield return Code_BiopsyBaseOnClinical;                                                                                               // CSBuilder.cs:326
-		    yield return Code_CaudocranialView;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_CCWithCompressionView;                                                                                              // CSBuilder.cs:326
-		    yield return Code_CCWithMagnificationView;                                                                                            // CSBuilder.cs:326
-		    yield return Code_CleavageView;                                                                                                       // CSBuilder.cs:326
-		    yield return Code_ClinicalConsultation;                                                                                               // CSBuilder.cs:326
-		    yield return Code_ClinicalCorrelation;                                                                                                // CSBuilder.cs:326
-		    yield return Code_ClinicalFollowUp;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_CompareToPriorExams;                                                                                                // CSBuilder.cs:326
-		    yield return Code_CompressionViews;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_ConeCompression;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_CoreBiopsy;                                                                                                         // CSBuilder.cs:326
-		    yield return Code_CraniocaudalView;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_Cryoablation;                                                                                                       // CSBuilder.cs:326
-		    yield return Code_CystAspiration;                                                                                                     // CSBuilder.cs:326
-		    yield return Code_CystAspirationForRelief;                                                                                            // CSBuilder.cs:326
-		    yield return Code_DiagnosticAspiration;                                                                                               // CSBuilder.cs:326
-		    yield return Code_DiagnosticMammogram;                                                                                                // CSBuilder.cs:326
-		    yield return Code_DrainageTube;                                                                                                       // CSBuilder.cs:326
-		    yield return Code_Ductography;                                                                                                        // CSBuilder.cs:326
-		    yield return Code_ExaggeratedCCViews;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_FNABiopsy;                                                                                                          // CSBuilder.cs:326
-		    yield return Code_FollowUp;                                                                                                           // CSBuilder.cs:326
-		    yield return Code_Followup3Months;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_Followup6Months;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_IfPreviousShowNoChange;                                                                                             // CSBuilder.cs:326
-		    yield return Code_LateralMagnificationView;                                                                                           // CSBuilder.cs:326
-		    yield return Code_LateralMedialView;                                                                                                  // CSBuilder.cs:326
-		    yield return Code_LateralView;                                                                                                        // CSBuilder.cs:326
-		    yield return Code_LateralWithCompressionView;                                                                                         // CSBuilder.cs:326
-		    yield return Code_LateromedialOblique;                                                                                                // CSBuilder.cs:326
-		    yield return Code_LateromedialView;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_LymphNodeAssessment;                                                                                                // CSBuilder.cs:326
-		    yield return Code_MagnificationViews;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_Mammogram;                                                                                                          // CSBuilder.cs:326
-		    yield return Code_Mammogram3MonthFollowUp;                                                                                            // CSBuilder.cs:326
-		    yield return Code_Mammogram6MonthFollowUp;                                                                                            // CSBuilder.cs:326
-		    yield return Code_MammogramAndUltrasound3MonthFollowUp;                                                                               // CSBuilder.cs:326
-		    yield return Code_MammogramAndUltrasound6MonthFollowUp;                                                                               // CSBuilder.cs:326
-		    yield return Code_MediolateralObliqueView;                                                                                            // CSBuilder.cs:326
-		    yield return Code_MediolateralView;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_MLOWithCompressionView;                                                                                             // CSBuilder.cs:326
-		    yield return Code_MLOWithMagnificationView;                                                                                           // CSBuilder.cs:326
-		    yield return Code_MRI;                                                                                                                // CSBuilder.cs:326
-		    yield return Code_MRIBiopsy;                                                                                                          // CSBuilder.cs:326
-		    yield return Code_MRIFollowUp;                                                                                                        // CSBuilder.cs:326
-		    yield return Code_NeedleLocationAndSurgicalBiopsy;                                                                                    // CSBuilder.cs:326
-		    yield return Code_NippleInProfileView;                                                                                                // CSBuilder.cs:326
-		    yield return Code_OffAngleCCView;                                                                                                     // CSBuilder.cs:326
-		    yield return Code_OffAngleMLOView;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_PossStereotacticBx;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_PossibleCoreBiopsy;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_PossibleDiagnosticMammogram;                                                                                        // CSBuilder.cs:326
-		    yield return Code_PossibleStereotacticVacuumBiopsy;                                                                                   // CSBuilder.cs:326
-		    yield return Code_PossibleSurgicalConsult;                                                                                            // CSBuilder.cs:326
-		    yield return Code_PossibleSurgicalEvaluation;                                                                                         // CSBuilder.cs:326
-		    yield return Code_PossibleUltrasound;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_PossibleUltrasoundGuidedBiopsy;                                                                                     // CSBuilder.cs:326
-		    yield return Code_PossibleVacuumBiopsy;                                                                                               // CSBuilder.cs:326
-		    yield return Code_RepeatCCView;                                                                                                       // CSBuilder.cs:326
-		    yield return Code_RepeatMLOView;                                                                                                      // CSBuilder.cs:326
-		    yield return Code_RolledLateralView;                                                                                                  // CSBuilder.cs:326
-		    yield return Code_RolledMedialView;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_ScintimammogramGuidedBiopsy;                                                                                        // CSBuilder.cs:326
-		    yield return Code_Scintimammography;                                                                                                  // CSBuilder.cs:326
-		    yield return Code_SpotCompression;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_SpotMagnificationViews;                                                                                             // CSBuilder.cs:326
-		    yield return Code_StereotacticBx;                                                                                                     // CSBuilder.cs:326
-		    yield return Code_SuperolateralIOView;                                                                                                // CSBuilder.cs:326
-		    yield return Code_SurgicalBiopsy;                                                                                                     // CSBuilder.cs:326
-		    yield return Code_SurgicalConsult;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_SurgicalConsultAndBiopsy;                                                                                           // CSBuilder.cs:326
-		    yield return Code_SurgicalEvaluation;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_SurgicalExcision;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_SurgicalOncologicEvaluation;                                                                                        // CSBuilder.cs:326
-		    yield return Code_SurgicalOncologicalConsult;                                                                                         // CSBuilder.cs:326
-		    yield return Code_TangentialView;                                                                                                     // CSBuilder.cs:326
-		    yield return Code_TangentialViews;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_Ultrasound;                                                                                                         // CSBuilder.cs:326
-		    yield return Code_Ultrasound2ndLook;                                                                                                  // CSBuilder.cs:326
-		    yield return Code_Ultrasound3MonthFollowUp;                                                                                           // CSBuilder.cs:326
-		    yield return Code_Ultrasound6MonthFollowUp;                                                                                           // CSBuilder.cs:326
-		    yield return Code_UltrasoundGuidedBx;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_UltrasoundLocationAndSurgicalBiopsy;                                                                                // CSBuilder.cs:326
-		    yield return Code_UltrasoundWithPossibleAddlitonalViews;                                                                              // CSBuilder.cs:326
-		    yield return Code_UnspecifiedOther;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_VacuumBx;                                                                                                           // CSBuilder.cs:326
-		}                                                                                                                                         // CSBuilder.cs:332
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
+		{                                                                                                                                         // Builder.cs:336
+		    yield return Code_3DImaging;                                                                                                          // Builder.cs:352
+		    yield return Code_3DSpotCC;                                                                                                           // Builder.cs:352
+		    yield return Code_3DSpotLM;                                                                                                           // Builder.cs:352
+		    yield return Code_3DSpotML;                                                                                                           // Builder.cs:352
+		    yield return Code_3DSpotMLO;                                                                                                          // Builder.cs:352
+		    yield return Code_AdditionalViews;                                                                                                    // Builder.cs:352
+		    yield return Code_AddlitionalViewsWithPossibleUltrasound;                                                                             // Builder.cs:352
+		    yield return Code_AxillaView;                                                                                                         // Builder.cs:352
+		    yield return Code_AxillaryTailView;                                                                                                   // Builder.cs:352
+		    yield return Code_Biopsy;                                                                                                             // Builder.cs:352
+		    yield return Code_BiopsyBaseOnClinical;                                                                                               // Builder.cs:352
+		    yield return Code_CaudocranialView;                                                                                                   // Builder.cs:352
+		    yield return Code_CCWithCompressionView;                                                                                              // Builder.cs:352
+		    yield return Code_CCWithMagnificationView;                                                                                            // Builder.cs:352
+		    yield return Code_CleavageView;                                                                                                       // Builder.cs:352
+		    yield return Code_ClinicalConsultation;                                                                                               // Builder.cs:352
+		    yield return Code_ClinicalCorrelation;                                                                                                // Builder.cs:352
+		    yield return Code_ClinicalFollowUp;                                                                                                   // Builder.cs:352
+		    yield return Code_CompareToPriorExams;                                                                                                // Builder.cs:352
+		    yield return Code_CompressionViews;                                                                                                   // Builder.cs:352
+		    yield return Code_ConeCompression;                                                                                                    // Builder.cs:352
+		    yield return Code_CoreBiopsy;                                                                                                         // Builder.cs:352
+		    yield return Code_CraniocaudalView;                                                                                                   // Builder.cs:352
+		    yield return Code_Cryoablation;                                                                                                       // Builder.cs:352
+		    yield return Code_CystAspiration;                                                                                                     // Builder.cs:352
+		    yield return Code_CystAspirationForRelief;                                                                                            // Builder.cs:352
+		    yield return Code_DiagnosticAspiration;                                                                                               // Builder.cs:352
+		    yield return Code_DiagnosticMammogram;                                                                                                // Builder.cs:352
+		    yield return Code_DrainageTube;                                                                                                       // Builder.cs:352
+		    yield return Code_Ductography;                                                                                                        // Builder.cs:352
+		    yield return Code_ExaggeratedCCViews;                                                                                                 // Builder.cs:352
+		    yield return Code_FNABiopsy;                                                                                                          // Builder.cs:352
+		    yield return Code_FollowUp;                                                                                                           // Builder.cs:352
+		    yield return Code_Followup3Months;                                                                                                    // Builder.cs:352
+		    yield return Code_Followup6Months;                                                                                                    // Builder.cs:352
+		    yield return Code_IfPreviousShowNoChange;                                                                                             // Builder.cs:352
+		    yield return Code_LateralMagnificationView;                                                                                           // Builder.cs:352
+		    yield return Code_LateralMedialView;                                                                                                  // Builder.cs:352
+		    yield return Code_LateralView;                                                                                                        // Builder.cs:352
+		    yield return Code_LateralWithCompressionView;                                                                                         // Builder.cs:352
+		    yield return Code_LateromedialOblique;                                                                                                // Builder.cs:352
+		    yield return Code_LateromedialView;                                                                                                   // Builder.cs:352
+		    yield return Code_LymphNodeAssessment;                                                                                                // Builder.cs:352
+		    yield return Code_MagnificationViews;                                                                                                 // Builder.cs:352
+		    yield return Code_Mammogram;                                                                                                          // Builder.cs:352
+		    yield return Code_Mammogram3MonthFollowUp;                                                                                            // Builder.cs:352
+		    yield return Code_Mammogram6MonthFollowUp;                                                                                            // Builder.cs:352
+		    yield return Code_MammogramAndUltrasound3MonthFollowUp;                                                                               // Builder.cs:352
+		    yield return Code_MammogramAndUltrasound6MonthFollowUp;                                                                               // Builder.cs:352
+		    yield return Code_MediolateralObliqueView;                                                                                            // Builder.cs:352
+		    yield return Code_MediolateralView;                                                                                                   // Builder.cs:352
+		    yield return Code_MLOWithCompressionView;                                                                                             // Builder.cs:352
+		    yield return Code_MLOWithMagnificationView;                                                                                           // Builder.cs:352
+		    yield return Code_MRI;                                                                                                                // Builder.cs:352
+		    yield return Code_MRIBiopsy;                                                                                                          // Builder.cs:352
+		    yield return Code_MRIFollowUp;                                                                                                        // Builder.cs:352
+		    yield return Code_NeedleLocationAndSurgicalBiopsy;                                                                                    // Builder.cs:352
+		    yield return Code_NippleInProfileView;                                                                                                // Builder.cs:352
+		    yield return Code_OffAngleCCView;                                                                                                     // Builder.cs:352
+		    yield return Code_OffAngleMLOView;                                                                                                    // Builder.cs:352
+		    yield return Code_PossStereotacticBx;                                                                                                 // Builder.cs:352
+		    yield return Code_PossibleCoreBiopsy;                                                                                                 // Builder.cs:352
+		    yield return Code_PossibleDiagnosticMammogram;                                                                                        // Builder.cs:352
+		    yield return Code_PossibleStereotacticVacuumBiopsy;                                                                                   // Builder.cs:352
+		    yield return Code_PossibleSurgicalConsult;                                                                                            // Builder.cs:352
+		    yield return Code_PossibleSurgicalEvaluation;                                                                                         // Builder.cs:352
+		    yield return Code_PossibleUltrasound;                                                                                                 // Builder.cs:352
+		    yield return Code_PossibleUltrasoundGuidedBiopsy;                                                                                     // Builder.cs:352
+		    yield return Code_PossibleVacuumBiopsy;                                                                                               // Builder.cs:352
+		    yield return Code_RepeatCCView;                                                                                                       // Builder.cs:352
+		    yield return Code_RepeatMLOView;                                                                                                      // Builder.cs:352
+		    yield return Code_RolledLateralView;                                                                                                  // Builder.cs:352
+		    yield return Code_RolledMedialView;                                                                                                   // Builder.cs:352
+		    yield return Code_ScintimammogramGuidedBiopsy;                                                                                        // Builder.cs:352
+		    yield return Code_Scintimammography;                                                                                                  // Builder.cs:352
+		    yield return Code_SpotCompression;                                                                                                    // Builder.cs:352
+		    yield return Code_SpotMagnificationViews;                                                                                             // Builder.cs:352
+		    yield return Code_StereotacticBx;                                                                                                     // Builder.cs:352
+		    yield return Code_SuperolateralIOView;                                                                                                // Builder.cs:352
+		    yield return Code_SurgicalBiopsy;                                                                                                     // Builder.cs:352
+		    yield return Code_SurgicalConsult;                                                                                                    // Builder.cs:352
+		    yield return Code_SurgicalConsultAndBiopsy;                                                                                           // Builder.cs:352
+		    yield return Code_SurgicalEvaluation;                                                                                                 // Builder.cs:352
+		    yield return Code_SurgicalExcision;                                                                                                   // Builder.cs:352
+		    yield return Code_SurgicalOncologicEvaluation;                                                                                        // Builder.cs:352
+		    yield return Code_SurgicalOncologicalConsult;                                                                                         // Builder.cs:352
+		    yield return Code_TangentialView;                                                                                                     // Builder.cs:352
+		    yield return Code_TangentialViews;                                                                                                    // Builder.cs:352
+		    yield return Code_Ultrasound;                                                                                                         // Builder.cs:352
+		    yield return Code_Ultrasound2ndLook;                                                                                                  // Builder.cs:352
+		    yield return Code_Ultrasound3MonthFollowUp;                                                                                           // Builder.cs:352
+		    yield return Code_Ultrasound6MonthFollowUp;                                                                                           // Builder.cs:352
+		    yield return Code_UltrasoundGuidedBx;                                                                                                 // Builder.cs:352
+		    yield return Code_UltrasoundLocationAndSurgicalBiopsy;                                                                                // Builder.cs:352
+		    yield return Code_UltrasoundWithPossibleAddlitonalViews;                                                                              // Builder.cs:352
+		    yield return Code_UnspecifiedOther;                                                                                                   // Builder.cs:352
+		    yield return Code_VacuumBx;                                                                                                           // Builder.cs:352
+		}                                                                                                                                         // Builder.cs:358
 		//- Methods
 	}
 }

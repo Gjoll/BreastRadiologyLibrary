@@ -18,11 +18,8 @@ using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class TumorSatellite : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoComponentFragment
+	public class TumorSatellite : ObservationBase, ITumorSatellite
 	{
-		//+ Fields
-		//- Fields
-
 		//+ Properties
 		//- Properties
 
@@ -62,8 +59,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                                             // CSDefineBase.cs:192
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                                             // DefineBase.cs:189
 			//- Constructor
 		}
 
@@ -83,8 +80,8 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

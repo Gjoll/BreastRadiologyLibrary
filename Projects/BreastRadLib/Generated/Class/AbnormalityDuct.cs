@@ -31,27 +31,24 @@ using BreastRadLib.ConsistentWithHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class AbnormalityDuct : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment, ICommonComponentsFragment, IShapeComponentsFragment, IObservedCountFragment, IObservedDistributionFragment, IObservedSizeFragment, INotPreviouslySeenComponentFragment, ICorrespondsWithFragment, IPreviouslyDemonstratedByFragment, IConsistentWithHasMemberFragment
+	public class AbnormalityDuct : ObservationBase, IAbnormalityDuct
 	{
-		//+ Fields
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // CSBuildMemberListBase.cs:33
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // CSBuildMemberListBase.cs:33
-		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // CSBuildMemberListBase.cs:33
-		public Shape_Accessor Shape { get ; protected set; }                                                                                      // CSBuildMemberListBase.cs:33
-		public Margin_Accessor Margin { get ; protected set; }                                                                                    // CSBuildMemberListBase.cs:33
-		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:33
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:33
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // CSBuildMemberListBase.cs:33
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // CSBuildMemberListBase.cs:33
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // CSBuildMemberListBase.cs:33
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // CSBuildMemberListBase.cs:33
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // CSBuildMemberListBase.cs:33
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // CSBuildMemberListBase.cs:33
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // CSBuildMemberListBase.cs:33
-		public DuctType_Accessor DuctType { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:33
-		//- Fields
-
 		//+ Properties
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // BuildMemberListBase.cs:33
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberListBase.cs:33
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // BuildMemberListBase.cs:33
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // BuildMemberListBase.cs:33
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // BuildMemberListBase.cs:33
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:33
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // BuildMemberListBase.cs:33
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberListBase.cs:33
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // BuildMemberListBase.cs:33
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:33
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // BuildMemberListBase.cs:33
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:33
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // BuildMemberListBase.cs:33
+		public DuctType_Accessor DuctType { get ; protected set; }                                                                                // BuildMemberListBase.cs:33
 		//- Properties
 
 		/// <summary>
@@ -90,23 +87,23 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // CSDefineBase.cs:192
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // CSBuildMemberListBase.cs:36
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // CSBuildMemberListBase.cs:36
-			this.Orientation = new Orientation_Accessor(doc);                                                                                        // CSBuildMemberListBase.cs:36
-			this.Shape = new Shape_Accessor(doc);                                                                                                    // CSBuildMemberListBase.cs:36
-			this.Margin = new Margin_Accessor(doc);                                                                                                  // CSBuildMemberListBase.cs:36
-			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:36
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // CSBuildMemberListBase.cs:36
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // CSBuildMemberListBase.cs:36
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // CSBuildMemberListBase.cs:36
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // CSBuildMemberListBase.cs:36
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // CSBuildMemberListBase.cs:36
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // CSBuildMemberListBase.cs:36
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // CSBuildMemberListBase.cs:36
-			this.DuctType = new DuctType_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // DefineBase.cs:189
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:36
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // BuildMemberListBase.cs:36
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // BuildMemberListBase.cs:36
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:36
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:36
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:36
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // BuildMemberListBase.cs:36
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:36
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // BuildMemberListBase.cs:36
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:36
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:36
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:36
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // BuildMemberListBase.cs:36
+			this.DuctType = new DuctType_Accessor(doc);                                                                                              // BuildMemberListBase.cs:36
 			//- Constructor
 		}
 
@@ -118,21 +115,21 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // CSBuildMemberListBase.cs:45
-			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // CSBuildMemberListBase.cs:45
-			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // CSBuildMemberListBase.cs:45
-			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // CSBuildMemberListBase.cs:45
-			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // CSBuildMemberListBase.cs:45
-			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:45
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:45
-			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:45
-			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // CSBuildMemberListBase.cs:45
-			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // CSBuildMemberListBase.cs:45
-			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // CSBuildMemberListBase.cs:45
-			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // CSBuildMemberListBase.cs:45
-			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // CSBuildMemberListBase.cs:45
-			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // CSBuildMemberListBase.cs:45
-			if (this.DuctType.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:45
+			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:45
+			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:45
+			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:45
+			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:45
+			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:45
+			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:45
+			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:45
+			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:45
+			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildMemberListBase.cs:45
+			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:45
+			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:45
+			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:45
+			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:45
+			if (this.DuctType.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
@@ -141,37 +138,37 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsChanges);                                                                                                    // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.Orientation);                                                                                                   // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.Shape);                                                                                                         // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.Margin);                                                                                                        // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.MgDensity);                                                                                                     // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.ObsCount);                                                                                                      // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.ObsDistribution);                                                                                               // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.ObsSize);                                                                                                       // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // CSBuildMemberListBase.cs:39
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.DuctType);                                                                                                      // CSBuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildMemberListBase.cs:39
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildMemberListBase.cs:39
+			this.WriteComponent(this.Orientation);                                                                                                   // BuildMemberListBase.cs:39
+			this.WriteComponent(this.Shape);                                                                                                         // BuildMemberListBase.cs:39
+			this.WriteComponent(this.Margin);                                                                                                        // BuildMemberListBase.cs:39
+			this.WriteComponent(this.MgDensity);                                                                                                     // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsSize);                                                                                                       // BuildMemberListBase.cs:39
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:39
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:39
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // BuildMemberListBase.cs:39
+			this.WriteComponent(this.DuctType);                                                                                                      // BuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
@@ -181,21 +178,21 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsChanges);                                                                                                     // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.Orientation);                                                                                                    // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.Shape);                                                                                                          // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.Margin);                                                                                                         // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.MgDensity);                                                                                                      // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.ObsCount);                                                                                                       // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.ObsDistribution);                                                                                                // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.ObsSize);                                                                                                        // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // CSBuildMemberListBase.cs:42
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.DuctType);                                                                                                       // CSBuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildMemberListBase.cs:42
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildMemberListBase.cs:42
+			this.ReadComponent(this.Orientation);                                                                                                    // BuildMemberListBase.cs:42
+			this.ReadComponent(this.Shape);                                                                                                          // BuildMemberListBase.cs:42
+			this.ReadComponent(this.Margin);                                                                                                         // BuildMemberListBase.cs:42
+			this.ReadComponent(this.MgDensity);                                                                                                      // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsSize);                                                                                                        // BuildMemberListBase.cs:42
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:42
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:42
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // BuildMemberListBase.cs:42
+			this.ReadComponent(this.DuctType);                                                                                                       // BuildMemberListBase.cs:42
 			//- ReadCode
 		}
 

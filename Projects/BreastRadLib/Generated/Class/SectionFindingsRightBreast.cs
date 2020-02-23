@@ -17,16 +17,13 @@ using BreastRadLib.FindingBreastFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class SectionFindingsRightBreast : ObservationBase, IFindingBreastFragment
+	public class SectionFindingsRightBreast : ObservationBase, ISectionFindingsRightBreast
 	{
-		//+ Fields
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:33
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // CSBuildMemberListBase.cs:33
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:33
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:33
-		//- Fields
-
 		//+ Properties
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // BuildMemberListBase.cs:33
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
 		//- Properties
 
 		/// <summary>
@@ -65,12 +62,12 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // CSDefineBase.cs:192
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:36
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // CSBuildMemberListBase.cs:36
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:36
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:36
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // DefineBase.cs:189
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // BuildMemberListBase.cs:36
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
 			//- Constructor
 		}
 
@@ -82,10 +79,10 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:45
-			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // CSBuildMemberListBase.cs:45
-			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:45
-			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:45
+			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
+			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:45
+			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
+			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
@@ -94,13 +91,13 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // CSBuildMemberListBase.cs:39
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // CSBuildMemberListBase.cs:39
-			this.WriteHasMember(this.NMFinding);                                                                                                     // CSBuildMemberListBase.cs:39
-			this.WriteHasMember(this.USFinding);                                                                                                     // CSBuildMemberListBase.cs:39
+			this.WriteHasMember(this.MGFinding);                                                                                                     // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.NMFinding);                                                                                                     // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.USFinding);                                                                                                     // BuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
@@ -110,10 +107,10 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // CSBuildMemberListBase.cs:42
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // CSBuildMemberListBase.cs:42
-			this.ReadHasMember(this.NMFinding);                                                                                                      // CSBuildMemberListBase.cs:42
-			this.ReadHasMember(this.USFinding);                                                                                                      // CSBuildMemberListBase.cs:42
+			this.ReadHasMember(this.MGFinding);                                                                                                      // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.NMFinding);                                                                                                      // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.USFinding);                                                                                                      // BuildMemberListBase.cs:42
 			//- ReadCode
 		}
 
@@ -143,11 +140,11 @@ namespace BreastRadLib
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // CSDefineBase.cs:156
-			{                                                                                                                                        // CSDefineBase.cs:157
-			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 158                              // CodeBlockNested.cs:588
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // CSDefineBase.cs:159
-			}                                                                                                                                        // CSDefineBase.cs:162
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:153
+			{                                                                                                                                        // DefineBase.cs:154
+			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 155                                // CodeBlockNested.cs:588
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:156
+			}                                                                                                                                        // DefineBase.cs:159
 		//- Methods
 	}
 }

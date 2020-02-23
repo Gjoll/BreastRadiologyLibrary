@@ -28,18 +28,18 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_M = new TCoding(UnitsofmeasureOrg.Code_M);                                                                     // CSBuilder.cs:323
-		public static TCoding Code_Cm = new TCoding(UnitsofmeasureOrg.Code_Cm);                                                                   // CSBuilder.cs:323
-		public static TCoding Code_Mm = new TCoding(UnitsofmeasureOrg.Code_Mm);                                                                   // CSBuilder.cs:323
+		public static TCoding Code_M = new TCoding(UnitsofmeasureOrg.Code_M);                                                                     // Builder.cs:349
+		public static TCoding Code_Cm = new TCoding(UnitsofmeasureOrg.Code_Cm);                                                                   // Builder.cs:349
+		public static TCoding Code_Mm = new TCoding(UnitsofmeasureOrg.Code_Mm);                                                                   // Builder.cs:349
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:309
-		{                                                                                                                                         // CSBuilder.cs:310
-		    yield return Code_M;                                                                                                                  // CSBuilder.cs:326
-		    yield return Code_Cm;                                                                                                                 // CSBuilder.cs:326
-		    yield return Code_Mm;                                                                                                                 // CSBuilder.cs:326
-		}                                                                                                                                         // CSBuilder.cs:332
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
+		{                                                                                                                                         // Builder.cs:336
+		    yield return Code_M;                                                                                                                  // Builder.cs:352
+		    yield return Code_Cm;                                                                                                                 // Builder.cs:352
+		    yield return Code_Mm;                                                                                                                 // Builder.cs:352
+		}                                                                                                                                         // Builder.cs:358
 		//- Methods
 	}
 }

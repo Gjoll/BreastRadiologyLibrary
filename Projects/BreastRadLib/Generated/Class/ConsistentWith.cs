@@ -19,14 +19,11 @@ using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class ConsistentWith : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoDeviceFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationNoComponentFragment
+	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
-		//+ Fields
-		public Value_Accessor Value { get ; protected set; }                                                                                      // CSBuildMemberListBase.cs:33
-		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // CSBuildMemberListBase.cs:33
-		//- Fields
-
 		//+ Properties
+		public Value_Accessor Value { get ; protected set; }                                                                                      // BuildMemberListBase.cs:33
+		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
 		//- Properties
 
 		/// <summary>
@@ -65,10 +62,10 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // CSDefineBase.cs:192
-			this.Value = new Value_Accessor(doc);                                                                                                    // CSBuildMemberListBase.cs:36
-			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // CSBuildMemberListBase.cs:36
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:189
+			this.Value = new Value_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:36
+			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
 			//- Constructor
 		}
 
@@ -80,8 +77,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // CSBuildMemberListBase.cs:45
-			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // CSBuildMemberListBase.cs:45
+			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:45
+			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
@@ -90,13 +87,13 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // CSBuildMemberListBase.cs:39
-			this.WriteComponent(this.Qualifier);                                                                                                     // CSBuildMemberListBase.cs:39
+			this.WriteComponent(this.Value);                                                                                                         // BuildMemberListBase.cs:39
+			this.WriteComponent(this.Qualifier);                                                                                                     // BuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
@@ -106,8 +103,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // CSBuildMemberListBase.cs:42
-			this.ReadComponent(this.Qualifier);                                                                                                      // CSBuildMemberListBase.cs:42
+			this.ReadComponent(this.Value);                                                                                                          // BuildMemberListBase.cs:42
+			this.ReadComponent(this.Qualifier);                                                                                                      // BuildMemberListBase.cs:42
 			//- ReadCode
 		}
 

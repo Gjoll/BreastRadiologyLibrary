@@ -10,13 +10,11 @@ using BreastRadLib.SectionFindingsLeftBreastLocal;
 
 namespace BreastRadLib
 {
-	public interface ISectionFindingsLeftBreast
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface ISectionFindingsLeftBreast : IFindingBreastFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

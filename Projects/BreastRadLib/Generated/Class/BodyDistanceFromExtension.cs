@@ -13,14 +13,11 @@ using BreastRadLib.HeaderFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class BodyDistanceFromExtension : ExtensionBase, IHeaderFragment
+	public class BodyDistanceFromExtension : ExtensionBase, IBodyDistanceFromExtension
 	{
-		//+ Fields
-		public LandMark_Accessor LandMark { get ; protected set; }                                                                                // CSBuildMemberListBase.cs:33
-		public DistanceFromLandMark_Accessor DistanceFromLandMark { get ; protected set; }                                                        // CSBuildMemberListBase.cs:33
-		//- Fields
-
 		//+ Properties
+		public LandMark_Accessor LandMark { get ; protected set; }                                                                                // BuildMemberListBase.cs:33
+		public DistanceFromLandMark_Accessor DistanceFromLandMark { get ; protected set; }                                                        // BuildMemberListBase.cs:33
 		//- Properties
 
 		/// <summary>
@@ -59,9 +56,9 @@ namespace BreastRadLib
 				resource = new Extension();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BodyDistanceFromExtension");                                  // CSDefineBase.cs:192
-			this.LandMark = new LandMark_Accessor(doc);                                                                                              // CSBuildMemberListBase.cs:36
-			this.DistanceFromLandMark = new DistanceFromLandMark_Accessor(doc);                                                                      // CSBuildMemberListBase.cs:36
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BodyDistanceFromExtension");                                  // DefineBase.cs:189
+			this.LandMark = new LandMark_Accessor(doc);                                                                                              // BuildMemberListBase.cs:36
+			this.DistanceFromLandMark = new DistanceFromLandMark_Accessor(doc);                                                                      // BuildMemberListBase.cs:36
 			//- Constructor
 		}
 
@@ -73,8 +70,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.LandMark.Validate(sb) == false) retVal = false;                                                                                 // CSBuildMemberListBase.cs:45
-			if (this.DistanceFromLandMark.Validate(sb) == false) retVal = false;                                                                     // CSBuildMemberListBase.cs:45
+			if (this.LandMark.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:45
+			if (this.DistanceFromLandMark.Validate(sb) == false) retVal = false;                                                                     // BuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
@@ -83,11 +80,11 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearExtensions();                                                                                                                  // CSBuildMemberListExtensionValue.cs:27
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:27
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteExtension(this.LandMark);                                                                                                      // CSBuildMemberListBase.cs:39
-			this.WriteExtension(this.DistanceFromLandMark);                                                                                          // CSBuildMemberListBase.cs:39
+			this.WriteExtension(this.LandMark);                                                                                                      // BuildMemberListBase.cs:39
+			this.WriteExtension(this.DistanceFromLandMark);                                                                                          // BuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
@@ -97,8 +94,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadExtension(this.LandMark);                                                                                                       // CSBuildMemberListBase.cs:42
-			this.ReadExtension(this.DistanceFromLandMark);                                                                                           // CSBuildMemberListBase.cs:42
+			this.ReadExtension(this.LandMark);                                                                                                       // BuildMemberListBase.cs:42
+			this.ReadExtension(this.DistanceFromLandMark);                                                                                           // BuildMemberListBase.cs:42
 			//- ReadCode
 		}
 

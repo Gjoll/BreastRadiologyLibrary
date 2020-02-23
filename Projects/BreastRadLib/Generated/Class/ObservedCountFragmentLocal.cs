@@ -15,33 +15,33 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	/// Accessor class for 'obsCount'
 	/// [Fhir Element 'Observation.component:obsCount]'
 	/// </summary>
-	public class ObsCount_Accessor : MemberListCodedValueBase<Element>                                                                         // CSBuildMemberListCodedValue.cs:64
-	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:65
-	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:66
+	public class ObsCount_Accessor : MemberListCodedValueBase<Element>                                                                         // BuildMemberListCodedValue.cs:64
+	{                                                                                                                                          // BuildMemberListCodedValue.cs:65
+	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:66
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public Element Get() => base.FirstOrDefault();                                                                                         // CSBuildMemberListCodedValue.cs:103
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:68
-	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:69
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:90
+	    public Element Get() => base.FirstOrDefault();                                                                                         // BuildMemberListCodedValue.cs:103
+	                                                                                                                                           // BuildMemberListCodedValue.cs:68
+	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:69
+	                                                                                                                                           // BuildMemberListCodedValue.cs:90
 	    /// <summary>
 	    /// Set ObsCount value
 	    /// </summary>
-	    public void SetQuantity(Quantity value) => this.SetFirst(value);                                                                       // CSBuildMemberListCodedValue.cs:94
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:90
+	    public void SetQuantity(Quantity value) => this.SetFirst(value);                                                                       // BuildMemberListCodedValue.cs:94
+	                                                                                                                                           // BuildMemberListCodedValue.cs:90
 	    /// <summary>
 	    /// Set ObsCount value
 	    /// </summary>
-	    public void SetRange(Quantity value) => this.SetFirst(value);                                                                          // CSBuildMemberListCodedValue.cs:94
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:71
+	    public void SetRange(Quantity value) => this.SetFirst(value);                                                                          // BuildMemberListCodedValue.cs:94
+	                                                                                                                                           // BuildMemberListCodedValue.cs:71
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsCount_Accessor(BreastRadiologyDocument doc) : base("ObsCount_Accessor")                                                      // CSBuildMemberListCodedValue.cs:75
-	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:76
-	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsCount")); // CSBuildMemberListCodedValue.cs:77
-	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:79
-	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:80
+	    public ObsCount_Accessor(BreastRadiologyDocument doc) : base("ObsCount_Accessor")                                                      // BuildMemberListCodedValue.cs:75
+	    {                                                                                                                                      // BuildMemberListCodedValue.cs:76
+	        this.Init(doc, 0, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsCount")); // BuildMemberListCodedValue.cs:77
+	    }                                                                                                                                      // BuildMemberListCodedValue.cs:79
+	}                                                                                                                                          // BuildMemberListCodedValue.cs:80
 	//- LocalClassDefs
 }

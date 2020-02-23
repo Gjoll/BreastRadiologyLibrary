@@ -10,13 +10,13 @@ using BreastRadLib.MGBreastDensityLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGBreastDensity
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IMGBreastDensity : IObservationLeafFragment,
+        IBreastRadObservationNoComponentFragment,
+        IBreastRadObservationNoDeviceFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

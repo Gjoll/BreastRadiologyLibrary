@@ -28,64 +28,64 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_ArchitecturalDistortion = new TCoding(ObservedFeatureCS.Code_ArchitecturalDistortion);                         // CSBuilder.cs:323
-		public static TCoding Code_AxillaryAdenopathy = new TCoding(ObservedFeatureCS.Code_AxillaryAdenopathy);                                   // CSBuilder.cs:323
-		public static TCoding Code_BiopsyClip = new TCoding(ObservedFeatureCS.Code_BiopsyClip);                                                   // CSBuilder.cs:323
-		public static TCoding Code_BiopsyClips = new TCoding(ObservedFeatureCS.Code_BiopsyClips);                                                 // CSBuilder.cs:323
-		public static TCoding Code_BrachytherapyTube = new TCoding(ObservedFeatureCS.Code_BrachytherapyTube);                                     // CSBuilder.cs:323
-		public static TCoding Code_ChestWallInvasion = new TCoding(ObservedFeatureCS.Code_ChestWallInvasion);                                     // CSBuilder.cs:323
-		public static TCoding Code_CooperDistorted = new TCoding(ObservedFeatureCS.Code_CooperDistorted);                                         // CSBuilder.cs:323
-		public static TCoding Code_CooperThickened = new TCoding(ObservedFeatureCS.Code_CooperThickened);                                         // CSBuilder.cs:323
-		public static TCoding Code_Edema = new TCoding(ObservedFeatureCS.Code_Edema);                                                             // CSBuilder.cs:323
-		public static TCoding Code_EdemaAdj = new TCoding(ObservedFeatureCS.Code_EdemaAdj);                                                       // CSBuilder.cs:323
-		public static TCoding Code_GoldSeed = new TCoding(ObservedFeatureCS.Code_GoldSeed);                                                       // CSBuilder.cs:323
-		public static TCoding Code_Hematoma = new TCoding(ObservedFeatureCS.Code_Hematoma);                                                       // CSBuilder.cs:323
-		public static TCoding Code_NippleRetraction = new TCoding(ObservedFeatureCS.Code_NippleRetraction);                                       // CSBuilder.cs:323
-		public static TCoding Code_NOChestWallInvasion = new TCoding(ObservedFeatureCS.Code_NOChestWallInvasion);                                 // CSBuilder.cs:323
-		public static TCoding Code_PectoralisMuscleInvasion = new TCoding(ObservedFeatureCS.Code_PectoralisMuscleInvasion);                       // CSBuilder.cs:323
-		public static TCoding Code_PectoralisMuscleInvolvement = new TCoding(ObservedFeatureCS.Code_PectoralisMuscleInvolvement);                 // CSBuilder.cs:323
-		public static TCoding Code_PectoralisMuscleTenting = new TCoding(ObservedFeatureCS.Code_PectoralisMuscleTenting);                         // CSBuilder.cs:323
-		public static TCoding Code_PostSurgicalScar = new TCoding(ObservedFeatureCS.Code_PostSurgicalScar);                                       // CSBuilder.cs:323
-		public static TCoding Code_Seroma = new TCoding(ObservedFeatureCS.Code_Seroma);                                                           // CSBuilder.cs:323
-		public static TCoding Code_SkinInvolvement = new TCoding(ObservedFeatureCS.Code_SkinInvolvement);                                         // CSBuilder.cs:323
-		public static TCoding Code_SkinLesion = new TCoding(ObservedFeatureCS.Code_SkinLesion);                                                   // CSBuilder.cs:323
-		public static TCoding Code_SkinRetraction = new TCoding(ObservedFeatureCS.Code_SkinRetraction);                                           // CSBuilder.cs:323
-		public static TCoding Code_SkinThickening = new TCoding(ObservedFeatureCS.Code_SkinThickening);                                           // CSBuilder.cs:323
-		public static TCoding Code_SurgicalClip = new TCoding(ObservedFeatureCS.Code_SurgicalClip);                                               // CSBuilder.cs:323
-		public static TCoding Code_SurgicalClips = new TCoding(ObservedFeatureCS.Code_SurgicalClips);                                             // CSBuilder.cs:323
-		public static TCoding Code_TrabecularThickening = new TCoding(ObservedFeatureCS.Code_TrabecularThickening);                               // CSBuilder.cs:323
+		public static TCoding Code_ArchitecturalDistortion = new TCoding(ObservedFeatureCS.Code_ArchitecturalDistortion);                         // Builder.cs:349
+		public static TCoding Code_AxillaryAdenopathy = new TCoding(ObservedFeatureCS.Code_AxillaryAdenopathy);                                   // Builder.cs:349
+		public static TCoding Code_BiopsyClip = new TCoding(ObservedFeatureCS.Code_BiopsyClip);                                                   // Builder.cs:349
+		public static TCoding Code_BiopsyClips = new TCoding(ObservedFeatureCS.Code_BiopsyClips);                                                 // Builder.cs:349
+		public static TCoding Code_BrachytherapyTube = new TCoding(ObservedFeatureCS.Code_BrachytherapyTube);                                     // Builder.cs:349
+		public static TCoding Code_ChestWallInvasion = new TCoding(ObservedFeatureCS.Code_ChestWallInvasion);                                     // Builder.cs:349
+		public static TCoding Code_CooperDistorted = new TCoding(ObservedFeatureCS.Code_CooperDistorted);                                         // Builder.cs:349
+		public static TCoding Code_CooperThickened = new TCoding(ObservedFeatureCS.Code_CooperThickened);                                         // Builder.cs:349
+		public static TCoding Code_Edema = new TCoding(ObservedFeatureCS.Code_Edema);                                                             // Builder.cs:349
+		public static TCoding Code_EdemaAdj = new TCoding(ObservedFeatureCS.Code_EdemaAdj);                                                       // Builder.cs:349
+		public static TCoding Code_GoldSeed = new TCoding(ObservedFeatureCS.Code_GoldSeed);                                                       // Builder.cs:349
+		public static TCoding Code_Hematoma = new TCoding(ObservedFeatureCS.Code_Hematoma);                                                       // Builder.cs:349
+		public static TCoding Code_NippleRetraction = new TCoding(ObservedFeatureCS.Code_NippleRetraction);                                       // Builder.cs:349
+		public static TCoding Code_NOChestWallInvasion = new TCoding(ObservedFeatureCS.Code_NOChestWallInvasion);                                 // Builder.cs:349
+		public static TCoding Code_PectoralisMuscleInvasion = new TCoding(ObservedFeatureCS.Code_PectoralisMuscleInvasion);                       // Builder.cs:349
+		public static TCoding Code_PectoralisMuscleInvolvement = new TCoding(ObservedFeatureCS.Code_PectoralisMuscleInvolvement);                 // Builder.cs:349
+		public static TCoding Code_PectoralisMuscleTenting = new TCoding(ObservedFeatureCS.Code_PectoralisMuscleTenting);                         // Builder.cs:349
+		public static TCoding Code_PostSurgicalScar = new TCoding(ObservedFeatureCS.Code_PostSurgicalScar);                                       // Builder.cs:349
+		public static TCoding Code_Seroma = new TCoding(ObservedFeatureCS.Code_Seroma);                                                           // Builder.cs:349
+		public static TCoding Code_SkinInvolvement = new TCoding(ObservedFeatureCS.Code_SkinInvolvement);                                         // Builder.cs:349
+		public static TCoding Code_SkinLesion = new TCoding(ObservedFeatureCS.Code_SkinLesion);                                                   // Builder.cs:349
+		public static TCoding Code_SkinRetraction = new TCoding(ObservedFeatureCS.Code_SkinRetraction);                                           // Builder.cs:349
+		public static TCoding Code_SkinThickening = new TCoding(ObservedFeatureCS.Code_SkinThickening);                                           // Builder.cs:349
+		public static TCoding Code_SurgicalClip = new TCoding(ObservedFeatureCS.Code_SurgicalClip);                                               // Builder.cs:349
+		public static TCoding Code_SurgicalClips = new TCoding(ObservedFeatureCS.Code_SurgicalClips);                                             // Builder.cs:349
+		public static TCoding Code_TrabecularThickening = new TCoding(ObservedFeatureCS.Code_TrabecularThickening);                               // Builder.cs:349
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // CSBuilder.cs:309
-		{                                                                                                                                         // CSBuilder.cs:310
-		    yield return Code_ArchitecturalDistortion;                                                                                            // CSBuilder.cs:326
-		    yield return Code_AxillaryAdenopathy;                                                                                                 // CSBuilder.cs:326
-		    yield return Code_BiopsyClip;                                                                                                         // CSBuilder.cs:326
-		    yield return Code_BiopsyClips;                                                                                                        // CSBuilder.cs:326
-		    yield return Code_BrachytherapyTube;                                                                                                  // CSBuilder.cs:326
-		    yield return Code_ChestWallInvasion;                                                                                                  // CSBuilder.cs:326
-		    yield return Code_CooperDistorted;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_CooperThickened;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_Edema;                                                                                                              // CSBuilder.cs:326
-		    yield return Code_EdemaAdj;                                                                                                           // CSBuilder.cs:326
-		    yield return Code_GoldSeed;                                                                                                           // CSBuilder.cs:326
-		    yield return Code_Hematoma;                                                                                                           // CSBuilder.cs:326
-		    yield return Code_NippleRetraction;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_NOChestWallInvasion;                                                                                                // CSBuilder.cs:326
-		    yield return Code_PectoralisMuscleInvasion;                                                                                           // CSBuilder.cs:326
-		    yield return Code_PectoralisMuscleInvolvement;                                                                                        // CSBuilder.cs:326
-		    yield return Code_PectoralisMuscleTenting;                                                                                            // CSBuilder.cs:326
-		    yield return Code_PostSurgicalScar;                                                                                                   // CSBuilder.cs:326
-		    yield return Code_Seroma;                                                                                                             // CSBuilder.cs:326
-		    yield return Code_SkinInvolvement;                                                                                                    // CSBuilder.cs:326
-		    yield return Code_SkinLesion;                                                                                                         // CSBuilder.cs:326
-		    yield return Code_SkinRetraction;                                                                                                     // CSBuilder.cs:326
-		    yield return Code_SkinThickening;                                                                                                     // CSBuilder.cs:326
-		    yield return Code_SurgicalClip;                                                                                                       // CSBuilder.cs:326
-		    yield return Code_SurgicalClips;                                                                                                      // CSBuilder.cs:326
-		    yield return Code_TrabecularThickening;                                                                                               // CSBuilder.cs:326
-		}                                                                                                                                         // CSBuilder.cs:332
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
+		{                                                                                                                                         // Builder.cs:336
+		    yield return Code_ArchitecturalDistortion;                                                                                            // Builder.cs:352
+		    yield return Code_AxillaryAdenopathy;                                                                                                 // Builder.cs:352
+		    yield return Code_BiopsyClip;                                                                                                         // Builder.cs:352
+		    yield return Code_BiopsyClips;                                                                                                        // Builder.cs:352
+		    yield return Code_BrachytherapyTube;                                                                                                  // Builder.cs:352
+		    yield return Code_ChestWallInvasion;                                                                                                  // Builder.cs:352
+		    yield return Code_CooperDistorted;                                                                                                    // Builder.cs:352
+		    yield return Code_CooperThickened;                                                                                                    // Builder.cs:352
+		    yield return Code_Edema;                                                                                                              // Builder.cs:352
+		    yield return Code_EdemaAdj;                                                                                                           // Builder.cs:352
+		    yield return Code_GoldSeed;                                                                                                           // Builder.cs:352
+		    yield return Code_Hematoma;                                                                                                           // Builder.cs:352
+		    yield return Code_NippleRetraction;                                                                                                   // Builder.cs:352
+		    yield return Code_NOChestWallInvasion;                                                                                                // Builder.cs:352
+		    yield return Code_PectoralisMuscleInvasion;                                                                                           // Builder.cs:352
+		    yield return Code_PectoralisMuscleInvolvement;                                                                                        // Builder.cs:352
+		    yield return Code_PectoralisMuscleTenting;                                                                                            // Builder.cs:352
+		    yield return Code_PostSurgicalScar;                                                                                                   // Builder.cs:352
+		    yield return Code_Seroma;                                                                                                             // Builder.cs:352
+		    yield return Code_SkinInvolvement;                                                                                                    // Builder.cs:352
+		    yield return Code_SkinLesion;                                                                                                         // Builder.cs:352
+		    yield return Code_SkinRetraction;                                                                                                     // Builder.cs:352
+		    yield return Code_SkinThickening;                                                                                                     // Builder.cs:352
+		    yield return Code_SurgicalClip;                                                                                                       // Builder.cs:352
+		    yield return Code_SurgicalClips;                                                                                                      // Builder.cs:352
+		    yield return Code_TrabecularThickening;                                                                                               // Builder.cs:352
+		}                                                                                                                                         // Builder.cs:358
 		//- Methods
 	}
 }

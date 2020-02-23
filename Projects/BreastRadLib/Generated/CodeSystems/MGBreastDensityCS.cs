@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class MGBreastDensityCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGBreastDensityCS";                                             // CSBuilder.cs:347
-		                                                                                                                                          // CSBuilder.cs:359
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGBreastDensityCS";                                             // Builder.cs:373
+		                                                                                                                                          // Builder.cs:385
 		/// <summary>
 		/// A term used to describe breast tissue that is made up of almost all fatty tissue.
 		/// Fatty breast tissue does not look dense on a mammogram, which may make it easier
@@ -24,8 +24,8 @@ namespace BreastRadLib
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/search?contains=false&q=fatty]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_AlmostEntirelyFat = new Coding(System, "AlmostEntirelyFat", "Almost entirely fat");                             // CSBuilder.cs:373
-		                                                                                                                                          // CSBuilder.cs:359
+		public static Coding Code_AlmostEntirelyFat = new Coding(System, "AlmostEntirelyFat", "Almost entirely fat");                             // Builder.cs:399
+		                                                                                                                                          // Builder.cs:385
 		/// <summary>
 		/// A term used to describe breast tissue that is made up of mostly fatty tissue and
 		/// also has some dense fibrous tissue and glandular tissue.
@@ -37,8 +37,8 @@ namespace BreastRadLib
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/scattered-fibroglandular-breast-tissue]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_ScatteredAreasOfFibroglandularDensity = new Coding(System, "ScatteredAreasOfFibroglandularDensity", "Scattered areas of fibroglandular density");// CSBuilder.cs:373
-		                                                                                                                                          // CSBuilder.cs:359
+		public static Coding Code_ScatteredAreasOfFibroglandularDensity = new Coding(System, "ScatteredAreasOfFibroglandularDensity", "Scattered areas of fibroglandular density");// Builder.cs:399
+		                                                                                                                                          // Builder.cs:385
 		/// <summary>
 		/// A term used to describe breast tissue that has large areas of dense fibrous tissue
 		/// and glandular tissue and also has some fatty tissue.
@@ -50,8 +50,8 @@ namespace BreastRadLib
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/heterogeneously-dense-breast-tissue]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_HeterogeneouslyDense = new Coding(System, "HeterogeneouslyDense", "Heterogeneously dense");                     // CSBuilder.cs:373
-		                                                                                                                                          // CSBuilder.cs:359
+		public static Coding Code_HeterogeneouslyDense = new Coding(System, "HeterogeneouslyDense", "Heterogeneously dense");                     // Builder.cs:399
+		                                                                                                                                          // Builder.cs:385
 		/// <summary>
 		/// Also called extremely dense breast tissue.
 		/// A term used to describe breast tissue that is made up of almost all dense fibrous
@@ -66,7 +66,7 @@ namespace BreastRadLib
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/extremely-dense-breast-tissue]
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_ExtremelyDense = new Coding(System, "ExtremelyDense", "Extremely dense");                                       // CSBuilder.cs:373
+		public static Coding Code_ExtremelyDense = new Coding(System, "ExtremelyDense", "Extremely dense");                                       // Builder.cs:399
 		//- Fields
 	}
 }

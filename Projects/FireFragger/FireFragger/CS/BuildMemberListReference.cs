@@ -6,18 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
     /// <summary>
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class CSBuildMemberListReference : CSBuildMemberListBase
+    internal class BuildMemberListReference : BuildMemberListBase
     {
         protected ElementTreeNode memberNode;
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
 
-        public CSBuildMemberListReference(CSBuilder csBuilder,
+        public BuildMemberListReference(Builder csBuilder,
             SDInfo fragBase,
             ElementTreeNode memberNode) : base(csBuilder, fragBase)
         {

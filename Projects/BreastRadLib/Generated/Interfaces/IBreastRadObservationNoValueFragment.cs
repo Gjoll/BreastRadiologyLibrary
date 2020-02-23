@@ -10,13 +10,11 @@ using BreastRadLib.BreastRadObservationNoValueFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastRadObservationNoValueFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IBreastRadObservationNoValueFragment : IBreastRadObservationFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,13 +10,10 @@ using BreastRadLib.HeaderFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IHeaderFragment
+	public interface IHeaderFragment 
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
-		//+ Fields
-		//- Fields
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

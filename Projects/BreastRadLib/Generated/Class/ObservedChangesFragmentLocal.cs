@@ -15,46 +15,46 @@ namespace BreastRadLib.ObservedChangesFragmentLocal
 	/// Accessor class for 'obsChanges'
 	/// [Fhir Element 'Observation.component:obsChanges]'
 	/// </summary>
-	public class ObsChanges_Accessor : MemberListCodedValueBase<CodeableConcept>                                                               // CSBuildMemberListCodedValue.cs:64
-	{                                                                                                                                          // CSBuildMemberListCodedValue.cs:65
-	    // Properties                                                                                                                          // CSBuildMemberListCodedValue.cs:66
+	public class ObsChanges_Accessor : MemberListCodedValueBase<CodeableConcept>                                                               // BuildMemberListCodedValue.cs:64
+	{                                                                                                                                          // BuildMemberListCodedValue.cs:65
+	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:66
 	    /// <summary>
 	    /// Access propertyName
 	    /// </summary>
-	    public IEnumerable<CodeableConcept> All() => this.items;                                                                               // CSBuildMemberListCodedValue.cs:134
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:136
+	    public IEnumerable<CodeableConcept> All() => this.items;                                                                               // BuildMemberListCodedValue.cs:134
+	                                                                                                                                           // BuildMemberListCodedValue.cs:136
 	    /// <summary>
 	    /// Access item at indicated location in list
 	    /// </summary>
-	    public CodeableConcept At(Int32 i) => base.items[i];                                                                                   // CSBuildMemberListCodedValue.cs:140
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:142
+	    public CodeableConcept At(Int32 i) => base.items[i];                                                                                   // BuildMemberListCodedValue.cs:140
+	                                                                                                                                           // BuildMemberListCodedValue.cs:142
 	    /// <summary>
 	    /// Access first item in list
 	    /// </summary>
-	    public new CodeableConcept First() => base.First();                                                                                    // CSBuildMemberListCodedValue.cs:146
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:147
+	    public new CodeableConcept First() => base.First();                                                                                    // BuildMemberListCodedValue.cs:146
+	                                                                                                                                           // BuildMemberListCodedValue.cs:147
 	    /// <summary>
 	    /// Access first item in list or default value if empty
 	    /// </summary>
-	    public new CodeableConcept FirstOrDefault() => base.FirstOrDefault();                                                                  // CSBuildMemberListCodedValue.cs:151
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:68
-	    // Methods                                                                                                                             // CSBuildMemberListCodedValue.cs:69
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:118
+	    public new CodeableConcept FirstOrDefault() => base.FirstOrDefault();                                                                  // BuildMemberListCodedValue.cs:151
+	                                                                                                                                           // BuildMemberListCodedValue.cs:68
+	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:69
+	                                                                                                                                           // BuildMemberListCodedValue.cs:118
 	    /// <summary>
 	    /// Append item to end of list
 	    /// </summary>
-	    public void Append(ObservedChangesVS.TCoding value)                                                                                    // CSBuildMemberListCodedValue.cs:122
-	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:123
-	        this.RawItems.Add(value);                                                                                                          // CSBuildMemberListCodedValue.cs:124
-	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:125
-	                                                                                                                                           // CSBuildMemberListCodedValue.cs:71
+	    public void Append(ObservedChangesVS.TCoding value)                                                                                    // BuildMemberListCodedValue.cs:122
+	    {                                                                                                                                      // BuildMemberListCodedValue.cs:123
+	        this.RawItems.Add(value);                                                                                                          // BuildMemberListCodedValue.cs:124
+	    }                                                                                                                                      // BuildMemberListCodedValue.cs:125
+	                                                                                                                                           // BuildMemberListCodedValue.cs:71
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public ObsChanges_Accessor(BreastRadiologyDocument doc) : base("ObsChanges_Accessor")                                                  // CSBuildMemberListCodedValue.cs:75
-	    {                                                                                                                                      // CSBuildMemberListCodedValue.cs:76
-	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsChanges"));// CSBuildMemberListCodedValue.cs:77
-	    }                                                                                                                                      // CSBuildMemberListCodedValue.cs:79
-	}                                                                                                                                          // CSBuildMemberListCodedValue.cs:80
+	    public ObsChanges_Accessor(BreastRadiologyDocument doc) : base("ObsChanges_Accessor")                                                  // BuildMemberListCodedValue.cs:75
+	    {                                                                                                                                      // BuildMemberListCodedValue.cs:76
+	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "obsChanges"));// BuildMemberListCodedValue.cs:77
+	    }                                                                                                                                      // BuildMemberListCodedValue.cs:79
+	}                                                                                                                                          // BuildMemberListCodedValue.cs:80
 	//- LocalClassDefs
 }

@@ -10,14 +10,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
     /// <summary>
     /// Perform Observation specific build
     /// </summary>
-    class CSDefineComposition : CSDefineBase
+    class DefineDiagnosticReport : DefineBase
     {
-        public CSDefineComposition(CSBuilder csBuilder,
+        public DefineDiagnosticReport(Builder csBuilder,
                     SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
@@ -31,18 +31,9 @@ namespace FireFragger
                $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
             base.Build();
-            this.DefineSections();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
-        }
-
-        void DefineSections()
-        {
-            if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
-                return;
-            CSBuildMemberListSection bml = new CSBuildMemberListSection(this.csBuilder, this.fragBase);
-            bml.Define();
         }
     }
 }

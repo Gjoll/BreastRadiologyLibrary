@@ -10,14 +10,12 @@ using BreastRadLib.ConsistentWithHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IConsistentWithHasMemberFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IConsistentWithHasMemberFragment : IHeaderFragment
 
-		//+ Fields
-		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

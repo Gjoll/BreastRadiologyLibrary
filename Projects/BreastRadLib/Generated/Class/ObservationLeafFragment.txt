@@ -1,5 +1,5 @@
-		//+ Fields
-		//- Fields
+		//+ Properties
+		//- Properties
 
 			//+ Constructor
 			//- Constructor
@@ -10,7 +10,7 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

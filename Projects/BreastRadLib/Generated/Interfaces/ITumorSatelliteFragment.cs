@@ -10,14 +10,12 @@ using BreastRadLib.TumorSatelliteFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface ITumorSatelliteFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface ITumorSatelliteFragment : IHeaderFragment
 
-		//+ Fields
-		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,17 +10,15 @@ using BreastRadLib.ShapeComponentsFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IShapeComponentsFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IShapeComponentsFragment : IBreastBodyLocationRequiredFragment
 
-		//+ Fields
-		Orientation_Accessor Orientation { get ; }                                                                                                // CSBuildMemberListBase.cs:27
-		Shape_Accessor Shape { get ; }                                                                                                            // CSBuildMemberListBase.cs:27
-		Margin_Accessor Margin { get ; }                                                                                                          // CSBuildMemberListBase.cs:27
-		MgDensity_Accessor MgDensity { get ; }                                                                                                    // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		Orientation_Accessor Orientation { get ; }                                                                                                // BuildMemberListBase.cs:29
+		Shape_Accessor Shape { get ; }                                                                                                            // BuildMemberListBase.cs:29
+		Margin_Accessor Margin { get ; }                                                                                                          // BuildMemberListBase.cs:29
+		MgDensity_Accessor MgDensity { get ; }                                                                                                    // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

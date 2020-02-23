@@ -10,13 +10,24 @@ using BreastRadLib.MGAbnormalityFatNecrosisLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGAbnormalityFatNecrosis
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IMGAbnormalityFatNecrosis : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoComponentFragment,
+        IBreastRadObservationNoValueFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        INotPreviouslySeenComponentFragment,
+        IObservedCountFragment,
+        IObservedSizeFragment,
+        IObservedDistributionFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment,
+        IConsistentWithHasMemberFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

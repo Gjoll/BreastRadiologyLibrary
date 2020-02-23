@@ -10,26 +10,24 @@ using BreastRadLib.MGFindingLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGFinding
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IMGFinding : IObservationSectionFragment
 
-		//+ Fields
-		AbnormalityCyst_Accessor AbnormalityCyst { get ; }                                                                                        // CSBuildMemberListBase.cs:27
-		AbnormalityDuct_Accessor AbnormalityDuct { get ; }                                                                                        // CSBuildMemberListBase.cs:27
-		AbnormalityForeignObject_Accessor AbnormalityForeignObject { get ; }                                                                      // CSBuildMemberListBase.cs:27
-		AbnormalityLymphNode_Accessor AbnormalityLymphNode { get ; }                                                                              // CSBuildMemberListBase.cs:27
-		AbnormalityMass_Accessor AbnormalityMass { get ; }                                                                                        // CSBuildMemberListBase.cs:27
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSBuildMemberListBase.cs:27
-		AbnormalityFibroadenoma_Accessor AbnormalityFibroadenoma { get ; }                                                                        // CSBuildMemberListBase.cs:27
-		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // CSBuildMemberListBase.cs:27
-		MGAbnormalityAsymmetry_Accessor MGAbnormalityAsymmetry { get ; }                                                                          // CSBuildMemberListBase.cs:27
-		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // CSBuildMemberListBase.cs:27
-		MGAbnormalityDensity_Accessor MGAbnormalityDensity { get ; }                                                                              // CSBuildMemberListBase.cs:27
-		MGAbnormalityFatNecrosis_Accessor MGAbnormalityFatNecrosis { get ; }                                                                      // CSBuildMemberListBase.cs:27
-		MGBreastDensity_Accessor MGBreastDensity { get ; }                                                                                        // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		AbnormalityCyst_Accessor AbnormalityCyst { get ; }                                                                                        // BuildMemberListBase.cs:29
+		AbnormalityDuct_Accessor AbnormalityDuct { get ; }                                                                                        // BuildMemberListBase.cs:29
+		AbnormalityForeignObject_Accessor AbnormalityForeignObject { get ; }                                                                      // BuildMemberListBase.cs:29
+		AbnormalityLymphNode_Accessor AbnormalityLymphNode { get ; }                                                                              // BuildMemberListBase.cs:29
+		AbnormalityMass_Accessor AbnormalityMass { get ; }                                                                                        // BuildMemberListBase.cs:29
+		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // BuildMemberListBase.cs:29
+		AbnormalityFibroadenoma_Accessor AbnormalityFibroadenoma { get ; }                                                                        // BuildMemberListBase.cs:29
+		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // BuildMemberListBase.cs:29
+		MGAbnormalityAsymmetry_Accessor MGAbnormalityAsymmetry { get ; }                                                                          // BuildMemberListBase.cs:29
+		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // BuildMemberListBase.cs:29
+		MGAbnormalityDensity_Accessor MGAbnormalityDensity { get ; }                                                                              // BuildMemberListBase.cs:29
+		MGAbnormalityFatNecrosis_Accessor MGAbnormalityFatNecrosis { get ; }                                                                      // BuildMemberListBase.cs:29
+		MGBreastDensity_Accessor MGBreastDensity { get ; }                                                                                        // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,15 +10,13 @@ using BreastRadLib.BodyDistanceFromExtensionLocal;
 
 namespace BreastRadLib
 {
-	public interface IBodyDistanceFromExtension
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IBodyDistanceFromExtension : IHeaderFragment
 
-		//+ Fields
-		LandMark_Accessor LandMark { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
-		DistanceFromLandMark_Accessor DistanceFromLandMark { get ; }                                                                              // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		LandMark_Accessor LandMark { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		DistanceFromLandMark_Accessor DistanceFromLandMark { get ; }                                                                              // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

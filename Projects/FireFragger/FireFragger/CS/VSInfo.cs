@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
     class VSInfo
     {
@@ -16,7 +16,7 @@ namespace FireFragger
         {
             this.ValueSet = vs;
             this.ClassCode = new CodeEditor();
-            this.ClassCode.TryAddUserMacro("ClassName", CSBuilder.ValueSetName(this));
+            this.ClassCode.TryAddUserMacro("ClassName", Builder.ValueSetName(this));
             this.ClassCode.Load(Path.Combine("Templates", "ValueSet.txt"));
         }
     };

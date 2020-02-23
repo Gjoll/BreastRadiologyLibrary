@@ -10,14 +10,25 @@ using BreastRadLib.AbnormalityLymphNodeLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityLymphNode
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAbnormalityLymphNode : IObservationLeafFragment,
+        ITumorSatelliteFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoValueFragment,
+        IBreastRadObservationNoComponentFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        IObservedCountFragment,
+        IObservedDistributionFragment,
+        IObservedSizeFragment,
+        INotPreviouslySeenComponentFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment
 
-		//+ Fields
-		LymphNodeType_Accessor LymphNodeType { get ; }                                                                                            // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		LymphNodeType_Accessor LymphNodeType { get ; }                                                                                            // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

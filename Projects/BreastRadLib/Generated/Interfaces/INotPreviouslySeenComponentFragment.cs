@@ -10,14 +10,12 @@ using BreastRadLib.NotPreviouslySeenComponentFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface INotPreviouslySeenComponentFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface INotPreviouslySeenComponentFragment : IBreastBodyLocationRequiredFragment
 
-		//+ Fields
-		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

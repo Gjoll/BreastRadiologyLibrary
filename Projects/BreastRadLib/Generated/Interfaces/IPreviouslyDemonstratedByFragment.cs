@@ -10,14 +10,11 @@ using BreastRadLib.PreviouslyDemonstratedByFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IPreviouslyDemonstratedByFragment
+	public interface IPreviouslyDemonstratedByFragment 
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
-		//+ Fields
-		PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; }                                                                      // CSBuildMemberListBase.cs:27
-		//- Fields
+		//+ Properties
+		PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; }                                                                      // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

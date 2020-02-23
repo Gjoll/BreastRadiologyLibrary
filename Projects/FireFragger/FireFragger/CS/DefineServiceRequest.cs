@@ -10,14 +10,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
     /// <summary>
     /// Perform Observation specific build
     /// </summary>
-    class CSDefineDiagnosticReport : CSDefineBase
+    class DefineServiceRequest : DefineBase
     {
-        public CSDefineDiagnosticReport(CSBuilder csBuilder,
+        public DefineServiceRequest(Builder csBuilder,
                     SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }

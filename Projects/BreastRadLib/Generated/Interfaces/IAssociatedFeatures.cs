@@ -10,16 +10,14 @@ using BreastRadLib.AssociatedFeaturesLocal;
 
 namespace BreastRadLib
 {
-	public interface IAssociatedFeatures
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAssociatedFeatures : IObservationSectionFragment
 
-		//+ Fields
-		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // CSBuildMemberListBase.cs:27
-		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // CSBuildMemberListBase.cs:27
-		ObservedFeature_Accessor ObservedFeature { get ; }                                                                                        // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // BuildMemberListBase.cs:29
+		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // BuildMemberListBase.cs:29
+		ObservedFeature_Accessor ObservedFeature { get ; }                                                                                        // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

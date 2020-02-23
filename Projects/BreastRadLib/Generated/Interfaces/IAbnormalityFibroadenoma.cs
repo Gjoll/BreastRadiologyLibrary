@@ -10,14 +10,22 @@ using BreastRadLib.AbnormalityFibroadenomaLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityFibroadenoma
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAbnormalityFibroadenoma : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoValueFragment,
+        IBreastRadObservationNoComponentFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        IObservedCountFragment,
+        IObservedDistributionFragment,
+        IObservedSizeFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment
 
-		//+ Fields
-		FibroAdenomaType_Accessor FibroAdenomaType { get ; }                                                                                      // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		FibroAdenomaType_Accessor FibroAdenomaType { get ; }                                                                                      // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

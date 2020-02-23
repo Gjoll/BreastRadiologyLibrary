@@ -10,14 +10,21 @@ using BreastRadLib.AbnormalityForeignObjectLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityForeignObject
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAbnormalityForeignObject : IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoValueFragment,
+        IBreastRadObservationNoComponentFragment,
+        ICommonComponentsFragment,
+        INotPreviouslySeenComponentFragment,
+        ICorrespondsWithFragment,
+        IBiRadFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment,
+        IConsistentWithHasMemberFragment
 
-		//+ Fields
-		AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                                              // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                                              // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

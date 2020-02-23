@@ -10,14 +10,26 @@ using BreastRadLib.AbnormalityMassLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityMass
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAbnormalityMass : IObservationLeafFragment,
+        ITumorSatelliteFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoValueFragment,
+        IBreastRadObservationNoComponentFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        IObservedCountFragment,
+        IObservedSizeFragment,
+        IObservedDistributionFragment,
+        INotPreviouslySeenComponentFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment,
+        IConsistentWithHasMemberFragment
 
-		//+ Fields
-		MassType_Accessor MassType { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		MassType_Accessor MassType { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

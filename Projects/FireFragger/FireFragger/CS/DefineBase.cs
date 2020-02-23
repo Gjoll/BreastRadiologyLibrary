@@ -10,9 +10,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
-    abstract class CSDefineBase : CSCodeBlockDefinitions
+    abstract class DefineBase : CodeBlockDefinitions
     {
         protected delegate void VisitFragment(SDInfo fi, Int32 level);
 
@@ -36,19 +36,16 @@ namespace FireFragger
             Visit(vi, fragBase, 0);
         }
 
-        public CSDefineBase(CSBuilder csBuilder,
+        public DefineBase(Builder csBuilder,
                     SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
 
         public void Clear()
         {
-            this.fragBase.ClassFields?.Clear();
-            this.fragBase.ClassMethods?.Clear();
-            this.fragBase.ClassConstructor?.Clear();
-
-            this.fragBase.InterfaceFields.Clear();
-            this.fragBase.InterfaceMethods.Clear();
+            //this.fragBase.ClassProperties?.Clear();
+            //this.fragBase.ClassMethods?.Clear();
+            //this.fragBase.ClassConstructor?.Clear();
         }
 
         void DefineExtensions()
@@ -79,7 +76,7 @@ namespace FireFragger
 
             foreach (SDInfo fiRef in this.fragBase.AllReferencedFragments)
             {
-                String fragmentName = CSBuilder.ClassName(fiRef);
+                String fragmentName = Builder.ClassName(fiRef);
                 usingBlock.AppendLine($"using BreastRadLib.{fragmentName}Local;");
                 this.MergeFragment(fiRef);
             }
@@ -148,7 +145,7 @@ namespace FireFragger
                     fhirFieldName = "Value";
                     break;
             }
-            String thisClass = CSBuilder.ClassName(this.fragBase);
+            String thisClass = Builder.ClassName(this.fragBase);
             this.fragBase.ClassMethods
                 .SummaryOpen()
                 .Summary($"Set {elementDefinition.ElementId} to one of the predefined items")
@@ -180,7 +177,7 @@ namespace FireFragger
             }
         }
 
-        public void DefineBase()
+        public void DefBase()
         {
             if (this.fragBase.ClassEditor == null)
                 return;

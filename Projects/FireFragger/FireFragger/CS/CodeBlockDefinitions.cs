@@ -5,15 +5,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
-    class CSCodeBlockDefinitions
+    class CodeBlockDefinitions
     {
-        protected CSBuilder csBuilder;
+        protected Builder csBuilder;
         protected SDInfo fragBase;
 
 
-        public CSCodeBlockDefinitions(CSBuilder csBuilder,
+        public CodeBlockDefinitions(Builder csBuilder,
                     SDInfo fragBase)
         {
             this.csBuilder = csBuilder;
@@ -59,7 +59,7 @@ namespace FireFragger
             // currently we only do local value sets.
             if (valueSet.StartsWith(Global.LocalValueSertUrl) == false)
                 return false;
-            String vsClassName = CSBuilder.MachineName(valueSet.LastUriPart());
+            String vsClassName = Builder.MachineName(valueSet.LastUriPart());
             bindingClassName = $"{vsClassName}.TCoding";
             return true;
         }

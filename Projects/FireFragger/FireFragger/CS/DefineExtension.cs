@@ -10,19 +10,19 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
     /// <summary>
     /// Perform Observation specific build
     /// </summary>
-    class CSDefineExtension : CSDefineBase
+    class DefineExtension : DefineBase
     {
-        CSBuildMemberListExtensionValue bml;
+        BuildMemberListExtensionValue bml;
 
-        public CSDefineExtension(CSBuilder csBuilder,
+        public DefineExtension(Builder csBuilder,
                     SDInfo fragBase) : base(csBuilder, fragBase)
         {
-            this.bml = new CSBuildMemberListExtensionValue(this.csBuilder, this.fragBase);
+            this.bml = new BuildMemberListExtensionValue(this.csBuilder, this.fragBase);
         }
 
         public override void Build()

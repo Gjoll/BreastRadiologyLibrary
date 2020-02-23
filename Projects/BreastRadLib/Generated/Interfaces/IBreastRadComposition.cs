@@ -10,19 +10,17 @@ using BreastRadLib.BreastRadCompositionLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastRadComposition
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IBreastRadComposition : IHeaderFragment
 
-		//+ Fields
-		Report_Accessor Report { get ; }                                                                                                          // CSBuildMemberListBase.cs:27
-		Impressions_Accessor Impressions { get ; }                                                                                                // CSBuildMemberListBase.cs:27
-		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // CSBuildMemberListBase.cs:27
-		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // CSBuildMemberListBase.cs:27
-		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // CSBuildMemberListBase.cs:27
-		Recommendations_Accessor Recommendations { get ; }                                                                                        // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		Report_Accessor Report { get ; }                                                                                                          // BuildMemberListBase.cs:29
+		Impressions_Accessor Impressions { get ; }                                                                                                // BuildMemberListBase.cs:29
+		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // BuildMemberListBase.cs:29
+		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // BuildMemberListBase.cs:29
+		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // BuildMemberListBase.cs:29
+		Recommendations_Accessor Recommendations { get ; }                                                                                        // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

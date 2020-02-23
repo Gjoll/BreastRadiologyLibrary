@@ -10,13 +10,13 @@ using BreastRadLib.TumorSatelliteLocal;
 
 namespace BreastRadLib
 {
-	public interface ITumorSatellite
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface ITumorSatellite : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoComponentFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

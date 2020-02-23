@@ -10,9 +10,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
-    class CSBuilder : ConverterBase, IDisposable
+    class Builder : ConverterBase, IDisposable
     {
         String BreakOnClass = "";
         CodeEditor resourceFactoryEditor;
@@ -27,7 +27,7 @@ namespace FireFragger
         public bool CleanFlag { get; set; } = false;
         FileCleaner fc = new FileCleaner();
 
-        public CSBuilder()
+        public Builder()
         {
             var comparer = StringComparer.OrdinalIgnoreCase;
             this.CodeSystems = new Dictionary<string, CSInfo>(comparer);
@@ -147,29 +147,29 @@ namespace FireFragger
             }
 
             this.DefineInterfaces(fi);
-            CSDefineBase csDef = null;
+            DefineBase csDef = null;
             switch (fi.StructDef.BaseDefinition)
             {
                 case Global.ExtensionUrl:
-                    csDef = new CSDefineExtension(this, fi);
+                    csDef = new DefineExtension(this, fi);
                     break;
                 case Global.ResourceUrl:
                     break;
 
                 case Global.ObservationUrl:
-                    csDef = new CSDefineObservation(this, fi);
+                    csDef = new DefineObservation(this, fi);
                     break;
 
                 case Global.DiagnosticReportUrl:
-                    csDef = new CSDefineDiagnosticReport(this, fi);
+                    csDef = new DefineDiagnosticReport(this, fi);
                     break;
 
                 case Global.CompositionUrl:
-                    csDef = new CSDefineComposition(this, fi);
+                    csDef = new DefineComposition(this, fi);
                     break;
 
                 case Global.ServiceRequestUrl:
-                    csDef = new CSDefineServiceRequest(this, fi);
+                    csDef = new DefineServiceRequest(this, fi);
                     break;
 
                 default:
@@ -182,7 +182,7 @@ namespace FireFragger
             if (csDef != null)
             {
                 csDef.Clear();
-                csDef.DefineBase();
+                csDef.DefBase();
                 csDef.Build();
             }
         }
@@ -190,9 +190,35 @@ namespace FireFragger
         void DefineInterfaces(SDInfo fi)
         {
             StringBuilder interfaces = new StringBuilder();
-            foreach (SDInfo refFrag in fi.DirectReferencedFragments)
-                interfaces.Append($", {InterfaceName(refFrag)}");
-            fi.SetInterfaces(interfaces.ToString());
+            SDInfo[] refFrags = fi.DirectReferencedFragments.ToArray();
+            if (refFrags.Length > 0)
+            {
+                if (refFrags.Length == 1)
+                {
+                    interfaces
+                        .AppendLine($": {InterfaceName(refFrags[0])}")
+                    ;
+                }
+                else
+                {
+                    interfaces
+                        .AppendLine($": {InterfaceName(refFrags[0])},")
+                    ;
+                    for (Int32 i = 1; i < refFrags.Length - 1; i++)
+                    {
+                        SDInfo refFrag = refFrags[i];
+                        interfaces
+                            .AppendLine($"        {InterfaceName(refFrag)},")
+                        ;
+                    }
+                    interfaces
+                        .AppendLine($"        {InterfaceName(refFrags[refFrags.Length - 1])}")
+                    ;
+                }
+            }
+
+            fi.InterfaceEditor.TryAddUserMacro("Interfaces", interfaces.ToString());
+            fi.InterfaceEditor.Blocks.Find("*Header").Reload();
         }
 
 
@@ -317,8 +343,8 @@ namespace FireFragger
                 {
                     if (this.CodeSystems.TryGetValue(component.System, out CSInfo ci) == false)
                         throw new Exception($"CodeSystem {component.System} not found");
-                    String codeName = CSBuilder.CodeName(concept.Code);
-                    String codingReference = $"{CSBuilder.CodeSystemName(ci)}.{codeName}";
+                    String codeName = Builder.CodeName(concept.Code);
+                    String codingReference = $"{Builder.CodeSystemName(ci)}.{codeName}";
                     fieldsBlock
                         .AppendCode($"public static TCoding {codeName} = new TCoding({codingReference});")
                         ;

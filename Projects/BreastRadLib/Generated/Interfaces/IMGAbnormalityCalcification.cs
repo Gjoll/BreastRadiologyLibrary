@@ -10,15 +10,25 @@ using BreastRadLib.MGAbnormalityCalcificationLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGAbnormalityCalcification
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IMGAbnormalityCalcification : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoComponentFragment,
+        IBreastRadObservationNoValueFragment,
+        ICommonComponentsFragment,
+        INotPreviouslySeenComponentFragment,
+        IObservedCountFragment,
+        IObservedSizeFragment,
+        IObservedDistributionFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment,
+        IConsistentWithHasMemberFragment
 
-		//+ Fields
-		CalcificationType_Accessor CalcificationType { get ; }                                                                                    // CSBuildMemberListBase.cs:27
-		CalcificationDistribution_Accessor CalcificationDistribution { get ; }                                                                    // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		CalcificationType_Accessor CalcificationType { get ; }                                                                                    // BuildMemberListBase.cs:29
+		CalcificationDistribution_Accessor CalcificationDistribution { get ; }                                                                    // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,14 +10,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FireFragger
+namespace FireFragger.CS
 {
     /// <summary>
     /// Perform Observation specific build
     /// </summary>
-    class CSDefineObservation : CSDefineBase
+    class DefineObservation : DefineBase
     {
-        public CSDefineObservation(CSBuilder csBuilder,
+        public DefineObservation(Builder csBuilder,
                     SDInfo fragBase) : base(csBuilder, fragBase)
         {
         }
@@ -26,7 +26,7 @@ namespace FireFragger
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
                 return;
-            CSBuildMemberListCodedValue bml = new CSBuildMemberListCodedValue(this.csBuilder, this.fragBase);
+            BuildMemberListCodedValue bml = new BuildMemberListCodedValue(this.csBuilder, this.fragBase);
             bml.Define();
         }
 
@@ -34,7 +34,7 @@ namespace FireFragger
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
                 return;
-            CSBuildMemberListReference bcr = new CSBuildMemberListReference(this.csBuilder, this.fragBase, hasMemberNode);
+            BuildMemberListReference bcr = new BuildMemberListReference(this.csBuilder, this.fragBase, hasMemberNode);
             bcr.Define();
         }
 

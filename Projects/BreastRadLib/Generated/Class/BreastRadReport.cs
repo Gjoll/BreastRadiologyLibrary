@@ -14,11 +14,8 @@ using BreastRadLib.CategoryFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class BreastRadReport : DiagnosticReportBase, IHeaderFragment, ICategoryFragment
+	public class BreastRadReport : DiagnosticReportBase, IBreastRadReport
 	{
-		//+ Fields
-		//- Fields
-
 		//+ Properties
 		//- Properties
 
@@ -58,8 +55,8 @@ namespace BreastRadLib
 				resource = new DiagnosticReport();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // CSDefineBase.cs:192
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:189
 			//- Constructor
 		}
 
@@ -115,11 +112,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set DiagnosticReport.conclusionCode to one of the predefined items
 		/// </summary>
-		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // CSDefineBase.cs:156
-		{                                                                                                                                         // CSDefineBase.cs:157
-		    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 158                             // CodeBlockNested.cs:594
-		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // CSDefineBase.cs:160
-		}                                                                                                                                         // CSDefineBase.cs:162
+		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:153
+		{                                                                                                                                         // DefineBase.cs:154
+		    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 155                               // CodeBlockNested.cs:594
+		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:157
+		}                                                                                                                                         // DefineBase.cs:159
 		//- Methods
 	}
 }

@@ -10,14 +10,12 @@ using BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IAssociatedFeaturesHasMemberFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAssociatedFeaturesHasMemberFragment : IHeaderFragment
 
-		//+ Fields
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,14 +10,26 @@ using BreastRadLib.AbnormalityCystLocal;
 
 namespace BreastRadLib
 {
-	public interface IAbnormalityCyst
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IAbnormalityCyst : IObservationLeafFragment,
+        ITumorSatelliteFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoComponentFragment,
+        IBreastRadObservationNoValueFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        IObservedCountFragment,
+        IObservedDistributionFragment,
+        IObservedSizeFragment,
+        INotPreviouslySeenComponentFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IConsistentWithHasMemberFragment,
+        IAssociatedFeaturesHasMemberFragment
 
-		//+ Fields
-		CystType_Accessor CystType { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		CystType_Accessor CystType { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

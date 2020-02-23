@@ -1,5 +1,5 @@
-		//+ Fields
-		//- Fields
+		//+ Properties
+		//- Properties
 
 			//+ Constructor
 			//- Constructor

@@ -15,43 +15,43 @@ namespace BreastRadLib.AssociatedFeaturesLocal
 	/// Accessor class for slice 'mGAbnormalityArchitecturalDistortion'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion]'
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListReferenceMultiple<MGAbnormalityArchitecturalDistortion>             // CSBuildMemberListReference.cs:66
-	{                                                                                                                                          // CSBuildMemberListReference.cs:67
+	public class MGAbnormalityArchitecturalDistortion_Accessor : MemberListReferenceMultiple<MGAbnormalityArchitecturalDistortion>             // BuildMemberListReference.cs:66
+	{                                                                                                                                          // BuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityArchitecturalDistortion_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityArchitecturalDistortion_Accessor")// CSBuildMemberListReference.cs:72
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");         // CSBuildMemberListReference.cs:74
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
-	}                                                                                                                                          // CSBuildMemberListReference.cs:76
+	    public MGAbnormalityArchitecturalDistortion_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityArchitecturalDistortion_Accessor")// BuildMemberListReference.cs:72
+	    {                                                                                                                                      // BuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");         // BuildMemberListReference.cs:74
+	    }                                                                                                                                      // BuildMemberListReference.cs:75
+	}                                                                                                                                          // BuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'mGAbnormalityCalcification'
 	/// [Fhir Element 'Observation.hasMember:mGAbnormalityCalcification]'
 	/// </summary>
-	public class MGAbnormalityCalcification_Accessor : MemberListReferenceMultiple<MGAbnormalityCalcification>                                 // CSBuildMemberListReference.cs:66
-	{                                                                                                                                          // CSBuildMemberListReference.cs:67
+	public class MGAbnormalityCalcification_Accessor : MemberListReferenceMultiple<MGAbnormalityCalcification>                                 // BuildMemberListReference.cs:66
+	{                                                                                                                                          // BuildMemberListReference.cs:67
 	    /// <summary>
 	    /// MGAbnormalityCalcification_Accessor class constructor
 	    /// </summary>
-	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityCalcification_Accessor")                  // CSBuildMemberListReference.cs:72
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                   // CSBuildMemberListReference.cs:74
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
-	}                                                                                                                                          // CSBuildMemberListReference.cs:76
+	    public MGAbnormalityCalcification_Accessor(BreastRadiologyDocument doc) : base("MGAbnormalityCalcification_Accessor")                  // BuildMemberListReference.cs:72
+	    {                                                                                                                                      // BuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                   // BuildMemberListReference.cs:74
+	    }                                                                                                                                      // BuildMemberListReference.cs:75
+	}                                                                                                                                          // BuildMemberListReference.cs:76
 	/// <summary>
 	/// Accessor class for slice 'observedFeature'
 	/// [Fhir Element 'Observation.hasMember:observedFeature]'
 	/// </summary>
-	public class ObservedFeature_Accessor : MemberListReferenceMultiple<ObservedFeature>                                                       // CSBuildMemberListReference.cs:66
-	{                                                                                                                                          // CSBuildMemberListReference.cs:67
+	public class ObservedFeature_Accessor : MemberListReferenceMultiple<ObservedFeature>                                                       // BuildMemberListReference.cs:66
+	{                                                                                                                                          // BuildMemberListReference.cs:67
 	    /// <summary>
 	    /// ObservedFeature_Accessor class constructor
 	    /// </summary>
-	    public ObservedFeature_Accessor(BreastRadiologyDocument doc) : base("ObservedFeature_Accessor")                                        // CSBuildMemberListReference.cs:72
-	    {                                                                                                                                      // CSBuildMemberListReference.cs:73
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                              // CSBuildMemberListReference.cs:74
-	    }                                                                                                                                      // CSBuildMemberListReference.cs:75
-	}                                                                                                                                          // CSBuildMemberListReference.cs:76
+	    public ObservedFeature_Accessor(BreastRadiologyDocument doc) : base("ObservedFeature_Accessor")                                        // BuildMemberListReference.cs:72
+	    {                                                                                                                                      // BuildMemberListReference.cs:73
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                              // BuildMemberListReference.cs:74
+	    }                                                                                                                                      // BuildMemberListReference.cs:75
+	}                                                                                                                                          // BuildMemberListReference.cs:76
 	//- LocalClassDefs
 }

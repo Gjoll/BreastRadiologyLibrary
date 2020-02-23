@@ -10,17 +10,15 @@ using BreastRadLib.BreastBodyLocationExtensionLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastBodyLocationExtension
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IBreastBodyLocationExtension : IHeaderFragment
 
-		//+ Fields
-		Quadrant_Accessor Quadrant { get ; }                                                                                                      // CSBuildMemberListBase.cs:27
-		Region_Accessor Region { get ; }                                                                                                          // CSBuildMemberListBase.cs:27
-		ClockDirection_Accessor ClockDirection { get ; }                                                                                          // CSBuildMemberListBase.cs:27
-		Depth_Accessor Depth { get ; }                                                                                                            // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		Quadrant_Accessor Quadrant { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		Region_Accessor Region { get ; }                                                                                                          // BuildMemberListBase.cs:29
+		ClockDirection_Accessor ClockDirection { get ; }                                                                                          // BuildMemberListBase.cs:29
+		Depth_Accessor Depth { get ; }                                                                                                            // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

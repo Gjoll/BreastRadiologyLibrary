@@ -10,13 +10,11 @@ using BreastRadLib.NMFindingLocal;
 
 namespace BreastRadLib
 {
-	public interface INMFinding
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface INMFinding : IObservationSectionFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

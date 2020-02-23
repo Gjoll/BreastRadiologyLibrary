@@ -10,14 +10,17 @@ using BreastRadLib.ObservedFeatureLocal;
 
 namespace BreastRadLib
 {
-	public interface IObservedFeature
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IObservedFeature : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoValueFragment,
+        IBreastRadObservationNoComponentFragment,
+        IBreastBodyLocationRequiredFragment,
+        IObservedCountFragment
 
-		//+ Fields
-		FeatureType_Accessor FeatureType { get ; }                                                                                                // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		FeatureType_Accessor FeatureType { get ; }                                                                                                // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

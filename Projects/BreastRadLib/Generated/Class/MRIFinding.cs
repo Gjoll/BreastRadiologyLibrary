@@ -18,11 +18,8 @@ using BreastRadLib.ObservationSectionFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class MRIFinding : ObservationBase, IObservationSectionFragment
+	public class MRIFinding : ObservationBase, IMRIFinding
 	{
-		//+ Fields
-		//- Fields
-
 		//+ Properties
 		//- Properties
 
@@ -62,8 +59,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                                 // CSDefineBase.cs:192
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");                                                 // DefineBase.cs:189
 			//- Constructor
 		}
 
@@ -83,7 +80,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

@@ -10,14 +10,11 @@ using BreastRadLib.ObservedSizeFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IObservedSizeFragment
+	public interface IObservedSizeFragment 
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
-		//+ Fields
-		ObsSize_Accessor ObsSize { get ; }                                                                                                        // CSBuildMemberListBase.cs:27
-		//- Fields
+		//+ Properties
+		ObsSize_Accessor ObsSize { get ; }                                                                                                        // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

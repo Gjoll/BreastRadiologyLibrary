@@ -18,11 +18,8 @@ using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;
 
 namespace BreastRadLib
 {
-	public class MGBreastDensity : ObservationBase, IObservationLeafFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoDeviceFragment
+	public class MGBreastDensity : ObservationBase, IMGBreastDensity
 	{
-		//+ Fields
-		//- Fields
-
 		//+ Properties
 		//- Properties
 
@@ -62,8 +59,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // CSDefineBase.cs:131
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // CSDefineBase.cs:192
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // DefineBase.cs:189
 			//- Constructor
 		}
 
@@ -83,8 +80,8 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // CSBuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // CSBuildMemberListCodedValue.cs:171
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode
@@ -125,11 +122,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set Observation.value[x] to one of the predefined items
 		/// </summary>
-		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // CSDefineBase.cs:156
-		{                                                                                                                                         // CSDefineBase.cs:157
-		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\CSDefineBase.cs 158                               // CodeBlockNested.cs:588
-		    this.Resource.Value = (CodeableConcept) code;                                                                                         // CSDefineBase.cs:159
-		}                                                                                                                                         // CSDefineBase.cs:162
+		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // DefineBase.cs:153
+		{                                                                                                                                         // DefineBase.cs:154
+		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 155                                 // CodeBlockNested.cs:588
+		    this.Resource.Value = (CodeableConcept) code;                                                                                         // DefineBase.cs:156
+		}                                                                                                                                         // DefineBase.cs:159
 		//- Methods
 	}
 }

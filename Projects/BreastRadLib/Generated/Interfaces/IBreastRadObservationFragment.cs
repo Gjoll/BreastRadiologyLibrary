@@ -10,13 +10,12 @@ using BreastRadLib.BreastRadObservationFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IBreastRadObservationFragment
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IBreastRadObservationFragment : IHeaderFragment,
+        ICategoryFragment
 
-		//+ Fields
-		//- Fields
+	{
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

@@ -10,14 +10,25 @@ using BreastRadLib.MGAbnormalityDensityLocal;
 
 namespace BreastRadLib
 {
-	public interface IMGAbnormalityDensity
-	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
+	public interface IMGAbnormalityDensity : IObservationLeafFragment,
+        IBreastRadObservationNoDeviceFragment,
+        IBreastRadObservationNoComponentFragment,
+        IBreastRadObservationNoValueFragment,
+        ICommonComponentsFragment,
+        IShapeComponentsFragment,
+        INotPreviouslySeenComponentFragment,
+        IObservedCountFragment,
+        IObservedSizeFragment,
+        IObservedDistributionFragment,
+        ICorrespondsWithFragment,
+        IPreviouslyDemonstratedByFragment,
+        IAssociatedFeaturesHasMemberFragment,
+        IConsistentWithHasMemberFragment
 
-		//+ Fields
-		DensityType_Accessor DensityType { get ; }                                                                                                // CSBuildMemberListBase.cs:27
-		//- Fields
+	{
+		//+ Properties
+		DensityType_Accessor DensityType { get ; }                                                                                                // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

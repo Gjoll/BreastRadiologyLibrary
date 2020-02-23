@@ -10,14 +10,11 @@ using BreastRadLib.BiRadFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IBiRadFragment
+	public interface IBiRadFragment 
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
-		//+ Fields
-		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // CSBuildMemberListBase.cs:27
-		//- Fields
+		//+ Properties
+		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberListBase.cs:29
+		//- Properties
 
 		//+ Methods
 		//- Methods

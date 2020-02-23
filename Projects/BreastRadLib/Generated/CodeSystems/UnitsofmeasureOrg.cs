@@ -12,19 +12,19 @@ namespace BreastRadLib
 	public class UnitsofmeasureOrg
 	{
 		//+ Fields
-		const string System = "http://unitsofmeasure.org";                                                                                        // CSBuilder.cs:347
-		                                                                                                                                          // CSBuilder.cs:359
+		const string System = "http://unitsofmeasure.org";                                                                                        // Builder.cs:373
+		                                                                                                                                          // Builder.cs:385
 		/// <summary>
 		/// </summary>
-		public static Coding Code_M = new Coding(System, "m", "meter");                                                                           // CSBuilder.cs:373
-		                                                                                                                                          // CSBuilder.cs:359
+		public static Coding Code_M = new Coding(System, "m", "meter");                                                                           // Builder.cs:399
+		                                                                                                                                          // Builder.cs:385
 		/// <summary>
 		/// </summary>
-		public static Coding Code_Cm = new Coding(System, "cm", "centimeter");                                                                    // CSBuilder.cs:373
-		                                                                                                                                          // CSBuilder.cs:359
+		public static Coding Code_Cm = new Coding(System, "cm", "centimeter");                                                                    // Builder.cs:399
+		                                                                                                                                          // Builder.cs:385
 		/// <summary>
 		/// </summary>
-		public static Coding Code_Mm = new Coding(System, "mm", "millimeter");                                                                    // CSBuilder.cs:373
+		public static Coding Code_Mm = new Coding(System, "mm", "millimeter");                                                                    // Builder.cs:399
 		//- Fields
 	}
 }

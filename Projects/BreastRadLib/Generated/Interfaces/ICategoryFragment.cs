@@ -10,13 +10,10 @@ using BreastRadLib.CategoryFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface ICategoryFragment
+	public interface ICategoryFragment 
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
-		//+ Fields
-		//- Fields
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods

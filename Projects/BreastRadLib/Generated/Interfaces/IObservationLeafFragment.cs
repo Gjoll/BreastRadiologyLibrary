@@ -10,13 +10,10 @@ using BreastRadLib.ObservationLeafFragmentLocal;
 
 namespace BreastRadLib
 {
-	public interface IObservationLeafFragment
+	public interface IObservationLeafFragment 
 	{
-		//+ LocalClassDefs
-		//- LocalClassDefs
-
-		//+ Fields
-		//- Fields
+		//+ Properties
+		//- Properties
 
 		//+ Methods
 		//- Methods
