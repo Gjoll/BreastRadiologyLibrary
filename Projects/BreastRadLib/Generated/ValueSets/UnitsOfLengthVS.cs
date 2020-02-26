@@ -28,18 +28,18 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_M = new TCoding(UnitsofmeasureOrg.Code_M);                                                                     // Builder.cs:349
-		public static TCoding Code_Cm = new TCoding(UnitsofmeasureOrg.Code_Cm);                                                                   // Builder.cs:349
-		public static TCoding Code_Mm = new TCoding(UnitsofmeasureOrg.Code_Mm);                                                                   // Builder.cs:349
+		public static TCoding Code_M = new TCoding(UnitsofmeasureOrg.Code_M);                                                                     // Builder.cs:344
+		public static TCoding Code_Cm = new TCoding(UnitsofmeasureOrg.Code_Cm);                                                                   // Builder.cs:344
+		public static TCoding Code_Mm = new TCoding(UnitsofmeasureOrg.Code_Mm);                                                                   // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_M;                                                                                                                  // Builder.cs:352
-		    yield return Code_Cm;                                                                                                                 // Builder.cs:352
-		    yield return Code_Mm;                                                                                                                 // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_M;                                                                                                                  // Builder.cs:347
+		    yield return Code_Cm;                                                                                                                 // Builder.cs:347
+		    yield return Code_Mm;                                                                                                                 // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

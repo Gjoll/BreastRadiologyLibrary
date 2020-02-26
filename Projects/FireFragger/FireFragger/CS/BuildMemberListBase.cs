@@ -12,36 +12,53 @@ namespace FireFragger.CS
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class BuildMemberListBase : CodeBlockDefinitions
+    internal class BuildMemberListBase
     {
+        protected Builder csBuilder;
+        protected ClassCodeBlocks codeBlocks;
+        string type;
+
         public BuildMemberListBase(Builder csBuilder,
-            SDInfo fragBase) : base(csBuilder, fragBase)
+            ClassCodeBlocks codeBlocks,
+            String type)
         {
+            this.type = type;
+            this.csBuilder = csBuilder;
+            this.codeBlocks = codeBlocks;
         }
 
         protected void DefineCommon(String componentClassName,
             String propertyName,
             String methodSuffix)
         {
-            if (this.fragBase.ClassEditor != null)
+            if (this.codeBlocks.ClassEditor != null)
             {
-                this.fragBase.InterfaceProperties
+                this.codeBlocks.InterfaceProperties
+                    .SummaryOpen()
+                    .Summary($"Access {this.type} value {propertyName}")
+                    .SummaryClose()
                     .AppendCode($"{componentClassName} {propertyName} {{ get ; }}")
                     ;
 
-                this.fragBase.ClassProperties
+                this.codeBlocks.ClassProperties
+                    .SummaryOpen()
+                    .Summary($"Access {this.type} value {propertyName}")
+                    .SummaryClose()
                     .AppendCode($"public {componentClassName} {propertyName} {{ get ; protected set; }}")
                     ;
-                this.fragBase.ClassConstructor
+                this.codeBlocks.ClassConstructor
+                    .SummaryOpen()
+                    .Summary($"Constructor")
+                    .SummaryClose()
                     .AppendCode($"this.{propertyName} = new {componentClassName}(doc);")
                     ;
-                this.fragBase.ClassWriteCode
+                this.codeBlocks.ClassWriteCode
                     .AppendCode($"this.Write{methodSuffix}(this.{propertyName});")
                     ;
-                this.fragBase.ClassReadCode
+                this.codeBlocks.ClassReadCode
                     .AppendCode($"this.Read{methodSuffix}(this.{propertyName});")
                     ;
-                this.fragBase.ClassValidateCode
+                this.codeBlocks.ClassValidateCode
                     .AppendCode($"if (this.{propertyName}.Validate(sb) == false) retVal = false;")
                     ;
             }

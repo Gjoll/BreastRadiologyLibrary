@@ -10,6 +10,10 @@ using BreastRadLib.MGAbnormalityFatNecrosisLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface MGAbnormalityFatNecrosis.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IMGAbnormalityFatNecrosis : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoComponentFragment,

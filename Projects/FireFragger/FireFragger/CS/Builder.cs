@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 
 namespace FireFragger.CS
@@ -35,21 +36,6 @@ namespace FireFragger.CS
             this.ValueSets = new Dictionary<string, VSInfo>(comparer);
             this.SDFragments = new Dictionary<string, SDInfo>(comparer);
         }
-
-        public static String MachineName(String s)
-        {
-            return s.Replace("<", " Less Than ")
-            .Replace(">", " Greater Than ")
-            .Replace("  ", " ")
-            .Replace("  ", " ")
-            .ToMachineName();
-        }
-        public static String CodeName(string code) => $"Code_{MachineName(code)}";
-        public static String InterfaceName(SDInfo fi) => $"I{MachineName(fi.StructDef.Name)}";
-        public static String ClassName(SDInfo fi) => $"{MachineName(fi.StructDef.Name)}";
-        public static String CodeSystemName(CSInfo ci) => $"{MachineName(ci.CodeSystem.Name)}";
-        public static String ValueSetName(VSInfo vi) => $"{MachineName(vi.ValueSet.Name)}";
-        public static String PropertyName(string name) => $"{MachineName(name)}";
 
         /// <summary>
         /// Add all fragment resources in indicated directory.
@@ -125,6 +111,15 @@ namespace FireFragger.CS
             }
         }
 
+        public String FhirClass(String url)
+        {
+            if (Stuff.UrlStartsWith(url, "http://hl7.org/fhir/structuredefinition/"))
+                return url.LastUriPart();
+            if (this.SDFragments.TryGetValue(url, out SDInfo fragInfo) == false)
+                throw new Exception($"{url.LastUriPart()} not found");
+            return fragInfo.BaseDefinitionName;
+        }
+
         void BuildFragment(SDInfo fi)
         {
             const String fcn = "BuildFragment";
@@ -134,7 +129,7 @@ namespace FireFragger.CS
                fcn,
                $"Processing fragment {fi.StructDef.Name}");
 
-            if (String.Compare(ClassName(fi), this.BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
+            if (String.Compare(CSMisc.ClassName(fi), this.BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
                 Debugger.Break();
 
             if (fi.IsFragment() == false)
@@ -142,7 +137,7 @@ namespace FireFragger.CS
                 String url = fi.StructDef.Url.Trim().ToLower();
                 this.resourceFactoryProfileBlock
                     .AppendCode($"case \"{url}\":")
-                    .AppendCode($"    return new {ClassName(fi)}(doc, ({fhirType}) resource);")
+                    .AppendCode($"    return new {CSMisc.ClassName(fi)}(doc, ({fhirType}) resource);")
                     ;
             }
 
@@ -196,23 +191,23 @@ namespace FireFragger.CS
                 if (refFrags.Length == 1)
                 {
                     interfaces
-                        .AppendLine($": {InterfaceName(refFrags[0])}")
+                        .AppendLine($": {CSMisc.InterfaceName(refFrags[0])}")
                     ;
                 }
                 else
                 {
                     interfaces
-                        .AppendLine($": {InterfaceName(refFrags[0])},")
+                        .AppendLine($": {CSMisc.InterfaceName(refFrags[0])},")
                     ;
                     for (Int32 i = 1; i < refFrags.Length - 1; i++)
                     {
                         SDInfo refFrag = refFrags[i];
                         interfaces
-                            .AppendLine($"        {InterfaceName(refFrag)},")
+                            .AppendLine($"        {CSMisc.InterfaceName(refFrag)},")
                         ;
                     }
                     interfaces
-                        .AppendLine($"        {InterfaceName(refFrags[refFrags.Length - 1])}")
+                        .AppendLine($"        {CSMisc.InterfaceName(refFrags[refFrags.Length - 1])}")
                     ;
                 }
             }
@@ -343,8 +338,8 @@ namespace FireFragger.CS
                 {
                     if (this.CodeSystems.TryGetValue(component.System, out CSInfo ci) == false)
                         throw new Exception($"CodeSystem {component.System} not found");
-                    String codeName = Builder.CodeName(concept.Code);
-                    String codingReference = $"{Builder.CodeSystemName(ci)}.{codeName}";
+                    String codeName = CSMisc.CodeName(concept.Code);
+                    String codingReference = $"{CSMisc.CodeSystemName(ci)}.{codeName}";
                     fieldsBlock
                         .AppendCode($"public static TCoding {codeName} = new TCoding({codingReference});")
                         ;
@@ -389,14 +384,19 @@ namespace FireFragger.CS
                 {
                     foreach (String line in component.Definition.Split('\n'))
                     {
-                        String s = line.Trim().Replace("\r", "").Replace("%", "\\%");
+                        String s = line
+                            .Trim()
+                            .Replace("\r", "")
+                            .Replace("%", "\\%")
+                            ;
+                        s = WebUtility.HtmlEncode(s);
                         csFields.AppendLine($"/// {s}");
                     }
                 }
 
                 csFields
                     .AppendLine("/// </summary>")
-                    .AppendCode($"public static Coding {CodeName(component.Code)} = new Coding(System, \"{code}\", \"{display}\");")
+                    .AppendCode($"public static Coding {CSMisc.CodeName(component.Code)} = new Coding(System, \"{code}\", \"{display}\");")
                     ;
             }
         }
@@ -415,23 +415,23 @@ namespace FireFragger.CS
             this.fc.Mark(this.resourceFactoryEditor.SavePath);
             foreach (SDInfo fi in this.SDFragments.Values)
             {
-                this.Save(fi.InterfaceEditor, Path.Combine(this.OutputDir, "Generated", "Interfaces", $"{InterfaceName(fi)}.cs"));
+                this.Save(fi.InterfaceEditor, Path.Combine(this.OutputDir, "Generated", "Interfaces", $"{CSMisc.InterfaceName(fi)}.cs"));
                 if (fi.ClassEditor != null)
                 {
                     if (fi.IsFragment() == false)
-                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.cs"));
+                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{CSMisc.ClassName(fi)}.cs"));
                     else
-                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}.txt"));
+                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{CSMisc.ClassName(fi)}.txt"));
                 }
                 if (fi.SubClassEditor != null)
-                    this.Save(fi.SubClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{ClassName(fi)}Local.cs"));
+                    this.Save(fi.SubClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{CSMisc.ClassName(fi)}Local.cs"));
             }
 
             foreach (CSInfo ci in this.CodeSystems.Values)
-                this.Save(ci.ClassCode, Path.Combine(this.OutputDir, "Generated", "CodeSystems", $"{CodeSystemName(ci)}.cs"));
+                this.Save(ci.ClassCode, Path.Combine(this.OutputDir, "Generated", "CodeSystems", $"{CSMisc.CodeSystemName(ci)}.cs"));
 
             foreach (VSInfo vi in this.ValueSets.Values)
-                this.Save(vi.ClassCode, Path.Combine(this.OutputDir, "Generated", "ValueSets", $"{ValueSetName(vi)}.cs"));
+                this.Save(vi.ClassCode, Path.Combine(this.OutputDir, "Generated", "ValueSets", $"{CSMisc.ValueSetName(vi)}.cs"));
         }
 
         public void Build()

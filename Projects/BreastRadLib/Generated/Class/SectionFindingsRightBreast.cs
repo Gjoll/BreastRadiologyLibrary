@@ -17,39 +17,58 @@ using BreastRadLib.FindingBreastFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class SectionFindingsRightBreast.
+	/// This class is automatically generated.
+	/// </summary>
 	public class SectionFindingsRightBreast : ObservationBase, ISectionFindingsRightBreast
 	{
 		//+ Properties
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // BuildMemberListBase.cs:33
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access HasMembers value MGFinding
+		/// </summary>
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access HasMembers value MRIFinding
+		/// </summary>
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access HasMembers value NMFinding
+		/// </summary>
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access HasMembers value USFinding
+		/// </summary>
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:47
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public SectionFindingsRightBreast() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public SectionFindingsRightBreast(BreastRadiologyDocument doc, Observation resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public SectionFindingsRightBreast(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Observation());
+			this.Init(doc, new Observation());
 		}
 
 		/// <summary>
@@ -62,15 +81,31 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // DefineBase.cs:189
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // BuildMemberListBase.cs:36
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:36
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // DefineBase.cs:194
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:53
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -79,38 +114,44 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
-			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:45
-			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
-			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:45
+			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:62
+			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:62
+			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:62
+			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:62
 			//- ValidateCode
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // BuildMemberListBase.cs:39
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // BuildMemberListBase.cs:39
-			this.WriteHasMember(this.NMFinding);                                                                                                     // BuildMemberListBase.cs:39
-			this.WriteHasMember(this.USFinding);                                                                                                     // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.MGFinding);                                                                                                     // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.NMFinding);                                                                                                     // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.USFinding);                                                                                                     // BuildMemberListBase.cs:56
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // BuildMemberListBase.cs:42
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // BuildMemberListBase.cs:42
-			this.ReadHasMember(this.NMFinding);                                                                                                      // BuildMemberListBase.cs:42
-			this.ReadHasMember(this.USFinding);                                                                                                      // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.MGFinding);                                                                                                      // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.NMFinding);                                                                                                      // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.USFinding);                                                                                                      // BuildMemberListBase.cs:59
 			//- ReadCode
 		}
 
@@ -140,11 +181,11 @@ namespace BreastRadLib
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:153
-			{                                                                                                                                        // DefineBase.cs:154
-			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 155                                // CodeBlockNested.cs:588
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:156
-			}                                                                                                                                        // DefineBase.cs:159
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:158
+			{                                                                                                                                        // DefineBase.cs:159
+			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 160                                // CodeBlockNested.cs:588
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:161
+			}                                                                                                                                        // DefineBase.cs:164
 		//- Methods
 	}
 }

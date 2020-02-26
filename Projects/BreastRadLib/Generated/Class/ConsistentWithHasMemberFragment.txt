@@ -1,28 +1,34 @@
 		//+ Properties
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access HasMembers value ConsistentWith
+		/// </summary>
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // BuildMemberListBase.cs:47
 		//- Properties
 
 			//+ Constructor
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // BuildMemberListBase.cs:36
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // BuildMemberListBase.cs:53
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:45
+			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:62
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // BuildMemberListBase.cs:56
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // BuildMemberListBase.cs:59
 			//- ReadCode
 
 			//+ Methods

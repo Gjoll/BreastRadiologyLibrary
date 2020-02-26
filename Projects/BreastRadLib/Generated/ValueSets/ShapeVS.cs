@@ -28,22 +28,22 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_IrregularInShape = new TCoding(ShapeCS.Code_IrregularInShape);                                                 // Builder.cs:349
-		public static TCoding Code_LobulatedInShape = new TCoding(ShapeCS.Code_LobulatedInShape);                                                 // Builder.cs:349
-		public static TCoding Code_OvalInShape = new TCoding(ShapeCS.Code_OvalInShape);                                                           // Builder.cs:349
-		public static TCoding Code_Reniform = new TCoding(ShapeCS.Code_Reniform);                                                                 // Builder.cs:349
-		public static TCoding Code_RoundInShape = new TCoding(ShapeCS.Code_RoundInShape);                                                         // Builder.cs:349
+		public static TCoding Code_IrregularInShape = new TCoding(ShapeCS.Code_IrregularInShape);                                                 // Builder.cs:344
+		public static TCoding Code_LobulatedInShape = new TCoding(ShapeCS.Code_LobulatedInShape);                                                 // Builder.cs:344
+		public static TCoding Code_OvalInShape = new TCoding(ShapeCS.Code_OvalInShape);                                                           // Builder.cs:344
+		public static TCoding Code_Reniform = new TCoding(ShapeCS.Code_Reniform);                                                                 // Builder.cs:344
+		public static TCoding Code_RoundInShape = new TCoding(ShapeCS.Code_RoundInShape);                                                         // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_IrregularInShape;                                                                                                   // Builder.cs:352
-		    yield return Code_LobulatedInShape;                                                                                                   // Builder.cs:352
-		    yield return Code_OvalInShape;                                                                                                        // Builder.cs:352
-		    yield return Code_Reniform;                                                                                                           // Builder.cs:352
-		    yield return Code_RoundInShape;                                                                                                       // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_IrregularInShape;                                                                                                   // Builder.cs:347
+		    yield return Code_LobulatedInShape;                                                                                                   // Builder.cs:347
+		    yield return Code_OvalInShape;                                                                                                        // Builder.cs:347
+		    yield return Code_Reniform;                                                                                                           // Builder.cs:347
+		    yield return Code_RoundInShape;                                                                                                       // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

@@ -10,6 +10,10 @@ using BreastRadLib.HeaderFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface HeaderFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IHeaderFragment 
 	{
 		//+ Properties

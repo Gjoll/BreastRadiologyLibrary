@@ -18,35 +18,42 @@ using BreastRadLib.BreastRadObservationNoDeviceFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class MGBreastDensity.
+	/// This class is automatically generated.
+	/// </summary>
 	public class MGBreastDensity : ObservationBase, IMGBreastDensity
 	{
 		//+ Properties
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public MGBreastDensity() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public MGBreastDensity(BreastRadiologyDocument doc, Observation resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public MGBreastDensity(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Observation());
+			this.Init(doc, new Observation());
 		}
 
 		/// <summary>
@@ -59,11 +66,15 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // DefineBase.cs:189
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // DefineBase.cs:194
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -76,17 +87,23 @@ namespace BreastRadLib
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
@@ -122,11 +139,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set Observation.value[x] to one of the predefined items
 		/// </summary>
-		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // DefineBase.cs:153
-		{                                                                                                                                         // DefineBase.cs:154
-		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 155                                 // CodeBlockNested.cs:588
-		    this.Resource.Value = (CodeableConcept) code;                                                                                         // DefineBase.cs:156
-		}                                                                                                                                         // DefineBase.cs:159
+		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // DefineBase.cs:158
+		{                                                                                                                                         // DefineBase.cs:159
+		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 160                                 // CodeBlockNested.cs:588
+		    this.Resource.Value = (CodeableConcept) code;                                                                                         // DefineBase.cs:161
+		}                                                                                                                                         // DefineBase.cs:164
 		//- Methods
 	}
 }

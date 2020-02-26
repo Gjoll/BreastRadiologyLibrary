@@ -14,35 +14,42 @@ using BreastRadLib.CategoryFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class BreastRadReport.
+	/// This class is automatically generated.
+	/// </summary>
 	public class BreastRadReport : DiagnosticReportBase, IBreastRadReport
 	{
 		//+ Properties
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public BreastRadReport() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public BreastRadReport(BreastRadiologyDocument doc, DiagnosticReport resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public BreastRadReport(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new DiagnosticReport());
+			this.Init(doc, new DiagnosticReport());
 		}
 
 		/// <summary>
@@ -55,11 +62,15 @@ namespace BreastRadLib
 				resource = new DiagnosticReport();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:189
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:194
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -72,6 +83,9 @@ namespace BreastRadLib
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
@@ -81,6 +95,9 @@ namespace BreastRadLib
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
@@ -112,11 +129,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set DiagnosticReport.conclusionCode to one of the predefined items
 		/// </summary>
-		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:153
-		{                                                                                                                                         // DefineBase.cs:154
-		    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 155                               // CodeBlockNested.cs:594
-		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:157
-		}                                                                                                                                         // DefineBase.cs:159
+		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:158
+		{                                                                                                                                         // DefineBase.cs:159
+		    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 160                               // CodeBlockNested.cs:594
+		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:162
+		}                                                                                                                                         // DefineBase.cs:164
 		//- Methods
 	}
 }

@@ -41,7 +41,10 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
                 return;
-            BuildMemberListSection bml = new BuildMemberListSection(this.csBuilder, this.fragBase);
+            BuildMemberListSection bml = new BuildMemberListSection(this.csBuilder,
+                this.fragBase.CodeBlocks,
+                this.fragBase.SnapNodes,
+                this.fragBase.DiffNodes);
             bml.Define();
         }
     }

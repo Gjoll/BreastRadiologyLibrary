@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class BiRadsAssessmentCategoriesCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BiRadsAssessmentCategoriesCS";                                  // Builder.cs:373
-		                                                                                                                                          // Builder.cs:385
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BiRadsAssessmentCategoriesCS";                                  // Builder.cs:368
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Need additional Imaging Evaluation and/or prior Mammograms for comparison.
 		/// Recall for additional imaging and/or comparison with prior examination(s)
@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category0 = new Coding(System, "Category0", "Category 0 (Incomplete)");                                         // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// This is a normal assessment.
 		/// Benign refers to a condition, tumor, or growth that is not cancerous.
@@ -32,9 +32,9 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category2 = new Coding(System, "Category2", "Category 2 (Benign)");                                             // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
-		/// A finding assessed using this category should have a <= 2% likelihood of malignancy,
+		/// A finding assessed using this category should have a &lt;= 2% likelihood of malignancy,
 		/// but greater than the essentially 0% likelihood of malignancy of a characteristically
 		/// benign finding.
 		/// A probably benign finding is not expected to change over the suggested period of
@@ -46,7 +46,7 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category3 = new Coding(System, "Category3", "Category 3 (Probably Benign)");                                    // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// This category is reserved for findings that do not have the classic appearance of
 		/// malignancy but are sufficiently suspicious to justify a recommendation for biopsy.
@@ -58,42 +58,42 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category4 = new Coding(System, "Category4", "Category 4 (Suspicious)");                                         // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Low suspicion for malignancy.
 		/// A malignant finding is not suspected.
 		/// A biopsy or other test will likely still be performed in order to determine.
 		/// Tissue diagnosis may be recommended.
 		/// Six month follow-up and/or surveillance mammography is recommended.
-		/// Likelihood of malignancy is > 2% to <= 10% likelihood of malignancy.
+		/// Likelihood of malignancy is &gt; 2% to &lt;= 10% likelihood of malignancy.
 		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category4A = new Coding(System, "Category4A", "Category 4A (Low suspicion)");                                   // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Category 4B: Moderate suspicion for malignancy.
 		/// It warrants radiologic and pathologic correlation after tissue diagnosis.
-		/// Likelihood of malignancy is > 10% to <= 50% likelihood of
+		/// Likelihood of malignancy is &gt; 10% to &lt;= 50% likelihood of
 		/// malignancy.
 		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category4B = new Coding(System, "Category4B", "Category 4B (Moderate suspicion)");                              // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Category 4C: High suspicion for
 		/// malignancy.
 		/// Includes findings that have a high suspicion of malignancy but that are not highly
 		/// suggestive of malignancy (category 5).
 		/// Tissue Diagnosis is highly recommended.
-		/// Range for likelihood of malignancy is > 50% to < 95% likelihood of malignancy.
+		/// Range for likelihood of malignancy is &gt; 50% to &lt; 95% likelihood of malignancy.
 		/// It is more likely malignant versus benign.
 		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition]
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category4C = new Coding(System, "Category4C", "Category 4C (High suspicion)");                                  // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Highly Suggestive of Malignancy.
 		/// Almost certainly predictive of breast cancer with a
@@ -103,7 +103,7 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Category5 = new Coding(System, "Category5", "Category 5 (Highly Suggestive of Malignancy)");                    // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Known Biopsy-Proven Malignancy.
 		/// Surgical excision when clinically

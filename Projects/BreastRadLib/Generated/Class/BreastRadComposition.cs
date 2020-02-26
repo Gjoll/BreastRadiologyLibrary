@@ -13,41 +13,66 @@ using BreastRadLib.HeaderFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class BreastRadComposition.
+	/// This class is automatically generated.
+	/// </summary>
 	public class BreastRadComposition : CompositionBase, IBreastRadComposition
 	{
 		//+ Properties
-		public Report_Accessor Report { get ; protected set; }                                                                                    // BuildMemberListBase.cs:33
-		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // BuildMemberListBase.cs:33
-		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // BuildMemberListBase.cs:33
-		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // BuildMemberListBase.cs:33
-		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // BuildMemberListBase.cs:33
-		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access Section value Report
+		/// </summary>
+		public Report_Accessor Report { get ; protected set; }                                                                                    // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Section value Impressions
+		/// </summary>
+		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Section value FindingsRightBreast
+		/// </summary>
+		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Section value FindingsLeftBreast
+		/// </summary>
+		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Section value RelatedResources
+		/// </summary>
+		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Section value Recommendations
+		/// </summary>
+		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // BuildMemberListBase.cs:47
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public BreastRadComposition() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public BreastRadComposition(BreastRadiologyDocument doc, Composition resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public BreastRadComposition(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Composition());
+			this.Init(doc, new Composition());
 		}
 
 		/// <summary>
@@ -60,16 +85,38 @@ namespace BreastRadLib
 				resource = new Composition();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:189
-			this.Report = new Report_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:36
-			this.Impressions = new Impressions_Accessor(doc);                                                                                        // BuildMemberListBase.cs:36
-			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // BuildMemberListBase.cs:36
-			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // BuildMemberListBase.cs:36
-			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // BuildMemberListBase.cs:36
-			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // BuildMemberListBase.cs:36
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:194
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.Report = new Report_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.Impressions = new Impressions_Accessor(doc);                                                                                        // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // BuildMemberListBase.cs:53
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -78,44 +125,50 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:45
-			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:45
-			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildMemberListBase.cs:45
-			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:45
-			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildMemberListBase.cs:45
-			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:45
+			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:62
+			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:62
+			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildMemberListBase.cs:62
+			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:62
+			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildMemberListBase.cs:62
+			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:62
 			//- ValidateCode
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			ClearSection();                                                                                                                          // BuildMemberListSection.cs:181
-			this.WriteSection(this.Report);                                                                                                          // BuildMemberListBase.cs:39
-			this.WriteSection(this.Impressions);                                                                                                     // BuildMemberListBase.cs:39
-			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildMemberListBase.cs:39
-			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildMemberListBase.cs:39
-			this.WriteSection(this.RelatedResources);                                                                                                // BuildMemberListBase.cs:39
-			this.WriteSection(this.Recommendations);                                                                                                 // BuildMemberListBase.cs:39
+			ClearSection();                                                                                                                          // BuildMemberListSection.cs:188
+			this.WriteSection(this.Report);                                                                                                          // BuildMemberListBase.cs:56
+			this.WriteSection(this.Impressions);                                                                                                     // BuildMemberListBase.cs:56
+			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildMemberListBase.cs:56
+			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildMemberListBase.cs:56
+			this.WriteSection(this.RelatedResources);                                                                                                // BuildMemberListBase.cs:56
+			this.WriteSection(this.Recommendations);                                                                                                 // BuildMemberListBase.cs:56
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadSection(this.Report);                                                                                                           // BuildMemberListBase.cs:42
-			this.ReadSection(this.Impressions);                                                                                                      // BuildMemberListBase.cs:42
-			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildMemberListBase.cs:42
-			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildMemberListBase.cs:42
-			this.ReadSection(this.RelatedResources);                                                                                                 // BuildMemberListBase.cs:42
-			this.ReadSection(this.Recommendations);                                                                                                  // BuildMemberListBase.cs:42
+			this.ReadSection(this.Report);                                                                                                           // BuildMemberListBase.cs:59
+			this.ReadSection(this.Impressions);                                                                                                      // BuildMemberListBase.cs:59
+			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildMemberListBase.cs:59
+			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildMemberListBase.cs:59
+			this.ReadSection(this.RelatedResources);                                                                                                 // BuildMemberListBase.cs:59
+			this.ReadSection(this.Recommendations);                                                                                                  // BuildMemberListBase.cs:59
 			//- ReadCode
 		}
 

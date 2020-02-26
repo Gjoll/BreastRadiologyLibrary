@@ -10,10 +10,17 @@ using BreastRadLib.PreviouslyDemonstratedByFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface PreviouslyDemonstratedByFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IPreviouslyDemonstratedByFragment 
 	{
 		//+ Properties
-		PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; }                                                                      // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value PreviouslyDemonstratedBy
+		/// </summary>
+		PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; }                                                                      // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

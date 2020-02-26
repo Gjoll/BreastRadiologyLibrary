@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MGFinding
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MGFinding
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BreastRadLib.MGFinding">
+  
+  
+  <h1 id="BreastRadLib_MGFinding" data-uid="BreastRadLib.MGFinding" class="text-break">Class MGFinding
+  </h1>
+  <div class="markdown level0 summary"><p>Class MGFinding.
+This class is automatically generated.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="BreastRadLib.BaseBase.html">BaseBase</a></div>
+    <div class="level2"><a class="xref" href="BreastRadLib.ResourceBase.html">ResourceBase</a></div>
+    <div class="level3"><a class="xref" href="BreastRadLib.ObservationBase.html">ObservationBase</a></div>
+    <div class="level4"><span class="xref">MGFinding</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="BreastRadLib.IObservationBase.html">IObservationBase</a></div>
+    <div><a class="xref" href="BreastRadLib.IResourceBase.html">IResourceBase</a></div>
+    <div><a class="xref" href="BreastRadLib.IBaseBase.html">IBaseBase</a></div>
+    <div><a class="xref" href="BreastRadLib.IMGFinding.html">IMGFinding</a></div>
+    <div><a class="xref" href="BreastRadLib.IObservationSectionFragment.html">IObservationSectionFragment</a></div>
+    <div><a class="xref" href="BreastRadLib.IBreastRadObservationNoComponentFragment.html">IBreastRadObservationNoComponentFragment</a></div>
+    <div><a class="xref" href="BreastRadLib.IBreastRadObservationNoValueFragment.html">IBreastRadObservationNoValueFragment</a></div>
+    <div><a class="xref" href="BreastRadLib.IBreastRadObservationFragment.html">IBreastRadObservationFragment</a></div>
+    <div><a class="xref" href="BreastRadLib.IHeaderFragment.html">IHeaderFragment</a></div>
+    <div><a class="xref" href="BreastRadLib.ICategoryFragment.html">ICategoryFragment</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_Resource">ObservationBase.Resource</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_ClearHasMember">ObservationBase.ClearHasMember()</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_WriteHasMember__1_BreastRadLib_MemberListReferenceBase___0__">ObservationBase.WriteHasMember&lt;BaseType&gt;(MemberListReferenceBase&lt;BaseType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_ReadHasMember__1_BreastRadLib_MemberListReferenceBase___0__">ObservationBase.ReadHasMember&lt;BaseType&gt;(MemberListReferenceBase&lt;BaseType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_ClearComponents">ObservationBase.ClearComponents()</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_WriteComponent__1_BreastRadLib_MemberListCodedValueBase___0__">ObservationBase.WriteComponent&lt;BaseType&gt;(MemberListCodedValueBase&lt;BaseType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_ReadComponent__1_BreastRadLib_MemberListCodedValueBase___0__">ObservationBase.ReadComponent&lt;BaseType&gt;(MemberListCodedValueBase&lt;BaseType&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ResourceBase.html#BreastRadLib_ResourceBase_profileUrl">ResourceBase.profileUrl</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ResourceBase.html#BreastRadLib_ResourceBase_Meta">ResourceBase.Meta</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ResourceBase.html#BreastRadLib_ResourceBase_Id">ResourceBase.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.ResourceBase.html#BreastRadLib_ResourceBase_SetProfileUrl_System_String_">ResourceBase.SetProfileUrl(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.BaseBase.html#BreastRadLib_BaseBase_BaseResource">BaseBase.BaseResource</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.BaseBase.html#BreastRadLib_BaseBase_resource">BaseBase.resource</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.BaseBase.html#BreastRadLib_BaseBase_doc">BaseBase.doc</a>
+    </div>
+    <div>
+      <a class="xref" href="BreastRadLib.BaseBase.html#BreastRadLib_BaseBase_ReferencedResource__1_Hl7_Fhir_Model_ResourceReference_">BaseBase.ReferencedResource&lt;T&gt;(ResourceReference)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BreastRadLib.html">BreastRadLib</a></h6>
+  <h6><strong>Assembly</strong>: BreastRadLib.dll</h6>
+  <h5 id="BreastRadLib_MGFinding_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MGFinding : ObservationBase, IObservationBase, IResourceBase, IBaseBase, IMGFinding, IObservationSectionFragment, IBreastRadObservationNoComponentFragment, IBreastRadObservationNoValueFragment, IBreastRadObservationFragment, IHeaderFragment, ICategoryFragment</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding__ctor.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L86">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding__ctor_" data-uid="BreastRadLib.MGFinding.#ctor*"></a>
+  <h4 id="BreastRadLib_MGFinding__ctor" data-uid="BreastRadLib.MGFinding.#ctor">MGFinding()</h4>
+  <div class="markdown level1 summary"><p>Constructor.
+Caller must call Init();</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGFinding()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding__ctor_BreastRadLib_BreastRadiologyDocument_.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.%23ctor(BreastRadLib.BreastRadiologyDocument)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L106">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding__ctor_" data-uid="BreastRadLib.MGFinding.#ctor*"></a>
+  <h4 id="BreastRadLib_MGFinding__ctor_BreastRadLib_BreastRadiologyDocument_" data-uid="BreastRadLib.MGFinding.#ctor(BreastRadLib.BreastRadiologyDocument)">MGFinding(BreastRadiologyDocument)</h4>
+  <div class="markdown level1 summary"><p>Constructor.
+User must not call Init().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGFinding(BreastRadiologyDocument doc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.BreastRadiologyDocument.html">BreastRadiologyDocument</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>base document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding__ctor_BreastRadLib_BreastRadiologyDocument_Hl7_Fhir_Model_Observation_.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.%23ctor(BreastRadLib.BreastRadiologyDocument%2CHl7.Fhir.Model.Observation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L96">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding__ctor_" data-uid="BreastRadLib.MGFinding.#ctor*"></a>
+  <h4 id="BreastRadLib_MGFinding__ctor_BreastRadLib_BreastRadiologyDocument_Hl7_Fhir_Model_Observation_" data-uid="BreastRadLib.MGFinding.#ctor(BreastRadLib.BreastRadiologyDocument,Hl7.Fhir.Model.Observation)">MGFinding(BreastRadiologyDocument, Observation)</h4>
+  <div class="markdown level1 summary"><p>Constructor.
+User must not call Init().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGFinding(BreastRadiologyDocument doc, Observation resource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.BreastRadiologyDocument.html">BreastRadiologyDocument</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>base document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Hl7.Fhir.Model.Observation</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>Fhir observation resource</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_AbnormalityCyst.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.AbnormalityCyst%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L31">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_AbnormalityCyst_" data-uid="BreastRadLib.MGFinding.AbnormalityCyst*"></a>
+  <h4 id="BreastRadLib_MGFinding_AbnormalityCyst" data-uid="BreastRadLib.MGFinding.AbnormalityCyst">AbnormalityCyst</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value AbnormalityCyst</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbnormalityCyst_Accessor AbnormalityCyst { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.AbnormalityCyst_Accessor.html">AbnormalityCyst_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_AbnormalityDuct.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.AbnormalityDuct%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L35">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_AbnormalityDuct_" data-uid="BreastRadLib.MGFinding.AbnormalityDuct*"></a>
+  <h4 id="BreastRadLib_MGFinding_AbnormalityDuct" data-uid="BreastRadLib.MGFinding.AbnormalityDuct">AbnormalityDuct</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value AbnormalityDuct</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbnormalityDuct_Accessor AbnormalityDuct { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.AbnormalityDuct_Accessor.html">AbnormalityDuct_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_AbnormalityFibroadenoma.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.AbnormalityFibroadenoma%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L55">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_AbnormalityFibroadenoma_" data-uid="BreastRadLib.MGFinding.AbnormalityFibroadenoma*"></a>
+  <h4 id="BreastRadLib_MGFinding_AbnormalityFibroadenoma" data-uid="BreastRadLib.MGFinding.AbnormalityFibroadenoma">AbnormalityFibroadenoma</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value AbnormalityFibroadenoma</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbnormalityFibroadenoma_Accessor AbnormalityFibroadenoma { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.AbnormalityFibroadenoma_Accessor.html">AbnormalityFibroadenoma_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_AbnormalityForeignObject.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.AbnormalityForeignObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L39">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_AbnormalityForeignObject_" data-uid="BreastRadLib.MGFinding.AbnormalityForeignObject*"></a>
+  <h4 id="BreastRadLib_MGFinding_AbnormalityForeignObject" data-uid="BreastRadLib.MGFinding.AbnormalityForeignObject">AbnormalityForeignObject</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value AbnormalityForeignObject</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbnormalityForeignObject_Accessor AbnormalityForeignObject { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.AbnormalityForeignObject_Accessor.html">AbnormalityForeignObject_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_AbnormalityLymphNode.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.AbnormalityLymphNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L43">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_AbnormalityLymphNode_" data-uid="BreastRadLib.MGFinding.AbnormalityLymphNode*"></a>
+  <h4 id="BreastRadLib_MGFinding_AbnormalityLymphNode" data-uid="BreastRadLib.MGFinding.AbnormalityLymphNode">AbnormalityLymphNode</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value AbnormalityLymphNode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbnormalityLymphNode_Accessor AbnormalityLymphNode { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.AbnormalityLymphNode_Accessor.html">AbnormalityLymphNode_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_AbnormalityMass.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.AbnormalityMass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L47">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_AbnormalityMass_" data-uid="BreastRadLib.MGFinding.AbnormalityMass*"></a>
+  <h4 id="BreastRadLib_MGFinding_AbnormalityMass" data-uid="BreastRadLib.MGFinding.AbnormalityMass">AbnormalityMass</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value AbnormalityMass</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbnormalityMass_Accessor AbnormalityMass { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.AbnormalityMass_Accessor.html">AbnormalityMass_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_AssociatedFeatures.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.AssociatedFeatures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L51">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_AssociatedFeatures_" data-uid="BreastRadLib.MGFinding.AssociatedFeatures*"></a>
+  <h4 id="BreastRadLib_MGFinding_AssociatedFeatures" data-uid="BreastRadLib.MGFinding.AssociatedFeatures">AssociatedFeatures</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value AssociatedFeatures</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssociatedFeatures_Accessor AssociatedFeatures { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.AssociatedFeatures_Accessor.html">AssociatedFeatures_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_MGAbnormalityArchitecturalDistortion.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.MGAbnormalityArchitecturalDistortion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L59">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_MGAbnormalityArchitecturalDistortion_" data-uid="BreastRadLib.MGFinding.MGAbnormalityArchitecturalDistortion*"></a>
+  <h4 id="BreastRadLib_MGFinding_MGAbnormalityArchitecturalDistortion" data-uid="BreastRadLib.MGFinding.MGAbnormalityArchitecturalDistortion">MGAbnormalityArchitecturalDistortion</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value MGAbnormalityArchitecturalDistortion</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.MGAbnormalityArchitecturalDistortion_Accessor.html">MGAbnormalityArchitecturalDistortion_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_MGAbnormalityAsymmetry.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.MGAbnormalityAsymmetry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L63">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_MGAbnormalityAsymmetry_" data-uid="BreastRadLib.MGFinding.MGAbnormalityAsymmetry*"></a>
+  <h4 id="BreastRadLib_MGFinding_MGAbnormalityAsymmetry" data-uid="BreastRadLib.MGFinding.MGAbnormalityAsymmetry">MGAbnormalityAsymmetry</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value MGAbnormalityAsymmetry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGAbnormalityAsymmetry_Accessor MGAbnormalityAsymmetry { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.MGAbnormalityAsymmetry_Accessor.html">MGAbnormalityAsymmetry_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_MGAbnormalityCalcification.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.MGAbnormalityCalcification%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L67">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_MGAbnormalityCalcification_" data-uid="BreastRadLib.MGFinding.MGAbnormalityCalcification*"></a>
+  <h4 id="BreastRadLib_MGFinding_MGAbnormalityCalcification" data-uid="BreastRadLib.MGFinding.MGAbnormalityCalcification">MGAbnormalityCalcification</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value MGAbnormalityCalcification</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.MGAbnormalityCalcification_Accessor.html">MGAbnormalityCalcification_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_MGAbnormalityDensity.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.MGAbnormalityDensity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L71">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_MGAbnormalityDensity_" data-uid="BreastRadLib.MGFinding.MGAbnormalityDensity*"></a>
+  <h4 id="BreastRadLib_MGFinding_MGAbnormalityDensity" data-uid="BreastRadLib.MGFinding.MGAbnormalityDensity">MGAbnormalityDensity</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value MGAbnormalityDensity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGAbnormalityDensity_Accessor MGAbnormalityDensity { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.MGAbnormalityDensity_Accessor.html">MGAbnormalityDensity_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_MGAbnormalityFatNecrosis.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.MGAbnormalityFatNecrosis%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L75">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_MGAbnormalityFatNecrosis_" data-uid="BreastRadLib.MGFinding.MGAbnormalityFatNecrosis*"></a>
+  <h4 id="BreastRadLib_MGFinding_MGAbnormalityFatNecrosis" data-uid="BreastRadLib.MGFinding.MGAbnormalityFatNecrosis">MGAbnormalityFatNecrosis</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value MGAbnormalityFatNecrosis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGAbnormalityFatNecrosis_Accessor MGAbnormalityFatNecrosis { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.MGAbnormalityFatNecrosis_Accessor.html">MGAbnormalityFatNecrosis_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_MGBreastDensity.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.MGBreastDensity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L79">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_MGBreastDensity_" data-uid="BreastRadLib.MGFinding.MGBreastDensity*"></a>
+  <h4 id="BreastRadLib_MGFinding_MGBreastDensity" data-uid="BreastRadLib.MGFinding.MGBreastDensity">MGBreastDensity</h4>
+  <div class="markdown level1 summary"><p>Access HasMembers value MGBreastDensity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MGBreastDensity_Accessor MGBreastDensity { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.MGFindingLocal.MGBreastDensity_Accessor.html">MGBreastDensity_Accessor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_DefaultValue_1.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.DefaultValue_1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L264">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_DefaultValue_1_" data-uid="BreastRadLib.MGFinding.DefaultValue_1*"></a>
+  <h4 id="BreastRadLib_MGFinding_DefaultValue_1" data-uid="BreastRadLib.MGFinding.DefaultValue_1">DefaultValue_1()</h4>
+  <div class="markdown level1 summary"><p>Method to create default value for element
+Observation.code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CodeableConcept DefaultValue_1()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Hl7.Fhir.Model.CodeableConcept</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_Init_BreastRadLib_BreastRadiologyDocument_Hl7_Fhir_Model_Base_.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.Init(BreastRadLib.BreastRadiologyDocument%2CHl7.Fhir.Model.Base)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L114">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_Init_" data-uid="BreastRadLib.MGFinding.Init*"></a>
+  <h4 id="BreastRadLib_MGFinding_Init_BreastRadLib_BreastRadiologyDocument_Hl7_Fhir_Model_Base_" data-uid="BreastRadLib.MGFinding.Init(BreastRadLib.BreastRadiologyDocument,Hl7.Fhir.Model.Base)">Init(BreastRadiologyDocument, Base)</h4>
+  <div class="markdown level1 summary"><p>Init object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Init(BreastRadiologyDocument doc, Base baseResource = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BreastRadLib.BreastRadiologyDocument.html">BreastRadiologyDocument</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Hl7.Fhir.Model.Base</span></td>
+        <td><span class="parametername">baseResource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BreastRadLib.BaseBase.html#BreastRadLib_BaseBase_Init_BreastRadLib_BreastRadiologyDocument_Hl7_Fhir_Model_Base_">BaseBase.Init(BreastRadiologyDocument, Base)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_Read.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.Read%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L237">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_Read_" data-uid="BreastRadLib.MGFinding.Read*"></a>
+  <h4 id="BreastRadLib_MGFinding_Read" data-uid="BreastRadLib.MGFinding.Read">Read()</h4>
+  <div class="markdown level1 summary"><p>Read from fhir resource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BreastRadLib.BaseBase.html#BreastRadLib_BaseBase_Read">BaseBase.Read()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_Validate_System_Text_StringBuilder_.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.Validate(System.Text.StringBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L182">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_Validate_" data-uid="BreastRadLib.MGFinding.Validate*"></a>
+  <h4 id="BreastRadLib_MGFinding_Validate_System_Text_StringBuilder_" data-uid="BreastRadLib.MGFinding.Validate(System.Text.StringBuilder)">Validate(StringBuilder)</h4>
+  <div class="markdown level1 summary"><p>Validate object. Will return false if an error is detected. sb will contains text of error found.
+User must not call Init().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Validate(StringBuilder sb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Text.StringBuilder</span></td>
+        <td><span class="parametername">sb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BreastRadLib.BaseBase.html#BreastRadLib_BaseBase_Validate_System_Text_StringBuilder_">BaseBase.Validate(StringBuilder)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding_Write.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding.Write%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L210">View Source</a>
+  </span>
+  <a id="BreastRadLib_MGFinding_Write_" data-uid="BreastRadLib.MGFinding.Write*"></a>
+  <h4 id="BreastRadLib_MGFinding_Write" data-uid="BreastRadLib.MGFinding.Write">Write()</h4>
+  <div class="markdown level1 summary"><p>Write to fhir resource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="BreastRadLib.ObservationBase.html#BreastRadLib_ObservationBase_Write">ObservationBase.Write()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="BreastRadLib.IObservationBase.html">IObservationBase</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IResourceBase.html">IResourceBase</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IBaseBase.html">IBaseBase</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IMGFinding.html">IMGFinding</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IObservationSectionFragment.html">IObservationSectionFragment</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IBreastRadObservationNoComponentFragment.html">IBreastRadObservationNoComponentFragment</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IBreastRadObservationNoValueFragment.html">IBreastRadObservationNoValueFragment</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IBreastRadObservationFragment.html">IBreastRadObservationFragment</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.IHeaderFragment.html">IHeaderFragment</a>
+  </div>
+  <div>
+      <a class="xref" href="BreastRadLib.ICategoryFragment.html">ICategoryFragment</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/new/Accessors/apiSpec/new?filename=BreastRadLib_MGFinding.md&amp;value=---%0Auid%3A%20BreastRadLib.MGFinding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Gjoll/BreastRadiologyLibrary/blob/Accessors/Projects/BreastRadLib/Generated/Class/MGFinding.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

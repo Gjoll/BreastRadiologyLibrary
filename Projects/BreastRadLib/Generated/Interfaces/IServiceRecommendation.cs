@@ -10,6 +10,10 @@ using BreastRadLib.ServiceRecommendationLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ServiceRecommendation.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IServiceRecommendation : IHeaderFragment
 
 	{

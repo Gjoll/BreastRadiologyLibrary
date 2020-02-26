@@ -28,16 +28,16 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Fibroadenoma = new TCoding(FibroadenomaCodeSystemCS.Code_Fibroadenoma);                                        // Builder.cs:349
-		public static TCoding Code_FibroadenomaDegeneration = new TCoding(FibroadenomaCodeSystemCS.Code_FibroadenomaDegeneration);                // Builder.cs:349
+		public static TCoding Code_Fibroadenoma = new TCoding(FibroadenomaCodeSystemCS.Code_Fibroadenoma);                                        // Builder.cs:344
+		public static TCoding Code_FibroadenomaDegeneration = new TCoding(FibroadenomaCodeSystemCS.Code_FibroadenomaDegeneration);                // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_Fibroadenoma;                                                                                                       // Builder.cs:352
-		    yield return Code_FibroadenomaDegeneration;                                                                                           // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_Fibroadenoma;                                                                                                       // Builder.cs:347
+		    yield return Code_FibroadenomaDegeneration;                                                                                           // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

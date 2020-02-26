@@ -10,6 +10,10 @@ using BreastRadLib.TumorSatelliteLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface TumorSatellite.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface ITumorSatellite : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoComponentFragment

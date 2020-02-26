@@ -1,28 +1,34 @@
 		//+ Properties
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access HasMembers value AssociatedFeatures
+		/// </summary>
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:47
 		//- Properties
 
 			//+ Constructor
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:36
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:53
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:45
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:62
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:56
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:59
 			//- ReadCode
 
 			//+ Methods

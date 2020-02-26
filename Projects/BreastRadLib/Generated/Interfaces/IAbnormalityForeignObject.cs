@@ -10,6 +10,10 @@ using BreastRadLib.AbnormalityForeignObjectLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface AbnormalityForeignObject.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IAbnormalityForeignObject : IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoValueFragment,
         IBreastRadObservationNoComponentFragment,
@@ -23,7 +27,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                                              // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value AbnormalityForeignObjectType
+		/// </summary>
+		AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; }                                                              // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

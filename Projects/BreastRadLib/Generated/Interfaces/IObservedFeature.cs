@@ -10,6 +10,10 @@ using BreastRadLib.ObservedFeatureLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ObservedFeature.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IObservedFeature : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoValueFragment,
@@ -19,7 +23,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		FeatureType_Accessor FeatureType { get ; }                                                                                                // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value FeatureType
+		/// </summary>
+		FeatureType_Accessor FeatureType { get ; }                                                                                                // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

@@ -10,10 +10,17 @@ using BreastRadLib.BiRadFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface BiRadFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IBiRadFragment 
 	{
 		//+ Properties
-		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value BiRadsAssessmentCategory
+		/// </summary>
+		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

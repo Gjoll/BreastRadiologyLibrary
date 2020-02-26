@@ -10,6 +10,10 @@ using BreastRadLib.CommonComponentsFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface CommonComponentsFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface ICommonComponentsFragment : IBreastBodyLocationRequiredFragment,
         IObservedChangesFragment,
         IBiRadFragment

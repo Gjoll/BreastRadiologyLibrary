@@ -12,134 +12,163 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 {
 	//+ LocalClassDefs
 	/// <summary>
-	/// Accessor class for 'quadrant'
-	/// [Fhir Element 'Extension.extension:quadrant]'
+	/// Class that implements the 'BreastBodyLocation' extension class.
 	/// </summary>
-	public class Quadrant_Accessor : MemberListExtensionValueBase                                                                              // BuildMemberListExtensionValue.cs:95
-	{                                                                                                                                          // BuildMemberListExtensionValue.cs:96
-	    // Properties                                                                                                                          // BuildMemberListExtensionValue.cs:97
+	public class BreastBodyLocationExtension : MemberListExtensionValueBase                                                                    // BuildMemberListExtensionValue.cs:307
+	{                                                                                                                                          // BuildMemberListExtensionValue.cs:308
+	    QuadrantExtensionItem Quadrant;                                                                                                        // BuildMemberListExtensionValue.cs:383
+	    RegionExtensionItem Region;                                                                                                            // BuildMemberListExtensionValue.cs:383
+	    ClockDirectionExtensionItem ClockDirection;                                                                                            // BuildMemberListExtensionValue.cs:383
+	    DepthExtensionItem Depth;                                                                                                              // BuildMemberListExtensionValue.cs:383
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:310
 	    /// <summary>
-	    /// get {propertyName} value
+	    /// Constructor
 	    /// </summary>
-	    public CodeableConcept Get() => (CodeableConcept) base.FirstOrDefault();                                                               // BuildMemberListExtensionValue.cs:182
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:99
-	    // Methods                                                                                                                             // BuildMemberListExtensionValue.cs:100
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:119
+	    public BreastBodyLocationExtension() : base("BreastBodyLocation")                                                                      // BuildMemberListExtensionValue.cs:314
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:315
+	        this.Quadrant = new QuadrantExtensionItem();                                                                                       // BuildMemberListExtensionValue.cs:386
+	        this.Region = new RegionExtensionItem();                                                                                           // BuildMemberListExtensionValue.cs:386
+	        this.ClockDirection = new ClockDirectionExtensionItem();                                                                           // BuildMemberListExtensionValue.cs:386
+	        this.Depth = new DepthExtensionItem();                                                                                             // BuildMemberListExtensionValue.cs:386
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:317
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:318
+	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:319
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:320
+	        /// <summary>
+	        /// Read extension values
+	        /// </summary>
+	        this.Read(this.Quadrant);                                                                                                          // BuildMemberListExtensionValue.cs:389
+	        this.Read(this.Region);                                                                                                            // BuildMemberListExtensionValue.cs:389
+	        this.Read(this.ClockDirection);                                                                                                    // BuildMemberListExtensionValue.cs:389
+	        this.Read(this.Depth);                                                                                                             // BuildMemberListExtensionValue.cs:389
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:325
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:326
 	    /// <summary>
-	    /// Set Quadrant value
+	    /// Write extension values
 	    /// </summary>
-	    public void Set(BreastLocationQuadrantVS.TCoding value) => this.SetFirst((CodeableConcept)value);                                      // BuildMemberListExtensionValue.cs:123
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:102
-	    /// <summary>
-	    /// Accessor class constructor
-	    /// </summary>
-	    public Quadrant_Accessor(BreastRadiologyDocument doc) : base("Quadrant_Accessor")                                                      // BuildMemberListExtensionValue.cs:106
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:107
-	        this.Init(doc, 0, 1, "quadrant");                                                                                                  // BuildMemberListExtensionValue.cs:108
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:110
-	}                                                                                                                                          // BuildMemberListExtensionValue.cs:111
+	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:330
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:331
+	        this.Write(this.Quadrant);                                                                                                         // BuildMemberListExtensionValue.cs:392
+	        this.Write(this.Region);                                                                                                           // BuildMemberListExtensionValue.cs:392
+	        this.Write(this.ClockDirection);                                                                                                   // BuildMemberListExtensionValue.cs:392
+	        this.Write(this.Depth);                                                                                                            // BuildMemberListExtensionValue.cs:392
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:333
+	}                                                                                                                                          // BuildMemberListExtensionValue.cs:334
 	/// <summary>
-	/// Accessor class for 'region'
-	/// [Fhir Element 'Extension.extension:region]'
+	/// Class that implements the QuadrantExtensionItem' extension slice class.
 	/// </summary>
-	public class Region_Accessor : MemberListExtensionValueBase                                                                                // BuildMemberListExtensionValue.cs:95
-	{                                                                                                                                          // BuildMemberListExtensionValue.cs:96
-	    // Properties                                                                                                                          // BuildMemberListExtensionValue.cs:97
+	public class QuadrantExtensionItem : ISimpleExtensionItem                                                                                  // BuildMemberListExtensionValue.cs:408
+	{                                                                                                                                          // BuildMemberListExtensionValue.cs:409
 	    /// <summary>
-	    /// Access propertyName
+	    /// Field for extension slice quadrant
+	    /// [Fhir Element 'Extension.extension:quadrant]'
 	    /// </summary>
-	    public IEnumerable<CodeableConcept> All()                                                                                              // BuildMemberListExtensionValue.cs:262
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:263
-	        foreach (var item in items)                                                                                                        // BuildMemberListExtensionValue.cs:264
-	            yield return (CodeableConcept) item;                                                                                           // BuildMemberListExtensionValue.cs:265
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:266
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:268
+	    CodeableConcept quadrant;                                                                                                              // BuildMemberListExtensionValue.cs:447
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:448
 	    /// <summary>
-	    /// Access item at indicated location in list
+	    /// Get value of extension slice quadrant
 	    /// </summary>
-	    public CodeableConcept At(Int32 i) => (CodeableConcept) base.items[i];                                                                 // BuildMemberListExtensionValue.cs:272
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:274
+	    public CodeableConcept Get() => this.quadrant;                                                                                         // BuildMemberListExtensionValue.cs:452
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:457
 	    /// <summary>
-	    /// Access first item in list
+	    /// Set value of extension slice quadrant
 	    /// </summary>
-	    public new CodeableConcept First() => (CodeableConcept) base.First();                                                                  // BuildMemberListExtensionValue.cs:278
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:279
-	    /// <summary>
-	    /// Access first item in list or default value if empty
-	    /// </summary>
-	    public new CodeableConcept FirstOrDefault() => (CodeableConcept) base.FirstOrDefault();                                                // BuildMemberListExtensionValue.cs:283
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:99
-	    // Methods                                                                                                                             // BuildMemberListExtensionValue.cs:100
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:210
-	    /// <summary>
-	    /// Append item to end of list
-	    /// </summary>
-	    public void Append(BreastLocationRegionVS.TCoding value)                                                                               // BuildMemberListExtensionValue.cs:214
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:215
-	        this.RawItems.Add((CodeableConcept) value);                                                                                        // BuildMemberListExtensionValue.cs:216
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:217
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:102
-	    /// <summary>
-	    /// Accessor class constructor
-	    /// </summary>
-	    public Region_Accessor(BreastRadiologyDocument doc) : base("Region_Accessor")                                                          // BuildMemberListExtensionValue.cs:106
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:107
-	        this.Init(doc, 0, -1, "region");                                                                                                   // BuildMemberListExtensionValue.cs:108
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:110
-	}                                                                                                                                          // BuildMemberListExtensionValue.cs:111
+	    public void Set(CodeableConcept value) => this.quadrant = value;                                                                       // BuildMemberListExtensionValue.cs:461
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:411
+	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:412
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:413
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:415
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:416
+	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:417
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:418
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:420
+	}                                                                                                                                          // BuildMemberListExtensionValue.cs:421
 	/// <summary>
-	/// Accessor class for 'clockDirection'
-	/// [Fhir Element 'Extension.extension:clockDirection]'
+	/// Class that implements the RegionExtensionItem' extension slice class.
 	/// </summary>
-	public class ClockDirection_Accessor : MemberListExtensionValueBase                                                                        // BuildMemberListExtensionValue.cs:95
-	{                                                                                                                                          // BuildMemberListExtensionValue.cs:96
-	    // Properties                                                                                                                          // BuildMemberListExtensionValue.cs:97
+	public class RegionExtensionItem : ISimpleExtensionItem                                                                                    // BuildMemberListExtensionValue.cs:408
+	{                                                                                                                                          // BuildMemberListExtensionValue.cs:409
 	    /// <summary>
-	    /// get {propertyName} value
+	    /// Field for extension slice region
+	    /// [Fhir Element 'Extension.extension:region]'
 	    /// </summary>
-	    public CodeableConcept Get() => (CodeableConcept) base.FirstOrDefault();                                                               // BuildMemberListExtensionValue.cs:182
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:99
-	    // Methods                                                                                                                             // BuildMemberListExtensionValue.cs:100
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:119
+	    CodeableConcept region;                                                                                                                // BuildMemberListExtensionValue.cs:447
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:448
 	    /// <summary>
-	    /// Set ClockDirection value
+	    /// Get value of extension slice region
 	    /// </summary>
-	    public void Set(BreastLocationClockVS.TCoding value) => this.SetFirst((CodeableConcept)value);                                         // BuildMemberListExtensionValue.cs:123
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:102
+	    public CodeableConcept Get() => this.region;                                                                                           // BuildMemberListExtensionValue.cs:452
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:457
 	    /// <summary>
-	    /// Accessor class constructor
+	    /// Set value of extension slice region
 	    /// </summary>
-	    public ClockDirection_Accessor(BreastRadiologyDocument doc) : base("ClockDirection_Accessor")                                          // BuildMemberListExtensionValue.cs:106
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:107
-	        this.Init(doc, 0, 1, "clockDirection");                                                                                            // BuildMemberListExtensionValue.cs:108
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:110
-	}                                                                                                                                          // BuildMemberListExtensionValue.cs:111
+	    public void Set(CodeableConcept value) => this.region = value;                                                                         // BuildMemberListExtensionValue.cs:461
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:411
+	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:412
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:413
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:415
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:416
+	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:417
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:418
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:420
+	}                                                                                                                                          // BuildMemberListExtensionValue.cs:421
 	/// <summary>
-	/// Accessor class for 'depth'
-	/// [Fhir Element 'Extension.extension:depth]'
+	/// Class that implements the ClockDirectionExtensionItem' extension slice class.
 	/// </summary>
-	public class Depth_Accessor : MemberListExtensionValueBase                                                                                 // BuildMemberListExtensionValue.cs:95
-	{                                                                                                                                          // BuildMemberListExtensionValue.cs:96
-	    // Properties                                                                                                                          // BuildMemberListExtensionValue.cs:97
+	public class ClockDirectionExtensionItem : ISimpleExtensionItem                                                                            // BuildMemberListExtensionValue.cs:408
+	{                                                                                                                                          // BuildMemberListExtensionValue.cs:409
 	    /// <summary>
-	    /// get {propertyName} value
+	    /// Field for extension slice clockDirection
+	    /// [Fhir Element 'Extension.extension:clockDirection]'
 	    /// </summary>
-	    public CodeableConcept Get() => (CodeableConcept) base.FirstOrDefault();                                                               // BuildMemberListExtensionValue.cs:182
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:99
-	    // Methods                                                                                                                             // BuildMemberListExtensionValue.cs:100
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:119
+	    CodeableConcept clockDirection;                                                                                                        // BuildMemberListExtensionValue.cs:447
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:448
 	    /// <summary>
-	    /// Set Depth value
+	    /// Get value of extension slice clockDirection
 	    /// </summary>
-	    public void Set(BreastLocationDepthVS.TCoding value) => this.SetFirst((CodeableConcept)value);                                         // BuildMemberListExtensionValue.cs:123
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:102
+	    public CodeableConcept Get() => this.clockDirection;                                                                                   // BuildMemberListExtensionValue.cs:452
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:457
 	    /// <summary>
-	    /// Accessor class constructor
+	    /// Set value of extension slice clockDirection
 	    /// </summary>
-	    public Depth_Accessor(BreastRadiologyDocument doc) : base("Depth_Accessor")                                                            // BuildMemberListExtensionValue.cs:106
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:107
-	        this.Init(doc, 0, 1, "depth");                                                                                                     // BuildMemberListExtensionValue.cs:108
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:110
-	}                                                                                                                                          // BuildMemberListExtensionValue.cs:111
+	    public void Set(CodeableConcept value) => this.clockDirection = value;                                                                 // BuildMemberListExtensionValue.cs:461
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:411
+	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:412
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:413
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:415
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:416
+	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:417
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:418
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:420
+	}                                                                                                                                          // BuildMemberListExtensionValue.cs:421
+	/// <summary>
+	/// Class that implements the DepthExtensionItem' extension slice class.
+	/// </summary>
+	public class DepthExtensionItem : ISimpleExtensionItem                                                                                     // BuildMemberListExtensionValue.cs:408
+	{                                                                                                                                          // BuildMemberListExtensionValue.cs:409
+	    /// <summary>
+	    /// Field for extension slice depth
+	    /// [Fhir Element 'Extension.extension:depth]'
+	    /// </summary>
+	    CodeableConcept depth;                                                                                                                 // BuildMemberListExtensionValue.cs:447
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:448
+	    /// <summary>
+	    /// Get value of extension slice depth
+	    /// </summary>
+	    public CodeableConcept Get() => this.depth;                                                                                            // BuildMemberListExtensionValue.cs:452
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:457
+	    /// <summary>
+	    /// Set value of extension slice depth
+	    /// </summary>
+	    public void Set(CodeableConcept value) => this.depth = value;                                                                          // BuildMemberListExtensionValue.cs:461
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:411
+	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:412
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:413
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:415
+	                                                                                                                                           // BuildMemberListExtensionValue.cs:416
+	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:417
+	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:418
+	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:420
+	}                                                                                                                                          // BuildMemberListExtensionValue.cs:421
 	//- LocalClassDefs
 }

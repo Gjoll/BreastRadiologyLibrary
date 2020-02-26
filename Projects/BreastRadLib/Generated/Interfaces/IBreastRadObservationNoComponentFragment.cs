@@ -10,6 +10,10 @@ using BreastRadLib.BreastRadObservationNoComponentFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface BreastRadObservationNoComponentFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IBreastRadObservationNoComponentFragment : IBreastRadObservationFragment
 
 	{

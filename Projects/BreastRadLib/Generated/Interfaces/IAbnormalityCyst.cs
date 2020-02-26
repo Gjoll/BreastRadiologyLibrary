@@ -10,6 +10,10 @@ using BreastRadLib.AbnormalityCystLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface AbnormalityCyst.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IAbnormalityCyst : IObservationLeafFragment,
         ITumorSatelliteFragment,
         IBreastRadObservationNoDeviceFragment,
@@ -28,7 +32,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		CystType_Accessor CystType { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value CystType
+		/// </summary>
+		CystType_Accessor CystType { get ; }                                                                                                      // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

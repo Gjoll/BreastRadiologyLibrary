@@ -12,20 +12,20 @@ namespace BreastRadLib
 	public class FibroadenomaCodeSystemCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/FibroadenomaCodeSystemCS";                                      // Builder.cs:373
-		                                                                                                                                          // Builder.cs:385
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/FibroadenomaCodeSystemCS";                                      // Builder.cs:368
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// A fibroadenoma is a benign, or noncancerous, breast tumor.
 		/// Unlike a breast cancer, which grows larger over time and can spread to other organs,
 		/// a fibroadenoma remains in the breast tissue.
-		/// They're pretty small, too.
+		/// They&#39;re pretty small, too.
 		/// Most are only 1 or 2 centimeters in size.
-		/// www.webmd.com > breast-cancer > what-are-fibroadenomas
+		/// www.webmd.com &gt; breast-cancer &gt; what-are-fibroadenomas
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Fibroadenoma = new Coding(System, "Fibroadenoma", "Fibroadenoma");                                              // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// These are non-cancerous breast lumps.
 		/// Fibroadenomas usually go away with age.

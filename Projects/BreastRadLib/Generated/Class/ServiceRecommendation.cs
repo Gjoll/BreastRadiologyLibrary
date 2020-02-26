@@ -13,35 +13,42 @@ using BreastRadLib.HeaderFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class ServiceRecommendation.
+	/// This class is automatically generated.
+	/// </summary>
 	public class ServiceRecommendation : ServiceRequestBase, IServiceRecommendation
 	{
 		//+ Properties
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public ServiceRecommendation() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public ServiceRecommendation(BreastRadiologyDocument doc, ServiceRequest resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public ServiceRecommendation(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new ServiceRequest());
+			this.Init(doc, new ServiceRequest());
 		}
 
 		/// <summary>
@@ -54,10 +61,14 @@ namespace BreastRadLib
 				resource = new ServiceRequest();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // DefineBase.cs:189
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // DefineBase.cs:194
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -70,6 +81,9 @@ namespace BreastRadLib
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
@@ -79,6 +93,9 @@ namespace BreastRadLib
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
@@ -92,11 +109,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set ServiceRequest.code to one of the predefined items
 		/// </summary>
-		public void SetCode(RecommendationsVS.TCoding code)                                                                                       // DefineBase.cs:153
-		{                                                                                                                                         // DefineBase.cs:154
-		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 155                                 // CodeBlockNested.cs:588
-		    this.Resource.Code = (CodeableConcept) code;                                                                                          // DefineBase.cs:156
-		}                                                                                                                                         // DefineBase.cs:159
+		public void SetCode(RecommendationsVS.TCoding code)                                                                                       // DefineBase.cs:158
+		{                                                                                                                                         // DefineBase.cs:159
+		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 160                                 // CodeBlockNested.cs:588
+		    this.Resource.Code = (CodeableConcept) code;                                                                                          // DefineBase.cs:161
+		}                                                                                                                                         // DefineBase.cs:164
 		//- Methods
 	}
 }

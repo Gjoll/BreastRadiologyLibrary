@@ -21,37 +21,50 @@ using BreastRadLib.ObservedCountFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class ObservedFeature.
+	/// This class is automatically generated.
+	/// </summary>
 	public class ObservedFeature : ObservationBase, IObservedFeature
 	{
 		//+ Properties
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:33
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access Component value ObsCount
+		/// </summary>
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Component value FeatureType
+		/// </summary>
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:47
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public ObservedFeature() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public ObservedFeature(BreastRadiologyDocument doc, Observation resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public ObservedFeature(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Observation());
+			this.Init(doc, new Observation());
 		}
 
 		/// <summary>
@@ -64,13 +77,23 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:189
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:36
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:36
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:194
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:53
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -79,35 +102,41 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:45
-			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:45
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:62
+			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:62
 			//- ValidateCode
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:39
-			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:56
+			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:56
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:42
-			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:59
+			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:59
 			//- ReadCode
 		}
 

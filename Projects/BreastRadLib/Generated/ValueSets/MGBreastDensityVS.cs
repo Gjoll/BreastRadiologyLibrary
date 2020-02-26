@@ -28,20 +28,20 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_AlmostEntirelyFat = new TCoding(MGBreastDensityCS.Code_AlmostEntirelyFat);                                     // Builder.cs:349
-		public static TCoding Code_ScatteredAreasOfFibroglandularDensity = new TCoding(MGBreastDensityCS.Code_ScatteredAreasOfFibroglandularDensity);// Builder.cs:349
-		public static TCoding Code_HeterogeneouslyDense = new TCoding(MGBreastDensityCS.Code_HeterogeneouslyDense);                               // Builder.cs:349
-		public static TCoding Code_ExtremelyDense = new TCoding(MGBreastDensityCS.Code_ExtremelyDense);                                           // Builder.cs:349
+		public static TCoding Code_AlmostEntirelyFat = new TCoding(MGBreastDensityCS.Code_AlmostEntirelyFat);                                     // Builder.cs:344
+		public static TCoding Code_ScatteredAreasOfFibroglandularDensity = new TCoding(MGBreastDensityCS.Code_ScatteredAreasOfFibroglandularDensity);// Builder.cs:344
+		public static TCoding Code_HeterogeneouslyDense = new TCoding(MGBreastDensityCS.Code_HeterogeneouslyDense);                               // Builder.cs:344
+		public static TCoding Code_ExtremelyDense = new TCoding(MGBreastDensityCS.Code_ExtremelyDense);                                           // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_AlmostEntirelyFat;                                                                                                  // Builder.cs:352
-		    yield return Code_ScatteredAreasOfFibroglandularDensity;                                                                              // Builder.cs:352
-		    yield return Code_HeterogeneouslyDense;                                                                                               // Builder.cs:352
-		    yield return Code_ExtremelyDense;                                                                                                     // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_AlmostEntirelyFat;                                                                                                  // Builder.cs:347
+		    yield return Code_ScatteredAreasOfFibroglandularDensity;                                                                              // Builder.cs:347
+		    yield return Code_HeterogeneouslyDense;                                                                                               // Builder.cs:347
+		    yield return Code_ExtremelyDense;                                                                                                     // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

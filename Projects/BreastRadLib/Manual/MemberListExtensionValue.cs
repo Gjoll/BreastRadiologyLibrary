@@ -37,5 +37,15 @@ namespace BreastRadLib
             this.items.Clear();
             this.items.Add(value);
         }
+
+        protected void Write(ISimpleExtensionItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected void Read(ISimpleExtensionItem item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

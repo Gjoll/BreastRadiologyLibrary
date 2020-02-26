@@ -10,6 +10,10 @@ using BreastRadLib.MGAbnormalityDensityLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface MGAbnormalityDensity.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IMGAbnormalityDensity : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoComponentFragment,
@@ -27,7 +31,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		DensityType_Accessor DensityType { get ; }                                                                                                // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value DensityType
+		/// </summary>
+		DensityType_Accessor DensityType { get ; }                                                                                                // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

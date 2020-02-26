@@ -12,6 +12,10 @@ using BreastRadLib.%ClassName%Local;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class %ClassName%.
+	/// This class is automatically generated.
+	/// </summary>
 	//+*Header
 	public class %ClassName% : %FhirBase%Base, I%ClassName%
 	//-*Header
@@ -20,29 +24,32 @@ namespace BreastRadLib
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public %ClassName%() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public %ClassName%(BreastRadiologyDocument doc, %FhirBase% resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public %ClassName%(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new %FhirBase%());
+			this.Init(doc, new %FhirBase%());
 		}
 
 		/// <summary>
@@ -58,6 +65,10 @@ namespace BreastRadLib
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -70,6 +81,9 @@ namespace BreastRadLib
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
@@ -79,6 +93,9 @@ namespace BreastRadLib
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();

@@ -10,11 +10,18 @@ using BreastRadLib.ConsistentWithHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ConsistentWithHasMemberFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IConsistentWithHasMemberFragment : IHeaderFragment
 
 	{
 		//+ Properties
-		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access HasMembers value ConsistentWith
+		/// </summary>
+		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

@@ -15,78 +15,78 @@ namespace BreastRadLib.ConsistentWithLocal
 	/// Accessor class for 'value'
 	/// [Fhir Element 'Observation.component:value]'
 	/// </summary>
-	public class Value_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                    // BuildMemberListCodedValue.cs:64
-	{                                                                                                                                          // BuildMemberListCodedValue.cs:65
-	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:66
+	public class Value_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                    // BuildMemberListCodedValue.cs:72
+	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
+	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // BuildMemberListCodedValue.cs:103
-	                                                                                                                                           // BuildMemberListCodedValue.cs:68
-	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:69
-	                                                                                                                                           // BuildMemberListCodedValue.cs:90
+	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // BuildMemberListCodedValue.cs:111
+	                                                                                                                                           // BuildMemberListCodedValue.cs:76
+	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:77
+	                                                                                                                                           // BuildMemberListCodedValue.cs:98
 	    /// <summary>
 	    /// Set Value value
 	    /// </summary>
-	    public void Set(CodeableConcept value) => this.SetFirst(value);                                                                        // BuildMemberListCodedValue.cs:94
-	                                                                                                                                           // BuildMemberListCodedValue.cs:90
+	    public void Set(CodeableConcept value) => this.SetFirst(value);                                                                        // BuildMemberListCodedValue.cs:102
+	                                                                                                                                           // BuildMemberListCodedValue.cs:98
 	    /// <summary>
 	    /// Set Value value
 	    /// </summary>
-	    public void Set(ConsistentWithVS.TCoding value) => this.SetFirst(value);                                                               // BuildMemberListCodedValue.cs:94
-	                                                                                                                                           // BuildMemberListCodedValue.cs:71
+	    public void Set(ConsistentWithVS.TCoding value) => this.SetFirst(value);                                                               // BuildMemberListCodedValue.cs:102
+	                                                                                                                                           // BuildMemberListCodedValue.cs:79
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Value_Accessor(BreastRadiologyDocument doc) : base("Value_Accessor")                                                            // BuildMemberListCodedValue.cs:75
-	    {                                                                                                                                      // BuildMemberListCodedValue.cs:76
-	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithValue"));// BuildMemberListCodedValue.cs:77
-	    }                                                                                                                                      // BuildMemberListCodedValue.cs:79
-	}                                                                                                                                          // BuildMemberListCodedValue.cs:80
+	    public Value_Accessor(BreastRadiologyDocument doc) : base("Value_Accessor")                                                            // BuildMemberListCodedValue.cs:83
+	    {                                                                                                                                      // BuildMemberListCodedValue.cs:84
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithValue"));// BuildMemberListCodedValue.cs:85
+	    }                                                                                                                                      // BuildMemberListCodedValue.cs:87
+	}                                                                                                                                          // BuildMemberListCodedValue.cs:88
 	/// <summary>
 	/// Accessor class for 'qualifier'
 	/// [Fhir Element 'Observation.component:qualifier]'
 	/// </summary>
-	public class Qualifier_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                // BuildMemberListCodedValue.cs:64
-	{                                                                                                                                          // BuildMemberListCodedValue.cs:65
-	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:66
+	public class Qualifier_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                // BuildMemberListCodedValue.cs:72
+	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
+	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>
 	    /// Access propertyName
 	    /// </summary>
-	    public IEnumerable<CodeableConcept> All() => this.items;                                                                               // BuildMemberListCodedValue.cs:134
-	                                                                                                                                           // BuildMemberListCodedValue.cs:136
+	    public IEnumerable<CodeableConcept> All() => this.items;                                                                               // BuildMemberListCodedValue.cs:142
+	                                                                                                                                           // BuildMemberListCodedValue.cs:144
 	    /// <summary>
 	    /// Access item at indicated location in list
 	    /// </summary>
-	    public CodeableConcept At(Int32 i) => base.items[i];                                                                                   // BuildMemberListCodedValue.cs:140
-	                                                                                                                                           // BuildMemberListCodedValue.cs:142
+	    public CodeableConcept At(Int32 i) => base.items[i];                                                                                   // BuildMemberListCodedValue.cs:148
+	                                                                                                                                           // BuildMemberListCodedValue.cs:150
 	    /// <summary>
 	    /// Access first item in list
 	    /// </summary>
-	    public new CodeableConcept First() => base.First();                                                                                    // BuildMemberListCodedValue.cs:146
-	                                                                                                                                           // BuildMemberListCodedValue.cs:147
+	    public new CodeableConcept First() => base.First();                                                                                    // BuildMemberListCodedValue.cs:154
+	                                                                                                                                           // BuildMemberListCodedValue.cs:155
 	    /// <summary>
 	    /// Access first item in list or default value if empty
 	    /// </summary>
-	    public new CodeableConcept FirstOrDefault() => base.FirstOrDefault();                                                                  // BuildMemberListCodedValue.cs:151
-	                                                                                                                                           // BuildMemberListCodedValue.cs:68
-	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:69
-	                                                                                                                                           // BuildMemberListCodedValue.cs:118
+	    public new CodeableConcept FirstOrDefault() => base.FirstOrDefault();                                                                  // BuildMemberListCodedValue.cs:159
+	                                                                                                                                           // BuildMemberListCodedValue.cs:76
+	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:77
+	                                                                                                                                           // BuildMemberListCodedValue.cs:126
 	    /// <summary>
 	    /// Append item to end of list
 	    /// </summary>
-	    public void Append(ConsistentWithQualifierVS.TCoding value)                                                                            // BuildMemberListCodedValue.cs:122
-	    {                                                                                                                                      // BuildMemberListCodedValue.cs:123
-	        this.RawItems.Add(value);                                                                                                          // BuildMemberListCodedValue.cs:124
-	    }                                                                                                                                      // BuildMemberListCodedValue.cs:125
-	                                                                                                                                           // BuildMemberListCodedValue.cs:71
+	    public void Append(ConsistentWithQualifierVS.TCoding value)                                                                            // BuildMemberListCodedValue.cs:130
+	    {                                                                                                                                      // BuildMemberListCodedValue.cs:131
+	        this.RawItems.Add(value);                                                                                                          // BuildMemberListCodedValue.cs:132
+	    }                                                                                                                                      // BuildMemberListCodedValue.cs:133
+	                                                                                                                                           // BuildMemberListCodedValue.cs:79
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public Qualifier_Accessor(BreastRadiologyDocument doc) : base("Qualifier_Accessor")                                                    // BuildMemberListCodedValue.cs:75
-	    {                                                                                                                                      // BuildMemberListCodedValue.cs:76
-	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithQualifier"));// BuildMemberListCodedValue.cs:77
-	    }                                                                                                                                      // BuildMemberListCodedValue.cs:79
-	}                                                                                                                                          // BuildMemberListCodedValue.cs:80
+	    public Qualifier_Accessor(BreastRadiologyDocument doc) : base("Qualifier_Accessor")                                                    // BuildMemberListCodedValue.cs:83
+	    {                                                                                                                                      // BuildMemberListCodedValue.cs:84
+	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "consistentWithQualifier"));// BuildMemberListCodedValue.cs:85
+	    }                                                                                                                                      // BuildMemberListCodedValue.cs:87
+	}                                                                                                                                          // BuildMemberListCodedValue.cs:88
 	//- LocalClassDefs
 }

@@ -10,6 +10,10 @@ using BreastRadLib.MGBreastDensityLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface MGBreastDensity.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IMGBreastDensity : IObservationLeafFragment,
         IBreastRadObservationNoComponentFragment,
         IBreastRadObservationNoDeviceFragment

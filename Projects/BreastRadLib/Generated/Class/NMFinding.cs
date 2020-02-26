@@ -18,35 +18,42 @@ using BreastRadLib.ObservationSectionFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class NMFinding.
+	/// This class is automatically generated.
+	/// </summary>
 	public class NMFinding : ObservationBase, INMFinding
 	{
 		//+ Properties
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public NMFinding() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public NMFinding(BreastRadiologyDocument doc, Observation resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public NMFinding(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Observation());
+			this.Init(doc, new Observation());
 		}
 
 		/// <summary>
@@ -59,11 +66,15 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                                  // DefineBase.cs:189
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                                  // DefineBase.cs:194
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -76,16 +87,22 @@ namespace BreastRadLib
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();

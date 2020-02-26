@@ -15,28 +15,28 @@ namespace BreastRadLib.ObservedFeatureLocal
 	/// Accessor class for 'featureType'
 	/// [Fhir Element 'Observation.component:featureType]'
 	/// </summary>
-	public class FeatureType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                              // BuildMemberListCodedValue.cs:64
-	{                                                                                                                                          // BuildMemberListCodedValue.cs:65
-	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:66
+	public class FeatureType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                              // BuildMemberListCodedValue.cs:72
+	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
+	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>
 	    /// get {propertyName} value
 	    /// </summary>
-	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // BuildMemberListCodedValue.cs:103
-	                                                                                                                                           // BuildMemberListCodedValue.cs:68
-	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:69
-	                                                                                                                                           // BuildMemberListCodedValue.cs:90
+	    public CodeableConcept Get() => base.FirstOrDefault();                                                                                 // BuildMemberListCodedValue.cs:111
+	                                                                                                                                           // BuildMemberListCodedValue.cs:76
+	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:77
+	                                                                                                                                           // BuildMemberListCodedValue.cs:98
 	    /// <summary>
 	    /// Set FeatureType value
 	    /// </summary>
-	    public void Set(ObservedFeatureVS.TCoding value) => this.SetFirst(value);                                                              // BuildMemberListCodedValue.cs:94
-	                                                                                                                                           // BuildMemberListCodedValue.cs:71
+	    public void Set(ObservedFeatureVS.TCoding value) => this.SetFirst(value);                                                              // BuildMemberListCodedValue.cs:102
+	                                                                                                                                           // BuildMemberListCodedValue.cs:79
 	    /// <summary>
 	    /// Accessor class constructor
 	    /// </summary>
-	    public FeatureType_Accessor(BreastRadiologyDocument doc) : base("FeatureType_Accessor")                                                // BuildMemberListCodedValue.cs:75
-	    {                                                                                                                                      // BuildMemberListCodedValue.cs:76
-	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "featureType"));// BuildMemberListCodedValue.cs:77
-	    }                                                                                                                                      // BuildMemberListCodedValue.cs:79
-	}                                                                                                                                          // BuildMemberListCodedValue.cs:80
+	    public FeatureType_Accessor(BreastRadiologyDocument doc) : base("FeatureType_Accessor")                                                // BuildMemberListCodedValue.cs:83
+	    {                                                                                                                                      // BuildMemberListCodedValue.cs:84
+	        this.Init(doc, 1, 1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "featureType"));// BuildMemberListCodedValue.cs:85
+	    }                                                                                                                                      // BuildMemberListCodedValue.cs:87
+	}                                                                                                                                          // BuildMemberListCodedValue.cs:88
 	//- LocalClassDefs
 }

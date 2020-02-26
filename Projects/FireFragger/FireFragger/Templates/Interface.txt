@@ -10,6 +10,10 @@ using BreastRadLib.%ClassName%Local;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface %ClassName%.
+	/// This interface is automatically generated.
+	/// </summary>
 	//+*Header
 	public interface %InterfaceName% %Interfaces%
 	//-*Header

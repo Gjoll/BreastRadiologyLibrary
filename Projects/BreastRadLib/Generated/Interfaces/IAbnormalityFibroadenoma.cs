@@ -10,6 +10,10 @@ using BreastRadLib.AbnormalityFibroadenomaLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface AbnormalityFibroadenoma.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IAbnormalityFibroadenoma : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoValueFragment,
@@ -24,7 +28,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		FibroAdenomaType_Accessor FibroAdenomaType { get ; }                                                                                      // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value FibroAdenomaType
+		/// </summary>
+		FibroAdenomaType_Accessor FibroAdenomaType { get ; }                                                                                      // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

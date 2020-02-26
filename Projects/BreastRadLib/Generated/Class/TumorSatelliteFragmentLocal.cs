@@ -15,15 +15,15 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	/// Accessor class for slice 'tumorSatellite'
 	/// [Fhir Element 'Observation.hasMember:tumorSatellite]'
 	/// </summary>
-	public class TumorSatellite_Accessor : MemberListReferenceMultiple<TumorSatellite>                                                         // BuildMemberListReference.cs:66
-	{                                                                                                                                          // BuildMemberListReference.cs:67
+	public class TumorSatellite_Accessor : MemberListReferenceMultiple<TumorSatellite>                                                         // BuildMemberListReference.cs:67
+	{                                                                                                                                          // BuildMemberListReference.cs:68
 	    /// <summary>
 	    /// TumorSatellite_Accessor class constructor
 	    /// </summary>
-	    public TumorSatellite_Accessor(BreastRadiologyDocument doc) : base("TumorSatellite_Accessor")                                          // BuildMemberListReference.cs:72
-	    {                                                                                                                                      // BuildMemberListReference.cs:73
-	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                               // BuildMemberListReference.cs:74
-	    }                                                                                                                                      // BuildMemberListReference.cs:75
-	}                                                                                                                                          // BuildMemberListReference.cs:76
+	    public TumorSatellite_Accessor(BreastRadiologyDocument doc) : base("TumorSatellite_Accessor")                                          // BuildMemberListReference.cs:73
+	    {                                                                                                                                      // BuildMemberListReference.cs:74
+	        this.Init(doc, 0, -1, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                               // BuildMemberListReference.cs:75
+	    }                                                                                                                                      // BuildMemberListReference.cs:76
+	}                                                                                                                                          // BuildMemberListReference.cs:77
 	//- LocalClassDefs
 }

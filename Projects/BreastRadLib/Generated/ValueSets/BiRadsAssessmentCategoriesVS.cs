@@ -28,30 +28,30 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Category0 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category0);                                          // Builder.cs:349
-		public static TCoding Code_Category2 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category2);                                          // Builder.cs:349
-		public static TCoding Code_Category3 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category3);                                          // Builder.cs:349
-		public static TCoding Code_Category4 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4);                                          // Builder.cs:349
-		public static TCoding Code_Category4A = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4A);                                        // Builder.cs:349
-		public static TCoding Code_Category4B = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4B);                                        // Builder.cs:349
-		public static TCoding Code_Category4C = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4C);                                        // Builder.cs:349
-		public static TCoding Code_Category5 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category5);                                          // Builder.cs:349
-		public static TCoding Code_Category6 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category6);                                          // Builder.cs:349
+		public static TCoding Code_Category0 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category0);                                          // Builder.cs:344
+		public static TCoding Code_Category2 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category2);                                          // Builder.cs:344
+		public static TCoding Code_Category3 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category3);                                          // Builder.cs:344
+		public static TCoding Code_Category4 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4);                                          // Builder.cs:344
+		public static TCoding Code_Category4A = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4A);                                        // Builder.cs:344
+		public static TCoding Code_Category4B = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4B);                                        // Builder.cs:344
+		public static TCoding Code_Category4C = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category4C);                                        // Builder.cs:344
+		public static TCoding Code_Category5 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category5);                                          // Builder.cs:344
+		public static TCoding Code_Category6 = new TCoding(BiRadsAssessmentCategoriesCS.Code_Category6);                                          // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_Category0;                                                                                                          // Builder.cs:352
-		    yield return Code_Category2;                                                                                                          // Builder.cs:352
-		    yield return Code_Category3;                                                                                                          // Builder.cs:352
-		    yield return Code_Category4;                                                                                                          // Builder.cs:352
-		    yield return Code_Category4A;                                                                                                         // Builder.cs:352
-		    yield return Code_Category4B;                                                                                                         // Builder.cs:352
-		    yield return Code_Category4C;                                                                                                         // Builder.cs:352
-		    yield return Code_Category5;                                                                                                          // Builder.cs:352
-		    yield return Code_Category6;                                                                                                          // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_Category0;                                                                                                          // Builder.cs:347
+		    yield return Code_Category2;                                                                                                          // Builder.cs:347
+		    yield return Code_Category3;                                                                                                          // Builder.cs:347
+		    yield return Code_Category4;                                                                                                          // Builder.cs:347
+		    yield return Code_Category4A;                                                                                                         // Builder.cs:347
+		    yield return Code_Category4B;                                                                                                         // Builder.cs:347
+		    yield return Code_Category4C;                                                                                                         // Builder.cs:347
+		    yield return Code_Category5;                                                                                                          // Builder.cs:347
+		    yield return Code_Category6;                                                                                                          // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

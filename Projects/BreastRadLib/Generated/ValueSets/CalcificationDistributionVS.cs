@@ -28,26 +28,26 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_ClusteredDistribution = new TCoding(CalcificationDistributionCS.Code_ClusteredDistribution);                   // Builder.cs:349
-		public static TCoding Code_DiffuseDistribution = new TCoding(CalcificationDistributionCS.Code_DiffuseDistribution);                       // Builder.cs:349
-		public static TCoding Code_GroupedDistribution = new TCoding(CalcificationDistributionCS.Code_GroupedDistribution);                       // Builder.cs:349
-		public static TCoding Code_LinearDistribution = new TCoding(CalcificationDistributionCS.Code_LinearDistribution);                         // Builder.cs:349
-		public static TCoding Code_RegionalDistribution = new TCoding(CalcificationDistributionCS.Code_RegionalDistribution);                     // Builder.cs:349
-		public static TCoding Code_ScatteredDistribution = new TCoding(CalcificationDistributionCS.Code_ScatteredDistribution);                   // Builder.cs:349
-		public static TCoding Code_SegmentalDistribution = new TCoding(CalcificationDistributionCS.Code_SegmentalDistribution);                   // Builder.cs:349
+		public static TCoding Code_ClusteredDistribution = new TCoding(CalcificationDistributionCS.Code_ClusteredDistribution);                   // Builder.cs:344
+		public static TCoding Code_DiffuseDistribution = new TCoding(CalcificationDistributionCS.Code_DiffuseDistribution);                       // Builder.cs:344
+		public static TCoding Code_GroupedDistribution = new TCoding(CalcificationDistributionCS.Code_GroupedDistribution);                       // Builder.cs:344
+		public static TCoding Code_LinearDistribution = new TCoding(CalcificationDistributionCS.Code_LinearDistribution);                         // Builder.cs:344
+		public static TCoding Code_RegionalDistribution = new TCoding(CalcificationDistributionCS.Code_RegionalDistribution);                     // Builder.cs:344
+		public static TCoding Code_ScatteredDistribution = new TCoding(CalcificationDistributionCS.Code_ScatteredDistribution);                   // Builder.cs:344
+		public static TCoding Code_SegmentalDistribution = new TCoding(CalcificationDistributionCS.Code_SegmentalDistribution);                   // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_ClusteredDistribution;                                                                                              // Builder.cs:352
-		    yield return Code_DiffuseDistribution;                                                                                                // Builder.cs:352
-		    yield return Code_GroupedDistribution;                                                                                                // Builder.cs:352
-		    yield return Code_LinearDistribution;                                                                                                 // Builder.cs:352
-		    yield return Code_RegionalDistribution;                                                                                               // Builder.cs:352
-		    yield return Code_ScatteredDistribution;                                                                                              // Builder.cs:352
-		    yield return Code_SegmentalDistribution;                                                                                              // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_ClusteredDistribution;                                                                                              // Builder.cs:347
+		    yield return Code_DiffuseDistribution;                                                                                                // Builder.cs:347
+		    yield return Code_GroupedDistribution;                                                                                                // Builder.cs:347
+		    yield return Code_LinearDistribution;                                                                                                 // Builder.cs:347
+		    yield return Code_RegionalDistribution;                                                                                               // Builder.cs:347
+		    yield return Code_ScatteredDistribution;                                                                                              // Builder.cs:347
+		    yield return Code_SegmentalDistribution;                                                                                              // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

@@ -16,7 +16,7 @@ namespace FireFragger.CS
         {
             this.ValueSet = vs;
             this.ClassCode = new CodeEditor();
-            this.ClassCode.TryAddUserMacro("ClassName", Builder.ValueSetName(this));
+            this.ClassCode.TryAddUserMacro("ClassName", CSMisc.ValueSetName(this));
             this.ClassCode.Load(Path.Combine("Templates", "ValueSet.txt"));
         }
     };

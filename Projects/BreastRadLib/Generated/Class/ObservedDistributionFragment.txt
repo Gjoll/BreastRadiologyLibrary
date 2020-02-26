@@ -1,33 +1,45 @@
 		//+ Properties
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // BuildMemberListBase.cs:33
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access Component value ObsDistribution
+		/// </summary>
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Component value ObsDistRegionSize
+		/// </summary>
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberListBase.cs:47
 		//- Properties
 
 			//+ Constructor
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // BuildMemberListBase.cs:36
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:36
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:53
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:45
-			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:45
+			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:62
+			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:62
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildMemberListBase.cs:39
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildMemberListBase.cs:56
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:56
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildMemberListBase.cs:42
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildMemberListBase.cs:59
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:59
 			//- ReadCode
 
 			//+ Methods

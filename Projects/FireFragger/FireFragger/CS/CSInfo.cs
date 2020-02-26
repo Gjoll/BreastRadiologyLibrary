@@ -16,7 +16,7 @@ namespace FireFragger.CS
         {
             this.CodeSystem = cs;
             this.ClassCode = new CodeEditor();
-            this.ClassCode.TryAddUserMacro("ClassName", Builder.CodeSystemName(this));
+            this.ClassCode.TryAddUserMacro("ClassName", CSMisc.CodeSystemName(this));
             this.ClassCode.Load(Path.Combine("Templates", "CodeSystem.txt"));
         }
     };

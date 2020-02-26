@@ -1,28 +1,34 @@
 		//+ Properties
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access Component value NotPreviouslySeen
+		/// </summary>
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:47
 		//- Properties
 
 			//+ Constructor
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:36
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:53
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:45
+			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:62
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:39
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:56
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:42
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:59
 			//- ReadCode
 
 			//+ Methods

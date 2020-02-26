@@ -10,6 +10,10 @@ using BreastRadLib.MGAbnormalityAsymmetryLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface MGAbnormalityAsymmetry.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IMGAbnormalityAsymmetry : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoComponentFragment,
@@ -25,7 +29,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		AsymmetryType_Accessor AsymmetryType { get ; }                                                                                            // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value AsymmetryType
+		/// </summary>
+		AsymmetryType_Accessor AsymmetryType { get ; }                                                                                            // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

@@ -10,10 +10,17 @@ using BreastRadLib.ObservedChangesFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ObservedChangesFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IObservedChangesFragment 
 	{
 		//+ Properties
-		ObsChanges_Accessor ObsChanges { get ; }                                                                                                  // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value ObsChanges
+		/// </summary>
+		ObsChanges_Accessor ObsChanges { get ; }                                                                                                  // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

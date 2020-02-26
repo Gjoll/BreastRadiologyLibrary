@@ -10,11 +10,21 @@ using BreastRadLib.ObservedDistributionFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ObservedDistributionFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IObservedDistributionFragment 
 	{
 		//+ Properties
-		ObsDistribution_Accessor ObsDistribution { get ; }                                                                                        // BuildMemberListBase.cs:29
-		ObsDistRegionSize_Accessor ObsDistRegionSize { get ; }                                                                                    // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value ObsDistribution
+		/// </summary>
+		ObsDistribution_Accessor ObsDistribution { get ; }                                                                                        // BuildMemberListBase.cs:40
+		/// <summary>
+		/// Access Component value ObsDistRegionSize
+		/// </summary>
+		ObsDistRegionSize_Accessor ObsDistRegionSize { get ; }                                                                                    // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

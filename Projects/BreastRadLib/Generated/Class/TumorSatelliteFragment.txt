@@ -1,28 +1,34 @@
 		//+ Properties
-		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access HasMembers value TumorSatellite
+		/// </summary>
+		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // BuildMemberListBase.cs:47
 		//- Properties
 
 			//+ Constructor
-			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // BuildMemberListBase.cs:36
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // BuildMemberListBase.cs:53
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.TumorSatellite.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:45
+			if (this.TumorSatellite.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:62
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.TumorSatellite);                                                                                                // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.TumorSatellite);                                                                                                // BuildMemberListBase.cs:56
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.TumorSatellite);                                                                                                 // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.TumorSatellite);                                                                                                 // BuildMemberListBase.cs:59
 			//- ReadCode
 
 			//+ Methods

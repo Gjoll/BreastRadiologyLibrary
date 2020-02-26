@@ -28,28 +28,28 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Axilla = new TCoding(BreastLocationRegionCS.Code_Axilla);                                                      // Builder.cs:349
-		public static TCoding Code_AxillaryTail = new TCoding(BreastLocationRegionCS.Code_AxillaryTail);                                          // Builder.cs:349
-		public static TCoding Code_AxillaI = new TCoding(BreastLocationRegionCS.Code_AxillaI);                                                    // Builder.cs:349
-		public static TCoding Code_AxillaII = new TCoding(BreastLocationRegionCS.Code_AxillaII);                                                  // Builder.cs:349
-		public static TCoding Code_AxillaIII = new TCoding(BreastLocationRegionCS.Code_AxillaIII);                                                // Builder.cs:349
-		public static TCoding Code_InframammaryFold = new TCoding(BreastLocationRegionCS.Code_InframammaryFold);                                  // Builder.cs:349
-		public static TCoding Code_InSkin = new TCoding(BreastLocationRegionCS.Code_InSkin);                                                      // Builder.cs:349
-		public static TCoding Code_CentralToNipple = new TCoding(BreastLocationRegionCS.Code_CentralToNipple);                                    // Builder.cs:349
+		public static TCoding Code_Axilla = new TCoding(BreastLocationRegionCS.Code_Axilla);                                                      // Builder.cs:344
+		public static TCoding Code_AxillaryTail = new TCoding(BreastLocationRegionCS.Code_AxillaryTail);                                          // Builder.cs:344
+		public static TCoding Code_AxillaI = new TCoding(BreastLocationRegionCS.Code_AxillaI);                                                    // Builder.cs:344
+		public static TCoding Code_AxillaII = new TCoding(BreastLocationRegionCS.Code_AxillaII);                                                  // Builder.cs:344
+		public static TCoding Code_AxillaIII = new TCoding(BreastLocationRegionCS.Code_AxillaIII);                                                // Builder.cs:344
+		public static TCoding Code_InframammaryFold = new TCoding(BreastLocationRegionCS.Code_InframammaryFold);                                  // Builder.cs:344
+		public static TCoding Code_InSkin = new TCoding(BreastLocationRegionCS.Code_InSkin);                                                      // Builder.cs:344
+		public static TCoding Code_CentralToNipple = new TCoding(BreastLocationRegionCS.Code_CentralToNipple);                                    // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_Axilla;                                                                                                             // Builder.cs:352
-		    yield return Code_AxillaryTail;                                                                                                       // Builder.cs:352
-		    yield return Code_AxillaI;                                                                                                            // Builder.cs:352
-		    yield return Code_AxillaII;                                                                                                           // Builder.cs:352
-		    yield return Code_AxillaIII;                                                                                                          // Builder.cs:352
-		    yield return Code_InframammaryFold;                                                                                                   // Builder.cs:352
-		    yield return Code_InSkin;                                                                                                             // Builder.cs:352
-		    yield return Code_CentralToNipple;                                                                                                    // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_Axilla;                                                                                                             // Builder.cs:347
+		    yield return Code_AxillaryTail;                                                                                                       // Builder.cs:347
+		    yield return Code_AxillaI;                                                                                                            // Builder.cs:347
+		    yield return Code_AxillaII;                                                                                                           // Builder.cs:347
+		    yield return Code_AxillaIII;                                                                                                          // Builder.cs:347
+		    yield return Code_InframammaryFold;                                                                                                   // Builder.cs:347
+		    yield return Code_InSkin;                                                                                                             // Builder.cs:347
+		    yield return Code_CentralToNipple;                                                                                                    // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

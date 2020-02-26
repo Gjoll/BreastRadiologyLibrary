@@ -10,6 +10,10 @@ using BreastRadLib.ObservationLeafFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ObservationLeafFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IObservationLeafFragment 
 	{
 		//+ Properties

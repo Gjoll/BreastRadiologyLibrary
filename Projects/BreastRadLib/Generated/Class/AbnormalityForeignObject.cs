@@ -27,43 +27,74 @@ using BreastRadLib.ConsistentWithHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class AbnormalityForeignObject.
+	/// This class is automatically generated.
+	/// </summary>
 	public class AbnormalityForeignObject : ObservationBase, IAbnormalityForeignObject
 	{
 		//+ Properties
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // BuildMemberListBase.cs:33
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberListBase.cs:33
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:33
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // BuildMemberListBase.cs:33
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:33
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:33
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // BuildMemberListBase.cs:33
-		public AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; protected set; }                                        // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access Component value ObsChanges
+		/// </summary>
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Component value BiRadsAssessmentCategory
+		/// </summary>
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Component value NotPreviouslySeen
+		/// </summary>
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Component value CorrespondsWith
+		/// </summary>
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Component value PreviouslyDemonstratedBy
+		/// </summary>
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access HasMembers value AssociatedFeatures
+		/// </summary>
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access HasMembers value ConsistentWith
+		/// </summary>
+		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access Component value AbnormalityForeignObjectType
+		/// </summary>
+		public AbnormalityForeignObjectType_Accessor AbnormalityForeignObjectType { get ; protected set; }                                        // BuildMemberListBase.cs:47
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public AbnormalityForeignObject() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public AbnormalityForeignObject(BreastRadiologyDocument doc, Observation resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public AbnormalityForeignObject(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Observation());
+			this.Init(doc, new Observation());
 		}
 
 		/// <summary>
@@ -76,19 +107,47 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                                   // DefineBase.cs:189
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:36
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // BuildMemberListBase.cs:36
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:36
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:36
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:36
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:36
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // BuildMemberListBase.cs:36
-			this.AbnormalityForeignObjectType = new AbnormalityForeignObjectType_Accessor(doc);                                                      // BuildMemberListBase.cs:36
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                                   // DefineBase.cs:194
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.AbnormalityForeignObjectType = new AbnormalityForeignObjectType_Accessor(doc);                                                      // BuildMemberListBase.cs:53
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -97,59 +156,65 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:45
-			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:45
-			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:45
-			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:45
-			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:45
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:45
-			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:45
-			if (this.AbnormalityForeignObjectType.Validate(sb) == false) retVal = false;                                                             // BuildMemberListBase.cs:45
+			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:62
+			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:62
+			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:62
+			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:62
+			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:62
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:62
+			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:62
+			if (this.AbnormalityForeignObjectType.Validate(sb) == false) retVal = false;                                                             // BuildMemberListBase.cs:62
 			//- ValidateCode
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildMemberListBase.cs:39
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildMemberListBase.cs:39
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:39
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:39
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:39
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:39
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // BuildMemberListBase.cs:39
-			this.WriteComponent(this.AbnormalityForeignObjectType);                                                                                  // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildMemberListBase.cs:56
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildMemberListBase.cs:56
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:56
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:56
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.ConsistentWith);                                                                                                // BuildMemberListBase.cs:56
+			this.WriteComponent(this.AbnormalityForeignObjectType);                                                                                  // BuildMemberListBase.cs:56
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildMemberListBase.cs:42
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildMemberListBase.cs:42
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:42
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:42
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:42
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:42
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // BuildMemberListBase.cs:42
-			this.ReadComponent(this.AbnormalityForeignObjectType);                                                                                   // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildMemberListBase.cs:59
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildMemberListBase.cs:59
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:59
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:59
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.ConsistentWith);                                                                                                 // BuildMemberListBase.cs:59
+			this.ReadComponent(this.AbnormalityForeignObjectType);                                                                                   // BuildMemberListBase.cs:59
 			//- ReadCode
 		}
 

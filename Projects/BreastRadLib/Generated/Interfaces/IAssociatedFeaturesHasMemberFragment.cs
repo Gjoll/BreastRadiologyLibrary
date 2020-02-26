@@ -10,11 +10,18 @@ using BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface AssociatedFeaturesHasMemberFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IAssociatedFeaturesHasMemberFragment : IHeaderFragment
 
 	{
 		//+ Properties
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access HasMembers value AssociatedFeatures
+		/// </summary>
+		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

@@ -10,6 +10,10 @@ using BreastRadLib.BreastRadReportLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface BreastRadReport.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IBreastRadReport : IHeaderFragment,
         ICategoryFragment
 

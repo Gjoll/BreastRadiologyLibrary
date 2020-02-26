@@ -15,26 +15,27 @@ namespace FireFragger.CS
         public List<SDInfo> DirectReferencedFragments = new List<SDInfo>();
         public List<SDInfo> AllReferencedFragments = new List<SDInfo>();
         public StructureDefinition StructDef;
-        public CodeEditor InterfaceEditor;
-        public CodeEditor ClassEditor;
-        public CodeEditor SubClassEditor;
         public ElementTreeNode DiffNodes;
         public ElementTreeNode SnapNodes;
+        public ClassCodeBlocks CodeBlocks = new ClassCodeBlocks();
+        public CodeBlockNested ClassProperties => this.CodeBlocks.ClassProperties;
+        public CodeBlockNested ClassConstructor => CodeBlocks.ClassConstructor;
+        public CodeBlockNested ClassMethods => CodeBlocks.ClassMethods;
+        public CodeBlockNested ClassValidateCodeStart => CodeBlocks.ClassValidateCodeStart;
+        public CodeBlockNested ClassValidateCode => CodeBlocks.ClassValidateCode;
+        public CodeBlockNested ClassWriteCodeStart => CodeBlocks.ClassWriteCodeStart;
+        public CodeBlockNested ClassWriteCode => CodeBlocks.ClassWriteCode;
+        public CodeBlockNested ClassReadCodeStart => CodeBlocks.ClassReadCodeStart;
+        public CodeBlockNested ClassReadCode => CodeBlocks.ClassReadCode;
 
-        public CodeBlockNested ClassProperties => this.ClassEditor?.Blocks.Find("Properties", false);
-        public CodeBlockNested ClassConstructor => this.ClassEditor?.Blocks.Find("Constructor", false);
-        public CodeBlockNested ClassMethods => this.ClassEditor?.Blocks.Find("Methods", false);
-        public CodeBlockNested ClassValidateCodeStart => this.ClassEditor?.Blocks.Find("ValidateCodeStart", false);
-        public CodeBlockNested ClassValidateCode => this.ClassEditor?.Blocks.Find("ValidateCode", false);
-        public CodeBlockNested ClassWriteCodeStart => this.ClassEditor?.Blocks.Find("WriteCodeStart", false);
-        public CodeBlockNested ClassWriteCode => this.ClassEditor?.Blocks.Find("WriteCode", false);
-        public CodeBlockNested ClassReadCodeStart => this.ClassEditor?.Blocks.Find("ReadCodeStart", false);
-        public CodeBlockNested ClassReadCode => this.ClassEditor?.Blocks.Find("ReadCode", false);
+        public CodeBlockNested LocalClassDefs => CodeBlocks.LocalClassDefs;
 
-        public CodeBlockNested LocalClassDefs => this.SubClassEditor?.Blocks.Find("LocalClassDefs", false);
+        public CodeBlockNested InterfaceProperties => CodeBlocks.InterfaceProperties;
+        public CodeBlockNested InterfaceMethods => CodeBlocks.InterfaceMethods;
 
-        public CodeBlockNested InterfaceProperties => this.InterfaceEditor?.Blocks.Find("Properties", false);
-        public CodeBlockNested InterfaceMethods => this.InterfaceEditor?.Blocks.Find("Methods", false);
+        public CodeEditor ClassEditor => this.CodeBlocks.ClassEditor;
+        public CodeEditor SubClassEditor => this.CodeBlocks.SubClassEditor;
+        public CodeEditor InterfaceEditor => this.CodeBlocks.InterfaceEditor;
 
         public String FhirBase => this.StructDef.BaseDefinition.LastUriPart();
 
@@ -45,29 +46,27 @@ namespace FireFragger.CS
             if (sd.Snapshot == null)
                 SnapshotCreator.Create(sd);
 
-            this.InterfaceEditor = new CodeEditor();
             this.DiffNodes = l.Create(sd.Differential.Element);
             this.SnapNodes = l.Create(sd.Snapshot.Element);
 
-            this.InterfaceEditor.TryAddUserMacro("ClassName", CS.Builder.ClassName(this));
-            this.InterfaceEditor.TryAddUserMacro("InterfaceName", CS.Builder.InterfaceName(this));
-            this.InterfaceEditor.Load(Path.Combine("Templates", "Interface.txt"));
-            this.AddMacros(this.InterfaceEditor, this);
+            this.CodeBlocks.InterfaceEditor.TryAddUserMacro("ClassName", CS.CSMisc.ClassName(this));
+            this.CodeBlocks.InterfaceEditor.TryAddUserMacro("InterfaceName", CS.CSMisc.InterfaceName(this));
+            this.CodeBlocks.InterfaceEditor.Load(Path.Combine("Templates", "Interface.txt"));
+            this.AddMacros(this.CodeBlocks.InterfaceEditor, this);
 
-            this.SubClassEditor = new CodeEditor();
-            this.AddMacros(this.SubClassEditor, this);
+            this.AddMacros(this.CodeBlocks.SubClassEditor, this);
 
-            this.SubClassEditor.TryAddUserMacro("FhirBase", this.StructDef.BaseDefinition.LastUriPart());
-            this.SubClassEditor.TryAddUserMacro("BaseClass", CS.Builder.ClassName(this));
-            this.SubClassEditor.Load(Path.Combine("Templates", "SubClass.txt"));
+            this.CodeBlocks.SubClassEditor.TryAddUserMacro("FhirBase", this.StructDef.BaseDefinition.LastUriPart());
+            this.CodeBlocks.SubClassEditor.TryAddUserMacro("BaseClass", CS.CSMisc.ClassName(this));
+            this.CodeBlocks.SubClassEditor.Load(Path.Combine("Templates", "SubClass.txt"));
 
-            this.ClassEditor = new CodeEditor();
-            this.AddMacros(this.ClassEditor, this);
-            this.ClassEditor.TryAddUserMacro("ClassName", CS.Builder.ClassName(this));
+            this.CodeBlocks.ClassEditor = new CodeEditor();
+            this.AddMacros(this.CodeBlocks.ClassEditor, this);
+            this.CodeBlocks.ClassEditor.TryAddUserMacro("ClassName", CS.CSMisc.ClassName(this));
             if (this.IsFragment())
-                this.ClassEditor.Load(Path.Combine("Templates", "Fragment.txt"));
+                this.CodeBlocks.ClassEditor.Load(Path.Combine("Templates", "Fragment.txt"));
             else
-                this.ClassEditor.Load(Path.Combine("Templates", "Class.txt"));
+                this.CodeBlocks.ClassEditor.Load(Path.Combine("Templates", "Class.txt"));
         }
 
         public String BaseDefinitionUrl => this.StructDef.BaseDefinition;

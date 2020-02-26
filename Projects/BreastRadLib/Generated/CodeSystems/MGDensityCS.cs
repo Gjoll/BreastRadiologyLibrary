@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class MGDensityCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGDensityCS";                                                   // Builder.cs:373
-		                                                                                                                                          // Builder.cs:385
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGDensityCS";                                                   // Builder.cs:368
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// These are round or oval calcifications that range from under 1 mm to over a centimeter.
 		/// They are the result of fat necrosis, calcified debris in ducts, and occasional fibroadenomas.
@@ -21,9 +21,9 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_CentralLucent = new Coding(System, "CentralLucent", "Central lucent");                                          // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
-		/// (historically, "isodense")
+		/// (historically, &quot;isodense&quot;)
 		/// X-ray attenuation of the mass is the same as the expected attenuation of an equal volume of
 		/// 
 		/// fibroglandular breast tissue.
@@ -31,7 +31,7 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_EqualDensity = new Coding(System, "EqualDensity", "Equal density");                                             // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// This includes all masses containing fat, such as oil cyst, lipoma or galactocele, as well as mixed
 		/// density masses such as hamartoma.
@@ -42,7 +42,7 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_FatContaining = new Coding(System, "FatContaining", "Fat containing");                                          // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Your breast tissue may be called dense if you have a lot of fibrous or glandular
 		/// tissue and not much fat in the breasts.
@@ -52,7 +52,7 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// X-ray attenuation of the mass is less than the expected attenuation of an equal volume of
 		/// fibroglandular breast tissue.

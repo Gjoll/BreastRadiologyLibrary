@@ -10,6 +10,10 @@ using BreastRadLib.SectionFindingsRightBreastLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface SectionFindingsRightBreast.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface ISectionFindingsRightBreast : IFindingBreastFragment
 
 	{

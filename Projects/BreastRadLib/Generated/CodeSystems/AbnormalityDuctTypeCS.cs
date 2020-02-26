@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class AbnormalityDuctTypeCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityDuctTypeCS";                                         // Builder.cs:373
-		                                                                                                                                          // Builder.cs:385
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityDuctTypeCS";                                         // Builder.cs:368
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Duct is considered normal.
 		/// It is surrounded by normal cells and collagen in the breast with no abnormalities.
@@ -22,21 +22,21 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_DuctNormal = new Coding(System, "DuctNormal", "Duct normal");                                                   // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
-		/// When it is malignant, solitary dilated duct appears to indicate the presence of DCIS.
-		/// In almost all solitary dilated duct cases, the dilated duct appears to be filled with some debris, with or without accompanying fluid, as seen at ultrasound.
+		/// When it is malignant,&#160;solitary dilated duct&#160;appears to indicate the presence of DCIS.
+		/// In almost all&#160;solitary dilated duct&#160;cases, the&#160;dilated duct&#160;appears to be filled with some debris, with or without accompanying fluid, as seen at ultrasound.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_DuctDilatedATLASSolitaryDilatedDuct = new Coding(System, "DuctDilatedATLASSolitaryDilatedDuct", "Duct dilated ATLAS solitary dilated duct");// Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// A noncancerous condition that results in clogged ducts around the nipple.
-		/// While it sometimes causes pain, irritation and discharge, it's generally not a cause
+		/// While it sometimes causes pain, irritation and discharge, it&#39;s generally not a cause
 		/// for concern.
 		/// If left untreated, it can eventually obliterate the breast duct.
-		/// www.healthline.com > health > duct-ectasia-of-the-breast
+		/// www.healthline.com &gt; health &gt; duct-ectasia-of-the-breast
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

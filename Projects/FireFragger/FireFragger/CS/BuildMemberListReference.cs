@@ -18,8 +18,9 @@ namespace FireFragger.CS
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
 
         public BuildMemberListReference(Builder csBuilder,
-            SDInfo fragBase,
-            ElementTreeNode memberNode) : base(csBuilder, fragBase)
+            ClassCodeBlocks fragBase,
+            String type,
+            ElementTreeNode memberNode) : base(csBuilder, fragBase, type)
         {
             this.memberNode = memberNode;
         }
@@ -34,10 +35,10 @@ namespace FireFragger.CS
             String propertyType = profileUrl.LastUriPart();
 
             String className = $"{propertyName}_Accessor";
-            if (this.fragBase.LocalClassDefs == null)
+            if (this.codeBlocks.LocalClassDefs == null)
                 return className;
 
-            this.fragBase.LocalClassDefs
+            this.codeBlocks.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for slice '{sliceName}'")
                 .Summary($"[Fhir Element '{memberSlice.ElementDefinition.ElementId}]'")
@@ -46,7 +47,7 @@ namespace FireFragger.CS
 
             if (max == 1)
             {
-                this.fragBase.LocalClassDefs
+                this.codeBlocks.LocalClassDefs
                     .AppendCode($"public class {className} : MemberListReferenceSingle<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
@@ -62,7 +63,7 @@ namespace FireFragger.CS
             }
             else
             {
-                this.fragBase.LocalClassDefs
+                this.codeBlocks.LocalClassDefs
                     .AppendCode($"public class {className} : MemberListReferenceMultiple<{propertyType}>")
                     .OpenBrace()
                     .DefineBlock(out CodeBlockNested accessors)
@@ -81,9 +82,9 @@ namespace FireFragger.CS
 
         public void Define()
         {
-            if (this.fragBase.ClassEditor != null)
+            if (this.codeBlocks.ClassEditor != null)
             {
-                this.fragBase.ClassWriteCodeStart
+                this.codeBlocks.ClassWriteCodeStart
                     ?.AppendCode($"this.Clear{this.MemberName}();")
                     ;
             }
@@ -93,7 +94,7 @@ namespace FireFragger.CS
                 String sliceName = memberSlice.ElementDefinition.SliceName;
 
                 ElementDefinition sliceDef = memberSlice.ElementDefinition;
-                Int32 max = this.ToMax(sliceDef.Max);
+                Int32 max = CSMisc.ToMax(sliceDef.Max);
                 Int32 min = sliceDef.Min.Value;
                 String propertyName = sliceName.ToMachineName();
 

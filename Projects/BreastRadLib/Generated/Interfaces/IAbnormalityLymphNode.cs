@@ -10,6 +10,10 @@ using BreastRadLib.AbnormalityLymphNodeLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface AbnormalityLymphNode.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IAbnormalityLymphNode : IObservationLeafFragment,
         ITumorSatelliteFragment,
         IBreastRadObservationNoDeviceFragment,
@@ -27,7 +31,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		LymphNodeType_Accessor LymphNodeType { get ; }                                                                                            // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value LymphNodeType
+		/// </summary>
+		LymphNodeType_Accessor LymphNodeType { get ; }                                                                                            // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

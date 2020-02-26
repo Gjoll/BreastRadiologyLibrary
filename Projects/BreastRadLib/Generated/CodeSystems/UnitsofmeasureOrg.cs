@@ -12,16 +12,16 @@ namespace BreastRadLib
 	public class UnitsofmeasureOrg
 	{
 		//+ Fields
-		const string System = "http://unitsofmeasure.org";                                                                                        // Builder.cs:373
-		                                                                                                                                          // Builder.cs:385
+		const string System = "http://unitsofmeasure.org";                                                                                        // Builder.cs:368
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// </summary>
 		public static Coding Code_M = new Coding(System, "m", "meter");                                                                           // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// </summary>
 		public static Coding Code_Cm = new Coding(System, "cm", "centimeter");                                                                    // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// </summary>
 		public static Coding Code_Mm = new Coding(System, "mm", "millimeter");                                                                    // Builder.cs:399

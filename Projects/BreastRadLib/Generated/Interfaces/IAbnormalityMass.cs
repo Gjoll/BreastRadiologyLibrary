@@ -10,6 +10,10 @@ using BreastRadLib.AbnormalityMassLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface AbnormalityMass.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IAbnormalityMass : IObservationLeafFragment,
         ITumorSatelliteFragment,
         IBreastRadObservationNoDeviceFragment,
@@ -28,7 +32,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		MassType_Accessor MassType { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value MassType
+		/// </summary>
+		MassType_Accessor MassType { get ; }                                                                                                      // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

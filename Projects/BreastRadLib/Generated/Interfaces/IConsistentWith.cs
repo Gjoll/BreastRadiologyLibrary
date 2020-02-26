@@ -10,6 +10,10 @@ using BreastRadLib.ConsistentWithLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ConsistentWith.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IConsistentWith : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoValueFragment,
@@ -17,8 +21,14 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		Value_Accessor Value { get ; }                                                                                                            // BuildMemberListBase.cs:29
-		Qualifier_Accessor Qualifier { get ; }                                                                                                    // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value Value
+		/// </summary>
+		Value_Accessor Value { get ; }                                                                                                            // BuildMemberListBase.cs:40
+		/// <summary>
+		/// Access Component value Qualifier
+		/// </summary>
+		Qualifier_Accessor Qualifier { get ; }                                                                                                    // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

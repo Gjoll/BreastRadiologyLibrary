@@ -10,6 +10,10 @@ using BreastRadLib.BreastBodyLocationRequiredFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface BreastBodyLocationRequiredFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IBreastBodyLocationRequiredFragment : IHeaderFragment
 
 	{

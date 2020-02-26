@@ -13,39 +13,42 @@ using BreastRadLib.HeaderFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class BreastBodyLocationExtension.
+	/// This class is automatically generated.
+	/// </summary>
 	public class BreastBodyLocationExtension : ExtensionBase, IBreastBodyLocationExtension
 	{
 		//+ Properties
-		public Quadrant_Accessor Quadrant { get ; protected set; }                                                                                // BuildMemberListBase.cs:33
-		public Region_Accessor Region { get ; protected set; }                                                                                    // BuildMemberListBase.cs:33
-		public ClockDirection_Accessor ClockDirection { get ; protected set; }                                                                    // BuildMemberListBase.cs:33
-		public Depth_Accessor Depth { get ; protected set; }                                                                                      // BuildMemberListBase.cs:33
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public BreastBodyLocationExtension() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public BreastBodyLocationExtension(BreastRadiologyDocument doc, Extension resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public BreastBodyLocationExtension(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Extension());
+			this.Init(doc, new Extension());
 		}
 
 		/// <summary>
@@ -58,14 +61,14 @@ namespace BreastRadLib
 				resource = new Extension();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // DefineBase.cs:189
-			this.Quadrant = new Quadrant_Accessor(doc);                                                                                              // BuildMemberListBase.cs:36
-			this.Region = new Region_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:36
-			this.ClockDirection = new ClockDirection_Accessor(doc);                                                                                  // BuildMemberListBase.cs:36
-			this.Depth = new Depth_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:36
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // DefineBase.cs:194
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -74,38 +77,35 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Quadrant.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:45
-			if (this.Region.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:45
-			if (this.ClockDirection.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:45
-			if (this.Depth.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:45
 			//- ValidateCode
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:27
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteExtension(this.Quadrant);                                                                                                      // BuildMemberListBase.cs:39
-			this.WriteExtension(this.Region);                                                                                                        // BuildMemberListBase.cs:39
-			this.WriteExtension(this.ClockDirection);                                                                                                // BuildMemberListBase.cs:39
-			this.WriteExtension(this.Depth);                                                                                                         // BuildMemberListBase.cs:39
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadExtension(this.Quadrant);                                                                                                       // BuildMemberListBase.cs:42
-			this.ReadExtension(this.Region);                                                                                                         // BuildMemberListBase.cs:42
-			this.ReadExtension(this.ClockDirection);                                                                                                 // BuildMemberListBase.cs:42
-			this.ReadExtension(this.Depth);                                                                                                          // BuildMemberListBase.cs:42
 			//- ReadCode
 		}
 

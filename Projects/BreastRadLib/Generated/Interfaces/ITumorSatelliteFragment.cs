@@ -10,11 +10,18 @@ using BreastRadLib.TumorSatelliteFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface TumorSatelliteFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface ITumorSatelliteFragment : IHeaderFragment
 
 	{
 		//+ Properties
-		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access HasMembers value TumorSatellite
+		/// </summary>
+		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

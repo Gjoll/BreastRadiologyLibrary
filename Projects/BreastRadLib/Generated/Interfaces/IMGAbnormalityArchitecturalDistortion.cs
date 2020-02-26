@@ -10,6 +10,10 @@ using BreastRadLib.MGAbnormalityArchitecturalDistortionLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface MGAbnormalityArchitecturalDistortion.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IMGAbnormalityArchitecturalDistortion : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoComponentFragment,

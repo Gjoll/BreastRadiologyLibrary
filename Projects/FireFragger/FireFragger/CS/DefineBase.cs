@@ -12,8 +12,10 @@ using System.Text;
 
 namespace FireFragger.CS
 {
-    abstract class DefineBase : CodeBlockDefinitions
+    abstract class DefineBase
     {
+        protected Builder csBuilder;
+        protected SDInfo fragBase;
         protected delegate void VisitFragment(SDInfo fi, Int32 level);
 
         protected void VisitFragments(VisitFragment vi,
@@ -37,8 +39,10 @@ namespace FireFragger.CS
         }
 
         public DefineBase(Builder csBuilder,
-                    SDInfo fragBase) : base(csBuilder, fragBase)
+                    SDInfo fragBase)
         {
+            this.csBuilder = csBuilder;
+            this.fragBase = fragBase;
         }
 
         public void Clear()
@@ -53,7 +57,8 @@ namespace FireFragger.CS
             String baseName = this.fragBase.DiffNodes.ElementDefinition.Path;
             if (this.fragBase.DiffNodes.TryGetElementNode($"{baseName}.extension", out ElementTreeNode extensionNode) == false)
                 return;
-            Trace.WriteLine("");
+            BuildMemberListExtensionValue bmv = new BuildMemberListExtensionValue(this.csBuilder, this.fragBase.CodeBlocks);
+            bmv.Build(CSMisc.ClassName(this.fragBase), extensionNode);
         }
 
         public virtual void Build()
@@ -76,7 +81,7 @@ namespace FireFragger.CS
 
             foreach (SDInfo fiRef in this.fragBase.AllReferencedFragments)
             {
-                String fragmentName = Builder.ClassName(fiRef);
+                String fragmentName = CSMisc.ClassName(fiRef);
                 usingBlock.AppendLine($"using BreastRadLib.{fragmentName}Local;");
                 this.MergeFragment(fiRef);
             }
@@ -131,7 +136,7 @@ namespace FireFragger.CS
 
         void DefineBinding(ElementDefinition elementDefinition)
         {
-            if (this.BindingClassName(elementDefinition, 
+            if (CSMisc.BindingClassName(elementDefinition, 
                 out String bindingClassName,
                 out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
                 return;
@@ -145,7 +150,7 @@ namespace FireFragger.CS
                     fhirFieldName = "Value";
                     break;
             }
-            String thisClass = Builder.ClassName(this.fragBase);
+            String thisClass = CSMisc.ClassName(this.fragBase);
             this.fragBase.ClassMethods
                 .SummaryOpen()
                 .Summary($"Set {elementDefinition.ElementId} to one of the predefined items")

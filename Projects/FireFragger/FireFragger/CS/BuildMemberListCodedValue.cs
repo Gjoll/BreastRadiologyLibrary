@@ -14,9 +14,17 @@ namespace FireFragger.CS
     /// </summary>
     internal class BuildMemberListCodedValue : BuildMemberListBase
     {
+        ElementTreeNode DiffNodes;
+        ElementTreeNode SnapNodes;
+
         public BuildMemberListCodedValue(Builder csBuilder,
-            SDInfo fragBase) : base(csBuilder, fragBase)
+            ClassCodeBlocks fragBase,
+            String type,
+            ElementTreeNode snapNodes,
+            ElementTreeNode diffNodes) : base(csBuilder, fragBase, type)
         {
+            this.DiffNodes = diffNodes;
+            this.SnapNodes = snapNodes;
         }
 
 
@@ -29,7 +37,7 @@ namespace FireFragger.CS
         {
             String[] ParamTypes(ElementDefinition.TypeRefComponent type)
             {
-                if (this.BindingClassName(valueNode.ElementDefinition,
+                if (CSMisc.BindingClassName(valueNode.ElementDefinition,
                     out String bindingClassName,
                     out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
                     return new string[] { type.Code };
@@ -53,10 +61,10 @@ namespace FireFragger.CS
             String propertyType = (types.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
 
             String className = $"{propertyName}_Accessor";
-            if (this.fragBase.LocalClassDefs == null)
+            if (this.codeBlocks.LocalClassDefs == null)
                 return className;
 
-            this.fragBase.LocalClassDefs
+            this.codeBlocks.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for '{componentSlice.Name}'")
                 .Summary($"[Fhir Element '{componentSlice.ElementDefinition.ElementId}]'")
@@ -162,12 +170,12 @@ namespace FireFragger.CS
 
         public void Define()
         {
-            if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
+            if (this.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
                 return;
 
-            if (this.fragBase.ClassEditor != null)
+            if (this.codeBlocks.ClassEditor != null)
             {
-                this.fragBase.ClassWriteCodeStart
+                this.codeBlocks.ClassWriteCodeStart
                     ?.AppendCode($"this.ClearComponents();")
                     ;
             }
@@ -178,7 +186,7 @@ namespace FireFragger.CS
 
                 ElementTreeNode GetChild(String name)
                 {
-                    if (this.fragBase.SnapNodes.TryGetElementNode($"{componentSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
+                    if (this.SnapNodes.TryGetElementNode($"{componentSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
                         throw new Exception($"Cant find child {name}");
                     return n;
                 }
@@ -190,7 +198,7 @@ namespace FireFragger.CS
                     throw new Exception("Invalid component code");
                 Coding code = componentCode.Coding[0];
 
-                Int32 max = this.ToMax(componentSlice.ElementDefinition.Max);
+                Int32 max = CSMisc.ToMax(componentSlice.ElementDefinition.Max);
                 Int32 min = componentSlice.ElementDefinition.Min.Value;
                 String propertyName = sliceName.ToMachineName();
 

@@ -10,15 +10,31 @@ using BreastRadLib.FindingBreastFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface FindingBreastFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IFindingBreastFragment : IHeaderFragment,
         IBreastRadObservationNoDeviceFragment
 
 	{
 		//+ Properties
-		MGFinding_Accessor MGFinding { get ; }                                                                                                    // BuildMemberListBase.cs:29
-		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // BuildMemberListBase.cs:29
-		NMFinding_Accessor NMFinding { get ; }                                                                                                    // BuildMemberListBase.cs:29
-		USFinding_Accessor USFinding { get ; }                                                                                                    // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access HasMembers value MGFinding
+		/// </summary>
+		MGFinding_Accessor MGFinding { get ; }                                                                                                    // BuildMemberListBase.cs:40
+		/// <summary>
+		/// Access HasMembers value MRIFinding
+		/// </summary>
+		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // BuildMemberListBase.cs:40
+		/// <summary>
+		/// Access HasMembers value NMFinding
+		/// </summary>
+		NMFinding_Accessor NMFinding { get ; }                                                                                                    // BuildMemberListBase.cs:40
+		/// <summary>
+		/// Access HasMembers value USFinding
+		/// </summary>
+		USFinding_Accessor USFinding { get ; }                                                                                                    // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

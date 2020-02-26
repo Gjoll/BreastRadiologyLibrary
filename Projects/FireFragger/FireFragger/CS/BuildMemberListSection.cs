@@ -14,9 +14,16 @@ namespace FireFragger.CS
     /// </summary>
     internal class BuildMemberListSection : BuildMemberListBase
     {
+        ElementTreeNode DiffNodes;
+        ElementTreeNode SnapNodes;
+
         public BuildMemberListSection(Builder csBuilder,
-            SDInfo fragBase) : base(csBuilder, fragBase)
+            ClassCodeBlocks fragBase,
+            ElementTreeNode snapNodes,
+            ElementTreeNode diffNodes) : base(csBuilder, fragBase, "Section")
         {
+            this.DiffNodes = diffNodes;
+            this.SnapNodes = snapNodes;
         }
 
 
@@ -30,10 +37,10 @@ namespace FireFragger.CS
             String brClass)
         {
             String className = $"{propertyName}_Accessor";
-            if (this.fragBase.LocalClassDefs == null)
+            if (this.codeBlocks.LocalClassDefs == null)
                 return className;
 
-            this.fragBase.LocalClassDefs
+            this.codeBlocks.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Accessor class for '{title}'")
                 .Summary($"[Fhir Element '{sectionSlice.ElementDefinition.ElementId}]'")
@@ -86,8 +93,8 @@ namespace FireFragger.CS
 
                 if (references.Length == 1)
                 {
-                    String fhirType = this.FhirClass(references[0]);
-                    String propertyType = this.BRClass(references[0]);
+                    String fhirType = this.csBuilder.FhirClass(references[0]);
+                    String propertyType = CSMisc.BRClass(references[0]);
                     DefineCreate(fhirType, propertyType, "");
                 }
                 else
@@ -95,8 +102,8 @@ namespace FireFragger.CS
                     foreach (String target in references)
                     {
                         String targetName = target.LastUriPart();
-                        String fhirType = this.FhirClass(target);
-                        String propertyType = this.BRClass(target);
+                        String fhirType = this.csBuilder.FhirClass(target);
+                        String propertyType = CSMisc.BRClass(target);
                         DefineCreate(fhirType, propertyType, targetName);
                     }
                 }
@@ -153,8 +160,8 @@ namespace FireFragger.CS
 
                 if (references.Length == 1)
                 {
-                    String fhirType = this.FhirClass(references[0]);
-                    String propertyType = this.BRClass(references[0]);
+                    String fhirType = this.csBuilder.FhirClass(references[0]);
+                    String propertyType = CSMisc.BRClass(references[0]);
                     DefineAppend(fhirType, propertyType, "");
                 }
                 else
@@ -162,8 +169,8 @@ namespace FireFragger.CS
                     foreach (String target in references)
                     {
                         String targetName = target.LastUriPart();
-                        String fhirType = this.FhirClass(target);
-                        String propertyType = this.BRClass(target);
+                        String fhirType = this.csBuilder.FhirClass(target);
+                        String propertyType = CSMisc.BRClass(target);
                         DefineAppend(fhirType, propertyType, targetName);
                     }
                 }
@@ -174,10 +181,10 @@ namespace FireFragger.CS
 
         public void Define()
         {
-            if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
+            if (this.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
                 return;
 
-            this.fragBase.ClassWriteCode
+            this.codeBlocks.ClassWriteCode
                 .AppendCode($"ClearSection();")
                 ;
 
@@ -187,7 +194,7 @@ namespace FireFragger.CS
 
                 ElementTreeNode GetChild(String name)
                 {
-                    if (this.fragBase.DiffNodes.TryGetElementNode($"{sectionSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
+                    if (this.DiffNodes.TryGetElementNode($"{sectionSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
                         throw new Exception($"Cant find child {name}");
                     return n;
                 }
@@ -201,16 +208,16 @@ namespace FireFragger.CS
                     throw new Exception("Invalid section code");
                 Coding code = sectionCode.Coding[0];
 
-                String[] references = this.References(entryNode);
+                String[] references = CSMisc.References(entryNode);
 
-                Int32 max = this.ToMax(entryNode.ElementDefinition.Max);
+                Int32 max = CSMisc.ToMax(entryNode.ElementDefinition.Max);
                 Int32 min = entryNode.ElementDefinition.Min.Value;
                 String propertyName = sliceName.ToMachineName();
 
                 String brClass;
 
                 if (references.Length == 1)
-                    brClass = this.BRClass(references[0]);
+                    brClass = CSMisc.BRClass(references[0]);
                 else
                     brClass = "ResourceBase";
                 String sectionClassName =

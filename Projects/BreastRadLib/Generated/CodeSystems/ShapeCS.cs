@@ -12,15 +12,15 @@ namespace BreastRadLib
 	public class ShapeCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ShapeCS";                                                       // Builder.cs:373
-		                                                                                                                                          // Builder.cs:385
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ShapeCS";                                                       // Builder.cs:368
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
-		/// A mass that can't be characterized by any specific shape.
+		/// A mass that can&#39;t be characterized by any specific shape.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_IrregularInShape = new Coding(System, "IrregularInShape", "Irregular in shape");                                // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// A mass that has an undulating  (having a smoothly rising and falling form or outline)
 		/// contour.
@@ -28,21 +28,21 @@ namespace BreastRadLib
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_LobulatedInShape = new Coding(System, "LobulatedInShape", "Lobulated in shape");                                // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// There is a mass that is elliptical or egg-shaped.
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_OvalInShape = new Coding(System, "OvalInShape", "Oval in shape");                                               // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// There is a mass that is reniform (kidney shape) in shape.
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Reniform = new Coding(System, "Reniform", "Reniform");                                                          // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// There is a mass that is spherical, ball-shaped, circular or global.
 		/// 

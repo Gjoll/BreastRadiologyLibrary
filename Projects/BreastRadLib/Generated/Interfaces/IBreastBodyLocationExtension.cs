@@ -10,14 +10,14 @@ using BreastRadLib.BreastBodyLocationExtensionLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface BreastBodyLocationExtension.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IBreastBodyLocationExtension : IHeaderFragment
 
 	{
 		//+ Properties
-		Quadrant_Accessor Quadrant { get ; }                                                                                                      // BuildMemberListBase.cs:29
-		Region_Accessor Region { get ; }                                                                                                          // BuildMemberListBase.cs:29
-		ClockDirection_Accessor ClockDirection { get ; }                                                                                          // BuildMemberListBase.cs:29
-		Depth_Accessor Depth { get ; }                                                                                                            // BuildMemberListBase.cs:29
 		//- Properties
 
 		//+ Methods

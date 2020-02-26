@@ -28,36 +28,36 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_AngularMargin = new TCoding(MarginCS.Code_AngularMargin);                                                      // Builder.cs:349
-		public static TCoding Code_CircumscribedMargin = new TCoding(MarginCS.Code_CircumscribedMargin);                                          // Builder.cs:349
-		public static TCoding Code_IndistinctMargin = new TCoding(MarginCS.Code_IndistinctMargin);                                                // Builder.cs:349
-		public static TCoding Code_IntraductalExtension = new TCoding(MarginCS.Code_IntraductalExtension);                                        // Builder.cs:349
-		public static TCoding Code_IrregularMargin = new TCoding(MarginCS.Code_IrregularMargin);                                                  // Builder.cs:349
-		public static TCoding Code_LobulatedMargin = new TCoding(MarginCS.Code_LobulatedMargin);                                                  // Builder.cs:349
-		public static TCoding Code_MacrolobulatedMargin = new TCoding(MarginCS.Code_MacrolobulatedMargin);                                        // Builder.cs:349
-		public static TCoding Code_MicrolobulatedMargin = new TCoding(MarginCS.Code_MicrolobulatedMargin);                                        // Builder.cs:349
-		public static TCoding Code_NonCircumscribedMargin = new TCoding(MarginCS.Code_NonCircumscribedMargin);                                    // Builder.cs:349
-		public static TCoding Code_ObscuredMagin = new TCoding(MarginCS.Code_ObscuredMagin);                                                      // Builder.cs:349
-		public static TCoding Code_SmoothMargin = new TCoding(MarginCS.Code_SmoothMargin);                                                        // Builder.cs:349
-		public static TCoding Code_SpiculatedMargin = new TCoding(MarginCS.Code_SpiculatedMargin);                                                // Builder.cs:349
+		public static TCoding Code_AngularMargin = new TCoding(MarginCS.Code_AngularMargin);                                                      // Builder.cs:344
+		public static TCoding Code_CircumscribedMargin = new TCoding(MarginCS.Code_CircumscribedMargin);                                          // Builder.cs:344
+		public static TCoding Code_IndistinctMargin = new TCoding(MarginCS.Code_IndistinctMargin);                                                // Builder.cs:344
+		public static TCoding Code_IntraductalExtension = new TCoding(MarginCS.Code_IntraductalExtension);                                        // Builder.cs:344
+		public static TCoding Code_IrregularMargin = new TCoding(MarginCS.Code_IrregularMargin);                                                  // Builder.cs:344
+		public static TCoding Code_LobulatedMargin = new TCoding(MarginCS.Code_LobulatedMargin);                                                  // Builder.cs:344
+		public static TCoding Code_MacrolobulatedMargin = new TCoding(MarginCS.Code_MacrolobulatedMargin);                                        // Builder.cs:344
+		public static TCoding Code_MicrolobulatedMargin = new TCoding(MarginCS.Code_MicrolobulatedMargin);                                        // Builder.cs:344
+		public static TCoding Code_NonCircumscribedMargin = new TCoding(MarginCS.Code_NonCircumscribedMargin);                                    // Builder.cs:344
+		public static TCoding Code_ObscuredMagin = new TCoding(MarginCS.Code_ObscuredMagin);                                                      // Builder.cs:344
+		public static TCoding Code_SmoothMargin = new TCoding(MarginCS.Code_SmoothMargin);                                                        // Builder.cs:344
+		public static TCoding Code_SpiculatedMargin = new TCoding(MarginCS.Code_SpiculatedMargin);                                                // Builder.cs:344
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:335
-		{                                                                                                                                         // Builder.cs:336
-		    yield return Code_AngularMargin;                                                                                                      // Builder.cs:352
-		    yield return Code_CircumscribedMargin;                                                                                                // Builder.cs:352
-		    yield return Code_IndistinctMargin;                                                                                                   // Builder.cs:352
-		    yield return Code_IntraductalExtension;                                                                                               // Builder.cs:352
-		    yield return Code_IrregularMargin;                                                                                                    // Builder.cs:352
-		    yield return Code_LobulatedMargin;                                                                                                    // Builder.cs:352
-		    yield return Code_MacrolobulatedMargin;                                                                                               // Builder.cs:352
-		    yield return Code_MicrolobulatedMargin;                                                                                               // Builder.cs:352
-		    yield return Code_NonCircumscribedMargin;                                                                                             // Builder.cs:352
-		    yield return Code_ObscuredMagin;                                                                                                      // Builder.cs:352
-		    yield return Code_SmoothMargin;                                                                                                       // Builder.cs:352
-		    yield return Code_SpiculatedMargin;                                                                                                   // Builder.cs:352
-		}                                                                                                                                         // Builder.cs:358
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
+		{                                                                                                                                         // Builder.cs:331
+		    yield return Code_AngularMargin;                                                                                                      // Builder.cs:347
+		    yield return Code_CircumscribedMargin;                                                                                                // Builder.cs:347
+		    yield return Code_IndistinctMargin;                                                                                                   // Builder.cs:347
+		    yield return Code_IntraductalExtension;                                                                                               // Builder.cs:347
+		    yield return Code_IrregularMargin;                                                                                                    // Builder.cs:347
+		    yield return Code_LobulatedMargin;                                                                                                    // Builder.cs:347
+		    yield return Code_MacrolobulatedMargin;                                                                                               // Builder.cs:347
+		    yield return Code_MicrolobulatedMargin;                                                                                               // Builder.cs:347
+		    yield return Code_NonCircumscribedMargin;                                                                                             // Builder.cs:347
+		    yield return Code_ObscuredMagin;                                                                                                      // Builder.cs:347
+		    yield return Code_SmoothMargin;                                                                                                       // Builder.cs:347
+		    yield return Code_SpiculatedMargin;                                                                                                   // Builder.cs:347
+		}                                                                                                                                         // Builder.cs:353
 		//- Methods
 	}
 }

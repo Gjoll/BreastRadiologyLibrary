@@ -10,11 +10,18 @@ using BreastRadLib.NotPreviouslySeenComponentFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface NotPreviouslySeenComponentFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface INotPreviouslySeenComponentFragment : IBreastBodyLocationRequiredFragment
 
 	{
 		//+ Properties
-		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value NotPreviouslySeen
+		/// </summary>
+		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

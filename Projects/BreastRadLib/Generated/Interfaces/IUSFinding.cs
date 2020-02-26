@@ -10,6 +10,10 @@ using BreastRadLib.USFindingLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface USFinding.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IUSFinding : IObservationSectionFragment
 
 	{

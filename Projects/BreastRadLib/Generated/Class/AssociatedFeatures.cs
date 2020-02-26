@@ -18,38 +18,54 @@ using BreastRadLib.ObservationSectionFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Class AssociatedFeatures.
+	/// This class is automatically generated.
+	/// </summary>
 	public class AssociatedFeatures : ObservationBase, IAssociatedFeatures
 	{
 		//+ Properties
-		public MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; protected set; }                        // BuildMemberListBase.cs:33
-		public MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; protected set; }                                            // BuildMemberListBase.cs:33
-		public ObservedFeature_Accessor ObservedFeature { get ; protected set; }                                                                  // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access HasMembers value MGAbnormalityArchitecturalDistortion
+		/// </summary>
+		public MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; protected set; }                        // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access HasMembers value MGAbnormalityCalcification
+		/// </summary>
+		public MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; protected set; }                                            // BuildMemberListBase.cs:47
+		/// <summary>
+		/// Access HasMembers value ObservedFeature
+		/// </summary>
+		public ObservedFeature_Accessor ObservedFeature { get ; protected set; }                                                                  // BuildMemberListBase.cs:47
 		//- Properties
 
 		/// <summary>
-		/// No parameters constructor.
-		// Caller must call Init();
+		/// Constructor.
+		/// Caller must call Init();
 		/// </summary>
 		public AssociatedFeatures() : base()
 		{
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
+		/// <param name="resource">Fhir observation resource</param>
 		public AssociatedFeatures(BreastRadiologyDocument doc, Observation resource)
 		{
 			this.Init(doc, resource);
 		}
 
 		/// <summary>
-		/// Parametersize constructur.
+		/// Constructor.
 		/// User must not call Init().
 		/// </summary>
+		/// <param name="doc">base document</param>
 		public AssociatedFeatures(BreastRadiologyDocument doc)
 		{
-		this.Init(doc, new Observation());
+			this.Init(doc, new Observation());
 		}
 
 		/// <summary>
@@ -62,14 +78,27 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:128
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // DefineBase.cs:189
-			this.MGAbnormalityArchitecturalDistortion = new MGAbnormalityArchitecturalDistortion_Accessor(doc);                                      // BuildMemberListBase.cs:36
-			this.MGAbnormalityCalcification = new MGAbnormalityCalcification_Accessor(doc);                                                          // BuildMemberListBase.cs:36
-			this.ObservedFeature = new ObservedFeature_Accessor(doc);                                                                                // BuildMemberListBase.cs:36
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // DefineBase.cs:194
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.MGAbnormalityArchitecturalDistortion = new MGAbnormalityArchitecturalDistortion_Accessor(doc);                                      // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.MGAbnormalityCalcification = new MGAbnormalityCalcification_Accessor(doc);                                                          // BuildMemberListBase.cs:53
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ObservedFeature = new ObservedFeature_Accessor(doc);                                                                                // BuildMemberListBase.cs:53
 			//- Constructor
 		}
 
+		/// <summary>
+		/// Validate object. Will return false if an error is detected. sb will contains text of error found.
+		/// User must not call Init().
+		/// </summary>
 		public override bool Validate(StringBuilder sb)
 		{
 			bool retVal = true;
@@ -78,36 +107,42 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.MGAbnormalityArchitecturalDistortion.Validate(sb) == false) retVal = false;                                                     // BuildMemberListBase.cs:45
-			if (this.MGAbnormalityCalcification.Validate(sb) == false) retVal = false;                                                               // BuildMemberListBase.cs:45
-			if (this.ObservedFeature.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:45
+			if (this.MGAbnormalityArchitecturalDistortion.Validate(sb) == false) retVal = false;                                                     // BuildMemberListBase.cs:62
+			if (this.MGAbnormalityCalcification.Validate(sb) == false) retVal = false;                                                               // BuildMemberListBase.cs:62
+			if (this.ObservedFeature.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:62
 			//- ValidateCode
 			return retVal;
 		}
 
+		/// <summary>
+		/// Write to fhir resource
+		/// </summary>
 		public override void Write()
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:87
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                          // BuildMemberListBase.cs:39
-			this.WriteHasMember(this.MGAbnormalityCalcification);                                                                                    // BuildMemberListBase.cs:39
-			this.WriteHasMember(this.ObservedFeature);                                                                                               // BuildMemberListBase.cs:39
+			this.WriteHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                          // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.MGAbnormalityCalcification);                                                                                    // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.ObservedFeature);                                                                                               // BuildMemberListBase.cs:56
 			//- WriteCode
 		}
 
+		/// <summary>
+		/// Read from fhir resource
+		/// </summary>
 		public override void Read()
 		{
 			base.Read();
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                           // BuildMemberListBase.cs:42
-			this.ReadHasMember(this.MGAbnormalityCalcification);                                                                                     // BuildMemberListBase.cs:42
-			this.ReadHasMember(this.ObservedFeature);                                                                                                // BuildMemberListBase.cs:42
+			this.ReadHasMember(this.MGAbnormalityArchitecturalDistortion);                                                                           // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.MGAbnormalityCalcification);                                                                                     // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.ObservedFeature);                                                                                                // BuildMemberListBase.cs:59
 			//- ReadCode
 		}
 

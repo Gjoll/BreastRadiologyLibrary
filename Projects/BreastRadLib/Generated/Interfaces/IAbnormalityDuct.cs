@@ -10,6 +10,10 @@ using BreastRadLib.AbnormalityDuctLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface AbnormalityDuct.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IAbnormalityDuct : IObservationLeafFragment,
         IBreastRadObservationNoDeviceFragment,
         IBreastRadObservationNoValueFragment,
@@ -26,7 +30,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		DuctType_Accessor DuctType { get ; }                                                                                                      // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value DuctType
+		/// </summary>
+		DuctType_Accessor DuctType { get ; }                                                                                                      // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

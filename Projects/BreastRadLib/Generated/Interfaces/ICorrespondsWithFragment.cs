@@ -10,10 +10,17 @@ using BreastRadLib.CorrespondsWithFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface CorrespondsWithFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface ICorrespondsWithFragment 
 	{
 		//+ Properties
-		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value CorrespondsWith
+		/// </summary>
+		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

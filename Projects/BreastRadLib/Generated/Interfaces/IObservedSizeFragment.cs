@@ -10,10 +10,17 @@ using BreastRadLib.ObservedSizeFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface ObservedSizeFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface IObservedSizeFragment 
 	{
 		//+ Properties
-		ObsSize_Accessor ObsSize { get ; }                                                                                                        // BuildMemberListBase.cs:29
+		/// <summary>
+		/// Access Component value ObsSize
+		/// </summary>
+		ObsSize_Accessor ObsSize { get ; }                                                                                                        // BuildMemberListBase.cs:40
 		//- Properties
 
 		//+ Methods

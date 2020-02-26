@@ -10,6 +10,10 @@ using BreastRadLib.CategoryFragmentLocal;
 
 namespace BreastRadLib
 {
+	/// <summary>
+	/// Interface CategoryFragment.
+	/// This interface is automatically generated.
+	/// </summary>
 	public interface ICategoryFragment 
 	{
 		//+ Properties

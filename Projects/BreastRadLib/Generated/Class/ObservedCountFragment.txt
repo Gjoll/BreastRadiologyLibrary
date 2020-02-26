@@ -1,28 +1,34 @@
 		//+ Properties
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:33
+		/// <summary>
+		/// Access Component value ObsCount
+		/// </summary>
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:47
 		//- Properties
 
 			//+ Constructor
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:36
+			/// <summary>
+			/// Constructor
+			/// </summary>
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:53
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:45
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:62
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:171
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:39
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:56
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:42
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:59
 			//- ReadCode
 
 			//+ Methods

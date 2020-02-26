@@ -12,31 +12,31 @@ namespace BreastRadLib
 	public class ConsistentWithQualifierCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithQualifierCS";                                     // Builder.cs:373
-		                                                                                                                                          // Builder.cs:385
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithQualifierCS";                                     // Builder.cs:368
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// More than one possibility for your diagnosis.
 		/// The process of weighing the probability of one disease versus that of other diseases
-		/// possibly accounting for a patient's illness.
+		/// possibly accounting for a patient&#39;s illness.
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_DifferentialDiagnosis = new Coding(System, "DifferentialDiagnosis", "Differential diagnosis");                  // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Likely represents
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_LikelyRepresents = new Coding(System, "LikelyRepresents", "Likely represents");                                 // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Most likely
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MostLikely = new Coding(System, "MostLikely", "Most likely");                                                   // Builder.cs:399
-		                                                                                                                                          // Builder.cs:385
+		                                                                                                                                          // Builder.cs:380
 		/// <summary>
 		/// Resembles
 		/// 
