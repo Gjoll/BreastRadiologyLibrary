@@ -17,12 +17,9 @@ namespace FireFragger.CS
     /// </summary>
     class DefineExtension : DefineBase
     {
-        BuildMemberListExtensionValue bml;
-
         public DefineExtension(Builder csBuilder,
                     SDInfo fragBase) : base(csBuilder, fragBase)
         {
-            this.bml = new BuildMemberListExtensionValue(this.csBuilder, this.fragBase.CodeBlocks);
         }
 
         public override void Build()

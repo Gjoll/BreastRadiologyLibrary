@@ -418,10 +418,13 @@ namespace FireFragger.CS
                 this.Save(fi.InterfaceEditor, Path.Combine(this.OutputDir, "Generated", "Interfaces", $"{CSMisc.InterfaceName(fi)}.cs"));
                 if (fi.ClassEditor != null)
                 {
-                    if (fi.IsFragment() == false)
-                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{CSMisc.ClassName(fi)}.cs"));
-                    else
+                    if (
+                        (fi.IsFragment() == true) ||
+                        (fi.StructDef.BaseDefinition == Global.ExtensionUrl)
+                        )
                         this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{CSMisc.ClassName(fi)}.txt"));
+                    else
+                        this.Save(fi.ClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{CSMisc.ClassName(fi)}.cs"));
                 }
                 if (fi.SubClassEditor != null)
                     this.Save(fi.SubClassEditor, Path.Combine(this.OutputDir, "Generated", "Class", $"{CSMisc.ClassName(fi)}Local.cs"));
