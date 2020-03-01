@@ -21,27 +21,27 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Section value Report
 		/// </summary>
-		Report_Accessor Report { get ; }                                                                                                          // BuildMemberListBase.cs:40
+		Report_Accessor Report { get ; }                                                                                                          // BuildMemberListBase.cs:62
 		/// <summary>
 		/// Access Section value Impressions
 		/// </summary>
-		Impressions_Accessor Impressions { get ; }                                                                                                // BuildMemberListBase.cs:40
+		Impressions_Accessor Impressions { get ; }                                                                                                // BuildMemberListBase.cs:62
 		/// <summary>
 		/// Access Section value FindingsRightBreast
 		/// </summary>
-		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // BuildMemberListBase.cs:40
+		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // BuildMemberListBase.cs:62
 		/// <summary>
 		/// Access Section value FindingsLeftBreast
 		/// </summary>
-		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // BuildMemberListBase.cs:40
+		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // BuildMemberListBase.cs:62
 		/// <summary>
 		/// Access Section value RelatedResources
 		/// </summary>
-		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // BuildMemberListBase.cs:40
+		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // BuildMemberListBase.cs:62
 		/// <summary>
 		/// Access Section value Recommendations
 		/// </summary>
-		Recommendations_Accessor Recommendations { get ; }                                                                                        // BuildMemberListBase.cs:40
+		Recommendations_Accessor Recommendations { get ; }                                                                                        // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

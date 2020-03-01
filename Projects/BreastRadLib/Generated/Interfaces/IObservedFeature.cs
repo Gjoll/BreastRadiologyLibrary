@@ -26,7 +26,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value FeatureType
 		/// </summary>
-		FeatureType_Accessor FeatureType { get ; }                                                                                                // BuildMemberListBase.cs:40
+		FeatureType_Accessor FeatureType { get ; }                                                                                                // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

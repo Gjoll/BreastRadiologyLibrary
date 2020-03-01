@@ -24,11 +24,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value Value
 		/// </summary>
-		Value_Accessor Value { get ; }                                                                                                            // BuildMemberListBase.cs:40
+		Value_Accessor Value { get ; }                                                                                                            // BuildMemberListBase.cs:62
 		/// <summary>
 		/// Access Component value Qualifier
 		/// </summary>
-		Qualifier_Accessor Qualifier { get ; }                                                                                                    // BuildMemberListBase.cs:40
+		Qualifier_Accessor Qualifier { get ; }                                                                                                    // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

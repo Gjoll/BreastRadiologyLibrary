@@ -11,11 +11,11 @@ namespace FireFragger.CS
     /// <summary>
     /// Build the class that implements a list of extension values
     /// </summary>
-    internal class BuildMemberListExtensionValue : BuildMemberListBase
+    internal class BuildMemberListExtension : BuildMemberListBase
     {
         String extensionName = "?";
 
-        public BuildMemberListExtensionValue(Builder csBuilder,
+        public BuildMemberListExtension(Builder csBuilder,
             ClassCodeBlocks codeBlocks) : base(csBuilder, codeBlocks, "Extension")
         {
         }
@@ -48,15 +48,15 @@ namespace FireFragger.CS
             String propertyName = extensionName.ToMachineName();
 
             String extensionClassName =
-                this.DefineLocalClass(extensionSlice, extensionUrl, max, min, propertyName, valueNode);
+                this.DefineLocalClass(extensionSlice, extensionUrl, min, max, propertyName, valueNode);
 
             this.DefineCommon(extensionClassName, propertyName, "Extension");
         }
 
         String DefineLocalClass(ElementTreeSlice extensionSlice,
             String extensionUrl,
-            Int32 max,
             Int32 min,
+            Int32 max,
             String propertyName,
             ElementTreeNode valueNode)
         {
@@ -103,7 +103,7 @@ namespace FireFragger.CS
                 .DefineBlock(out CodeBlockNested blockMethods)
                 .BlankLine()
                 .SummaryOpen()
-                .Summary($"Accessor class constructor")
+                .Summary($"Constructor")
                 .SummaryClose()
                 .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
                 .OpenBrace()
@@ -371,11 +371,11 @@ namespace FireFragger.CS
             String sliceClassName = null;
 
             this.DefineStart();
-            if ((valueXCardMax > 0) && (subExtensionNode.Slices.Count > 1))
+            if ((valueXCardMax != 0) && (subExtensionNode.Slices.Count > 1))
                 throw new Exception($"Both Simple and Complex extension found. Not implemented");
             else if ((valueXCardMax == 0) && (subExtensionNode.Slices.Count == 0))
                 throw new Exception($"Neither Simple and Complex extension found. Not implemented");
-            else if (valueXCardMax > 0)
+            else if (valueXCardMax != 0)
                 sliceClassName = this.BuildSimpleExtensionClass(extensionSlice, localClassDefs, valueXNode);
             else
                 this.BuildPropertyComplexExtension(subExtensionNode);
@@ -392,7 +392,7 @@ namespace FireFragger.CS
                 .AppendCode($"{sliceClassName} {propertyName};")
                 ;
             blockConstructor
-                .AppendCode($"this.{propertyName} = new {sliceClassName}();")
+                .AppendCode($"this.{propertyName} = new {sliceClassName}(this.doc);")
                 ;
             blockRead
                 .AppendCode($"this.Read(this.{propertyName});")
@@ -410,27 +410,47 @@ namespace FireFragger.CS
             CodeBlockNested localClassDefs,
             ElementTreeNode valueXNode)
         {
-            String className = CSMisc.ClassName(extensionSlice.Name);
+            Int32 max = CSMisc.ToMax(extensionSlice.ElementDefinition.Max);
+            Int32 min = extensionSlice.ElementDefinition.Min.Value;
+
+            String sliceName = extensionSlice.ElementDefinition.SliceName;
+            String className = CSMisc.ClassName(sliceName);
             if (className.EndsWith("ExtensionItem") == false)
                 className += "ExtensionItem";
 
             localClassDefs
+                .BlankLine()
                 .SummaryOpen()
                 .Summary($"Class that implements the {className}' extension slice class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : ISimpleExtensionItem")
+                .AppendCode($"public class {className} : MemberListExtension")
                 .OpenBrace()
+
                 .DefineBlock(out CodeBlockNested blockPropertiesSlice)
+
+                .BlankLine()
+                .SummaryOpen()
+                .Summary($"Constructor")
+                .SummaryClose()
+                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
+                .OpenBrace()
+                .AppendCode($"this.Init(doc, {min}, {max}, \"{sliceName}\");")
+                .DefineBlock(out CodeBlockNested constructorBlock)
+                .CloseBrace()
+
                 .BlankLine()
                 .AppendCode($"public void Read()")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockReadSlice)
                 .CloseBrace()
+
                 .BlankLine()
                 .AppendCode($"public void Write()")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockWriteSlice)
                 .CloseBrace()
+                .DefineBlock(out CodeBlockNested blockMethodsSlice)
+                .BlankLine()
                 .CloseBrace()
                 ;
 
@@ -449,35 +469,66 @@ namespace FireFragger.CS
 
             }
 
-            if (CSMisc.ToMax(valueXNode.ElementDefinition.Max) == 1)
+            switch (max)
             {
-                String fieldName = CSMisc.FieldName(extensionSlice.Name);
-                blockPropertiesSlice
-                    .SummaryOpen()
-                    .Summary($"Field for extension slice {extensionSlice.Name}")
-                    .Summary($"[Fhir Element '{extensionSlice.ElementDefinition.ElementId}]'")
-                    .SummaryClose()
-                    .AppendCode($"{baseProperty} {fieldName};")
-                    .BlankLine()
-                    .SummaryOpen()
-                    .Summary($"Get value of extension slice {extensionSlice.Name}")
-                    .SummaryClose()
-                    .AppendCode($"public {baseProperty} Get() => this.{fieldName};")
-                    ;
-                foreach (ElementDefinition.TypeRefComponent type in valueXNode.ElementDefinition.Type)
-                {
-                    blockPropertiesSlice
-                        .BlankLine()
-                        .SummaryOpen()
-                        .Summary($"Set value of extension slice {extensionSlice.Name}")
-                        .SummaryClose()
-                        .AppendCode($"public void Set({type.Code} value) => this.{fieldName} = value;")
-                        ;
-                }
-            }
-            else if (CSMisc.ToMax(valueXNode.ElementDefinition.Max) > 1)
-            {
-                throw new NotImplementedException();
+                case 1:
+                    {
+                        blockPropertiesSlice
+                            .BlankLine()
+                            .SummaryOpen()
+                            .Summary($"Get value of extension slice {extensionSlice.Name}")
+                            .SummaryClose()
+                            .AppendCode($"public {baseProperty} Get() => ({baseProperty}) this.First();")
+                            ;
+                        foreach (ElementDefinition.TypeRefComponent type in valueXNode.ElementDefinition.Type)
+                        {
+                            blockPropertiesSlice
+                                .BlankLine()
+                                .SummaryOpen()
+                                .Summary($"Set value of extension slice {extensionSlice.Name}")
+                                .SummaryClose()
+                                .AppendCode($"public void Set({type.Code} value) => this.SetSingleItem(value);")
+                                ;
+                        }
+                    }
+                    break;
+
+                case -1:
+                    {
+                        List<ElementDefinition.TypeRefComponent> types = valueXNode.ElementDefinition.Type;
+
+                        void DefineAppend(ElementDefinition valueXNode, String fhirType, String targetName)
+                        {
+                            foreach (String paramType in ParamTypes(valueXNode, types[0]))
+                            {
+                                blockMethodsSlice
+                                    .BlankLine()
+                                    .SummaryOpen()
+                                    .Summary($"Append item to end of list")
+                                    .SummaryClose()
+                                    .AppendCode($"public void Append{targetName}({paramType} value) => this.RawItems.Add(({fhirType}) value);")
+                                    ;
+                            }
+                        }
+
+                        blockPropertiesSlice
+                            .BlankLine()
+                            .SummaryOpen()
+                            .Summary($"Get value of extension slice {extensionSlice.Name}")
+                            .SummaryClose()
+                            .AppendCode($"public {baseProperty} Get() => ({baseProperty}) this.First();")
+                            ;
+                        if (types.Count == 1)
+                            DefineAppend(valueXNode.ElementDefinition, baseProperty, "");
+                        foreach (ElementDefinition.TypeRefComponent type in types)
+                        {
+                            DefineAppend(valueXNode.ElementDefinition, type.Code, type.Code);
+                        }
+                    }
+                    break;
+
+                default:
+                    throw new NotImplementedException();
             }
             return className;
         }
@@ -516,9 +567,6 @@ namespace FireFragger.CS
                     throw new Exception($"{extensionSlice.Name} invalid value[x].type count. Expected 1, got {valueXElement.Type.Count}");
                 typeCode = valueXElement.Type[0].Code;
             }
-
-            Int32 cardMin = extensionSlice.ElementDefinition.Min.Value;
-            Int32 cardMax = CSMisc.ToMax(extensionSlice.ElementDefinition.Max);
 
             CheckExtension();
             String extensionUrl = GetExtensionUrl();

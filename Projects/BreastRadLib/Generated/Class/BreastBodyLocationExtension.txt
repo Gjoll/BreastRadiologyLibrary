@@ -88,10 +88,10 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtensionValue.cs:29
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
+			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

@@ -27,6 +27,28 @@ namespace FireFragger.CS
             this.codeBlocks = codeBlocks;
         }
 
+        protected String[] ParamTypes(ElementDefinition valueNode,
+            ElementDefinition.TypeRefComponent type)
+        {
+            if (CSMisc.BindingClassName(valueNode,
+                out String bindingClassName,
+                out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
+                return new string[] { type.Code };
+
+            switch (binding.Strength)
+            {
+                case BindingStrength.Required:
+                    return new string[] { bindingClassName };
+
+                case BindingStrength.Preferred:
+                case BindingStrength.Extensible:
+                    return new string[] { type.Code, bindingClassName };
+
+                default:
+                    return new string[] { type.Code };
+            }
+        }
+
         protected void DefineCommon(String componentClassName,
             String propertyName,
             String methodSuffix)

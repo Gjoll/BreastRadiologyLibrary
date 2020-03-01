@@ -27,19 +27,19 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access HasMembers value MGFinding
 		/// </summary>
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:47
+		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access HasMembers value MRIFinding
 		/// </summary>
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // BuildMemberListBase.cs:47
+		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access HasMembers value NMFinding
 		/// </summary>
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:47
+		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access HasMembers value USFinding
 		/// </summary>
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:47
+		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
 		//- Properties
 
 		/// <summary>
@@ -86,19 +86,19 @@ namespace BreastRadLib
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:53
+			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // BuildMemberListBase.cs:53
+			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:53
+			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:53
+			this.USFinding = new USFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
 			//- Constructor
 		}
 
@@ -114,10 +114,10 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:62
-			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:62
-			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:62
-			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:62
+			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
+			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:84
+			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
+			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -132,10 +132,10 @@ namespace BreastRadLib
 			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // BuildMemberListBase.cs:56
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // BuildMemberListBase.cs:56
-			this.WriteHasMember(this.NMFinding);                                                                                                     // BuildMemberListBase.cs:56
-			this.WriteHasMember(this.USFinding);                                                                                                     // BuildMemberListBase.cs:56
+			this.WriteHasMember(this.MGFinding);                                                                                                     // BuildMemberListBase.cs:78
+			this.WriteHasMember(this.MRIFinding);                                                                                                    // BuildMemberListBase.cs:78
+			this.WriteHasMember(this.NMFinding);                                                                                                     // BuildMemberListBase.cs:78
+			this.WriteHasMember(this.USFinding);                                                                                                     // BuildMemberListBase.cs:78
 			//- WriteCode
 		}
 
@@ -148,10 +148,10 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // BuildMemberListBase.cs:59
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // BuildMemberListBase.cs:59
-			this.ReadHasMember(this.NMFinding);                                                                                                      // BuildMemberListBase.cs:59
-			this.ReadHasMember(this.USFinding);                                                                                                      // BuildMemberListBase.cs:59
+			this.ReadHasMember(this.MGFinding);                                                                                                      // BuildMemberListBase.cs:81
+			this.ReadHasMember(this.MRIFinding);                                                                                                     // BuildMemberListBase.cs:81
+			this.ReadHasMember(this.NMFinding);                                                                                                      // BuildMemberListBase.cs:81
+			this.ReadHasMember(this.USFinding);                                                                                                      // BuildMemberListBase.cs:81
 			//- ReadCode
 		}
 

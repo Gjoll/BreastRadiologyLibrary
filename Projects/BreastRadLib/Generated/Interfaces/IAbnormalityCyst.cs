@@ -35,7 +35,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value CystType
 		/// </summary>
-		CystType_Accessor CystType { get ; }                                                                                                      // BuildMemberListBase.cs:40
+		CystType_Accessor CystType { get ; }                                                                                                      // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

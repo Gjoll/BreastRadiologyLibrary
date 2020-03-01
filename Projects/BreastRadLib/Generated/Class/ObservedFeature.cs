@@ -31,11 +31,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value ObsCount
 		/// </summary>
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:47
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access Component value FeatureType
 		/// </summary>
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:47
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:69
 		//- Properties
 
 		/// <summary>
@@ -82,11 +82,11 @@ namespace BreastRadLib
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:53
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:53
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:75
 			//- Constructor
 		}
 
@@ -102,8 +102,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:62
-			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:62
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:84
+			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -116,13 +116,13 @@ namespace BreastRadLib
 			base.Write();
 			//+ WriteCodeStart
 			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:56
-			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:56
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:78
+			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:78
 			//- WriteCode
 		}
 
@@ -135,8 +135,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:59
-			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:59
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:81
+			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:81
 			//- ReadCode
 		}
 

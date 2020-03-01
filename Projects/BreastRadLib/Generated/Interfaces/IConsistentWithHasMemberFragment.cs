@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access HasMembers value ConsistentWith
 		/// </summary>
-		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // BuildMemberListBase.cs:40
+		ConsistentWith_Accessor ConsistentWith { get ; }                                                                                          // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

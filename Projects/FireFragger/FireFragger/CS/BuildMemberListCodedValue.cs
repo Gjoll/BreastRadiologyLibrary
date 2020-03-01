@@ -35,27 +35,6 @@ namespace FireFragger.CS
             String propertyName,
             ElementTreeNode valueNode)
         {
-            String[] ParamTypes(ElementDefinition.TypeRefComponent type)
-            {
-                if (CSMisc.BindingClassName(valueNode.ElementDefinition,
-                    out String bindingClassName,
-                    out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
-                    return new string[] { type.Code };
-
-                switch (binding.Strength)
-                {
-                    case BindingStrength.Required:
-                        return new string[] { bindingClassName };
-
-                    case BindingStrength.Preferred:
-                    case BindingStrength.Extensible:
-                        return new string[] { type.Code, bindingClassName };
-
-                    default:
-                        return new string[] { type.Code };
-                }
-            }
-
             List<ElementDefinition.TypeRefComponent> types = valueNode.ElementDefinition.Type;
 
             String propertyType = (types.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
@@ -92,7 +71,7 @@ namespace FireFragger.CS
             {
                 void Define(String suffix, String valueType)
                 {
-                    foreach (String paramType in ParamTypes(types[0]))
+                    foreach (String paramType in ParamTypes(valueNode.ElementDefinition, types[0]))
                     {
                         methodsBlock
                             .BlankLine()
@@ -120,17 +99,14 @@ namespace FireFragger.CS
             {
                 void DefineAppend(String fhirType, String targetName)
                 {
-                    foreach (String paramType in ParamTypes(types[0]))
+                    foreach (String paramType in ParamTypes(valueNode.ElementDefinition, types[0]))
                     {
                         methodsBlock
                             .BlankLine()
                             .SummaryOpen()
                             .Summary($"Append item to end of list")
                             .SummaryClose()
-                            .AppendCode($"public void Append{targetName}({paramType} value)")
-                            .OpenBrace()
-                            .AppendCode($"this.RawItems.Add(value);")
-                            .CloseBrace();
+                            .AppendCode($"public void Append{targetName}({paramType} value) => this.RawItems.Add(value);")
                         ;
                     }
                 }

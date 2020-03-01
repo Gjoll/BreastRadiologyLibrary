@@ -14,95 +14,105 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	/// <summary>
 	/// Class that implements the 'BodyDistanceFrom' extension class.
 	/// </summary>
-	public class BodyDistanceFromExtension : MemberListExtension                                                                               // BuildMemberListExtensionValue.cs:317
-	{                                                                                                                                          // BuildMemberListExtensionValue.cs:318
-	    LandMarkExtensionItem LandMark;                                                                                                        // BuildMemberListExtensionValue.cs:392
-	    DistanceFromLandMarkExtensionItem DistanceFromLandMark;                                                                                // BuildMemberListExtensionValue.cs:392
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:320
+	public class BodyDistanceFromExtension : MemberListExtension                                                                               // BuildMemberListExtension.cs:317
+	{                                                                                                                                          // BuildMemberListExtension.cs:318
+	    LandMarkExtensionItem LandMark;                                                                                                        // BuildMemberListExtension.cs:392
+	    DistanceFromLandMarkExtensionItem DistanceFromLandMark;                                                                                // BuildMemberListExtension.cs:392
+	                                                                                                                                           // BuildMemberListExtension.cs:320
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BodyDistanceFromExtension() : base("BodyDistanceFrom")                                                                          // BuildMemberListExtensionValue.cs:324
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:325
-	        this.LandMark = new LandMarkExtensionItem();                                                                                       // BuildMemberListExtensionValue.cs:395
-	        this.DistanceFromLandMark = new DistanceFromLandMarkExtensionItem();                                                               // BuildMemberListExtensionValue.cs:395
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:327
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:328
-	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:329
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:330
+	    public BodyDistanceFromExtension() : base("BodyDistanceFrom")                                                                          // BuildMemberListExtension.cs:324
+	    {                                                                                                                                      // BuildMemberListExtension.cs:325
+	        this.LandMark = new LandMarkExtensionItem(this.doc);                                                                               // BuildMemberListExtension.cs:395
+	        this.DistanceFromLandMark = new DistanceFromLandMarkExtensionItem(this.doc);                                                       // BuildMemberListExtension.cs:395
+	    }                                                                                                                                      // BuildMemberListExtension.cs:327
+	                                                                                                                                           // BuildMemberListExtension.cs:328
+	    public void Read()                                                                                                                     // BuildMemberListExtension.cs:329
+	    {                                                                                                                                      // BuildMemberListExtension.cs:330
 	        /// <summary>
 	        /// Read extension values
 	        /// </summary>
-	        this.Read(this.LandMark);                                                                                                          // BuildMemberListExtensionValue.cs:398
-	        this.Read(this.DistanceFromLandMark);                                                                                              // BuildMemberListExtensionValue.cs:398
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:335
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:336
+	        this.Read(this.LandMark);                                                                                                          // BuildMemberListExtension.cs:398
+	        this.Read(this.DistanceFromLandMark);                                                                                              // BuildMemberListExtension.cs:398
+	    }                                                                                                                                      // BuildMemberListExtension.cs:335
+	                                                                                                                                           // BuildMemberListExtension.cs:336
 	    /// <summary>
 	    /// Write extension values
 	    /// </summary>
-	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:340
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:341
-	        this.Write(this.LandMark);                                                                                                         // BuildMemberListExtensionValue.cs:401
-	        this.Write(this.DistanceFromLandMark);                                                                                             // BuildMemberListExtensionValue.cs:401
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:343
-	}                                                                                                                                          // BuildMemberListExtensionValue.cs:344
+	    public void Write()                                                                                                                    // BuildMemberListExtension.cs:340
+	    {                                                                                                                                      // BuildMemberListExtension.cs:341
+	        this.Write(this.LandMark);                                                                                                         // BuildMemberListExtension.cs:401
+	        this.Write(this.DistanceFromLandMark);                                                                                             // BuildMemberListExtension.cs:401
+	    }                                                                                                                                      // BuildMemberListExtension.cs:343
+	}                                                                                                                                          // BuildMemberListExtension.cs:344
+	                                                                                                                                           // BuildMemberListExtension.cs:422
 	/// <summary>
 	/// Class that implements the LandMarkExtensionItem' extension slice class.
 	/// </summary>
-	public class LandMarkExtensionItem : ISimpleExtensionItem                                                                                  // BuildMemberListExtensionValue.cs:421
-	{                                                                                                                                          // BuildMemberListExtensionValue.cs:422
-	    /// <summary>
-	    /// Field for extension slice landMark
-	    /// [Fhir Element 'Extension.extension:landMark]'
-	    /// </summary>
-	    CodeableConcept landMark;                                                                                                              // BuildMemberListExtensionValue.cs:460
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:461
+	public class LandMarkExtensionItem : MemberListExtension                                                                                   // BuildMemberListExtension.cs:426
+	{                                                                                                                                          // BuildMemberListExtension.cs:427
+	                                                                                                                                           // BuildMemberListExtension.cs:477
 	    /// <summary>
 	    /// Get value of extension slice landMark
 	    /// </summary>
-	    public CodeableConcept Get() => this.landMark;                                                                                         // BuildMemberListExtensionValue.cs:465
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:470
+	    public CodeableConcept Get() => (CodeableConcept) this.First();                                                                        // BuildMemberListExtension.cs:481
+	                                                                                                                                           // BuildMemberListExtension.cs:486
 	    /// <summary>
 	    /// Set value of extension slice landMark
 	    /// </summary>
-	    public void Set(CodeableConcept value) => this.landMark = value;                                                                       // BuildMemberListExtensionValue.cs:474
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:424
-	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:425
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:426
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:428
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:429
-	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:430
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:431
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:433
-	}                                                                                                                                          // BuildMemberListExtensionValue.cs:434
+	    public void Set(CodeableConcept value) => this.SetSingleItem(value);                                                                   // BuildMemberListExtension.cs:490
+	                                                                                                                                           // BuildMemberListExtension.cs:431
+	    /// <summary>
+	    /// Constructor
+	    /// </summary>
+	    public LandMarkExtensionItem(BreastRadiologyDocument doc) : base("LandMarkExtensionItem")                                              // BuildMemberListExtension.cs:435
+	    {                                                                                                                                      // BuildMemberListExtension.cs:436
+	        this.Init(doc, 0, 1, "landMark");                                                                                                  // BuildMemberListExtension.cs:437
+	    }                                                                                                                                      // BuildMemberListExtension.cs:439
+	                                                                                                                                           // BuildMemberListExtension.cs:441
+	    public void Read()                                                                                                                     // BuildMemberListExtension.cs:442
+	    {                                                                                                                                      // BuildMemberListExtension.cs:443
+	    }                                                                                                                                      // BuildMemberListExtension.cs:445
+	                                                                                                                                           // BuildMemberListExtension.cs:447
+	    public void Write()                                                                                                                    // BuildMemberListExtension.cs:448
+	    {                                                                                                                                      // BuildMemberListExtension.cs:449
+	    }                                                                                                                                      // BuildMemberListExtension.cs:451
+	                                                                                                                                           // BuildMemberListExtension.cs:453
+	}                                                                                                                                          // BuildMemberListExtension.cs:454
+	                                                                                                                                           // BuildMemberListExtension.cs:422
 	/// <summary>
 	/// Class that implements the DistanceFromLandMarkExtensionItem' extension slice class.
 	/// </summary>
-	public class DistanceFromLandMarkExtensionItem : ISimpleExtensionItem                                                                      // BuildMemberListExtensionValue.cs:421
-	{                                                                                                                                          // BuildMemberListExtensionValue.cs:422
-	    /// <summary>
-	    /// Field for extension slice distanceFromLandMark
-	    /// [Fhir Element 'Extension.extension:distanceFromLandMark]'
-	    /// </summary>
-	    Quantity distanceFromLandMark;                                                                                                         // BuildMemberListExtensionValue.cs:460
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:461
+	public class DistanceFromLandMarkExtensionItem : MemberListExtension                                                                       // BuildMemberListExtension.cs:426
+	{                                                                                                                                          // BuildMemberListExtension.cs:427
+	                                                                                                                                           // BuildMemberListExtension.cs:477
 	    /// <summary>
 	    /// Get value of extension slice distanceFromLandMark
 	    /// </summary>
-	    public Quantity Get() => this.distanceFromLandMark;                                                                                    // BuildMemberListExtensionValue.cs:465
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:470
+	    public Quantity Get() => (Quantity) this.First();                                                                                      // BuildMemberListExtension.cs:481
+	                                                                                                                                           // BuildMemberListExtension.cs:486
 	    /// <summary>
 	    /// Set value of extension slice distanceFromLandMark
 	    /// </summary>
-	    public void Set(Quantity value) => this.distanceFromLandMark = value;                                                                  // BuildMemberListExtensionValue.cs:474
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:424
-	    public void Read()                                                                                                                     // BuildMemberListExtensionValue.cs:425
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:426
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:428
-	                                                                                                                                           // BuildMemberListExtensionValue.cs:429
-	    public void Write()                                                                                                                    // BuildMemberListExtensionValue.cs:430
-	    {                                                                                                                                      // BuildMemberListExtensionValue.cs:431
-	    }                                                                                                                                      // BuildMemberListExtensionValue.cs:433
-	}                                                                                                                                          // BuildMemberListExtensionValue.cs:434
+	    public void Set(Quantity value) => this.SetSingleItem(value);                                                                          // BuildMemberListExtension.cs:490
+	                                                                                                                                           // BuildMemberListExtension.cs:431
+	    /// <summary>
+	    /// Constructor
+	    /// </summary>
+	    public DistanceFromLandMarkExtensionItem(BreastRadiologyDocument doc) : base("DistanceFromLandMarkExtensionItem")                      // BuildMemberListExtension.cs:435
+	    {                                                                                                                                      // BuildMemberListExtension.cs:436
+	        this.Init(doc, 0, 1, "distanceFromLandMark");                                                                                      // BuildMemberListExtension.cs:437
+	    }                                                                                                                                      // BuildMemberListExtension.cs:439
+	                                                                                                                                           // BuildMemberListExtension.cs:441
+	    public void Read()                                                                                                                     // BuildMemberListExtension.cs:442
+	    {                                                                                                                                      // BuildMemberListExtension.cs:443
+	    }                                                                                                                                      // BuildMemberListExtension.cs:445
+	                                                                                                                                           // BuildMemberListExtension.cs:447
+	    public void Write()                                                                                                                    // BuildMemberListExtension.cs:448
+	    {                                                                                                                                      // BuildMemberListExtension.cs:449
+	    }                                                                                                                                      // BuildMemberListExtension.cs:451
+	                                                                                                                                           // BuildMemberListExtension.cs:453
+	}                                                                                                                                          // BuildMemberListExtension.cs:454
 	//- LocalClassDefs
 }

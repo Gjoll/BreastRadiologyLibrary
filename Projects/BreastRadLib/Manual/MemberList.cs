@@ -14,7 +14,7 @@ namespace BreastRadLib
         String listName;
 
         /// <summary>
-        /// Parent document
+        /// Count
         /// </summary>
         public Int32 Count => this.items.Count;
 

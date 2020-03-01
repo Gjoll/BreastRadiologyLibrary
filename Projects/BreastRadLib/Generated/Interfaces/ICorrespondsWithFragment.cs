@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value CorrespondsWith
 		/// </summary>
-		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // BuildMemberListBase.cs:40
+		CorrespondsWith_Accessor CorrespondsWith { get ; }                                                                                        // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

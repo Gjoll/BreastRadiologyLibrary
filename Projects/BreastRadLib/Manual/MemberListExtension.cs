@@ -38,12 +38,12 @@ namespace BreastRadLib
             this.items.Add(value);
         }
 
-        protected void Write(ISimpleExtensionItem item)
+        protected void Write(MemberListExtension item)
         {
             throw new NotImplementedException();
         }
 
-        protected void Read(ISimpleExtensionItem item)
+        protected void Read(MemberListExtension item)
         {
             throw new NotImplementedException();
         }

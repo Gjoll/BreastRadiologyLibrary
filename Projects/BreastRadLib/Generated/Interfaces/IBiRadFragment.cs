@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value BiRadsAssessmentCategory
 		/// </summary>
-		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberListBase.cs:40
+		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

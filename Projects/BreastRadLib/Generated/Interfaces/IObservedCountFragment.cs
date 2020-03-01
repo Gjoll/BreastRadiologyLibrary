@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value ObsCount
 		/// </summary>
-		ObsCount_Accessor ObsCount { get ; }                                                                                                      // BuildMemberListBase.cs:40
+		ObsCount_Accessor ObsCount { get ; }                                                                                                      // BuildMemberListBase.cs:62
 		//- Properties
 
 		//+ Methods

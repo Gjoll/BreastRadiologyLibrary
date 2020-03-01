@@ -29,11 +29,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value Value
 		/// </summary>
-		public Value_Accessor Value { get ; protected set; }                                                                                      // BuildMemberListBase.cs:47
+		public Value_Accessor Value { get ; protected set; }                                                                                      // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access Component value Qualifier
 		/// </summary>
-		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // BuildMemberListBase.cs:47
+		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
 		//- Properties
 
 		/// <summary>
@@ -80,11 +80,11 @@ namespace BreastRadLib
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.Value = new Value_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:53
+			this.Value = new Value_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // BuildMemberListBase.cs:53
+			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
 			//- Constructor
 		}
 
@@ -100,8 +100,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:62
-			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:62
+			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:84
+			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -114,12 +114,12 @@ namespace BreastRadLib
 			base.Write();
 			//+ WriteCodeStart
 			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:179
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // BuildMemberListBase.cs:56
-			this.WriteComponent(this.Qualifier);                                                                                                     // BuildMemberListBase.cs:56
+			this.WriteComponent(this.Value);                                                                                                         // BuildMemberListBase.cs:78
+			this.WriteComponent(this.Qualifier);                                                                                                     // BuildMemberListBase.cs:78
 			//- WriteCode
 		}
 
@@ -132,8 +132,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // BuildMemberListBase.cs:59
-			this.ReadComponent(this.Qualifier);                                                                                                      // BuildMemberListBase.cs:59
+			this.ReadComponent(this.Value);                                                                                                          // BuildMemberListBase.cs:81
+			this.ReadComponent(this.Qualifier);                                                                                                      // BuildMemberListBase.cs:81
 			//- ReadCode
 		}
 

@@ -23,27 +23,27 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Section value Report
 		/// </summary>
-		public Report_Accessor Report { get ; protected set; }                                                                                    // BuildMemberListBase.cs:47
+		public Report_Accessor Report { get ; protected set; }                                                                                    // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access Section value Impressions
 		/// </summary>
-		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // BuildMemberListBase.cs:47
+		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access Section value FindingsRightBreast
 		/// </summary>
-		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // BuildMemberListBase.cs:47
+		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access Section value FindingsLeftBreast
 		/// </summary>
-		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // BuildMemberListBase.cs:47
+		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access Section value RelatedResources
 		/// </summary>
-		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // BuildMemberListBase.cs:47
+		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // BuildMemberListBase.cs:69
 		/// <summary>
 		/// Access Section value Recommendations
 		/// </summary>
-		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // BuildMemberListBase.cs:47
+		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // BuildMemberListBase.cs:69
 		//- Properties
 
 		/// <summary>
@@ -89,27 +89,27 @@ namespace BreastRadLib
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.Report = new Report_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:53
+			this.Report = new Report_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.Impressions = new Impressions_Accessor(doc);                                                                                        // BuildMemberListBase.cs:53
+			this.Impressions = new Impressions_Accessor(doc);                                                                                        // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // BuildMemberListBase.cs:53
+			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // BuildMemberListBase.cs:53
+			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // BuildMemberListBase.cs:53
+			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // BuildMemberListBase.cs:75
 			/// <summary>
 			/// Constructor
 			/// </summary>
-			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // BuildMemberListBase.cs:53
+			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // BuildMemberListBase.cs:75
 			//- Constructor
 		}
 
@@ -125,12 +125,12 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:62
-			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:62
-			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildMemberListBase.cs:62
-			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:62
-			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildMemberListBase.cs:62
-			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:62
+			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:84
+			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:84
+			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildMemberListBase.cs:84
+			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:84
+			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildMemberListBase.cs:84
+			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -145,12 +145,12 @@ namespace BreastRadLib
 			//- WriteCodeStart
 			//+ WriteCode
 			ClearSection();                                                                                                                          // BuildMemberListSection.cs:188
-			this.WriteSection(this.Report);                                                                                                          // BuildMemberListBase.cs:56
-			this.WriteSection(this.Impressions);                                                                                                     // BuildMemberListBase.cs:56
-			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildMemberListBase.cs:56
-			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildMemberListBase.cs:56
-			this.WriteSection(this.RelatedResources);                                                                                                // BuildMemberListBase.cs:56
-			this.WriteSection(this.Recommendations);                                                                                                 // BuildMemberListBase.cs:56
+			this.WriteSection(this.Report);                                                                                                          // BuildMemberListBase.cs:78
+			this.WriteSection(this.Impressions);                                                                                                     // BuildMemberListBase.cs:78
+			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildMemberListBase.cs:78
+			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildMemberListBase.cs:78
+			this.WriteSection(this.RelatedResources);                                                                                                // BuildMemberListBase.cs:78
+			this.WriteSection(this.Recommendations);                                                                                                 // BuildMemberListBase.cs:78
 			//- WriteCode
 		}
 
@@ -163,12 +163,12 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadSection(this.Report);                                                                                                           // BuildMemberListBase.cs:59
-			this.ReadSection(this.Impressions);                                                                                                      // BuildMemberListBase.cs:59
-			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildMemberListBase.cs:59
-			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildMemberListBase.cs:59
-			this.ReadSection(this.RelatedResources);                                                                                                 // BuildMemberListBase.cs:59
-			this.ReadSection(this.Recommendations);                                                                                                  // BuildMemberListBase.cs:59
+			this.ReadSection(this.Report);                                                                                                           // BuildMemberListBase.cs:81
+			this.ReadSection(this.Impressions);                                                                                                      // BuildMemberListBase.cs:81
+			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildMemberListBase.cs:81
+			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildMemberListBase.cs:81
+			this.ReadSection(this.RelatedResources);                                                                                                 // BuildMemberListBase.cs:81
+			this.ReadSection(this.Recommendations);                                                                                                  // BuildMemberListBase.cs:81
 			//- ReadCode
 		}
 
