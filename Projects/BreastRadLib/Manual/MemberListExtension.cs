@@ -14,10 +14,15 @@ namespace BreastRadLib
 
     };
 
+    public interface IMemberListExtensionItem
+    {
+
+    };
+
     /// <summary>
     /// Base class for all component accessors
     /// </summary>
-    public class MemberListExtension<T> : MemberList<T>, IMemberListExtension
+    public abstract class MemberListExtension<T> : MemberList<T>, IMemberListExtension
     {
         protected MemberListExtension(String listName) : base(listName)
         {
@@ -43,14 +48,30 @@ namespace BreastRadLib
             this.items.Add(value);
         }
 
-        protected void Write(IMemberListExtension item)
+        public abstract void Write(Extension e);
+
+        public abstract void Read(Extension e);
+    }
+
+
+    /// <summary>
+    /// Base class for all component accessors
+    /// </summary>
+    public class MemberListExtensionItem<T> : MemberListExtension<T>, 
+                                              IMemberListExtensionItem
+        where T : Element
+    {
+        protected MemberListExtensionItem(String listName) : base(listName)
         {
-            throw new NotImplementedException();
         }
 
-        protected void Read(IMemberListExtension item)
+        public override void Read(Extension e)
         {
-            throw new NotImplementedException();
+        }
+
+        public override void Write(Extension e)
+        {
         }
     }
 }
+

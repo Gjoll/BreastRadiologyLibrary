@@ -326,7 +326,7 @@ namespace FireFragger.CS
                 .DefineBlock(out CodeBlockNested blockConstructor)
                 .CloseBrace()
                 .BlankLine()
-                .AppendCode($"public void Read()")
+                .AppendCode($"public override void Read(Extension e)")
                 .OpenBrace()
                 .SummaryOpen()
                 .Summary($"Read extension values")
@@ -337,7 +337,7 @@ namespace FireFragger.CS
                 .SummaryOpen()
                 .Summary($"Write extension values")
                 .SummaryClose()
-                .AppendCode($"public void Write()")
+                .AppendCode($"public override void Write(Extension e)")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockWrite)
                 .CloseBrace()
@@ -395,10 +395,10 @@ namespace FireFragger.CS
                 .AppendCode($"this.{propertyName} = new {sliceClassName}(this.doc);")
                 ;
             blockRead
-                .AppendCode($"this.Read(this.{propertyName});")
+                .AppendCode($"this.{propertyName}.Read(e);")
                 ;
             blockWrite
-                .AppendCode($"this.Write(this.{propertyName});")
+                .AppendCode($"this.{propertyName}.Write(e);")
                 ;
         }
 
@@ -436,7 +436,7 @@ namespace FireFragger.CS
                 .SummaryOpen()
                 .Summary($"Class that implements the {className}' extension slice class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtension<{propertyType}>")
+                .AppendCode($"public class {className} : MemberListExtensionItem<{propertyType}>")
                 .OpenBrace()
 
                 .DefineBlock(out CodeBlockNested propertiesBlock)
@@ -451,17 +451,6 @@ namespace FireFragger.CS
                 .DefineBlock(out CodeBlockNested constructorBlock)
                 .CloseBrace()
 
-                .BlankLine()
-                .AppendCode($"public void Read()")
-                .OpenBrace()
-                .DefineBlock(out CodeBlockNested blockRead)
-                .CloseBrace()
-
-                .BlankLine()
-                .AppendCode($"public void Write()")
-                .OpenBrace()
-                .DefineBlock(out CodeBlockNested blockWrite)
-                .CloseBrace()
                 .DefineBlock(out CodeBlockNested blockMethods)
                 .BlankLine()
                 .CloseBrace()
