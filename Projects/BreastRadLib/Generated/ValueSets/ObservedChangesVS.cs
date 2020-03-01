@@ -28,40 +28,40 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_DecreaseInCalcifications = new TCoding(ObservedChangesCS.Code_DecreaseInCalcifications);                       // Builder.cs:344
-		public static TCoding Code_DecreaseInNumber = new TCoding(ObservedChangesCS.Code_DecreaseInNumber);                                       // Builder.cs:344
-		public static TCoding Code_DecreaseInSize = new TCoding(ObservedChangesCS.Code_DecreaseInSize);                                           // Builder.cs:344
-		public static TCoding Code_IncreaseInCalcifications = new TCoding(ObservedChangesCS.Code_IncreaseInCalcifications);                       // Builder.cs:344
-		public static TCoding Code_IncreaseInNumber = new TCoding(ObservedChangesCS.Code_IncreaseInNumber);                                       // Builder.cs:344
-		public static TCoding Code_IncreaseInSize = new TCoding(ObservedChangesCS.Code_IncreaseInSize);                                           // Builder.cs:344
-		public static TCoding Code_LessProminent = new TCoding(ObservedChangesCS.Code_LessProminent);                                             // Builder.cs:344
-		public static TCoding Code_MoreProminent = new TCoding(ObservedChangesCS.Code_MoreProminent);                                             // Builder.cs:344
-		public static TCoding Code_New = new TCoding(ObservedChangesCS.Code_New);                                                                 // Builder.cs:344
-		public static TCoding Code_NoLongerSeen = new TCoding(ObservedChangesCS.Code_NoLongerSeen);                                               // Builder.cs:344
-		public static TCoding Code_NotSignificantChanged = new TCoding(ObservedChangesCS.Code_NotSignificantChanged);                             // Builder.cs:344
-		public static TCoding Code_PartiallyRemoved = new TCoding(ObservedChangesCS.Code_PartiallyRemoved);                                       // Builder.cs:344
-		public static TCoding Code_RepresentsChange = new TCoding(ObservedChangesCS.Code_RepresentsChange);                                       // Builder.cs:344
-		public static TCoding Code_Stable = new TCoding(ObservedChangesCS.Code_Stable);                                                           // Builder.cs:344
+		public static TCoding Code_DecreaseInCalcifications = new TCoding(ObservedChangesCS.Code_DecreaseInCalcifications);                       // Builder.cs:347
+		public static TCoding Code_DecreaseInNumber = new TCoding(ObservedChangesCS.Code_DecreaseInNumber);                                       // Builder.cs:347
+		public static TCoding Code_DecreaseInSize = new TCoding(ObservedChangesCS.Code_DecreaseInSize);                                           // Builder.cs:347
+		public static TCoding Code_IncreaseInCalcifications = new TCoding(ObservedChangesCS.Code_IncreaseInCalcifications);                       // Builder.cs:347
+		public static TCoding Code_IncreaseInNumber = new TCoding(ObservedChangesCS.Code_IncreaseInNumber);                                       // Builder.cs:347
+		public static TCoding Code_IncreaseInSize = new TCoding(ObservedChangesCS.Code_IncreaseInSize);                                           // Builder.cs:347
+		public static TCoding Code_LessProminent = new TCoding(ObservedChangesCS.Code_LessProminent);                                             // Builder.cs:347
+		public static TCoding Code_MoreProminent = new TCoding(ObservedChangesCS.Code_MoreProminent);                                             // Builder.cs:347
+		public static TCoding Code_New = new TCoding(ObservedChangesCS.Code_New);                                                                 // Builder.cs:347
+		public static TCoding Code_NoLongerSeen = new TCoding(ObservedChangesCS.Code_NoLongerSeen);                                               // Builder.cs:347
+		public static TCoding Code_NotSignificantChanged = new TCoding(ObservedChangesCS.Code_NotSignificantChanged);                             // Builder.cs:347
+		public static TCoding Code_PartiallyRemoved = new TCoding(ObservedChangesCS.Code_PartiallyRemoved);                                       // Builder.cs:347
+		public static TCoding Code_RepresentsChange = new TCoding(ObservedChangesCS.Code_RepresentsChange);                                       // Builder.cs:347
+		public static TCoding Code_Stable = new TCoding(ObservedChangesCS.Code_Stable);                                                           // Builder.cs:347
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
-		{                                                                                                                                         // Builder.cs:331
-		    yield return Code_DecreaseInCalcifications;                                                                                           // Builder.cs:347
-		    yield return Code_DecreaseInNumber;                                                                                                   // Builder.cs:347
-		    yield return Code_DecreaseInSize;                                                                                                     // Builder.cs:347
-		    yield return Code_IncreaseInCalcifications;                                                                                           // Builder.cs:347
-		    yield return Code_IncreaseInNumber;                                                                                                   // Builder.cs:347
-		    yield return Code_IncreaseInSize;                                                                                                     // Builder.cs:347
-		    yield return Code_LessProminent;                                                                                                      // Builder.cs:347
-		    yield return Code_MoreProminent;                                                                                                      // Builder.cs:347
-		    yield return Code_New;                                                                                                                // Builder.cs:347
-		    yield return Code_NoLongerSeen;                                                                                                       // Builder.cs:347
-		    yield return Code_NotSignificantChanged;                                                                                              // Builder.cs:347
-		    yield return Code_PartiallyRemoved;                                                                                                   // Builder.cs:347
-		    yield return Code_RepresentsChange;                                                                                                   // Builder.cs:347
-		    yield return Code_Stable;                                                                                                             // Builder.cs:347
-		}                                                                                                                                         // Builder.cs:353
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
+		{                                                                                                                                         // Builder.cs:334
+		    yield return Code_DecreaseInCalcifications;                                                                                           // Builder.cs:350
+		    yield return Code_DecreaseInNumber;                                                                                                   // Builder.cs:350
+		    yield return Code_DecreaseInSize;                                                                                                     // Builder.cs:350
+		    yield return Code_IncreaseInCalcifications;                                                                                           // Builder.cs:350
+		    yield return Code_IncreaseInNumber;                                                                                                   // Builder.cs:350
+		    yield return Code_IncreaseInSize;                                                                                                     // Builder.cs:350
+		    yield return Code_LessProminent;                                                                                                      // Builder.cs:350
+		    yield return Code_MoreProminent;                                                                                                      // Builder.cs:350
+		    yield return Code_New;                                                                                                                // Builder.cs:350
+		    yield return Code_NoLongerSeen;                                                                                                       // Builder.cs:350
+		    yield return Code_NotSignificantChanged;                                                                                              // Builder.cs:350
+		    yield return Code_PartiallyRemoved;                                                                                                   // Builder.cs:350
+		    yield return Code_RepresentsChange;                                                                                                   // Builder.cs:350
+		    yield return Code_Stable;                                                                                                             // Builder.cs:350
+		}                                                                                                                                         // Builder.cs:356
 		//- Methods
 	}
 }

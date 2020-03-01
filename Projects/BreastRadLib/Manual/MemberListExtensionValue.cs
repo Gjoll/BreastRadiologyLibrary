@@ -12,9 +12,9 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all component accessors
     /// </summary>
-    public class MemberListExtensionValueBase : MemberList<Element>
+    public class MemberListExtension : MemberList<Element>
     {
-        protected MemberListExtensionValueBase(String listName) : base(listName)
+        protected MemberListExtension(String listName) : base(listName)
         {
         }
 

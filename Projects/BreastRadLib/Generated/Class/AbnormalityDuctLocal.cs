@@ -15,7 +15,7 @@ namespace BreastRadLib.AbnormalityDuctLocal
 	/// Accessor class for 'ductType'
 	/// [Fhir Element 'Observation.component:ductType]'
 	/// </summary>
-	public class DuctType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                 // BuildMemberListCodedValue.cs:72
+	public class DuctType_Accessor : MemberListCodedValue<CodeableConcept>                                                                     // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

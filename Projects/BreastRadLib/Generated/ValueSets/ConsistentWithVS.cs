@@ -28,160 +28,160 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Abscess = new TCoding(ConsistentWithCodeSystemCS.Code_Abscess);                                                // Builder.cs:344
-		public static TCoding Code_Angiolipoma = new TCoding(ConsistentWithCodeSystemCS.Code_Angiolipoma);                                        // Builder.cs:344
-		public static TCoding Code_ApocrineMetaplasia = new TCoding(ConsistentWithCodeSystemCS.Code_ApocrineMetaplasia);                          // Builder.cs:344
-		public static TCoding Code_Artifact = new TCoding(ConsistentWithCodeSystemCS.Code_Artifact);                                              // Builder.cs:344
-		public static TCoding Code_AtypicalHyperplasia = new TCoding(ConsistentWithCodeSystemCS.Code_AtypicalHyperplasia);                        // Builder.cs:344
-		public static TCoding Code_AxillaryLymphNode = new TCoding(ConsistentWithCodeSystemCS.Code_AxillaryLymphNode);                            // Builder.cs:344
-		public static TCoding Code_Carcinoma = new TCoding(ConsistentWithCodeSystemCS.Code_Carcinoma);                                            // Builder.cs:344
-		public static TCoding Code_CarcinomaKnown = new TCoding(ConsistentWithCodeSystemCS.Code_CarcinomaKnown);                                  // Builder.cs:344
-		public static TCoding Code_ClusterOfCysts = new TCoding(ConsistentWithCodeSystemCS.Code_ClusterOfCysts);                                  // Builder.cs:344
-		public static TCoding Code_Cyst = new TCoding(ConsistentWithCodeSystemCS.Code_Cyst);                                                      // Builder.cs:344
-		public static TCoding Code_CystComplex = new TCoding(ConsistentWithCodeSystemCS.Code_CystComplex);                                        // Builder.cs:344
-		public static TCoding Code_CystComplicated = new TCoding(ConsistentWithCodeSystemCS.Code_CystComplicated);                                // Builder.cs:344
-		public static TCoding Code_CystOil = new TCoding(ConsistentWithCodeSystemCS.Code_CystOil);                                                // Builder.cs:344
-		public static TCoding Code_CystSebaceous = new TCoding(ConsistentWithCodeSystemCS.Code_CystSebaceous);                                    // Builder.cs:344
-		public static TCoding Code_CystSimple = new TCoding(ConsistentWithCodeSystemCS.Code_CystSimple);                                          // Builder.cs:344
-		public static TCoding Code_CystsComplex = new TCoding(ConsistentWithCodeSystemCS.Code_CystsComplex);                                      // Builder.cs:344
-		public static TCoding Code_CystsComplicated = new TCoding(ConsistentWithCodeSystemCS.Code_CystsComplicated);                              // Builder.cs:344
-		public static TCoding Code_CystsMicroClustered = new TCoding(ConsistentWithCodeSystemCS.Code_CystsMicroClustered);                        // Builder.cs:344
-		public static TCoding Code_DCIS = new TCoding(ConsistentWithCodeSystemCS.Code_DCIS);                                                      // Builder.cs:344
-		public static TCoding Code_Debris = new TCoding(ConsistentWithCodeSystemCS.Code_Debris);                                                  // Builder.cs:344
-		public static TCoding Code_Deodorant = new TCoding(ConsistentWithCodeSystemCS.Code_Deodorant);                                            // Builder.cs:344
-		public static TCoding Code_DermalCalcification = new TCoding(ConsistentWithCodeSystemCS.Code_DermalCalcification);                        // Builder.cs:344
-		public static TCoding Code_DuctEctasia = new TCoding(ConsistentWithCodeSystemCS.Code_DuctEctasia);                                        // Builder.cs:344
-		public static TCoding Code_Edema = new TCoding(ConsistentWithCodeSystemCS.Code_Edema);                                                    // Builder.cs:344
-		public static TCoding Code_FatLobule = new TCoding(ConsistentWithCodeSystemCS.Code_FatLobule);                                            // Builder.cs:344
-		public static TCoding Code_FatNecrosis = new TCoding(ConsistentWithCodeSystemCS.Code_FatNecrosis);                                        // Builder.cs:344
-		public static TCoding Code_Fibroadenolipoma = new TCoding(ConsistentWithCodeSystemCS.Code_Fibroadenolipoma);                              // Builder.cs:344
-		public static TCoding Code_Fibroadenoma = new TCoding(ConsistentWithCodeSystemCS.Code_Fibroadenoma);                                      // Builder.cs:344
-		public static TCoding Code_FibroadenomaDegenerating = new TCoding(ConsistentWithCodeSystemCS.Code_FibroadenomaDegenerating);              // Builder.cs:344
-		public static TCoding Code_FibrocysticChange = new TCoding(ConsistentWithCodeSystemCS.Code_FibrocysticChange);                            // Builder.cs:344
-		public static TCoding Code_FibroglandularTissue = new TCoding(ConsistentWithCodeSystemCS.Code_FibroglandularTissue);                      // Builder.cs:344
-		public static TCoding Code_Fibrosis = new TCoding(ConsistentWithCodeSystemCS.Code_Fibrosis);                                              // Builder.cs:344
-		public static TCoding Code_FibrousRidge = new TCoding(ConsistentWithCodeSystemCS.Code_FibrousRidge);                                      // Builder.cs:344
-		public static TCoding Code_Folliculitis = new TCoding(ConsistentWithCodeSystemCS.Code_Folliculitis);                                      // Builder.cs:344
-		public static TCoding Code_Gynecomastia = new TCoding(ConsistentWithCodeSystemCS.Code_Gynecomastia);                                      // Builder.cs:344
-		public static TCoding Code_Hamartoma = new TCoding(ConsistentWithCodeSystemCS.Code_Hamartoma);                                            // Builder.cs:344
-		public static TCoding Code_Hematoma = new TCoding(ConsistentWithCodeSystemCS.Code_Hematoma);                                              // Builder.cs:344
-		public static TCoding Code_HormonalStimulation = new TCoding(ConsistentWithCodeSystemCS.Code_HormonalStimulation);                        // Builder.cs:344
-		public static TCoding Code_IntracysticLesion = new TCoding(ConsistentWithCodeSystemCS.Code_IntracysticLesion);                            // Builder.cs:344
-		public static TCoding Code_IntramammaryNode = new TCoding(ConsistentWithCodeSystemCS.Code_IntramammaryNode);                              // Builder.cs:344
-		public static TCoding Code_Lipoma = new TCoding(ConsistentWithCodeSystemCS.Code_Lipoma);                                                  // Builder.cs:344
-		public static TCoding Code_LumpectomyCavity = new TCoding(ConsistentWithCodeSystemCS.Code_LumpectomyCavity);                              // Builder.cs:344
-		public static TCoding Code_LumpectomySite = new TCoding(ConsistentWithCodeSystemCS.Code_LumpectomySite);                                  // Builder.cs:344
-		public static TCoding Code_LymphNode = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNode);                                            // Builder.cs:344
-		public static TCoding Code_LymphNodeEnlarged = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNodeEnlarged);                            // Builder.cs:344
-		public static TCoding Code_LymphNodeNormal = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNodeNormal);                                // Builder.cs:344
-		public static TCoding Code_LymphNodePathological = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNodePathological);                    // Builder.cs:344
-		public static TCoding Code_MassSolid = new TCoding(ConsistentWithCodeSystemCS.Code_MassSolid);                                            // Builder.cs:344
-		public static TCoding Code_MassSolidWTumorVasc = new TCoding(ConsistentWithCodeSystemCS.Code_MassSolidWTumorVasc);                        // Builder.cs:344
-		public static TCoding Code_Mastitis = new TCoding(ConsistentWithCodeSystemCS.Code_Mastitis);                                              // Builder.cs:344
-		public static TCoding Code_MilkOfCalcium = new TCoding(ConsistentWithCodeSystemCS.Code_MilkOfCalcium);                                    // Builder.cs:344
-		public static TCoding Code_MultiFocalCancer = new TCoding(ConsistentWithCodeSystemCS.Code_MultiFocalCancer);                              // Builder.cs:344
-		public static TCoding Code_PapillaryLesion = new TCoding(ConsistentWithCodeSystemCS.Code_PapillaryLesion);                                // Builder.cs:344
-		public static TCoding Code_Papilloma = new TCoding(ConsistentWithCodeSystemCS.Code_Papilloma);                                            // Builder.cs:344
-		public static TCoding Code_PhyllodesTumor = new TCoding(ConsistentWithCodeSystemCS.Code_PhyllodesTumor);                                  // Builder.cs:344
-		public static TCoding Code_PostLumpectomyScar = new TCoding(ConsistentWithCodeSystemCS.Code_PostLumpectomyScar);                          // Builder.cs:344
-		public static TCoding Code_PostSurgicalScar = new TCoding(ConsistentWithCodeSystemCS.Code_PostSurgicalScar);                              // Builder.cs:344
-		public static TCoding Code_PreviousBiopsy = new TCoding(ConsistentWithCodeSystemCS.Code_PreviousBiopsy);                                  // Builder.cs:344
-		public static TCoding Code_PreviousSurgery = new TCoding(ConsistentWithCodeSystemCS.Code_PreviousSurgery);                                // Builder.cs:344
-		public static TCoding Code_PreviousTrauma = new TCoding(ConsistentWithCodeSystemCS.Code_PreviousTrauma);                                  // Builder.cs:344
-		public static TCoding Code_RadialScar = new TCoding(ConsistentWithCodeSystemCS.Code_RadialScar);                                          // Builder.cs:344
-		public static TCoding Code_RadiationChanges = new TCoding(ConsistentWithCodeSystemCS.Code_RadiationChanges);                              // Builder.cs:344
-		public static TCoding Code_RadiationTherapy = new TCoding(ConsistentWithCodeSystemCS.Code_RadiationTherapy);                              // Builder.cs:344
-		public static TCoding Code_Scar = new TCoding(ConsistentWithCodeSystemCS.Code_Scar);                                                      // Builder.cs:344
-		public static TCoding Code_ScarWithShadowing = new TCoding(ConsistentWithCodeSystemCS.Code_ScarWithShadowing);                            // Builder.cs:344
-		public static TCoding Code_SclerosingAdenosis = new TCoding(ConsistentWithCodeSystemCS.Code_SclerosingAdenosis);                          // Builder.cs:344
-		public static TCoding Code_SecretoryCalcification = new TCoding(ConsistentWithCodeSystemCS.Code_SecretoryCalcification);                  // Builder.cs:344
-		public static TCoding Code_SentinelNode = new TCoding(ConsistentWithCodeSystemCS.Code_SentinelNode);                                      // Builder.cs:344
-		public static TCoding Code_Seroma = new TCoding(ConsistentWithCodeSystemCS.Code_Seroma);                                                  // Builder.cs:344
-		public static TCoding Code_SkinLesion = new TCoding(ConsistentWithCodeSystemCS.Code_SkinLesion);                                          // Builder.cs:344
-		public static TCoding Code_Surgery = new TCoding(ConsistentWithCodeSystemCS.Code_Surgery);                                                // Builder.cs:344
-		public static TCoding Code_Trauma = new TCoding(ConsistentWithCodeSystemCS.Code_Trauma);                                                  // Builder.cs:344
-		public static TCoding Code_VascularCalcifications = new TCoding(ConsistentWithCodeSystemCS.Code_VascularCalcifications);                  // Builder.cs:344
-		public static TCoding Code_VenousStasis = new TCoding(ConsistentWithCodeSystemCS.Code_VenousStasis);                                      // Builder.cs:344
+		public static TCoding Code_Abscess = new TCoding(ConsistentWithCodeSystemCS.Code_Abscess);                                                // Builder.cs:347
+		public static TCoding Code_Angiolipoma = new TCoding(ConsistentWithCodeSystemCS.Code_Angiolipoma);                                        // Builder.cs:347
+		public static TCoding Code_ApocrineMetaplasia = new TCoding(ConsistentWithCodeSystemCS.Code_ApocrineMetaplasia);                          // Builder.cs:347
+		public static TCoding Code_Artifact = new TCoding(ConsistentWithCodeSystemCS.Code_Artifact);                                              // Builder.cs:347
+		public static TCoding Code_AtypicalHyperplasia = new TCoding(ConsistentWithCodeSystemCS.Code_AtypicalHyperplasia);                        // Builder.cs:347
+		public static TCoding Code_AxillaryLymphNode = new TCoding(ConsistentWithCodeSystemCS.Code_AxillaryLymphNode);                            // Builder.cs:347
+		public static TCoding Code_Carcinoma = new TCoding(ConsistentWithCodeSystemCS.Code_Carcinoma);                                            // Builder.cs:347
+		public static TCoding Code_CarcinomaKnown = new TCoding(ConsistentWithCodeSystemCS.Code_CarcinomaKnown);                                  // Builder.cs:347
+		public static TCoding Code_ClusterOfCysts = new TCoding(ConsistentWithCodeSystemCS.Code_ClusterOfCysts);                                  // Builder.cs:347
+		public static TCoding Code_Cyst = new TCoding(ConsistentWithCodeSystemCS.Code_Cyst);                                                      // Builder.cs:347
+		public static TCoding Code_CystComplex = new TCoding(ConsistentWithCodeSystemCS.Code_CystComplex);                                        // Builder.cs:347
+		public static TCoding Code_CystComplicated = new TCoding(ConsistentWithCodeSystemCS.Code_CystComplicated);                                // Builder.cs:347
+		public static TCoding Code_CystOil = new TCoding(ConsistentWithCodeSystemCS.Code_CystOil);                                                // Builder.cs:347
+		public static TCoding Code_CystSebaceous = new TCoding(ConsistentWithCodeSystemCS.Code_CystSebaceous);                                    // Builder.cs:347
+		public static TCoding Code_CystSimple = new TCoding(ConsistentWithCodeSystemCS.Code_CystSimple);                                          // Builder.cs:347
+		public static TCoding Code_CystsComplex = new TCoding(ConsistentWithCodeSystemCS.Code_CystsComplex);                                      // Builder.cs:347
+		public static TCoding Code_CystsComplicated = new TCoding(ConsistentWithCodeSystemCS.Code_CystsComplicated);                              // Builder.cs:347
+		public static TCoding Code_CystsMicroClustered = new TCoding(ConsistentWithCodeSystemCS.Code_CystsMicroClustered);                        // Builder.cs:347
+		public static TCoding Code_DCIS = new TCoding(ConsistentWithCodeSystemCS.Code_DCIS);                                                      // Builder.cs:347
+		public static TCoding Code_Debris = new TCoding(ConsistentWithCodeSystemCS.Code_Debris);                                                  // Builder.cs:347
+		public static TCoding Code_Deodorant = new TCoding(ConsistentWithCodeSystemCS.Code_Deodorant);                                            // Builder.cs:347
+		public static TCoding Code_DermalCalcification = new TCoding(ConsistentWithCodeSystemCS.Code_DermalCalcification);                        // Builder.cs:347
+		public static TCoding Code_DuctEctasia = new TCoding(ConsistentWithCodeSystemCS.Code_DuctEctasia);                                        // Builder.cs:347
+		public static TCoding Code_Edema = new TCoding(ConsistentWithCodeSystemCS.Code_Edema);                                                    // Builder.cs:347
+		public static TCoding Code_FatLobule = new TCoding(ConsistentWithCodeSystemCS.Code_FatLobule);                                            // Builder.cs:347
+		public static TCoding Code_FatNecrosis = new TCoding(ConsistentWithCodeSystemCS.Code_FatNecrosis);                                        // Builder.cs:347
+		public static TCoding Code_Fibroadenolipoma = new TCoding(ConsistentWithCodeSystemCS.Code_Fibroadenolipoma);                              // Builder.cs:347
+		public static TCoding Code_Fibroadenoma = new TCoding(ConsistentWithCodeSystemCS.Code_Fibroadenoma);                                      // Builder.cs:347
+		public static TCoding Code_FibroadenomaDegenerating = new TCoding(ConsistentWithCodeSystemCS.Code_FibroadenomaDegenerating);              // Builder.cs:347
+		public static TCoding Code_FibrocysticChange = new TCoding(ConsistentWithCodeSystemCS.Code_FibrocysticChange);                            // Builder.cs:347
+		public static TCoding Code_FibroglandularTissue = new TCoding(ConsistentWithCodeSystemCS.Code_FibroglandularTissue);                      // Builder.cs:347
+		public static TCoding Code_Fibrosis = new TCoding(ConsistentWithCodeSystemCS.Code_Fibrosis);                                              // Builder.cs:347
+		public static TCoding Code_FibrousRidge = new TCoding(ConsistentWithCodeSystemCS.Code_FibrousRidge);                                      // Builder.cs:347
+		public static TCoding Code_Folliculitis = new TCoding(ConsistentWithCodeSystemCS.Code_Folliculitis);                                      // Builder.cs:347
+		public static TCoding Code_Gynecomastia = new TCoding(ConsistentWithCodeSystemCS.Code_Gynecomastia);                                      // Builder.cs:347
+		public static TCoding Code_Hamartoma = new TCoding(ConsistentWithCodeSystemCS.Code_Hamartoma);                                            // Builder.cs:347
+		public static TCoding Code_Hematoma = new TCoding(ConsistentWithCodeSystemCS.Code_Hematoma);                                              // Builder.cs:347
+		public static TCoding Code_HormonalStimulation = new TCoding(ConsistentWithCodeSystemCS.Code_HormonalStimulation);                        // Builder.cs:347
+		public static TCoding Code_IntracysticLesion = new TCoding(ConsistentWithCodeSystemCS.Code_IntracysticLesion);                            // Builder.cs:347
+		public static TCoding Code_IntramammaryNode = new TCoding(ConsistentWithCodeSystemCS.Code_IntramammaryNode);                              // Builder.cs:347
+		public static TCoding Code_Lipoma = new TCoding(ConsistentWithCodeSystemCS.Code_Lipoma);                                                  // Builder.cs:347
+		public static TCoding Code_LumpectomyCavity = new TCoding(ConsistentWithCodeSystemCS.Code_LumpectomyCavity);                              // Builder.cs:347
+		public static TCoding Code_LumpectomySite = new TCoding(ConsistentWithCodeSystemCS.Code_LumpectomySite);                                  // Builder.cs:347
+		public static TCoding Code_LymphNode = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNode);                                            // Builder.cs:347
+		public static TCoding Code_LymphNodeEnlarged = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNodeEnlarged);                            // Builder.cs:347
+		public static TCoding Code_LymphNodeNormal = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNodeNormal);                                // Builder.cs:347
+		public static TCoding Code_LymphNodePathological = new TCoding(ConsistentWithCodeSystemCS.Code_LymphNodePathological);                    // Builder.cs:347
+		public static TCoding Code_MassSolid = new TCoding(ConsistentWithCodeSystemCS.Code_MassSolid);                                            // Builder.cs:347
+		public static TCoding Code_MassSolidWTumorVasc = new TCoding(ConsistentWithCodeSystemCS.Code_MassSolidWTumorVasc);                        // Builder.cs:347
+		public static TCoding Code_Mastitis = new TCoding(ConsistentWithCodeSystemCS.Code_Mastitis);                                              // Builder.cs:347
+		public static TCoding Code_MilkOfCalcium = new TCoding(ConsistentWithCodeSystemCS.Code_MilkOfCalcium);                                    // Builder.cs:347
+		public static TCoding Code_MultiFocalCancer = new TCoding(ConsistentWithCodeSystemCS.Code_MultiFocalCancer);                              // Builder.cs:347
+		public static TCoding Code_PapillaryLesion = new TCoding(ConsistentWithCodeSystemCS.Code_PapillaryLesion);                                // Builder.cs:347
+		public static TCoding Code_Papilloma = new TCoding(ConsistentWithCodeSystemCS.Code_Papilloma);                                            // Builder.cs:347
+		public static TCoding Code_PhyllodesTumor = new TCoding(ConsistentWithCodeSystemCS.Code_PhyllodesTumor);                                  // Builder.cs:347
+		public static TCoding Code_PostLumpectomyScar = new TCoding(ConsistentWithCodeSystemCS.Code_PostLumpectomyScar);                          // Builder.cs:347
+		public static TCoding Code_PostSurgicalScar = new TCoding(ConsistentWithCodeSystemCS.Code_PostSurgicalScar);                              // Builder.cs:347
+		public static TCoding Code_PreviousBiopsy = new TCoding(ConsistentWithCodeSystemCS.Code_PreviousBiopsy);                                  // Builder.cs:347
+		public static TCoding Code_PreviousSurgery = new TCoding(ConsistentWithCodeSystemCS.Code_PreviousSurgery);                                // Builder.cs:347
+		public static TCoding Code_PreviousTrauma = new TCoding(ConsistentWithCodeSystemCS.Code_PreviousTrauma);                                  // Builder.cs:347
+		public static TCoding Code_RadialScar = new TCoding(ConsistentWithCodeSystemCS.Code_RadialScar);                                          // Builder.cs:347
+		public static TCoding Code_RadiationChanges = new TCoding(ConsistentWithCodeSystemCS.Code_RadiationChanges);                              // Builder.cs:347
+		public static TCoding Code_RadiationTherapy = new TCoding(ConsistentWithCodeSystemCS.Code_RadiationTherapy);                              // Builder.cs:347
+		public static TCoding Code_Scar = new TCoding(ConsistentWithCodeSystemCS.Code_Scar);                                                      // Builder.cs:347
+		public static TCoding Code_ScarWithShadowing = new TCoding(ConsistentWithCodeSystemCS.Code_ScarWithShadowing);                            // Builder.cs:347
+		public static TCoding Code_SclerosingAdenosis = new TCoding(ConsistentWithCodeSystemCS.Code_SclerosingAdenosis);                          // Builder.cs:347
+		public static TCoding Code_SecretoryCalcification = new TCoding(ConsistentWithCodeSystemCS.Code_SecretoryCalcification);                  // Builder.cs:347
+		public static TCoding Code_SentinelNode = new TCoding(ConsistentWithCodeSystemCS.Code_SentinelNode);                                      // Builder.cs:347
+		public static TCoding Code_Seroma = new TCoding(ConsistentWithCodeSystemCS.Code_Seroma);                                                  // Builder.cs:347
+		public static TCoding Code_SkinLesion = new TCoding(ConsistentWithCodeSystemCS.Code_SkinLesion);                                          // Builder.cs:347
+		public static TCoding Code_Surgery = new TCoding(ConsistentWithCodeSystemCS.Code_Surgery);                                                // Builder.cs:347
+		public static TCoding Code_Trauma = new TCoding(ConsistentWithCodeSystemCS.Code_Trauma);                                                  // Builder.cs:347
+		public static TCoding Code_VascularCalcifications = new TCoding(ConsistentWithCodeSystemCS.Code_VascularCalcifications);                  // Builder.cs:347
+		public static TCoding Code_VenousStasis = new TCoding(ConsistentWithCodeSystemCS.Code_VenousStasis);                                      // Builder.cs:347
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
-		{                                                                                                                                         // Builder.cs:331
-		    yield return Code_Abscess;                                                                                                            // Builder.cs:347
-		    yield return Code_Angiolipoma;                                                                                                        // Builder.cs:347
-		    yield return Code_ApocrineMetaplasia;                                                                                                 // Builder.cs:347
-		    yield return Code_Artifact;                                                                                                           // Builder.cs:347
-		    yield return Code_AtypicalHyperplasia;                                                                                                // Builder.cs:347
-		    yield return Code_AxillaryLymphNode;                                                                                                  // Builder.cs:347
-		    yield return Code_Carcinoma;                                                                                                          // Builder.cs:347
-		    yield return Code_CarcinomaKnown;                                                                                                     // Builder.cs:347
-		    yield return Code_ClusterOfCysts;                                                                                                     // Builder.cs:347
-		    yield return Code_Cyst;                                                                                                               // Builder.cs:347
-		    yield return Code_CystComplex;                                                                                                        // Builder.cs:347
-		    yield return Code_CystComplicated;                                                                                                    // Builder.cs:347
-		    yield return Code_CystOil;                                                                                                            // Builder.cs:347
-		    yield return Code_CystSebaceous;                                                                                                      // Builder.cs:347
-		    yield return Code_CystSimple;                                                                                                         // Builder.cs:347
-		    yield return Code_CystsComplex;                                                                                                       // Builder.cs:347
-		    yield return Code_CystsComplicated;                                                                                                   // Builder.cs:347
-		    yield return Code_CystsMicroClustered;                                                                                                // Builder.cs:347
-		    yield return Code_DCIS;                                                                                                               // Builder.cs:347
-		    yield return Code_Debris;                                                                                                             // Builder.cs:347
-		    yield return Code_Deodorant;                                                                                                          // Builder.cs:347
-		    yield return Code_DermalCalcification;                                                                                                // Builder.cs:347
-		    yield return Code_DuctEctasia;                                                                                                        // Builder.cs:347
-		    yield return Code_Edema;                                                                                                              // Builder.cs:347
-		    yield return Code_FatLobule;                                                                                                          // Builder.cs:347
-		    yield return Code_FatNecrosis;                                                                                                        // Builder.cs:347
-		    yield return Code_Fibroadenolipoma;                                                                                                   // Builder.cs:347
-		    yield return Code_Fibroadenoma;                                                                                                       // Builder.cs:347
-		    yield return Code_FibroadenomaDegenerating;                                                                                           // Builder.cs:347
-		    yield return Code_FibrocysticChange;                                                                                                  // Builder.cs:347
-		    yield return Code_FibroglandularTissue;                                                                                               // Builder.cs:347
-		    yield return Code_Fibrosis;                                                                                                           // Builder.cs:347
-		    yield return Code_FibrousRidge;                                                                                                       // Builder.cs:347
-		    yield return Code_Folliculitis;                                                                                                       // Builder.cs:347
-		    yield return Code_Gynecomastia;                                                                                                       // Builder.cs:347
-		    yield return Code_Hamartoma;                                                                                                          // Builder.cs:347
-		    yield return Code_Hematoma;                                                                                                           // Builder.cs:347
-		    yield return Code_HormonalStimulation;                                                                                                // Builder.cs:347
-		    yield return Code_IntracysticLesion;                                                                                                  // Builder.cs:347
-		    yield return Code_IntramammaryNode;                                                                                                   // Builder.cs:347
-		    yield return Code_Lipoma;                                                                                                             // Builder.cs:347
-		    yield return Code_LumpectomyCavity;                                                                                                   // Builder.cs:347
-		    yield return Code_LumpectomySite;                                                                                                     // Builder.cs:347
-		    yield return Code_LymphNode;                                                                                                          // Builder.cs:347
-		    yield return Code_LymphNodeEnlarged;                                                                                                  // Builder.cs:347
-		    yield return Code_LymphNodeNormal;                                                                                                    // Builder.cs:347
-		    yield return Code_LymphNodePathological;                                                                                              // Builder.cs:347
-		    yield return Code_MassSolid;                                                                                                          // Builder.cs:347
-		    yield return Code_MassSolidWTumorVasc;                                                                                                // Builder.cs:347
-		    yield return Code_Mastitis;                                                                                                           // Builder.cs:347
-		    yield return Code_MilkOfCalcium;                                                                                                      // Builder.cs:347
-		    yield return Code_MultiFocalCancer;                                                                                                   // Builder.cs:347
-		    yield return Code_PapillaryLesion;                                                                                                    // Builder.cs:347
-		    yield return Code_Papilloma;                                                                                                          // Builder.cs:347
-		    yield return Code_PhyllodesTumor;                                                                                                     // Builder.cs:347
-		    yield return Code_PostLumpectomyScar;                                                                                                 // Builder.cs:347
-		    yield return Code_PostSurgicalScar;                                                                                                   // Builder.cs:347
-		    yield return Code_PreviousBiopsy;                                                                                                     // Builder.cs:347
-		    yield return Code_PreviousSurgery;                                                                                                    // Builder.cs:347
-		    yield return Code_PreviousTrauma;                                                                                                     // Builder.cs:347
-		    yield return Code_RadialScar;                                                                                                         // Builder.cs:347
-		    yield return Code_RadiationChanges;                                                                                                   // Builder.cs:347
-		    yield return Code_RadiationTherapy;                                                                                                   // Builder.cs:347
-		    yield return Code_Scar;                                                                                                               // Builder.cs:347
-		    yield return Code_ScarWithShadowing;                                                                                                  // Builder.cs:347
-		    yield return Code_SclerosingAdenosis;                                                                                                 // Builder.cs:347
-		    yield return Code_SecretoryCalcification;                                                                                             // Builder.cs:347
-		    yield return Code_SentinelNode;                                                                                                       // Builder.cs:347
-		    yield return Code_Seroma;                                                                                                             // Builder.cs:347
-		    yield return Code_SkinLesion;                                                                                                         // Builder.cs:347
-		    yield return Code_Surgery;                                                                                                            // Builder.cs:347
-		    yield return Code_Trauma;                                                                                                             // Builder.cs:347
-		    yield return Code_VascularCalcifications;                                                                                             // Builder.cs:347
-		    yield return Code_VenousStasis;                                                                                                       // Builder.cs:347
-		}                                                                                                                                         // Builder.cs:353
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
+		{                                                                                                                                         // Builder.cs:334
+		    yield return Code_Abscess;                                                                                                            // Builder.cs:350
+		    yield return Code_Angiolipoma;                                                                                                        // Builder.cs:350
+		    yield return Code_ApocrineMetaplasia;                                                                                                 // Builder.cs:350
+		    yield return Code_Artifact;                                                                                                           // Builder.cs:350
+		    yield return Code_AtypicalHyperplasia;                                                                                                // Builder.cs:350
+		    yield return Code_AxillaryLymphNode;                                                                                                  // Builder.cs:350
+		    yield return Code_Carcinoma;                                                                                                          // Builder.cs:350
+		    yield return Code_CarcinomaKnown;                                                                                                     // Builder.cs:350
+		    yield return Code_ClusterOfCysts;                                                                                                     // Builder.cs:350
+		    yield return Code_Cyst;                                                                                                               // Builder.cs:350
+		    yield return Code_CystComplex;                                                                                                        // Builder.cs:350
+		    yield return Code_CystComplicated;                                                                                                    // Builder.cs:350
+		    yield return Code_CystOil;                                                                                                            // Builder.cs:350
+		    yield return Code_CystSebaceous;                                                                                                      // Builder.cs:350
+		    yield return Code_CystSimple;                                                                                                         // Builder.cs:350
+		    yield return Code_CystsComplex;                                                                                                       // Builder.cs:350
+		    yield return Code_CystsComplicated;                                                                                                   // Builder.cs:350
+		    yield return Code_CystsMicroClustered;                                                                                                // Builder.cs:350
+		    yield return Code_DCIS;                                                                                                               // Builder.cs:350
+		    yield return Code_Debris;                                                                                                             // Builder.cs:350
+		    yield return Code_Deodorant;                                                                                                          // Builder.cs:350
+		    yield return Code_DermalCalcification;                                                                                                // Builder.cs:350
+		    yield return Code_DuctEctasia;                                                                                                        // Builder.cs:350
+		    yield return Code_Edema;                                                                                                              // Builder.cs:350
+		    yield return Code_FatLobule;                                                                                                          // Builder.cs:350
+		    yield return Code_FatNecrosis;                                                                                                        // Builder.cs:350
+		    yield return Code_Fibroadenolipoma;                                                                                                   // Builder.cs:350
+		    yield return Code_Fibroadenoma;                                                                                                       // Builder.cs:350
+		    yield return Code_FibroadenomaDegenerating;                                                                                           // Builder.cs:350
+		    yield return Code_FibrocysticChange;                                                                                                  // Builder.cs:350
+		    yield return Code_FibroglandularTissue;                                                                                               // Builder.cs:350
+		    yield return Code_Fibrosis;                                                                                                           // Builder.cs:350
+		    yield return Code_FibrousRidge;                                                                                                       // Builder.cs:350
+		    yield return Code_Folliculitis;                                                                                                       // Builder.cs:350
+		    yield return Code_Gynecomastia;                                                                                                       // Builder.cs:350
+		    yield return Code_Hamartoma;                                                                                                          // Builder.cs:350
+		    yield return Code_Hematoma;                                                                                                           // Builder.cs:350
+		    yield return Code_HormonalStimulation;                                                                                                // Builder.cs:350
+		    yield return Code_IntracysticLesion;                                                                                                  // Builder.cs:350
+		    yield return Code_IntramammaryNode;                                                                                                   // Builder.cs:350
+		    yield return Code_Lipoma;                                                                                                             // Builder.cs:350
+		    yield return Code_LumpectomyCavity;                                                                                                   // Builder.cs:350
+		    yield return Code_LumpectomySite;                                                                                                     // Builder.cs:350
+		    yield return Code_LymphNode;                                                                                                          // Builder.cs:350
+		    yield return Code_LymphNodeEnlarged;                                                                                                  // Builder.cs:350
+		    yield return Code_LymphNodeNormal;                                                                                                    // Builder.cs:350
+		    yield return Code_LymphNodePathological;                                                                                              // Builder.cs:350
+		    yield return Code_MassSolid;                                                                                                          // Builder.cs:350
+		    yield return Code_MassSolidWTumorVasc;                                                                                                // Builder.cs:350
+		    yield return Code_Mastitis;                                                                                                           // Builder.cs:350
+		    yield return Code_MilkOfCalcium;                                                                                                      // Builder.cs:350
+		    yield return Code_MultiFocalCancer;                                                                                                   // Builder.cs:350
+		    yield return Code_PapillaryLesion;                                                                                                    // Builder.cs:350
+		    yield return Code_Papilloma;                                                                                                          // Builder.cs:350
+		    yield return Code_PhyllodesTumor;                                                                                                     // Builder.cs:350
+		    yield return Code_PostLumpectomyScar;                                                                                                 // Builder.cs:350
+		    yield return Code_PostSurgicalScar;                                                                                                   // Builder.cs:350
+		    yield return Code_PreviousBiopsy;                                                                                                     // Builder.cs:350
+		    yield return Code_PreviousSurgery;                                                                                                    // Builder.cs:350
+		    yield return Code_PreviousTrauma;                                                                                                     // Builder.cs:350
+		    yield return Code_RadialScar;                                                                                                         // Builder.cs:350
+		    yield return Code_RadiationChanges;                                                                                                   // Builder.cs:350
+		    yield return Code_RadiationTherapy;                                                                                                   // Builder.cs:350
+		    yield return Code_Scar;                                                                                                               // Builder.cs:350
+		    yield return Code_ScarWithShadowing;                                                                                                  // Builder.cs:350
+		    yield return Code_SclerosingAdenosis;                                                                                                 // Builder.cs:350
+		    yield return Code_SecretoryCalcification;                                                                                             // Builder.cs:350
+		    yield return Code_SentinelNode;                                                                                                       // Builder.cs:350
+		    yield return Code_Seroma;                                                                                                             // Builder.cs:350
+		    yield return Code_SkinLesion;                                                                                                         // Builder.cs:350
+		    yield return Code_Surgery;                                                                                                            // Builder.cs:350
+		    yield return Code_Trauma;                                                                                                             // Builder.cs:350
+		    yield return Code_VascularCalcifications;                                                                                             // Builder.cs:350
+		    yield return Code_VenousStasis;                                                                                                       // Builder.cs:350
+		}                                                                                                                                         // Builder.cs:356
 		//- Methods
 	}
 }

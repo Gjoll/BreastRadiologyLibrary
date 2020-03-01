@@ -12,12 +12,12 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference accessors
     /// </summary>
-    public class MemberListReferenceBase<BaseType> : MemberList<BaseType>
+    public class MemberListReference<BaseType> : MemberList<BaseType>
             where BaseType : ObservationBase
     {
         public String ProfileUrl { get; private set; }
 
-        public MemberListReferenceBase(String listName) : base(listName)
+        public MemberListReference(String listName) : base(listName)
         {
         }
 
@@ -34,7 +34,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference single accessors
     /// </summary>
-    public class MemberListReferenceSingle<BaseType> : MemberListReferenceBase<BaseType>
+    public class MemberListReferenceSingle<BaseType> : MemberListReference<BaseType>
             where BaseType : ObservationBase, new()
     {
         /// <summary>
@@ -70,7 +70,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference multiple accessors
     /// </summary>
-    public class MemberListReferenceMultiple<BaseType> : MemberListReferenceBase<BaseType>
+    public class MemberListReferenceMultiple<BaseType> : MemberListReference<BaseType>
             where BaseType : ObservationBase, new()
     {
         public IEnumerable<BaseType> All() => this.items;

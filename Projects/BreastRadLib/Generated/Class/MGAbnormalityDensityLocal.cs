@@ -15,7 +15,7 @@ namespace BreastRadLib.MGAbnormalityDensityLocal
 	/// Accessor class for 'densityType'
 	/// [Fhir Element 'Observation.component:densityType]'
 	/// </summary>
-	public class DensityType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                              // BuildMemberListCodedValue.cs:72
+	public class DensityType_Accessor : MemberListCodedValue<CodeableConcept>                                                                  // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

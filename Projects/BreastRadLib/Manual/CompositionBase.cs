@@ -55,7 +55,7 @@ namespace BreastRadLib
             return null;
         }
 
-        protected void ReadSection<T>(MemberListSectionBase<T> section)
+        protected void ReadSection<T>(MemberListSection<T> section)
             where T : ResourceBase, new()
         {
             List<T> items = new List<T>();
@@ -81,7 +81,7 @@ namespace BreastRadLib
             section.RawItems = items;
         }
 
-        protected void WriteSection<T>(MemberListSectionBase<T> section)
+        protected void WriteSection<T>(MemberListSection<T> section)
             where T : ResourceBase, new()
         {
             if (section.Count < section.Min)

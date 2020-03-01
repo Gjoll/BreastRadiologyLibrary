@@ -69,7 +69,7 @@ namespace FireFragger.CS
                 .Summary($"Accessor class for '{componentSlice.Name}'")
                 .Summary($"[Fhir Element '{componentSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListCodedValueBase<{propertyType}>")
+                .AppendCode($"public class {className} : MemberListCodedValue<{propertyType}>")
                 .OpenBrace()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested propertiesBlock)

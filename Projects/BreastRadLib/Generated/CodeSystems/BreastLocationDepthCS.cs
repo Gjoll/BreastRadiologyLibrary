@@ -12,8 +12,8 @@ namespace BreastRadLib
 	public class BreastLocationDepthCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationDepthCS";                                         // Builder.cs:368
-		                                                                                                                                          // Builder.cs:380
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationDepthCS";                                         // Builder.cs:371
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// The breast is divided into anterior, middle and posterior depth.
 		/// The location of any lesion is given when discussed in the medical profession, with
@@ -22,21 +22,21 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_AnteriorDepth = new Coding(System, "AnteriorDepth", "Anterior depth");                                          // Builder.cs:399
-		                                                                                                                                          // Builder.cs:380
+		public static Coding Code_AnteriorDepth = new Coding(System, "AnteriorDepth", "Anterior depth");                                          // Builder.cs:402
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Middle depth in between the anterior and posterior portion of the breast.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_MiddleDepth = new Coding(System, "MiddleDepth", "Middle depth");                                                // Builder.cs:399
-		                                                                                                                                          // Builder.cs:380
+		public static Coding Code_MiddleDepth = new Coding(System, "MiddleDepth", "Middle depth");                                                // Builder.cs:402
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Posterior depth (closest to the chest wall) of the  breast.
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_PosteriorDepth = new Coding(System, "PosteriorDepth", "Posterior depth");                                       // Builder.cs:399
+		public static Coding Code_PosteriorDepth = new Coding(System, "PosteriorDepth", "Posterior depth");                                       // Builder.cs:402
 		//- Fields
 	}
 }

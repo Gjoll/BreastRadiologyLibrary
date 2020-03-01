@@ -15,7 +15,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	/// Accessor class for 'value'
 	/// [Fhir Element 'Observation.component:value]'
 	/// </summary>
-	public class Value_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                    // BuildMemberListCodedValue.cs:72
+	public class Value_Accessor : MemberListCodedValue<CodeableConcept>                                                                        // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>
@@ -47,7 +47,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	/// Accessor class for 'qualifier'
 	/// [Fhir Element 'Observation.component:qualifier]'
 	/// </summary>
-	public class Qualifier_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                // BuildMemberListCodedValue.cs:72
+	public class Qualifier_Accessor : MemberListCodedValue<CodeableConcept>                                                                    // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

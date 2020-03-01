@@ -94,7 +94,7 @@ namespace FireFragger.CS
                 .Summary($"Accessor class for '{extensionSlice.Name}'")
                 .Summary($"[Fhir Element '{extensionSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtensionValueBase")
+                .AppendCode($"public class {className} : MemberListExtension")
                 .OpenBrace()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested blockProperties)
@@ -298,13 +298,23 @@ namespace FireFragger.CS
         {
             if (className.EndsWith("Extension") == false)
                 className += "Extension";
+            BuildSlices(className, extensionNode);
+        }
 
+        /// <summary>
+        /// Create a class for every extension slice, and create a class
+        /// that has a property for every extension class type defined.
+        /// </summary>
+        /// <param name="className"></param>
+        /// <param name="extensionNode"></param>
+        void BuildSlices(String className, ElementTreeNode extensionNode)
+        {
             String extensionName = className.Substring(0, className.Length - 9);
             this.codeBlocks.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Class that implements the '{extensionName}' extension class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtensionValueBase")
+                .AppendCode($"public class {className} : MemberListExtension")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockProperties)
                 .BlankLine()
@@ -337,7 +347,6 @@ namespace FireFragger.CS
             foreach (ElementTreeSlice extensionSlice in extensionNode.Slices.Skip(1))
                 BuildSlice(extensionSlice, this.codeBlocks.LocalClassDefs, blockProperties, blockConstructor, blockWrite, blockRead);
         }
-
 
         void BuildSlice(ElementTreeSlice extensionSlice,
             CodeBlockNested localClassDefs,
@@ -393,6 +402,10 @@ namespace FireFragger.CS
                 ;
         }
 
+        /// <summary>
+        /// Create class for an extension element that has no slices, and a single
+        /// defined value.
+        /// </summary>
         String BuildSimpleExtensionClass(ElementTreeSlice extensionSlice,
             CodeBlockNested localClassDefs,
             ElementTreeNode valueXNode)
@@ -516,27 +529,8 @@ namespace FireFragger.CS
 
         void BuildPropertyComplexExtension(ElementTreeNode subExtensionNode)
         {
-            foreach (ElementTreeSlice extensionSlice in subExtensionNode.Slices.Skip(1))
-            {
-                if (extensionSlice.ElementDefinition.Type.Count != 1)
-                    throw new Exception($"{extensionSlice.Name} invalid type count. Expected 1, got {extensionSlice.ElementDefinition.Type.Count}");
-                ElementDefinition.TypeRefComponent type = extensionSlice.ElementDefinition.Type[0];
-                switch (type.Code)
-                {
-                    case "Extension":
-                        if (type.Profile.Count() > 0)
-                        {
-                            if (type.Profile.Count() != 1)
-                                throw new Exception($"Multiple extension profiels not supported");
-                            this.BuildPropertyComplexExternalExtension(extensionSlice, type.Profile.First());
-                        }
-                        else
-                            this.BuildPropertyComplexInternalExtension(extensionSlice);
-                        break;
-                    default:
-                        throw new NotImplementedException();
-                }
-            }
+            String className = CSMisc.ClassName(subExtensionNode.Name);
+            BuildSlices(className, subExtensionNode);
         }
     }
 }

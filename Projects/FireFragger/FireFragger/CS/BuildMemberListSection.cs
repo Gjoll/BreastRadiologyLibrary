@@ -45,7 +45,7 @@ namespace FireFragger.CS
                 .Summary($"Accessor class for '{title}'")
                 .Summary($"[Fhir Element '{sectionSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListSectionBase<{brClass}>")
+                .AppendCode($"public class {className} : MemberListSection<{brClass}>")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested propertiesBlock)
                 .BlankLine()

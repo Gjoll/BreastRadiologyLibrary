@@ -15,7 +15,7 @@ namespace BreastRadLib.CorrespondsWithFragmentLocal
 	/// Accessor class for 'correspondsWith'
 	/// [Fhir Element 'Observation.component:correspondsWith]'
 	/// </summary>
-	public class CorrespondsWith_Accessor : MemberListCodedValueBase<CodeableConcept>                                                          // BuildMemberListCodedValue.cs:72
+	public class CorrespondsWith_Accessor : MemberListCodedValue<CodeableConcept>                                                              // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

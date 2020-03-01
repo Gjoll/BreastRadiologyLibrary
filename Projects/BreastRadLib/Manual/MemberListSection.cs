@@ -12,7 +12,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all section accessors
     /// </summary>
-    public class MemberListSectionBase<BaseType> : MemberList<BaseType>
+    public class MemberListSection<BaseType> : MemberList<BaseType>
             where BaseType : ResourceBase, new()
     {
         /// <summary>
@@ -25,7 +25,7 @@ namespace BreastRadLib
         /// </summary>
         public Coding Code { get; protected set; }
 
-        protected MemberListSectionBase(String listName) : base(listName)
+        protected MemberListSection(String listName) : base(listName)
         {
         }
 

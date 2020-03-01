@@ -15,7 +15,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// Accessor class for 'obsDistribution'
 	/// [Fhir Element 'Observation.component:obsDistribution]'
 	/// </summary>
-	public class ObsDistribution_Accessor : MemberListCodedValueBase<CodeableConcept>                                                          // BuildMemberListCodedValue.cs:72
+	public class ObsDistribution_Accessor : MemberListCodedValue<CodeableConcept>                                                              // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>
@@ -60,7 +60,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// Accessor class for 'obsDistRegionSize'
 	/// [Fhir Element 'Observation.component:obsDistRegionSize]'
 	/// </summary>
-	public class ObsDistRegionSize_Accessor : MemberListCodedValueBase<Element>                                                                // BuildMemberListCodedValue.cs:72
+	public class ObsDistRegionSize_Accessor : MemberListCodedValue<Element>                                                                    // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

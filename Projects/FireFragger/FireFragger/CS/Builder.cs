@@ -132,7 +132,10 @@ namespace FireFragger.CS
             if (String.Compare(CSMisc.ClassName(fi), this.BreakOnClass, StringComparison.OrdinalIgnoreCase) == 0)
                 Debugger.Break();
 
-            if (fi.IsFragment() == false)
+            if (
+                (fi.IsFragment() == false) &&
+                (fi.StructDef.BaseDefinition != Global.ExtensionUrl)
+                )
             {
                 String url = fi.StructDef.Url.Trim().ToLower();
                 this.resourceFactoryProfileBlock

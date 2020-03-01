@@ -12,37 +12,37 @@ namespace BreastRadLib
 	public class CompositionSectionSliceCodes
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                                  // Builder.cs:368
-		                                                                                                                                          // Builder.cs:380
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                                  // Builder.cs:371
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Slicing CompositionSection Code - Report
 		/// </summary>
-		public static Coding Code_SectionReport = new Coding(System, "sectionReport", "Code to identify the 'Report' section slice");             // Builder.cs:399
-		                                                                                                                                          // Builder.cs:380
+		public static Coding Code_SectionReport = new Coding(System, "sectionReport", "Code to identify the 'Report' section slice");             // Builder.cs:402
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Slicing CompositionSection Code - Impressions
 		/// </summary>
-		public static Coding Code_SectionImpressions = new Coding(System, "sectionImpressions", "Code to identify the 'Impressions' section slice");// Builder.cs:399
-		                                                                                                                                          // Builder.cs:380
+		public static Coding Code_SectionImpressions = new Coding(System, "sectionImpressions", "Code to identify the 'Impressions' section slice");// Builder.cs:402
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Slicing CompositionSection Code - Related Resources
 		/// </summary>
-		public static Coding Code_SectionRelatedResources = new Coding(System, "sectionRelatedResources", "Code to identify the 'RelatedResources' section slice");// Builder.cs:399
-		                                                                                                                                          // Builder.cs:380
+		public static Coding Code_SectionRelatedResources = new Coding(System, "sectionRelatedResources", "Code to identify the 'RelatedResources' section slice");// Builder.cs:402
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Slicing CompositionSection Code - Recommendations
 		/// </summary>
-		public static Coding Code_SectionCodeRecommendations = new Coding(System, "sectionCodeRecommendations", "Code to identify the 'Recommendations' section slice");// Builder.cs:399
-		                                                                                                                                          // Builder.cs:380
+		public static Coding Code_SectionCodeRecommendations = new Coding(System, "sectionCodeRecommendations", "Code to identify the 'Recommendations' section slice");// Builder.cs:402
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Slicing CompositionSection Code - Findings Left Breast
 		/// </summary>
-		public static Coding Code_SectionCodeFindingsLeftBreast = new Coding(System, "sectionCodeFindingsLeftBreast", "Code to identify the 'Findings Left Breast' section slice");// Builder.cs:399
-		                                                                                                                                          // Builder.cs:380
+		public static Coding Code_SectionCodeFindingsLeftBreast = new Coding(System, "sectionCodeFindingsLeftBreast", "Code to identify the 'Findings Left Breast' section slice");// Builder.cs:402
+		                                                                                                                                          // Builder.cs:383
 		/// <summary>
 		/// Slicing CompositionSection Code - Findings Right Breast
 		/// </summary>
-		public static Coding Code_SectionCodeFindingsRightBreast = new Coding(System, "sectionCodeFindingsRightBreast", "Code to identify the 'Findings Right Breast' section slice");// Builder.cs:399
+		public static Coding Code_SectionCodeFindingsRightBreast = new Coding(System, "sectionCodeFindingsRightBreast", "Code to identify the 'Findings Right Breast' section slice");// Builder.cs:402
 		//- Fields
 	}
 }

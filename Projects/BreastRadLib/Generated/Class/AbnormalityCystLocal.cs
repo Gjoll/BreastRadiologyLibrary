@@ -15,7 +15,7 @@ namespace BreastRadLib.AbnormalityCystLocal
 	/// Accessor class for 'cystType'
 	/// [Fhir Element 'Observation.component:cystType]'
 	/// </summary>
-	public class CystType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                                 // BuildMemberListCodedValue.cs:72
+	public class CystType_Accessor : MemberListCodedValue<CodeableConcept>                                                                     // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

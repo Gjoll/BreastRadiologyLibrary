@@ -15,7 +15,7 @@ namespace BreastRadLib.NotPreviouslySeenComponentFragmentLocal
 	/// Accessor class for 'notPreviouslySeen'
 	/// [Fhir Element 'Observation.component:notPreviouslySeen]'
 	/// </summary>
-	public class NotPreviouslySeen_Accessor : MemberListCodedValueBase<CodeableConcept>                                                        // BuildMemberListCodedValue.cs:72
+	public class NotPreviouslySeen_Accessor : MemberListCodedValue<CodeableConcept>                                                            // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

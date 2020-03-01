@@ -35,7 +35,7 @@ namespace BreastRadLib
             this.Resource.HasMember.Clear();
         }
 
-        protected void WriteHasMember<BaseType>(MemberListReferenceBase<BaseType> hasMemberList)
+        protected void WriteHasMember<BaseType>(MemberListReference<BaseType> hasMemberList)
              where BaseType : ObservationBase
         {
             foreach (BaseType item in hasMemberList.RawItems)
@@ -48,7 +48,7 @@ namespace BreastRadLib
             }
         }
 
-        protected void ReadHasMember<BaseType>(MemberListReferenceBase<BaseType> hasMemberList)
+        protected void ReadHasMember<BaseType>(MemberListReference<BaseType> hasMemberList)
              where BaseType : ObservationBase, new()
         {
             foreach (ResourceReference resRef in this.Resource.HasMember)
@@ -76,7 +76,7 @@ namespace BreastRadLib
             this.Resource.Subject = this.doc.Subject;
         }
 
-        protected void WriteComponent<BaseType>(MemberListCodedValueBase<BaseType> componentList)
+        protected void WriteComponent<BaseType>(MemberListCodedValue<BaseType> componentList)
              where BaseType : Element
         {
             CodeableConcept code = new CodeableConcept(componentList.Code.System,
@@ -93,7 +93,7 @@ namespace BreastRadLib
             }
         }
 
-        protected void ReadComponent<BaseType>(MemberListCodedValueBase<BaseType> componentList)
+        protected void ReadComponent<BaseType>(MemberListCodedValue<BaseType> componentList)
              where BaseType : Element
         {
             foreach (Observation.ComponentComponent comp in this.Resource.Component)

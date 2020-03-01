@@ -28,20 +28,20 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_ParallelToSkin = new TCoding(OrientationCS.Code_ParallelToSkin);                                               // Builder.cs:344
-		public static TCoding Code_PerpendicularToSkin = new TCoding(OrientationCS.Code_PerpendicularToSkin);                                     // Builder.cs:344
-		public static TCoding Code_TallerThanWide = new TCoding(OrientationCS.Code_TallerThanWide);                                               // Builder.cs:344
-		public static TCoding Code_WiderThanTall = new TCoding(OrientationCS.Code_WiderThanTall);                                                 // Builder.cs:344
+		public static TCoding Code_ParallelToSkin = new TCoding(OrientationCS.Code_ParallelToSkin);                                               // Builder.cs:347
+		public static TCoding Code_PerpendicularToSkin = new TCoding(OrientationCS.Code_PerpendicularToSkin);                                     // Builder.cs:347
+		public static TCoding Code_TallerThanWide = new TCoding(OrientationCS.Code_TallerThanWide);                                               // Builder.cs:347
+		public static TCoding Code_WiderThanTall = new TCoding(OrientationCS.Code_WiderThanTall);                                                 // Builder.cs:347
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:330
-		{                                                                                                                                         // Builder.cs:331
-		    yield return Code_ParallelToSkin;                                                                                                     // Builder.cs:347
-		    yield return Code_PerpendicularToSkin;                                                                                                // Builder.cs:347
-		    yield return Code_TallerThanWide;                                                                                                     // Builder.cs:347
-		    yield return Code_WiderThanTall;                                                                                                      // Builder.cs:347
-		}                                                                                                                                         // Builder.cs:353
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
+		{                                                                                                                                         // Builder.cs:334
+		    yield return Code_ParallelToSkin;                                                                                                     // Builder.cs:350
+		    yield return Code_PerpendicularToSkin;                                                                                                // Builder.cs:350
+		    yield return Code_TallerThanWide;                                                                                                     // Builder.cs:350
+		    yield return Code_WiderThanTall;                                                                                                      // Builder.cs:350
+		}                                                                                                                                         // Builder.cs:356
 		//- Methods
 	}
 }

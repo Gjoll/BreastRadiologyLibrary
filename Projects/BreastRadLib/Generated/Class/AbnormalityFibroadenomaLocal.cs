@@ -15,7 +15,7 @@ namespace BreastRadLib.AbnormalityFibroadenomaLocal
 	/// Accessor class for 'fibroAdenomaType'
 	/// [Fhir Element 'Observation.component:fibroAdenomaType]'
 	/// </summary>
-	public class FibroAdenomaType_Accessor : MemberListCodedValueBase<CodeableConcept>                                                         // BuildMemberListCodedValue.cs:72
+	public class FibroAdenomaType_Accessor : MemberListCodedValue<CodeableConcept>                                                             // BuildMemberListCodedValue.cs:72
 	{                                                                                                                                          // BuildMemberListCodedValue.cs:73
 	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:74
 	    /// <summary>

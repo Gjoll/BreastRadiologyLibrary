@@ -12,7 +12,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all component accessors
     /// </summary>
-    public class MemberListCodedValueBase<BaseType> : MemberList<BaseType>
+    public class MemberListCodedValue<BaseType> : MemberList<BaseType>
         where BaseType : Element
     {
         /// <summary>
@@ -20,7 +20,7 @@ namespace BreastRadLib
         /// </summary>
         public Coding Code { get; protected set; }
 
-        protected MemberListCodedValueBase(String listName) : base(listName)
+        protected MemberListCodedValue(String listName) : base(listName)
         {
         }
 

@@ -15,7 +15,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// Accessor class for 'Breast Radiology Report'
 	/// [Fhir Element 'Composition.section:report]'
 	/// </summary>
-	public class Report_Accessor : MemberListSectionBase<BreastRadReport>                                                                      // BuildMemberListSection.cs:48
+	public class Report_Accessor : MemberListSection<BreastRadReport>                                                                          // BuildMemberListSection.cs:48
 	{                                                                                                                                          // BuildMemberListSection.cs:49
 	    /// <summary>
 	    /// Access propertyName
@@ -49,7 +49,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// Accessor class for 'Clinical Impressions'
 	/// [Fhir Element 'Composition.section:impressions]'
 	/// </summary>
-	public class Impressions_Accessor : MemberListSectionBase<ResourceBase>                                                                    // BuildMemberListSection.cs:48
+	public class Impressions_Accessor : MemberListSection<ResourceBase>                                                                        // BuildMemberListSection.cs:48
 	{                                                                                                                                          // BuildMemberListSection.cs:49
 	    /// <summary>
 	    /// Access propertyName
@@ -97,7 +97,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// Accessor class for 'Findings Right Breast'
 	/// [Fhir Element 'Composition.section:findingsRightBreast]'
 	/// </summary>
-	public class FindingsRightBreast_Accessor : MemberListSectionBase<SectionFindingsRightBreast>                                              // BuildMemberListSection.cs:48
+	public class FindingsRightBreast_Accessor : MemberListSection<SectionFindingsRightBreast>                                                  // BuildMemberListSection.cs:48
 	{                                                                                                                                          // BuildMemberListSection.cs:49
 	    /// <summary>
 	    /// Access propertyName
@@ -131,7 +131,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// Accessor class for 'Findings Left Breast'
 	/// [Fhir Element 'Composition.section:findingsLeftBreast]'
 	/// </summary>
-	public class FindingsLeftBreast_Accessor : MemberListSectionBase<SectionFindingsLeftBreast>                                                // BuildMemberListSection.cs:48
+	public class FindingsLeftBreast_Accessor : MemberListSection<SectionFindingsLeftBreast>                                                    // BuildMemberListSection.cs:48
 	{                                                                                                                                          // BuildMemberListSection.cs:49
 	    /// <summary>
 	    /// Access propertyName
@@ -165,7 +165,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// Accessor class for 'Related Resources'
 	/// [Fhir Element 'Composition.section:relatedResources]'
 	/// </summary>
-	public class RelatedResources_Accessor : MemberListSectionBase<ResourceBase>                                                               // BuildMemberListSection.cs:48
+	public class RelatedResources_Accessor : MemberListSection<ResourceBase>                                                                   // BuildMemberListSection.cs:48
 	{                                                                                                                                          // BuildMemberListSection.cs:49
 	    /// <summary>
 	    /// Access propertyName
@@ -213,7 +213,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// Accessor class for 'Recommendations'
 	/// [Fhir Element 'Composition.section:recommendations]'
 	/// </summary>
-	public class Recommendations_Accessor : MemberListSectionBase<ResourceBase>                                                                // BuildMemberListSection.cs:48
+	public class Recommendations_Accessor : MemberListSection<ResourceBase>                                                                    // BuildMemberListSection.cs:48
 	{                                                                                                                                          // BuildMemberListSection.cs:49
 	    /// <summary>
 	    /// Access propertyName
