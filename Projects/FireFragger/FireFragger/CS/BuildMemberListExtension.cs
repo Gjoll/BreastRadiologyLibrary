@@ -94,7 +94,7 @@ namespace FireFragger.CS
                 .Summary($"Accessor class for '{extensionSlice.Name}'")
                 .Summary($"[Fhir Element '{extensionSlice.ElementDefinition.ElementId}]'")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtension")
+                .AppendCode($"public class {className} : <{propertyType}>")
                 .OpenBrace()
                 .AppendCode($"// Properties")
                 .DefineBlock(out CodeBlockNested blockProperties)
@@ -314,7 +314,7 @@ namespace FireFragger.CS
                 .SummaryOpen()
                 .Summary($"Class that implements the '{extensionName}' extension class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtension")
+                .AppendCode($"public class {className} : MemberListExtension<IMemberListExtension>")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockProperties)
                 .BlankLine()
@@ -415,18 +415,31 @@ namespace FireFragger.CS
 
             String sliceName = extensionSlice.ElementDefinition.SliceName;
             String className = CSMisc.ClassName(sliceName);
-            if (className.EndsWith("ExtensionItem") == false)
-                className += "ExtensionItem";
+            if (className.EndsWith("Extension") == false)
+                className += "Extension";
+
+            String propertyType;
+            switch (valueXNode.ElementDefinition.Type.Count())
+            {
+                case 0:
+                    throw new NotImplementedException($"No type defined for extension Element '{extensionSlice.ElementDefinition.ElementId}");
+                case 1:
+                    propertyType = valueXNode.ElementDefinition.Type[0].Code;
+                    break;
+                default:
+                    propertyType = "Base";
+                    break;
+            }
 
             localClassDefs
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Class that implements the {className}' extension slice class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtension")
+                .AppendCode($"public class {className} : MemberListExtension<{propertyType}>")
                 .OpenBrace()
 
-                .DefineBlock(out CodeBlockNested blockPropertiesSlice)
+                .DefineBlock(out CodeBlockNested propertiesBlock)
 
                 .BlankLine()
                 .SummaryOpen()
@@ -441,48 +454,35 @@ namespace FireFragger.CS
                 .BlankLine()
                 .AppendCode($"public void Read()")
                 .OpenBrace()
-                .DefineBlock(out CodeBlockNested blockReadSlice)
+                .DefineBlock(out CodeBlockNested blockRead)
                 .CloseBrace()
 
                 .BlankLine()
                 .AppendCode($"public void Write()")
                 .OpenBrace()
-                .DefineBlock(out CodeBlockNested blockWriteSlice)
+                .DefineBlock(out CodeBlockNested blockWrite)
                 .CloseBrace()
-                .DefineBlock(out CodeBlockNested blockMethodsSlice)
+                .DefineBlock(out CodeBlockNested blockMethods)
                 .BlankLine()
                 .CloseBrace()
                 ;
 
             String propertyName = CSMisc.PropertyName(extensionSlice.Name);
-            String baseProperty;
-            switch (valueXNode.ElementDefinition.Type.Count())
-            {
-                case 0:
-                    throw new NotImplementedException($"No type defined for extension Element '{extensionSlice.ElementDefinition.ElementId}");
-                case 1:
-                    baseProperty = valueXNode.ElementDefinition.Type[0].Code;
-                    break;
-                default:
-                    baseProperty = "Base";
-                    break;
-
-            }
 
             switch (max)
             {
                 case 1:
                     {
-                        blockPropertiesSlice
+                        propertiesBlock
                             .BlankLine()
                             .SummaryOpen()
                             .Summary($"Get value of extension slice {extensionSlice.Name}")
                             .SummaryClose()
-                            .AppendCode($"public {baseProperty} Get() => ({baseProperty}) this.First();")
+                            .AppendCode($"public {propertyType} Get() => ({propertyType}) this.First();")
                             ;
                         foreach (ElementDefinition.TypeRefComponent type in valueXNode.ElementDefinition.Type)
                         {
-                            blockPropertiesSlice
+                            propertiesBlock
                                 .BlankLine()
                                 .SummaryOpen()
                                 .Summary($"Set value of extension slice {extensionSlice.Name}")
@@ -501,7 +501,7 @@ namespace FireFragger.CS
                         {
                             foreach (String paramType in ParamTypes(valueXNode, types[0]))
                             {
-                                blockMethodsSlice
+                                blockMethods
                                     .BlankLine()
                                     .SummaryOpen()
                                     .Summary($"Append item to end of list")
@@ -511,15 +511,32 @@ namespace FireFragger.CS
                             }
                         }
 
-                        blockPropertiesSlice
+                        propertiesBlock
+                            .SummaryOpen()
+                            .Summary("Access propertyName")
+                            .SummaryClose()
+                            .AppendCode($"public IEnumerable<{propertyType}> All() => this.items;")
+
                             .BlankLine()
                             .SummaryOpen()
-                            .Summary($"Get value of extension slice {extensionSlice.Name}")
+                            .Summary("Access item at indicated location in list")
                             .SummaryClose()
-                            .AppendCode($"public {baseProperty} Get() => ({baseProperty}) this.First();")
+                            .AppendCode($"public {propertyType} At(Int32 i) => base.items[i];")
+
+                            .BlankLine()
+                            .SummaryOpen()
+                            .Summary("Access first item in list")
+                            .SummaryClose()
+                            .AppendCode($"public new {propertyType} First() => base.First();")
+                            .BlankLine()
+                            .SummaryOpen()
+                            .Summary("Access first item in list or default value if empty")
+                            .SummaryClose()
+                            .AppendCode($"public new {propertyType} FirstOrDefault() => base.FirstOrDefault();")
                             ;
+
                         if (types.Count == 1)
-                            DefineAppend(valueXNode.ElementDefinition, baseProperty, "");
+                            DefineAppend(valueXNode.ElementDefinition, propertyType, "");
                         foreach (ElementDefinition.TypeRefComponent type in types)
                         {
                             DefineAppend(valueXNode.ElementDefinition, type.Code, type.Code);

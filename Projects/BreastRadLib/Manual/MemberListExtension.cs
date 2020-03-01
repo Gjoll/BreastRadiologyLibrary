@@ -9,10 +9,15 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadLib
 {
+    public interface IMemberListExtension
+    {
+
+    };
+
     /// <summary>
     /// Base class for all component accessors
     /// </summary>
-    public class MemberListExtension : MemberList<Element>
+    public class MemberListExtension<T> : MemberList<T>, IMemberListExtension
     {
         protected MemberListExtension(String listName) : base(listName)
         {
@@ -32,18 +37,18 @@ namespace BreastRadLib
             this.Url = url;
         }
 
-        protected void SetFirst(Element value)
+        protected void SetFirst(T value)
         {
             this.items.Clear();
             this.items.Add(value);
         }
 
-        protected void Write(MemberListExtension item)
+        protected void Write(IMemberListExtension item)
         {
             throw new NotImplementedException();
         }
 
-        protected void Read(MemberListExtension item)
+        protected void Read(IMemberListExtension item)
         {
             throw new NotImplementedException();
         }

@@ -44,12 +44,12 @@ namespace BreastRadLib
             throw new NotImplementedException();
         }
 
-        protected void ReadExtension(MemberListExtension list)
+        protected void ReadExtension(IMemberListExtension list)
         {
             throw new NotImplementedException();
         }
 
-        protected void WriteExtension(MemberListExtension list)
+        protected void WriteExtension(IMemberListExtension list)
         {
             throw new NotImplementedException();
         }
