@@ -48,29 +48,66 @@ namespace BreastRadLib
             this.items.Add(value);
         }
 
-        public abstract void Write(Extension e);
+        public abstract IEnumerable<Extension> WriteItems();
 
-        public abstract void Read(Extension e);
+        public abstract void ReadItems(IEnumerable<Extension> e);
     }
 
 
     /// <summary>
     /// Base class for all component accessors
     /// </summary>
-    public class MemberListExtensionItem<T> : MemberListExtension<T>, 
+    public abstract class MemberListExtensionComplex : MemberListBase
+    {
+        protected MemberListExtensionComplex(String listName) : base(listName)
+        {
+        }
+
+        public void Read(Extension e)
+        {
+        }
+
+        protected abstract void ReadItems(IEnumerable<Extension> extensions);
+
+        public void Write(Extension e)
+        {
+        }
+
+        protected abstract IEnumerable<Extension> WriteItems();
+    }
+
+    /// <summary>
+    /// Base class for all component accessors
+    /// </summary>
+    public class MemberListExtensionSimple<T> : MemberListExtension<T>, 
                                               IMemberListExtensionItem
         where T : Element
     {
-        protected MemberListExtensionItem(String listName) : base(listName)
+        protected MemberListExtensionSimple(String listName) : base(listName)
         {
         }
 
-        public override void Read(Extension e)
+        public override void ReadItems(IEnumerable<Extension> extensions)
         {
+            foreach (Extension extension in extensions)
+            {
+                if (extension.Url == this.Url)
+                    this.RawItems.Add((T)extension.Value);
+            }
         }
 
-        public override void Write(Extension e)
+        public override IEnumerable<Extension> WriteItems()
         {
+            List<Extension> retVal = new List<Extension>();
+            foreach (T item in this.RawItems)
+            {
+                retVal.Add(new Extension
+                {
+                    Url = this.Url,
+                    Value = item
+                });
+            }
+            return retVal;
         }
     }
 }

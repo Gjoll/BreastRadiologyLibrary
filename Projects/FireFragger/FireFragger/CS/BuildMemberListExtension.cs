@@ -314,7 +314,7 @@ namespace FireFragger.CS
                 .SummaryOpen()
                 .Summary($"Class that implements the '{extensionName}' extension class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtension<IMemberListExtension>")
+                .AppendCode($"public class {className} : MemberListExtensionComplex")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockProperties)
                 .BlankLine()
@@ -326,7 +326,7 @@ namespace FireFragger.CS
                 .DefineBlock(out CodeBlockNested blockConstructor)
                 .CloseBrace()
                 .BlankLine()
-                .AppendCode($"public override void Read(Extension e)")
+                .AppendCode($"protected override void ReadItems(IEnumerable<Extension> e)")
                 .OpenBrace()
                 .SummaryOpen()
                 .Summary($"Read extension values")
@@ -337,9 +337,11 @@ namespace FireFragger.CS
                 .SummaryOpen()
                 .Summary($"Write extension values")
                 .SummaryClose()
-                .AppendCode($"public override void Write(Extension e)")
+                .AppendCode($"protected override IEnumerable<Extension> WriteItems()")
                 .OpenBrace()
+                .AppendCode($"List<Extension> retVal = new List<Extension>();")
                 .DefineBlock(out CodeBlockNested blockWrite)
+                .AppendCode($"return retVal.ToArray();")
                 .CloseBrace()
                 .CloseBrace()
                 ;
@@ -395,10 +397,10 @@ namespace FireFragger.CS
                 .AppendCode($"this.{propertyName} = new {sliceClassName}(this.doc);")
                 ;
             blockRead
-                .AppendCode($"this.{propertyName}.Read(e);")
+                .AppendCode($"this.{propertyName}.ReadItems(e);")
                 ;
             blockWrite
-                .AppendCode($"this.{propertyName}.Write(e);")
+                .AppendCode($"retVal.AddRange(this.{propertyName}.WriteItems());")
                 ;
         }
 
@@ -436,7 +438,7 @@ namespace FireFragger.CS
                 .SummaryOpen()
                 .Summary($"Class that implements the {className}' extension slice class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtensionItem<{propertyType}>")
+                .AppendCode($"public class {className} : MemberListExtensionSimple<{propertyType}>")
                 .OpenBrace()
 
                 .DefineBlock(out CodeBlockNested propertiesBlock)

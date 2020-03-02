@@ -9,33 +9,14 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all class member lists
     /// </summary>
-    public class MemberList<BaseType>
+    public class MemberListBase
     {
-        String listName;
-
-        /// <summary>
-        /// Count
-        /// </summary>
-        public Int32 Count => this.items.Count;
-
-        /// <summary>
-        /// For internal use only. Access all items.
-        /// </summary>
-        internal List<BaseType> RawItems
-        {
-            get => this.items;
-            set => this.items = value;
-        }
+        protected String listName;
 
         /// <summary>
         /// Parent document
         /// </summary>
         protected BreastRadiologyDocument doc;
-
-        /// <summary>
-        /// Section item list
-        /// </summary>
-        protected List<BaseType> items = new List<BaseType>();
 
         // Properties
         /// <summary>
@@ -49,22 +30,10 @@ namespace BreastRadLib
         public Int32 Max { get; protected set; }
 
         /// <summary>
-        /// Access first item or default
-        /// </summary>
-        /// <returns></returns>
-        protected BaseType FirstOrDefault() => this.items.FirstOrDefault();
-
-        /// <summary>
-        /// Access first item
-        /// </summary>
-        /// <returns></returns>
-        protected BaseType First() => this.items.First();
-
-        /// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="listName"></param>
-        protected MemberList(String listName)
+        protected MemberListBase(String listName)
         {
             this.listName = listName;
         }
@@ -82,6 +51,51 @@ namespace BreastRadLib
             this.doc = doc;
             this.Min = min;
             this.Max = max;
+        }
+    }
+
+    /// <summary>
+    /// Base class for all class member lists
+    /// </summary>
+    public class MemberList<BaseType> : MemberListBase
+    {
+        /// <summary>
+        /// Count
+        /// </summary>
+        public Int32 Count => this.items.Count;
+
+        /// <summary>
+        /// For internal use only. Access all items.
+        /// </summary>
+        internal List<BaseType> RawItems
+        {
+            get => this.items;
+            set => this.items = value;
+        }
+
+        /// <summary>
+        /// Section item list
+        /// </summary>
+        protected List<BaseType> items = new List<BaseType>();
+
+        /// <summary>
+        /// Access first item or default
+        /// </summary>
+        /// <returns></returns>
+        protected BaseType FirstOrDefault() => this.items.FirstOrDefault();
+
+        /// <summary>
+        /// Access first item
+        /// </summary>
+        /// <returns></returns>
+        protected BaseType First() => this.items.First();
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="listName"></param>
+        protected MemberList(String listName) : base(listName)
+        {
         }
 
         /// <summary>
