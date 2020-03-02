@@ -14,10 +14,15 @@ namespace BreastRadLib
 
     };
 
+    public interface IMemberListExtensionItem
+    {
+
+    };
+
     /// <summary>
     /// Base class for all component accessors
     /// </summary>
-    public class MemberListExtension<T> : MemberList<T>, IMemberListExtension
+    public abstract class MemberListExtension<T> : MemberList<T>, IMemberListExtension
     {
         protected MemberListExtension(String listName) : base(listName)
         {
@@ -43,14 +48,67 @@ namespace BreastRadLib
             this.items.Add(value);
         }
 
-        protected void Write(IMemberListExtension item)
+        public abstract IEnumerable<Extension> WriteItems();
+
+        public abstract void ReadItems(IEnumerable<Extension> e);
+    }
+
+
+    /// <summary>
+    /// Base class for all component accessors
+    /// </summary>
+    public abstract class MemberListExtensionComplex : MemberListBase
+    {
+        protected MemberListExtensionComplex(String listName) : base(listName)
         {
-            throw new NotImplementedException();
         }
 
-        protected void Read(IMemberListExtension item)
+        public void Read(Extension e)
         {
-            throw new NotImplementedException();
+        }
+
+        protected abstract void ReadItems(IEnumerable<Extension> extensions);
+
+        public void Write(Extension e)
+        {
+        }
+
+        protected abstract IEnumerable<Extension> WriteItems();
+    }
+
+    /// <summary>
+    /// Base class for all component accessors
+    /// </summary>
+    public class MemberListExtensionSimple<T> : MemberListExtension<T>, 
+                                              IMemberListExtensionItem
+        where T : Element
+    {
+        protected MemberListExtensionSimple(String listName) : base(listName)
+        {
+        }
+
+        public override void ReadItems(IEnumerable<Extension> extensions)
+        {
+            foreach (Extension extension in extensions)
+            {
+                if (extension.Url == this.Url)
+                    this.RawItems.Add((T)extension.Value);
+            }
+        }
+
+        public override IEnumerable<Extension> WriteItems()
+        {
+            List<Extension> retVal = new List<Extension>();
+            foreach (T item in this.RawItems)
+            {
+                retVal.Add(new Extension
+                {
+                    Url = this.Url,
+                    Value = item
+                });
+            }
+            return retVal;
         }
     }
 }
+
