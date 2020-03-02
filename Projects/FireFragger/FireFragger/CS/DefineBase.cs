@@ -54,11 +54,6 @@ namespace FireFragger.CS
 
         void DefineExtensions()
         {
-            String baseName = this.fragBase.DiffNodes.ElementDefinition.Path;
-            if (this.fragBase.DiffNodes.TryGetElementNode($"{baseName}.extension", out ElementTreeNode extensionNode) == false)
-                return;
-            BuildMemberListExtension bmv = new BuildMemberListExtension(this.csBuilder, this.fragBase.CodeBlocks);
-            bmv.Build(CSMisc.ClassName(this.fragBase), extensionNode);
         }
 
         public virtual void Build()
