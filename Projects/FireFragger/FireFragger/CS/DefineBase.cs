@@ -96,7 +96,6 @@ namespace FireFragger.CS
         public virtual void Build()
         {
             this.MergeFragments();
-            this.DefineExtensions();
         }
 
 

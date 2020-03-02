@@ -75,11 +75,11 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Create new blank Impressions of type ClinicalImpression and add to end of list
 	    /// </summary>
-	    //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
+	    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
 	    public ResourceBase Append(Resource r)                                                                                                 // BuildMemberListSection.cs:122
 	    {                                                                                                                                      // BuildMemberListSection.cs:125
 	        ResourceBase brItem = new ResourceBase();                                                                                          // BuildMemberListSection.cs:126
-	        //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
+	        //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
 	        brItem.Init(this.doc, r);                                                                                                          // BuildMemberListSection.cs:128
 	        this.AppendItem(brItem);                                                                                                           // BuildMemberListSection.cs:131
 	        return brItem;                                                                                                                     // BuildMemberListSection.cs:132
@@ -191,11 +191,11 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Create new blank RelatedResources of type Resource and add to end of list
 	    /// </summary>
-	    //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
+	    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
 	    public ResourceBase Append(Resource r)                                                                                                 // BuildMemberListSection.cs:122
 	    {                                                                                                                                      // BuildMemberListSection.cs:125
 	        ResourceBase brItem = new ResourceBase();                                                                                          // BuildMemberListSection.cs:126
-	        //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
+	        //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
 	        brItem.Init(this.doc, r);                                                                                                          // BuildMemberListSection.cs:128
 	        this.AppendItem(brItem);                                                                                                           // BuildMemberListSection.cs:131
 	        return brItem;                                                                                                                     // BuildMemberListSection.cs:132
@@ -239,11 +239,11 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Create new blank Recommendations of type MedicationRequest and add to end of list
 	    /// </summary>
-	    //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
+	    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
 	    public ResourceBase AppendMedicationRequest(Resource r)                                                                                // BuildMemberListSection.cs:122
 	    {                                                                                                                                      // BuildMemberListSection.cs:125
 	        ResourceBase brItem = new ResourceBase();                                                                                          // BuildMemberListSection.cs:126
-	        //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
+	        //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
 	        brItem.Init(this.doc, r);                                                                                                          // BuildMemberListSection.cs:128
 	        this.AppendItem(brItem);                                                                                                           // BuildMemberListSection.cs:131
 	        return brItem;                                                                                                                     // BuildMemberListSection.cs:132
@@ -252,11 +252,11 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Create new blank Recommendations of type ServiceRequest and add to end of list
 	    /// </summary>
-	    //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
+	    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                      // CodeBlockNested.cs:588
 	    public ResourceBase AppendServiceRequest(Resource r)                                                                                   // BuildMemberListSection.cs:122
 	    {                                                                                                                                      // BuildMemberListSection.cs:125
 	        ResourceBase brItem = new ResourceBase();                                                                                          // BuildMemberListSection.cs:126
-	        //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
+	        //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                  // CodeBlockNested.cs:588
 	        brItem.Init(this.doc, r);                                                                                                          // BuildMemberListSection.cs:128
 	        this.AppendItem(brItem);                                                                                                           // BuildMemberListSection.cs:131
 	        return brItem;                                                                                                                     // BuildMemberListSection.cs:132
@@ -265,11 +265,11 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Create new blank Recommendations of type ServiceRequest and add to end of list
 	    /// </summary>
-	    //Else: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                    // CodeBlockNested.cs:594
+	    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 121                    // CodeBlockNested.cs:594
 	    public ServiceRecommendation AppendServiceRecommendation()                                                                             // BuildMemberListSection.cs:123
 	    {                                                                                                                                      // BuildMemberListSection.cs:125
 	        ServiceRecommendation brItem = new ServiceRecommendation();                                                                        // BuildMemberListSection.cs:126
-	        //Else: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                // CodeBlockNested.cs:594
+	        //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\BuildMemberListSection.cs 127                // CodeBlockNested.cs:594
 	        brItem.Init(this.doc);                                                                                                             // BuildMemberListSection.cs:129
 	        this.AppendItem(brItem);                                                                                                           // BuildMemberListSection.cs:131
 	        return brItem;                                                                                                                     // BuildMemberListSection.cs:132

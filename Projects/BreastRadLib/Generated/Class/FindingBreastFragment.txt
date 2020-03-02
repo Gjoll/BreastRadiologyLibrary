@@ -68,9 +68,9 @@
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:183
-			{                                                                                                                                        // DefineBase.cs:184
-			    //If: D:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 185                                // CodeBlockNested.cs:588
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:186
-			}                                                                                                                                        // DefineBase.cs:189
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:189
+			{                                                                                                                                        // DefineBase.cs:190
+			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 191                                // CodeBlockNested.cs:588
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:192
+			}                                                                                                                                        // DefineBase.cs:195
 			//- Methods
