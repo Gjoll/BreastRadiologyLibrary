@@ -31,6 +31,7 @@ namespace FireFragger.CS
                $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
             base.Build();
+            base.DefineExtensions();
             this.DefineSections();
             this.csBuilder.ConversionInfo(this.GetType().Name,
                fcn,

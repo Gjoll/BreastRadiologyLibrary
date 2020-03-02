@@ -52,6 +52,7 @@ namespace FireFragger.CS
 
             //Debug.Assert(fragBase.StructDef.Url.LastUriPart().Contains("ObservedChangesFragment") == false);
             base.Build();
+            base.DefineExtensions();
 
             this.DefineComponents();
             this.DefineHasMembers();

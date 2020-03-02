@@ -52,8 +52,45 @@ namespace FireFragger.CS
             //this.fragBase.ClassConstructor?.Clear();
         }
 
-        void DefineExtensions()
+        /// <summary>
+        /// Define extensions listed in main class extension.
+        /// </summary>
+        void DefineExtensionProperties()
         {
+            String baseName = this.fragBase.SnapNodes.ElementDefinition.Path;
+            if (this.fragBase.SnapNodes.TryGetElementNode("{baseName}.extension", out ElementTreeNode extensionNode) == false)
+                return;
+            if (extensionNode.Slices.Count <= 1)
+                return;
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Define elements that are extended
+        /// </summary>
+        void DefineElementExtension(ElementDefinition e)
+        {
+        }
+
+        /// <summary>
+        /// Define elements that are extended
+        /// </summary>
+        void DefineElementExtensions(ElementTreeNode node)
+        {
+            foreach (ElementTreeSlice slice in node.Slices)
+                DefineElementExtensions(slice);
+        }
+
+        void DefineElementExtensions(ElementTreeSlice slice)
+        {
+            foreach (ElementTreeNode node in slice.Nodes)
+                DefineElementExtensions(node);
+        }
+
+        protected void DefineExtensions()
+        {
+            DefineExtensionProperties();
+            DefineElementExtensions(this.fragBase.DiffNodes);
         }
 
         public virtual void Build()
@@ -131,7 +168,7 @@ namespace FireFragger.CS
 
         void DefineBinding(ElementDefinition elementDefinition)
         {
-            if (CSMisc.BindingClassName(elementDefinition, 
+            if (CSMisc.BindingClassName(elementDefinition,
                 out String bindingClassName,
                 out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
                 return;
@@ -139,7 +176,7 @@ namespace FireFragger.CS
             String fieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String methodName = $"Set{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String fhirFieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
-            switch(fhirFieldName)
+            switch (fhirFieldName)
             {
                 case "ValueX":
                     fhirFieldName = "Value";
