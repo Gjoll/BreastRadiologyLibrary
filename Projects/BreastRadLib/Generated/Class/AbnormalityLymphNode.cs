@@ -39,70 +39,87 @@ namespace BreastRadLib
 	public class AbnormalityLymphNode : ObservationBase, IAbnormalityLymphNode
 	{
 		//+ Properties
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access HasMembers value TumorSatellite
 		/// </summary>
-		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // BuildMemberListBase.cs:69
+		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // BuildMemberListBase.cs:70
+		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value ObsChanges
 		/// </summary>
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // BuildMemberListBase.cs:69
+		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value BiRadsAssessmentCategory
 		/// </summary>
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberListBase.cs:69
+		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value Orientation
 		/// </summary>
-		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // BuildMemberListBase.cs:69
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value Shape
 		/// </summary>
-		public Shape_Accessor Shape { get ; protected set; }                                                                                      // BuildMemberListBase.cs:69
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value Margin
 		/// </summary>
-		public Margin_Accessor Margin { get ; protected set; }                                                                                    // BuildMemberListBase.cs:69
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value MgDensity
 		/// </summary>
-		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value ObsCount
 		/// </summary>
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:69
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value ObsDistribution
 		/// </summary>
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // BuildMemberListBase.cs:69
+		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value ObsDistRegionSize
 		/// </summary>
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberListBase.cs:69
+		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value ObsSize
 		/// </summary>
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // BuildMemberListBase.cs:69
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value NotPreviouslySeen
 		/// </summary>
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:69
+		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value CorrespondsWith
 		/// </summary>
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // BuildMemberListBase.cs:69
+		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value PreviouslyDemonstratedBy
 		/// </summary>
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:69
+		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access HasMembers value AssociatedFeatures
 		/// </summary>
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:69
+		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value LymphNodeType
 		/// </summary>
-		public LymphNodeType_Accessor LymphNodeType { get ; protected set; }                                                                      // BuildMemberListBase.cs:69
+		public LymphNodeType_Accessor LymphNodeType { get ; protected set; }                                                                      // BuildMemberListBase.cs:70
 		//- Properties
 
 		/// <summary>
@@ -144,72 +161,25 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:164
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                                       // DefineBase.cs:225
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.Orientation = new Orientation_Accessor(doc);                                                                                        // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.Shape = new Shape_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.Margin = new Margin_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.LymphNodeType = new LymphNodeType_Accessor(doc);                                                                                    // BuildMemberListBase.cs:75
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:155
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                                       // DefineBase.cs:216
+			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // BuildMemberListBase.cs:73
+			this.bodySite = new BreastBodyLocation();                                                                                                // DefineBase.cs:78
+			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:73
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // BuildMemberListBase.cs:73
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:73
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:73
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // BuildMemberListBase.cs:73
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:73
+			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // BuildMemberListBase.cs:73
+			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:73
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // BuildMemberListBase.cs:73
+			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:73
+			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:73
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:73
+			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:73
+			this.LymphNodeType = new LymphNodeType_Accessor(doc);                                                                                    // BuildMemberListBase.cs:73
 			//- Constructor
 		}
 
@@ -225,22 +195,22 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.TumorSatellite.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:84
-			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:84
-			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:84
-			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:84
-			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:84
-			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:84
-			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:84
-			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:84
-			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:84
-			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildMemberListBase.cs:84
-			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:84
-			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:84
-			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:84
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:84
-			if (this.LymphNodeType.Validate(sb) == false) retVal = false;                                                                            // BuildMemberListBase.cs:84
+			if (this.TumorSatellite.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:82
+			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:82
+			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:82
+			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:82
+			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:82
+			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:82
+			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:82
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:82
+			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:82
+			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:82
+			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildMemberListBase.cs:82
+			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:82
+			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:82
+			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:82
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:82
+			if (this.LymphNodeType.Validate(sb) == false) retVal = false;                                                                            // BuildMemberListBase.cs:82
 			//- ValidateCode
 			return retVal;
 		}
@@ -269,22 +239,23 @@ namespace BreastRadLib
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.TumorSatellite);                                                                                                // BuildMemberListBase.cs:78
-			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildMemberListBase.cs:78
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildMemberListBase.cs:78
-			this.WriteComponent(this.Orientation);                                                                                                   // BuildMemberListBase.cs:78
-			this.WriteComponent(this.Shape);                                                                                                         // BuildMemberListBase.cs:78
-			this.WriteComponent(this.Margin);                                                                                                        // BuildMemberListBase.cs:78
-			this.WriteComponent(this.MgDensity);                                                                                                     // BuildMemberListBase.cs:78
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:78
-			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildMemberListBase.cs:78
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:78
-			this.WriteComponent(this.ObsSize);                                                                                                       // BuildMemberListBase.cs:78
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:78
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:78
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:78
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:78
-			this.WriteComponent(this.LymphNodeType);                                                                                                 // BuildMemberListBase.cs:78
+			this.WriteHasMember(this.TumorSatellite);                                                                                                // BuildMemberListBase.cs:76
+			this.bodySite.Write();                                                                                                                   // DefineBase.cs:84
+			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildMemberListBase.cs:76
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildMemberListBase.cs:76
+			this.WriteComponent(this.Orientation);                                                                                                   // BuildMemberListBase.cs:76
+			this.WriteComponent(this.Shape);                                                                                                         // BuildMemberListBase.cs:76
+			this.WriteComponent(this.Margin);                                                                                                        // BuildMemberListBase.cs:76
+			this.WriteComponent(this.MgDensity);                                                                                                     // BuildMemberListBase.cs:76
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:76
+			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildMemberListBase.cs:76
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:76
+			this.WriteComponent(this.ObsSize);                                                                                                       // BuildMemberListBase.cs:76
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:76
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:76
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:76
+			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:76
+			this.WriteComponent(this.LymphNodeType);                                                                                                 // BuildMemberListBase.cs:76
 			//- WriteCode
 		}
 
@@ -297,22 +268,23 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.TumorSatellite);                                                                                                 // BuildMemberListBase.cs:81
-			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildMemberListBase.cs:81
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildMemberListBase.cs:81
-			this.ReadComponent(this.Orientation);                                                                                                    // BuildMemberListBase.cs:81
-			this.ReadComponent(this.Shape);                                                                                                          // BuildMemberListBase.cs:81
-			this.ReadComponent(this.Margin);                                                                                                         // BuildMemberListBase.cs:81
-			this.ReadComponent(this.MgDensity);                                                                                                      // BuildMemberListBase.cs:81
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:81
-			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildMemberListBase.cs:81
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:81
-			this.ReadComponent(this.ObsSize);                                                                                                        // BuildMemberListBase.cs:81
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:81
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:81
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:81
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:81
-			this.ReadComponent(this.LymphNodeType);                                                                                                  // BuildMemberListBase.cs:81
+			this.ReadHasMember(this.TumorSatellite);                                                                                                 // BuildMemberListBase.cs:79
+			this.bodySite.Read();                                                                                                                    // DefineBase.cs:81
+			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildMemberListBase.cs:79
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildMemberListBase.cs:79
+			this.ReadComponent(this.Orientation);                                                                                                    // BuildMemberListBase.cs:79
+			this.ReadComponent(this.Shape);                                                                                                          // BuildMemberListBase.cs:79
+			this.ReadComponent(this.Margin);                                                                                                         // BuildMemberListBase.cs:79
+			this.ReadComponent(this.MgDensity);                                                                                                      // BuildMemberListBase.cs:79
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:79
+			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildMemberListBase.cs:79
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:79
+			this.ReadComponent(this.ObsSize);                                                                                                        // BuildMemberListBase.cs:79
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:79
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:79
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:79
+			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:79
+			this.ReadComponent(this.LymphNodeType);                                                                                                  // BuildMemberListBase.cs:79
 			//- ReadCode
 		}
 

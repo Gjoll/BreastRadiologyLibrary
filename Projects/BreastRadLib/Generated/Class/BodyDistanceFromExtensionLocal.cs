@@ -28,11 +28,11 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        this.DistanceFromLandMark = new DistanceFromLandMarkExtension(this.doc);                                                           // BuildMemberListExtension.cs:397
 	    }                                                                                                                                      // BuildMemberListExtension.cs:327
 	                                                                                                                                           // BuildMemberListExtension.cs:328
-	    protected override void ReadItems(IEnumerable<Extension> e)                                                                            // BuildMemberListExtension.cs:329
-	    {                                                                                                                                      // BuildMemberListExtension.cs:330
-	        /// <summary>
-	        /// Read extension values
-	        /// </summary>
+	    /// <summary>
+	    /// Read extension values
+	    /// </summary>
+	    protected override void ReadItems(IEnumerable<Extension> e)                                                                            // BuildMemberListExtension.cs:332
+	    {                                                                                                                                      // BuildMemberListExtension.cs:333
 	        this.LandMark.ReadItems(e);                                                                                                        // BuildMemberListExtension.cs:400
 	        this.DistanceFromLandMark.ReadItems(e);                                                                                            // BuildMemberListExtension.cs:400
 	    }                                                                                                                                      // BuildMemberListExtension.cs:335

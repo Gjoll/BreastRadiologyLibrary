@@ -28,14 +28,17 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservedFeature
 	{
 		//+ Properties
+		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value ObsCount
 		/// </summary>
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:69
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value FeatureType
 		/// </summary>
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:69
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:70
 		//- Properties
 
 		/// <summary>
@@ -77,16 +80,11 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:164
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:225
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:75
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:155
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:216
+			this.bodySite = new BreastBodyLocation();                                                                                                // DefineBase.cs:78
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:73
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73
 			//- Constructor
 		}
 
@@ -102,8 +100,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:84
-			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:84
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:82
+			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:82
 			//- ValidateCode
 			return retVal;
 		}
@@ -121,8 +119,9 @@ namespace BreastRadLib
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:78
-			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:78
+			this.bodySite.Write();                                                                                                                   // DefineBase.cs:84
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:76
+			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:76
 			//- WriteCode
 		}
 
@@ -135,8 +134,9 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:81
-			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:81
+			this.bodySite.Read();                                                                                                                    // DefineBase.cs:81
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:79
+			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:79
 			//- ReadCode
 		}
 

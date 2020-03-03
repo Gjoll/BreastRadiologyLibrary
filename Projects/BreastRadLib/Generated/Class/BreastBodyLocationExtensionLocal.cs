@@ -32,11 +32,11 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        this.Depth = new DepthExtension(this.doc);                                                                                         // BuildMemberListExtension.cs:397
 	    }                                                                                                                                      // BuildMemberListExtension.cs:327
 	                                                                                                                                           // BuildMemberListExtension.cs:328
-	    protected override void ReadItems(IEnumerable<Extension> e)                                                                            // BuildMemberListExtension.cs:329
-	    {                                                                                                                                      // BuildMemberListExtension.cs:330
-	        /// <summary>
-	        /// Read extension values
-	        /// </summary>
+	    /// <summary>
+	    /// Read extension values
+	    /// </summary>
+	    protected override void ReadItems(IEnumerable<Extension> e)                                                                            // BuildMemberListExtension.cs:332
+	    {                                                                                                                                      // BuildMemberListExtension.cs:333
 	        this.Quadrant.ReadItems(e);                                                                                                        // BuildMemberListExtension.cs:400
 	        this.Region.ReadItems(e);                                                                                                          // BuildMemberListExtension.cs:400
 	        this.ClockDirection.ReadItems(e);                                                                                                  // BuildMemberListExtension.cs:400

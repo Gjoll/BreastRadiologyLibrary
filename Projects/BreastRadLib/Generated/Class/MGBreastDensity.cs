@@ -66,8 +66,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:164
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // DefineBase.cs:225
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:155
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // DefineBase.cs:216
 			//- Constructor
 		}
 
@@ -139,11 +139,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set Observation.value[x] to one of the predefined items
 		/// </summary>
-		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // DefineBase.cs:189
-		{                                                                                                                                         // DefineBase.cs:190
-		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 191                                 // CodeBlockNested.cs:588
-		    this.Resource.Value = (CodeableConcept) code;                                                                                         // DefineBase.cs:192
-		}                                                                                                                                         // DefineBase.cs:195
+		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // DefineBase.cs:180
+		{                                                                                                                                         // DefineBase.cs:181
+		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 182                                 // CodeBlockNested.cs:588
+		    this.Resource.Value = (CodeableConcept) code;                                                                                         // DefineBase.cs:183
+		}                                                                                                                                         // DefineBase.cs:186
 		//- Methods
 	}
 }

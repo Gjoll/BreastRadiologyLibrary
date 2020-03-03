@@ -26,14 +26,16 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value Value
 		/// </summary>
-		public Value_Accessor Value { get ; protected set; }                                                                                      // BuildMemberListBase.cs:69
+		public Value_Accessor Value { get ; protected set; }                                                                                      // BuildMemberListBase.cs:70
+		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value Qualifier
 		/// </summary>
-		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
+		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // BuildMemberListBase.cs:70
 		//- Properties
 
 		/// <summary>
@@ -75,16 +77,10 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:164
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:225
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.Value = new Value_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:155
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:216
+			this.Value = new Value_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:73
+			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // BuildMemberListBase.cs:73
 			//- Constructor
 		}
 
@@ -100,8 +96,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:84
-			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
+			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:82
+			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:82
 			//- ValidateCode
 			return retVal;
 		}
@@ -118,8 +114,8 @@ namespace BreastRadLib
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // BuildMemberListBase.cs:78
-			this.WriteComponent(this.Qualifier);                                                                                                     // BuildMemberListBase.cs:78
+			this.WriteComponent(this.Value);                                                                                                         // BuildMemberListBase.cs:76
+			this.WriteComponent(this.Qualifier);                                                                                                     // BuildMemberListBase.cs:76
 			//- WriteCode
 		}
 
@@ -132,8 +128,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // BuildMemberListBase.cs:81
-			this.ReadComponent(this.Qualifier);                                                                                                      // BuildMemberListBase.cs:81
+			this.ReadComponent(this.Value);                                                                                                          // BuildMemberListBase.cs:79
+			this.ReadComponent(this.Qualifier);                                                                                                      // BuildMemberListBase.cs:79
 			//- ReadCode
 		}
 

@@ -53,51 +53,42 @@ namespace FireFragger.CS
         }
 
         /// <summary>
-        /// Define extensions listed in main class extension.
+        /// We hard code bodySite to be a reference to a hand coded body referrence
+        /// class.
         /// </summary>
-        void DefineExtensionProperties()
+        protected void DefineBodySite()
         {
-            String baseName = this.fragBase.SnapNodes.ElementDefinition.Path;
-            if (this.fragBase.SnapNodes.TryGetElementNode("{baseName}.extension", out ElementTreeNode extensionNode) == false)
+            String baseName = this.fragBase.StructDef.Differential.Element[0].Path;
+            if (this.fragBase.DiffNodes.TryGetElementNode($"{baseName}.bodySite",
+                out ElementTreeNode bodySiteNode) == false)
                 return;
-            if (extensionNode.Slices.Count <= 1)
+            if (this.fragBase.DiffNodes.TryGetElementNode($"{baseName}.bodySite.extension",
+                out ElementTreeNode bodySiteExtensionNode) == false)
                 return;
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Define elements that are extended
-        /// </summary>
-        void DefineElementExtension(ElementDefinition e)
-        {
-        }
-
-        /// <summary>
-        /// Define elements that are extended
-        /// </summary>
-        void DefineElementExtensions(ElementTreeNode node)
-        {
-            foreach (ElementTreeSlice slice in node.Slices)
-                DefineElementExtensions(slice);
-        }
-
-        void DefineElementExtensions(ElementTreeSlice slice)
-        {
-            foreach (ElementTreeNode node in slice.Nodes)
-                DefineElementExtensions(node);
-        }
-
-        protected void DefineExtensions()
-        {
-            DefineExtensionProperties();
-            DefineElementExtensions(this.fragBase.DiffNodes);
+            if (bodySiteExtensionNode.Slices.Count <= 1)
+                return;
+            Int32 min = bodySiteNode.ElementDefinition.Min.Value;
+            Int32 max = bodySiteNode.ElementDefinition.Max.ToMax();
+            if (max != 1)
+                throw new Exception($"Expected bodySite max of 1");
+            this.fragBase.ClassProperties
+                .AppendCode($"public BreastBodyLocation bodySite {{ get; protected set; }}")
+                ;
+            this.fragBase.ClassConstructor
+                .AppendCode($"this.bodySite = new BreastBodyLocation();")
+                ;
+            this.fragBase.ClassReadCode
+                .AppendCode($"this.bodySite.Read();")
+                ;
+            this.fragBase.ClassWriteCode
+                .AppendCode($"this.bodySite.Write();")
+                ;
         }
 
         public virtual void Build()
         {
             this.MergeFragments();
         }
-
 
         /// <summary>
         /// Merge code blocks in eah referencedframent into mqin class.

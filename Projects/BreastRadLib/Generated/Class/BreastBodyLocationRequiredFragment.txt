@@ -1,7 +1,9 @@
 		//+ Properties
+		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
 		//- Properties
 
 			//+ Constructor
+			this.bodySite = new BreastBodyLocation();                                                                                                // DefineBase.cs:78
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -12,11 +14,13 @@
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
+			this.bodySite.Write();                                                                                                                   // DefineBase.cs:84
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
+			this.bodySite.Read();                                                                                                                    // DefineBase.cs:81
 			//- ReadCode
 
 			//+ Methods

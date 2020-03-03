@@ -63,15 +63,13 @@ namespace FireFragger.CS
                     ;
 
                 this.codeBlocks.ClassProperties
+                    .BlankLine()
                     .SummaryOpen()
                     .Summary($"Access {this.type} value {propertyName}")
                     .SummaryClose()
                     .AppendCode($"public {componentClassName} {propertyName} {{ get ; protected set; }}")
                     ;
                 this.codeBlocks.ClassConstructor
-                    .SummaryOpen()
-                    .Summary($"Constructor")
-                    .SummaryClose()
                     .AppendCode($"this.{propertyName} = new {componentClassName}(doc);")
                     ;
                 this.codeBlocks.ClassWriteCode
