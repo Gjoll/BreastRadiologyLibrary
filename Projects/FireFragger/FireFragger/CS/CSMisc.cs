@@ -85,5 +85,8 @@ namespace FireFragger.CS
         public static String CodeSystemName(CSInfo ci) => $"{MachineName(ci.CodeSystem.Name)}";
         public static String ValueSetName(VSInfo vi) => $"{MachineName(vi.ValueSet.Name)}";
         public static String PropertyName(string name) => $"{MachineName(name)}";
+
+        public static String LocalClassNameSpace(SDInfo fi) => $"BreastRadLib.{CSMisc.ClassName(fi)}Local;";
+
     }
 }

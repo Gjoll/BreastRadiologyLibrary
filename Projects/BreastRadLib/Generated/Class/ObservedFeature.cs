@@ -80,9 +80,9 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:155
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:216
-			this.bodySite = new BreastBodyLocation();                                                                                                // DefineBase.cs:78
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:154
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:215
+			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
 			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:73
 			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73
 			//- Constructor

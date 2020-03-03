@@ -67,13 +67,13 @@ namespace BreastRadLib
         {
         }
 
-        protected abstract void ReadItems(IEnumerable<Extension> extensions);
+        public abstract void ReadItems(IEnumerable<Extension> extensions);
 
         public void Write(Extension e)
         {
         }
 
-        protected abstract IEnumerable<Extension> WriteItems();
+        public abstract IEnumerable<Extension> WriteItems();
     }
 
     /// <summary>

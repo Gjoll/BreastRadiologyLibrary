@@ -155,9 +155,9 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:155
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // DefineBase.cs:216
-			this.bodySite = new BreastBodyLocation();                                                                                                // DefineBase.cs:78
+			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:154
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // DefineBase.cs:215
+			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
 			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:73
 			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // BuildMemberListBase.cs:73
 			this.Orientation = new Orientation_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73

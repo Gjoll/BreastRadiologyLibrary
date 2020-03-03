@@ -75,7 +75,7 @@ namespace FireFragger.CS
                 .AppendCode($"public BreastBodyLocation bodySite {{ get; protected set; }}")
                 ;
             this.fragBase.ClassConstructor
-                .AppendCode($"this.bodySite = new BreastBodyLocation();")
+                .AppendCode($"this.bodySite = new BreastBodyLocation(doc);")
                 ;
             this.fragBase.ClassReadCode
                 .AppendCode($"this.bodySite.Read();")
@@ -103,8 +103,7 @@ namespace FireFragger.CS
 
             foreach (SDInfo fiRef in this.fragBase.AllReferencedFragments)
             {
-                String fragmentName = CSMisc.ClassName(fiRef);
-                usingBlock.AppendLine($"using BreastRadLib.{fragmentName}Local;");
+                usingBlock.AppendLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
                 this.MergeFragment(fiRef);
             }
         }

@@ -13,7 +13,7 @@ namespace BreastRadLib
         /// <summary>
         /// Constructor
         /// </summary>
-        public BreastBodyLocation() : base()                                                                      
+        public BreastBodyLocation(BreastRadiologyDocument doc) : base(doc)                                                                      
         {                                                     
         }
 

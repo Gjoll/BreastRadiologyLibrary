@@ -3,7 +3,7 @@
 		//- Properties
 
 			//+ Constructor
-			this.bodySite = new BreastBodyLocation();                                                                                                // DefineBase.cs:78
+			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
 			//- Constructor
 
 			//+ ValidateCodeStart
