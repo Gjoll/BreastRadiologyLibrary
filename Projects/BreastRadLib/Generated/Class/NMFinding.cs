@@ -66,7 +66,7 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_1();                                                                                                     // DefineBase.cs:158
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                                  // DefineBase.cs:219
 			//- Constructor
 		}
@@ -94,7 +94,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode
@@ -116,7 +116,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_ObservationCode()                                                                                       // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761

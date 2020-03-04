@@ -25,6 +25,17 @@ namespace BreastRadLib
     public class ElementItemExtensionSingle<BaseType> : ElementItemSingle<BaseType>, IElementItemExtension
             where BaseType : Element, new()
     {
+        /// <summary>
+        /// Get value.
+        /// </summary>
+        /// <returns></returns>
+        public BaseType Get() => this.Value;
+
+        /// <summary>
+        /// Set value
+        /// </summary>
+        public void Set(BaseType value) => this.Value = value;
+
         public String ExtensionUrl { get; }
 
         /// <summary>

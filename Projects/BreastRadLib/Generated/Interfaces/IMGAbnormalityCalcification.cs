@@ -31,13 +31,13 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Component value CalcificationType
+		/// Access CalcificationType
 		/// </summary>
-		CalcificationType_Accessor CalcificationType { get ; }                                                                                    // BuildMemberListBase.cs:63
+		ElementItemComponentSingle<CodeableConcept> CalcificationType { get ; }                                                                   // BuildElementItemComponent.cs:66
 		/// <summary>
-		/// Access Component value CalcificationDistribution
+		/// Access CalcificationDistribution
 		/// </summary>
-		CalcificationDistribution_Accessor CalcificationDistribution { get ; }                                                                    // BuildMemberListBase.cs:63
+		ElementItemComponentSingle<CodeableConcept> CalcificationDistribution { get ; }                                                           // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

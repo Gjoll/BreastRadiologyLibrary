@@ -131,7 +131,7 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_1();                                                                                                     // DefineBase.cs:158
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // DefineBase.cs:219
 			this.AbnormalityCyst = new ElementItemReferenceMultiple<AbnormalityCyst>("AbnormalityCyst", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");// BuildElementItemReference.cs:48
 			this.AbnormalityDuct = new ElementItemReferenceMultiple<AbnormalityDuct>("AbnormalityDuct", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");// BuildElementItemReference.cs:48
@@ -185,7 +185,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
 			//- WriteCodeStart
 			//+ WriteCode
@@ -234,7 +234,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_ObservationCode()                                                                                       // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761

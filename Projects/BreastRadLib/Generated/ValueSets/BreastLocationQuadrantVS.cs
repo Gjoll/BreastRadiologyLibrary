@@ -28,20 +28,20 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_InferiorMedialQuadrent = new TCoding(BreastLocationQuadrantCS.Code_InferiorMedialQuadrent);                    // Builder.cs:347
-		public static TCoding Code_InferiorLateralQuadrent = new TCoding(BreastLocationQuadrantCS.Code_InferiorLateralQuadrent);                  // Builder.cs:347
-		public static TCoding Code_SuperiorMedialQuadrent = new TCoding(BreastLocationQuadrantCS.Code_SuperiorMedialQuadrent);                    // Builder.cs:347
-		public static TCoding Code_SuperiorLateralQuadrent = new TCoding(BreastLocationQuadrantCS.Code_SuperiorLateralQuadrent);                  // Builder.cs:347
+		public static TCoding Code_InferiorMedialQuadrent = new TCoding(BreastLocationQuadrantCS.Code_InferiorMedialQuadrent);                    // Builder.cs:353
+		public static TCoding Code_InferiorLateralQuadrent = new TCoding(BreastLocationQuadrantCS.Code_InferiorLateralQuadrent);                  // Builder.cs:353
+		public static TCoding Code_SuperiorMedialQuadrent = new TCoding(BreastLocationQuadrantCS.Code_SuperiorMedialQuadrent);                    // Builder.cs:353
+		public static TCoding Code_SuperiorLateralQuadrent = new TCoding(BreastLocationQuadrantCS.Code_SuperiorLateralQuadrent);                  // Builder.cs:353
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
-		{                                                                                                                                         // Builder.cs:334
-		    yield return Code_InferiorMedialQuadrent;                                                                                             // Builder.cs:350
-		    yield return Code_InferiorLateralQuadrent;                                                                                            // Builder.cs:350
-		    yield return Code_SuperiorMedialQuadrent;                                                                                             // Builder.cs:350
-		    yield return Code_SuperiorLateralQuadrent;                                                                                            // Builder.cs:350
-		}                                                                                                                                         // Builder.cs:356
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:339
+		{                                                                                                                                         // Builder.cs:340
+		    yield return Code_InferiorMedialQuadrent;                                                                                             // Builder.cs:356
+		    yield return Code_InferiorLateralQuadrent;                                                                                            // Builder.cs:356
+		    yield return Code_SuperiorMedialQuadrent;                                                                                             // Builder.cs:356
+		    yield return Code_SuperiorLateralQuadrent;                                                                                            // Builder.cs:356
+		}                                                                                                                                         // Builder.cs:362
 		//- Methods
 	}
 }

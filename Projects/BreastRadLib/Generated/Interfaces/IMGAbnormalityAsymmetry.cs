@@ -30,9 +30,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Component value AsymmetryType
+		/// Access AsymmetryType
 		/// </summary>
-		AsymmetryType_Accessor AsymmetryType { get ; }                                                                                            // BuildMemberListBase.cs:63
+		ElementItemComponentSingle<CodeableConcept> AsymmetryType { get ; }                                                                       // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

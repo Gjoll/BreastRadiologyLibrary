@@ -39,51 +39,51 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value ObsChanges
+		/// Access ObsChanges
 		/// </summary>
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentMultiple<CodeableConcept> ObsChanges { get ; protected set; }                                                  // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value BiRadsAssessmentCategory
+		/// Access BiRadsAssessmentCategory
 		/// </summary>
-		public BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; protected set; }                                      // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value NotPreviouslySeen
+		/// Access NotPreviouslySeen
 		/// </summary>
-		public NotPreviouslySeen_Accessor NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; protected set; }                                           // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value ObsCount
+		/// Access ObsCount
 		/// </summary>
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value ObsSize
+		/// Access ObsSize
 		/// </summary>
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                     // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value ObsDistribution
+		/// Access ObsDistribution
 		/// </summary>
-		public ObsDistribution_Accessor ObsDistribution { get ; protected set; }                                                                  // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentMultiple<CodeableConcept> ObsDistribution { get ; protected set; }                                             // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value ObsDistRegionSize
+		/// Access ObsDistRegionSize
 		/// </summary>
-		public ObsDistRegionSize_Accessor ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentMultiple<Quantity, Range> ObsDistRegionSize { get ; protected set; }                                           // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value CorrespondsWith
+		/// Access CorrespondsWith
 		/// </summary>
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentMultiple<CodeableConcept> CorrespondsWith { get ; protected set; }                                             // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value PreviouslyDemonstratedBy
+		/// Access PreviouslyDemonstratedBy
 		/// </summary>
-		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:71
+		public ElementItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                    // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access AssociatedFeatures
@@ -94,16 +94,16 @@ namespace BreastRadLib
 		/// Access ConsistentWith
 		/// </summary>
 		public ElementItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                               // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value CalcificationType
+		/// Access CalcificationType
 		/// </summary>
-		public CalcificationType_Accessor CalcificationType { get ; protected set; }                                                              // BuildMemberListBase.cs:71
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		public ElementItemComponentSingle<CodeableConcept> CalcificationType { get ; protected set; }                                             // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value CalcificationDistribution
+		/// Access CalcificationDistribution
 		/// </summary>
-		public CalcificationDistribution_Accessor CalcificationDistribution { get ; protected set; }                                              // BuildMemberListBase.cs:71
+		public ElementItemComponentSingle<CodeableConcept> CalcificationDistribution { get ; protected set; }                                     // BuildElementItemComponent.cs:74
 		//- Properties
 
 		/// <summary>
@@ -145,22 +145,22 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_1();                                                                                                     // DefineBase.cs:158
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                                 // DefineBase.cs:219
 			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:74
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategory_Accessor(doc);                                                              // BuildMemberListBase.cs:74
-			this.NotPreviouslySeen = new NotPreviouslySeen_Accessor(doc);                                                                            // BuildMemberListBase.cs:74
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:74
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // BuildMemberListBase.cs:74
-			this.ObsDistribution = new ObsDistribution_Accessor(doc);                                                                                // BuildMemberListBase.cs:74
-			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:74
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:74
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:74
+			this.ObsChanges = new ElementItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
+			this.BiRadsAssessmentCategory = new ElementItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
+			this.NotPreviouslySeen = new ElementItemComponentMultiple<CodeableConcept>("NotPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
+			this.ObsCount = new ElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
+			this.ObsSize = new ElementItemComponentMultiple<Quantity, Range>("ObsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());         // BuildElementItemComponent.cs:59
+			this.ObsDistribution = new ElementItemComponentMultiple<CodeableConcept>("ObsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
+			this.ObsDistRegionSize = new ElementItemComponentMultiple<Quantity, Range>("ObsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
+			this.CorrespondsWith = new ElementItemComponentMultiple<CodeableConcept>("CorrespondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
+			this.PreviouslyDemonstratedBy = new ElementItemComponentMultiple<CodeableConcept>("PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
 			this.AssociatedFeatures = new ElementItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
 			this.ConsistentWith = new ElementItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
-			this.CalcificationType = new CalcificationType_Accessor(doc);                                                                            // BuildMemberListBase.cs:74
-			this.CalcificationDistribution = new CalcificationDistribution_Accessor(doc);                                                            // BuildMemberListBase.cs:74
+			this.CalcificationType = new ElementItemComponentSingle<CodeableConcept>("CalcificationType", 0, 1, FixedValue_ObservationComponentCalcificationTypeCode());// BuildElementItemComponent.cs:59
+			this.CalcificationDistribution = new ElementItemComponentSingle<CodeableConcept>("CalcificationDistribution", 0, 1, FixedValue_ObservationComponentCalcificationDistributionCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 
@@ -176,19 +176,19 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:83
-			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:83
-			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:83
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:83
-			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildMemberListBase.cs:83
-			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:83
-			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:83
-			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:83
-			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:83
+			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildElementItemComponent.cs:83
+			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:83
+			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:83
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildElementItemComponent.cs:83
+			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildElementItemComponent.cs:83
+			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:83
+			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:83
+			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:83
+			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:83
 			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:72
 			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildElementItemReference.cs:72
-			if (this.CalcificationType.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:83
-			if (this.CalcificationDistribution.Validate(sb) == false) retVal = false;                                                                // BuildMemberListBase.cs:83
+			if (this.CalcificationType.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:83
+			if (this.CalcificationDistribution.Validate(sb) == false) retVal = false;                                                                // BuildElementItemComponent.cs:83
 			//- ValidateCode
 			return retVal;
 		}
@@ -201,35 +201,35 @@ namespace BreastRadLib
 			base.Write();
 			//+ WriteCodeStart
 			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
 			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
 			this.bodySite.Write();                                                                                                                   // DefineBase.cs:84
-			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildMemberListBase.cs:77
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildMemberListBase.cs:77
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildMemberListBase.cs:77
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:77
-			this.WriteComponent(this.ObsSize);                                                                                                       // BuildMemberListBase.cs:77
-			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildMemberListBase.cs:77
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:77
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:77
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:77
+			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsSize);                                                                                                       // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildElementItemComponent.cs:77
 			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildElementItemReference.cs:66
 			this.WriteHasMembers(this.ConsistentWith);                                                                                               // BuildElementItemReference.cs:66
-			this.WriteComponent(this.CalcificationType);                                                                                             // BuildMemberListBase.cs:77
-			this.WriteComponent(this.CalcificationDistribution);                                                                                     // BuildMemberListBase.cs:77
+			this.WriteComponent(this.CalcificationType);                                                                                             // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.CalcificationDistribution);                                                                                     // BuildElementItemComponent.cs:77
 			//- WriteCode
 		}
 
@@ -243,19 +243,19 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			this.bodySite.Read();                                                                                                                    // DefineBase.cs:81
-			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildMemberListBase.cs:80
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildMemberListBase.cs:80
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildMemberListBase.cs:80
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:80
-			this.ReadComponent(this.ObsSize);                                                                                                        // BuildMemberListBase.cs:80
-			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildMemberListBase.cs:80
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:80
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:80
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:80
+			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsSize);                                                                                                        // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildElementItemComponent.cs:80
 			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildElementItemReference.cs:69
 			this.ReadHasMembers(this.ConsistentWith);                                                                                                // BuildElementItemReference.cs:69
-			this.ReadComponent(this.CalcificationType);                                                                                              // BuildMemberListBase.cs:80
-			this.ReadComponent(this.CalcificationDistribution);                                                                                      // BuildMemberListBase.cs:80
+			this.ReadComponent(this.CalcificationType);                                                                                              // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.CalcificationDistribution);                                                                                      // BuildElementItemComponent.cs:80
 			//- ReadCode
 		}
 
@@ -263,7 +263,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_ObservationCode()                                                                                       // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -279,6 +279,193 @@ namespace BreastRadLib
 		    }                                                                                                                                     // FhirConstruct.cs:814
 		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
 		    retVal.TextElement.Value = "Abnormality Calcification observation";                                                                   // FhirConstruct.cs:821
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentObsChangesCode()                                                                   // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "obsChanges";                                                                                          // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentBiRadsAssessmentCategoryCode()                                                     // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "targetBiRads";                                                                                        // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentNotPreviouslySeenCode()                                                            // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "notPreviouslySeen";                                                                                   // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentObsCountCode()                                                                     // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "obsCount";                                                                                            // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentObsSizeCode()                                                                      // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "obsSize";                                                                                             // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentObsDistributionCode()                                                              // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "obsDistribution";                                                                                     // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentObsDistRegionSizeCode()                                                            // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "obsSize";                                                                                             // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentCorrespondsWithCode()                                                              // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "correspondsWith";                                                                                     // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentPreviouslyDemonstratedByCode()                                                     // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "prevDemBy";                                                                                           // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_ObservationComponentCalcificationTypeCode()                                                             // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                  // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "mgCalcificationType";                                                                                  // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_ObservationComponentCalcificationDistributionCode()                                                     // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                  // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "mgCalcificationDistribution";                                                                          // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods

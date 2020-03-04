@@ -8,6 +8,7 @@ using System.Text;
 
 namespace FireFragger.CS
 {
+#if NEVER
     /// <summary>
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
@@ -185,4 +186,5 @@ namespace FireFragger.CS
             }
         }
     }
+#endif
 }

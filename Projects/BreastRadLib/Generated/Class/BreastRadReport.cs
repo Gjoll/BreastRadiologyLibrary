@@ -62,7 +62,7 @@ namespace BreastRadLib
 				resource = new DiagnosticReport();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_1();                                                                                                     // DefineBase.cs:158
+			this.Resource.Code = FixedValue_DiagnosticReportCode();                                                                                  // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:219
 			//- Constructor
 		}
@@ -111,7 +111,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_DiagnosticReportCode()                                                                                  // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761

@@ -57,7 +57,7 @@ namespace FireFragger.CS
             }
 
             this.codeBlocks.ClassConstructor
-                .AppendCode($"this.{propertyName} = new {propertyClass}(\"{propertyName}\", {min}, {max}, doc, \"{title}\", {codeValue});")
+                .AppendCode($"this.{propertyName} = new {propertyClass}(\"{propertyName}\", {min}, {max}, \"{title}\", {codeValue});")
                 ;
 
             this.codeBlocks.InterfaceProperties
@@ -126,7 +126,7 @@ namespace FireFragger.CS
                     throw new Exception($"Error processing slice {sliceName}. Expected type Section. Got {entryDef.Type[0].Code}");
                 String[] profileUrls = entryDef.Type[0].TargetProfile.ToArray();
 
-                String codeMethodName = this.defineBase.DefineFixed(sectionCode);
+                String codeMethodName = this.defineBase.DefineFixed(codeNode.ElementDefinition.ElementId, sectionCode);
                 this.DefineProperty(memberSlice, 
                     max, 
                     min, 

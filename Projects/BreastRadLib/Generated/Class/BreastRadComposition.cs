@@ -92,12 +92,12 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:219
-			this.Report = new ElementItemSectionSingle<BreastRadReport>("Report", 1, 1, doc, "Breast Radiology Report", FixedValue_1());             // BuildElementItemSection.cs:60
-			this.Impressions = new ElementItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, doc, "Clinical Impressions", FixedValue_2());// BuildElementItemSection.cs:60
-			this.FindingsRightBreast = new ElementItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, doc, "Findings Right Breast", FixedValue_3());// BuildElementItemSection.cs:60
-			this.FindingsLeftBreast = new ElementItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, doc, "Findings Left Breast", FixedValue_4());// BuildElementItemSection.cs:60
-			this.RelatedResources = new ElementItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, doc, "Related Resources", FixedValue_5());// BuildElementItemSection.cs:60
-			this.Recommendations = new ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, doc, "Recommendations", FixedValue_6());// BuildElementItemSection.cs:60
+			this.Report = new ElementItemSectionSingle<BreastRadReport>("Report", 1, 1, "Breast Radiology Report", FixedValue_CompositionSectionReportCode());// BuildElementItemSection.cs:60
+			this.Impressions = new ElementItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, "Clinical Impressions", FixedValue_CompositionSectionImpressionsCode());// BuildElementItemSection.cs:60
+			this.FindingsRightBreast = new ElementItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, "Findings Right Breast", FixedValue_CompositionSectionFindingsRightBreastCode());// BuildElementItemSection.cs:60
+			this.FindingsLeftBreast = new ElementItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, "Findings Left Breast", FixedValue_CompositionSectionFindingsLeftBreastCode());// BuildElementItemSection.cs:60
+			this.RelatedResources = new ElementItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, "Related Resources", FixedValue_CompositionSectionRelatedResourcesCode());// BuildElementItemSection.cs:60
+			this.Recommendations = new ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, "Recommendations", FixedValue_CompositionSectionRecommendationsCode());// BuildElementItemSection.cs:60
 			//- Constructor
 		}
 
@@ -164,7 +164,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_CompositionSectionReportCode()                                                                          // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -181,7 +181,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_2()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_CompositionSectionImpressionsCode()                                                                     // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -198,7 +198,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_3()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_CompositionSectionFindingsRightBreastCode()                                                             // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -215,7 +215,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_4()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_CompositionSectionFindingsLeftBreastCode()                                                              // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -232,7 +232,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_5()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_CompositionSectionRelatedResourcesCode()                                                                // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -249,7 +249,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_6()                                                                                                     // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_CompositionSectionRecommendationsCode()                                                                 // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761

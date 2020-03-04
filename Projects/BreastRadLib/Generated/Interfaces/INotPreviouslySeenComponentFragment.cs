@@ -19,9 +19,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Component value NotPreviouslySeen
+		/// Access NotPreviouslySeen
 		/// </summary>
-		NotPreviouslySeen_Accessor NotPreviouslySeen { get ; }                                                                                    // BuildMemberListBase.cs:63
+		ElementItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; }                                                                 // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

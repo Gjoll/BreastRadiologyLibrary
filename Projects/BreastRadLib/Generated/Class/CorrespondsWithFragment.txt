@@ -1,33 +1,50 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberListBase.cs:67
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
-		/// Access Component value CorrespondsWith
+		/// Access CorrespondsWith
 		/// </summary>
-		public CorrespondsWith_Accessor CorrespondsWith { get ; protected set; }                                                                  // BuildMemberListBase.cs:71
+		public ElementItemComponentMultiple<CodeableConcept> CorrespondsWith { get ; protected set; }                                             // BuildElementItemComponent.cs:74
 		//- Properties
 
 			//+ Constructor
-			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:74
+			this.CorrespondsWith = new ElementItemComponentMultiple<CodeableConcept>("CorrespondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:83
+			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:83
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:77
+			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildElementItemComponent.cs:77
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:80
+			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildElementItemComponent.cs:80
 			//- ReadCode
 
 			//+ Methods
+			/// <summary>
+			/// Method to create fixed value
+			/// </summary>
+			public CodeableConcept FixedValue_ObservationComponentCorrespondsWithCode()                                                              // FhirConstruct.cs:753
+			{                                                                                                                                        // FhirConstruct.cs:754
+			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
+			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
+			    {                                                                                                                                    // FhirConstruct.cs:764
+			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
+			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
+			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
+			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
+			        temp4.CodeElement.Value = "correspondsWith";                                                                                     // FhirConstruct.cs:786
+			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
+			    }                                                                                                                                    // FhirConstruct.cs:814
+			    return retVal;                                                                                                                       // FhirConstruct.cs:829
+			}                                                                                                                                        // FhirConstruct.cs:830
 			//- Methods

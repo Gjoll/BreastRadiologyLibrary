@@ -18,9 +18,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Component value PreviouslyDemonstratedBy
+		/// Access PreviouslyDemonstratedBy
 		/// </summary>
-		PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; }                                                                      // BuildMemberListBase.cs:63
+		ElementItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; }                                                          // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

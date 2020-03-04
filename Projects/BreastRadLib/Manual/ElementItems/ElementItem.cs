@@ -67,7 +67,7 @@ namespace BreastRadLib
         /// <summary>
         /// Access value.
         /// </summary>
-        public BaseType Value { get; set; }
+        protected BaseType Value { get; set; }
 
         /// <summary>
         /// Constructor.
@@ -84,17 +84,17 @@ namespace BreastRadLib
         public override bool Validate(StringBuilder sb)
         {
             bool retVal = true;
-            //$if (this.items.Count < this.Min)
-            //{
-            //    sb.Append($"{this.listName} min cardinality is invalid. Found {this.items.Count} items, expected at least {this.Min} items.");
-            //    retVal = false;
-            //}
+            if (this.Count < this.Min)
+            {
+                sb.Append($"{this.listName} min cardinality is invalid. Found {this.Count} items, expected at least {this.Min} items.");
+                retVal = false;
+            }
 
-            //if ((this.Max >= 0) && (this.items.Count > this.Max))
-            //{
-            //    sb.Append($"{this.listName} max cardinality is invalid. Found {this.items.Count} items, expected less than {this.Max} items.");
-            //    retVal = false;
-            //}
+            if ((this.Max >= 0) && (this.Count > this.Max))
+            {
+                sb.Append($"{this.listName} max cardinality is invalid. Found {this.Count} items, expected less than {this.Max} items.");
+                retVal = false;
+            }
 
             return retVal;
         }

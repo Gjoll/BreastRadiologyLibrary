@@ -10,7 +10,7 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

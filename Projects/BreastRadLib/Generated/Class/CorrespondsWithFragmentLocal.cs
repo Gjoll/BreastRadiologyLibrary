@@ -13,52 +13,5 @@ using BreastRadLib.ObservationLocal;
 namespace BreastRadLib.CorrespondsWithFragmentLocal
 {
 	//+ LocalClassDefs
-	/// <summary>
-	/// Accessor class for 'correspondsWith'
-	/// [Fhir Element 'Observation.component:correspondsWith]'
-	/// </summary>
-	public class CorrespondsWith_Accessor : MemberListCodedValue<CodeableConcept>                                                              // BuildMemberListCodedValue.cs:51
-	{                                                                                                                                          // BuildMemberListCodedValue.cs:52
-	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:53
-	    /// <summary>
-	    /// Access propertyName
-	    /// </summary>
-	    public IEnumerable<CodeableConcept> All() => this.items;                                                                               // BuildMemberListCodedValue.cs:118
-	                                                                                                                                           // BuildMemberListCodedValue.cs:120
-	    /// <summary>
-	    /// Access item at indicated location in list
-	    /// </summary>
-	    public CodeableConcept At(Int32 i) => base.items[i];                                                                                   // BuildMemberListCodedValue.cs:124
-	                                                                                                                                           // BuildMemberListCodedValue.cs:126
-	    /// <summary>
-	    /// Access first item in list
-	    /// </summary>
-	    public new CodeableConcept First() => base.First();                                                                                    // BuildMemberListCodedValue.cs:130
-	                                                                                                                                           // BuildMemberListCodedValue.cs:131
-	    /// <summary>
-	    /// Access first item in list or default value if empty
-	    /// </summary>
-	    public new CodeableConcept FirstOrDefault() => base.FirstOrDefault();                                                                  // BuildMemberListCodedValue.cs:135
-	                                                                                                                                           // BuildMemberListCodedValue.cs:55
-	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:56
-	                                                                                                                                           // BuildMemberListCodedValue.cs:105
-	    /// <summary>
-	    /// Append item to end of list
-	    /// </summary>
-	    public void Append(CodeableConcept value) => this.RawItems.Add(value);                                                                 // BuildMemberListCodedValue.cs:109
-	                                                                                                                                           // BuildMemberListCodedValue.cs:105
-	    /// <summary>
-	    /// Append item to end of list
-	    /// </summary>
-	    public void Append(CorrespondsWithVS.TCoding value) => this.RawItems.Add(value);                                                       // BuildMemberListCodedValue.cs:109
-	                                                                                                                                           // BuildMemberListCodedValue.cs:58
-	    /// <summary>
-	    /// Accessor class constructor
-	    /// </summary>
-	    public CorrespondsWith_Accessor(BreastRadiologyDocument doc) : base("CorrespondsWith_Accessor")                                        // BuildMemberListCodedValue.cs:62
-	    {                                                                                                                                      // BuildMemberListCodedValue.cs:63
-	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "correspondsWith"));// BuildMemberListCodedValue.cs:64
-	    }                                                                                                                                      // BuildMemberListCodedValue.cs:66
-	}                                                                                                                                          // BuildMemberListCodedValue.cs:67
 	//- LocalClassDefs
 }

@@ -19,6 +19,16 @@ namespace BreastRadLib
             return url1.StartsWith(url2, StringComparison.OrdinalIgnoreCase);
         }
 
+        public static bool SameConcept(CodeableConcept concept, CodeableConcept concept2)
+        {
+            foreach (Coding code2 in concept2.Coding)
+            {
+                if (SameCode(concept, code2) == true)
+                    return true;
+            }
+            return false;
+        }
+
         public static bool SameCode(CodeableConcept concept, Coding code2)
         {
             foreach (Coding code1 in concept.Coding)

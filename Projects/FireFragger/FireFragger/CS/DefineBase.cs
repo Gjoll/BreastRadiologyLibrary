@@ -127,17 +127,17 @@ namespace FireFragger.CS
             }
         }
 
-
-        Int32 fixIndex = 1;
-
-        public String DefineFixed(Element fixedValue)
+        public String DefineFixed(String path, Element fixedValue)
         {
+
+            if (this.fragBase.StructDef.Url.LastUriPart().Contains("ObservedFeature") == true)
+                Trace.WriteLine("xxyyz");
             this.fragBase.ClassMethods
                 .SummaryOpen()
                 .Summary($"Method to create fixed value")
                 .SummaryClose()
                 ;
-            String methodName = $"FixedValue_{this.fixIndex++}";
+            String methodName = $"FixedValue_{path}".ToMachineName();
             FhirConstruct.Construct(this.fragBase.ClassMethods, fixedValue, methodName, out String propertyType);
             return methodName;
         }
@@ -153,7 +153,7 @@ namespace FireFragger.CS
             String[] pathElements = elementDefinition.Path.Split('.').ToArray();
             if (pathElements.Length != 2)
                 return;
-            String methodName = DefineFixed(defaultValueElement);
+            String methodName = DefineFixed(elementDefinition.ElementId, defaultValueElement);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;

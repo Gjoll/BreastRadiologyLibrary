@@ -10,29 +10,29 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
     /// <summary>
-    /// Interface for implementing ElementItemSection classes.
+    /// Interface for implementing ElementItemComponent classes.
     /// </summary>
-    public interface IElementItemSection : IElementItem
+    public interface IElementItemComponent : IElementItem
     {
         /// <summary>
-        /// Section Title
-        /// </summary>
-        String Title { get; }
-
-        /// <summary>
-        /// Section coding
+        /// Component coding
         /// </summary>
         CodeableConcept Code { get; }
 
-        IEnumerable<ResourceBase> GetElements();
-        void SetElements(IEnumerable<ResourceBase> elements);
+        IEnumerable<Element> GetElements();
+        void SetElements(IEnumerable<Element> elements);
     }
 
     /// <summary>
     /// </summary>
-    public class ElementItemSectionSingle<BaseType> : ElementItemSingle<BaseType>, IElementItemSection
-            where BaseType : ResourceBase, new()
+    public class ElementItemComponentSingle<BaseType> : ElementItemSingle<BaseType>, IElementItemComponent
+            where BaseType : Element, new()
     {
+        /// <summary>
+        /// Component coding
+        /// </summary>
+        public CodeableConcept Code { get; }
+
         /// <summary>
         /// Get value.
         /// </summary>
@@ -44,48 +44,33 @@ namespace BreastRadLib
         /// </summary>
         public void Set(BaseType value) => this.Value = value;
 
-
-        /// <summary>
-        /// Section Title
-        /// </summary>
-        public String Title { get; }
-
-        /// <summary>
-        /// Section coding
-        /// </summary>
-        public CodeableConcept Code { get; }
-
-        public ElementItemSectionSingle(String listName,
+        public ElementItemComponentSingle(String listName,
             Int32 min,
             Int32 max,
-            String title,
             CodeableConcept code) : base(listName, min, max)
         {
-            this.Title = title;
             this.Code = code;
         }
 
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        public BaseType Create(BreastRadiologyDocument doc)
+        public BaseType Create()
         {
             if (this.Value == null)
             {
                 BaseType item = new BaseType();
-                item.Init(doc);
                 this.Value = item;
             }
             return this.Value;
         }
 
-
-        public IEnumerable<ResourceBase> GetElements()
+        public IEnumerable<Element> GetElements()
         {
             if (this.Value != null)
                 yield return this.Value;
         }
-        public void SetElements(IEnumerable<ResourceBase> items)
+        public void SetElements(IEnumerable<Element> items)
         {
             switch (items.Count())
             {
@@ -96,19 +81,71 @@ namespace BreastRadLib
         }
     }
 
+
+
+
     /// <summary>
-    /// Base class for all CodedSection multiple accessors
     /// </summary>
-    public class ElementItemSectionMultiple<BaseType> : ElementItemMultiple<BaseType>, IElementItemSection
-            where BaseType : ResourceBase, new()
+    public class ElementItemComponentSingle<BaseType1, BaseType2> : ElementItemSingle<Element>, IElementItemComponent
+        where BaseType1 : Element, new()
+        where BaseType2 : Element, new()
     {
         /// <summary>
-        /// Section Title
+        /// Get value.
         /// </summary>
-        public String Title { get; }
+        /// <returns></returns>
+        public Element Get() => this.Value;
 
         /// <summary>
-        /// Section coding
+        /// Set value
+        /// </summary>
+        public void Set(BaseType1 value) => this.Value = value;
+
+        /// <summary>
+        /// Set value
+        /// </summary>
+        public void Set(BaseType2 value) => this.Value = value;
+
+        /// <summary>
+        /// Component coding
+        /// </summary>
+        public CodeableConcept Code { get; }
+
+        public ElementItemComponentSingle(String listName,
+            Int32 min,
+            Int32 max,
+            CodeableConcept code) : base(listName, min, max)
+        {
+            this.Code = code;
+        }
+
+        public IEnumerable<Element> GetElements()
+        {
+            if (this.Value != null)
+                yield return this.Value;
+        }
+        public void SetElements(IEnumerable<Element> items)
+        {
+            switch (items.Count())
+            {
+                case 0: break;
+                case 1: this.Value = items.First(); break;
+                default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
+            }
+        }
+    }
+
+
+
+
+    /// <summary>
+    /// Base class for all CodedComponent multiple accessors
+    /// </summary>
+    public class ElementItemComponentMultiple<BaseType> : ElementItemMultiple<BaseType>, IElementItemComponent
+            where BaseType : Element, new()
+    {
+        /// <summary>
+        /// Component coding
         /// </summary>
         public CodeableConcept Code { get; }
 
@@ -119,10 +156,9 @@ namespace BreastRadLib
         /// <summary>
         /// Create item, append it to list, and return it.
         /// </summary>
-        public BaseType Create(BreastRadiologyDocument doc)
+        public BaseType Create()
         {
             BaseType item = new BaseType();
-            item.Init(doc);
             this.Append(item);
             return item;
         }
@@ -133,48 +169,44 @@ namespace BreastRadLib
             return item;
         }
 
-        public ElementItemSectionMultiple(String listName,
+        public ElementItemComponentMultiple(String listName,
             Int32 min,
             Int32 max,
-            String title,
             CodeableConcept code) : base(listName, min, max)
         {
-            this.Title = title;
             this.Code = code;
         }
 
-        public IEnumerable<ResourceBase> GetElements()
+        public IEnumerable<Element> GetElements()
         {
             foreach (var item in this.items)
                 yield return item;
         }
 
-        public void SetElements(IEnumerable<ResourceBase> items)
+        public void SetElements(IEnumerable<Element> items)
         {
             foreach (var item in items)
-                this.items.Add((BaseType)item);
+                this.items.Add((BaseType) item);
         }
     }
 
+
+
     /// <summary>
-    /// Base class for all CodedSection multiple accessors
+    /// Base class for all CodedComponent multiple accessors
     /// </summary>
-    public class ElementItemSectionMultiple<BaseType1, BaseType2, BaseType3> : ElementItemMultiple<ResourceBase>, IElementItemSection
-            where BaseType1 : ResourceBase, new()
-            where BaseType2 : ResourceBase, new()
-            where BaseType3 : ResourceBase, new()
+    public class ElementItemComponentMultiple<BaseType1, BaseType2> : ElementItemMultiple<Element>, IElementItemComponent
+            where BaseType1 : Element, new()
+            where BaseType2 : Element, new()
     {
         /// <summary>
-        /// Section Title
-        /// </summary>
-        public String Title { get; }
-
-        /// <summary>
-        /// Section coding
+        /// Component coding
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public ResourceBase At(Int32 i) => this.items[i];
+        public IEnumerable<Element> Items => this.items;
+
+        public Element At(Int32 i) => this.items[i];
 
         public BaseType1 Append(BaseType1 item)
         {
@@ -188,29 +220,21 @@ namespace BreastRadLib
             return item;
         }
 
-        public BaseType3 Append(BaseType3 item)
-        {
-            this.items.Add(item);
-            return item;
-        }
-
-        public ElementItemSectionMultiple(String listName,
+        public ElementItemComponentMultiple(String listName,
             Int32 min,
             Int32 max,
-            String title,
             CodeableConcept code) : base(listName, min, max)
         {
-            this.Title = title;
             this.Code = code;
         }
 
-        public IEnumerable<ResourceBase> GetElements()
+        public IEnumerable<Element> GetElements()
         {
             foreach (var item in this.items)
                 yield return item;
         }
 
-        public void SetElements(IEnumerable<ResourceBase> items)
+        public void SetElements(IEnumerable<Element> items)
         {
             foreach (var item in items)
                 this.items.Add(item);

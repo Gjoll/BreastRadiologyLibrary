@@ -28,18 +28,18 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_AnteriorDepth = new TCoding(BreastLocationDepthCS.Code_AnteriorDepth);                                         // Builder.cs:347
-		public static TCoding Code_MiddleDepth = new TCoding(BreastLocationDepthCS.Code_MiddleDepth);                                             // Builder.cs:347
-		public static TCoding Code_PosteriorDepth = new TCoding(BreastLocationDepthCS.Code_PosteriorDepth);                                       // Builder.cs:347
+		public static TCoding Code_AnteriorDepth = new TCoding(BreastLocationDepthCS.Code_AnteriorDepth);                                         // Builder.cs:353
+		public static TCoding Code_MiddleDepth = new TCoding(BreastLocationDepthCS.Code_MiddleDepth);                                             // Builder.cs:353
+		public static TCoding Code_PosteriorDepth = new TCoding(BreastLocationDepthCS.Code_PosteriorDepth);                                       // Builder.cs:353
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
-		{                                                                                                                                         // Builder.cs:334
-		    yield return Code_AnteriorDepth;                                                                                                      // Builder.cs:350
-		    yield return Code_MiddleDepth;                                                                                                        // Builder.cs:350
-		    yield return Code_PosteriorDepth;                                                                                                     // Builder.cs:350
-		}                                                                                                                                         // Builder.cs:356
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:339
+		{                                                                                                                                         // Builder.cs:340
+		    yield return Code_AnteriorDepth;                                                                                                      // Builder.cs:356
+		    yield return Code_MiddleDepth;                                                                                                        // Builder.cs:356
+		    yield return Code_PosteriorDepth;                                                                                                     // Builder.cs:356
+		}                                                                                                                                         // Builder.cs:362
 		//- Methods
 	}
 }

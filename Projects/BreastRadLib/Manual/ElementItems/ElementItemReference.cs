@@ -25,6 +25,17 @@ namespace BreastRadLib
     public class ElementItemReferenceSingle<BaseType> : ElementItemSingle<BaseType>, IElementItemReference
             where BaseType : ResourceBase, new()
     {
+        /// <summary>
+        /// Get value.
+        /// </summary>
+        /// <returns></returns>
+        public BaseType Get() => this.Value;
+
+        /// <summary>
+        /// Set value
+        /// </summary>
+        public void Set(BaseType value) => this.Value = value;
+
         BreastRadiologyDocument doc;
         public String ProfileUrl { get; }
 

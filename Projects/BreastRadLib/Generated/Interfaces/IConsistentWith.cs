@@ -22,13 +22,13 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Component value Value
+		/// Access Value
 		/// </summary>
-		Value_Accessor Value { get ; }                                                                                                            // BuildMemberListBase.cs:63
+		ElementItemComponentSingle<CodeableConcept> Value { get ; }                                                                               // BuildElementItemComponent.cs:66
 		/// <summary>
-		/// Access Component value Qualifier
+		/// Access Qualifier
 		/// </summary>
-		Qualifier_Accessor Qualifier { get ; }                                                                                                    // BuildMemberListBase.cs:63
+		ElementItemComponentMultiple<CodeableConcept> Qualifier { get ; }                                                                         // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

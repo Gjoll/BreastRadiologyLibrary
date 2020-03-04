@@ -18,9 +18,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Component value BiRadsAssessmentCategory
+		/// Access BiRadsAssessmentCategory
 		/// </summary>
-		BiRadsAssessmentCategory_Accessor BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberListBase.cs:63
+		ElementItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; }                                                            // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods
