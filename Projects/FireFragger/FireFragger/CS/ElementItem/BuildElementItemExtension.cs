@@ -295,8 +295,6 @@ namespace FireFragger.CS
 
         public void Build(String className, ElementTreeNode extensionNode)
         {
-            if (className.EndsWith("Extension") == false)
-                className += "Extension";
             BuildSlices(className, extensionNode);
         }
 
@@ -311,41 +309,41 @@ namespace FireFragger.CS
             Int32 min = extensionNode.ElementDefinition.Min.Value;
             Int32 max = CSMisc.ToMax(extensionNode.ElementDefinition.Max);
 
+            String extensionComplexBase;
+            switch (max)
+            {
+                case 1:
+                    extensionComplexBase = "ElementItemExtensionComplexSingle";
+                    break;
+                default:
+                    extensionComplexBase = "ElementItemExtensionComplexMultiple";
+                    break;
+            }
             String extensionName = className.Substring(0, className.Length - 9);
             this.codeBlocks.LocalClassDefs
                 .SummaryOpen()
                 .Summary($"Class that implements the '{extensionName}' complex extension class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : ElementItemExtensionComplex")
+                .AppendCode($"public class {className}Item : IComplexExtensionItem")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockProperties)
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
-                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{extensionName}\")")
+                .AppendCode($"public {className}Item()")
                 .OpenBrace()
-                .AppendCode($"this.Init(doc, {min}, {max});")
                 .DefineBlock(out CodeBlockNested blockConstructor)
                 .CloseBrace()
                 .BlankLine()
                 .SummaryOpen()
-                .Summary($"Read extension values")
+                .Summary($"Children")
                 .SummaryClose()
-                .AppendCode($"public override void ReadItems(IEnumerable<Extension> e)")
+                .AppendCode($"public IEnumerable<IExtensionItem> Items()")
                 .OpenBrace()
-                .DefineBlock(out CodeBlockNested blockRead)
+                .DefineBlock(out CodeBlockNested blockItems)
                 .CloseBrace()
                 .BlankLine()
-                .SummaryOpen()
-                .Summary($"Write extension values")
-                .SummaryClose()
-                .AppendCode($"public override IEnumerable<Extension> WriteItems()")
-                .OpenBrace()
-                .AppendCode($"List<Extension> retVal = new List<Extension>();")
-                .DefineBlock(out CodeBlockNested blockWrite)
-                .AppendCode($"return retVal.ToArray();")
-                .CloseBrace()
                 .CloseBrace()
                 ;
 
@@ -358,7 +356,11 @@ namespace FireFragger.CS
                 switch (extensionSlice.ElementDefinition.Type[0].Profile.Count())
                 {
                     case 0:
-                        BuildSlice(extensionSlice, this.codeBlocks.LocalClassDefs, blockProperties, blockConstructor, blockWrite, blockRead);
+                        BuildSlice(extensionSlice, 
+                            this.codeBlocks.LocalClassDefs, 
+                            blockProperties, 
+                            blockConstructor,
+                            blockItems);
                         break;
 
                     case 1:
@@ -367,8 +369,7 @@ namespace FireFragger.CS
                             this.codeBlocks.LocalClassDefs,
                             blockProperties,
                             blockConstructor,
-                            blockWrite,
-                            blockRead);
+                            blockItems);
                         break;
 
                     default:
@@ -382,8 +383,7 @@ namespace FireFragger.CS
             CodeBlockNested localClassDefs,
             CodeBlockNested blockProperties,
             CodeBlockNested blockConstructor,
-            CodeBlockNested blockWrite,
-            CodeBlockNested blockRead)
+            CodeBlockNested blockItems)
         {
             const String fcn = "BuildSliceProfile";
 
@@ -397,18 +397,17 @@ namespace FireFragger.CS
             CodeBlockNested usingBlock = this.codeBlocks.SubClassEditor.Blocks.Find("Usings", false);
             usingBlock.AppendUniqueLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
             String propertyName = CSMisc.PropertyName(extensionSlice.Name);
-            //String sliceClassName = CSMisc.ClassName(profile.LastUriPart());
-            //DefineProperty(sliceClassName, propertyName,
+            String sliceClassName = CSMisc.ClassName(profile.LastUriPart());
+            //$DefineProperty(sliceClassName, propertyName,
             //    blockProperties, blockConstructor,
-            //    blockWrite, blockRead);
+            //    blockItems);
         }
 
         void BuildSlice(ElementTreeSlice extensionSlice,
             CodeBlockNested localClassDefs,
             CodeBlockNested blockProperties,
             CodeBlockNested blockConstructor,
-            CodeBlockNested blockWrite,
-            CodeBlockNested blockRead)
+            CodeBlockNested blockItems)
         {
             const String fcn = "BuildSlice";
 
@@ -434,8 +433,7 @@ namespace FireFragger.CS
                     valueXNode,
                     blockProperties,
                     blockConstructor,
-                    blockWrite,
-                    blockRead);
+                    blockItems);
             else
                 this.BuildPropertyComplexExtension(subExtensionNode);
 
@@ -447,8 +445,7 @@ namespace FireFragger.CS
             ElementTreeNode valueXNode,
             CodeBlockNested blockProperties,
             CodeBlockNested blockConstructor,
-            CodeBlockNested blockWrite,
-            CodeBlockNested blockRead)
+            CodeBlockNested blockItems)
         {
             Int32 max = CSMisc.ToMax(extensionSlice.ElementDefinition.Max);
             Int32 min = extensionSlice.ElementDefinition.Min.Value;
@@ -489,12 +486,9 @@ namespace FireFragger.CS
             blockConstructor
                 .AppendCode($"this.{propertyName} = new {extensionClass}(\"propertyName\", {min}, {max}, \"{sliceName}\");")
                 ;
-            //$blockRead
-            //$    .AppendCode($"this.{propertyName}.ReadItems(e);")
-            //$    ;
-            //$blockWrite
-            //$    .AppendCode($"retVal.AddRange(this.{propertyName}.WriteItems());")
-            //$    ;
+            blockItems
+                .AppendCode($"yield return this.{propertyName};")
+            ;
         }
 
         void BuildPropertyComplexExternalExtension(ElementTreeSlice extensionSlice, String profile)

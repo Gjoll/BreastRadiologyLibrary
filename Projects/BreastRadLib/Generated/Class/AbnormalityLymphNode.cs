@@ -44,7 +44,7 @@ namespace BreastRadLib
 		/// Access TumorSatellite
 		/// </summary>
 		public ElementItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; protected set; }                                               // BuildElementItemReference.cs:63
-		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
+		public BodySiteExtended bodySite { get; private set; }                                                                                    // DefineBase.cs:75
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsChanges
@@ -164,7 +164,7 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                                       // DefineBase.cs:219
 			this.TumorSatellite = new ElementItemReferenceMultiple<TumorSatellite>("TumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildElementItemReference.cs:48
-			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
+			this.bodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
 			this.ObsChanges = new ElementItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
 			this.BiRadsAssessmentCategory = new ElementItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
 			this.Orientation = new ElementItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59

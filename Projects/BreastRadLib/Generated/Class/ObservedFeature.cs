@@ -28,7 +28,7 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservedFeature
 	{
 		//+ Properties
-		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
+		public BodySiteExtended bodySite { get; private set; }                                                                                    // DefineBase.cs:75
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsCount
@@ -82,7 +82,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:219
-			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
+			this.bodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
 			this.ObsCount = new ElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
 			this.FeatureType = new ElementItemComponentSingle<CodeableConcept>("FeatureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor

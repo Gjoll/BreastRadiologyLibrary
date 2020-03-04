@@ -1,9 +1,9 @@
 		//+ Properties
-		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
+		public BodySiteExtended bodySite { get; private set; }                                                                                    // DefineBase.cs:75
 		//- Properties
 
 			//+ Constructor
-			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
+			this.bodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
 			//- Constructor
 
 			//+ ValidateCodeStart

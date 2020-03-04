@@ -72,10 +72,10 @@ namespace FireFragger.CS
             if (max != 1)
                 throw new Exception($"Expected bodySite max of 1");
             this.fragBase.ClassProperties
-                .AppendCode($"public BreastBodyLocation bodySite {{ get; protected set; }}")
+                .AppendCode($"public BodySiteExtended bodySite {{ get; private set; }}")
                 ;
             this.fragBase.ClassConstructor
-                .AppendCode($"this.bodySite = new BreastBodyLocation(doc);")
+                .AppendCode($"this.bodySite = new BodySiteExtended({min}, {max});")
                 ;
             this.fragBase.ClassReadCode
                 .AppendCode($"this.bodySite.Read();")

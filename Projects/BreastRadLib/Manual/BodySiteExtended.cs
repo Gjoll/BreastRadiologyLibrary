@@ -6,15 +6,21 @@ using System.Text;
 
 namespace BreastRadLib
 {
-    public class BreastBodyLocation : BreastBodyLocationExtension
+    public class BodySiteExtended 
     {
         public CodeableConcept BodySite { get; set; }
+        ElementItemExtensionComplexSingle<BreastBodyLocationExtensionItem> BreastBodyLocation;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public BreastBodyLocation(BreastRadiologyDocument doc) : base(doc)                                                                      
-        {                                                     
+        public BodySiteExtended(Int32 min, Int32 max)                                                                     
+        {
+            this.BreastBodyLocation = 
+                new ElementItemExtensionComplexSingle<BreastBodyLocationExtensionItem>("BreastBodyLocation",
+                    min, 
+                    max,
+                    "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");
         }
 
         /// <summary>

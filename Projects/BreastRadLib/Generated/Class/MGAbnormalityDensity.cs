@@ -39,7 +39,7 @@ namespace BreastRadLib
 	public class MGAbnormalityDensity : ObservationBase, IMGAbnormalityDensity
 	{
 		//+ Properties
-		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
+		public BodySiteExtended bodySite { get; private set; }                                                                                    // DefineBase.cs:75
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsChanges
@@ -163,7 +163,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                                       // DefineBase.cs:219
-			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
+			this.bodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
 			this.ObsChanges = new ElementItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
 			this.BiRadsAssessmentCategory = new ElementItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
 			this.Orientation = new ElementItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59
