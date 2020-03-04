@@ -68,7 +68,7 @@ namespace FireFragger.CS
             if (bodySiteExtensionNode.Slices.Count <= 1)
                 return;
             Int32 min = bodySiteNode.ElementDefinition.Min.Value;
-            Int32 max = bodySiteNode.ElementDefinition.Max.ToMax();
+            Int32 max = CSMisc.ToMax(bodySiteNode.ElementDefinition.Max);
             if (max != 1)
                 throw new Exception($"Expected bodySite max of 1");
             this.fragBase.ClassProperties

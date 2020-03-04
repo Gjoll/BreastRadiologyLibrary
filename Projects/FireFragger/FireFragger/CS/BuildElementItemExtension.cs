@@ -11,11 +11,11 @@ namespace FireFragger.CS
     /// <summary>
     /// Build the class that implements a list of extension values
     /// </summary>
-    internal class BuildMemberListExtension : BuildMemberListBase
+    internal class BuildElementItemExtension : BuildMemberListBase
     {
         String extensionName = "?";
 
-        public BuildMemberListExtension(Builder csBuilder,
+        public BuildElementItemExtension(Builder csBuilder,
             ClassCodeBlocks codeBlocks) : base(csBuilder, codeBlocks, "Extension")
         {
         }
@@ -309,14 +309,14 @@ namespace FireFragger.CS
         void BuildSlices(String className, ElementTreeNode extensionNode)
         {
             Int32 min = extensionNode.ElementDefinition.Min.Value;
-            Int32 max = extensionNode.ElementDefinition.Max.ToMax();
+            Int32 max = CSMisc.ToMax(extensionNode.ElementDefinition.Max);
 
             String extensionName = className.Substring(0, className.Length - 9);
             this.codeBlocks.LocalClassDefs
                 .SummaryOpen()
-                .Summary($"Class that implements the '{extensionName}' extension class.")
+                .Summary($"Class that implements the '{extensionName}' complex extension class.")
                 .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtensionComplex")
+                .AppendCode($"public class {className} : ElementItemExtensionComplex")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested blockProperties)
                 .BlankLine()
@@ -397,10 +397,10 @@ namespace FireFragger.CS
             CodeBlockNested usingBlock = this.codeBlocks.SubClassEditor.Blocks.Find("Usings", false);
             usingBlock.AppendLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
             String propertyName = CSMisc.PropertyName(extensionSlice.Name);
-            String sliceClassName = CSMisc.ClassName(profile.LastUriPart());
-            DefineProperty(sliceClassName, propertyName,
-                blockProperties, blockConstructor,
-                blockWrite, blockRead);
+            //String sliceClassName = CSMisc.ClassName(profile.LastUriPart());
+            //DefineProperty(sliceClassName, propertyName,
+            //    blockProperties, blockConstructor,
+            //    blockWrite, blockRead);
         }
 
         void BuildSlice(ElementTreeSlice extensionSlice,
@@ -423,7 +423,6 @@ namespace FireFragger.CS
             if (extensionSlice.Nodes.TryGetItem("extension", out ElementTreeNode subExtensionNode) == false)
                 throw new Exception($"extension.extension is missing");
             Int32 valueXCardMax = CSMisc.ToMax(valueXNode.ElementDefinition.Max);
-            String sliceClassName = null;
 
             this.DefineStart();
             if ((valueXCardMax != 0) && (subExtensionNode.Slices.Count > 1))
@@ -431,51 +430,25 @@ namespace FireFragger.CS
             else if ((valueXCardMax == 0) && (subExtensionNode.Slices.Count == 0))
                 throw new Exception($"Neither Simple and Complex extension found. Not implemented");
             else if (valueXCardMax != 0)
-                sliceClassName = this.BuildSimpleExtensionClass(extensionSlice, localClassDefs, valueXNode);
+                this.DefineSimpleExtensionProperty(extensionSlice,
+                    valueXNode,
+                    blockProperties,
+                    blockConstructor,
+                    blockWrite,
+                    blockRead);
             else
                 this.BuildPropertyComplexExtension(subExtensionNode);
 
-            if (sliceClassName == null)
-            {
-                this.csBuilder.ConversionError(this.GetType().Name,
-                       fcn,
-                       $"Slice {extensionSlice.Name} not implemented");
-                return;
-            }
-            String propertyName = CSMisc.PropertyName(extensionSlice.Name);
-            DefineProperty(sliceClassName, propertyName,
-                blockProperties, blockConstructor,
-                blockWrite, blockRead);
         }
 
-        void DefineProperty(String sliceClassName,
-            String propertyName,
+        /// <summary>
+        /// </summary>
+        void DefineSimpleExtensionProperty(ElementTreeSlice extensionSlice,
+            ElementTreeNode valueXNode,
             CodeBlockNested blockProperties,
             CodeBlockNested blockConstructor,
             CodeBlockNested blockWrite,
             CodeBlockNested blockRead)
-        {
-            blockProperties
-                .AppendCode($"{sliceClassName} {propertyName};")
-                ;
-            blockConstructor
-                .AppendCode($"this.{propertyName} = new {sliceClassName}(this.doc);")
-                ;
-            blockRead
-                .AppendCode($"this.{propertyName}.ReadItems(e);")
-                ;
-            blockWrite
-                .AppendCode($"retVal.AddRange(this.{propertyName}.WriteItems());")
-                ;
-        }
-
-        /// <summary>
-        /// Create class for an extension element that has no slices, and a single
-        /// defined value.
-        /// </summary>
-        String BuildSimpleExtensionClass(ElementTreeSlice extensionSlice,
-            CodeBlockNested localClassDefs,
-            ElementTreeNode valueXNode)
         {
             Int32 max = CSMisc.ToMax(extensionSlice.ElementDefinition.Max);
             Int32 min = extensionSlice.ElementDefinition.Min.Value;
@@ -494,116 +467,34 @@ namespace FireFragger.CS
                     propertyType = valueXNode.ElementDefinition.Type[0].Code;
                     break;
                 default:
-                    propertyType = "Base";
-                    break;
+                    throw new NotImplementedException("Multiple types not implemented");
             }
 
-            localClassDefs
-                .BlankLine()
-                .SummaryOpen()
-                .Summary($"Class that implements the {className}' extension slice class.")
-                .SummaryClose()
-                .AppendCode($"public class {className} : MemberListExtensionSimple<{propertyType}>")
-                .OpenBrace()
-
-                .DefineBlock(out CodeBlockNested propertiesBlock)
-
-                .BlankLine()
-                .SummaryOpen()
-                .Summary($"Constructor")
-                .SummaryClose()
-                .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
-                .OpenBrace()
-                .AppendCode($"this.Init(doc, {min}, {max}, \"{sliceName}\");")
-                .DefineBlock(out CodeBlockNested constructorBlock)
-                .CloseBrace()
-
-                .DefineBlock(out CodeBlockNested blockMethods)
-                .BlankLine()
-                .CloseBrace()
-                ;
-
             String propertyName = CSMisc.PropertyName(extensionSlice.Name);
-
+            String extensionClass;
             switch (max)
             {
                 case 1:
-                    {
-                        propertiesBlock
-                            .BlankLine()
-                            .SummaryOpen()
-                            .Summary($"Get value of extension slice {extensionSlice.Name}")
-                            .SummaryClose()
-                            .AppendCode($"public {propertyType} Get() => ({propertyType}) this.First();")
-                            ;
-                        foreach (ElementDefinition.TypeRefComponent type in valueXNode.ElementDefinition.Type)
-                        {
-                            propertiesBlock
-                                .BlankLine()
-                                .SummaryOpen()
-                                .Summary($"Set value of extension slice {extensionSlice.Name}")
-                                .SummaryClose()
-                                .AppendCode($"public void Set({type.Code} value) => this.SetSingleItem(value);")
-                                ;
-                        }
-                    }
-                    break;
-
-                case -1:
-                    {
-                        List<ElementDefinition.TypeRefComponent> types = valueXNode.ElementDefinition.Type;
-
-                        void DefineAppend(ElementDefinition valueXNode, String fhirType, String targetName)
-                        {
-                            foreach (String paramType in ParamTypes(valueXNode, types[0]))
-                            {
-                                blockMethods
-                                    .BlankLine()
-                                    .SummaryOpen()
-                                    .Summary($"Append item to end of list")
-                                    .SummaryClose()
-                                    .AppendCode($"public void Append{targetName}({paramType} value) => this.RawItems.Add(({fhirType}) value);")
-                                    ;
-                            }
-                        }
-
-                        propertiesBlock
-                            .SummaryOpen()
-                            .Summary("Access propertyName")
-                            .SummaryClose()
-                            .AppendCode($"public IEnumerable<{propertyType}> All() => this.items;")
-
-                            .BlankLine()
-                            .SummaryOpen()
-                            .Summary("Access item at indicated location in list")
-                            .SummaryClose()
-                            .AppendCode($"public {propertyType} At(Int32 i) => base.items[i];")
-
-                            .BlankLine()
-                            .SummaryOpen()
-                            .Summary("Access first item in list")
-                            .SummaryClose()
-                            .AppendCode($"public new {propertyType} First() => base.First();")
-                            .BlankLine()
-                            .SummaryOpen()
-                            .Summary("Access first item in list or default value if empty")
-                            .SummaryClose()
-                            .AppendCode($"public new {propertyType} FirstOrDefault() => base.FirstOrDefault();")
-                            ;
-
-                        if (types.Count == 1)
-                            DefineAppend(valueXNode.ElementDefinition, propertyType, "");
-                        foreach (ElementDefinition.TypeRefComponent type in types)
-                        {
-                            DefineAppend(valueXNode.ElementDefinition, type.Code, type.Code);
-                        }
-                    }
+                    extensionClass = $"ElementItemExtensionSingle<{propertyType}>";
                     break;
 
                 default:
-                    throw new NotImplementedException();
+                    extensionClass = $"ElementItemExtensionMultiple<{propertyType}>";
+                    break;
             }
-            return className;
+
+            blockProperties
+                .AppendCode($"{extensionClass} {propertyName};")
+                ;
+            blockConstructor
+                .AppendCode($"this.{propertyName} = new {extensionClass}(\"propertyName\", {min}, {max}, \"{sliceName}\");")
+                ;
+            //$blockRead
+            //$    .AppendCode($"this.{propertyName}.ReadItems(e);")
+            //$    ;
+            //$blockWrite
+            //$    .AppendCode($"retVal.AddRange(this.{propertyName}.WriteItems());")
+            //$    ;
         }
 
         void BuildPropertyComplexExternalExtension(ElementTreeSlice extensionSlice, String profile)

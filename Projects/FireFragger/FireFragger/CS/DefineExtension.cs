@@ -35,7 +35,7 @@ namespace FireFragger.CS
             if (this.fragBase.SnapNodes.TryGetElementNode("Extension.extension", out ElementTreeNode extensionNode) == false)
                 throw new Exception($"Extension.extension node is missing");
 
-            BuildMemberListExtension bmv = new BuildMemberListExtension(this.csBuilder, this.fragBase.CodeBlocks);
+            BuildElementItemExtension bmv = new BuildElementItemExtension(this.csBuilder, this.fragBase.CodeBlocks);
             bmv.Build(CSMisc.ClassName(this.fragBase), extensionNode);
         }
     }

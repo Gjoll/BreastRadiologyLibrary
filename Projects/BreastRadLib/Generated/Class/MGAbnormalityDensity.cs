@@ -105,16 +105,16 @@ namespace BreastRadLib
 		/// Access Component value PreviouslyDemonstratedBy
 		/// </summary>
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListReference.cs:59
+		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access AssociatedFeatures
 		/// </summary>
-		public ElementItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                         // BuildMemberListReference.cs:63
-		                                                                                                                                          // BuildMemberListReference.cs:59
+		public ElementItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                         // BuildElementItemReference.cs:63
+		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access ConsistentWith
 		/// </summary>
-		public ElementItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                               // BuildMemberListReference.cs:63
+		public ElementItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                               // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value DensityType
@@ -177,8 +177,8 @@ namespace BreastRadLib
 			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:73
 			this.CorrespondsWith = new CorrespondsWith_Accessor(doc);                                                                                // BuildMemberListBase.cs:73
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:73
-			this.AssociatedFeatures = new ElementItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildMemberListReference.cs:48
-			this.ConsistentWith = new ElementItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildMemberListReference.cs:48
+			this.AssociatedFeatures = new ElementItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
+			this.ConsistentWith = new ElementItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
 			this.DensityType = new DensityType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73
 			//- Constructor
 		}
@@ -208,8 +208,8 @@ namespace BreastRadLib
 			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:82
 			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:82
 			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:82
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListReference.cs:72
-			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListReference.cs:72
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:72
+			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildElementItemReference.cs:72
 			if (this.DensityType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:82
 			//- ValidateCode
 			return retVal;
@@ -222,7 +222,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
+			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
@@ -234,8 +234,8 @@ namespace BreastRadLib
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
+			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
+			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
@@ -253,8 +253,8 @@ namespace BreastRadLib
 			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:76
 			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildMemberListBase.cs:76
 			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:76
-			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildMemberListReference.cs:66
-			this.WriteHasMembers(this.ConsistentWith);                                                                                               // BuildMemberListReference.cs:66
+			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildElementItemReference.cs:66
+			this.WriteHasMembers(this.ConsistentWith);                                                                                               // BuildElementItemReference.cs:66
 			this.WriteComponent(this.DensityType);                                                                                                   // BuildMemberListBase.cs:76
 			//- WriteCode
 		}
@@ -282,8 +282,8 @@ namespace BreastRadLib
 			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:79
 			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildMemberListBase.cs:79
 			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:79
-			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildMemberListReference.cs:69
-			this.ReadHasMembers(this.ConsistentWith);                                                                                                // BuildMemberListReference.cs:69
+			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildElementItemReference.cs:69
+			this.ReadHasMembers(this.ConsistentWith);                                                                                                // BuildElementItemReference.cs:69
 			this.ReadComponent(this.DensityType);                                                                                                    // BuildMemberListBase.cs:79
 			//- ReadCode
 		}
