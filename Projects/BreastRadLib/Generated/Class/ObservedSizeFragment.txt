@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildMemberListBase.cs:67
 		/// <summary>
 		/// Access Component value ObsSize
 		/// </summary>
-		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // BuildMemberListBase.cs:70
+		public ObsSize_Accessor ObsSize { get ; protected set; }                                                                                  // BuildMemberListBase.cs:71
 		//- Properties
 
 			//+ Constructor
-			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // BuildMemberListBase.cs:73
+			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // BuildMemberListBase.cs:74
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildMemberListBase.cs:82
+			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildMemberListBase.cs:83
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsSize);                                                                                                       // BuildMemberListBase.cs:76
+			this.WriteComponent(this.ObsSize);                                                                                                       // BuildMemberListBase.cs:77
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsSize);                                                                                                        // BuildMemberListBase.cs:79
+			this.ReadComponent(this.ObsSize);                                                                                                        // BuildMemberListBase.cs:80
 			//- ReadCode
 
 			//+ Methods

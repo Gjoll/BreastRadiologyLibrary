@@ -55,56 +55,56 @@ namespace BreastRadLib
             return null;
         }
 
-        protected void ReadSection<T>(MemberListSection<T> section)
-            where T : ResourceBase, new()
+        protected void ReadSection(IElementItemSection section)
         {
-            List<T> items = new List<T>();
-            Composition.SectionComponent sectionComponent = this.FindSection(section.Code);
-            if (sectionComponent == null)
-                return;
-            foreach (ResourceReference resRef in sectionComponent.Entry)
-            {
-                Resource referencedResource = this.ReferencedResource<Resource>(resRef);
-                String profile = referencedResource.Meta.Profile.First();
-                if (this.doc.TryGetRegisteredItem(referencedResource, out T item) == false)
-                    throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
+            throw new NotImplementedException();
+            //List<T> items = new List<T>();
+            //Composition.SectionComponent sectionComponent = this.FindSection(section.Code);
+            //if (sectionComponent == null)
+            //    return;
+            //foreach (ResourceReference resRef in sectionComponent.Entry)
+            //{
+            //    Resource referencedResource = this.ReferencedResource<Resource>(resRef);
+            //    String profile = referencedResource.Meta.Profile.First();
+            //    if (this.Doc.TryGetRegisteredItem(referencedResource, out T item) == false)
+            //        throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
 
-                if (item == null)
-                    throw new Exception($"Error creating resource of profile {profile}");
-                items.Add(item);
-            }
+            //    if (item == null)
+            //        throw new Exception($"Error creating resource of profile {profile}");
+            //    items.Add(item);
+            //}
 
-            if (items.Count < section.Min)
-                throw new Exception($"Error reading Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {items.Count}");
-            if ((section.Max > 0) && (items.Count > section.Max))
-                throw new Exception($"Error reading Composition.section '{section.Title}'. Max cardinality sb {section.Max}, is {items.Count}");
-            section.RawItems = items;
+            //if (items.Count < section.Min)
+            //    throw new Exception($"Error reading Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {items.Count}");
+            //if ((section.Max > 0) && (items.Count > section.Max))
+            //    throw new Exception($"Error reading Composition.section '{section.Title}'. Max cardinality sb {section.Max}, is {items.Count}");
+            //section.RawItems = items;
         }
 
-        protected void WriteSection<T>(MemberListSection<T> section)
-            where T : ResourceBase, new()
+        protected void WriteSection(IElementItemSection section)
         {
-            if (section.Count < section.Min)
-                throw new Exception($"Error writing Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {section.Count}");
-            if ((section.Max > 0) && (section.Count > section.Max))
-                throw new Exception($"Error writing Composition.section '{section.Title}'. Max cardinality sb {section.Max}, is {section.Count}");
+            throw new NotImplementedException();
+            //if (section.Count < section.Min)
+            //    throw new Exception($"Error writing Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {section.Count}");
+            //if ((section.Max > 0) && (section.Count > section.Max))
+            //    throw new Exception($"Error writing Composition.section '{section.Title}'. Max cardinality sb {section.Max}, is {section.Count}");
 
-            Composition.SectionComponent sectionComponent = new Composition.SectionComponent
-            {
-                Code = new CodeableConcept(section.Code.System, section.Code.Code, section.Code.Display),
-                Title = section.Title
-            };
+            //Composition.SectionComponent sectionComponent = new Composition.SectionComponent
+            //{
+            //    Code = new CodeableConcept(section.Code.System, section.Code.Code, section.Code.Display),
+            //    Title = section.Title
+            //};
 
-            foreach (var item in section.RawItems)
-                sectionComponent.Entry.Add(new ResourceReference(item.Id));
+            //foreach (var item in section.RawItems)
+            //    sectionComponent.Entry.Add(new ResourceReference(item.Id));
 
-            this.Resource.Section.Add(sectionComponent);
+            //this.Resource.Section.Add(sectionComponent);
         }
         public override void Write()
         {
             base.Write();
-            this.Resource.Encounter = this.doc.Encounter;
-            this.Resource.Subject = this.doc.Subject;
+            this.Resource.Encounter = this.Doc.Encounter;
+            this.Resource.Subject = this.Doc.Subject;
         }
 
     }

@@ -17,10 +17,10 @@ namespace FireFragger.CS
         protected ElementTreeNode memberNode;
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
         String suffix;
-        public BuildElementItemReference(Builder csBuilder,
+        public BuildElementItemReference(DefineBase defineBase,
             ClassCodeBlocks fragBase,
             String type,
-            ElementTreeNode memberNode) : base(csBuilder, fragBase, type)
+            ElementTreeNode memberNode) : base(defineBase, fragBase, type)
         {
             this.memberNode = memberNode;
             this.suffix = type;

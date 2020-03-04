@@ -26,7 +26,7 @@ namespace FireFragger.CS
         {
             const String fcn = "Build";
 
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
@@ -35,7 +35,7 @@ namespace FireFragger.CS
             if (this.fragBase.SnapNodes.TryGetElementNode("Extension.extension", out ElementTreeNode extensionNode) == false)
                 throw new Exception($"Extension.extension node is missing");
 
-            BuildElementItemExtension bmv = new BuildElementItemExtension(this.csBuilder, this.fragBase.CodeBlocks);
+            BuildElementItemExtension bmv = new BuildElementItemExtension(this, this.fragBase.CodeBlocks);
             bmv.Build(CSMisc.ClassName(this.fragBase), extensionNode);
         }
     }

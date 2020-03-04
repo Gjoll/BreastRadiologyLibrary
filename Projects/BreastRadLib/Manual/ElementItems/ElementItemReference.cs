@@ -75,7 +75,6 @@ namespace BreastRadLib
             where BaseType : ResourceBase, new()
     {
         BreastRadiologyDocument doc;
-        List<BaseType> items = new List<BaseType>();
         public String ProfileUrl { get; }
 
         public IEnumerable<BaseType> Items => this.items;

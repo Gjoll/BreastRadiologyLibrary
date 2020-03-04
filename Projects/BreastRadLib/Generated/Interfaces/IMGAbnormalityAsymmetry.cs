@@ -32,7 +32,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value AsymmetryType
 		/// </summary>
-		AsymmetryType_Accessor AsymmetryType { get ; }                                                                                            // BuildMemberListBase.cs:62
+		AsymmetryType_Accessor AsymmetryType { get ; }                                                                                            // BuildMemberListBase.cs:63
 		//- Properties
 
 		//+ Methods

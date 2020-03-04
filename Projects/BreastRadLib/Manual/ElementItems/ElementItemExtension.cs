@@ -70,7 +70,6 @@ namespace BreastRadLib
     public class ElementItemExtensionMultiple<BaseType> : ElementItemMultiple<BaseType>, IElementItemExtension
             where BaseType : Element, new()
     {
-        List<BaseType> items = new List<BaseType>();
         public String ExtensionUrl { get; }
 
         public IEnumerable<BaseType> Items => this.items;

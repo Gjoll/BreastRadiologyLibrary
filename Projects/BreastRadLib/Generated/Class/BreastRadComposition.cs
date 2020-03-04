@@ -20,36 +20,36 @@ namespace BreastRadLib
 	public class BreastRadComposition : CompositionBase, IBreastRadComposition
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
-		/// Access Section value Report
+		/// Access Report
 		/// </summary>
-		public Report_Accessor Report { get ; protected set; }                                                                                    // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public ElementItemSectionSingle<BreastRadReport> Report { get ; protected set; }                                                          // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
-		/// Access Section value Impressions
+		/// Access Impressions
 		/// </summary>
-		public Impressions_Accessor Impressions { get ; protected set; }                                                                          // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public ElementItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; protected set; }                                            // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
-		/// Access Section value FindingsRightBreast
+		/// Access FindingsRightBreast
 		/// </summary>
-		public FindingsRightBreast_Accessor FindingsRightBreast { get ; protected set; }                                                          // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public ElementItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; protected set; }                                  // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
-		/// Access Section value FindingsLeftBreast
+		/// Access FindingsLeftBreast
 		/// </summary>
-		public FindingsLeftBreast_Accessor FindingsLeftBreast { get ; protected set; }                                                            // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public ElementItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; protected set; }                                    // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
-		/// Access Section value RelatedResources
+		/// Access RelatedResources
 		/// </summary>
-		public RelatedResources_Accessor RelatedResources { get ; protected set; }                                                                // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public ElementItemSectionMultiple<ResourceBase> RelatedResources { get ; protected set; }                                                 // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
-		/// Access Section value Recommendations
+		/// Access Recommendations
 		/// </summary>
-		public Recommendations_Accessor Recommendations { get ; protected set; }                                                                  // BuildMemberListBase.cs:70
+		public ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; protected set; }// BuildElementItemSection.cs:75
 		//- Properties
 
 		/// <summary>
@@ -91,13 +91,13 @@ namespace BreastRadLib
 				resource = new Composition();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:215
-			this.Report = new Report_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:73
-			this.Impressions = new Impressions_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73
-			this.FindingsRightBreast = new FindingsRightBreast_Accessor(doc);                                                                        // BuildMemberListBase.cs:73
-			this.FindingsLeftBreast = new FindingsLeftBreast_Accessor(doc);                                                                          // BuildMemberListBase.cs:73
-			this.RelatedResources = new RelatedResources_Accessor(doc);                                                                              // BuildMemberListBase.cs:73
-			this.Recommendations = new Recommendations_Accessor(doc);                                                                                // BuildMemberListBase.cs:73
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:219
+			this.Report = new ElementItemSectionSingle<BreastRadReport>("Report", 1, 1, doc, "Breast Radiology Report", FixedValue_1());             // BuildElementItemSection.cs:60
+			this.Impressions = new ElementItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, doc, "Clinical Impressions", FixedValue_2());// BuildElementItemSection.cs:60
+			this.FindingsRightBreast = new ElementItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, doc, "Findings Right Breast", FixedValue_3());// BuildElementItemSection.cs:60
+			this.FindingsLeftBreast = new ElementItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, doc, "Findings Left Breast", FixedValue_4());// BuildElementItemSection.cs:60
+			this.RelatedResources = new ElementItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, doc, "Related Resources", FixedValue_5());// BuildElementItemSection.cs:60
+			this.Recommendations = new ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, doc, "Recommendations", FixedValue_6());// BuildElementItemSection.cs:60
 			//- Constructor
 		}
 
@@ -113,12 +113,12 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:82
-			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:82
-			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildMemberListBase.cs:82
-			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:82
-			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildMemberListBase.cs:82
-			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildMemberListBase.cs:82
+			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildElementItemSection.cs:84
+			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildElementItemSection.cs:84
+			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildElementItemSection.cs:84
+			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemSection.cs:84
+			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildElementItemSection.cs:84
+			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemSection.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -130,15 +130,15 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
+			this.ClearSection();                                                                                                                     // BuildElementItemSection.cs:93
 			//- WriteCodeStart
 			//+ WriteCode
-			ClearSection();                                                                                                                          // BuildMemberListSection.cs:188
-			this.WriteSection(this.Report);                                                                                                          // BuildMemberListBase.cs:76
-			this.WriteSection(this.Impressions);                                                                                                     // BuildMemberListBase.cs:76
-			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildMemberListBase.cs:76
-			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildMemberListBase.cs:76
-			this.WriteSection(this.RelatedResources);                                                                                                // BuildMemberListBase.cs:76
-			this.WriteSection(this.Recommendations);                                                                                                 // BuildMemberListBase.cs:76
+			this.WriteSection(this.Report);                                                                                                          // BuildElementItemSection.cs:78
+			this.WriteSection(this.Impressions);                                                                                                     // BuildElementItemSection.cs:78
+			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildElementItemSection.cs:78
+			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildElementItemSection.cs:78
+			this.WriteSection(this.RelatedResources);                                                                                                // BuildElementItemSection.cs:78
+			this.WriteSection(this.Recommendations);                                                                                                 // BuildElementItemSection.cs:78
 			//- WriteCode
 		}
 
@@ -151,16 +151,118 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadSection(this.Report);                                                                                                           // BuildMemberListBase.cs:79
-			this.ReadSection(this.Impressions);                                                                                                      // BuildMemberListBase.cs:79
-			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildMemberListBase.cs:79
-			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildMemberListBase.cs:79
-			this.ReadSection(this.RelatedResources);                                                                                                 // BuildMemberListBase.cs:79
-			this.ReadSection(this.Recommendations);                                                                                                  // BuildMemberListBase.cs:79
+			this.ReadSection(this.Report);                                                                                                           // BuildElementItemSection.cs:81
+			this.ReadSection(this.Impressions);                                                                                                      // BuildElementItemSection.cs:81
+			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildElementItemSection.cs:81
+			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildElementItemSection.cs:81
+			this.ReadSection(this.RelatedResources);                                                                                                 // BuildElementItemSection.cs:81
+			this.ReadSection(this.Recommendations);                                                                                                  // BuildElementItemSection.cs:81
 			//- ReadCode
 		}
 
 		//+ Methods
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                    // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "sectionReport";                                                                                        // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_2()                                                                                                     // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                    // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "sectionImpressions";                                                                                   // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_3()                                                                                                     // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                    // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "sectionCodeFindingsRightBreast";                                                                       // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_4()                                                                                                     // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                    // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "sectionCodeFindingsLeftBreast";                                                                        // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_5()                                                                                                     // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                    // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "sectionRelatedResources";                                                                              // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_6()                                                                                                     // FhirConstruct.cs:753
+		{                                                                                                                                         // FhirConstruct.cs:754
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
+		    {                                                                                                                                     // FhirConstruct.cs:764
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                    // FhirConstruct.cs:770
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
+		        temp4.CodeElement.Value = "sectionCodeRecommendations";                                                                           // FhirConstruct.cs:786
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
+		    }                                                                                                                                     // FhirConstruct.cs:814
+		    return retVal;                                                                                                                        // FhirConstruct.cs:829
+		}                                                                                                                                         // FhirConstruct.cs:830
 		//- Methods
 	}
 }

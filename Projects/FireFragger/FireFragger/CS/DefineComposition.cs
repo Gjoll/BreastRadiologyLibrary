@@ -26,27 +26,27 @@ namespace FireFragger.CS
         {
             const String fcn = "Build";
 
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
             base.Build();
             this.DefineSections();
             this.DefineBodySite();
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
         }
 
         void DefineSections()
         {
-            if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
+            if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode hasMemberNode) == false)
                 return;
-            BuildMemberListSection bml = new BuildMemberListSection(this.csBuilder,
+            BuildElementItemSection bcr = new BuildElementItemSection(this,
                 this.fragBase.CodeBlocks,
-                this.fragBase.SnapNodes,
-                this.fragBase.DiffNodes);
-            bml.Define();
+                "Section",
+                hasMemberNode);
+            bcr.Define();
         }
     }
 }

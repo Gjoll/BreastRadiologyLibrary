@@ -33,7 +33,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Component value DuctType
 		/// </summary>
-		DuctType_Accessor DuctType { get ; }                                                                                                      // BuildMemberListBase.cs:62
+		DuctType_Accessor DuctType { get ; }                                                                                                      // BuildMemberListBase.cs:63
 		//- Properties
 
 		//+ Methods

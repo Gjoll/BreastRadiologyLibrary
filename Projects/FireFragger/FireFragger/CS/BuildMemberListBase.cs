@@ -14,16 +14,17 @@ namespace FireFragger.CS
     /// </summary>
     internal class BuildMemberListBase
     {
-        protected Builder csBuilder;
+        protected Builder csBuilder => this.defineBase.CSBuilder;
+        protected DefineBase defineBase;
         protected ClassCodeBlocks codeBlocks;
         string type;
 
-        public BuildMemberListBase(Builder csBuilder,
+        public BuildMemberListBase(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
             String type)
         {
             this.type = type;
-            this.csBuilder = csBuilder;
+            this.defineBase = defineBase;
             this.codeBlocks = codeBlocks;
         }
 

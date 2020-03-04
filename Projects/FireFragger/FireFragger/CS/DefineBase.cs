@@ -14,7 +14,7 @@ namespace FireFragger.CS
 {
     abstract class DefineBase
     {
-        protected Builder csBuilder;
+        public Builder CSBuilder;
         protected SDInfo fragBase;
         protected delegate void VisitFragment(SDInfo fi, Int32 level);
 
@@ -41,7 +41,7 @@ namespace FireFragger.CS
         public DefineBase(Builder csBuilder,
                     SDInfo fragBase)
         {
-            this.csBuilder = csBuilder;
+            this.CSBuilder = csBuilder;
             this.fragBase = fragBase;
         }
 
@@ -112,7 +112,7 @@ namespace FireFragger.CS
         {
             const String fcn = "MergeFragment";
 
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Integrating fragment {fi.StructDef.Url.LastUriPart()}");
 
@@ -128,7 +128,19 @@ namespace FireFragger.CS
         }
 
 
-        Int32 defIndex = 1;
+        Int32 fixIndex = 1;
+
+        public String DefineFixed(Element fixedValue)
+        {
+            this.fragBase.ClassMethods
+                .SummaryOpen()
+                .Summary($"Method to create fixed value")
+                .SummaryClose()
+                ;
+            String methodName = $"FixedValue_{this.fixIndex++}";
+            FhirConstruct.Construct(this.fragBase.ClassMethods, fixedValue, methodName, out String propertyType);
+            return methodName;
+        }
 
         void DefineDefaultElement(CodeBlockNested constructCode,
             ElementDefinition elementDefinition)
@@ -141,15 +153,7 @@ namespace FireFragger.CS
             String[] pathElements = elementDefinition.Path.Split('.').ToArray();
             if (pathElements.Length != 2)
                 return;
-
-            this.fragBase.ClassMethods
-                .SummaryOpen()
-                .Summary($"Method to create default value for element")
-                .Summary($"{elementDefinition.ElementId}")
-                .SummaryClose()
-                ;
-            String methodName = $"DefaultValue_{this.defIndex++}";
-            FhirConstruct.Construct(this.fragBase.ClassMethods, defaultValueElement, methodName, out String propertyType);
+            String methodName = DefineFixed(defaultValueElement);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;

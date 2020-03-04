@@ -62,8 +62,8 @@ namespace BreastRadLib
 				resource = new DiagnosticReport();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:215
+			this.Resource.Code = FixedValue_1();                                                                                                     // DefineBase.cs:158
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:219
 			//- Constructor
 		}
 
@@ -109,10 +109,9 @@ namespace BreastRadLib
 
 		//+ Methods
 		/// <summary>
-		/// Method to create default value for element
-		/// DiagnosticReport.code
+		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -129,10 +128,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set DiagnosticReport.conclusionCode to one of the predefined items
 		/// </summary>
-		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:179
-		{                                                                                                                                         // DefineBase.cs:180
-		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:183
-		}                                                                                                                                         // DefineBase.cs:185
+		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:183
+		{                                                                                                                                         // DefineBase.cs:184
+		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:187
+		}                                                                                                                                         // DefineBase.cs:189
 		//- Methods
 	}
 }

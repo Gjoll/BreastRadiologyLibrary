@@ -38,7 +38,7 @@ namespace FireFragger.CS
             String valueSet = bindingComp.ValueSet;
 
             // currently we only do local value sets.
-            if (valueSet.StartsWith(Global.LocalValueSertUrl) == false)
+            if (valueSet.StartsWith(Global.LocalValueSetUrl) == false)
                 return false;
             String vsClassName = CSMisc.MachineName(valueSet.LastUriPart());
             bindingClassName = $"{vsClassName}.TCoding";

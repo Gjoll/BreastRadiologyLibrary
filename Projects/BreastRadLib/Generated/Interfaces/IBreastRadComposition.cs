@@ -19,29 +19,29 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Section value Report
+		/// Access Report
 		/// </summary>
-		Report_Accessor Report { get ; }                                                                                                          // BuildMemberListBase.cs:62
+		ElementItemSectionSingle<BreastRadReport> Report { get ; }                                                                                // BuildElementItemSection.cs:67
 		/// <summary>
-		/// Access Section value Impressions
+		/// Access Impressions
 		/// </summary>
-		Impressions_Accessor Impressions { get ; }                                                                                                // BuildMemberListBase.cs:62
+		ElementItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; }                                                                  // BuildElementItemSection.cs:67
 		/// <summary>
-		/// Access Section value FindingsRightBreast
+		/// Access FindingsRightBreast
 		/// </summary>
-		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // BuildMemberListBase.cs:62
+		ElementItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; }                                                        // BuildElementItemSection.cs:67
 		/// <summary>
-		/// Access Section value FindingsLeftBreast
+		/// Access FindingsLeftBreast
 		/// </summary>
-		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // BuildMemberListBase.cs:62
+		ElementItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; }                                                          // BuildElementItemSection.cs:67
 		/// <summary>
-		/// Access Section value RelatedResources
+		/// Access RelatedResources
 		/// </summary>
-		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // BuildMemberListBase.cs:62
+		ElementItemSectionMultiple<ResourceBase> RelatedResources { get ; }                                                                       // BuildElementItemSection.cs:67
 		/// <summary>
-		/// Access Section value Recommendations
+		/// Access Recommendations
 		/// </summary>
-		Recommendations_Accessor Recommendations { get ; }                                                                                        // BuildMemberListBase.cs:62
+		ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; }                    // BuildElementItemSection.cs:67
 		//- Properties
 
 		//+ Methods

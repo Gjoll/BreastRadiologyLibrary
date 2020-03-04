@@ -85,9 +85,9 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:154
-			this.Resource.BodySite = DefaultValue_2();                                                                                               // DefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:215
+			this.Resource.Code = FixedValue_1();                                                                                                     // DefineBase.cs:158
+			this.Resource.BodySite = FixedValue_2();                                                                                                 // DefineBase.cs:158
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:219
 			this.MGFinding = new ElementItemReferenceMultiple<MGFinding>("MGFinding", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
 			this.MRIFinding = new ElementItemReferenceMultiple<MRIFinding>("MRIFinding", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
 			this.NMFinding = new ElementItemReferenceMultiple<NMFinding>("NMFinding", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
@@ -150,10 +150,9 @@ namespace BreastRadLib
 
 		//+ Methods
 		/// <summary>
-		/// Method to create default value for element
-		/// Observation.code
+		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -172,10 +171,9 @@ namespace BreastRadLib
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
 		/// <summary>
-		/// Method to create default value for element
-		/// Observation.bodySite
+		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept DefaultValue_2()                                                                                                   // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_2()                                                                                                     // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
@@ -196,10 +194,10 @@ namespace BreastRadLib
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:179
-			{                                                                                                                                        // DefineBase.cs:180
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:182
-			}                                                                                                                                        // DefineBase.cs:185
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:183
+			{                                                                                                                                        // DefineBase.cs:184
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:186
+			}                                                                                                                                        // DefineBase.cs:189
 		//- Methods
 	}
 }

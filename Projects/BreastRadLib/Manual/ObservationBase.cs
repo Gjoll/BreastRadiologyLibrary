@@ -53,7 +53,7 @@ namespace BreastRadLib
                 String profile = referencedResource.Meta.Profile.First();
                 if (BLMisc.SameUrl(profile, hasMemberList.ProfileUrl))
                 {
-                    if (this.doc.TryGetRegisteredItem(referencedResource, out ObservationBase item) == false)
+                    if (this.Doc.TryGetRegisteredItem(referencedResource, out ObservationBase item) == false)
                         throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
                     items.Add(item);
                 }
@@ -69,8 +69,8 @@ namespace BreastRadLib
         public override void Write()
         {
             base.Write();
-            this.Resource.Encounter = this.doc.Encounter;
-            this.Resource.Subject = this.doc.Subject;
+            this.Resource.Encounter = this.Doc.Encounter;
+            this.Resource.Subject = this.Doc.Subject;
         }
 
         protected void WriteComponent<BaseType>(MemberListCodedValue<BaseType> componentList)

@@ -15,8 +15,8 @@ namespace FireFragger.CS
     {
         String extensionName = "?";
 
-        public BuildElementItemExtension(Builder csBuilder,
-            ClassCodeBlocks codeBlocks) : base(csBuilder, codeBlocks, "Extension")
+        public BuildElementItemExtension(DefineBase defineBase,
+            ClassCodeBlocks codeBlocks) : base(defineBase, codeBlocks, "Extension")
         {
         }
 

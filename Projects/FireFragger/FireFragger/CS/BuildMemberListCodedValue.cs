@@ -17,11 +17,11 @@ namespace FireFragger.CS
         ElementTreeNode DiffNodes;
         ElementTreeNode SnapNodes;
 
-        public BuildMemberListCodedValue(Builder csBuilder,
+        public BuildMemberListCodedValue(DefineBase defineBase,
             ClassCodeBlocks fragBase,
             String type,
             ElementTreeNode snapNodes,
-            ElementTreeNode diffNodes) : base(csBuilder, fragBase, type)
+            ElementTreeNode diffNodes) : base(defineBase, fragBase, type)
         {
             this.DiffNodes = diffNodes;
             this.SnapNodes = snapNodes;

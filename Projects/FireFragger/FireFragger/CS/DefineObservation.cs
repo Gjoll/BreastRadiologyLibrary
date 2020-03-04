@@ -26,7 +26,7 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
                 return;
-            BuildMemberListCodedValue bml = new BuildMemberListCodedValue(this.csBuilder, 
+            BuildMemberListCodedValue bml = new BuildMemberListCodedValue(this, 
                 this.fragBase.CodeBlocks, 
                 "Component",
                 this.fragBase.SnapNodes, 
@@ -38,7 +38,7 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
                 return;
-            BuildElementItemReference bcr = new BuildElementItemReference(this.csBuilder,
+            BuildElementItemReference bcr = new BuildElementItemReference(this,
                 this.fragBase.CodeBlocks, 
                 "HasMembers", 
                 hasMemberNode);
@@ -49,7 +49,7 @@ namespace FireFragger.CS
         {
             const String fcn = "Build";
 
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
@@ -58,7 +58,7 @@ namespace FireFragger.CS
             this.DefineBodySite();
             this.DefineComponents();
             this.DefineHasMembers();
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
         }

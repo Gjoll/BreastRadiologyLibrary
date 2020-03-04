@@ -62,7 +62,7 @@ namespace BreastRadLib
         public bool Exists => this.Value != null;
 
         /// <summary>
-        /// For internal use only. Access all items.
+        /// Access value.
         /// </summary>
         public BaseType Value { get; set; }
 
@@ -103,7 +103,7 @@ namespace BreastRadLib
     /// </summary>
     public class ElementItemMultiple<BaseType> : ElementItem
     {
-        List<BaseType> items = new List<BaseType>();
+        protected List<BaseType> items = new List<BaseType>();
 
         /// <summary>
         /// Count

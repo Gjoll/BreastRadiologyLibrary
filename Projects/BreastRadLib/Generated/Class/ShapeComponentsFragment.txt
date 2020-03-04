@@ -1,59 +1,59 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildMemberListBase.cs:67
 		/// <summary>
 		/// Access Component value Orientation
 		/// </summary>
-		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public Orientation_Accessor Orientation { get ; protected set; }                                                                          // BuildMemberListBase.cs:71
+		                                                                                                                                          // BuildMemberListBase.cs:67
 		/// <summary>
 		/// Access Component value Shape
 		/// </summary>
-		public Shape_Accessor Shape { get ; protected set; }                                                                                      // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public Shape_Accessor Shape { get ; protected set; }                                                                                      // BuildMemberListBase.cs:71
+		                                                                                                                                          // BuildMemberListBase.cs:67
 		/// <summary>
 		/// Access Component value Margin
 		/// </summary>
-		public Margin_Accessor Margin { get ; protected set; }                                                                                    // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public Margin_Accessor Margin { get ; protected set; }                                                                                    // BuildMemberListBase.cs:71
+		                                                                                                                                          // BuildMemberListBase.cs:67
 		/// <summary>
 		/// Access Component value MgDensity
 		/// </summary>
-		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // BuildMemberListBase.cs:70
+		public MgDensity_Accessor MgDensity { get ; protected set; }                                                                              // BuildMemberListBase.cs:71
 		//- Properties
 
 			//+ Constructor
-			this.Orientation = new Orientation_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73
-			this.Shape = new Shape_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:73
-			this.Margin = new Margin_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:73
-			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // BuildMemberListBase.cs:73
+			this.Orientation = new Orientation_Accessor(doc);                                                                                        // BuildMemberListBase.cs:74
+			this.Shape = new Shape_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:74
+			this.Margin = new Margin_Accessor(doc);                                                                                                  // BuildMemberListBase.cs:74
+			this.MgDensity = new MgDensity_Accessor(doc);                                                                                            // BuildMemberListBase.cs:74
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:82
-			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:82
-			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:82
-			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:82
+			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:83
+			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:83
+			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildMemberListBase.cs:83
+			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:83
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Orientation);                                                                                                   // BuildMemberListBase.cs:76
-			this.WriteComponent(this.Shape);                                                                                                         // BuildMemberListBase.cs:76
-			this.WriteComponent(this.Margin);                                                                                                        // BuildMemberListBase.cs:76
-			this.WriteComponent(this.MgDensity);                                                                                                     // BuildMemberListBase.cs:76
+			this.WriteComponent(this.Orientation);                                                                                                   // BuildMemberListBase.cs:77
+			this.WriteComponent(this.Shape);                                                                                                         // BuildMemberListBase.cs:77
+			this.WriteComponent(this.Margin);                                                                                                        // BuildMemberListBase.cs:77
+			this.WriteComponent(this.MgDensity);                                                                                                     // BuildMemberListBase.cs:77
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Orientation);                                                                                                    // BuildMemberListBase.cs:79
-			this.ReadComponent(this.Shape);                                                                                                          // BuildMemberListBase.cs:79
-			this.ReadComponent(this.Margin);                                                                                                         // BuildMemberListBase.cs:79
-			this.ReadComponent(this.MgDensity);                                                                                                      // BuildMemberListBase.cs:79
+			this.ReadComponent(this.Orientation);                                                                                                    // BuildMemberListBase.cs:80
+			this.ReadComponent(this.Shape);                                                                                                          // BuildMemberListBase.cs:80
+			this.ReadComponent(this.Margin);                                                                                                         // BuildMemberListBase.cs:80
+			this.ReadComponent(this.MgDensity);                                                                                                      // BuildMemberListBase.cs:80
 			//- ReadCode
 
 			//+ Methods

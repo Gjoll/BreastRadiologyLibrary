@@ -29,16 +29,16 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public BreastBodyLocation bodySite { get; protected set; }                                                                                // DefineBase.cs:75
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildMemberListBase.cs:67
 		/// <summary>
 		/// Access Component value ObsCount
 		/// </summary>
-		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		public ObsCount_Accessor ObsCount { get ; protected set; }                                                                                // BuildMemberListBase.cs:71
+		                                                                                                                                          // BuildMemberListBase.cs:67
 		/// <summary>
 		/// Access Component value FeatureType
 		/// </summary>
-		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:70
+		public FeatureType_Accessor FeatureType { get ; protected set; }                                                                          // BuildMemberListBase.cs:71
 		//- Properties
 
 		/// <summary>
@@ -80,11 +80,11 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:154
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:215
+			this.Resource.Code = FixedValue_1();                                                                                                     // DefineBase.cs:158
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:219
 			this.bodySite = new BreastBodyLocation(doc);                                                                                             // DefineBase.cs:78
-			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:73
-			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:73
+			this.ObsCount = new ObsCount_Accessor(doc);                                                                                              // BuildMemberListBase.cs:74
+			this.FeatureType = new FeatureType_Accessor(doc);                                                                                        // BuildMemberListBase.cs:74
 			//- Constructor
 		}
 
@@ -100,8 +100,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:82
-			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:82
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildMemberListBase.cs:83
+			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildMemberListBase.cs:83
 			//- ValidateCode
 			return retVal;
 		}
@@ -120,8 +120,8 @@ namespace BreastRadLib
 			//- WriteCodeStart
 			//+ WriteCode
 			this.bodySite.Write();                                                                                                                   // DefineBase.cs:84
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:76
-			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:76
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildMemberListBase.cs:77
+			this.WriteComponent(this.FeatureType);                                                                                                   // BuildMemberListBase.cs:77
 			//- WriteCode
 		}
 
@@ -135,17 +135,16 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			this.bodySite.Read();                                                                                                                    // DefineBase.cs:81
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:79
-			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:79
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildMemberListBase.cs:80
+			this.ReadComponent(this.FeatureType);                                                                                                    // BuildMemberListBase.cs:80
 			//- ReadCode
 		}
 
 		//+ Methods
 		/// <summary>
-		/// Method to create default value for element
-		/// Observation.code
+		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
+		public CodeableConcept FixedValue_1()                                                                                                     // FhirConstruct.cs:753
 		{                                                                                                                                         // FhirConstruct.cs:754
 		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
 		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
