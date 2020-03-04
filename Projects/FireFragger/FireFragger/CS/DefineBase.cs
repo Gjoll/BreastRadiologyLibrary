@@ -103,7 +103,7 @@ namespace FireFragger.CS
 
             foreach (SDInfo fiRef in this.fragBase.AllReferencedFragments)
             {
-                usingBlock.AppendLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
+                usingBlock.AppendUniqueLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
                 this.MergeFragment(fiRef);
             }
         }

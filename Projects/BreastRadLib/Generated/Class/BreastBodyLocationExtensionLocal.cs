@@ -9,8 +9,6 @@ using Hl7.Fhir.Serialization;
 using BreastRadLib.ExtensionLocal;
 //+Usings
 using BreastRadLib.BodyDistanceFromExtensionLocal;
-using BreastRadLib.BodyDistanceFromExtensionLocal;
-using BreastRadLib.BodyDistanceFromExtensionLocal;
 //-Usings
 
 namespace BreastRadLib.BreastBodyLocationExtensionLocal

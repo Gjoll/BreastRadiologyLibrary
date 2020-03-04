@@ -395,7 +395,7 @@ namespace FireFragger.CS
                 return;
             }
             CodeBlockNested usingBlock = this.codeBlocks.SubClassEditor.Blocks.Find("Usings", false);
-            usingBlock.AppendLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
+            usingBlock.AppendUniqueLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
             String propertyName = CSMisc.PropertyName(extensionSlice.Name);
             //String sliceClassName = CSMisc.ClassName(profile.LastUriPart());
             //DefineProperty(sliceClassName, propertyName,

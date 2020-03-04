@@ -131,7 +131,6 @@ namespace BreastRadLib
 		/// </summary>
 		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:179
 		{                                                                                                                                         // DefineBase.cs:180
-		    //Else: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 181                               // CodeBlockNested.cs:594
 		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:183
 		}                                                                                                                                         // DefineBase.cs:185
 		//- Methods

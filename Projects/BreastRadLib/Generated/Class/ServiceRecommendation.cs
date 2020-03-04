@@ -111,7 +111,6 @@ namespace BreastRadLib
 		/// </summary>
 		public void SetCode(RecommendationsVS.TCoding code)                                                                                       // DefineBase.cs:179
 		{                                                                                                                                         // DefineBase.cs:180
-		    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 181                                 // CodeBlockNested.cs:588
 		    this.Resource.Code = (CodeableConcept) code;                                                                                          // DefineBase.cs:182
 		}                                                                                                                                         // DefineBase.cs:185
 		//- Methods
