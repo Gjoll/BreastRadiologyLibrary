@@ -19,57 +19,57 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access HasMembers value AbnormalityCyst
+		/// Access AbnormalityCyst
 		/// </summary>
-		AbnormalityCyst_Accessor AbnormalityCyst { get ; }                                                                                        // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<AbnormalityCyst> AbnormalityCyst { get ; }                                                                   // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value AbnormalityDuct
+		/// Access AbnormalityDuct
 		/// </summary>
-		AbnormalityDuct_Accessor AbnormalityDuct { get ; }                                                                                        // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<AbnormalityDuct> AbnormalityDuct { get ; }                                                                   // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value AbnormalityForeignObject
+		/// Access AbnormalityForeignObject
 		/// </summary>
-		AbnormalityForeignObject_Accessor AbnormalityForeignObject { get ; }                                                                      // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<AbnormalityForeignObject> AbnormalityForeignObject { get ; }                                                 // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value AbnormalityLymphNode
+		/// Access AbnormalityLymphNode
 		/// </summary>
-		AbnormalityLymphNode_Accessor AbnormalityLymphNode { get ; }                                                                              // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<AbnormalityLymphNode> AbnormalityLymphNode { get ; }                                                         // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value AbnormalityMass
+		/// Access AbnormalityMass
 		/// </summary>
-		AbnormalityMass_Accessor AbnormalityMass { get ; }                                                                                        // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<AbnormalityMass> AbnormalityMass { get ; }                                                                   // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value AssociatedFeatures
+		/// Access AssociatedFeatures
 		/// </summary>
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<AssociatedFeatures> AssociatedFeatures { get ; }                                                             // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value AbnormalityFibroadenoma
+		/// Access AbnormalityFibroadenoma
 		/// </summary>
-		AbnormalityFibroadenoma_Accessor AbnormalityFibroadenoma { get ; }                                                                        // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<AbnormalityFibroadenoma> AbnormalityFibroadenoma { get ; }                                                   // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityArchitecturalDistortion
+		/// Access MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; }                         // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityAsymmetry
+		/// Access MGAbnormalityAsymmetry
 		/// </summary>
-		MGAbnormalityAsymmetry_Accessor MGAbnormalityAsymmetry { get ; }                                                                          // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGAbnormalityAsymmetry> MGAbnormalityAsymmetry { get ; }                                                     // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityCalcification
+		/// Access MGAbnormalityCalcification
 		/// </summary>
-		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; }                                             // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityDensity
+		/// Access MGAbnormalityDensity
 		/// </summary>
-		MGAbnormalityDensity_Accessor MGAbnormalityDensity { get ; }                                                                              // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGAbnormalityDensity> MGAbnormalityDensity { get ; }                                                         // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityFatNecrosis
+		/// Access MGAbnormalityFatNecrosis
 		/// </summary>
-		MGAbnormalityFatNecrosis_Accessor MGAbnormalityFatNecrosis { get ; }                                                                      // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis { get ; }                                                 // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MGBreastDensity
+		/// Access MGBreastDensity
 		/// </summary>
-		MGBreastDensity_Accessor MGBreastDensity { get ; }                                                                                        // BuildMemberListBase.cs:62
+		ElementItemReferenceSingle<MGBreastDensity> MGBreastDensity { get ; }                                                                     // BuildMemberListReference.cs:55
 		//- Properties
 
 		//+ Methods

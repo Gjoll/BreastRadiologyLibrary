@@ -10,7 +10,7 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

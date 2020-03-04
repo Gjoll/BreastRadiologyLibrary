@@ -173,10 +173,10 @@ namespace BreastRadiology.XUnitTests
                 SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
                 Assert.IsTrue(findLeft != null);
 
-                MGFinding mgFinding = findLeft.MGFinding.First();
+                MGFinding mgFinding = findLeft.MGFinding.Items.First();
                 Assert.IsTrue(mgFinding != null);
 
-                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
+                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.Items.ToArray();
                 Assert.IsTrue(asymmetry.Length == 3);
             }
         }
@@ -207,10 +207,10 @@ namespace BreastRadiology.XUnitTests
                 SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
                 Assert.IsTrue(findLeft != null);
 
-                MGFinding mgFinding = findLeft.MGFinding.First();
+                MGFinding mgFinding = findLeft.MGFinding.Items.First();
                 Assert.IsTrue(mgFinding != null);
 
-                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
+                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.Items.ToArray();
                 Assert.IsTrue(asymmetry.Length == 1);
                 Assert.IsTrue(asymmetry[0].ObsChanges.Count == 2);
                 Assert.IsTrue(BLMisc.SameCode(asymmetry[0].ObsChanges.At(0), ObservedChangesVS.Code_DecreaseInCalcifications));

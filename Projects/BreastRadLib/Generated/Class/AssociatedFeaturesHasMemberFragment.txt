@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildMemberListReference.cs:59
 		/// <summary>
-		/// Access HasMembers value AssociatedFeatures
+		/// Access AssociatedFeatures
 		/// </summary>
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:70
+		public ElementItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                         // BuildMemberListReference.cs:63
 		//- Properties
 
 			//+ Constructor
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:73
+			this.AssociatedFeatures = new ElementItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildMemberListReference.cs:48
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:82
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListReference.cs:72
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:76
+			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildMemberListReference.cs:66
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:79
+			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildMemberListReference.cs:69
 			//- ReadCode
 
 			//+ Methods

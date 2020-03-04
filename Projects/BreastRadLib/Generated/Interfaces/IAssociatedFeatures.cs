@@ -19,17 +19,17 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityArchitecturalDistortion
+		/// Access MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; }                         // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityCalcification
+		/// Access MGAbnormalityCalcification
 		/// </summary>
-		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; }                                             // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value ObservedFeature
+		/// Access ObservedFeature
 		/// </summary>
-		ObservedFeature_Accessor ObservedFeature { get ; }                                                                                        // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<ObservedFeature> ObservedFeature { get ; }                                                                   // BuildMemberListReference.cs:55
 		//- Properties
 
 		//+ Methods

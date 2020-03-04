@@ -12,72 +12,65 @@ namespace FireFragger.CS
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class BuildMemberListReference : BuildMemberListBase
+    internal class BuildElementItemReference : BuildMemberListBase
     {
         protected ElementTreeNode memberNode;
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
-
-        public BuildMemberListReference(Builder csBuilder,
+        String suffix;
+        public BuildElementItemReference(Builder csBuilder,
             ClassCodeBlocks fragBase,
             String type,
             ElementTreeNode memberNode) : base(csBuilder, fragBase, type)
         {
             this.memberNode = memberNode;
+            this.suffix = type;
         }
 
-        String DefineLocalClass(ElementTreeSlice memberSlice,
+        void DefineProperty(ElementTreeSlice memberSlice,
             Int32 max,
             Int32 min,
             String propertyName,
             String profileUrl)
         {
-            String sliceName = memberSlice.ElementDefinition.SliceName;
             String propertyType = profileUrl.LastUriPart();
 
-            String className = $"{propertyName}_Accessor";
-            if (this.codeBlocks.LocalClassDefs == null)
-                return className;
-
-            this.codeBlocks.LocalClassDefs
-                .SummaryOpen()
-                .Summary($"Accessor class for slice '{sliceName}'")
-                .Summary($"[Fhir Element '{memberSlice.ElementDefinition.ElementId}]'")
-                .SummaryClose()
-                ;
-
+            String propertyClass;
             if (max == 1)
             {
-                this.codeBlocks.LocalClassDefs
-                    .AppendCode($"public class {className} : MemberListReferenceSingle<{propertyType}>")
-                    .OpenBrace()
-                    .DefineBlock(out CodeBlockNested accessors)
-                    .SummaryOpen()
-                    .Summary($"{className} class constructor")
-                    .SummaryClose()
-                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
-                    .OpenBrace()
-                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
-                    .CloseBrace()
-                    .CloseBrace()
-                    ;
+                propertyClass = $"ElementItemReferenceSingle<{propertyType}>";
             }
             else
             {
-                this.codeBlocks.LocalClassDefs
-                    .AppendCode($"public class {className} : MemberListReferenceMultiple<{propertyType}>")
-                    .OpenBrace()
-                    .DefineBlock(out CodeBlockNested accessors)
-                    .SummaryOpen()
-                    .Summary($"{className} class constructor")
-                    .SummaryClose()
-                    .AppendCode($"public {className}(BreastRadiologyDocument doc) : base(\"{className}\")")
-                    .OpenBrace()
-                    .AppendCode($"this.Init(doc, {min}, {max}, \"{profileUrl}\");")
-                    .CloseBrace()
-                    .CloseBrace()
-                    ;
+                propertyClass = $"ElementItemReferenceMultiple<{propertyType}>";
             }
-            return className;
+
+            this.codeBlocks.ClassConstructor
+                .AppendCode($"this.{propertyName} = new {propertyClass}(\"{propertyName}\", {min}, {max}, doc, \"{profileUrl}\");")
+                ;
+
+            this.codeBlocks.InterfaceProperties
+                .SummaryOpen()
+                .Summary($"Access {propertyName}")
+                .SummaryClose()
+                .AppendCode($"{propertyClass} {propertyName} {{ get ; }}")
+                ;
+
+            this.codeBlocks.ClassProperties
+                .BlankLine()
+                .SummaryOpen()
+                .Summary($"Access {propertyName}")
+                .SummaryClose()
+                .AppendCode($"public {propertyClass} {propertyName} {{ get ; protected set; }}")
+                ;
+            this.codeBlocks.ClassWriteCode
+                .AppendCode($"this.Write{this.suffix}(this.{propertyName});")
+                ;
+            this.codeBlocks.ClassReadCode
+                .AppendCode($"this.Read{this.suffix}(this.{propertyName});")
+                ;
+            this.codeBlocks.ClassValidateCode
+                .AppendCode($"if (this.{propertyName}.Validate(sb) == false) retVal = false;")
+                ;
         }
 
         public void Define()
@@ -105,11 +98,7 @@ namespace FireFragger.CS
                 if (sliceDef.Type[0].TargetProfile.Count() != 1)
                     throw new Exception($"Error processing slice {sliceName}. Expected Target count of 1. Got {sliceDef.Type[0].TargetProfile.Count()}");
                 String profileUrl = sliceDef.Type[0].TargetProfile.First();
-
-                String memberClassName =
-                    this.DefineLocalClass(memberSlice, max, min, propertyName, profileUrl);
-
-                this.DefineCommon(memberClassName, propertyName, this.MemberName);
+               this.DefineProperty(memberSlice, max, min, propertyName, profileUrl);
             }
         }
     }

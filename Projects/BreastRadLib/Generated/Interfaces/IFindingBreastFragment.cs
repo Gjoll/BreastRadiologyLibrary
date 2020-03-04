@@ -20,21 +20,21 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access HasMembers value MGFinding
+		/// Access MGFinding
 		/// </summary>
-		MGFinding_Accessor MGFinding { get ; }                                                                                                    // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MGFinding> MGFinding { get ; }                                                                               // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value MRIFinding
+		/// Access MRIFinding
 		/// </summary>
-		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<MRIFinding> MRIFinding { get ; }                                                                             // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value NMFinding
+		/// Access NMFinding
 		/// </summary>
-		NMFinding_Accessor NMFinding { get ; }                                                                                                    // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<NMFinding> NMFinding { get ; }                                                                               // BuildMemberListReference.cs:55
 		/// <summary>
-		/// Access HasMembers value USFinding
+		/// Access USFinding
 		/// </summary>
-		USFinding_Accessor USFinding { get ; }                                                                                                    // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<USFinding> USFinding { get ; }                                                                               // BuildMemberListReference.cs:55
 		//- Properties
 
 		//+ Methods

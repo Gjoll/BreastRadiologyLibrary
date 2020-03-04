@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildMemberListReference.cs:59
 		/// <summary>
-		/// Access HasMembers value TumorSatellite
+		/// Access TumorSatellite
 		/// </summary>
-		public TumorSatellite_Accessor TumorSatellite { get ; protected set; }                                                                    // BuildMemberListBase.cs:70
+		public ElementItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; protected set; }                                               // BuildMemberListReference.cs:63
 		//- Properties
 
 			//+ Constructor
-			this.TumorSatellite = new TumorSatellite_Accessor(doc);                                                                                  // BuildMemberListBase.cs:73
+			this.TumorSatellite = new ElementItemReferenceMultiple<TumorSatellite>("TumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildMemberListReference.cs:48
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.TumorSatellite.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:82
+			if (this.TumorSatellite.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListReference.cs:72
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.TumorSatellite);                                                                                                // BuildMemberListBase.cs:76
+			this.WriteHasMembers(this.TumorSatellite);                                                                                               // BuildMemberListReference.cs:66
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.TumorSatellite);                                                                                                 // BuildMemberListBase.cs:79
+			this.ReadHasMembers(this.TumorSatellite);                                                                                                // BuildMemberListReference.cs:69
 			//- ReadCode
 
 			//+ Methods

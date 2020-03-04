@@ -19,9 +19,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access HasMembers value TumorSatellite
+		/// Access TumorSatellite
 		/// </summary>
-		TumorSatellite_Accessor TumorSatellite { get ; }                                                                                          // BuildMemberListBase.cs:62
+		ElementItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; }                                                                     // BuildMemberListReference.cs:55
 		//- Properties
 
 		//+ Methods

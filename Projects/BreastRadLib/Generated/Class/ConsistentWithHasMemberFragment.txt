@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildMemberListReference.cs:59
 		/// <summary>
-		/// Access HasMembers value ConsistentWith
+		/// Access ConsistentWith
 		/// </summary>
-		public ConsistentWith_Accessor ConsistentWith { get ; protected set; }                                                                    // BuildMemberListBase.cs:70
+		public ElementItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                               // BuildMemberListReference.cs:63
 		//- Properties
 
 			//+ Constructor
-			this.ConsistentWith = new ConsistentWith_Accessor(doc);                                                                                  // BuildMemberListBase.cs:73
+			this.ConsistentWith = new ElementItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildMemberListReference.cs:48
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListBase.cs:82
+			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildMemberListReference.cs:72
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.ConsistentWith);                                                                                                // BuildMemberListBase.cs:76
+			this.WriteHasMembers(this.ConsistentWith);                                                                                               // BuildMemberListReference.cs:66
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.ConsistentWith);                                                                                                 // BuildMemberListBase.cs:79
+			this.ReadHasMembers(this.ConsistentWith);                                                                                                // BuildMemberListReference.cs:69
 			//- ReadCode
 
 			//+ Methods

@@ -113,7 +113,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155

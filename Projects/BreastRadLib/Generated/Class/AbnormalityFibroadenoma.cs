@@ -92,11 +92,11 @@ namespace BreastRadLib
 		/// Access Component value PreviouslyDemonstratedBy
 		/// </summary>
 		public PreviouslyDemonstratedBy_Accessor PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberListBase.cs:70
-		                                                                                                                                          // BuildMemberListBase.cs:66
+		                                                                                                                                          // BuildMemberListReference.cs:59
 		/// <summary>
-		/// Access HasMembers value AssociatedFeatures
+		/// Access AssociatedFeatures
 		/// </summary>
-		public AssociatedFeatures_Accessor AssociatedFeatures { get ; protected set; }                                                            // BuildMemberListBase.cs:70
+		public ElementItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                         // BuildMemberListReference.cs:63
 		                                                                                                                                          // BuildMemberListBase.cs:66
 		/// <summary>
 		/// Access Component value FibroAdenomaType
@@ -157,7 +157,7 @@ namespace BreastRadLib
 			this.ObsDistRegionSize = new ObsDistRegionSize_Accessor(doc);                                                                            // BuildMemberListBase.cs:73
 			this.ObsSize = new ObsSize_Accessor(doc);                                                                                                // BuildMemberListBase.cs:73
 			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedBy_Accessor(doc);                                                              // BuildMemberListBase.cs:73
-			this.AssociatedFeatures = new AssociatedFeatures_Accessor(doc);                                                                          // BuildMemberListBase.cs:73
+			this.AssociatedFeatures = new ElementItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildMemberListReference.cs:48
 			this.FibroAdenomaType = new FibroAdenomaType_Accessor(doc);                                                                              // BuildMemberListBase.cs:73
 			//- Constructor
 		}
@@ -185,7 +185,7 @@ namespace BreastRadLib
 			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildMemberListBase.cs:82
 			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildMemberListBase.cs:82
 			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildMemberListBase.cs:82
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListBase.cs:82
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildMemberListReference.cs:72
 			if (this.FibroAdenomaType.Validate(sb) == false) retVal = false;                                                                         // BuildMemberListBase.cs:82
 			//- ValidateCode
 			return retVal;
@@ -198,7 +198,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
@@ -208,7 +208,7 @@ namespace BreastRadLib
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
+			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:81
 			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
@@ -224,7 +224,7 @@ namespace BreastRadLib
 			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildMemberListBase.cs:76
 			this.WriteComponent(this.ObsSize);                                                                                                       // BuildMemberListBase.cs:76
 			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildMemberListBase.cs:76
-			this.WriteHasMember(this.AssociatedFeatures);                                                                                            // BuildMemberListBase.cs:76
+			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildMemberListReference.cs:66
 			this.WriteComponent(this.FibroAdenomaType);                                                                                              // BuildMemberListBase.cs:76
 			//- WriteCode
 		}
@@ -250,7 +250,7 @@ namespace BreastRadLib
 			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildMemberListBase.cs:79
 			this.ReadComponent(this.ObsSize);                                                                                                        // BuildMemberListBase.cs:79
 			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildMemberListBase.cs:79
-			this.ReadHasMember(this.AssociatedFeatures);                                                                                             // BuildMemberListBase.cs:79
+			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildMemberListReference.cs:69
 			this.ReadComponent(this.FibroAdenomaType);                                                                                               // BuildMemberListBase.cs:79
 			//- ReadCode
 		}

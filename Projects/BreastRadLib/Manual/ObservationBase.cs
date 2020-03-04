@@ -35,33 +35,30 @@ namespace BreastRadLib
             this.Resource.HasMember.Clear();
         }
 
-        protected void WriteHasMember<BaseType>(MemberListReference<BaseType> hasMemberList)
-             where BaseType : ObservationBase
+        protected void WriteHasMembers(IElementItemReference hasMemberList)
         {
-            foreach (BaseType item in hasMemberList.RawItems)
-            {
-                this.Resource.HasMember.Add(
-                    new ResourceReference
-                    {
-                        Reference = item.Resource.IdElement.Value
-                    }); ;
-            }
+            foreach (ResourceBase member in hasMemberList.GetElements())
+                this.Resource.HasMember.Add(new ResourceReference
+                {
+                    Reference = member.Id
+                });
         }
 
-        protected void ReadHasMember<BaseType>(MemberListReference<BaseType> hasMemberList)
-             where BaseType : ObservationBase, new()
+        protected void ReadHasMembers(IElementItemReference hasMemberList)
         {
+            List<ResourceBase> items = new List<ResourceBase>();
             foreach (ResourceReference resRef in this.Resource.HasMember)
             {
                 Observation referencedResource = this.ReferencedResource<Observation>(resRef);
                 String profile = referencedResource.Meta.Profile.First();
                 if (BLMisc.SameUrl(profile, hasMemberList.ProfileUrl))
                 {
-                    if (this.doc.TryGetRegisteredItem(referencedResource, out BaseType item) == false)
+                    if (this.doc.TryGetRegisteredItem(referencedResource, out ObservationBase item) == false)
                         throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
-                    hasMemberList.RawItems.Add(item);
+                    items.Add(item);
                 }
             }
+            hasMemberList.SetElements(items);
         }
 
         protected void ClearComponents()
