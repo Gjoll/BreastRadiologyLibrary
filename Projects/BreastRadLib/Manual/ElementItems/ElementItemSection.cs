@@ -12,7 +12,7 @@ namespace BreastRadLib
     /// <summary>
     /// Interface for implementing ElementItemSection classes.
     /// </summary>
-    public interface IElementItemSection
+    public interface IElementItemSection : IElementItem
     {
         /// <summary>
         /// Section Title

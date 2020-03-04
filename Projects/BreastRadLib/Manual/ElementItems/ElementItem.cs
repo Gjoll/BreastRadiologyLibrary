@@ -12,6 +12,7 @@ namespace BreastRadLib
     public interface IElementItem
     {
         String listName { get; }
+        Int32 Count { get; }
         Int32 Min { get; }
         Int32 Max { get; }
     }
@@ -22,6 +23,8 @@ namespace BreastRadLib
     public abstract class ElementItem : IElementItem
     {
         public String listName { get; }
+
+        public abstract Int32 Count { get; }
 
         // Properties
         /// <summary>
@@ -59,7 +62,7 @@ namespace BreastRadLib
         /// <summary>
         /// Count
         /// </summary>
-        public bool Exists => this.Value != null;
+        public override Int32 Count => this.Value == null ? 0 : 1;
 
         /// <summary>
         /// Access value.
@@ -81,7 +84,7 @@ namespace BreastRadLib
         public override bool Validate(StringBuilder sb)
         {
             bool retVal = true;
-            //if (this.items.Count < this.Min)
+            //$if (this.items.Count < this.Min)
             //{
             //    sb.Append($"{this.listName} min cardinality is invalid. Found {this.items.Count} items, expected at least {this.Min} items.");
             //    retVal = false;
@@ -108,7 +111,7 @@ namespace BreastRadLib
         /// <summary>
         /// Count
         /// </summary>
-        public Int32 Count => this.items.Count;
+        public override Int32 Count => this.items.Count;
 
         /// <summary>
         /// Constructor.
