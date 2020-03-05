@@ -83,8 +83,8 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:219
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
-			this.ObsCount = new TItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());              // BuildElementItemComponent.cs:59
-			this.FeatureType = new TItemComponentSingle<CodeableConcept>("FeatureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());     // BuildElementItemComponent.cs:59
+			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:59
+			this.FeatureType = new TItemComponentSingle<CodeableConcept>("Observation.component:featureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 

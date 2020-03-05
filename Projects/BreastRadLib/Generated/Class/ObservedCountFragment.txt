@@ -7,7 +7,7 @@
 		//- Properties
 
 			//+ Constructor
-			this.ObsCount = new TItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());              // BuildElementItemComponent.cs:59
+			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 
 			//+ ValidateCodeStart

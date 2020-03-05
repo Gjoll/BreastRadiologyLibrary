@@ -79,8 +79,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:219
-			this.Value = new TItemComponentSingle<CodeableConcept>("Value", 1, 1, FixedValue_ObservationComponentValueCode());                       // BuildElementItemComponent.cs:59
-			this.Qualifier = new TItemComponentMultiple<CodeableConcept>("Qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());        // BuildElementItemComponent.cs:59
+			this.Value = new TItemComponentSingle<CodeableConcept>("Observation.component:value", 1, 1, FixedValue_ObservationComponentValueCode()); // BuildElementItemComponent.cs:59
+			this.Qualifier = new TItemComponentMultiple<CodeableConcept>("Observation.component:qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 

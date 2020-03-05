@@ -12,8 +12,8 @@
 		//- Properties
 
 			//+ Constructor
-			this.ObsDistribution = new TItemComponentMultiple<CodeableConcept>("ObsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
-			this.ObsDistRegionSize = new TItemComponentMultiple<Quantity, Range>("ObsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
+			this.ObsDistribution = new TItemComponentMultiple<CodeableConcept>("Observation.component:obsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
+			this.ObsDistRegionSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 
 			//+ ValidateCodeStart

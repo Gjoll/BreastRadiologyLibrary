@@ -92,12 +92,12 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:219
-			this.Report = new TItemSectionSingle<BreastRadReport>("Report", 1, 1, "Breast Radiology Report", FixedValue_CompositionSectionReportCode());// BuildElementItemSection.cs:60
-			this.Impressions = new TItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, "Clinical Impressions", FixedValue_CompositionSectionImpressionsCode());// BuildElementItemSection.cs:60
-			this.FindingsRightBreast = new TItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, "Findings Right Breast", FixedValue_CompositionSectionFindingsRightBreastCode());// BuildElementItemSection.cs:60
-			this.FindingsLeftBreast = new TItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, "Findings Left Breast", FixedValue_CompositionSectionFindingsLeftBreastCode());// BuildElementItemSection.cs:60
-			this.RelatedResources = new TItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, "Related Resources", FixedValue_CompositionSectionRelatedResourcesCode());// BuildElementItemSection.cs:60
-			this.Recommendations = new TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, "Recommendations", FixedValue_CompositionSectionRecommendationsCode());// BuildElementItemSection.cs:60
+			this.Report = new TItemSectionSingle<BreastRadReport>("Composition.section:report", 1, 1, "Breast Radiology Report", FixedValue_CompositionSectionReportCode());// BuildElementItemSection.cs:60
+			this.Impressions = new TItemSectionMultiple<ClinicalImpressionBase>("Composition.section:impressions", 0, -1, "Clinical Impressions", FixedValue_CompositionSectionImpressionsCode());// BuildElementItemSection.cs:60
+			this.FindingsRightBreast = new TItemSectionSingle<SectionFindingsRightBreast>("Composition.section:findingsRightBreast", 0, 1, "Findings Right Breast", FixedValue_CompositionSectionFindingsRightBreastCode());// BuildElementItemSection.cs:60
+			this.FindingsLeftBreast = new TItemSectionSingle<SectionFindingsLeftBreast>("Composition.section:findingsLeftBreast", 0, 1, "Findings Left Breast", FixedValue_CompositionSectionFindingsLeftBreastCode());// BuildElementItemSection.cs:60
+			this.RelatedResources = new TItemSectionMultiple<ResourceBase>("Composition.section:relatedResources", 0, -1, "Related Resources", FixedValue_CompositionSectionRelatedResourcesCode());// BuildElementItemSection.cs:60
+			this.Recommendations = new TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Composition.section:recommendations", 0, -1, "Recommendations", FixedValue_CompositionSectionRecommendationsCode());// BuildElementItemSection.cs:60
 			//- Constructor
 		}
 

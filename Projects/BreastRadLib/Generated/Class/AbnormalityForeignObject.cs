@@ -119,14 +119,14 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                                   // DefineBase.cs:219
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
-			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());     // BuildElementItemComponent.cs:59
-			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
-			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("NotPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
-			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("CorrespondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
-			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
-			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
-			this.ConsistentWith = new TItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
-			this.AbnormalityForeignObjectType = new TItemComponentSingle<CodeableConcept>("AbnormalityForeignObjectType", 1, 1, FixedValue_ObservationComponentAbnormalityForeignObjectTypeCode());// BuildElementItemComponent.cs:59
+			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("Observation.component:obsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
+			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("Observation.component:biRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
+			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("Observation.component:notPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
+			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("Observation.component:correspondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
+			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("Observation.component:PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
+			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
+			this.ConsistentWith = new TItemReferenceMultiple<ConsistentWith>("Observation.hasMember:consistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
+			this.AbnormalityForeignObjectType = new TItemComponentSingle<CodeableConcept>("Observation.component:abnormalityForeignObjectType", 1, 1, FixedValue_ObservationComponentAbnormalityForeignObjectTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 

@@ -29,10 +29,10 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    /// </summary>
 	    public BreastBodyLocationExtensionItem()                                                                                               // BuildElementItemExtension.cs:334
 	    {                                                                                                                                      // BuildElementItemExtension.cs:335
-	        this.Quadrant = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "quadrant");                                       // BuildElementItemExtension.cs:487
-	        this.Region = new TItemExtensionMultiple<CodeableConcept>("propertyName", 0, -1, "region");                                        // BuildElementItemExtension.cs:487
-	        this.ClockDirection = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "clockDirection");                           // BuildElementItemExtension.cs:487
-	        this.Depth = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "depth");                                             // BuildElementItemExtension.cs:487
+	        this.Quadrant = new TItemExtensionSingle<CodeableConcept>("Extension.extension:quadrant", 0, 1, "quadrant");                       // BuildElementItemExtension.cs:487
+	        this.Region = new TItemExtensionMultiple<CodeableConcept>("Extension.extension:region", 0, -1, "region");                          // BuildElementItemExtension.cs:487
+	        this.ClockDirection = new TItemExtensionSingle<CodeableConcept>("Extension.extension:clockDirection", 0, 1, "clockDirection");     // BuildElementItemExtension.cs:487
+	        this.Depth = new TItemExtensionSingle<CodeableConcept>("Extension.extension:depth", 0, 1, "depth");                                // BuildElementItemExtension.cs:487
 	    }                                                                                                                                      // BuildElementItemExtension.cs:337
 	                                                                                                                                           // BuildElementItemExtension.cs:338
 	    /// <summary>

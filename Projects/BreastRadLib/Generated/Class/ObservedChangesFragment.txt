@@ -7,7 +7,7 @@
 		//- Properties
 
 			//+ Constructor
-			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());     // BuildElementItemComponent.cs:59
+			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("Observation.component:obsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 
 			//+ ValidateCodeStart

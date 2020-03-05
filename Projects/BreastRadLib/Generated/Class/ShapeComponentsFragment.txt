@@ -22,10 +22,10 @@
 		//- Properties
 
 			//+ Constructor
-			this.Orientation = new TItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());     // BuildElementItemComponent.cs:59
-			this.Shape = new TItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                       // BuildElementItemComponent.cs:59
-			this.Margin = new TItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());                    // BuildElementItemComponent.cs:59
-			this.MgDensity = new TItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());           // BuildElementItemComponent.cs:59
+			this.Orientation = new TItemComponentSingle<CodeableConcept>("Observation.component:orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59
+			this.Shape = new TItemComponentSingle<CodeableConcept>("Observation.component:shape", 0, 1, FixedValue_ObservationComponentShapeCode()); // BuildElementItemComponent.cs:59
+			this.Margin = new TItemComponentSingle<CodeableConcept>("Observation.component:margin", 0, 1, FixedValue_ObservationComponentMarginCode());// BuildElementItemComponent.cs:59
+			this.MgDensity = new TItemComponentSingle<CodeableConcept>("Observation.component:mgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 
 			//+ ValidateCodeStart

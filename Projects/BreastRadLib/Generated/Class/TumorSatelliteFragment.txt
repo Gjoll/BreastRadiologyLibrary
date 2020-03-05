@@ -7,7 +7,7 @@
 		//- Properties
 
 			//+ Constructor
-			this.TumorSatellite = new TItemReferenceMultiple<TumorSatellite>("TumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildElementItemReference.cs:48
+			this.TumorSatellite = new TItemReferenceMultiple<TumorSatellite>("Observation.hasMember:tumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildElementItemReference.cs:48
 			//- Constructor
 
 			//+ ValidateCodeStart

@@ -26,8 +26,8 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    /// </summary>
 	    public BodyDistanceFromExtensionItem()                                                                                                 // BuildElementItemExtension.cs:334
 	    {                                                                                                                                      // BuildElementItemExtension.cs:335
-	        this.LandMark = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "landMark");                                       // BuildElementItemExtension.cs:487
-	        this.DistanceFromLandMark = new TItemExtensionSingle<Quantity>("propertyName", 0, 1, "distanceFromLandMark");                      // BuildElementItemExtension.cs:487
+	        this.LandMark = new TItemExtensionSingle<CodeableConcept>("Extension.extension:landMark", 0, 1, "landMark");                       // BuildElementItemExtension.cs:487
+	        this.DistanceFromLandMark = new TItemExtensionSingle<Quantity>("Extension.extension:distanceFromLandMark", 0, 1, "distanceFromLandMark");// BuildElementItemExtension.cs:487
 	    }                                                                                                                                      // BuildElementItemExtension.cs:337
 	                                                                                                                                           // BuildElementItemExtension.cs:338
 	    /// <summary>

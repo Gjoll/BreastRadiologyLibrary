@@ -55,11 +55,11 @@ namespace BreastRadLib
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public TItemSectionSingle(String listName,
+        public TItemSectionSingle(String fhirPath,
             Int32 min,
             Int32 max,
             String title,
-            CodeableConcept code) : base(listName, min, max)
+            CodeableConcept code) : base(fhirPath, min, max)
         {
             this.Title = title;
             this.Code = code;
@@ -91,7 +91,7 @@ namespace BreastRadLib
             {
                 case 0: break;
                 case 1: this.Value = (TBase)items.First(); break;
-                default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
+                default: throw new Exception($"HasMember item {this.FhirPath} can not be set to multiple items");
             }
         }
     }
@@ -133,11 +133,11 @@ namespace BreastRadLib
             return item;
         }
 
-        public TItemSectionMultiple(String listName,
+        public TItemSectionMultiple(String fhirPath,
             Int32 min,
             Int32 max,
             String title,
-            CodeableConcept code) : base(listName, min, max)
+            CodeableConcept code) : base(fhirPath, min, max)
         {
             this.Title = title;
             this.Code = code;
@@ -194,11 +194,11 @@ namespace BreastRadLib
             return item;
         }
 
-        public TItemSectionMultiple(String listName,
+        public TItemSectionMultiple(String fhirPath,
             Int32 min,
             Int32 max,
             String title,
-            CodeableConcept code) : base(listName, min, max)
+            CodeableConcept code) : base(fhirPath, min, max)
         {
             this.Title = title;
             this.Code = code;

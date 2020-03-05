@@ -484,7 +484,7 @@ namespace FireFragger.CS
                 .AppendCode($"{extensionClass} {propertyName};")
                 ;
             blockConstructor
-                .AppendCode($"this.{propertyName} = new {extensionClass}(\"propertyName\", {min}, {max}, \"{sliceName}\");")
+                .AppendCode($"this.{propertyName} = new {extensionClass}(\"{CSMisc.FhirPath(extensionSlice)}\", {min}, {max}, \"{sliceName}\");")
                 ;
             blockItems
                 .AppendCode($"yield return this.{propertyName};")

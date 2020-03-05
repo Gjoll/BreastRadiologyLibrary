@@ -22,8 +22,10 @@ namespace BreastRadLib
     /// </summary>
     public interface IItemElement
     {
+        String FhirPath { get; }
         IEnumerable<Element> GetElements();
         void SetElements(IEnumerable<Element> elements);
+
     }
 
     /// <summary>
@@ -33,6 +35,14 @@ namespace BreastRadLib
         IItemElement
         where TBase : IItemElementMember, new()
     {
+        String FhirPath { get; }
+
+        public TItemElementSingle(String fhirPath,
+            Int32 min,
+            Int32 max) : base(fhirPath, min, max)
+        {
+        }
+
         /// <summary>
         /// Get value.
         /// </summary>
@@ -57,12 +67,6 @@ namespace BreastRadLib
             return this.Value;
         }
 
-        public TItemElementSingle(String listName,
-            Int32 min,
-            Int32 max) : base(listName, min, max)
-        {
-        }
-
         public IEnumerable<Element> GetElements()
         {
             if (this.Value != null)
@@ -79,7 +83,7 @@ namespace BreastRadLib
                     this.Value.SetElement(items.First());
                     break;
                 default: 
-                    throw new Exception($"{this.listName} can not be set to multiple items");
+                    throw new Exception($"{this.FhirPath} can not be set to multiple items");
             }
         }
     }
@@ -105,11 +109,11 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public TItemElementMultiple(String listName,
+        public TItemElementMultiple(String fhirPath,
             Int32 min,
             Int32 max,
             BreastRadiologyDocument doc,
-            String profileUrl) : base(listName, min, max)
+            String profileUrl) : base(fhirPath, min, max)
         {
             this.doc = doc;
             this.ProfileUrl = profileUrl;

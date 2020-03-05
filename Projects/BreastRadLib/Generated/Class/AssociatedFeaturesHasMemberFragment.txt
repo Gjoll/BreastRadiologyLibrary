@@ -7,7 +7,7 @@
 		//- Properties
 
 			//+ Constructor
-			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
+			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
 			//- Constructor
 
 			//+ ValidateCodeStart

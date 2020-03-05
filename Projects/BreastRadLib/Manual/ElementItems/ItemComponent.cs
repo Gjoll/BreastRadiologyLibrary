@@ -44,10 +44,10 @@ namespace BreastRadLib
         /// </summary>
         public void Set(TBase value) => this.Value = value;
 
-        public TItemComponentSingle(String listName,
+        public TItemComponentSingle(String fhirPath,
             Int32 min,
             Int32 max,
-            CodeableConcept code) : base(listName, min, max)
+            CodeableConcept code) : base(fhirPath, min, max)
         {
             this.Code = code;
         }
@@ -76,7 +76,7 @@ namespace BreastRadLib
             {
                 case 0: break;
                 case 1: this.Value = (TBase)items.First(); break;
-                default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
+                default: throw new Exception($"HasMember item {this.FhirPath} can not be set to multiple items");
             }
         }
     }
@@ -111,10 +111,10 @@ namespace BreastRadLib
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public TItemComponentSingle(String listName,
+        public TItemComponentSingle(String fhirPath,
             Int32 min,
             Int32 max,
-            CodeableConcept code) : base(listName, min, max)
+            CodeableConcept code) : base(fhirPath, min, max)
         {
             this.Code = code;
         }
@@ -130,7 +130,7 @@ namespace BreastRadLib
             {
                 case 0: break;
                 case 1: this.Value = items.First(); break;
-                default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
+                default: throw new Exception($"HasMember item {this.FhirPath} can not be set to multiple items");
             }
         }
     }
@@ -169,10 +169,10 @@ namespace BreastRadLib
             return item;
         }
 
-        public TItemComponentMultiple(String listName,
+        public TItemComponentMultiple(String fhirPath,
             Int32 min,
             Int32 max,
-            CodeableConcept code) : base(listName, min, max)
+            CodeableConcept code) : base(fhirPath, min, max)
         {
             this.Code = code;
         }
@@ -220,10 +220,10 @@ namespace BreastRadLib
             return item;
         }
 
-        public TItemComponentMultiple(String listName,
+        public TItemComponentMultiple(String fhirPath,
             Int32 min,
             Int32 max,
-            CodeableConcept code) : base(listName, min, max)
+            CodeableConcept code) : base(fhirPath, min, max)
         {
             this.Code = code;
         }

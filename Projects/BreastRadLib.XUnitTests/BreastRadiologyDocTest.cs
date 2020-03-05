@@ -212,6 +212,7 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void E_Observation_BodySite()
         {
+            CodeableConcept bodySiteCode = new CodeableConcept("bsSys", "bsCode", "bsDisplay");
             Bundle b;
             {
                 BreastRadiologyDocument doc = MakeDoc();
@@ -219,12 +220,15 @@ namespace BreastRadiology.XUnitTests
                 SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create(doc);
                 MGFinding mgFinding = findLeft.MGFinding.Create();
                 AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append();
-                //abCyst.BodySite.Cr
+                BodySiteExtended bodySite = abCyst.BodySite.Create();
+                bodySite.BodySite = bodySiteCode;
+
+                b = doc.Write();
             }
         }
 
         [TestMethod]
-        public void Document_Validate()
+        public void Z_Validate()
         {
             BreastRadiologyDocument doc = MakeDoc();
             StringBuilder sb = new StringBuilder();

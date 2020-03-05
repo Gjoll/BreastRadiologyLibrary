@@ -88,5 +88,9 @@ namespace FireFragger.CS
 
         public static String LocalClassNameSpace(SDInfo fi) => $"BreastRadLib.{CSMisc.ClassName(fi)}Local;";
 
+        public static String FhirPath(ElementTreeSlice slice)
+        {
+            return slice.ElementDefinition.ElementId;
+        }
     }
 }

@@ -74,10 +74,10 @@ namespace BreastRadLib
             return this.Value;
         }
 
-        public TItemExtensionSingle(String listName,
+        public TItemExtensionSingle(String fhirPath,
             Int32 min,
             Int32 max,
-            String extensionUrl) : base(listName, min, max)
+            String extensionUrl) : base(fhirPath, min, max)
         {
             this.ExtensionUrl = extensionUrl;
         }
@@ -93,7 +93,7 @@ namespace BreastRadLib
             {
                 case 0: break;
                 case 1: this.Value = (TBase)items.First(); break;
-                default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
+                default: throw new Exception($"HasMember item {this.FhirPath} can not be set to multiple items");
             }
         }
     }
@@ -116,10 +116,10 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public TItemExtensionMultiple(String listName,
+        public TItemExtensionMultiple(String fhirPath,
             Int32 min,
             Int32 max,
-            String extensionUrl) : base(listName, min, max)
+            String extensionUrl) : base(fhirPath, min, max)
         {
             this.ExtensionUrl = extensionUrl;
         }
@@ -179,10 +179,10 @@ namespace BreastRadLib
             return this.Value;
         }
 
-        public TItemExtensionComplexSingle(String listName,
+        public TItemExtensionComplexSingle(String fhirPath,
             Int32 min,
             Int32 max,
-            String extensionUrl) : base(listName, min, max)
+            String extensionUrl) : base(fhirPath, min, max)
         {
             this.ExtensionUrl = extensionUrl;
         }
@@ -198,7 +198,7 @@ namespace BreastRadLib
             {
                 case 0: break;
                 case 1: this.Value = (TBase)items.First(); break;
-                default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
+                default: throw new Exception($"HasMember item {this.FhirPath} can not be set to multiple items");
             }
         }
     }
@@ -224,10 +224,10 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public TItemExtensionComplexMultiple(String listName,
+        public TItemExtensionComplexMultiple(String fhirPath,
             Int32 min,
             Int32 max,
-            String extensionUrl) : base(listName, min, max)
+            String extensionUrl) : base(fhirPath, min, max)
         {
             this.ExtensionUrl = extensionUrl;
         }

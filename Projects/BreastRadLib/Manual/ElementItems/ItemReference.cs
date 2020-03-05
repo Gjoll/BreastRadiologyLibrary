@@ -53,11 +53,11 @@ namespace BreastRadLib
             return this.Value;
         }
 
-        public TItemReferenceSingle(String listName,
+        public TItemReferenceSingle(String fhirPath,
             Int32 min,
             Int32 max,
             BreastRadiologyDocument doc,
-            String profileUrl) : base(listName, min, max)
+            String profileUrl) : base(fhirPath, min, max)
         {
             this.doc = doc;
             this.ProfileUrl = profileUrl;
@@ -74,7 +74,7 @@ namespace BreastRadLib
             {
                 case 0: break;
                 case 1: this.Value = (TBase)items.First(); break;
-                default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
+                default: throw new Exception($"HasMember item {this.FhirPath} can not be set to multiple items");
             }
         }
     }
@@ -100,11 +100,11 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public TItemReferenceMultiple(String listName,
+        public TItemReferenceMultiple(String fhirPath,
             Int32 min,
             Int32 max,
             BreastRadiologyDocument doc,
-            String profileUrl) : base(listName, min, max)
+            String profileUrl) : base(fhirPath, min, max)
         {
             this.doc = doc;
             this.ProfileUrl = profileUrl;

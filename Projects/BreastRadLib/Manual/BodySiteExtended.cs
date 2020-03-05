@@ -26,7 +26,7 @@ namespace BreastRadLib
         /// <summary>
         /// Read extension values
         /// </summary>
-        public void Read()
+        public void Read(Resource resource)
         {
             //base.ReadItems(e);
         }
@@ -34,7 +34,7 @@ namespace BreastRadLib
         /// <summary>
         /// Write extension values
         /// </summary>
-        public void Write()
+        public void Write(Resource resource)
         {
             // return base.WriteItems();
         }

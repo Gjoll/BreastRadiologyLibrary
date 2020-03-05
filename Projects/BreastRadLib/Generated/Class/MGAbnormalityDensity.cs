@@ -164,22 +164,22 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                                       // DefineBase.cs:219
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
-			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());     // BuildElementItemComponent.cs:59
-			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
-			this.Orientation = new TItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());     // BuildElementItemComponent.cs:59
-			this.Shape = new TItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                       // BuildElementItemComponent.cs:59
-			this.Margin = new TItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());                    // BuildElementItemComponent.cs:59
-			this.MgDensity = new TItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());           // BuildElementItemComponent.cs:59
-			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("NotPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
-			this.ObsCount = new TItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());              // BuildElementItemComponent.cs:59
-			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("ObsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());               // BuildElementItemComponent.cs:59
-			this.ObsDistribution = new TItemComponentMultiple<CodeableConcept>("ObsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
-			this.ObsDistRegionSize = new TItemComponentMultiple<Quantity, Range>("ObsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
-			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("CorrespondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
-			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
-			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
-			this.ConsistentWith = new TItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
-			this.DensityType = new TItemComponentSingle<CodeableConcept>("DensityType", 1, 1, FixedValue_ObservationComponentDensityTypeCode());     // BuildElementItemComponent.cs:59
+			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("Observation.component:obsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
+			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("Observation.component:biRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
+			this.Orientation = new TItemComponentSingle<CodeableConcept>("Observation.component:orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59
+			this.Shape = new TItemComponentSingle<CodeableConcept>("Observation.component:shape", 0, 1, FixedValue_ObservationComponentShapeCode()); // BuildElementItemComponent.cs:59
+			this.Margin = new TItemComponentSingle<CodeableConcept>("Observation.component:margin", 0, 1, FixedValue_ObservationComponentMarginCode());// BuildElementItemComponent.cs:59
+			this.MgDensity = new TItemComponentSingle<CodeableConcept>("Observation.component:mgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());// BuildElementItemComponent.cs:59
+			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("Observation.component:notPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
+			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:59
+			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());// BuildElementItemComponent.cs:59
+			this.ObsDistribution = new TItemComponentMultiple<CodeableConcept>("Observation.component:obsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
+			this.ObsDistRegionSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
+			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("Observation.component:correspondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
+			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("Observation.component:PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
+			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
+			this.ConsistentWith = new TItemReferenceMultiple<ConsistentWith>("Observation.hasMember:consistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
+			this.DensityType = new TItemComponentSingle<CodeableConcept>("Observation.component:densityType", 1, 1, FixedValue_ObservationComponentDensityTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 

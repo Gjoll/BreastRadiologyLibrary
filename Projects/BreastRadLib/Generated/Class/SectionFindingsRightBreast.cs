@@ -88,10 +88,10 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // DefineBase.cs:219
-			this.MGFinding = new TItemReferenceSingle<MGFinding>("MGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
-			this.MRIFinding = new TItemReferenceSingle<MRIFinding>("MRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
-			this.NMFinding = new TItemReferenceSingle<NMFinding>("NMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
-			this.USFinding = new TItemReferenceSingle<USFinding>("USFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:48
+			this.MGFinding = new TItemReferenceSingle<MGFinding>("Observation.hasMember:mGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
+			this.MRIFinding = new TItemReferenceSingle<MRIFinding>("Observation.hasMember:mRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
+			this.NMFinding = new TItemReferenceSingle<NMFinding>("Observation.hasMember:nMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
+			this.USFinding = new TItemReferenceSingle<USFinding>("Observation.hasMember:uSFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:48
 			//- Constructor
 		}
 

@@ -83,9 +83,9 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // DefineBase.cs:219
-			this.MGAbnormalityArchitecturalDistortion = new TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion>("MGAbnormalityArchitecturalDistortion", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");// BuildElementItemReference.cs:48
-			this.MGAbnormalityCalcification = new TItemReferenceMultiple<MGAbnormalityCalcification>("MGAbnormalityCalcification", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");// BuildElementItemReference.cs:48
-			this.ObservedFeature = new TItemReferenceMultiple<ObservedFeature>("ObservedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");// BuildElementItemReference.cs:48
+			this.MGAbnormalityArchitecturalDistortion = new TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion>("Observation.hasMember:mGAbnormalityArchitecturalDistortion", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");// BuildElementItemReference.cs:48
+			this.MGAbnormalityCalcification = new TItemReferenceMultiple<MGAbnormalityCalcification>("Observation.hasMember:mGAbnormalityCalcification", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");// BuildElementItemReference.cs:48
+			this.ObservedFeature = new TItemReferenceMultiple<ObservedFeature>("Observation.hasMember:observedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");// BuildElementItemReference.cs:48
 			//- Constructor
 		}
 

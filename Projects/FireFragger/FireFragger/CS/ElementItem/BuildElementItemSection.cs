@@ -57,7 +57,7 @@ namespace FireFragger.CS
             }
 
             this.codeBlocks.ClassConstructor
-                .AppendCode($"this.{propertyName} = new {propertyClass}(\"{propertyName}\", {min}, {max}, \"{title}\", {codeValue});")
+                .AppendCode($"this.{propertyName} = new {propertyClass}(\"{CSMisc.FhirPath(memberSlice)}\", {min}, {max}, \"{title}\", {codeValue});")
                 ;
 
             this.codeBlocks.InterfaceProperties

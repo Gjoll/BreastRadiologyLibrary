@@ -11,7 +11,7 @@ namespace BreastRadLib
     /// </summary>
     public interface IItem
     {
-        String listName { get; }
+        String FhirPath { get; }
         Int32 Count { get; }
         Int32 Min { get; }
         Int32 Max { get; }
@@ -22,30 +22,37 @@ namespace BreastRadLib
     /// </summary>
     public abstract class Item : IItem
     {
-        public String listName { get; }
+        /// <summary>
+        /// Path to the item that this references.
+        /// This includes slice names, so it is really the same as the Fhir element id.
+        /// </summary>
+        public String FhirPath { get; }
 
+        /// <summary>
+        /// Count of items
+        /// </summary>
         public abstract Int32 Count { get; }
 
         // Properties
         /// <summary>
-        /// Access Min cardinality
+        /// Min cardinality
         /// </summary>
         public Int32 Min { get; }
 
         /// <summary>
-        /// Access Max cardinality
+        /// Max cardinality
         /// </summary>
         public Int32 Max { get; }
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="listName"></param>
-        protected Item(String listName,
+        /// <param name="fhirPath"></param>
+        protected Item(String fhirPath,
             Int32 min,
             Int32 max)
         {
-            this.listName = listName;
+            this.FhirPath = fhirPath;
             this.Min = min;
             this.Max = max;
         }
@@ -72,9 +79,9 @@ namespace BreastRadLib
         /// <summary>
         /// Constructor.
         /// </summary>
-        protected TItemSingle(String listName,
+        protected TItemSingle(String fhirPath,
             Int32 min,
-            Int32 max) : base(listName, min, max)
+            Int32 max) : base(fhirPath, min, max)
         {
         }
 
@@ -86,13 +93,13 @@ namespace BreastRadLib
             bool retVal = true;
             if (this.Count < this.Min)
             {
-                sb.Append($"{this.listName} min cardinality is invalid. Found {this.Count} items, expected at least {this.Min} items.");
+                sb.Append($"{this.FhirPath} min cardinality is invalid. Found {this.Count} items, expected at least {this.Min} items.");
                 retVal = false;
             }
 
             if ((this.Max >= 0) && (this.Count > this.Max))
             {
-                sb.Append($"{this.listName} max cardinality is invalid. Found {this.Count} items, expected less than {this.Max} items.");
+                sb.Append($"{this.FhirPath} max cardinality is invalid. Found {this.Count} items, expected less than {this.Max} items.");
                 retVal = false;
             }
 
@@ -116,9 +123,9 @@ namespace BreastRadLib
         /// <summary>
         /// Constructor.
         /// </summary>
-        protected TItemMultiple(String listName,
+        protected TItemMultiple(String fhirPath,
             Int32 min,
-            Int32 max) : base(listName, min, max)
+            Int32 max) : base(fhirPath, min, max)
         {
         }
 
@@ -130,13 +137,13 @@ namespace BreastRadLib
             bool retVal = true;
             if (this.items.Count < this.Min)
             {
-                sb.Append($"{this.listName} min cardinality is invalid. Found {this.items.Count} items, expected at least {this.Min} items.");
+                sb.Append($"{this.FhirPath} min cardinality is invalid. Found {this.items.Count} items, expected at least {this.Min} items.");
                 retVal = false;
             }
 
             if ((this.Max >= 0) && (this.items.Count > this.Max))
             {
-                sb.Append($"{this.listName} max cardinality is invalid. Found {this.items.Count} items, expected less than {this.Max} items.");
+                sb.Append($"{this.FhirPath} max cardinality is invalid. Found {this.items.Count} items, expected less than {this.Max} items.");
                 retVal = false;
             }
 
