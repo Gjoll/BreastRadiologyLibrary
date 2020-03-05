@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access PreviouslyDemonstratedBy
 		/// </summary>
-		ElementItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; }                                                          // BuildElementItemComponent.cs:66
+		TElementItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; }                                                          // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

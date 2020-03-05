@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access TumorSatellite
 		/// </summary>
-		ElementItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; }                                                                     // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; }                                                                     // BuildElementItemReference.cs:55
 		//- Properties
 
 		//+ Methods

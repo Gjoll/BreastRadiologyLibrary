@@ -30,12 +30,12 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Value
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> Value { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<CodeableConcept> Value { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Qualifier
 		/// </summary>
-		public ElementItemComponentMultiple<CodeableConcept> Qualifier { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<CodeableConcept> Qualifier { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
 		//- Properties
 
 		/// <summary>
@@ -79,8 +79,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:219
-			this.Value = new ElementItemComponentSingle<CodeableConcept>("Value", 1, 1, FixedValue_ObservationComponentValueCode());                 // BuildElementItemComponent.cs:59
-			this.Qualifier = new ElementItemComponentMultiple<CodeableConcept>("Qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());  // BuildElementItemComponent.cs:59
+			this.Value = new TElementItemComponentSingle<CodeableConcept>("Value", 1, 1, FixedValue_ObservationComponentValueCode());                 // BuildElementItemComponent.cs:59
+			this.Qualifier = new TElementItemComponentMultiple<CodeableConcept>("Qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());  // BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 

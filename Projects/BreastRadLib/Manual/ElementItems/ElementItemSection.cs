@@ -30,7 +30,7 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class ElementItemSectionSingle<BaseType> : ElementItemSingle<BaseType>, IElementItemSection
+    public class TElementItemSectionSingle<BaseType> : TElementItemSingle<BaseType>, IElementItemSection
             where BaseType : ResourceBase, new()
     {
         /// <summary>
@@ -55,7 +55,7 @@ namespace BreastRadLib
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public ElementItemSectionSingle(String listName,
+        public TElementItemSectionSingle(String listName,
             Int32 min,
             Int32 max,
             String title,
@@ -99,7 +99,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedSection multiple accessors
     /// </summary>
-    public class ElementItemSectionMultiple<BaseType> : ElementItemMultiple<BaseType>, IElementItemSection
+    public class TElementItemSectionMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementItemSection
             where BaseType : ResourceBase, new()
     {
         /// <summary>
@@ -133,7 +133,7 @@ namespace BreastRadLib
             return item;
         }
 
-        public ElementItemSectionMultiple(String listName,
+        public TElementItemSectionMultiple(String listName,
             Int32 min,
             Int32 max,
             String title,
@@ -159,7 +159,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedSection multiple accessors
     /// </summary>
-    public class ElementItemSectionMultiple<BaseType1, BaseType2, BaseType3> : ElementItemMultiple<ResourceBase>, IElementItemSection
+    public class TElementItemSectionMultiple<BaseType1, BaseType2, BaseType3> : TElementItemMultiple<ResourceBase>, IElementItemSection
             where BaseType1 : ResourceBase, new()
             where BaseType2 : ResourceBase, new()
             where BaseType3 : ResourceBase, new()
@@ -194,7 +194,7 @@ namespace BreastRadLib
             return item;
         }
 
-        public ElementItemSectionMultiple(String listName,
+        public TElementItemSectionMultiple(String listName,
             Int32 min,
             Int32 max,
             String title,

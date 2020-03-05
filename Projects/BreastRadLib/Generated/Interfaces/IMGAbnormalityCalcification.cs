@@ -33,11 +33,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access CalcificationType
 		/// </summary>
-		ElementItemComponentSingle<CodeableConcept> CalcificationType { get ; }                                                                   // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<CodeableConcept> CalcificationType { get ; }                                                                   // BuildElementItemComponent.cs:66
 		/// <summary>
 		/// Access CalcificationDistribution
 		/// </summary>
-		ElementItemComponentSingle<CodeableConcept> CalcificationDistribution { get ; }                                                           // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<CodeableConcept> CalcificationDistribution { get ; }                                                           // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

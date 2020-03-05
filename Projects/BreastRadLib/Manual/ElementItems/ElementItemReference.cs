@@ -22,7 +22,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference single accessors
     /// </summary>
-    public class ElementItemReferenceSingle<BaseType> : ElementItemSingle<BaseType>, IElementItemReference
+    public class TElementItemReferenceSingle<BaseType> : TElementItemSingle<BaseType>, IElementItemReference
             where BaseType : ResourceBase, new()
     {
         /// <summary>
@@ -53,7 +53,7 @@ namespace BreastRadLib
             return this.Value;
         }
 
-        public ElementItemReferenceSingle(String listName,
+        public TElementItemReferenceSingle(String listName,
             Int32 min,
             Int32 max,
             BreastRadiologyDocument doc,
@@ -82,7 +82,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference multiple accessors
     /// </summary>
-    public class ElementItemReferenceMultiple<BaseType> : ElementItemMultiple<BaseType>, IElementItemReference
+    public class TElementItemReferenceMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementItemReference
             where BaseType : ResourceBase, new()
     {
         BreastRadiologyDocument doc;
@@ -100,7 +100,7 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public ElementItemReferenceMultiple(String listName,
+        public TElementItemReferenceMultiple(String listName,
             Int32 min,
             Int32 max,
             BreastRadiologyDocument doc,

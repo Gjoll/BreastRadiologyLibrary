@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access BiRadsAssessmentCategory
 		/// </summary>
-		ElementItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; }                                                            // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; }                                                            // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

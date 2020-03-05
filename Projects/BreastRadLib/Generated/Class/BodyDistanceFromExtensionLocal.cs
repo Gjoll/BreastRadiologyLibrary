@@ -18,16 +18,16 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	/// </summary>
 	public class BodyDistanceFromExtensionItem : IComplexExtensionItem                                                                         // BuildElementItemExtension.cs:327
 	{                                                                                                                                          // BuildElementItemExtension.cs:328
-	    ElementItemExtensionSingle<CodeableConcept> LandMark;                                                                                  // BuildElementItemExtension.cs:484
-	    ElementItemExtensionSingle<Quantity> DistanceFromLandMark;                                                                             // BuildElementItemExtension.cs:484
+	    TElementItemExtensionSingle<CodeableConcept> LandMark;                                                                                  // BuildElementItemExtension.cs:484
+	    TElementItemExtensionSingle<Quantity> DistanceFromLandMark;                                                                             // BuildElementItemExtension.cs:484
 	                                                                                                                                           // BuildElementItemExtension.cs:330
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
 	    public BodyDistanceFromExtensionItem()                                                                                                 // BuildElementItemExtension.cs:334
 	    {                                                                                                                                      // BuildElementItemExtension.cs:335
-	        this.LandMark = new ElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "landMark");                                 // BuildElementItemExtension.cs:487
-	        this.DistanceFromLandMark = new ElementItemExtensionSingle<Quantity>("propertyName", 0, 1, "distanceFromLandMark");                // BuildElementItemExtension.cs:487
+	        this.LandMark = new TElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "landMark");                                 // BuildElementItemExtension.cs:487
+	        this.DistanceFromLandMark = new TElementItemExtensionSingle<Quantity>("propertyName", 0, 1, "distanceFromLandMark");                // BuildElementItemExtension.cs:487
 	    }                                                                                                                                      // BuildElementItemExtension.cs:337
 	                                                                                                                                           // BuildElementItemExtension.cs:338
 	    /// <summary>

@@ -28,22 +28,22 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access MGFinding
 		/// </summary>
-		public ElementItemReferenceSingle<MGFinding> MGFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
+		public TElementItemReferenceSingle<MGFinding> MGFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access MRIFinding
 		/// </summary>
-		public ElementItemReferenceSingle<MRIFinding> MRIFinding { get ; protected set; }                                                         // BuildElementItemReference.cs:63
+		public TElementItemReferenceSingle<MRIFinding> MRIFinding { get ; protected set; }                                                         // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access NMFinding
 		/// </summary>
-		public ElementItemReferenceSingle<NMFinding> NMFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
+		public TElementItemReferenceSingle<NMFinding> NMFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access USFinding
 		/// </summary>
-		public ElementItemReferenceSingle<USFinding> USFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
+		public TElementItemReferenceSingle<USFinding> USFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
 		//- Properties
 
 		/// <summary>
@@ -88,10 +88,10 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:219
-			this.MGFinding = new ElementItemReferenceSingle<MGFinding>("MGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
-			this.MRIFinding = new ElementItemReferenceSingle<MRIFinding>("MRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
-			this.NMFinding = new ElementItemReferenceSingle<NMFinding>("NMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
-			this.USFinding = new ElementItemReferenceSingle<USFinding>("USFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:48
+			this.MGFinding = new TElementItemReferenceSingle<MGFinding>("MGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
+			this.MRIFinding = new TElementItemReferenceSingle<MRIFinding>("MRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
+			this.NMFinding = new TElementItemReferenceSingle<NMFinding>("NMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
+			this.USFinding = new TElementItemReferenceSingle<USFinding>("USFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:48
 			//- Constructor
 		}
 

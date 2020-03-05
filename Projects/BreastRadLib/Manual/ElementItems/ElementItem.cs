@@ -57,7 +57,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all class member single item class's
     /// </summary>
-    public class ElementItemSingle<BaseType> : ElementItem
+    public class TElementItemSingle<BaseType> : ElementItem
     {
         /// <summary>
         /// Count
@@ -72,7 +72,7 @@ namespace BreastRadLib
         /// <summary>
         /// Constructor.
         /// </summary>
-        protected ElementItemSingle(String listName,
+        protected TElementItemSingle(String listName,
             Int32 min,
             Int32 max) : base(listName, min, max)
         {
@@ -104,7 +104,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all ElementItem multiple member clases
     /// </summary>
-    public class ElementItemMultiple<BaseType> : ElementItem
+    public class TElementItemMultiple<BaseType> : ElementItem
     {
         protected List<BaseType> items = new List<BaseType>();
 
@@ -116,7 +116,7 @@ namespace BreastRadLib
         /// <summary>
         /// Constructor.
         /// </summary>
-        protected ElementItemMultiple(String listName,
+        protected TElementItemMultiple(String listName,
             Int32 min,
             Int32 max) : base(listName, min, max)
         {

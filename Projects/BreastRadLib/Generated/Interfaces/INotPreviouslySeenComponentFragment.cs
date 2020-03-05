@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access NotPreviouslySeen
 		/// </summary>
-		ElementItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; }                                                                 // BuildElementItemComponent.cs:66
+		TElementItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; }                                                                 // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

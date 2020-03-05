@@ -25,7 +25,7 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class ElementItemComponentSingle<BaseType> : ElementItemSingle<BaseType>, IElementItemComponent
+    public class TElementItemComponentSingle<BaseType> : TElementItemSingle<BaseType>, IElementItemComponent
             where BaseType : Element, new()
     {
         /// <summary>
@@ -44,7 +44,7 @@ namespace BreastRadLib
         /// </summary>
         public void Set(BaseType value) => this.Value = value;
 
-        public ElementItemComponentSingle(String listName,
+        public TElementItemComponentSingle(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)
@@ -86,7 +86,7 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class ElementItemComponentSingle<BaseType1, BaseType2> : ElementItemSingle<Element>, IElementItemComponent
+    public class TElementItemComponentSingle<BaseType1, BaseType2> : TElementItemSingle<Element>, IElementItemComponent
         where BaseType1 : Element, new()
         where BaseType2 : Element, new()
     {
@@ -111,7 +111,7 @@ namespace BreastRadLib
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public ElementItemComponentSingle(String listName,
+        public TElementItemComponentSingle(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)
@@ -141,7 +141,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedComponent multiple accessors
     /// </summary>
-    public class ElementItemComponentMultiple<BaseType> : ElementItemMultiple<BaseType>, IElementItemComponent
+    public class TElementItemComponentMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementItemComponent
             where BaseType : Element, new()
     {
         /// <summary>
@@ -169,7 +169,7 @@ namespace BreastRadLib
             return item;
         }
 
-        public ElementItemComponentMultiple(String listName,
+        public TElementItemComponentMultiple(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)
@@ -195,7 +195,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedComponent multiple accessors
     /// </summary>
-    public class ElementItemComponentMultiple<BaseType1, BaseType2> : ElementItemMultiple<Element>, IElementItemComponent
+    public class TElementItemComponentMultiple<BaseType1, BaseType2> : TElementItemMultiple<Element>, IElementItemComponent
             where BaseType1 : Element, new()
             where BaseType2 : Element, new()
     {
@@ -220,7 +220,7 @@ namespace BreastRadLib
             return item;
         }
 
-        public ElementItemComponentMultiple(String listName,
+        public TElementItemComponentMultiple(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)

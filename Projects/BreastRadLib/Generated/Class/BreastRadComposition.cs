@@ -24,32 +24,32 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Report
 		/// </summary>
-		public ElementItemSectionSingle<BreastRadReport> Report { get ; protected set; }                                                          // BuildElementItemSection.cs:75
+		public TElementItemSectionSingle<BreastRadReport> Report { get ; protected set; }                                                          // BuildElementItemSection.cs:75
 		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access Impressions
 		/// </summary>
-		public ElementItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; protected set; }                                            // BuildElementItemSection.cs:75
+		public TElementItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; protected set; }                                            // BuildElementItemSection.cs:75
 		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access FindingsRightBreast
 		/// </summary>
-		public ElementItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; protected set; }                                  // BuildElementItemSection.cs:75
+		public TElementItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; protected set; }                                  // BuildElementItemSection.cs:75
 		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access FindingsLeftBreast
 		/// </summary>
-		public ElementItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; protected set; }                                    // BuildElementItemSection.cs:75
+		public TElementItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; protected set; }                                    // BuildElementItemSection.cs:75
 		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access RelatedResources
 		/// </summary>
-		public ElementItemSectionMultiple<ResourceBase> RelatedResources { get ; protected set; }                                                 // BuildElementItemSection.cs:75
+		public TElementItemSectionMultiple<ResourceBase> RelatedResources { get ; protected set; }                                                 // BuildElementItemSection.cs:75
 		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access Recommendations
 		/// </summary>
-		public ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; protected set; }// BuildElementItemSection.cs:75
+		public TElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; protected set; }// BuildElementItemSection.cs:75
 		//- Properties
 
 		/// <summary>
@@ -92,12 +92,12 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:219
-			this.Report = new ElementItemSectionSingle<BreastRadReport>("Report", 1, 1, "Breast Radiology Report", FixedValue_CompositionSectionReportCode());// BuildElementItemSection.cs:60
-			this.Impressions = new ElementItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, "Clinical Impressions", FixedValue_CompositionSectionImpressionsCode());// BuildElementItemSection.cs:60
-			this.FindingsRightBreast = new ElementItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, "Findings Right Breast", FixedValue_CompositionSectionFindingsRightBreastCode());// BuildElementItemSection.cs:60
-			this.FindingsLeftBreast = new ElementItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, "Findings Left Breast", FixedValue_CompositionSectionFindingsLeftBreastCode());// BuildElementItemSection.cs:60
-			this.RelatedResources = new ElementItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, "Related Resources", FixedValue_CompositionSectionRelatedResourcesCode());// BuildElementItemSection.cs:60
-			this.Recommendations = new ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, "Recommendations", FixedValue_CompositionSectionRecommendationsCode());// BuildElementItemSection.cs:60
+			this.Report = new TElementItemSectionSingle<BreastRadReport>("Report", 1, 1, "Breast Radiology Report", FixedValue_CompositionSectionReportCode());// BuildElementItemSection.cs:60
+			this.Impressions = new TElementItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, "Clinical Impressions", FixedValue_CompositionSectionImpressionsCode());// BuildElementItemSection.cs:60
+			this.FindingsRightBreast = new TElementItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, "Findings Right Breast", FixedValue_CompositionSectionFindingsRightBreastCode());// BuildElementItemSection.cs:60
+			this.FindingsLeftBreast = new TElementItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, "Findings Left Breast", FixedValue_CompositionSectionFindingsLeftBreastCode());// BuildElementItemSection.cs:60
+			this.RelatedResources = new TElementItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, "Related Resources", FixedValue_CompositionSectionRelatedResourcesCode());// BuildElementItemSection.cs:60
+			this.Recommendations = new TElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, "Recommendations", FixedValue_CompositionSectionRecommendationsCode());// BuildElementItemSection.cs:60
 			//- Constructor
 		}
 

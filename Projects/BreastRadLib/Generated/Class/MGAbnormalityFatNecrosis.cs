@@ -44,77 +44,77 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access ObsChanges
 		/// </summary>
-		public ElementItemComponentMultiple<CodeableConcept> ObsChanges { get ; protected set; }                                                  // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<CodeableConcept> ObsChanges { get ; protected set; }                                                  // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access BiRadsAssessmentCategory
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; protected set; }                                      // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; protected set; }                                      // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Orientation
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Shape
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Margin
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                        // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                        // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access MgDensity
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                     // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                     // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access NotPreviouslySeen
 		/// </summary>
-		public ElementItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; protected set; }                                           // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; protected set; }                                           // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsCount
 		/// </summary>
-		public ElementItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsSize
 		/// </summary>
-		public ElementItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                     // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                     // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsDistribution
 		/// </summary>
-		public ElementItemComponentMultiple<CodeableConcept> ObsDistribution { get ; protected set; }                                             // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<CodeableConcept> ObsDistribution { get ; protected set; }                                             // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsDistRegionSize
 		/// </summary>
-		public ElementItemComponentMultiple<Quantity, Range> ObsDistRegionSize { get ; protected set; }                                           // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<Quantity, Range> ObsDistRegionSize { get ; protected set; }                                           // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access CorrespondsWith
 		/// </summary>
-		public ElementItemComponentMultiple<CodeableConcept> CorrespondsWith { get ; protected set; }                                             // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<CodeableConcept> CorrespondsWith { get ; protected set; }                                             // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access PreviouslyDemonstratedBy
 		/// </summary>
-		public ElementItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                    // BuildElementItemComponent.cs:74
+		public TElementItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                    // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access AssociatedFeatures
 		/// </summary>
-		public ElementItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                         // BuildElementItemReference.cs:63
+		public TElementItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                         // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access ConsistentWith
 		/// </summary>
-		public ElementItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                               // BuildElementItemReference.cs:63
+		public TElementItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                               // BuildElementItemReference.cs:63
 		//- Properties
 
 		/// <summary>
@@ -159,21 +159,21 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");                                   // DefineBase.cs:219
 			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
-			this.ObsChanges = new ElementItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
-			this.BiRadsAssessmentCategory = new ElementItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
-			this.Orientation = new ElementItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59
-			this.Shape = new ElementItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                 // BuildElementItemComponent.cs:59
-			this.Margin = new ElementItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());              // BuildElementItemComponent.cs:59
-			this.MgDensity = new ElementItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());     // BuildElementItemComponent.cs:59
-			this.NotPreviouslySeen = new ElementItemComponentMultiple<CodeableConcept>("NotPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
-			this.ObsCount = new ElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
-			this.ObsSize = new ElementItemComponentMultiple<Quantity, Range>("ObsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());         // BuildElementItemComponent.cs:59
-			this.ObsDistribution = new ElementItemComponentMultiple<CodeableConcept>("ObsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
-			this.ObsDistRegionSize = new ElementItemComponentMultiple<Quantity, Range>("ObsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
-			this.CorrespondsWith = new ElementItemComponentMultiple<CodeableConcept>("CorrespondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
-			this.PreviouslyDemonstratedBy = new ElementItemComponentMultiple<CodeableConcept>("PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
-			this.AssociatedFeatures = new ElementItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
-			this.ConsistentWith = new ElementItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
+			this.ObsChanges = new TElementItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:59
+			this.BiRadsAssessmentCategory = new TElementItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
+			this.Orientation = new TElementItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59
+			this.Shape = new TElementItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                 // BuildElementItemComponent.cs:59
+			this.Margin = new TElementItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());              // BuildElementItemComponent.cs:59
+			this.MgDensity = new TElementItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());     // BuildElementItemComponent.cs:59
+			this.NotPreviouslySeen = new TElementItemComponentMultiple<CodeableConcept>("NotPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
+			this.ObsCount = new TElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
+			this.ObsSize = new TElementItemComponentMultiple<Quantity, Range>("ObsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());         // BuildElementItemComponent.cs:59
+			this.ObsDistribution = new TElementItemComponentMultiple<CodeableConcept>("ObsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
+			this.ObsDistRegionSize = new TElementItemComponentMultiple<Quantity, Range>("ObsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
+			this.CorrespondsWith = new TElementItemComponentMultiple<CodeableConcept>("CorrespondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
+			this.PreviouslyDemonstratedBy = new TElementItemComponentMultiple<CodeableConcept>("PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
+			this.AssociatedFeatures = new TElementItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
+			this.ConsistentWith = new TElementItemReferenceMultiple<ConsistentWith>("ConsistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
 			//- Constructor
 		}
 

@@ -21,55 +21,55 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access AbnormalityCyst
 		/// </summary>
-		ElementItemReferenceMultiple<AbnormalityCyst> AbnormalityCyst { get ; }                                                                   // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<AbnormalityCyst> AbnormalityCyst { get ; }                                                                   // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access AbnormalityDuct
 		/// </summary>
-		ElementItemReferenceMultiple<AbnormalityDuct> AbnormalityDuct { get ; }                                                                   // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<AbnormalityDuct> AbnormalityDuct { get ; }                                                                   // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access AbnormalityForeignObject
 		/// </summary>
-		ElementItemReferenceMultiple<AbnormalityForeignObject> AbnormalityForeignObject { get ; }                                                 // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<AbnormalityForeignObject> AbnormalityForeignObject { get ; }                                                 // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access AbnormalityLymphNode
 		/// </summary>
-		ElementItemReferenceMultiple<AbnormalityLymphNode> AbnormalityLymphNode { get ; }                                                         // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<AbnormalityLymphNode> AbnormalityLymphNode { get ; }                                                         // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access AbnormalityMass
 		/// </summary>
-		ElementItemReferenceMultiple<AbnormalityMass> AbnormalityMass { get ; }                                                                   // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<AbnormalityMass> AbnormalityMass { get ; }                                                                   // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access AssociatedFeatures
 		/// </summary>
-		ElementItemReferenceMultiple<AssociatedFeatures> AssociatedFeatures { get ; }                                                             // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<AssociatedFeatures> AssociatedFeatures { get ; }                                                             // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access AbnormalityFibroadenoma
 		/// </summary>
-		ElementItemReferenceMultiple<AbnormalityFibroadenoma> AbnormalityFibroadenoma { get ; }                                                   // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<AbnormalityFibroadenoma> AbnormalityFibroadenoma { get ; }                                                   // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		ElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; }                         // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; }                         // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access MGAbnormalityAsymmetry
 		/// </summary>
-		ElementItemReferenceMultiple<MGAbnormalityAsymmetry> MGAbnormalityAsymmetry { get ; }                                                     // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<MGAbnormalityAsymmetry> MGAbnormalityAsymmetry { get ; }                                                     // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access MGAbnormalityCalcification
 		/// </summary>
-		ElementItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; }                                             // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; }                                             // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access MGAbnormalityDensity
 		/// </summary>
-		ElementItemReferenceMultiple<MGAbnormalityDensity> MGAbnormalityDensity { get ; }                                                         // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<MGAbnormalityDensity> MGAbnormalityDensity { get ; }                                                         // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access MGAbnormalityFatNecrosis
 		/// </summary>
-		ElementItemReferenceMultiple<MGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis { get ; }                                                 // BuildElementItemReference.cs:55
+		TElementItemReferenceMultiple<MGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis { get ; }                                                 // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access MGBreastDensity
 		/// </summary>
-		ElementItemReferenceSingle<MGBreastDensity> MGBreastDensity { get ; }                                                                     // BuildElementItemReference.cs:55
+		TElementItemReferenceSingle<MGBreastDensity> MGBreastDensity { get ; }                                                                     // BuildElementItemReference.cs:55
 		//- Properties
 
 		//+ Methods

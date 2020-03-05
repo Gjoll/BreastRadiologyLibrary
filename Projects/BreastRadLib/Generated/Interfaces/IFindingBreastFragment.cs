@@ -22,19 +22,19 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access MGFinding
 		/// </summary>
-		ElementItemReferenceSingle<MGFinding> MGFinding { get ; }                                                                                 // BuildElementItemReference.cs:55
+		TElementItemReferenceSingle<MGFinding> MGFinding { get ; }                                                                                 // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access MRIFinding
 		/// </summary>
-		ElementItemReferenceSingle<MRIFinding> MRIFinding { get ; }                                                                               // BuildElementItemReference.cs:55
+		TElementItemReferenceSingle<MRIFinding> MRIFinding { get ; }                                                                               // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access NMFinding
 		/// </summary>
-		ElementItemReferenceSingle<NMFinding> NMFinding { get ; }                                                                                 // BuildElementItemReference.cs:55
+		TElementItemReferenceSingle<NMFinding> NMFinding { get ; }                                                                                 // BuildElementItemReference.cs:55
 		/// <summary>
 		/// Access USFinding
 		/// </summary>
-		ElementItemReferenceSingle<USFinding> USFinding { get ; }                                                                                 // BuildElementItemReference.cs:55
+		TElementItemReferenceSingle<USFinding> USFinding { get ; }                                                                                 // BuildElementItemReference.cs:55
 		//- Properties
 
 		//+ Methods

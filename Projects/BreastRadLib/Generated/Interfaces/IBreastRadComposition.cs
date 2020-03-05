@@ -21,27 +21,27 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Report
 		/// </summary>
-		ElementItemSectionSingle<BreastRadReport> Report { get ; }                                                                                // BuildElementItemSection.cs:67
+		TElementItemSectionSingle<BreastRadReport> Report { get ; }                                                                                // BuildElementItemSection.cs:67
 		/// <summary>
 		/// Access Impressions
 		/// </summary>
-		ElementItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; }                                                                  // BuildElementItemSection.cs:67
+		TElementItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; }                                                                  // BuildElementItemSection.cs:67
 		/// <summary>
 		/// Access FindingsRightBreast
 		/// </summary>
-		ElementItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; }                                                        // BuildElementItemSection.cs:67
+		TElementItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; }                                                        // BuildElementItemSection.cs:67
 		/// <summary>
 		/// Access FindingsLeftBreast
 		/// </summary>
-		ElementItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; }                                                          // BuildElementItemSection.cs:67
+		TElementItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; }                                                          // BuildElementItemSection.cs:67
 		/// <summary>
 		/// Access RelatedResources
 		/// </summary>
-		ElementItemSectionMultiple<ResourceBase> RelatedResources { get ; }                                                                       // BuildElementItemSection.cs:67
+		TElementItemSectionMultiple<ResourceBase> RelatedResources { get ; }                                                                       // BuildElementItemSection.cs:67
 		/// <summary>
 		/// Access Recommendations
 		/// </summary>
-		ElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; }                    // BuildElementItemSection.cs:67
+		TElementItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; }                    // BuildElementItemSection.cs:67
 		//- Properties
 
 		//+ Methods

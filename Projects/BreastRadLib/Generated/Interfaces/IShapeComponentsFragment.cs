@@ -21,19 +21,19 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Orientation
 		/// </summary>
-		ElementItemComponentSingle<CodeableConcept> Orientation { get ; }                                                                         // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<CodeableConcept> Orientation { get ; }                                                                         // BuildElementItemComponent.cs:66
 		/// <summary>
 		/// Access Shape
 		/// </summary>
-		ElementItemComponentSingle<CodeableConcept> Shape { get ; }                                                                               // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<CodeableConcept> Shape { get ; }                                                                               // BuildElementItemComponent.cs:66
 		/// <summary>
 		/// Access Margin
 		/// </summary>
-		ElementItemComponentSingle<CodeableConcept> Margin { get ; }                                                                              // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<CodeableConcept> Margin { get ; }                                                                              // BuildElementItemComponent.cs:66
 		/// <summary>
 		/// Access MgDensity
 		/// </summary>
-		ElementItemComponentSingle<CodeableConcept> MgDensity { get ; }                                                                           // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<CodeableConcept> MgDensity { get ; }                                                                           // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

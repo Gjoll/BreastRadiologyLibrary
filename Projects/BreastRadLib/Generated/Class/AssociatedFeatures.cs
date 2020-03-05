@@ -29,17 +29,17 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		public ElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; protected set; }   // BuildElementItemReference.cs:63
+		public TElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; protected set; }   // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access MGAbnormalityCalcification
 		/// </summary>
-		public ElementItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; protected set; }                       // BuildElementItemReference.cs:63
+		public TElementItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; protected set; }                       // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access ObservedFeature
 		/// </summary>
-		public ElementItemReferenceMultiple<ObservedFeature> ObservedFeature { get ; protected set; }                                             // BuildElementItemReference.cs:63
+		public TElementItemReferenceMultiple<ObservedFeature> ObservedFeature { get ; protected set; }                                             // BuildElementItemReference.cs:63
 		//- Properties
 
 		/// <summary>
@@ -83,9 +83,9 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");                                         // DefineBase.cs:219
-			this.MGAbnormalityArchitecturalDistortion = new ElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion>("MGAbnormalityArchitecturalDistortion", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");// BuildElementItemReference.cs:48
-			this.MGAbnormalityCalcification = new ElementItemReferenceMultiple<MGAbnormalityCalcification>("MGAbnormalityCalcification", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");// BuildElementItemReference.cs:48
-			this.ObservedFeature = new ElementItemReferenceMultiple<ObservedFeature>("ObservedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");// BuildElementItemReference.cs:48
+			this.MGAbnormalityArchitecturalDistortion = new TElementItemReferenceMultiple<MGAbnormalityArchitecturalDistortion>("MGAbnormalityArchitecturalDistortion", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");// BuildElementItemReference.cs:48
+			this.MGAbnormalityCalcification = new TElementItemReferenceMultiple<MGAbnormalityCalcification>("MGAbnormalityCalcification", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");// BuildElementItemReference.cs:48
+			this.ObservedFeature = new TElementItemReferenceMultiple<ObservedFeature>("ObservedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");// BuildElementItemReference.cs:48
 			//- Constructor
 		}
 

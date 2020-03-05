@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access ObsCount
 		/// </summary>
-		ElementItemComponentSingle<Quantity, Range> ObsCount { get ; }                                                                            // BuildElementItemComponent.cs:66
+		TElementItemComponentSingle<Quantity, Range> ObsCount { get ; }                                                                            // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

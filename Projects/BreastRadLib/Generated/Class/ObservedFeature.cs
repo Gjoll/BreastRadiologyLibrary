@@ -33,12 +33,12 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access ObsCount
 		/// </summary>
-		public ElementItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access FeatureType
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> FeatureType { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
+		public TElementItemComponentSingle<CodeableConcept> FeatureType { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
 		//- Properties
 
 		/// <summary>
@@ -83,8 +83,8 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:219
 			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
-			this.ObsCount = new ElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
-			this.FeatureType = new ElementItemComponentSingle<CodeableConcept>("FeatureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:59
+			this.ObsCount = new TElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
+			this.FeatureType = new TElementItemComponentSingle<CodeableConcept>("FeatureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 

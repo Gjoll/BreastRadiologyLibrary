@@ -19,20 +19,20 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	/// </summary>
 	public class BreastBodyLocationExtensionItem : IComplexExtensionItem                                                                       // BuildElementItemExtension.cs:327
 	{                                                                                                                                          // BuildElementItemExtension.cs:328
-	    ElementItemExtensionSingle<CodeableConcept> Quadrant;                                                                                  // BuildElementItemExtension.cs:484
-	    ElementItemExtensionMultiple<CodeableConcept> Region;                                                                                  // BuildElementItemExtension.cs:484
-	    ElementItemExtensionSingle<CodeableConcept> ClockDirection;                                                                            // BuildElementItemExtension.cs:484
-	    ElementItemExtensionSingle<CodeableConcept> Depth;                                                                                     // BuildElementItemExtension.cs:484
+	    TElementItemExtensionSingle<CodeableConcept> Quadrant;                                                                                  // BuildElementItemExtension.cs:484
+	    TElementItemExtensionMultiple<CodeableConcept> Region;                                                                                  // BuildElementItemExtension.cs:484
+	    TElementItemExtensionSingle<CodeableConcept> ClockDirection;                                                                            // BuildElementItemExtension.cs:484
+	    TElementItemExtensionSingle<CodeableConcept> Depth;                                                                                     // BuildElementItemExtension.cs:484
 	                                                                                                                                           // BuildElementItemExtension.cs:330
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
 	    public BreastBodyLocationExtensionItem()                                                                                               // BuildElementItemExtension.cs:334
 	    {                                                                                                                                      // BuildElementItemExtension.cs:335
-	        this.Quadrant = new ElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "quadrant");                                 // BuildElementItemExtension.cs:487
-	        this.Region = new ElementItemExtensionMultiple<CodeableConcept>("propertyName", 0, -1, "region");                                  // BuildElementItemExtension.cs:487
-	        this.ClockDirection = new ElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "clockDirection");                     // BuildElementItemExtension.cs:487
-	        this.Depth = new ElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "depth");                                       // BuildElementItemExtension.cs:487
+	        this.Quadrant = new TElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "quadrant");                                 // BuildElementItemExtension.cs:487
+	        this.Region = new TElementItemExtensionMultiple<CodeableConcept>("propertyName", 0, -1, "region");                                  // BuildElementItemExtension.cs:487
+	        this.ClockDirection = new TElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "clockDirection");                     // BuildElementItemExtension.cs:487
+	        this.Depth = new TElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "depth");                                       // BuildElementItemExtension.cs:487
 	    }                                                                                                                                      // BuildElementItemExtension.cs:337
 	                                                                                                                                           // BuildElementItemExtension.cs:338
 	    /// <summary>

@@ -45,7 +45,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference single accessors
     /// </summary>
-    public class ElementItemExtensionSingle<BaseType> : ElementItemSingle<BaseType>, IElementExtensionItem
+    public class TElementItemExtensionSingle<BaseType> : TElementItemSingle<BaseType>, IElementExtensionItem
             where BaseType : Element, new()
     {
         /// <summary>
@@ -74,7 +74,7 @@ namespace BreastRadLib
             return this.Value;
         }
 
-        public ElementItemExtensionSingle(String listName,
+        public TElementItemExtensionSingle(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
@@ -100,7 +100,7 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class ElementItemExtensionMultiple<BaseType> : ElementItemMultiple<BaseType>, IElementExtensionItem
+    public class TElementItemExtensionMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementExtensionItem
             where BaseType : Element, new()
     {
         public String ExtensionUrl { get; }
@@ -116,7 +116,7 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public ElementItemExtensionMultiple(String listName,
+        public TElementItemExtensionMultiple(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
@@ -148,8 +148,8 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class ElementItemExtensionComplexSingle<BaseType> : 
-        ElementItemSingle<BaseType>, 
+    public class TElementItemExtensionComplexSingle<BaseType> : 
+        TElementItemSingle<BaseType>, 
         IComplexExtension
         where BaseType : IComplexExtensionItem, new()
     {
@@ -179,7 +179,7 @@ namespace BreastRadLib
             return this.Value;
         }
 
-        public ElementItemExtensionComplexSingle(String listName,
+        public TElementItemExtensionComplexSingle(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
@@ -206,8 +206,8 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference multiple accessors
     /// </summary>
-    public class ElementItemExtensionComplexMultiple<BaseType> : 
-        ElementItemMultiple<BaseType>, 
+    public class TElementItemExtensionComplexMultiple<BaseType> : 
+        TElementItemMultiple<BaseType>, 
         IComplexExtension
         where BaseType : IComplexExtensionItem, new()
     {
@@ -224,7 +224,7 @@ namespace BreastRadLib
             return retVal;
         }
 
-        public ElementItemExtensionComplexMultiple(String listName,
+        public TElementItemExtensionComplexMultiple(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
