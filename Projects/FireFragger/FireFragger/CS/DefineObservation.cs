@@ -26,7 +26,7 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
                 return;
-            BuildElementItemComponent bml = new BuildElementItemComponent(this, 
+            BuildItemComponent bml = new BuildItemComponent(this, 
                 this.fragBase.CodeBlocks, 
                 "Component",
                 componentNode);
@@ -37,7 +37,7 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
                 return;
-            BuildElementItemReference bcr = new BuildElementItemReference(this,
+            BuildItemReference bcr = new BuildItemReference(this,
                 this.fragBase.CodeBlocks, 
                 "HasMembers", 
                 hasMemberNode);

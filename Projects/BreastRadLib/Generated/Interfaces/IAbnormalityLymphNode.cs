@@ -34,7 +34,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access LymphNodeType
 		/// </summary>
-		TElementItemComponentSingle<CodeableConcept> LymphNodeType { get ; }                                                                       // BuildElementItemComponent.cs:66
+		TItemComponentSingle<CodeableConcept> LymphNodeType { get ; }                                                                       // BuildItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

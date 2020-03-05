@@ -20,11 +20,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access ObsDistribution
 		/// </summary>
-		TElementItemComponentMultiple<CodeableConcept> ObsDistribution { get ; }                                                                   // BuildElementItemComponent.cs:66
+		TItemComponentMultiple<CodeableConcept> ObsDistribution { get ; }                                                                   // BuildItemComponent.cs:66
 		/// <summary>
 		/// Access ObsDistRegionSize
 		/// </summary>
-		TElementItemComponentMultiple<Quantity, Range> ObsDistRegionSize { get ; }                                                                 // BuildElementItemComponent.cs:66
+		TItemComponentMultiple<Quantity, Range> ObsDistRegionSize { get ; }                                                                 // BuildItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

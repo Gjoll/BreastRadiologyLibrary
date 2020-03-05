@@ -35,7 +35,7 @@ namespace BreastRadLib
             this.Resource.HasMember.Clear();
         }
 
-        protected void WriteHasMembers(IElementItemReference hasMemberList)
+        protected void WriteHasMembers(IItemReference hasMemberList)
         {
             foreach (ResourceBase member in hasMemberList.GetElements())
                 this.Resource.HasMember.Add(new ResourceReference
@@ -44,7 +44,7 @@ namespace BreastRadLib
                 });
         }
 
-        protected void ReadHasMembers(IElementItemReference hasMemberList)
+        protected void ReadHasMembers(IItemReference hasMemberList)
         {
             List<ResourceBase> items = new List<ResourceBase>();
             foreach (ResourceReference resRef in this.Resource.HasMember)
@@ -73,7 +73,7 @@ namespace BreastRadLib
             this.Resource.Subject = this.Doc.Subject;
         }
 
-        protected void WriteComponent(IElementItemComponent componentList)
+        protected void WriteComponent(IItemComponent componentList)
         {
             foreach (Element baseType in componentList.GetElements())
             {
@@ -86,7 +86,7 @@ namespace BreastRadLib
             }
         }
 
-        protected void ReadComponent(IElementItemComponent componentList)
+        protected void ReadComponent(IItemComponent componentList)
         {
             List<Element> items = new List<Element>();
 

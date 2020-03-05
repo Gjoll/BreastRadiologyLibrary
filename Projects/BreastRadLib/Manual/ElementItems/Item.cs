@@ -7,9 +7,9 @@ using System.Text;
 namespace BreastRadLib
 {
     /// <summary>
-    /// Interface for implementing ElementItem classes.
+    /// Interface for implementing Item classes.
     /// </summary>
-    public interface IElementItem
+    public interface IItem
     {
         String listName { get; }
         Int32 Count { get; }
@@ -20,7 +20,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all Element Items.
     /// </summary>
-    public abstract class ElementItem : IElementItem
+    public abstract class Item : IItem
     {
         public String listName { get; }
 
@@ -41,7 +41,7 @@ namespace BreastRadLib
         /// Constructor.
         /// </summary>
         /// <param name="listName"></param>
-        protected ElementItem(String listName,
+        protected Item(String listName,
             Int32 min,
             Int32 max)
         {
@@ -57,7 +57,7 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all class member single item class's
     /// </summary>
-    public class TElementItemSingle<BaseType> : ElementItem
+    public class TItemSingle<TBase> : Item
     {
         /// <summary>
         /// Count
@@ -67,12 +67,12 @@ namespace BreastRadLib
         /// <summary>
         /// Access value.
         /// </summary>
-        protected BaseType Value { get; set; }
+        protected TBase Value { get; set; }
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        protected TElementItemSingle(String listName,
+        protected TItemSingle(String listName,
             Int32 min,
             Int32 max) : base(listName, min, max)
         {
@@ -102,11 +102,11 @@ namespace BreastRadLib
 
 
     /// <summary>
-    /// Base class for all ElementItem multiple member clases
+    /// Base class for all Item multiple member clases
     /// </summary>
-    public class TElementItemMultiple<BaseType> : ElementItem
+    public class TItemMultiple<TBase> : Item
     {
-        protected List<BaseType> items = new List<BaseType>();
+        protected List<TBase> items = new List<TBase>();
 
         /// <summary>
         /// Count
@@ -116,7 +116,7 @@ namespace BreastRadLib
         /// <summary>
         /// Constructor.
         /// </summary>
-        protected TElementItemMultiple(String listName,
+        protected TItemMultiple(String listName,
             Int32 min,
             Int32 max) : base(listName, min, max)
         {

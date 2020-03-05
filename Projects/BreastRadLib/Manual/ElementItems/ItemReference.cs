@@ -10,9 +10,9 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
     /// <summary>
-    /// Interface for implementing ElementItemReference classes.
+    /// Interface for implementing ItemReference classes.
     /// </summary>
-    public interface IElementItemReference
+    public interface IItemReference
     {
         String ProfileUrl { get; }
         IEnumerable<ResourceBase> GetElements();
@@ -22,19 +22,19 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference single accessors
     /// </summary>
-    public class TElementItemReferenceSingle<BaseType> : TElementItemSingle<BaseType>, IElementItemReference
-            where BaseType : ResourceBase, new()
+    public class TItemReferenceSingle<TBase> : TItemSingle<TBase>, IItemReference
+            where TBase : ResourceBase, new()
     {
         /// <summary>
         /// Get value.
         /// </summary>
         /// <returns></returns>
-        public BaseType Get() => this.Value;
+        public TBase Get() => this.Value;
 
         /// <summary>
         /// Set value
         /// </summary>
-        public void Set(BaseType value) => this.Value = value;
+        public void Set(TBase value) => this.Value = value;
 
         BreastRadiologyDocument doc;
         public String ProfileUrl { get; }
@@ -42,18 +42,18 @@ namespace BreastRadLib
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        public BaseType Create()
+        public TBase Create()
         {
             if (this.Value == null)
             {
-                BaseType item = new BaseType();
+                TBase item = new TBase();
                 item.Init(this.doc);
                 this.Value = item;
             }
             return this.Value;
         }
 
-        public TElementItemReferenceSingle(String listName,
+        public TItemReferenceSingle(String listName,
             Int32 min,
             Int32 max,
             BreastRadiologyDocument doc,
@@ -73,7 +73,7 @@ namespace BreastRadLib
             switch (items.Count())
             {
                 case 0: break;
-                case 1: this.Value = (BaseType)items.First(); break;
+                case 1: this.Value = (TBase)items.First(); break;
                 default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
             }
         }
@@ -82,25 +82,25 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference multiple accessors
     /// </summary>
-    public class TElementItemReferenceMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementItemReference
-            where BaseType : ResourceBase, new()
+    public class TItemReferenceMultiple<TBase> : TItemMultiple<TBase>, IItemReference
+            where TBase : ResourceBase, new()
     {
         BreastRadiologyDocument doc;
         public String ProfileUrl { get; }
 
-        public IEnumerable<BaseType> Items => this.items;
+        public IEnumerable<TBase> Items => this.items;
 
-        public BaseType At(Int32 i) => this.items[i];
+        public TBase At(Int32 i) => this.items[i];
 
-        public BaseType Append()
+        public TBase Append()
         {
-            BaseType retVal = new BaseType();
+            TBase retVal = new TBase();
             retVal.Init(this.doc);
             this.items.Add(retVal);
             return retVal;
         }
 
-        public TElementItemReferenceMultiple(String listName,
+        public TItemReferenceMultiple(String listName,
             Int32 min,
             Int32 max,
             BreastRadiologyDocument doc,
@@ -119,7 +119,7 @@ namespace BreastRadLib
         public void SetElements(IEnumerable<ResourceBase> items)
         {
             foreach (var item in items)
-                this.items.Add((BaseType) item);
+                this.items.Add((TBase) item);
         }
     }
 }

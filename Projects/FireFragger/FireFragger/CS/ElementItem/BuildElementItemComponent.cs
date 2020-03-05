@@ -12,12 +12,12 @@ namespace FireFragger.CS
     /// Build the class that implements a list of Components, such as
     /// Observation.Component
     /// </summary>
-    internal class BuildElementItemComponent : BuildMemberListBase
+    internal class BuildItemComponent : BuildMemberListBase
     {
         protected ElementTreeNode memberNode;
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
         String suffix;
-        public BuildElementItemComponent(DefineBase defineBase,
+        public BuildItemComponent(DefineBase defineBase,
             ClassCodeBlocks fragBase,
             String type,
             ElementTreeNode memberNode) : base(defineBase, fragBase, type)
@@ -48,11 +48,11 @@ namespace FireFragger.CS
             String propertyClass;
             if (max == 1)
             {
-                propertyClass = $"ElementItemComponentSingle<{propertyTypes}>";
+                propertyClass = $"ItemComponentSingle<{propertyTypes}>";
             }
             else
             {
-                propertyClass = $"ElementItemComponentMultiple<{propertyTypes}>";
+                propertyClass = $"ItemComponentMultiple<{propertyTypes}>";
             }
 
             this.codeBlocks.ClassConstructor

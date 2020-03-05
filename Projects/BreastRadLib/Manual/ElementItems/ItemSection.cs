@@ -10,9 +10,9 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
     /// <summary>
-    /// Interface for implementing ElementItemSection classes.
+    /// Interface for implementing ItemSection classes.
     /// </summary>
-    public interface IElementItemSection : IElementItem
+    public interface IItemSection : IItem
     {
         /// <summary>
         /// Section Title
@@ -30,19 +30,19 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class TElementItemSectionSingle<BaseType> : TElementItemSingle<BaseType>, IElementItemSection
-            where BaseType : ResourceBase, new()
+    public class TItemSectionSingle<TBase> : TItemSingle<TBase>, IItemSection
+            where TBase : ResourceBase, new()
     {
         /// <summary>
         /// Get value.
         /// </summary>
         /// <returns></returns>
-        public BaseType Get() => this.Value;
+        public TBase Get() => this.Value;
 
         /// <summary>
         /// Set value
         /// </summary>
-        public void Set(BaseType value) => this.Value = value;
+        public void Set(TBase value) => this.Value = value;
 
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace BreastRadLib
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public TElementItemSectionSingle(String listName,
+        public TItemSectionSingle(String listName,
             Int32 min,
             Int32 max,
             String title,
@@ -68,11 +68,11 @@ namespace BreastRadLib
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        public BaseType Create(BreastRadiologyDocument doc)
+        public TBase Create(BreastRadiologyDocument doc)
         {
             if (this.Value == null)
             {
-                BaseType item = new BaseType();
+                TBase item = new TBase();
                 item.Init(doc);
                 this.Value = item;
             }
@@ -90,7 +90,7 @@ namespace BreastRadLib
             switch (items.Count())
             {
                 case 0: break;
-                case 1: this.Value = (BaseType)items.First(); break;
+                case 1: this.Value = (TBase)items.First(); break;
                 default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
             }
         }
@@ -99,8 +99,8 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedSection multiple accessors
     /// </summary>
-    public class TElementItemSectionMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementItemSection
-            where BaseType : ResourceBase, new()
+    public class TItemSectionMultiple<TBase> : TItemMultiple<TBase>, IItemSection
+            where TBase : ResourceBase, new()
     {
         /// <summary>
         /// Section Title
@@ -112,28 +112,28 @@ namespace BreastRadLib
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public IEnumerable<BaseType> Items => this.items;
+        public IEnumerable<TBase> Items => this.items;
 
-        public BaseType At(Int32 i) => this.items[i];
+        public TBase At(Int32 i) => this.items[i];
 
         /// <summary>
         /// Create item, append it to list, and return it.
         /// </summary>
-        public BaseType Create(BreastRadiologyDocument doc)
+        public TBase Create(BreastRadiologyDocument doc)
         {
-            BaseType item = new BaseType();
+            TBase item = new TBase();
             item.Init(doc);
             this.Append(item);
             return item;
         }
 
-        public BaseType Append(BaseType item)
+        public TBase Append(TBase item)
         {
             this.items.Add(item);
             return item;
         }
 
-        public TElementItemSectionMultiple(String listName,
+        public TItemSectionMultiple(String listName,
             Int32 min,
             Int32 max,
             String title,
@@ -152,17 +152,17 @@ namespace BreastRadLib
         public void SetElements(IEnumerable<ResourceBase> items)
         {
             foreach (var item in items)
-                this.items.Add((BaseType)item);
+                this.items.Add((TBase)item);
         }
     }
 
     /// <summary>
     /// Base class for all CodedSection multiple accessors
     /// </summary>
-    public class TElementItemSectionMultiple<BaseType1, BaseType2, BaseType3> : TElementItemMultiple<ResourceBase>, IElementItemSection
-            where BaseType1 : ResourceBase, new()
-            where BaseType2 : ResourceBase, new()
-            where BaseType3 : ResourceBase, new()
+    public class TItemSectionMultiple<TBase1, TBase2, TBase3> : TItemMultiple<ResourceBase>, IItemSection
+            where TBase1 : ResourceBase, new()
+            where TBase2 : ResourceBase, new()
+            where TBase3 : ResourceBase, new()
     {
         /// <summary>
         /// Section Title
@@ -176,25 +176,25 @@ namespace BreastRadLib
 
         public ResourceBase At(Int32 i) => this.items[i];
 
-        public BaseType1 Append(BaseType1 item)
+        public TBase1 Append(TBase1 item)
         {
             this.items.Add(item);
             return item;
         }
 
-        public BaseType2 Append(BaseType2 item)
+        public TBase2 Append(TBase2 item)
         {
             this.items.Add(item);
             return item;
         }
 
-        public BaseType3 Append(BaseType3 item)
+        public TBase3 Append(TBase3 item)
         {
             this.items.Add(item);
             return item;
         }
 
-        public TElementItemSectionMultiple(String listName,
+        public TItemSectionMultiple(String listName,
             Int32 min,
             Int32 max,
             String title,

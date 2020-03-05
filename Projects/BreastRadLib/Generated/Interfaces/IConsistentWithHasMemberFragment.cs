@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access ConsistentWith
 		/// </summary>
-		TElementItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; }                                                                     // BuildElementItemReference.cs:55
+		TItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; }                                                                     // BuildItemReference.cs:55
 		//- Properties
 
 		//+ Methods

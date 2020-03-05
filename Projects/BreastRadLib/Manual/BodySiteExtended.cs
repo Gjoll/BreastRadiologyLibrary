@@ -9,7 +9,7 @@ namespace BreastRadLib
     public class BodySiteExtended 
     {
         public CodeableConcept BodySite { get; set; }
-        TElementItemExtensionComplexSingle<BreastBodyLocationExtensionItem> BreastBodyLocation;
+        TItemExtensionComplexSingle<BreastBodyLocationExtensionItem> BreastBodyLocation;
 
         /// <summary>
         /// Constructor
@@ -17,7 +17,7 @@ namespace BreastRadLib
         public BodySiteExtended(Int32 min, Int32 max)                                                                     
         {
             this.BreastBodyLocation = 
-                new TElementItemExtensionComplexSingle<BreastBodyLocationExtensionItem>("BreastBodyLocation",
+                new TItemExtensionComplexSingle<BreastBodyLocationExtensionItem>("BreastBodyLocation",
                     min, 
                     max,
                     "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");

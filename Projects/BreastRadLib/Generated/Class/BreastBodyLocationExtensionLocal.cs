@@ -17,35 +17,35 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	/// <summary>
 	/// Class that implements the 'BreastBodyLocation' complex extension class.
 	/// </summary>
-	public class BreastBodyLocationExtensionItem : IComplexExtensionItem                                                                       // BuildElementItemExtension.cs:327
-	{                                                                                                                                          // BuildElementItemExtension.cs:328
-	    TElementItemExtensionSingle<CodeableConcept> Quadrant;                                                                                  // BuildElementItemExtension.cs:484
-	    TElementItemExtensionMultiple<CodeableConcept> Region;                                                                                  // BuildElementItemExtension.cs:484
-	    TElementItemExtensionSingle<CodeableConcept> ClockDirection;                                                                            // BuildElementItemExtension.cs:484
-	    TElementItemExtensionSingle<CodeableConcept> Depth;                                                                                     // BuildElementItemExtension.cs:484
-	                                                                                                                                           // BuildElementItemExtension.cs:330
+	public class BreastBodyLocationExtensionItem : IComplexExtensionItem                                                                       // BuildItemExtension.cs:327
+	{                                                                                                                                          // BuildItemExtension.cs:328
+	    TItemExtensionSingle<CodeableConcept> Quadrant;                                                                                  // BuildItemExtension.cs:484
+	    TItemExtensionMultiple<CodeableConcept> Region;                                                                                  // BuildItemExtension.cs:484
+	    TItemExtensionSingle<CodeableConcept> ClockDirection;                                                                            // BuildItemExtension.cs:484
+	    TItemExtensionSingle<CodeableConcept> Depth;                                                                                     // BuildItemExtension.cs:484
+	                                                                                                                                           // BuildItemExtension.cs:330
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BreastBodyLocationExtensionItem()                                                                                               // BuildElementItemExtension.cs:334
-	    {                                                                                                                                      // BuildElementItemExtension.cs:335
-	        this.Quadrant = new TElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "quadrant");                                 // BuildElementItemExtension.cs:487
-	        this.Region = new TElementItemExtensionMultiple<CodeableConcept>("propertyName", 0, -1, "region");                                  // BuildElementItemExtension.cs:487
-	        this.ClockDirection = new TElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "clockDirection");                     // BuildElementItemExtension.cs:487
-	        this.Depth = new TElementItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "depth");                                       // BuildElementItemExtension.cs:487
-	    }                                                                                                                                      // BuildElementItemExtension.cs:337
-	                                                                                                                                           // BuildElementItemExtension.cs:338
+	    public BreastBodyLocationExtensionItem()                                                                                               // BuildItemExtension.cs:334
+	    {                                                                                                                                      // BuildItemExtension.cs:335
+	        this.Quadrant = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "quadrant");                                 // BuildItemExtension.cs:487
+	        this.Region = new TItemExtensionMultiple<CodeableConcept>("propertyName", 0, -1, "region");                                  // BuildItemExtension.cs:487
+	        this.ClockDirection = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "clockDirection");                     // BuildItemExtension.cs:487
+	        this.Depth = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "depth");                                       // BuildItemExtension.cs:487
+	    }                                                                                                                                      // BuildItemExtension.cs:337
+	                                                                                                                                           // BuildItemExtension.cs:338
 	    /// <summary>
 	    /// Children
 	    /// </summary>
-	    public IEnumerable<IExtensionItem> Items()                                                                                             // BuildElementItemExtension.cs:342
-	    {                                                                                                                                      // BuildElementItemExtension.cs:343
-	        yield return this.Quadrant;                                                                                                        // BuildElementItemExtension.cs:490
-	        yield return this.Region;                                                                                                          // BuildElementItemExtension.cs:490
-	        yield return this.ClockDirection;                                                                                                  // BuildElementItemExtension.cs:490
-	        yield return this.Depth;                                                                                                           // BuildElementItemExtension.cs:490
-	    }                                                                                                                                      // BuildElementItemExtension.cs:345
-	                                                                                                                                           // BuildElementItemExtension.cs:346
-	}                                                                                                                                          // BuildElementItemExtension.cs:347
+	    public IEnumerable<IExtensionItem> Items()                                                                                             // BuildItemExtension.cs:342
+	    {                                                                                                                                      // BuildItemExtension.cs:343
+	        yield return this.Quadrant;                                                                                                        // BuildItemExtension.cs:490
+	        yield return this.Region;                                                                                                          // BuildItemExtension.cs:490
+	        yield return this.ClockDirection;                                                                                                  // BuildItemExtension.cs:490
+	        yield return this.Depth;                                                                                                           // BuildItemExtension.cs:490
+	    }                                                                                                                                      // BuildItemExtension.cs:345
+	                                                                                                                                           // BuildItemExtension.cs:346
+	}                                                                                                                                          // BuildItemExtension.cs:347
 	//- LocalClassDefs
 }

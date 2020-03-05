@@ -42,7 +42,7 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode hasMemberNode) == false)
                 return;
-            BuildElementItemSection bcr = new BuildElementItemSection(this,
+            BuildItemSection bcr = new BuildItemSection(this,
                 this.fragBase.CodeBlocks,
                 "Section",
                 hasMemberNode);

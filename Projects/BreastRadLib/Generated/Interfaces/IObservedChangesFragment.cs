@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access ObsChanges
 		/// </summary>
-		TElementItemComponentMultiple<CodeableConcept> ObsChanges { get ; }                                                                        // BuildElementItemComponent.cs:66
+		TItemComponentMultiple<CodeableConcept> ObsChanges { get ; }                                                                        // BuildItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

@@ -24,7 +24,7 @@ namespace BreastRadLib
     }
 
     /// <summary>
-    /// Interface for implementing ElementItemExtension classes.
+    /// Interface for implementing ItemExtension classes.
     /// </summary>
     public interface IElementExtensionItem : IExtensionItem
     {
@@ -33,7 +33,7 @@ namespace BreastRadLib
     }
 
     /// <summary>
-    /// Interface for implementing ElementItemExtension classes.
+    /// Interface for implementing ItemExtension classes.
     /// </summary>
     public interface IComplexExtension
     {
@@ -45,36 +45,36 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference single accessors
     /// </summary>
-    public class TElementItemExtensionSingle<BaseType> : TElementItemSingle<BaseType>, IElementExtensionItem
-            where BaseType : Element, new()
+    public class TItemExtensionSingle<TBase> : TItemSingle<TBase>, IElementExtensionItem
+            where TBase : Element, new()
     {
         /// <summary>
         /// Get value.
         /// </summary>
         /// <returns></returns>
-        public BaseType Get() => this.Value;
+        public TBase Get() => this.Value;
 
         /// <summary>
         /// Set value
         /// </summary>
-        public void Set(BaseType value) => this.Value = value;
+        public void Set(TBase value) => this.Value = value;
 
         public String ExtensionUrl { get; }
 
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        protected BaseType Create()
+        protected TBase Create()
         {
             if (this.Value == null)
             {
-                BaseType item = new BaseType();
+                TBase item = new TBase();
                 this.Value = item;
             }
             return this.Value;
         }
 
-        public TElementItemExtensionSingle(String listName,
+        public TItemExtensionSingle(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
@@ -92,7 +92,7 @@ namespace BreastRadLib
             switch (items.Count())
             {
                 case 0: break;
-                case 1: this.Value = (BaseType)items.First(); break;
+                case 1: this.Value = (TBase)items.First(); break;
                 default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
             }
         }
@@ -100,23 +100,23 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class TElementItemExtensionMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementExtensionItem
-            where BaseType : Element, new()
+    public class TItemExtensionMultiple<TBase> : TItemMultiple<TBase>, IElementExtensionItem
+            where TBase : Element, new()
     {
         public String ExtensionUrl { get; }
 
-        public IEnumerable<BaseType> Items => this.items;
+        public IEnumerable<TBase> Items => this.items;
 
-        public BaseType At(Int32 i) => this.items[i];
+        public TBase At(Int32 i) => this.items[i];
 
-        public BaseType Append()
+        public TBase Append()
         {
-            BaseType retVal = new BaseType();
+            TBase retVal = new TBase();
             this.items.Add(retVal);
             return retVal;
         }
 
-        public TElementItemExtensionMultiple(String listName,
+        public TItemExtensionMultiple(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
@@ -133,7 +133,7 @@ namespace BreastRadLib
         public void SetElements(IEnumerable<Element> items)
         {
             foreach (var item in items)
-                this.items.Add((BaseType)item);
+                this.items.Add((TBase)item);
         }
     }
 
@@ -148,38 +148,38 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class TElementItemExtensionComplexSingle<BaseType> : 
-        TElementItemSingle<BaseType>, 
+    public class TItemExtensionComplexSingle<TBase> : 
+        TItemSingle<TBase>, 
         IComplexExtension
-        where BaseType : IComplexExtensionItem, new()
+        where TBase : IComplexExtensionItem, new()
     {
         /// <summary>
         /// Get value.
         /// </summary>
         /// <returns></returns>
-        public BaseType Get() => this.Value;
+        public TBase Get() => this.Value;
 
         /// <summary>
         /// Set value
         /// </summary>
-        public void Set(BaseType value) => this.Value = value;
+        public void Set(TBase value) => this.Value = value;
 
         public String ExtensionUrl { get; }
 
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        protected BaseType Create()
+        protected TBase Create()
         {
             if (this.Value == null)
             {
-                BaseType item = new BaseType();
+                TBase item = new TBase();
                 this.Value = item;
             }
             return this.Value;
         }
 
-        public TElementItemExtensionComplexSingle(String listName,
+        public TItemExtensionComplexSingle(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
@@ -197,7 +197,7 @@ namespace BreastRadLib
             switch (items.Count())
             {
                 case 0: break;
-                case 1: this.Value = (BaseType)items.First(); break;
+                case 1: this.Value = (TBase)items.First(); break;
                 default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
             }
         }
@@ -206,25 +206,25 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedReference multiple accessors
     /// </summary>
-    public class TElementItemExtensionComplexMultiple<BaseType> : 
-        TElementItemMultiple<BaseType>, 
+    public class TItemExtensionComplexMultiple<TBase> : 
+        TItemMultiple<TBase>, 
         IComplexExtension
-        where BaseType : IComplexExtensionItem, new()
+        where TBase : IComplexExtensionItem, new()
     {
         public String ExtensionUrl { get; }
 
-        public IEnumerable<BaseType> Items => this.items;
+        public IEnumerable<TBase> Items => this.items;
 
-        public BaseType At(Int32 i) => this.items[i];
+        public TBase At(Int32 i) => this.items[i];
 
-        public BaseType Append()
+        public TBase Append()
         {
-            BaseType retVal = new BaseType();
+            TBase retVal = new TBase();
             this.items.Add(retVal);
             return retVal;
         }
 
-        public TElementItemExtensionComplexMultiple(String listName,
+        public TItemExtensionComplexMultiple(String listName,
             Int32 min,
             Int32 max,
             String extensionUrl) : base(listName, min, max)
@@ -241,7 +241,7 @@ namespace BreastRadLib
         public void SetElements(IEnumerable<IComplexExtensionItem> items)
         {
             foreach (var item in items)
-                this.items.Add((BaseType)item);
+                this.items.Add((TBase)item);
         }
     }
 }

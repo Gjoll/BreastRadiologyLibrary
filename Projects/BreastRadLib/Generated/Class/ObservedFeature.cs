@@ -29,16 +29,16 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public BodySiteExtended BodySite { get; private set; }                                                                                    // DefineBase.cs:75
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildItemComponent.cs:70
 		/// <summary>
 		/// Access ObsCount
 		/// </summary>
-		public TElementItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildElementItemComponent.cs:74
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		public TItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildItemComponent.cs:74
+		                                                                                                                                          // BuildItemComponent.cs:70
 		/// <summary>
 		/// Access FeatureType
 		/// </summary>
-		public TElementItemComponentSingle<CodeableConcept> FeatureType { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<CodeableConcept> FeatureType { get ; protected set; }                                                   // BuildItemComponent.cs:74
 		//- Properties
 
 		/// <summary>
@@ -83,8 +83,8 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:219
 			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
-			this.ObsCount = new TElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
-			this.FeatureType = new TElementItemComponentSingle<CodeableConcept>("FeatureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:59
+			this.ObsCount = new TItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildItemComponent.cs:59
+			this.FeatureType = new TItemComponentSingle<CodeableConcept>("FeatureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildItemComponent.cs:59
 			//- Constructor
 		}
 
@@ -100,8 +100,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildElementItemComponent.cs:83
-			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildElementItemComponent.cs:83
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildItemComponent.cs:83
+			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildItemComponent.cs:83
 			//- ValidateCode
 			return retVal;
 		}
@@ -113,15 +113,15 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearHasMember();                                                                                                                   // BuildItemReference.cs:81
+			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
 			this.BodySite.Write();                                                                                                                   // DefineBase.cs:84
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.FeatureType);                                                                                                   // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildItemComponent.cs:77
+			this.WriteComponent(this.FeatureType);                                                                                                   // BuildItemComponent.cs:77
 			//- WriteCode
 		}
 
@@ -135,8 +135,8 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			this.BodySite.Read();                                                                                                                    // DefineBase.cs:81
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.FeatureType);                                                                                                    // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildItemComponent.cs:80
+			this.ReadComponent(this.FeatureType);                                                                                                    // BuildItemComponent.cs:80
 			//- ReadCode
 		}
 

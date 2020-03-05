@@ -12,12 +12,12 @@ namespace FireFragger.CS
     /// Build the class that implements a list of titled coded sections, such as
     /// Composition.section
     /// </summary>
-    internal class BuildElementItemSection : BuildMemberListBase
+    internal class BuildItemSection : BuildMemberListBase
     {
         protected ElementTreeNode memberNode;
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
         String suffix;
-        public BuildElementItemSection(DefineBase defineBase,
+        public BuildItemSection(DefineBase defineBase,
             ClassCodeBlocks fragBase,
             String type,
             ElementTreeNode memberNode) : base(defineBase, fragBase, type)
@@ -49,11 +49,11 @@ namespace FireFragger.CS
             String propertyClass;
             if (max == 1)
             {
-                propertyClass = $"ElementItemSectionSingle<{propertyTypes}>";
+                propertyClass = $"ItemSectionSingle<{propertyTypes}>";
             }
             else
             {
-                propertyClass = $"ElementItemSectionMultiple<{propertyTypes}>";
+                propertyClass = $"ItemSectionMultiple<{propertyTypes}>";
             }
 
             this.codeBlocks.ClassConstructor

@@ -12,12 +12,12 @@ namespace FireFragger.CS
     /// Build the class that implements a list of coded references, such as
     /// Observation.hasMember
     /// </summary>
-    internal class BuildElementItemReference : BuildMemberListBase
+    internal class BuildItemReference : BuildMemberListBase
     {
         protected ElementTreeNode memberNode;
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
         String suffix;
-        public BuildElementItemReference(DefineBase defineBase,
+        public BuildItemReference(DefineBase defineBase,
             ClassCodeBlocks fragBase,
             String type,
             ElementTreeNode memberNode) : base(defineBase, fragBase, type)
@@ -37,11 +37,11 @@ namespace FireFragger.CS
             String propertyClass;
             if (max == 1)
             {
-                propertyClass = $"ElementItemReferenceSingle<{propertyType}>";
+                propertyClass = $"ItemReferenceSingle<{propertyType}>";
             }
             else
             {
-                propertyClass = $"ElementItemReferenceMultiple<{propertyType}>";
+                propertyClass = $"ItemReferenceMultiple<{propertyType}>";
             }
 
             this.codeBlocks.ClassConstructor

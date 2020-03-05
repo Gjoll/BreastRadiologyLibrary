@@ -10,9 +10,9 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
     /// <summary>
-    /// Interface for implementing ElementItemComponent classes.
+    /// Interface for implementing ItemComponent classes.
     /// </summary>
-    public interface IElementItemComponent : IElementItem
+    public interface IItemComponent : IItem
     {
         /// <summary>
         /// Component coding
@@ -25,8 +25,8 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class TElementItemComponentSingle<BaseType> : TElementItemSingle<BaseType>, IElementItemComponent
-            where BaseType : Element, new()
+    public class TItemComponentSingle<TBase> : TItemSingle<TBase>, IItemComponent
+            where TBase : Element, new()
     {
         /// <summary>
         /// Component coding
@@ -37,14 +37,14 @@ namespace BreastRadLib
         /// Get value.
         /// </summary>
         /// <returns></returns>
-        public BaseType Get() => this.Value;
+        public TBase Get() => this.Value;
 
         /// <summary>
         /// Set value
         /// </summary>
-        public void Set(BaseType value) => this.Value = value;
+        public void Set(TBase value) => this.Value = value;
 
-        public TElementItemComponentSingle(String listName,
+        public TItemComponentSingle(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)
@@ -55,11 +55,11 @@ namespace BreastRadLib
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        public BaseType Create()
+        public TBase Create()
         {
             if (this.Value == null)
             {
-                BaseType item = new BaseType();
+                TBase item = new TBase();
                 this.Value = item;
             }
             return this.Value;
@@ -75,7 +75,7 @@ namespace BreastRadLib
             switch (items.Count())
             {
                 case 0: break;
-                case 1: this.Value = (BaseType)items.First(); break;
+                case 1: this.Value = (TBase)items.First(); break;
                 default: throw new Exception($"HasMember item {this.listName} can not be set to multiple items");
             }
         }
@@ -86,9 +86,9 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class TElementItemComponentSingle<BaseType1, BaseType2> : TElementItemSingle<Element>, IElementItemComponent
-        where BaseType1 : Element, new()
-        where BaseType2 : Element, new()
+    public class TItemComponentSingle<TBase1, TBase2> : TItemSingle<Element>, IItemComponent
+        where TBase1 : Element, new()
+        where TBase2 : Element, new()
     {
         /// <summary>
         /// Get value.
@@ -99,19 +99,19 @@ namespace BreastRadLib
         /// <summary>
         /// Set value
         /// </summary>
-        public void Set(BaseType1 value) => this.Value = value;
+        public void Set(TBase1 value) => this.Value = value;
 
         /// <summary>
         /// Set value
         /// </summary>
-        public void Set(BaseType2 value) => this.Value = value;
+        public void Set(TBase2 value) => this.Value = value;
 
         /// <summary>
         /// Component coding
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public TElementItemComponentSingle(String listName,
+        public TItemComponentSingle(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)
@@ -141,35 +141,35 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedComponent multiple accessors
     /// </summary>
-    public class TElementItemComponentMultiple<BaseType> : TElementItemMultiple<BaseType>, IElementItemComponent
-            where BaseType : Element, new()
+    public class TItemComponentMultiple<TBase> : TItemMultiple<TBase>, IItemComponent
+            where TBase : Element, new()
     {
         /// <summary>
         /// Component coding
         /// </summary>
         public CodeableConcept Code { get; }
 
-        public IEnumerable<BaseType> Items => this.items;
+        public IEnumerable<TBase> Items => this.items;
 
-        public BaseType At(Int32 i) => this.items[i];
+        public TBase At(Int32 i) => this.items[i];
 
         /// <summary>
         /// Create item, append it to list, and return it.
         /// </summary>
-        public BaseType Create()
+        public TBase Create()
         {
-            BaseType item = new BaseType();
+            TBase item = new TBase();
             this.Append(item);
             return item;
         }
 
-        public BaseType Append(BaseType item)
+        public TBase Append(TBase item)
         {
             this.items.Add(item);
             return item;
         }
 
-        public TElementItemComponentMultiple(String listName,
+        public TItemComponentMultiple(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)
@@ -186,7 +186,7 @@ namespace BreastRadLib
         public void SetElements(IEnumerable<Element> items)
         {
             foreach (var item in items)
-                this.items.Add((BaseType) item);
+                this.items.Add((TBase) item);
         }
     }
 
@@ -195,9 +195,9 @@ namespace BreastRadLib
     /// <summary>
     /// Base class for all CodedComponent multiple accessors
     /// </summary>
-    public class TElementItemComponentMultiple<BaseType1, BaseType2> : TElementItemMultiple<Element>, IElementItemComponent
-            where BaseType1 : Element, new()
-            where BaseType2 : Element, new()
+    public class TItemComponentMultiple<TBase1, TBase2> : TItemMultiple<Element>, IItemComponent
+            where TBase1 : Element, new()
+            where TBase2 : Element, new()
     {
         /// <summary>
         /// Component coding
@@ -208,19 +208,19 @@ namespace BreastRadLib
 
         public Element At(Int32 i) => this.items[i];
 
-        public BaseType1 Append(BaseType1 item)
+        public TBase1 Append(TBase1 item)
         {
             this.items.Add(item);
             return item;
         }
 
-        public BaseType2 Append(BaseType2 item)
+        public TBase2 Append(TBase2 item)
         {
             this.items.Add(item);
             return item;
         }
 
-        public TElementItemComponentMultiple(String listName,
+        public TItemComponentMultiple(String listName,
             Int32 min,
             Int32 max,
             CodeableConcept code) : base(listName, min, max)

@@ -11,11 +11,11 @@ namespace FireFragger.CS
     /// <summary>
     /// Build the class that implements a list of extension values
     /// </summary>
-    internal class BuildElementItemExtension : BuildMemberListBase
+    internal class BuildItemExtension : BuildMemberListBase
     {
         String extensionName = "?";
 
-        public BuildElementItemExtension(DefineBase defineBase,
+        public BuildItemExtension(DefineBase defineBase,
             ClassCodeBlocks codeBlocks) : base(defineBase, codeBlocks, "Extension")
         {
         }
@@ -313,10 +313,10 @@ namespace FireFragger.CS
             switch (max)
             {
                 case 1:
-                    extensionComplexBase = "ElementItemExtensionComplexSingle";
+                    extensionComplexBase = "ItemExtensionComplexSingle";
                     break;
                 default:
-                    extensionComplexBase = "ElementItemExtensionComplexMultiple";
+                    extensionComplexBase = "ItemExtensionComplexMultiple";
                     break;
             }
             String extensionName = className.Substring(0, className.Length - 9);
@@ -472,11 +472,11 @@ namespace FireFragger.CS
             switch (max)
             {
                 case 1:
-                    extensionClass = $"ElementItemExtensionSingle<{propertyType}>";
+                    extensionClass = $"ItemExtensionSingle<{propertyType}>";
                     break;
 
                 default:
-                    extensionClass = $"ElementItemExtensionMultiple<{propertyType}>";
+                    extensionClass = $"ItemExtensionMultiple<{propertyType}>";
                     break;
             }
 

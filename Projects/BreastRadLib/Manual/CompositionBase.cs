@@ -66,7 +66,7 @@ namespace BreastRadLib
             return null;
         }
 
-        protected void ReadSection(IElementItemSection section)
+        protected void ReadSection(IItemSection section)
         {
             List<ResourceBase> items = new List<ResourceBase>();
             Composition.SectionComponent sectionComponent = this.FindSection(section.Code);
@@ -91,7 +91,7 @@ namespace BreastRadLib
             section.SetElements(items);
         }
 
-        protected void WriteSection(IElementItemSection section)
+        protected void WriteSection(IItemSection section)
         {
             if (section.Count < section.Min)
                 throw new Exception($"Error writing Composition.section '{section.Title}'. Min cardinality sb {section.Min}, is {section.Count}");

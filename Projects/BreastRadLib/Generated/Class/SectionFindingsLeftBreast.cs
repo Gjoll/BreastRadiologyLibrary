@@ -24,26 +24,26 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, ISectionFindingsLeftBreast
 	{
 		//+ Properties
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		                                                                                                                                          // BuildItemReference.cs:59
 		/// <summary>
 		/// Access MGFinding
 		/// </summary>
-		public TElementItemReferenceSingle<MGFinding> MGFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceSingle<MGFinding> MGFinding { get ; protected set; }                                                           // BuildItemReference.cs:63
+		                                                                                                                                          // BuildItemReference.cs:59
 		/// <summary>
 		/// Access MRIFinding
 		/// </summary>
-		public TElementItemReferenceSingle<MRIFinding> MRIFinding { get ; protected set; }                                                         // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceSingle<MRIFinding> MRIFinding { get ; protected set; }                                                         // BuildItemReference.cs:63
+		                                                                                                                                          // BuildItemReference.cs:59
 		/// <summary>
 		/// Access NMFinding
 		/// </summary>
-		public TElementItemReferenceSingle<NMFinding> NMFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceSingle<NMFinding> NMFinding { get ; protected set; }                                                           // BuildItemReference.cs:63
+		                                                                                                                                          // BuildItemReference.cs:59
 		/// <summary>
 		/// Access USFinding
 		/// </summary>
-		public TElementItemReferenceSingle<USFinding> USFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
+		public TItemReferenceSingle<USFinding> USFinding { get ; protected set; }                                                           // BuildItemReference.cs:63
 		//- Properties
 
 		/// <summary>
@@ -88,10 +88,10 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:219
-			this.MGFinding = new TElementItemReferenceSingle<MGFinding>("MGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
-			this.MRIFinding = new TElementItemReferenceSingle<MRIFinding>("MRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
-			this.NMFinding = new TElementItemReferenceSingle<NMFinding>("NMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
-			this.USFinding = new TElementItemReferenceSingle<USFinding>("USFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:48
+			this.MGFinding = new TItemReferenceSingle<MGFinding>("MGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildItemReference.cs:48
+			this.MRIFinding = new TItemReferenceSingle<MRIFinding>("MRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildItemReference.cs:48
+			this.NMFinding = new TItemReferenceSingle<NMFinding>("NMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildItemReference.cs:48
+			this.USFinding = new TItemReferenceSingle<USFinding>("USFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildItemReference.cs:48
 			//- Constructor
 		}
 
@@ -107,10 +107,10 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemReference.cs:72
-			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildElementItemReference.cs:72
-			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemReference.cs:72
-			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemReference.cs:72
+			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildItemReference.cs:72
+			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildItemReference.cs:72
+			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildItemReference.cs:72
+			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildItemReference.cs:72
 			//- ValidateCode
 			return retVal;
 		}
@@ -122,13 +122,13 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
+			this.ClearHasMember();                                                                                                                   // BuildItemReference.cs:81
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMembers(this.MGFinding);                                                                                                    // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.MRIFinding);                                                                                                   // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.NMFinding);                                                                                                    // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.USFinding);                                                                                                    // BuildElementItemReference.cs:66
+			this.WriteHasMembers(this.MGFinding);                                                                                                    // BuildItemReference.cs:66
+			this.WriteHasMembers(this.MRIFinding);                                                                                                   // BuildItemReference.cs:66
+			this.WriteHasMembers(this.NMFinding);                                                                                                    // BuildItemReference.cs:66
+			this.WriteHasMembers(this.USFinding);                                                                                                    // BuildItemReference.cs:66
 			//- WriteCode
 		}
 
@@ -141,10 +141,10 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMembers(this.MGFinding);                                                                                                     // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.MRIFinding);                                                                                                    // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.NMFinding);                                                                                                     // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.USFinding);                                                                                                     // BuildElementItemReference.cs:69
+			this.ReadHasMembers(this.MGFinding);                                                                                                     // BuildItemReference.cs:69
+			this.ReadHasMembers(this.MRIFinding);                                                                                                    // BuildItemReference.cs:69
+			this.ReadHasMembers(this.NMFinding);                                                                                                     // BuildItemReference.cs:69
+			this.ReadHasMembers(this.USFinding);                                                                                                     // BuildItemReference.cs:69
 			//- ReadCode
 		}
 
