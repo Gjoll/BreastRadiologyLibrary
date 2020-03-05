@@ -26,7 +26,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access FeatureType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> FeatureType { get ; }                                                                         // BuildItemComponent.cs:66
+		TItemComponentSingle<CodeableConcept> FeatureType { get ; }                                                                               // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

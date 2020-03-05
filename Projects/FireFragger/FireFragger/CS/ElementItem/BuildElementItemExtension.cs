@@ -472,11 +472,11 @@ namespace FireFragger.CS
             switch (max)
             {
                 case 1:
-                    extensionClass = $"ItemExtensionSingle<{propertyType}>";
+                    extensionClass = $"TItemExtensionSingle<{propertyType}>";
                     break;
 
                 default:
-                    extensionClass = $"ItemExtensionMultiple<{propertyType}>";
+                    extensionClass = $"TItemExtensionMultiple<{propertyType}>";
                     break;
             }
 

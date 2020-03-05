@@ -48,11 +48,11 @@ namespace FireFragger.CS
             String propertyClass;
             if (max == 1)
             {
-                propertyClass = $"ItemComponentSingle<{propertyTypes}>";
+                propertyClass = $"TItemComponentSingle<{propertyTypes}>";
             }
             else
             {
-                propertyClass = $"ItemComponentMultiple<{propertyTypes}>";
+                propertyClass = $"TItemComponentMultiple<{propertyTypes}>";
             }
 
             this.codeBlocks.ClassConstructor

@@ -26,16 +26,16 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
-		                                                                                                                                          // BuildItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Value
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Value { get ; protected set; }                                                         // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Value { get ; protected set; }                                                               // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Qualifier
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> Qualifier { get ; protected set; }                                                   // BuildItemComponent.cs:74
+		public TItemComponentMultiple<CodeableConcept> Qualifier { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
 		//- Properties
 
 		/// <summary>
@@ -79,8 +79,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:219
-			this.Value = new TItemComponentSingle<CodeableConcept>("Value", 1, 1, FixedValue_ObservationComponentValueCode());                 // BuildItemComponent.cs:59
-			this.Qualifier = new TItemComponentMultiple<CodeableConcept>("Qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());  // BuildItemComponent.cs:59
+			this.Value = new TItemComponentSingle<CodeableConcept>("Value", 1, 1, FixedValue_ObservationComponentValueCode());                       // BuildElementItemComponent.cs:59
+			this.Qualifier = new TItemComponentMultiple<CodeableConcept>("Qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());        // BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 
@@ -96,8 +96,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildItemComponent.cs:83
-			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildItemComponent.cs:83
+			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildElementItemComponent.cs:83
+			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemComponent.cs:83
 			//- ValidateCode
 			return retVal;
 		}
@@ -109,13 +109,13 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
+			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // BuildItemComponent.cs:77
-			this.WriteComponent(this.Qualifier);                                                                                                     // BuildItemComponent.cs:77
+			this.WriteComponent(this.Value);                                                                                                         // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.Qualifier);                                                                                                     // BuildElementItemComponent.cs:77
 			//- WriteCode
 		}
 
@@ -128,8 +128,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // BuildItemComponent.cs:80
-			this.ReadComponent(this.Qualifier);                                                                                                      // BuildItemComponent.cs:80
+			this.ReadComponent(this.Value);                                                                                                          // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.Qualifier);                                                                                                      // BuildElementItemComponent.cs:80
 			//- ReadCode
 		}
 

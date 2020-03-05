@@ -3,29 +3,29 @@
 		/// <summary>
 		/// Access Orientation
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Shape
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                               // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Margin
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                        // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                              // BuildElementItemComponent.cs:74
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access MgDensity
 		/// </summary>
-		public ElementItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                     // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                           // BuildElementItemComponent.cs:74
 		//- Properties
 
 			//+ Constructor
-			this.Orientation = new ElementItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59
-			this.Shape = new ElementItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                 // BuildElementItemComponent.cs:59
-			this.Margin = new ElementItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());              // BuildElementItemComponent.cs:59
-			this.MgDensity = new ElementItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());     // BuildElementItemComponent.cs:59
+			this.Orientation = new TItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());     // BuildElementItemComponent.cs:59
+			this.Shape = new TItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                       // BuildElementItemComponent.cs:59
+			this.Margin = new TItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());                    // BuildElementItemComponent.cs:59
+			this.MgDensity = new TItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());           // BuildElementItemComponent.cs:59
 			//- Constructor
 
 			//+ ValidateCodeStart

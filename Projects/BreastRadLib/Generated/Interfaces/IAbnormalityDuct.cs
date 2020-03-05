@@ -33,7 +33,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access DuctType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> DuctType { get ; }                                                                            // BuildItemComponent.cs:66
+		TItemComponentSingle<CodeableConcept> DuctType { get ; }                                                                                  // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

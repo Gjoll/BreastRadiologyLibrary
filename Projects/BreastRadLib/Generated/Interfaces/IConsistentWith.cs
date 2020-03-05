@@ -24,11 +24,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access Value
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> Value { get ; }                                                                               // BuildItemComponent.cs:66
+		TItemComponentSingle<CodeableConcept> Value { get ; }                                                                                     // BuildElementItemComponent.cs:66
 		/// <summary>
 		/// Access Qualifier
 		/// </summary>
-		TItemComponentMultiple<CodeableConcept> Qualifier { get ; }                                                                         // BuildItemComponent.cs:66
+		TItemComponentMultiple<CodeableConcept> Qualifier { get ; }                                                                               // BuildElementItemComponent.cs:66
 		//- Properties
 
 		//+ Methods

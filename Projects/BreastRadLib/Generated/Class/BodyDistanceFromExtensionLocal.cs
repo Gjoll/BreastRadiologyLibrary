@@ -16,29 +16,29 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	/// <summary>
 	/// Class that implements the 'BodyDistanceFrom' complex extension class.
 	/// </summary>
-	public class BodyDistanceFromExtensionItem : IComplexExtensionItem                                                                         // BuildItemExtension.cs:327
-	{                                                                                                                                          // BuildItemExtension.cs:328
-	    TItemExtensionSingle<CodeableConcept> LandMark;                                                                                  // BuildItemExtension.cs:484
-	    TItemExtensionSingle<Quantity> DistanceFromLandMark;                                                                             // BuildItemExtension.cs:484
-	                                                                                                                                           // BuildItemExtension.cs:330
+	public class BodyDistanceFromExtensionItem : IComplexExtensionItem                                                                         // BuildElementItemExtension.cs:327
+	{                                                                                                                                          // BuildElementItemExtension.cs:328
+	    TItemExtensionSingle<CodeableConcept> LandMark;                                                                                        // BuildElementItemExtension.cs:484
+	    TItemExtensionSingle<Quantity> DistanceFromLandMark;                                                                                   // BuildElementItemExtension.cs:484
+	                                                                                                                                           // BuildElementItemExtension.cs:330
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BodyDistanceFromExtensionItem()                                                                                                 // BuildItemExtension.cs:334
-	    {                                                                                                                                      // BuildItemExtension.cs:335
-	        this.LandMark = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "landMark");                                 // BuildItemExtension.cs:487
-	        this.DistanceFromLandMark = new TItemExtensionSingle<Quantity>("propertyName", 0, 1, "distanceFromLandMark");                // BuildItemExtension.cs:487
-	    }                                                                                                                                      // BuildItemExtension.cs:337
-	                                                                                                                                           // BuildItemExtension.cs:338
+	    public BodyDistanceFromExtensionItem()                                                                                                 // BuildElementItemExtension.cs:334
+	    {                                                                                                                                      // BuildElementItemExtension.cs:335
+	        this.LandMark = new TItemExtensionSingle<CodeableConcept>("propertyName", 0, 1, "landMark");                                       // BuildElementItemExtension.cs:487
+	        this.DistanceFromLandMark = new TItemExtensionSingle<Quantity>("propertyName", 0, 1, "distanceFromLandMark");                      // BuildElementItemExtension.cs:487
+	    }                                                                                                                                      // BuildElementItemExtension.cs:337
+	                                                                                                                                           // BuildElementItemExtension.cs:338
 	    /// <summary>
 	    /// Children
 	    /// </summary>
-	    public IEnumerable<IExtensionItem> Items()                                                                                             // BuildItemExtension.cs:342
-	    {                                                                                                                                      // BuildItemExtension.cs:343
-	        yield return this.LandMark;                                                                                                        // BuildItemExtension.cs:490
-	        yield return this.DistanceFromLandMark;                                                                                            // BuildItemExtension.cs:490
-	    }                                                                                                                                      // BuildItemExtension.cs:345
-	                                                                                                                                           // BuildItemExtension.cs:346
-	}                                                                                                                                          // BuildItemExtension.cs:347
+	    public IEnumerable<IExtensionItem> Items()                                                                                             // BuildElementItemExtension.cs:342
+	    {                                                                                                                                      // BuildElementItemExtension.cs:343
+	        yield return this.LandMark;                                                                                                        // BuildElementItemExtension.cs:490
+	        yield return this.DistanceFromLandMark;                                                                                            // BuildElementItemExtension.cs:490
+	    }                                                                                                                                      // BuildElementItemExtension.cs:345
+	                                                                                                                                           // BuildElementItemExtension.cs:346
+	}                                                                                                                                          // BuildElementItemExtension.cs:347
 	//- LocalClassDefs
 }

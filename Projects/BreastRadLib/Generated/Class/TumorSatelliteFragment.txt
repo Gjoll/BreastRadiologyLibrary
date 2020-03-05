@@ -3,11 +3,11 @@
 		/// <summary>
 		/// Access TumorSatellite
 		/// </summary>
-		public ElementItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; protected set; }                                               // BuildElementItemReference.cs:63
+		public TItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; protected set; }                                                     // BuildElementItemReference.cs:63
 		//- Properties
 
 			//+ Constructor
-			this.TumorSatellite = new ElementItemReferenceMultiple<TumorSatellite>("TumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildElementItemReference.cs:48
+			this.TumorSatellite = new TItemReferenceMultiple<TumorSatellite>("TumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildElementItemReference.cs:48
 			//- Constructor
 
 			//+ ValidateCodeStart

@@ -37,11 +37,11 @@ namespace FireFragger.CS
             String propertyClass;
             if (max == 1)
             {
-                propertyClass = $"ItemReferenceSingle<{propertyType}>";
+                propertyClass = $"TItemReferenceSingle<{propertyType}>";
             }
             else
             {
-                propertyClass = $"ItemReferenceMultiple<{propertyType}>";
+                propertyClass = $"TItemReferenceMultiple<{propertyType}>";
             }
 
             this.codeBlocks.ClassConstructor

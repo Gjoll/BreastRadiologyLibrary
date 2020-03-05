@@ -3,11 +3,11 @@
 		/// <summary>
 		/// Access ObsCount
 		/// </summary>
-		public ElementItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                            // BuildElementItemComponent.cs:74
 		//- Properties
 
 			//+ Constructor
-			this.ObsCount = new ElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
+			this.ObsCount = new TItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());              // BuildElementItemComponent.cs:59
 			//- Constructor
 
 			//+ ValidateCodeStart

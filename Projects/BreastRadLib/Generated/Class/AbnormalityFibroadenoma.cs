@@ -37,71 +37,71 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public BodySiteExtended BodySite { get; private set; }                                                                                    // DefineBase.cs:75
-		                                                                                                                                          // BuildItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsChanges
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> ObsChanges { get ; protected set; }                                                  // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentMultiple<CodeableConcept> ObsChanges { get ; protected set; }                                                        // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access BiRadsAssessmentCategory
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; protected set; }                                      // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; protected set; }                                            // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Orientation
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                   // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Shape
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                         // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                               // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access Margin
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                        // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                              // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access MgDensity
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                     // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                           // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsCount
 		/// </summary>
-		public TItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                      // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                            // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsDistribution
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> ObsDistribution { get ; protected set; }                                             // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentMultiple<CodeableConcept> ObsDistribution { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsDistRegionSize
 		/// </summary>
-		public TItemComponentMultiple<Quantity, Range> ObsDistRegionSize { get ; protected set; }                                           // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentMultiple<Quantity, Range> ObsDistRegionSize { get ; protected set; }                                                 // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsSize
 		/// </summary>
-		public TItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                     // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                           // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access PreviouslyDemonstratedBy
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                    // BuildItemComponent.cs:74
-		                                                                                                                                          // BuildItemReference.cs:59
+		public TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                          // BuildElementItemComponent.cs:74
+		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access AssociatedFeatures
 		/// </summary>
-		public TItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                         // BuildItemReference.cs:63
-		                                                                                                                                          // BuildItemComponent.cs:70
+		public TItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                               // BuildElementItemReference.cs:63
+		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access FibroAdenomaType
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> FibroAdenomaType { get ; protected set; }                                              // BuildItemComponent.cs:74
+		public TItemComponentSingle<CodeableConcept> FibroAdenomaType { get ; protected set; }                                                    // BuildElementItemComponent.cs:74
 		//- Properties
 
 		/// <summary>
@@ -146,19 +146,19 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                                    // DefineBase.cs:219
 			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
-			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildItemComponent.cs:59
-			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildItemComponent.cs:59
-			this.Orientation = new TItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildItemComponent.cs:59
-			this.Shape = new TItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                 // BuildItemComponent.cs:59
-			this.Margin = new TItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());              // BuildItemComponent.cs:59
-			this.MgDensity = new TItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());     // BuildItemComponent.cs:59
-			this.ObsCount = new TItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildItemComponent.cs:59
-			this.ObsDistribution = new TItemComponentMultiple<CodeableConcept>("ObsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildItemComponent.cs:59
-			this.ObsDistRegionSize = new TItemComponentMultiple<Quantity, Range>("ObsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildItemComponent.cs:59
-			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("ObsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());         // BuildItemComponent.cs:59
-			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildItemComponent.cs:59
-			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildItemReference.cs:48
-			this.FibroAdenomaType = new TItemComponentSingle<CodeableConcept>("FibroAdenomaType", 0, 1, FixedValue_ObservationComponentFibroAdenomaTypeCode());// BuildItemComponent.cs:59
+			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());     // BuildElementItemComponent.cs:59
+			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
+			this.Orientation = new TItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());     // BuildElementItemComponent.cs:59
+			this.Shape = new TItemComponentSingle<CodeableConcept>("Shape", 0, 1, FixedValue_ObservationComponentShapeCode());                       // BuildElementItemComponent.cs:59
+			this.Margin = new TItemComponentSingle<CodeableConcept>("Margin", 0, 1, FixedValue_ObservationComponentMarginCode());                    // BuildElementItemComponent.cs:59
+			this.MgDensity = new TItemComponentSingle<CodeableConcept>("MgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());           // BuildElementItemComponent.cs:59
+			this.ObsCount = new TItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());              // BuildElementItemComponent.cs:59
+			this.ObsDistribution = new TItemComponentMultiple<CodeableConcept>("ObsDistribution", 0, -1, FixedValue_ObservationComponentObsDistributionCode());// BuildElementItemComponent.cs:59
+			this.ObsDistRegionSize = new TItemComponentMultiple<Quantity, Range>("ObsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:59
+			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("ObsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());               // BuildElementItemComponent.cs:59
+			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
+			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("AssociatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
+			this.FibroAdenomaType = new TItemComponentSingle<CodeableConcept>("FibroAdenomaType", 0, 1, FixedValue_ObservationComponentFibroAdenomaTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
 
@@ -174,19 +174,19 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildItemComponent.cs:83
-			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildItemComponent.cs:83
-			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildItemComponent.cs:83
-			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildItemComponent.cs:83
-			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildItemComponent.cs:83
-			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildItemComponent.cs:83
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildItemComponent.cs:83
-			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildItemComponent.cs:83
-			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildItemComponent.cs:83
-			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildItemComponent.cs:83
-			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildItemComponent.cs:83
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildItemReference.cs:72
-			if (this.FibroAdenomaType.Validate(sb) == false) retVal = false;                                                                         // BuildItemComponent.cs:83
+			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildElementItemComponent.cs:83
+			if (this.BiRadsAssessmentCategory.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:83
+			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildElementItemComponent.cs:83
+			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildElementItemComponent.cs:83
+			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildElementItemComponent.cs:83
+			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemComponent.cs:83
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildElementItemComponent.cs:83
+			if (this.ObsDistribution.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:83
+			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:83
+			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildElementItemComponent.cs:83
+			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:83
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:72
+			if (this.FibroAdenomaType.Validate(sb) == false) retVal = false;                                                                         // BuildElementItemComponent.cs:83
 			//- ValidateCode
 			return retVal;
 		}
@@ -198,34 +198,34 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
-			this.ClearHasMember();                                                                                                                   // BuildItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildItemComponent.cs:92
+			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
+			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
 			this.BodySite.Write();                                                                                                                   // DefineBase.cs:84
-			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildItemComponent.cs:77
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildItemComponent.cs:77
-			this.WriteComponent(this.Orientation);                                                                                                   // BuildItemComponent.cs:77
-			this.WriteComponent(this.Shape);                                                                                                         // BuildItemComponent.cs:77
-			this.WriteComponent(this.Margin);                                                                                                        // BuildItemComponent.cs:77
-			this.WriteComponent(this.MgDensity);                                                                                                     // BuildItemComponent.cs:77
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildItemComponent.cs:77
-			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildItemComponent.cs:77
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildItemComponent.cs:77
-			this.WriteComponent(this.ObsSize);                                                                                                       // BuildItemComponent.cs:77
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildItemComponent.cs:77
-			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildItemReference.cs:66
-			this.WriteComponent(this.FibroAdenomaType);                                                                                              // BuildItemComponent.cs:77
+			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.Orientation);                                                                                                   // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.Shape);                                                                                                         // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.Margin);                                                                                                        // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.MgDensity);                                                                                                     // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsCount);                                                                                                      // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.ObsSize);                                                                                                       // BuildElementItemComponent.cs:77
+			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildElementItemComponent.cs:77
+			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildElementItemReference.cs:66
+			this.WriteComponent(this.FibroAdenomaType);                                                                                              // BuildElementItemComponent.cs:77
 			//- WriteCode
 		}
 
@@ -239,19 +239,19 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			this.BodySite.Read();                                                                                                                    // DefineBase.cs:81
-			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildItemComponent.cs:80
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildItemComponent.cs:80
-			this.ReadComponent(this.Orientation);                                                                                                    // BuildItemComponent.cs:80
-			this.ReadComponent(this.Shape);                                                                                                          // BuildItemComponent.cs:80
-			this.ReadComponent(this.Margin);                                                                                                         // BuildItemComponent.cs:80
-			this.ReadComponent(this.MgDensity);                                                                                                      // BuildItemComponent.cs:80
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildItemComponent.cs:80
-			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildItemComponent.cs:80
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildItemComponent.cs:80
-			this.ReadComponent(this.ObsSize);                                                                                                        // BuildItemComponent.cs:80
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildItemComponent.cs:80
-			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildItemReference.cs:69
-			this.ReadComponent(this.FibroAdenomaType);                                                                                               // BuildItemComponent.cs:80
+			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.Orientation);                                                                                                    // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.Shape);                                                                                                          // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.Margin);                                                                                                         // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.MgDensity);                                                                                                      // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsCount);                                                                                                       // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.ObsSize);                                                                                                        // BuildElementItemComponent.cs:80
+			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildElementItemComponent.cs:80
+			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildElementItemReference.cs:69
+			this.ReadComponent(this.FibroAdenomaType);                                                                                               // BuildElementItemComponent.cs:80
 			//- ReadCode
 		}
 

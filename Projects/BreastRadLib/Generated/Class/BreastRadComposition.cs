@@ -20,36 +20,36 @@ namespace BreastRadLib
 	public class BreastRadComposition : CompositionBase, IBreastRadComposition
 	{
 		//+ Properties
-		                                                                                                                                          // BuildItemSection.cs:71
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access Report
 		/// </summary>
-		public TItemSectionSingle<BreastRadReport> Report { get ; protected set; }                                                          // BuildItemSection.cs:75
-		                                                                                                                                          // BuildItemSection.cs:71
+		public TItemSectionSingle<BreastRadReport> Report { get ; protected set; }                                                                // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access Impressions
 		/// </summary>
-		public TItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; protected set; }                                            // BuildItemSection.cs:75
-		                                                                                                                                          // BuildItemSection.cs:71
+		public TItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; protected set; }                                                  // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access FindingsRightBreast
 		/// </summary>
-		public TItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; protected set; }                                  // BuildItemSection.cs:75
-		                                                                                                                                          // BuildItemSection.cs:71
+		public TItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; protected set; }                                        // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access FindingsLeftBreast
 		/// </summary>
-		public TItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; protected set; }                                    // BuildItemSection.cs:75
-		                                                                                                                                          // BuildItemSection.cs:71
+		public TItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; protected set; }                                          // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access RelatedResources
 		/// </summary>
-		public TItemSectionMultiple<ResourceBase> RelatedResources { get ; protected set; }                                                 // BuildItemSection.cs:75
-		                                                                                                                                          // BuildItemSection.cs:71
+		public TItemSectionMultiple<ResourceBase> RelatedResources { get ; protected set; }                                                       // BuildElementItemSection.cs:75
+		                                                                                                                                          // BuildElementItemSection.cs:71
 		/// <summary>
 		/// Access Recommendations
 		/// </summary>
-		public TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; protected set; }// BuildItemSection.cs:75
+		public TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; protected set; }    // BuildElementItemSection.cs:75
 		//- Properties
 
 		/// <summary>
@@ -92,12 +92,12 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:219
-			this.Report = new TItemSectionSingle<BreastRadReport>("Report", 1, 1, "Breast Radiology Report", FixedValue_CompositionSectionReportCode());// BuildItemSection.cs:60
-			this.Impressions = new TItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, "Clinical Impressions", FixedValue_CompositionSectionImpressionsCode());// BuildItemSection.cs:60
-			this.FindingsRightBreast = new TItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, "Findings Right Breast", FixedValue_CompositionSectionFindingsRightBreastCode());// BuildItemSection.cs:60
-			this.FindingsLeftBreast = new TItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, "Findings Left Breast", FixedValue_CompositionSectionFindingsLeftBreastCode());// BuildItemSection.cs:60
-			this.RelatedResources = new TItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, "Related Resources", FixedValue_CompositionSectionRelatedResourcesCode());// BuildItemSection.cs:60
-			this.Recommendations = new TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, "Recommendations", FixedValue_CompositionSectionRecommendationsCode());// BuildItemSection.cs:60
+			this.Report = new TItemSectionSingle<BreastRadReport>("Report", 1, 1, "Breast Radiology Report", FixedValue_CompositionSectionReportCode());// BuildElementItemSection.cs:60
+			this.Impressions = new TItemSectionMultiple<ClinicalImpressionBase>("Impressions", 0, -1, "Clinical Impressions", FixedValue_CompositionSectionImpressionsCode());// BuildElementItemSection.cs:60
+			this.FindingsRightBreast = new TItemSectionSingle<SectionFindingsRightBreast>("FindingsRightBreast", 0, 1, "Findings Right Breast", FixedValue_CompositionSectionFindingsRightBreastCode());// BuildElementItemSection.cs:60
+			this.FindingsLeftBreast = new TItemSectionSingle<SectionFindingsLeftBreast>("FindingsLeftBreast", 0, 1, "Findings Left Breast", FixedValue_CompositionSectionFindingsLeftBreastCode());// BuildElementItemSection.cs:60
+			this.RelatedResources = new TItemSectionMultiple<ResourceBase>("RelatedResources", 0, -1, "Related Resources", FixedValue_CompositionSectionRelatedResourcesCode());// BuildElementItemSection.cs:60
+			this.Recommendations = new TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation>("Recommendations", 0, -1, "Recommendations", FixedValue_CompositionSectionRecommendationsCode());// BuildElementItemSection.cs:60
 			//- Constructor
 		}
 
@@ -113,12 +113,12 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildItemSection.cs:84
-			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildItemSection.cs:84
-			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildItemSection.cs:84
-			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildItemSection.cs:84
-			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildItemSection.cs:84
-			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildItemSection.cs:84
+			if (this.Report.Validate(sb) == false) retVal = false;                                                                                   // BuildElementItemSection.cs:84
+			if (this.Impressions.Validate(sb) == false) retVal = false;                                                                              // BuildElementItemSection.cs:84
+			if (this.FindingsRightBreast.Validate(sb) == false) retVal = false;                                                                      // BuildElementItemSection.cs:84
+			if (this.FindingsLeftBreast.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemSection.cs:84
+			if (this.RelatedResources.Validate(sb) == false) retVal = false;                                                                         // BuildElementItemSection.cs:84
+			if (this.Recommendations.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemSection.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -130,15 +130,15 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearSection();                                                                                                                     // BuildItemSection.cs:93
+			this.ClearSection();                                                                                                                     // BuildElementItemSection.cs:93
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteSection(this.Report);                                                                                                          // BuildItemSection.cs:78
-			this.WriteSection(this.Impressions);                                                                                                     // BuildItemSection.cs:78
-			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildItemSection.cs:78
-			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildItemSection.cs:78
-			this.WriteSection(this.RelatedResources);                                                                                                // BuildItemSection.cs:78
-			this.WriteSection(this.Recommendations);                                                                                                 // BuildItemSection.cs:78
+			this.WriteSection(this.Report);                                                                                                          // BuildElementItemSection.cs:78
+			this.WriteSection(this.Impressions);                                                                                                     // BuildElementItemSection.cs:78
+			this.WriteSection(this.FindingsRightBreast);                                                                                             // BuildElementItemSection.cs:78
+			this.WriteSection(this.FindingsLeftBreast);                                                                                              // BuildElementItemSection.cs:78
+			this.WriteSection(this.RelatedResources);                                                                                                // BuildElementItemSection.cs:78
+			this.WriteSection(this.Recommendations);                                                                                                 // BuildElementItemSection.cs:78
 			//- WriteCode
 		}
 
@@ -151,12 +151,12 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadSection(this.Report);                                                                                                           // BuildItemSection.cs:81
-			this.ReadSection(this.Impressions);                                                                                                      // BuildItemSection.cs:81
-			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildItemSection.cs:81
-			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildItemSection.cs:81
-			this.ReadSection(this.RelatedResources);                                                                                                 // BuildItemSection.cs:81
-			this.ReadSection(this.Recommendations);                                                                                                  // BuildItemSection.cs:81
+			this.ReadSection(this.Report);                                                                                                           // BuildElementItemSection.cs:81
+			this.ReadSection(this.Impressions);                                                                                                      // BuildElementItemSection.cs:81
+			this.ReadSection(this.FindingsRightBreast);                                                                                              // BuildElementItemSection.cs:81
+			this.ReadSection(this.FindingsLeftBreast);                                                                                               // BuildElementItemSection.cs:81
+			this.ReadSection(this.RelatedResources);                                                                                                 // BuildElementItemSection.cs:81
+			this.ReadSection(this.Recommendations);                                                                                                  // BuildElementItemSection.cs:81
 			//- ReadCode
 		}
 
