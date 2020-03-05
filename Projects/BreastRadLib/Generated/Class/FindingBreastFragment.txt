@@ -3,29 +3,29 @@
 		/// <summary>
 		/// Access MGFinding
 		/// </summary>
-		public ElementItemReferenceMultiple<MGFinding> MGFinding { get ; protected set; }                                                         // BuildElementItemReference.cs:63
+		public ElementItemReferenceSingle<MGFinding> MGFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access MRIFinding
 		/// </summary>
-		public ElementItemReferenceMultiple<MRIFinding> MRIFinding { get ; protected set; }                                                       // BuildElementItemReference.cs:63
+		public ElementItemReferenceSingle<MRIFinding> MRIFinding { get ; protected set; }                                                         // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access NMFinding
 		/// </summary>
-		public ElementItemReferenceMultiple<NMFinding> NMFinding { get ; protected set; }                                                         // BuildElementItemReference.cs:63
+		public ElementItemReferenceSingle<NMFinding> NMFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
 		                                                                                                                                          // BuildElementItemReference.cs:59
 		/// <summary>
 		/// Access USFinding
 		/// </summary>
-		public ElementItemReferenceMultiple<USFinding> USFinding { get ; protected set; }                                                         // BuildElementItemReference.cs:63
+		public ElementItemReferenceSingle<USFinding> USFinding { get ; protected set; }                                                           // BuildElementItemReference.cs:63
 		//- Properties
 
 			//+ Constructor
-			this.MGFinding = new ElementItemReferenceMultiple<MGFinding>("MGFinding", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
-			this.MRIFinding = new ElementItemReferenceMultiple<MRIFinding>("MRIFinding", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
-			this.NMFinding = new ElementItemReferenceMultiple<NMFinding>("NMFinding", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
-			this.USFinding = new ElementItemReferenceMultiple<USFinding>("USFinding", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:48
+			this.MGFinding = new ElementItemReferenceSingle<MGFinding>("MGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:48
+			this.MRIFinding = new ElementItemReferenceSingle<MRIFinding>("MRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:48
+			this.NMFinding = new ElementItemReferenceSingle<NMFinding>("NMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:48
+			this.USFinding = new ElementItemReferenceSingle<USFinding>("USFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:48
 			//- Constructor
 
 			//+ ValidateCodeStart

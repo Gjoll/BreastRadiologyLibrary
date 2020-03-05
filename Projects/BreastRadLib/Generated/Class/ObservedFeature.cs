@@ -28,7 +28,7 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservedFeature
 	{
 		//+ Properties
-		public BodySiteExtended bodySite { get; private set; }                                                                                    // DefineBase.cs:75
+		public BodySiteExtended BodySite { get; private set; }                                                                                    // DefineBase.cs:75
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsCount
@@ -82,7 +82,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:219
-			this.bodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
+			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
 			this.ObsCount = new ElementItemComponentSingle<Quantity, Range>("ObsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());        // BuildElementItemComponent.cs:59
 			this.FeatureType = new ElementItemComponentSingle<CodeableConcept>("FeatureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
@@ -119,7 +119,7 @@ namespace BreastRadLib
 			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
-			this.bodySite.Write();                                                                                                                   // DefineBase.cs:84
+			this.BodySite.Write();                                                                                                                   // DefineBase.cs:84
 			this.WriteComponent(this.ObsCount);                                                                                                      // BuildElementItemComponent.cs:77
 			this.WriteComponent(this.FeatureType);                                                                                                   // BuildElementItemComponent.cs:77
 			//- WriteCode
@@ -134,7 +134,7 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.bodySite.Read();                                                                                                                    // DefineBase.cs:81
+			this.BodySite.Read();                                                                                                                    // DefineBase.cs:81
 			this.ReadComponent(this.ObsCount);                                                                                                       // BuildElementItemComponent.cs:80
 			this.ReadComponent(this.FeatureType);                                                                                                    // BuildElementItemComponent.cs:80
 			//- ReadCode

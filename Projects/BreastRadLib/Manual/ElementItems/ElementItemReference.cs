@@ -42,7 +42,7 @@ namespace BreastRadLib
         /// <summary>
         /// Create item if it doesn't already exist, and return item.
         /// </summary>
-        protected BaseType Create()
+        public BaseType Create()
         {
             if (this.Value == null)
             {
