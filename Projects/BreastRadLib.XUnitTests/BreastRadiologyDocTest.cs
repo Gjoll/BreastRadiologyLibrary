@@ -21,7 +21,7 @@ namespace BreastRadiology.XUnitTests
     public sealed class BreastRadiologyDocumentTests
     {
         [TestMethod]
-        public void CreateBreastRadiologyDocument()
+        public void A_CreateBreastRadiologyDocument()
         {
             Bundle b;
             {
@@ -71,7 +71,17 @@ namespace BreastRadiology.XUnitTests
         }
 
         [TestMethod]
-        public void Composition_Sections()
+        public void E_Observation_BodySite()
+        {
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = MakeDoc();
+                BreastRadReport report = doc.Index.Report.Create(doc);
+            }
+        }
+
+        [TestMethod]
+        public void B_Composition_Sections()
         {
             Bundle b;
             {
@@ -149,7 +159,7 @@ namespace BreastRadiology.XUnitTests
         }
 
         [TestMethod]
-        public void Observation_HasMemberTest()
+        public void D_Observation_HasMemberTest()
         {
             Bundle b;
             {
@@ -183,7 +193,7 @@ namespace BreastRadiology.XUnitTests
 
 
         [TestMethod]
-        public void Observation_ComponentTest()
+        public void C_Observation_ComponentTest()
         {
             Bundle b;
             {
