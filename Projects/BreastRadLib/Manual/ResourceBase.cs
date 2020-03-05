@@ -50,5 +50,15 @@ namespace BreastRadLib
                 metaProfiles.Add(profileUrl);
             this.domainResource.Meta.Profile = metaProfiles;
         }
+
+        protected void WriteElement(IItemElement element)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected void ReadElement(IItemElement element)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

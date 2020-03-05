@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BreastRadLib
 {
-    public class BodySiteExtended 
+    public class BodySiteExtended : IItemElementMember
     {
         public CodeableConcept BodySite { get; set; }
         TItemExtensionComplexSingle<BreastBodyLocationExtensionItem> BreastBodyLocation;
@@ -14,12 +14,12 @@ namespace BreastRadLib
         /// <summary>
         /// Constructor
         /// </summary>
-        public BodySiteExtended(Int32 min, Int32 max)                                                                     
+        public BodySiteExtended()                                                                     
         {
             this.BreastBodyLocation = 
                 new TItemExtensionComplexSingle<BreastBodyLocationExtensionItem>("BreastBodyLocation",
-                    min, 
-                    max,
+                    0, 
+                    1,
                     "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");
         }
 
@@ -38,5 +38,8 @@ namespace BreastRadLib
         {
             // return base.WriteItems();
         }
+
+        public Element GetElement() => throw new NotImplementedException();
+        public void SetElement(Element e) => throw new NotImplementedException();
     }
 }

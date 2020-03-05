@@ -1,9 +1,9 @@
 		//+ Properties
-		public BodySiteExtended BodySite { get; private set; }                                                                                    // DefineBase.cs:75
+		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:75
 		//- Properties
 
 			//+ Constructor
-			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
+			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -14,13 +14,13 @@
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			this.BodySite.Write();                                                                                                                   // DefineBase.cs:84
+			this.WriteElement(this.BodySite);                                                                                                        // DefineBase.cs:84
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.BodySite.Read();                                                                                                                    // DefineBase.cs:81
+			this.ReadElement(this.BodySite);                                                                                                         // DefineBase.cs:81
 			//- ReadCode
 
 			//+ Methods

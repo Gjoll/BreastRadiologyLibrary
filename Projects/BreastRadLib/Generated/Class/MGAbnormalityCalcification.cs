@@ -38,7 +38,7 @@ namespace BreastRadLib
 	public class MGAbnormalityCalcification : ObservationBase, IMGAbnormalityCalcification
 	{
 		//+ Properties
-		public BodySiteExtended BodySite { get; private set; }                                                                                    // DefineBase.cs:75
+		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:75
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsChanges
@@ -147,7 +147,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");                                 // DefineBase.cs:219
-			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
+			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
 			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());     // BuildElementItemComponent.cs:59
 			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
 			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("NotPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
@@ -216,7 +216,7 @@ namespace BreastRadLib
 			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
 			//- WriteCodeStart
 			//+ WriteCode
-			this.BodySite.Write();                                                                                                                   // DefineBase.cs:84
+			this.WriteElement(this.BodySite);                                                                                                        // DefineBase.cs:84
 			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildElementItemComponent.cs:77
 			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildElementItemComponent.cs:77
 			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildElementItemComponent.cs:77
@@ -242,7 +242,7 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.BodySite.Read();                                                                                                                    // DefineBase.cs:81
+			this.ReadElement(this.BodySite);                                                                                                         // DefineBase.cs:81
 			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildElementItemComponent.cs:80
 			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildElementItemComponent.cs:80
 			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildElementItemComponent.cs:80

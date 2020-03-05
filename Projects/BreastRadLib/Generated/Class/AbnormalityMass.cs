@@ -45,7 +45,7 @@ namespace BreastRadLib
 		/// Access TumorSatellite
 		/// </summary>
 		public TItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; protected set; }                                                     // BuildElementItemReference.cs:63
-		public BodySiteExtended BodySite { get; private set; }                                                                                    // DefineBase.cs:75
+		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:75
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access ObsChanges
@@ -170,7 +170,7 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // DefineBase.cs:219
 			this.TumorSatellite = new TItemReferenceMultiple<TumorSatellite>("TumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildElementItemReference.cs:48
-			this.BodySite = new BodySiteExtended(1, 1);                                                                                              // DefineBase.cs:78
+			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
 			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("ObsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());     // BuildElementItemComponent.cs:59
 			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("BiRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:59
 			this.Orientation = new TItemComponentSingle<CodeableConcept>("Orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());     // BuildElementItemComponent.cs:59
@@ -249,7 +249,7 @@ namespace BreastRadLib
 			//- WriteCodeStart
 			//+ WriteCode
 			this.WriteHasMembers(this.TumorSatellite);                                                                                               // BuildElementItemReference.cs:66
-			this.BodySite.Write();                                                                                                                   // DefineBase.cs:84
+			this.WriteElement(this.BodySite);                                                                                                        // DefineBase.cs:84
 			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildElementItemComponent.cs:77
 			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildElementItemComponent.cs:77
 			this.WriteComponent(this.Orientation);                                                                                                   // BuildElementItemComponent.cs:77
@@ -279,7 +279,7 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			this.ReadHasMembers(this.TumorSatellite);                                                                                                // BuildElementItemReference.cs:69
-			this.BodySite.Read();                                                                                                                    // DefineBase.cs:81
+			this.ReadElement(this.BodySite);                                                                                                         // DefineBase.cs:81
 			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildElementItemComponent.cs:80
 			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildElementItemComponent.cs:80
 			this.ReadComponent(this.Orientation);                                                                                                    // BuildElementItemComponent.cs:80

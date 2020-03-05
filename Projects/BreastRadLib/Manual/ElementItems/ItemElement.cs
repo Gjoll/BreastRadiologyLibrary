@@ -11,7 +11,7 @@ namespace BreastRadLib
 {
     /// <summary>
     /// </summary>
-    public interface IItemElementItem
+    public interface IItemElementMember
     {
         Element GetElement();
         void SetElement(Element e);
@@ -28,11 +28,10 @@ namespace BreastRadLib
 
     /// <summary>
     /// </summary>
-    public class TItemElementSingle<TBase, TExt> : 
+    public class TItemElementSingle<TBase> : 
         TItemSingle<TBase>, 
         IItemElement
-        where TBase : IItemElementItem, new()
-        where TExt : IComplexExtension
+        where TBase : IItemElementMember, new()
     {
         /// <summary>
         /// Get value.
