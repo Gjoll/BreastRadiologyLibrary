@@ -11,7 +11,7 @@ namespace BreastRadLib
 {
     /// <summary>
     /// </summary>
-    public interface IExtensionItem
+    public interface IExtensionItem : IItem
     {
         String ExtensionUrl { get; }
     }

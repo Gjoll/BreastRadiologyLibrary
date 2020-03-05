@@ -12,7 +12,7 @@ namespace BreastRadLib
     /// <summary>
     /// Interface for implementing ItemReference classes.
     /// </summary>
-    public interface IItemReference
+    public interface IItemReference :  IItem
     {
         String ProfileUrl { get; }
         IEnumerable<ResourceBase> GetElements();

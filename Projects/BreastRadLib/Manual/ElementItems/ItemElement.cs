@@ -20,9 +20,8 @@ namespace BreastRadLib
     /// <summary>
     /// Interface for implementing ItemElement classes.
     /// </summary>
-    public interface IItemElement
+    public interface IItemElement :  IItem
     {
-        String FhirPath { get; }
         IEnumerable<Element> GetElements();
         void SetElements(IEnumerable<Element> elements);
 
@@ -35,8 +34,6 @@ namespace BreastRadLib
         IItemElement
         where TBase : IItemElementMember, new()
     {
-        String FhirPath { get; }
-
         public TItemElementSingle(String fhirPath,
             Int32 min,
             Int32 max) : base(fhirPath, min, max)
