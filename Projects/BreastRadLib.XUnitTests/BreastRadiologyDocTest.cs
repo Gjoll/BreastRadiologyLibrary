@@ -61,30 +61,6 @@ namespace BreastRadiology.XUnitTests
         }
 
         [TestMethod]
-        public void Document_Validate()
-        {
-            BreastRadiologyDocument doc = MakeDoc();
-            StringBuilder sb = new StringBuilder();
-            bool retVal = doc.Validate(sb);
-            Trace.WriteLine(sb.ToString());
-            Assert.IsTrue(retVal == true);
-        }
-
-        [TestMethod]
-        public void E_Observation_BodySite()
-        {
-            Bundle b;
-            {
-                BreastRadiologyDocument doc = MakeDoc();
-                BreastRadReport report = doc.Index.Report.Create(doc);
-                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create(doc);
-                MGFinding mgFinding = findLeft.MGFinding.Create();
-                AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append();
-                //abCyst.BodySite.Cr
-            }
-        }
-
-        [TestMethod]
         public void B_Composition_Sections()
         {
             Bundle b;
@@ -163,40 +139,6 @@ namespace BreastRadiology.XUnitTests
         }
 
         [TestMethod]
-        public void D_Observation_HasMemberTest()
-        {
-            Bundle b;
-            {
-                BreastRadiologyDocument doc = MakeDoc();
-                {
-                    BreastRadReport report = doc.Index.Report.Create(doc);
-                    SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create(doc);
-                    MGFinding mgFinding = findLeft.MGFinding.Create();
-                    MGAbnormalityAsymmetry asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
-                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
-                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
-                }
-                b = doc.Write();
-            }
-
-            {
-                BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
-                BreastRadReport report = doc.Index.Report.Get();
-                Assert.IsTrue(report != null);
-
-                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
-                Assert.IsTrue(findLeft != null);
-
-                MGFinding mgFinding = findLeft.MGFinding.Get();
-                Assert.IsTrue(mgFinding != null);
-
-                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.Items.ToArray();
-                Assert.IsTrue(asymmetry.Length == 3);
-            }
-        }
-
-
-        [TestMethod]
         public void C_Observation_ComponentTest()
         {
             Bundle b;
@@ -230,6 +172,65 @@ namespace BreastRadiology.XUnitTests
                 Assert.IsTrue(BLMisc.SameConcept(asymmetry[0].ObsChanges.At(0), ObservedChangesVS.Code_DecreaseInCalcifications));
                 Assert.IsTrue(BLMisc.SameConcept(asymmetry[0].ObsChanges.At(1), ObservedChangesVS.Code_DecreaseInSize));
             }
+        }
+
+        [TestMethod]
+        public void D_Observation_HasMemberTest()
+        {
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = MakeDoc();
+                {
+                    BreastRadReport report = doc.Index.Report.Create(doc);
+                    SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create(doc);
+                    MGFinding mgFinding = findLeft.MGFinding.Create();
+                    MGAbnormalityAsymmetry asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                }
+                b = doc.Write();
+            }
+
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
+                BreastRadReport report = doc.Index.Report.Get();
+                Assert.IsTrue(report != null);
+
+                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
+                Assert.IsTrue(findLeft != null);
+
+                MGFinding mgFinding = findLeft.MGFinding.Get();
+                Assert.IsTrue(mgFinding != null);
+
+                MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.Items.ToArray();
+                Assert.IsTrue(asymmetry.Length == 3);
+            }
+        }
+
+
+
+        [TestMethod]
+        public void E_Observation_BodySite()
+        {
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = MakeDoc();
+                BreastRadReport report = doc.Index.Report.Create(doc);
+                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create(doc);
+                MGFinding mgFinding = findLeft.MGFinding.Create();
+                AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append();
+                //abCyst.BodySite.Cr
+            }
+        }
+
+        [TestMethod]
+        public void Document_Validate()
+        {
+            BreastRadiologyDocument doc = MakeDoc();
+            StringBuilder sb = new StringBuilder();
+            bool retVal = doc.Validate(sb);
+            Trace.WriteLine(sb.ToString());
+            Assert.IsTrue(retVal == true);
         }
 
         //[TestMethod]
