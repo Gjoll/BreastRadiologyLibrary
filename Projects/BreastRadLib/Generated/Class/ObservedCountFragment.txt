@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access ObsCount
 		/// </summary>
-		public TItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                            // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                            // BuildElementItemComponent.cs:72
 		//- Properties
 
 			//+ Constructor
-			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:59
+			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildElementItemComponent.cs:83
+			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildElementItemComponent.cs:81
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.ObsCount.WriteItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:77
+			this.ObsCount.Write(this.Doc, this.Resource);                                                                                            // BuildElementItemComponent.cs:75
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ObsCount.ReadItemComponent(this.Doc, this.Resource);                                                                                // BuildElementItemComponent.cs:80
+			this.ObsCount.Read(this.Doc, this.Resource);                                                                                             // BuildElementItemComponent.cs:78
 			//- ReadCode
 
 			//+ Methods

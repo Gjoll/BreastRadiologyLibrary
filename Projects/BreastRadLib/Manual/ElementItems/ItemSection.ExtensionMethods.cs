@@ -19,7 +19,7 @@ namespace BreastRadLib
             return null;
         }
 
-        public static void ReadItemSection(this IItemSection itemSection, 
+        public static void Read(this IItemSection itemSection, 
             BreastRadiologyDocument doc,
             Resource resource)
         {
@@ -44,7 +44,7 @@ namespace BreastRadLib
             itemSection.CheckCardinality();
         }
 
-        public static void WriteItemSection(this IItemSection itemSection,
+        public static void Write(this IItemSection itemSection,
             BreastRadiologyDocument doc,
             Resource resource)
         {

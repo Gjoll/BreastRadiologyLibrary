@@ -26,16 +26,16 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access Value
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Value { get ; protected set; }                                                               // BuildElementItemComponent.cs:74
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Value { get ; protected set; }                                                               // BuildElementItemComponent.cs:72
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access Qualifier
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> Qualifier { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
+		public TItemComponentMultiple<CodeableConcept> Qualifier { get ; protected set; }                                                         // BuildElementItemComponent.cs:72
 		//- Properties
 
 		/// <summary>
@@ -79,8 +79,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:219
-			this.Value = new TItemComponentSingle<CodeableConcept>("Observation.component:value", 1, 1, FixedValue_ObservationComponentValueCode()); // BuildElementItemComponent.cs:59
-			this.Qualifier = new TItemComponentMultiple<CodeableConcept>("Observation.component:qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());// BuildElementItemComponent.cs:59
+			this.Value = new TItemComponentSingle<CodeableConcept>("Observation.component:value", 1, 1, FixedValue_ObservationComponentValueCode()); // BuildElementItemComponent.cs:57
+			this.Qualifier = new TItemComponentMultiple<CodeableConcept>("Observation.component:qualifier", 0, -1, FixedValue_ObservationComponentQualifierCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 		}
 
@@ -96,8 +96,8 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildElementItemComponent.cs:83
-			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemComponent.cs:83
+			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildElementItemComponent.cs:81
+			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemComponent.cs:81
 			//- ValidateCode
 			return retVal;
 		}
@@ -113,8 +113,8 @@ namespace BreastRadLib
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.Value.WriteItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:77
-			this.Qualifier.WriteItemComponent(this.Doc, this.Resource);                                                                              // BuildElementItemComponent.cs:77
+			this.Value.Write(this.Doc, this.Resource);                                                                                               // BuildElementItemComponent.cs:75
+			this.Qualifier.Write(this.Doc, this.Resource);                                                                                           // BuildElementItemComponent.cs:75
 			//- WriteCode
 		}
 
@@ -127,8 +127,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.Value.ReadItemComponent(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:80
-			this.Qualifier.ReadItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:80
+			this.Value.Read(this.Doc, this.Resource);                                                                                                // BuildElementItemComponent.cs:78
+			this.Qualifier.Read(this.Doc, this.Resource);                                                                                            // BuildElementItemComponent.cs:78
 			//- ReadCode
 		}
 

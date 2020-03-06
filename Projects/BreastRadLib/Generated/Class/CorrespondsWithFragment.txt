@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access CorrespondsWith
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> CorrespondsWith { get ; protected set; }                                                   // BuildElementItemComponent.cs:74
+		public TItemComponentMultiple<CodeableConcept> CorrespondsWith { get ; protected set; }                                                   // BuildElementItemComponent.cs:72
 		//- Properties
 
 			//+ Constructor
-			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("Observation.component:correspondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
+			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("Observation.component:correspondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:83
+			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:81
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.CorrespondsWith.WriteItemComponent(this.Doc, this.Resource);                                                                        // BuildElementItemComponent.cs:77
+			this.CorrespondsWith.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemComponent.cs:75
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.CorrespondsWith.ReadItemComponent(this.Doc, this.Resource);                                                                         // BuildElementItemComponent.cs:80
+			this.CorrespondsWith.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemComponent.cs:78
 			//- ReadCode
 
 			//+ Methods

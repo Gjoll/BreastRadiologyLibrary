@@ -143,18 +143,6 @@ namespace BreastRadLib
             this.Code = code;
         }
 
-        public void Write(BreastRadiologyDocument doc,
-            Resource resource)
-        {
-            this.WriteItemSection(doc, resource);
-        }
-
-        public void Read(BreastRadiologyDocument doc,
-            Resource resource)
-        {
-            this.ReadItemSection(doc, resource);
-        }
-
         public IEnumerable<ResourceBase> GetElements()
         {
             foreach (var item in this.items)

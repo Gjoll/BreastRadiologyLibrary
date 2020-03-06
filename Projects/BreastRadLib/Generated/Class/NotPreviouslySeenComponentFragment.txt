@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access NotPreviouslySeen
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; protected set; }                                                 // BuildElementItemComponent.cs:74
+		public TItemComponentMultiple<CodeableConcept> NotPreviouslySeen { get ; protected set; }                                                 // BuildElementItemComponent.cs:72
 		//- Properties
 
 			//+ Constructor
-			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("Observation.component:notPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:59
+			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("Observation.component:notPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:83
+			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:81
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.NotPreviouslySeen.WriteItemComponent(this.Doc, this.Resource);                                                                      // BuildElementItemComponent.cs:77
+			this.NotPreviouslySeen.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:75
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.NotPreviouslySeen.ReadItemComponent(this.Doc, this.Resource);                                                                       // BuildElementItemComponent.cs:80
+			this.NotPreviouslySeen.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemComponent.cs:78
 			//- ReadCode
 
 			//+ Methods

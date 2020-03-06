@@ -133,12 +133,12 @@ namespace BreastRadLib
 			this.ClearSection();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.Report.WriteItemSection(this.Doc, this.Resource);                                                                                   // BuildElementItemSection.cs:78
-			this.Impressions.WriteItemSection(this.Doc, this.Resource);                                                                              // BuildElementItemSection.cs:78
-			this.FindingsRightBreast.WriteItemSection(this.Doc, this.Resource);                                                                      // BuildElementItemSection.cs:78
-			this.FindingsLeftBreast.WriteItemSection(this.Doc, this.Resource);                                                                       // BuildElementItemSection.cs:78
-			this.RelatedResources.WriteItemSection(this.Doc, this.Resource);                                                                         // BuildElementItemSection.cs:78
-			this.Recommendations.WriteItemSection(this.Doc, this.Resource);                                                                          // BuildElementItemSection.cs:78
+			this.Report.Write(this.Doc, this.Resource);                                                                                              // BuildElementItemSection.cs:78
+			this.Impressions.Write(this.Doc, this.Resource);                                                                                         // BuildElementItemSection.cs:78
+			this.FindingsRightBreast.Write(this.Doc, this.Resource);                                                                                 // BuildElementItemSection.cs:78
+			this.FindingsLeftBreast.Write(this.Doc, this.Resource);                                                                                  // BuildElementItemSection.cs:78
+			this.RelatedResources.Write(this.Doc, this.Resource);                                                                                    // BuildElementItemSection.cs:78
+			this.Recommendations.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemSection.cs:78
 			//- WriteCode
 		}
 
@@ -151,12 +151,12 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.Report.ReadItemSection(this.Doc, this.Resource);                                                                                    // BuildElementItemSection.cs:81
-			this.Impressions.ReadItemSection(this.Doc, this.Resource);                                                                               // BuildElementItemSection.cs:81
-			this.FindingsRightBreast.ReadItemSection(this.Doc, this.Resource);                                                                       // BuildElementItemSection.cs:81
-			this.FindingsLeftBreast.ReadItemSection(this.Doc, this.Resource);                                                                        // BuildElementItemSection.cs:81
-			this.RelatedResources.ReadItemSection(this.Doc, this.Resource);                                                                          // BuildElementItemSection.cs:81
-			this.Recommendations.ReadItemSection(this.Doc, this.Resource);                                                                           // BuildElementItemSection.cs:81
+			this.Report.Read(this.Doc, this.Resource);                                                                                               // BuildElementItemSection.cs:81
+			this.Impressions.Read(this.Doc, this.Resource);                                                                                          // BuildElementItemSection.cs:81
+			this.FindingsRightBreast.Read(this.Doc, this.Resource);                                                                                  // BuildElementItemSection.cs:81
+			this.FindingsLeftBreast.Read(this.Doc, this.Resource);                                                                                   // BuildElementItemSection.cs:81
+			this.RelatedResources.Read(this.Doc, this.Resource);                                                                                     // BuildElementItemSection.cs:81
+			this.Recommendations.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemSection.cs:81
 			//- ReadCode
 		}
 

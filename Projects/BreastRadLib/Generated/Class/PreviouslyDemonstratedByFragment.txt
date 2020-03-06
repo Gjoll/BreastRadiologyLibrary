@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access PreviouslyDemonstratedBy
 		/// </summary>
-		public TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                          // BuildElementItemComponent.cs:74
+		public TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                          // BuildElementItemComponent.cs:72
 		//- Properties
 
 			//+ Constructor
-			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("Observation.component:PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
+			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("Observation.component:PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:83
+			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:81
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.PreviouslyDemonstratedBy.WriteItemComponent(this.Doc, this.Resource);                                                               // BuildElementItemComponent.cs:77
+			this.PreviouslyDemonstratedBy.Write(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:75
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.PreviouslyDemonstratedBy.ReadItemComponent(this.Doc, this.Resource);                                                                // BuildElementItemComponent.cs:80
+			this.PreviouslyDemonstratedBy.Read(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:78
 			//- ReadCode
 
 			//+ Methods

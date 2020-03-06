@@ -1,59 +1,59 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access Orientation
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                         // BuildElementItemComponent.cs:74
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Orientation { get ; protected set; }                                                         // BuildElementItemComponent.cs:72
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access Shape
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                               // BuildElementItemComponent.cs:74
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Shape { get ; protected set; }                                                               // BuildElementItemComponent.cs:72
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access Margin
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                              // BuildElementItemComponent.cs:74
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		public TItemComponentSingle<CodeableConcept> Margin { get ; protected set; }                                                              // BuildElementItemComponent.cs:72
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access MgDensity
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                           // BuildElementItemComponent.cs:74
+		public TItemComponentSingle<CodeableConcept> MgDensity { get ; protected set; }                                                           // BuildElementItemComponent.cs:72
 		//- Properties
 
 			//+ Constructor
-			this.Orientation = new TItemComponentSingle<CodeableConcept>("Observation.component:orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:59
-			this.Shape = new TItemComponentSingle<CodeableConcept>("Observation.component:shape", 0, 1, FixedValue_ObservationComponentShapeCode()); // BuildElementItemComponent.cs:59
-			this.Margin = new TItemComponentSingle<CodeableConcept>("Observation.component:margin", 0, 1, FixedValue_ObservationComponentMarginCode());// BuildElementItemComponent.cs:59
-			this.MgDensity = new TItemComponentSingle<CodeableConcept>("Observation.component:mgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());// BuildElementItemComponent.cs:59
+			this.Orientation = new TItemComponentSingle<CodeableConcept>("Observation.component:orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:57
+			this.Shape = new TItemComponentSingle<CodeableConcept>("Observation.component:shape", 0, 1, FixedValue_ObservationComponentShapeCode()); // BuildElementItemComponent.cs:57
+			this.Margin = new TItemComponentSingle<CodeableConcept>("Observation.component:margin", 0, 1, FixedValue_ObservationComponentMarginCode());// BuildElementItemComponent.cs:57
+			this.MgDensity = new TItemComponentSingle<CodeableConcept>("Observation.component:mgDensity", 0, 1, FixedValue_ObservationComponentMgDensityCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildElementItemComponent.cs:83
-			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildElementItemComponent.cs:83
-			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildElementItemComponent.cs:83
-			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemComponent.cs:83
+			if (this.Orientation.Validate(sb) == false) retVal = false;                                                                              // BuildElementItemComponent.cs:81
+			if (this.Shape.Validate(sb) == false) retVal = false;                                                                                    // BuildElementItemComponent.cs:81
+			if (this.Margin.Validate(sb) == false) retVal = false;                                                                                   // BuildElementItemComponent.cs:81
+			if (this.MgDensity.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemComponent.cs:81
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.Orientation.WriteItemComponent(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:77
-			this.Shape.WriteItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:77
-			this.Margin.WriteItemComponent(this.Doc, this.Resource);                                                                                 // BuildElementItemComponent.cs:77
-			this.MgDensity.WriteItemComponent(this.Doc, this.Resource);                                                                              // BuildElementItemComponent.cs:77
+			this.Orientation.Write(this.Doc, this.Resource);                                                                                         // BuildElementItemComponent.cs:75
+			this.Shape.Write(this.Doc, this.Resource);                                                                                               // BuildElementItemComponent.cs:75
+			this.Margin.Write(this.Doc, this.Resource);                                                                                              // BuildElementItemComponent.cs:75
+			this.MgDensity.Write(this.Doc, this.Resource);                                                                                           // BuildElementItemComponent.cs:75
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.Orientation.ReadItemComponent(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:80
-			this.Shape.ReadItemComponent(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:80
-			this.Margin.ReadItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:80
-			this.MgDensity.ReadItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:80
+			this.Orientation.Read(this.Doc, this.Resource);                                                                                          // BuildElementItemComponent.cs:78
+			this.Shape.Read(this.Doc, this.Resource);                                                                                                // BuildElementItemComponent.cs:78
+			this.Margin.Read(this.Doc, this.Resource);                                                                                               // BuildElementItemComponent.cs:78
+			this.MgDensity.Read(this.Doc, this.Resource);                                                                                            // BuildElementItemComponent.cs:78
 			//- ReadCode
 
 			//+ Methods

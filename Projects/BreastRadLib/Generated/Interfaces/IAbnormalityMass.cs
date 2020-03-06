@@ -35,7 +35,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access MassType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> MassType { get ; }                                                                                  // BuildElementItemComponent.cs:66
+		TItemComponentSingle<CodeableConcept> MassType { get ; }                                                                                  // BuildElementItemComponent.cs:64
 		//- Properties
 
 		//+ Methods

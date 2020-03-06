@@ -8,7 +8,7 @@ namespace BreastRadLib
 {
     public static class ItemComponentExtensionMethods
     {
-        public static void ReadItemComponent(this IItemComponent itemComponent,
+        public static void Read(this IItemComponent itemComponent,
             BreastRadiologyDocument doc,
             Resource resource)
         {
@@ -22,7 +22,7 @@ namespace BreastRadLib
             itemComponent.CheckCardinality();
         }
 
-        public static void WriteItemComponent(this IItemComponent itemComponent,
+        public static void Write(this IItemComponent itemComponent,
             BreastRadiologyDocument doc,
             Resource resource)
         {

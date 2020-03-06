@@ -1,32 +1,32 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:70
+		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access ObsSize
 		/// </summary>
-		public TItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                           // BuildElementItemComponent.cs:74
+		public TItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                           // BuildElementItemComponent.cs:72
 		//- Properties
 
 			//+ Constructor
-			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());// BuildElementItemComponent.cs:59
+			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildElementItemComponent.cs:83
+			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildElementItemComponent.cs:81
 			//- ValidateCode
 
 			//+ WriteCodeStart
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.ObsSize.WriteItemComponent(this.Doc, this.Resource);                                                                                // BuildElementItemComponent.cs:77
+			this.ObsSize.Write(this.Doc, this.Resource);                                                                                             // BuildElementItemComponent.cs:75
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ObsSize.ReadItemComponent(this.Doc, this.Resource);                                                                                 // BuildElementItemComponent.cs:80
+			this.ObsSize.Read(this.Doc, this.Resource);                                                                                              // BuildElementItemComponent.cs:78
 			//- ReadCode
 
 			//+ Methods
