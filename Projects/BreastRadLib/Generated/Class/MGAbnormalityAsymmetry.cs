@@ -88,16 +88,16 @@ namespace BreastRadLib
 		/// Access PreviouslyDemonstratedBy
 		/// </summary>
 		public TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                          // BuildElementItemComponent.cs:74
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AssociatedFeatures
 		/// </summary>
-		public TItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                               // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                               // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access ConsistentWith
 		/// </summary>
-		public TItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                                     // BuildElementItemReference.cs:63
+		public TItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; protected set; }                                                     // BuildElementItemReference.cs:62
 		                                                                                                                                          // BuildElementItemComponent.cs:70
 		/// <summary>
 		/// Access AsymmetryType
@@ -157,8 +157,8 @@ namespace BreastRadLib
 			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:59
 			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("Observation.component:correspondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:59
 			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("Observation.component:PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:59
-			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
-			this.ConsistentWith = new TItemReferenceMultiple<ConsistentWith>("Observation.hasMember:consistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:48
+			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:47
+			this.ConsistentWith = new TItemReferenceMultiple<ConsistentWith>("Observation.hasMember:consistentWith", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");// BuildElementItemReference.cs:47
 			this.AsymmetryType = new TItemComponentSingle<CodeableConcept>("Observation.component:asymmetryType", 0, 1, FixedValue_ObservationComponentAsymmetryTypeCode());// BuildElementItemComponent.cs:59
 			//- Constructor
 		}
@@ -185,8 +185,8 @@ namespace BreastRadLib
 			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildElementItemComponent.cs:83
 			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:83
 			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:83
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:72
-			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildElementItemReference.cs:72
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:71
+			if (this.ConsistentWith.Validate(sb) == false) retVal = false;                                                                           // BuildElementItemReference.cs:71
 			if (this.AsymmetryType.Validate(sb) == false) retVal = false;                                                                            // BuildElementItemComponent.cs:83
 			//- ValidateCode
 			return retVal;
@@ -199,35 +199,23 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearHasMember();
+			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteElement(this.BodySite);                                                                                                        // DefineBase.cs:84
-			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.BiRadsAssessmentCategory);                                                                                      // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.Orientation);                                                                                                   // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.Shape);                                                                                                         // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.Margin);                                                                                                        // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.MgDensity);                                                                                                     // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.NotPreviouslySeen);                                                                                             // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.CorrespondsWith);                                                                                               // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.PreviouslyDemonstratedBy);                                                                                      // BuildElementItemComponent.cs:77
-			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.ConsistentWith);                                                                                               // BuildElementItemReference.cs:66
-			this.WriteComponent(this.AsymmetryType);                                                                                                 // BuildElementItemComponent.cs:77
+			this.ObsChanges.WriteItemComponent(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:77
+			this.BiRadsAssessmentCategory.WriteItemComponent(this.Doc, this.Resource);                                                               // BuildElementItemComponent.cs:77
+			this.Orientation.WriteItemComponent(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:77
+			this.Shape.WriteItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:77
+			this.Margin.WriteItemComponent(this.Doc, this.Resource);                                                                                 // BuildElementItemComponent.cs:77
+			this.MgDensity.WriteItemComponent(this.Doc, this.Resource);                                                                              // BuildElementItemComponent.cs:77
+			this.NotPreviouslySeen.WriteItemComponent(this.Doc, this.Resource);                                                                      // BuildElementItemComponent.cs:77
+			this.ObsCount.WriteItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:77
+			this.CorrespondsWith.WriteItemComponent(this.Doc, this.Resource);                                                                        // BuildElementItemComponent.cs:77
+			this.PreviouslyDemonstratedBy.WriteItemComponent(this.Doc, this.Resource);                                                               // BuildElementItemComponent.cs:77
+			this.AssociatedFeatures.Write(this.Doc, this.Resource);                                                                                  // BuildElementItemReference.cs:65
+			this.ConsistentWith.Write(this.Doc, this.Resource);                                                                                      // BuildElementItemReference.cs:65
+			this.AsymmetryType.WriteItemComponent(this.Doc, this.Resource);                                                                          // BuildElementItemComponent.cs:77
 			//- WriteCode
 		}
 
@@ -240,20 +228,19 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadElement(this.BodySite);                                                                                                         // DefineBase.cs:81
-			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.BiRadsAssessmentCategory);                                                                                       // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.Orientation);                                                                                                    // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.Shape);                                                                                                          // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.Margin);                                                                                                         // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.MgDensity);                                                                                                      // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.NotPreviouslySeen);                                                                                              // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.CorrespondsWith);                                                                                                // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.PreviouslyDemonstratedBy);                                                                                       // BuildElementItemComponent.cs:80
-			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.ConsistentWith);                                                                                                // BuildElementItemReference.cs:69
-			this.ReadComponent(this.AsymmetryType);                                                                                                  // BuildElementItemComponent.cs:80
+			this.ObsChanges.ReadItemComponent(this.Doc, this.Resource);                                                                              // BuildElementItemComponent.cs:80
+			this.BiRadsAssessmentCategory.ReadItemComponent(this.Doc, this.Resource);                                                                // BuildElementItemComponent.cs:80
+			this.Orientation.ReadItemComponent(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:80
+			this.Shape.ReadItemComponent(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:80
+			this.Margin.ReadItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:80
+			this.MgDensity.ReadItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:80
+			this.NotPreviouslySeen.ReadItemComponent(this.Doc, this.Resource);                                                                       // BuildElementItemComponent.cs:80
+			this.ObsCount.ReadItemComponent(this.Doc, this.Resource);                                                                                // BuildElementItemComponent.cs:80
+			this.CorrespondsWith.ReadItemComponent(this.Doc, this.Resource);                                                                         // BuildElementItemComponent.cs:80
+			this.PreviouslyDemonstratedBy.ReadItemComponent(this.Doc, this.Resource);                                                                // BuildElementItemComponent.cs:80
+			this.AssociatedFeatures.Read(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:68
+			this.ConsistentWith.Read(this.Doc, this.Resource);                                                                                       // BuildElementItemReference.cs:68
+			this.AsymmetryType.ReadItemComponent(this.Doc, this.Resource);                                                                           // BuildElementItemComponent.cs:80
 			//- ReadCode
 		}
 

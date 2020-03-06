@@ -17,16 +17,16 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildElementItemComponent.cs:77
+			this.ObsCount.WriteItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:77
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildElementItemComponent.cs:80
+			this.ObsCount.ReadItemComponent(this.Doc, this.Resource);                                                                                // BuildElementItemComponent.cs:80
 			//- ReadCode
 
 			//+ Methods

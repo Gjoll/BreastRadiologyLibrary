@@ -113,15 +113,12 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearHasMember();
+			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteElement(this.BodySite);                                                                                                        // DefineBase.cs:84
-			this.WriteComponent(this.ObsCount);                                                                                                      // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.FeatureType);                                                                                                   // BuildElementItemComponent.cs:77
+			this.ObsCount.WriteItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:77
+			this.FeatureType.WriteItemComponent(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:77
 			//- WriteCode
 		}
 
@@ -134,9 +131,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadElement(this.BodySite);                                                                                                         // DefineBase.cs:81
-			this.ReadComponent(this.ObsCount);                                                                                                       // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.FeatureType);                                                                                                    // BuildElementItemComponent.cs:80
+			this.ObsCount.ReadItemComponent(this.Doc, this.Resource);                                                                                // BuildElementItemComponent.cs:80
+			this.FeatureType.ReadItemComponent(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:80
 			//- ReadCode
 		}
 

@@ -94,7 +94,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

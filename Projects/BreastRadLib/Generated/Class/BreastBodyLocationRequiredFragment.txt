@@ -14,13 +14,11 @@
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteElement(this.BodySite);                                                                                                        // DefineBase.cs:84
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadElement(this.BodySite);                                                                                                         // DefineBase.cs:81
 			//- ReadCode
 
 			//+ Methods

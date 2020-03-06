@@ -24,18 +24,18 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsDistribution);                                                                                               // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.ObsDistRegionSize);                                                                                             // BuildElementItemComponent.cs:77
+			this.ObsDistribution.WriteItemComponent(this.Doc, this.Resource);                                                                        // BuildElementItemComponent.cs:77
+			this.ObsDistRegionSize.WriteItemComponent(this.Doc, this.Resource);                                                                      // BuildElementItemComponent.cs:77
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsDistribution);                                                                                                // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.ObsDistRegionSize);                                                                                              // BuildElementItemComponent.cs:80
+			this.ObsDistribution.ReadItemComponent(this.Doc, this.Resource);                                                                         // BuildElementItemComponent.cs:80
+			this.ObsDistRegionSize.ReadItemComponent(this.Doc, this.Resource);                                                                       // BuildElementItemComponent.cs:80
 			//- ReadCode
 
 			//+ Methods

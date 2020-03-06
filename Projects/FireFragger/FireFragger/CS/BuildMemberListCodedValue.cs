@@ -153,7 +153,7 @@ namespace FireFragger.CS
             if (this.codeBlocks.ClassEditor != null)
             {
                 this.codeBlocks.ClassWriteCodeStart
-                    ?.AppendCode($"this.ClearComponents();")
+                    ?.AppendLineUnique($"this.ClearComponents();")
                     ;
             }
 

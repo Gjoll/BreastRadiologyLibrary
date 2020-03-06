@@ -25,71 +25,71 @@ namespace BreastRadLib
 	public class MGFinding : ObservationBase, IMGFinding
 	{
 		//+ Properties
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AbnormalityCyst
 		/// </summary>
-		public TItemReferenceMultiple<AbnormalityCyst> AbnormalityCyst { get ; protected set; }                                                   // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<AbnormalityCyst> AbnormalityCyst { get ; protected set; }                                                   // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AbnormalityDuct
 		/// </summary>
-		public TItemReferenceMultiple<AbnormalityDuct> AbnormalityDuct { get ; protected set; }                                                   // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<AbnormalityDuct> AbnormalityDuct { get ; protected set; }                                                   // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AbnormalityForeignObject
 		/// </summary>
-		public TItemReferenceMultiple<AbnormalityForeignObject> AbnormalityForeignObject { get ; protected set; }                                 // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<AbnormalityForeignObject> AbnormalityForeignObject { get ; protected set; }                                 // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AbnormalityLymphNode
 		/// </summary>
-		public TItemReferenceMultiple<AbnormalityLymphNode> AbnormalityLymphNode { get ; protected set; }                                         // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<AbnormalityLymphNode> AbnormalityLymphNode { get ; protected set; }                                         // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AbnormalityMass
 		/// </summary>
-		public TItemReferenceMultiple<AbnormalityMass> AbnormalityMass { get ; protected set; }                                                   // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<AbnormalityMass> AbnormalityMass { get ; protected set; }                                                   // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AssociatedFeatures
 		/// </summary>
-		public TItemReferenceMultiple<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                             // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                             // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AbnormalityFibroadenoma
 		/// </summary>
-		public TItemReferenceMultiple<AbnormalityFibroadenoma> AbnormalityFibroadenoma { get ; protected set; }                                   // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<AbnormalityFibroadenoma> AbnormalityFibroadenoma { get ; protected set; }                                   // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		public TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; protected set; }         // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; protected set; }         // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access MGAbnormalityAsymmetry
 		/// </summary>
-		public TItemReferenceMultiple<MGAbnormalityAsymmetry> MGAbnormalityAsymmetry { get ; protected set; }                                     // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<MGAbnormalityAsymmetry> MGAbnormalityAsymmetry { get ; protected set; }                                     // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access MGAbnormalityCalcification
 		/// </summary>
-		public TItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; protected set; }                             // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; protected set; }                             // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access MGAbnormalityDensity
 		/// </summary>
-		public TItemReferenceMultiple<MGAbnormalityDensity> MGAbnormalityDensity { get ; protected set; }                                         // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<MGAbnormalityDensity> MGAbnormalityDensity { get ; protected set; }                                         // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access MGAbnormalityFatNecrosis
 		/// </summary>
-		public TItemReferenceMultiple<MGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis { get ; protected set; }                                 // BuildElementItemReference.cs:63
-		                                                                                                                                          // BuildElementItemReference.cs:59
+		public TItemReferenceMultiple<MGAbnormalityFatNecrosis> MGAbnormalityFatNecrosis { get ; protected set; }                                 // BuildElementItemReference.cs:62
+		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access MGBreastDensity
 		/// </summary>
-		public TItemReferenceSingle<MGBreastDensity> MGBreastDensity { get ; protected set; }                                                     // BuildElementItemReference.cs:63
+		public TItemReferenceSingle<MGBreastDensity> MGBreastDensity { get ; protected set; }                                                     // BuildElementItemReference.cs:62
 		//- Properties
 
 		/// <summary>
@@ -133,19 +133,19 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // DefineBase.cs:219
-			this.AbnormalityCyst = new TItemReferenceMultiple<AbnormalityCyst>("Observation.hasMember:abnormalityCyst", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");// BuildElementItemReference.cs:48
-			this.AbnormalityDuct = new TItemReferenceMultiple<AbnormalityDuct>("Observation.hasMember:abnormalityDuct", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");// BuildElementItemReference.cs:48
-			this.AbnormalityForeignObject = new TItemReferenceMultiple<AbnormalityForeignObject>("Observation.hasMember:abnormalityForeignObject", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");// BuildElementItemReference.cs:48
-			this.AbnormalityLymphNode = new TItemReferenceMultiple<AbnormalityLymphNode>("Observation.hasMember:abnormalityLymphNode", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");// BuildElementItemReference.cs:48
-			this.AbnormalityMass = new TItemReferenceMultiple<AbnormalityMass>("Observation.hasMember:abnormalityMass", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");// BuildElementItemReference.cs:48
-			this.AssociatedFeatures = new TItemReferenceMultiple<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:48
-			this.AbnormalityFibroadenoma = new TItemReferenceMultiple<AbnormalityFibroadenoma>("Observation.hasMember:abnormalityFibroadenoma", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");// BuildElementItemReference.cs:48
-			this.MGAbnormalityArchitecturalDistortion = new TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion>("Observation.hasMember:mGAbnormalityArchitecturalDistortion", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");// BuildElementItemReference.cs:48
-			this.MGAbnormalityAsymmetry = new TItemReferenceMultiple<MGAbnormalityAsymmetry>("Observation.hasMember:mGAbnormalityAsymmetry", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");// BuildElementItemReference.cs:48
-			this.MGAbnormalityCalcification = new TItemReferenceMultiple<MGAbnormalityCalcification>("Observation.hasMember:mGAbnormalityCalcification", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");// BuildElementItemReference.cs:48
-			this.MGAbnormalityDensity = new TItemReferenceMultiple<MGAbnormalityDensity>("Observation.hasMember:mGAbnormalityDensity", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");// BuildElementItemReference.cs:48
-			this.MGAbnormalityFatNecrosis = new TItemReferenceMultiple<MGAbnormalityFatNecrosis>("Observation.hasMember:mGAbnormalityFatNecrosis", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");// BuildElementItemReference.cs:48
-			this.MGBreastDensity = new TItemReferenceSingle<MGBreastDensity>("Observation.hasMember:mGBreastDensity", 1, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");// BuildElementItemReference.cs:48
+			this.AbnormalityCyst = new TItemReferenceMultiple<AbnormalityCyst>("Observation.hasMember:abnormalityCyst", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");// BuildElementItemReference.cs:47
+			this.AbnormalityDuct = new TItemReferenceMultiple<AbnormalityDuct>("Observation.hasMember:abnormalityDuct", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");// BuildElementItemReference.cs:47
+			this.AbnormalityForeignObject = new TItemReferenceMultiple<AbnormalityForeignObject>("Observation.hasMember:abnormalityForeignObject", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");// BuildElementItemReference.cs:47
+			this.AbnormalityLymphNode = new TItemReferenceMultiple<AbnormalityLymphNode>("Observation.hasMember:abnormalityLymphNode", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");// BuildElementItemReference.cs:47
+			this.AbnormalityMass = new TItemReferenceMultiple<AbnormalityMass>("Observation.hasMember:abnormalityMass", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");// BuildElementItemReference.cs:47
+			this.AssociatedFeatures = new TItemReferenceMultiple<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:47
+			this.AbnormalityFibroadenoma = new TItemReferenceMultiple<AbnormalityFibroadenoma>("Observation.hasMember:abnormalityFibroadenoma", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");// BuildElementItemReference.cs:47
+			this.MGAbnormalityArchitecturalDistortion = new TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion>("Observation.hasMember:mGAbnormalityArchitecturalDistortion", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");// BuildElementItemReference.cs:47
+			this.MGAbnormalityAsymmetry = new TItemReferenceMultiple<MGAbnormalityAsymmetry>("Observation.hasMember:mGAbnormalityAsymmetry", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");// BuildElementItemReference.cs:47
+			this.MGAbnormalityCalcification = new TItemReferenceMultiple<MGAbnormalityCalcification>("Observation.hasMember:mGAbnormalityCalcification", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification");// BuildElementItemReference.cs:47
+			this.MGAbnormalityDensity = new TItemReferenceMultiple<MGAbnormalityDensity>("Observation.hasMember:mGAbnormalityDensity", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");// BuildElementItemReference.cs:47
+			this.MGAbnormalityFatNecrosis = new TItemReferenceMultiple<MGAbnormalityFatNecrosis>("Observation.hasMember:mGAbnormalityFatNecrosis", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");// BuildElementItemReference.cs:47
+			this.MGBreastDensity = new TItemReferenceSingle<MGBreastDensity>("Observation.hasMember:mGBreastDensity", 1, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");// BuildElementItemReference.cs:47
 			//- Constructor
 		}
 
@@ -161,19 +161,19 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.AbnormalityCyst.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:72
-			if (this.AbnormalityDuct.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:72
-			if (this.AbnormalityForeignObject.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemReference.cs:72
-			if (this.AbnormalityLymphNode.Validate(sb) == false) retVal = false;                                                                     // BuildElementItemReference.cs:72
-			if (this.AbnormalityMass.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:72
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:72
-			if (this.AbnormalityFibroadenoma.Validate(sb) == false) retVal = false;                                                                  // BuildElementItemReference.cs:72
-			if (this.MGAbnormalityArchitecturalDistortion.Validate(sb) == false) retVal = false;                                                     // BuildElementItemReference.cs:72
-			if (this.MGAbnormalityAsymmetry.Validate(sb) == false) retVal = false;                                                                   // BuildElementItemReference.cs:72
-			if (this.MGAbnormalityCalcification.Validate(sb) == false) retVal = false;                                                               // BuildElementItemReference.cs:72
-			if (this.MGAbnormalityDensity.Validate(sb) == false) retVal = false;                                                                     // BuildElementItemReference.cs:72
-			if (this.MGAbnormalityFatNecrosis.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemReference.cs:72
-			if (this.MGBreastDensity.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:72
+			if (this.AbnormalityCyst.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:71
+			if (this.AbnormalityDuct.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:71
+			if (this.AbnormalityForeignObject.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemReference.cs:71
+			if (this.AbnormalityLymphNode.Validate(sb) == false) retVal = false;                                                                     // BuildElementItemReference.cs:71
+			if (this.AbnormalityMass.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:71
+			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:71
+			if (this.AbnormalityFibroadenoma.Validate(sb) == false) retVal = false;                                                                  // BuildElementItemReference.cs:71
+			if (this.MGAbnormalityArchitecturalDistortion.Validate(sb) == false) retVal = false;                                                     // BuildElementItemReference.cs:71
+			if (this.MGAbnormalityAsymmetry.Validate(sb) == false) retVal = false;                                                                   // BuildElementItemReference.cs:71
+			if (this.MGAbnormalityCalcification.Validate(sb) == false) retVal = false;                                                               // BuildElementItemReference.cs:71
+			if (this.MGAbnormalityDensity.Validate(sb) == false) retVal = false;                                                                     // BuildElementItemReference.cs:71
+			if (this.MGAbnormalityFatNecrosis.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemReference.cs:71
+			if (this.MGBreastDensity.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:71
 			//- ValidateCode
 			return retVal;
 		}
@@ -185,23 +185,23 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
+			this.ClearComponent();
+			this.ClearHasMember();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMembers(this.AbnormalityCyst);                                                                                              // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.AbnormalityDuct);                                                                                              // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.AbnormalityForeignObject);                                                                                     // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.AbnormalityLymphNode);                                                                                         // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.AbnormalityMass);                                                                                              // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.AssociatedFeatures);                                                                                           // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.AbnormalityFibroadenoma);                                                                                      // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.MGAbnormalityArchitecturalDistortion);                                                                         // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.MGAbnormalityAsymmetry);                                                                                       // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.MGAbnormalityCalcification);                                                                                   // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.MGAbnormalityDensity);                                                                                         // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.MGAbnormalityFatNecrosis);                                                                                     // BuildElementItemReference.cs:66
-			this.WriteHasMembers(this.MGBreastDensity);                                                                                              // BuildElementItemReference.cs:66
+			this.AbnormalityCyst.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemReference.cs:65
+			this.AbnormalityDuct.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemReference.cs:65
+			this.AbnormalityForeignObject.Write(this.Doc, this.Resource);                                                                            // BuildElementItemReference.cs:65
+			this.AbnormalityLymphNode.Write(this.Doc, this.Resource);                                                                                // BuildElementItemReference.cs:65
+			this.AbnormalityMass.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemReference.cs:65
+			this.AssociatedFeatures.Write(this.Doc, this.Resource);                                                                                  // BuildElementItemReference.cs:65
+			this.AbnormalityFibroadenoma.Write(this.Doc, this.Resource);                                                                             // BuildElementItemReference.cs:65
+			this.MGAbnormalityArchitecturalDistortion.Write(this.Doc, this.Resource);                                                                // BuildElementItemReference.cs:65
+			this.MGAbnormalityAsymmetry.Write(this.Doc, this.Resource);                                                                              // BuildElementItemReference.cs:65
+			this.MGAbnormalityCalcification.Write(this.Doc, this.Resource);                                                                          // BuildElementItemReference.cs:65
+			this.MGAbnormalityDensity.Write(this.Doc, this.Resource);                                                                                // BuildElementItemReference.cs:65
+			this.MGAbnormalityFatNecrosis.Write(this.Doc, this.Resource);                                                                            // BuildElementItemReference.cs:65
+			this.MGBreastDensity.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemReference.cs:65
 			//- WriteCode
 		}
 
@@ -214,19 +214,19 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMembers(this.AbnormalityCyst);                                                                                               // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.AbnormalityDuct);                                                                                               // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.AbnormalityForeignObject);                                                                                      // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.AbnormalityLymphNode);                                                                                          // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.AbnormalityMass);                                                                                               // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.AssociatedFeatures);                                                                                            // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.AbnormalityFibroadenoma);                                                                                       // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.MGAbnormalityArchitecturalDistortion);                                                                          // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.MGAbnormalityAsymmetry);                                                                                        // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.MGAbnormalityCalcification);                                                                                    // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.MGAbnormalityDensity);                                                                                          // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.MGAbnormalityFatNecrosis);                                                                                      // BuildElementItemReference.cs:69
-			this.ReadHasMembers(this.MGBreastDensity);                                                                                               // BuildElementItemReference.cs:69
+			this.AbnormalityCyst.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemReference.cs:68
+			this.AbnormalityDuct.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemReference.cs:68
+			this.AbnormalityForeignObject.Read(this.Doc, this.Resource);                                                                             // BuildElementItemReference.cs:68
+			this.AbnormalityLymphNode.Read(this.Doc, this.Resource);                                                                                 // BuildElementItemReference.cs:68
+			this.AbnormalityMass.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemReference.cs:68
+			this.AssociatedFeatures.Read(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:68
+			this.AbnormalityFibroadenoma.Read(this.Doc, this.Resource);                                                                              // BuildElementItemReference.cs:68
+			this.MGAbnormalityArchitecturalDistortion.Read(this.Doc, this.Resource);                                                                 // BuildElementItemReference.cs:68
+			this.MGAbnormalityAsymmetry.Read(this.Doc, this.Resource);                                                                               // BuildElementItemReference.cs:68
+			this.MGAbnormalityCalcification.Read(this.Doc, this.Resource);                                                                           // BuildElementItemReference.cs:68
+			this.MGAbnormalityDensity.Read(this.Doc, this.Resource);                                                                                 // BuildElementItemReference.cs:68
+			this.MGAbnormalityFatNecrosis.Read(this.Doc, this.Resource);                                                                             // BuildElementItemReference.cs:68
+			this.MGBreastDensity.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemReference.cs:68
 			//- ReadCode
 		}
 

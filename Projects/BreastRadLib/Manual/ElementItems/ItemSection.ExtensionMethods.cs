@@ -11,36 +11,12 @@ namespace BreastRadLib
         public static Composition.SectionComponent FindSection(this IItemSection itemSection,
             Resource resource)
         {
-            bool IsCode(CodeableConcept sectionCode)
-            {
-                foreach (Coding c in sectionCode.Coding)
-                {
-                    foreach (Coding d in itemSection.Code.Coding)
-                    {
-                        if (
-                            (String.Compare(c.System, d.System, true) == 0) &&
-                            (String.Compare(c.Code, d.Code, true) == 0)
-                            )
-                            return true;
-                    }
-                }
-                return false;
-            }
-
             foreach (Composition.SectionComponent section in itemSection.GetResourceValues<Composition.SectionComponent>(resource))
             {
-                if (IsCode(section.Code))
+                if (ItemExtensionMethods.IsCode(section.Code, itemSection.Code))
                     return section;
             }
             return null;
-        }
-
-        public static void CheckCardinality(this IItemSection itemSection)
-        {
-            if (itemSection.Count < itemSection.Min)
-                throw new Exception($"Error writing Composition.section '{itemSection.Title}'. Min cardinality sb {itemSection.Min}, is {itemSection.Count}");
-            if ((itemSection.Max > 0) && (itemSection.Count > itemSection.Max))
-                throw new Exception($"Error writing Composition.section '{itemSection.Title}'. Max cardinality sb {itemSection.Max}, is {itemSection.Count}");
         }
 
         public static void ReadItemSection(this IItemSection itemSection, 

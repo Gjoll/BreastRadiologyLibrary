@@ -38,22 +38,22 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Orientation);                                                                                                   // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.Shape);                                                                                                         // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.Margin);                                                                                                        // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.MgDensity);                                                                                                     // BuildElementItemComponent.cs:77
+			this.Orientation.WriteItemComponent(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:77
+			this.Shape.WriteItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:77
+			this.Margin.WriteItemComponent(this.Doc, this.Resource);                                                                                 // BuildElementItemComponent.cs:77
+			this.MgDensity.WriteItemComponent(this.Doc, this.Resource);                                                                              // BuildElementItemComponent.cs:77
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Orientation);                                                                                                    // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.Shape);                                                                                                          // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.Margin);                                                                                                         // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.MgDensity);                                                                                                      // BuildElementItemComponent.cs:80
+			this.Orientation.ReadItemComponent(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:80
+			this.Shape.ReadItemComponent(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:80
+			this.Margin.ReadItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:80
+			this.MgDensity.ReadItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:80
 			//- ReadCode
 
 			//+ Methods

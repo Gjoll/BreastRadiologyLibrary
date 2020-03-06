@@ -130,7 +130,7 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearSection();                                                                                                                     // BuildElementItemSection.cs:93
+			this.ClearSection();
 			//- WriteCodeStart
 			//+ WriteCode
 			this.Report.WriteItemSection(this.Doc, this.Resource);                                                                                   // BuildElementItemSection.cs:78

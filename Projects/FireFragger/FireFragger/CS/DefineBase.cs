@@ -77,12 +77,12 @@ namespace FireFragger.CS
             this.fragBase.ClassConstructor
                 .AppendCode($"this.BodySite = new TItemElementSingle<BodySiteExtended>(\"BodySite\", {min}, {max});")
                 ;
-            this.fragBase.ClassReadCode
-                .AppendCode($"this.ReadElement(this.BodySite);")
-                ;
-            this.fragBase.ClassWriteCode
-                .AppendCode($"this.WriteElement(this.BodySite);")
-                ;
+            //$this.fragBase.ClassReadCode
+            //$    .AppendCode($"this.ReadElement(this.BodySite);")
+            //$;
+            //$this.fragBase.ClassWriteCode
+            //$    .AppendCode($"this.WriteElement(this.BodySite);")
+            //$;
         }
 
         public virtual void Build()

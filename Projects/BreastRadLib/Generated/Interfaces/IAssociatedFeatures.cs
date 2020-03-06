@@ -21,15 +21,15 @@ namespace BreastRadLib
 		/// <summary>
 		/// Access MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; }                               // BuildElementItemReference.cs:55
+		TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion> MGAbnormalityArchitecturalDistortion { get ; }                               // BuildElementItemReference.cs:54
 		/// <summary>
 		/// Access MGAbnormalityCalcification
 		/// </summary>
-		TItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; }                                                   // BuildElementItemReference.cs:55
+		TItemReferenceMultiple<MGAbnormalityCalcification> MGAbnormalityCalcification { get ; }                                                   // BuildElementItemReference.cs:54
 		/// <summary>
 		/// Access ObservedFeature
 		/// </summary>
-		TItemReferenceMultiple<ObservedFeature> ObservedFeature { get ; }                                                                         // BuildElementItemReference.cs:55
+		TItemReferenceMultiple<ObservedFeature> ObservedFeature { get ; }                                                                         // BuildElementItemReference.cs:54
 		//- Properties
 
 		//+ Methods

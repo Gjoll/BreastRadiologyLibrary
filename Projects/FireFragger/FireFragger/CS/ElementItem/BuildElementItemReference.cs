@@ -16,14 +16,13 @@ namespace FireFragger.CS
     {
         protected ElementTreeNode memberNode;
         protected String MemberName => this.memberNode.Path.LastPathPart().ToMachineName();
-        String suffix;
+
         public BuildItemReference(DefineBase defineBase,
             ClassCodeBlocks fragBase,
             String type,
             ElementTreeNode memberNode) : base(defineBase, fragBase, type)
         {
             this.memberNode = memberNode;
-            this.suffix = type;
         }
 
         void DefineProperty(ElementTreeSlice memberSlice,
@@ -63,10 +62,10 @@ namespace FireFragger.CS
                 .AppendCode($"public {propertyClass} {propertyName} {{ get ; protected set; }}")
                 ;
             this.codeBlocks.ClassWriteCode
-                .AppendCode($"this.Write{this.suffix}(this.{propertyName});")
+                .AppendCode($"this.{propertyName}.Write(this.Doc, this.Resource);")
                 ;
             this.codeBlocks.ClassReadCode
-                .AppendCode($"this.Read{this.suffix}(this.{propertyName});")
+                .AppendCode($"this.{propertyName}.Read(this.Doc, this.Resource);")
                 ;
             this.codeBlocks.ClassValidateCode
                 .AppendCode($"if (this.{propertyName}.Validate(sb) == false) retVal = false;")
@@ -78,7 +77,7 @@ namespace FireFragger.CS
             if (this.codeBlocks.ClassEditor != null)
             {
                 this.codeBlocks.ClassWriteCodeStart
-                    ?.AppendCode($"this.Clear{this.MemberName}();")
+                    ?.AppendUniqueLine($"this.Clear{this.MemberName}();")
                     ;
             }
 

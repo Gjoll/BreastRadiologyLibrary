@@ -109,13 +109,12 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildElementItemReference.cs:81
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
-			this.ClearComponent();                                                                                                                   // BuildElementItemComponent.cs:92
+			this.ClearHasMember();
+			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // BuildElementItemComponent.cs:77
-			this.WriteComponent(this.Qualifier);                                                                                                     // BuildElementItemComponent.cs:77
+			this.Value.WriteItemComponent(this.Doc, this.Resource);                                                                                  // BuildElementItemComponent.cs:77
+			this.Qualifier.WriteItemComponent(this.Doc, this.Resource);                                                                              // BuildElementItemComponent.cs:77
 			//- WriteCode
 		}
 
@@ -128,8 +127,8 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // BuildElementItemComponent.cs:80
-			this.ReadComponent(this.Qualifier);                                                                                                      // BuildElementItemComponent.cs:80
+			this.Value.ReadItemComponent(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:80
+			this.Qualifier.ReadItemComponent(this.Doc, this.Resource);                                                                               // BuildElementItemComponent.cs:80
 			//- ReadCode
 		}
 
