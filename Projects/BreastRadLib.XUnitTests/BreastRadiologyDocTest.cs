@@ -63,6 +63,7 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void B_Composition_Sections()
         {
+            GlobalSettings.IgnoreCardinalityErrors = true;
             Bundle b;
             {
                 BreastRadiologyDocument doc = MakeDoc();
@@ -141,6 +142,7 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void C_Observation_ComponentTest()
         {
+            GlobalSettings.IgnoreCardinalityErrors = true;
             Bundle b;
             {
                 BreastRadiologyDocument doc = MakeDoc();
@@ -177,6 +179,7 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void D_Observation_HasMemberTest()
         {
+            GlobalSettings.IgnoreCardinalityErrors = true;
             Bundle b;
             {
                 BreastRadiologyDocument doc = MakeDoc();
