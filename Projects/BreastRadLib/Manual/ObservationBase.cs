@@ -49,7 +49,7 @@ namespace BreastRadLib
             List<ResourceBase> items = new List<ResourceBase>();
             foreach (ResourceReference resRef in this.Resource.HasMember)
             {
-                Observation referencedResource = this.ReferencedResource<Observation>(resRef);
+                Observation referencedResource = this.Doc.ReferencedResource<Observation>(resRef);
                 String profile = referencedResource.Meta.Profile.First();
                 if (BLMisc.SameUrl(profile, hasMemberList.ProfileUrl))
                 {

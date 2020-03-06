@@ -75,10 +75,10 @@ namespace FireFragger.CS
                 .AppendCode($"public {propertyClass} {propertyName} {{ get ; protected set; }}")
                 ;
             this.codeBlocks.ClassWriteCode
-                .AppendCode($"this.Write{this.suffix}(this.{propertyName});")
+                .AppendCode($"this.{propertyName}.WriteItem{this.suffix}(this.Doc, this.Resource);")
                 ;
             this.codeBlocks.ClassReadCode
-                .AppendCode($"this.Read{this.suffix}(this.{propertyName});")
+                .AppendCode($"this.{propertyName}.ReadItem{this.suffix}(this.Doc, this.Resource);")
                 ;
             this.codeBlocks.ClassValidateCode
                 .AppendCode($"if (this.{propertyName}.Validate(sb) == false) retVal = false;")

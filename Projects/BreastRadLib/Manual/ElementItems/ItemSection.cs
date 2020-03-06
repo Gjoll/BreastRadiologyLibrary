@@ -143,6 +143,18 @@ namespace BreastRadLib
             this.Code = code;
         }
 
+        public void Write(BreastRadiologyDocument doc,
+            Resource resource)
+        {
+            this.WriteItemSection(doc, resource);
+        }
+
+        public void Read(BreastRadiologyDocument doc,
+            Resource resource)
+        {
+            this.ReadItemSection(doc, resource);
+        }
+
         public IEnumerable<ResourceBase> GetElements()
         {
             foreach (var item in this.items)
@@ -152,7 +164,7 @@ namespace BreastRadLib
         public void SetElements(IEnumerable<ResourceBase> items)
         {
             foreach (var item in items)
-                this.items.Add((TBase)item);
+                this.items.Add((TBase) item);
         }
     }
 
@@ -194,11 +206,11 @@ namespace BreastRadLib
             return item;
         }
 
-        public TItemSectionMultiple(String fhirPath,
+        public TItemSectionMultiple(String listName,
             Int32 min,
             Int32 max,
             String title,
-            CodeableConcept code) : base(fhirPath, min, max)
+            CodeableConcept code) : base(listName, min, max)
         {
             this.Title = title;
             this.Code = code;

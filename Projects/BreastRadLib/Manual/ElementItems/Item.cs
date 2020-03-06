@@ -1,7 +1,9 @@
-﻿using Hl7.Fhir.Model;
+﻿using Hl7.Fhir.Introspection;
+using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace BreastRadLib
@@ -15,6 +17,10 @@ namespace BreastRadLib
         Int32 Count { get; }
         Int32 Min { get; }
         Int32 Max { get; }
+
+        void SetResourceValues<T>(Resource resource, IEnumerable<T> items);
+
+        public IEnumerable<T> GetResourceValues<T>(Resource resource);
     }
 
     /// <summary>
@@ -58,6 +64,74 @@ namespace BreastRadLib
         }
 
         public abstract bool Validate(StringBuilder sb);
+
+        PropertyInfo PInfo(Resource resource, String fhirName)
+        {
+            foreach (var propertyInfo in resource.GetType().GetProperties())
+            {
+                object[] attributes = propertyInfo.GetCustomAttributes(typeof(FhirElementAttribute), false);
+                foreach (FhirElementAttribute attribute in attributes)
+                {
+                    if (String.Compare(attribute.Name, fhirName, StringComparison.OrdinalIgnoreCase) == 0)
+                        return propertyInfo;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Write all the elements of the fhir element.
+        /// </summary>
+        public void SetResourceValues<T>(Resource resource, IEnumerable<T> items)
+        {
+            if (items.Count() == 0)
+                return;
+
+            String fhirPath = this.FhirPath.RemoveSliceNames();
+            String fhirName = fhirPath.LastPathPart();
+
+            PropertyInfo pInfo = PInfo(resource, fhirName);
+            if (pInfo == null)
+                throw new Exception($"Internal error. {fhirName} not found in {resource.GetType().Name}");
+            if (pInfo.PropertyType.IsAssignableFrom(typeof(List<T>)))
+            {
+                pInfo.SetValue(resource, items.ToList());
+                return;
+            }
+
+            if (items.Count() > 1)
+                throw new Exception($"Internal error. Can not set single item to multipel value array");
+            pInfo.SetValue(resource, items.First());
+        }
+
+        /// <summary>
+        /// Read all the elements of the fhir element.
+        /// Return their c# instances as an IEnumerable.
+        /// </summary>
+        public IEnumerable<T> GetResourceValues<T>(Resource resource)
+        {
+            String fhirPath = this.FhirPath.RemoveSliceNames();
+            String fhirName = fhirPath.LastPathPart();
+
+            PropertyInfo pInfo = PInfo(resource, fhirName);
+            if (pInfo == null)
+                throw new Exception($"Internal error. {fhirName} not found in {resource.GetType().Name}");
+            Object value = pInfo.GetValue(resource);
+            switch (value)
+            {
+                case null:
+                    yield break;
+
+                case System.Collections.IEnumerable list:
+                    foreach (T item in list)
+                        yield return item;
+                    break;
+
+                case T b:
+                    yield return b;
+                    break;
+            }
+        }
     }
 
 
