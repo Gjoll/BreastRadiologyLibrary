@@ -188,8 +188,6 @@ namespace BreastRadiology.XUnitTests
                     SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create(doc);
                     MGFinding mgFinding = findLeft.MGFinding.Create();
                     MGAbnormalityAsymmetry asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
-                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
-                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
                 }
                 b = doc.Write();
             }
@@ -210,11 +208,11 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
-
-
         [TestMethod]
         public void E_Observation_BodySite()
         {
+            GlobalSettings.IgnoreCardinalityErrors = true;
+
             CodeableConcept bodySiteCode = new CodeableConcept("bsSys", "bsCode", "bsDisplay");
             Bundle b;
             {
@@ -225,7 +223,6 @@ namespace BreastRadiology.XUnitTests
                 AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append();
                 BodySiteExtended bodySite = abCyst.BodySite.Create();
                 bodySite.BodySite = bodySiteCode;
-
                 b = doc.Write();
             }
         }

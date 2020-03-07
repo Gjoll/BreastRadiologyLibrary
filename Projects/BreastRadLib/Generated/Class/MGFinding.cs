@@ -131,8 +131,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // DefineBase.cs:219
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // DefineBase.cs:220
 			this.AbnormalityCyst = new TItemReferenceMultiple<AbnormalityCyst>("Observation.hasMember:abnormalityCyst", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst");// BuildElementItemReference.cs:47
 			this.AbnormalityDuct = new TItemReferenceMultiple<AbnormalityDuct>("Observation.hasMember:abnormalityDuct", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");// BuildElementItemReference.cs:47
 			this.AbnormalityForeignObject = new TItemReferenceMultiple<AbnormalityForeignObject>("Observation.hasMember:abnormalityForeignObject", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");// BuildElementItemReference.cs:47

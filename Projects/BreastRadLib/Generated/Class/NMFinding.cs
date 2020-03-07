@@ -66,8 +66,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                                  // DefineBase.cs:219
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");                                                  // DefineBase.cs:220
 			//- Constructor
 		}
 

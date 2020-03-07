@@ -61,7 +61,7 @@ namespace BreastRadLib
 				resource = new ServiceRequest();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // DefineBase.cs:219
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");                                      // DefineBase.cs:220
 			//- Constructor
 		}
 
@@ -109,10 +109,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set ServiceRequest.code to one of the predefined items
 		/// </summary>
-		public void SetCode(RecommendationsVS.TCoding code)                                                                                       // DefineBase.cs:183
-		{                                                                                                                                         // DefineBase.cs:184
-		    this.Resource.Code = (CodeableConcept) code;                                                                                          // DefineBase.cs:186
-		}                                                                                                                                         // DefineBase.cs:189
+		public void SetCode(RecommendationsVS.TCoding code)                                                                                       // DefineBase.cs:184
+		{                                                                                                                                         // DefineBase.cs:185
+		    this.Resource.Code = (CodeableConcept) code;                                                                                          // DefineBase.cs:187
+		}                                                                                                                                         // DefineBase.cs:190
 		//- Methods
 	}
 }

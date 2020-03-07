@@ -60,8 +60,8 @@
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:183
-			{                                                                                                                                        // DefineBase.cs:184
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:186
-			}                                                                                                                                        // DefineBase.cs:189
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:184
+			{                                                                                                                                        // DefineBase.cs:185
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:187
+			}                                                                                                                                        // DefineBase.cs:190
 			//- Methods

@@ -28,7 +28,7 @@ namespace BreastRadLib
 	public class ObservedFeature : ObservationBase, IObservedFeature
 	{
 		//+ Properties
-		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:75
+		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
 		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access ObsCount
@@ -80,9 +80,9 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:219
-			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedFeature");                                            // DefineBase.cs:220
+			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
 			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:57
 			this.FeatureType = new TItemComponentSingle<CodeableConcept>("Observation.component:featureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:57
 			//- Constructor
@@ -117,6 +117,7 @@ namespace BreastRadLib
 			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
+			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
 			this.ObsCount.Write(this.Doc, this.Resource);                                                                                            // BuildElementItemComponent.cs:75
 			this.FeatureType.Write(this.Doc, this.Resource);                                                                                         // BuildElementItemComponent.cs:75
 			//- WriteCode
@@ -131,6 +132,7 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
+			this.BodySite.Read(this.Doc, this.Resource);                                                                                             // DefineBase.cs:82
 			this.ObsCount.Read(this.Doc, this.Resource);                                                                                             // BuildElementItemComponent.cs:78
 			this.FeatureType.Read(this.Doc, this.Resource);                                                                                          // BuildElementItemComponent.cs:78
 			//- ReadCode

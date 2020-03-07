@@ -67,7 +67,11 @@ namespace BreastRadLib
         public IEnumerable<Element> GetElements()
         {
             if (this.Value != null)
-                yield return this.Value.GetElement(); 
+            {
+                Element e = this.Value.GetElement();
+                if (e != null)
+                    yield return e;
+            }
         }
         public void SetElements(IEnumerable<Element> items)
         {

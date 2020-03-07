@@ -10,43 +10,49 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadLib
 {
     /// <summary>
+    /// All simple and complex extensions implement this.
     /// </summary>
-    public interface IExtensionItem : IItem
+    public interface IItemExtension : IItem
     {
         String ExtensionUrl { get; }
     }
 
     /// <summary>
+    /// All simple extensions implement this.
     /// </summary>
-    public interface IComplexExtensionItem
-    {
-        IEnumerable<IExtensionItem> Items();
-    }
-
-    /// <summary>
-    /// Interface for implementing ItemExtension classes.
-    /// </summary>
-    public interface IElementExtensionItem : IExtensionItem
+    public interface IItemExtensionSimple : IItemExtension
     {
         IEnumerable<Element> GetElements();
         void SetElements(IEnumerable<Element> elements);
     }
 
     /// <summary>
-    /// Interface for implementing ItemExtension classes.
     /// </summary>
-    public interface IComplexExtension
+    public interface IItemExtensionComplex : IItemExtension
     {
-        String ExtensionUrl { get; }
-        IEnumerable<IComplexExtensionItem> GetElements();
-        void SetElements(IEnumerable<IComplexExtensionItem> elements);
+        IEnumerable<IItemExtensionComplexInstance> GetElements();
+        void SetElements(IEnumerable<IItemExtensionComplexInstance> elements);
     }
 
+
+
+
     /// <summary>
-    /// Base class for all CodedReference single accessors
+    /// All classes that implement a complex extension instance implement this.
     /// </summary>
-    public class TItemExtensionSingle<TBase> : TItemSingle<TBase>, IElementExtensionItem
-            where TBase : Element, new()
+    public interface IItemExtensionComplexInstance
+    {
+        IEnumerable<IItemExtension> Items();
+    }
+
+
+    /// <summary>
+    /// Simple extension container, with single member.
+    /// </summary>
+    public class TItemExtensionSingle<TBase> :
+        TItemSingle<TBase>,
+        IItemExtension
+        where TBase : Element, new()
     {
         /// <summary>
         /// Get value.
@@ -58,7 +64,6 @@ namespace BreastRadLib
         /// Set value
         /// </summary>
         public void Set(TBase value) => this.Value = value;
-
         public String ExtensionUrl { get; }
 
         /// <summary>
@@ -73,7 +78,6 @@ namespace BreastRadLib
             }
             return this.Value;
         }
-
         public TItemExtensionSingle(String fhirPath,
             Int32 min,
             Int32 max,
@@ -99,9 +103,12 @@ namespace BreastRadLib
     }
 
     /// <summary>
+    /// Simple extension container, with multiple members.
     /// </summary>
-    public class TItemExtensionMultiple<TBase> : TItemMultiple<TBase>, IElementExtensionItem
-            where TBase : Element, new()
+    public class TItemExtensionMultiple<TBase> : 
+        TItemMultiple<TBase>,
+        IItemExtension
+        where TBase : Element, new()
     {
         public String ExtensionUrl { get; }
 
@@ -150,8 +157,8 @@ namespace BreastRadLib
     /// </summary>
     public class TItemExtensionComplexSingle<TBase> : 
         TItemSingle<TBase>, 
-        IComplexExtension
-        where TBase : IComplexExtensionItem, new()
+        IItemExtensionComplex
+        where TBase : IItemExtensionComplexInstance, new()
     {
         /// <summary>
         /// Get value.
@@ -187,12 +194,12 @@ namespace BreastRadLib
             this.ExtensionUrl = extensionUrl;
         }
 
-        public IEnumerable<IComplexExtensionItem> GetElements()
+        public IEnumerable<IItemExtensionComplexInstance> GetElements()
         {
             if (this.Value != null)
                 yield return this.Value;
         }
-        public void SetElements(IEnumerable<IComplexExtensionItem> items)
+        public void SetElements(IEnumerable<IItemExtensionComplexInstance> items)
         {
             switch (items.Count())
             {
@@ -208,8 +215,8 @@ namespace BreastRadLib
     /// </summary>
     public class TItemExtensionComplexMultiple<TBase> : 
         TItemMultiple<TBase>, 
-        IComplexExtension
-        where TBase : IComplexExtensionItem, new()
+        IItemExtensionComplex
+        where TBase : IItemExtensionComplexInstance, new()
     {
         public String ExtensionUrl { get; }
 
@@ -232,13 +239,13 @@ namespace BreastRadLib
             this.ExtensionUrl = extensionUrl;
         }
 
-        public IEnumerable<IComplexExtensionItem> GetElements()
+        public IEnumerable<IItemExtensionComplexInstance> GetElements()
         {
             foreach (var item in this.items)
                 yield return item;
         }
 
-        public void SetElements(IEnumerable<IComplexExtensionItem> items)
+        public void SetElements(IEnumerable<IItemExtensionComplexInstance> items)
         {
             foreach (var item in items)
                 this.items.Add((TBase)item);

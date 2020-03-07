@@ -26,20 +26,22 @@ namespace BreastRadLib
         /// <summary>
         /// Read extension values
         /// </summary>
-        public void Read(Resource resource)
+        public void Read(BreastRadiologyDocument doc, Resource resource)
         {
+            throw new NotImplementedException();
             //base.ReadItems(e);
         }
 
         /// <summary>
         /// Write extension values
         /// </summary>
-        public void Write(Resource resource)
+        public void Write(BreastRadiologyDocument doc, Resource resource)
         {
+            throw new NotImplementedException();
             // return base.WriteItems();
         }
 
-        public Element GetElement() => throw new NotImplementedException();
+        public Element GetElement() => this.BodySite;
         public void SetElement(Element e) => throw new NotImplementedException();
     }
 }

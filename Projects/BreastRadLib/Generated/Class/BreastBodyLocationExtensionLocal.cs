@@ -17,7 +17,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	/// <summary>
 	/// Class that implements the 'BreastBodyLocation' complex extension class.
 	/// </summary>
-	public class BreastBodyLocationExtensionItem : IComplexExtensionItem                                                                       // BuildElementItemExtension.cs:327
+	public class BreastBodyLocationExtensionItem : IItemExtensionComplexInstance                                                               // BuildElementItemExtension.cs:327
 	{                                                                                                                                          // BuildElementItemExtension.cs:328
 	    TItemExtensionSingle<CodeableConcept> Quadrant;                                                                                        // BuildElementItemExtension.cs:484
 	    TItemExtensionMultiple<CodeableConcept> Region;                                                                                        // BuildElementItemExtension.cs:484
@@ -38,7 +38,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    /// <summary>
 	    /// Children
 	    /// </summary>
-	    public IEnumerable<IExtensionItem> Items()                                                                                             // BuildElementItemExtension.cs:342
+	    public IEnumerable<IItemExtension> Items()                                                                                             // BuildElementItemExtension.cs:342
 	    {                                                                                                                                      // BuildElementItemExtension.cs:343
 	        yield return this.Quadrant;                                                                                                        // BuildElementItemExtension.cs:490
 	        yield return this.Region;                                                                                                          // BuildElementItemExtension.cs:490

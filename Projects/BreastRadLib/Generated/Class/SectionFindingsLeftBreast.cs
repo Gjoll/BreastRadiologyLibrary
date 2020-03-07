@@ -85,9 +85,9 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
-			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:158
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:219
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
+			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:159
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:220
 			this.MGFinding = new TItemReferenceSingle<MGFinding>("Observation.hasMember:mGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:47
 			this.MRIFinding = new TItemReferenceSingle<MRIFinding>("Observation.hasMember:mRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:47
 			this.NMFinding = new TItemReferenceSingle<NMFinding>("Observation.hasMember:nMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:47
@@ -194,10 +194,10 @@ namespace BreastRadLib
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:183
-			{                                                                                                                                        // DefineBase.cs:184
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:186
-			}                                                                                                                                        // DefineBase.cs:189
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:184
+			{                                                                                                                                        // DefineBase.cs:185
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:187
+			}                                                                                                                                        // DefineBase.cs:190
 		//- Methods
 	}
 }

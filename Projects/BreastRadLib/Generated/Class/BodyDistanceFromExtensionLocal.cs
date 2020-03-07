@@ -16,7 +16,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	/// <summary>
 	/// Class that implements the 'BodyDistanceFrom' complex extension class.
 	/// </summary>
-	public class BodyDistanceFromExtensionItem : IComplexExtensionItem                                                                         // BuildElementItemExtension.cs:327
+	public class BodyDistanceFromExtensionItem : IItemExtensionComplexInstance                                                                 // BuildElementItemExtension.cs:327
 	{                                                                                                                                          // BuildElementItemExtension.cs:328
 	    TItemExtensionSingle<CodeableConcept> LandMark;                                                                                        // BuildElementItemExtension.cs:484
 	    TItemExtensionSingle<Quantity> DistanceFromLandMark;                                                                                   // BuildElementItemExtension.cs:484
@@ -33,7 +33,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    /// <summary>
 	    /// Children
 	    /// </summary>
-	    public IEnumerable<IExtensionItem> Items()                                                                                             // BuildElementItemExtension.cs:342
+	    public IEnumerable<IItemExtension> Items()                                                                                             // BuildElementItemExtension.cs:342
 	    {                                                                                                                                      // BuildElementItemExtension.cs:343
 	        yield return this.LandMark;                                                                                                        // BuildElementItemExtension.cs:490
 	        yield return this.DistanceFromLandMark;                                                                                            // BuildElementItemExtension.cs:490

@@ -45,7 +45,7 @@ namespace BreastRadLib
 		/// Access TumorSatellite
 		/// </summary>
 		public TItemReferenceMultiple<TumorSatellite> TumorSatellite { get ; protected set; }                                                     // BuildElementItemReference.cs:62
-		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:75
+		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
 		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access ObsChanges
@@ -167,10 +167,10 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:158
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // DefineBase.cs:219
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // DefineBase.cs:220
 			this.TumorSatellite = new TItemReferenceMultiple<TumorSatellite>("Observation.hasMember:tumorSatellite", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");// BuildElementItemReference.cs:47
-			this.BodySite = new TItemElementSingle<BodySiteExtended>("BodySite", 1, 1);                                                              // DefineBase.cs:78
+			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
 			this.ObsChanges = new TItemComponentMultiple<CodeableConcept>("Observation.component:obsChanges", 0, -1, FixedValue_ObservationComponentObsChangesCode());// BuildElementItemComponent.cs:57
 			this.BiRadsAssessmentCategory = new TItemComponentSingle<CodeableConcept>("Observation.component:biRadsAssessmentCategory", 0, 1, FixedValue_ObservationComponentBiRadsAssessmentCategoryCode());// BuildElementItemComponent.cs:57
 			this.Orientation = new TItemComponentSingle<CodeableConcept>("Observation.component:orientation", 0, 1, FixedValue_ObservationComponentOrientationCode());// BuildElementItemComponent.cs:57
@@ -235,6 +235,7 @@ namespace BreastRadLib
 			//- WriteCodeStart
 			//+ WriteCode
 			this.TumorSatellite.Write(this.Doc, this.Resource);                                                                                      // BuildElementItemReference.cs:65
+			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
 			this.ObsChanges.Write(this.Doc, this.Resource);                                                                                          // BuildElementItemComponent.cs:75
 			this.BiRadsAssessmentCategory.Write(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:75
 			this.Orientation.Write(this.Doc, this.Resource);                                                                                         // BuildElementItemComponent.cs:75
@@ -264,6 +265,7 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			this.TumorSatellite.Read(this.Doc, this.Resource);                                                                                       // BuildElementItemReference.cs:68
+			this.BodySite.Read(this.Doc, this.Resource);                                                                                             // DefineBase.cs:82
 			this.ObsChanges.Read(this.Doc, this.Resource);                                                                                           // BuildElementItemComponent.cs:78
 			this.BiRadsAssessmentCategory.Read(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:78
 			this.Orientation.Read(this.Doc, this.Resource);                                                                                          // BuildElementItemComponent.cs:78

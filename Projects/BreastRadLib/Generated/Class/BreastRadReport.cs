@@ -62,8 +62,8 @@ namespace BreastRadLib
 				resource = new DiagnosticReport();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_DiagnosticReportCode();                                                                                  // DefineBase.cs:158
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:219
+			this.Resource.Code = FixedValue_DiagnosticReportCode();                                                                                  // DefineBase.cs:159
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport");                                            // DefineBase.cs:220
 			//- Constructor
 		}
 
@@ -128,10 +128,10 @@ namespace BreastRadLib
 		/// <summary>
 		/// Set DiagnosticReport.conclusionCode to one of the predefined items
 		/// </summary>
-		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:183
-		{                                                                                                                                         // DefineBase.cs:184
-		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:187
-		}                                                                                                                                         // DefineBase.cs:189
+		public void SetConclusionCode(BiRadsAssessmentCategoriesVS.TCoding code)                                                                  // DefineBase.cs:184
+		{                                                                                                                                         // DefineBase.cs:185
+		    this.Resource.ConclusionCode.Add((CodeableConcept) code);                                                                             // DefineBase.cs:188
+		}                                                                                                                                         // DefineBase.cs:190
 		//- Methods
 	}
 }
