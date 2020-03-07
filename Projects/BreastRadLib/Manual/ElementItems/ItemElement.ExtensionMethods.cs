@@ -12,7 +12,7 @@ namespace BreastRadLib
             BreastRadiologyDocument doc,
             Resource resource)
         {
-            throw new NotImplementedException();
+            //$throw new NotImplementedException();
             //List<ResourceBase> items = new List<ResourceBase>();
             //foreach (ResourceElement resRef in itemElement.GetResourceValues<ResourceElement>(resource))
             //{

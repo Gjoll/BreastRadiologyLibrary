@@ -41,7 +41,17 @@ namespace BreastRadLib
             // return base.WriteItems();
         }
 
-        public Element GetElement() => this.BodySite;
+        public Element GetElement()
+        {
+            Element retVal = this.BodySite;
+            if (retVal == null)
+                throw new Exception($"Invalid empty element value");
+            foreach (IItemExtensionComplexInstance extensionItem in this.BreastBodyLocation.GetElements())
+            {
+
+            }
+            return retVal;
+        }
         public void SetElement(Element e) => throw new NotImplementedException();
     }
 }

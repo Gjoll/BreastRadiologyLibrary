@@ -188,6 +188,8 @@ namespace BreastRadiology.XUnitTests
                     SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Create(doc);
                     MGFinding mgFinding = findLeft.MGFinding.Create();
                     MGAbnormalityAsymmetry asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
+                    asymmetry = mgFinding.MGAbnormalityAsymmetry.Append();
                 }
                 b = doc.Write();
             }
