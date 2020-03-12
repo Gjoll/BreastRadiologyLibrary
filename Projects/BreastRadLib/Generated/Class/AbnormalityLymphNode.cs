@@ -112,9 +112,9 @@ namespace BreastRadLib
 		public TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                          // BuildElementItemComponent.cs:72
 		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
-		/// Access AssociatedFeatures
+		/// Access AssociatedFeature
 		/// </summary>
-		public TItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                               // BuildElementItemReference.cs:62
+		public TItemReferenceMultiple<AssociatedFeature> AssociatedFeature { get ; protected set; }                                               // BuildElementItemReference.cs:62
 		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access LymphNodeType
@@ -178,7 +178,7 @@ namespace BreastRadLib
 			this.NotPreviouslySeen = new TItemComponentMultiple<CodeableConcept>("Observation.component:notPreviouslySeen", 0, -1, FixedValue_ObservationComponentNotPreviouslySeenCode());// BuildElementItemComponent.cs:57
 			this.CorrespondsWith = new TItemComponentMultiple<CodeableConcept>("Observation.component:correspondsWith", 0, -1, FixedValue_ObservationComponentCorrespondsWithCode());// BuildElementItemComponent.cs:57
 			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("Observation.component:PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:57
-			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:47
+			this.AssociatedFeature = new TItemReferenceMultiple<AssociatedFeature>("Observation.hasMember:associatedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");// BuildElementItemReference.cs:47
 			this.LymphNodeType = new TItemComponentSingle<CodeableConcept>("Observation.component:lymphNodeType", 0, 1, FixedValue_ObservationComponentLymphNodeTypeCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 		}
@@ -209,7 +209,7 @@ namespace BreastRadLib
 			if (this.NotPreviouslySeen.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:81
 			if (this.CorrespondsWith.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemComponent.cs:81
 			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:81
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:71
+			if (this.AssociatedFeature.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemReference.cs:71
 			if (this.LymphNodeType.Validate(sb) == false) retVal = false;                                                                            // BuildElementItemComponent.cs:81
 			//- ValidateCode
 			return retVal;
@@ -241,7 +241,7 @@ namespace BreastRadLib
 			this.NotPreviouslySeen.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:75
 			this.CorrespondsWith.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemComponent.cs:75
 			this.PreviouslyDemonstratedBy.Write(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:75
-			this.AssociatedFeatures.Write(this.Doc, this.Resource);                                                                                  // BuildElementItemReference.cs:65
+			this.AssociatedFeature.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:65
 			this.LymphNodeType.Write(this.Doc, this.Resource);                                                                                       // BuildElementItemComponent.cs:75
 			//- WriteCode
 		}
@@ -270,7 +270,7 @@ namespace BreastRadLib
 			this.NotPreviouslySeen.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemComponent.cs:78
 			this.CorrespondsWith.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemComponent.cs:78
 			this.PreviouslyDemonstratedBy.Read(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:78
-			this.AssociatedFeatures.Read(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:68
+			this.AssociatedFeature.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemReference.cs:68
 			this.LymphNodeType.Read(this.Doc, this.Resource);                                                                                        // BuildElementItemComponent.cs:78
 			//- ReadCode
 		}

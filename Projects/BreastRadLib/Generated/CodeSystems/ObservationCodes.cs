@@ -50,11 +50,6 @@ namespace BreastRadLib
 		public static Coding Code_MgAbnormalityCalcificationObservation = new Coding(System, "mgAbnormalityCalcificationObservation", "Abnormality Calcification observation");// Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// Observation.code to identify an ObservedFeature observation
-		/// </summary>
-		public static Coding Code_FeatureObservation = new Coding(System, "featureObservation", "Observed Feature observation");                  // Builder.cs:408
-		                                                                                                                                          // Builder.cs:389
-		/// <summary>
 		/// Observation.code to identify an ObservationCodeAbnormalityDuct observation
 		/// </summary>
 		public static Coding Code_AbnormalityDuctObservation = new Coding(System, "abnormalityDuctObservation", "Abnormality Duct observation");  // Builder.cs:408

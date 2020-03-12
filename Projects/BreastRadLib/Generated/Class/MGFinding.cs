@@ -52,9 +52,9 @@ namespace BreastRadLib
 		public TItemReferenceMultiple<AbnormalityMass> AbnormalityMass { get ; protected set; }                                                   // BuildElementItemReference.cs:62
 		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
-		/// Access AssociatedFeatures
+		/// Access AssociatedFeature
 		/// </summary>
-		public TItemReferenceMultiple<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                             // BuildElementItemReference.cs:62
+		public TItemReferenceMultiple<AssociatedFeature> AssociatedFeature { get ; protected set; }                                               // BuildElementItemReference.cs:62
 		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
 		/// Access AbnormalityFibroadenoma
@@ -138,7 +138,7 @@ namespace BreastRadLib
 			this.AbnormalityForeignObject = new TItemReferenceMultiple<AbnormalityForeignObject>("Observation.hasMember:abnormalityForeignObject", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");// BuildElementItemReference.cs:47
 			this.AbnormalityLymphNode = new TItemReferenceMultiple<AbnormalityLymphNode>("Observation.hasMember:abnormalityLymphNode", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");// BuildElementItemReference.cs:47
 			this.AbnormalityMass = new TItemReferenceMultiple<AbnormalityMass>("Observation.hasMember:abnormalityMass", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");// BuildElementItemReference.cs:47
-			this.AssociatedFeatures = new TItemReferenceMultiple<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:47
+			this.AssociatedFeature = new TItemReferenceMultiple<AssociatedFeature>("Observation.hasMember:associatedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");// BuildElementItemReference.cs:47
 			this.AbnormalityFibroadenoma = new TItemReferenceMultiple<AbnormalityFibroadenoma>("Observation.hasMember:abnormalityFibroadenoma", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");// BuildElementItemReference.cs:47
 			this.MGAbnormalityArchitecturalDistortion = new TItemReferenceMultiple<MGAbnormalityArchitecturalDistortion>("Observation.hasMember:mGAbnormalityArchitecturalDistortion", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion");// BuildElementItemReference.cs:47
 			this.MGAbnormalityAsymmetry = new TItemReferenceMultiple<MGAbnormalityAsymmetry>("Observation.hasMember:mGAbnormalityAsymmetry", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry");// BuildElementItemReference.cs:47
@@ -166,7 +166,7 @@ namespace BreastRadLib
 			if (this.AbnormalityForeignObject.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemReference.cs:71
 			if (this.AbnormalityLymphNode.Validate(sb) == false) retVal = false;                                                                     // BuildElementItemReference.cs:71
 			if (this.AbnormalityMass.Validate(sb) == false) retVal = false;                                                                          // BuildElementItemReference.cs:71
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:71
+			if (this.AssociatedFeature.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemReference.cs:71
 			if (this.AbnormalityFibroadenoma.Validate(sb) == false) retVal = false;                                                                  // BuildElementItemReference.cs:71
 			if (this.MGAbnormalityArchitecturalDistortion.Validate(sb) == false) retVal = false;                                                     // BuildElementItemReference.cs:71
 			if (this.MGAbnormalityAsymmetry.Validate(sb) == false) retVal = false;                                                                   // BuildElementItemReference.cs:71
@@ -194,7 +194,7 @@ namespace BreastRadLib
 			this.AbnormalityForeignObject.Write(this.Doc, this.Resource);                                                                            // BuildElementItemReference.cs:65
 			this.AbnormalityLymphNode.Write(this.Doc, this.Resource);                                                                                // BuildElementItemReference.cs:65
 			this.AbnormalityMass.Write(this.Doc, this.Resource);                                                                                     // BuildElementItemReference.cs:65
-			this.AssociatedFeatures.Write(this.Doc, this.Resource);                                                                                  // BuildElementItemReference.cs:65
+			this.AssociatedFeature.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:65
 			this.AbnormalityFibroadenoma.Write(this.Doc, this.Resource);                                                                             // BuildElementItemReference.cs:65
 			this.MGAbnormalityArchitecturalDistortion.Write(this.Doc, this.Resource);                                                                // BuildElementItemReference.cs:65
 			this.MGAbnormalityAsymmetry.Write(this.Doc, this.Resource);                                                                              // BuildElementItemReference.cs:65
@@ -219,7 +219,7 @@ namespace BreastRadLib
 			this.AbnormalityForeignObject.Read(this.Doc, this.Resource);                                                                             // BuildElementItemReference.cs:68
 			this.AbnormalityLymphNode.Read(this.Doc, this.Resource);                                                                                 // BuildElementItemReference.cs:68
 			this.AbnormalityMass.Read(this.Doc, this.Resource);                                                                                      // BuildElementItemReference.cs:68
-			this.AssociatedFeatures.Read(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:68
+			this.AssociatedFeature.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemReference.cs:68
 			this.AbnormalityFibroadenoma.Read(this.Doc, this.Resource);                                                                              // BuildElementItemReference.cs:68
 			this.MGAbnormalityArchitecturalDistortion.Read(this.Doc, this.Resource);                                                                 // BuildElementItemReference.cs:68
 			this.MGAbnormalityAsymmetry.Read(this.Doc, this.Resource);                                                                               // BuildElementItemReference.cs:68

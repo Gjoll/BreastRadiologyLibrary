@@ -29,7 +29,7 @@ namespace BreastRadLib
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_DuctDilatedATLASSolitaryDilatedDuct = new Coding(System, "DuctDilatedATLASSolitaryDilatedDuct", "Duct dilated ATLAS solitary dilated duct");// Builder.cs:408
+		public static Coding Code_SolitaryDilatedDuct = new Coding(System, "SolitaryDilatedDuct", "Solitary dilated duct");                       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A noncancerous condition that results in clogged ducts around the nipple.

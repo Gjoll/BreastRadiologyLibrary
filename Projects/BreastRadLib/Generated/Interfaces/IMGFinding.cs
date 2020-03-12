@@ -39,9 +39,9 @@ namespace BreastRadLib
 		/// </summary>
 		TItemReferenceMultiple<AbnormalityMass> AbnormalityMass { get ; }                                                                         // BuildElementItemReference.cs:54
 		/// <summary>
-		/// Access AssociatedFeatures
+		/// Access AssociatedFeature
 		/// </summary>
-		TItemReferenceMultiple<AssociatedFeatures> AssociatedFeatures { get ; }                                                                   // BuildElementItemReference.cs:54
+		TItemReferenceMultiple<AssociatedFeature> AssociatedFeature { get ; }                                                                     // BuildElementItemReference.cs:54
 		/// <summary>
 		/// Access AbnormalityFibroadenoma
 		/// </summary>

@@ -94,9 +94,9 @@ namespace BreastRadLib
 		public TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; protected set; }                                          // BuildElementItemComponent.cs:72
 		                                                                                                                                          // BuildElementItemReference.cs:58
 		/// <summary>
-		/// Access AssociatedFeatures
+		/// Access AssociatedFeature
 		/// </summary>
-		public TItemReferenceSingle<AssociatedFeatures> AssociatedFeatures { get ; protected set; }                                               // BuildElementItemReference.cs:62
+		public TItemReferenceMultiple<AssociatedFeature> AssociatedFeature { get ; protected set; }                                               // BuildElementItemReference.cs:62
 		                                                                                                                                          // BuildElementItemComponent.cs:68
 		/// <summary>
 		/// Access FibroAdenomaType
@@ -157,7 +157,7 @@ namespace BreastRadLib
 			this.ObsDistRegionSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsDistRegionSize", 0, 3, FixedValue_ObservationComponentObsDistRegionSizeCode());// BuildElementItemComponent.cs:57
 			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());// BuildElementItemComponent.cs:57
 			this.PreviouslyDemonstratedBy = new TItemComponentMultiple<CodeableConcept>("Observation.component:PreviouslyDemonstratedBy", 0, -1, FixedValue_ObservationComponentPreviouslyDemonstratedByCode());// BuildElementItemComponent.cs:57
-			this.AssociatedFeatures = new TItemReferenceSingle<AssociatedFeatures>("Observation.hasMember:associatedFeatures", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures");// BuildElementItemReference.cs:47
+			this.AssociatedFeature = new TItemReferenceMultiple<AssociatedFeature>("Observation.hasMember:associatedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");// BuildElementItemReference.cs:47
 			this.FibroAdenomaType = new TItemComponentSingle<CodeableConcept>("Observation.component:fibroAdenomaType", 0, 1, FixedValue_ObservationComponentFibroAdenomaTypeCode());// BuildElementItemComponent.cs:57
 			//- Constructor
 		}
@@ -185,7 +185,7 @@ namespace BreastRadLib
 			if (this.ObsDistRegionSize.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemComponent.cs:81
 			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildElementItemComponent.cs:81
 			if (this.PreviouslyDemonstratedBy.Validate(sb) == false) retVal = false;                                                                 // BuildElementItemComponent.cs:81
-			if (this.AssociatedFeatures.Validate(sb) == false) retVal = false;                                                                       // BuildElementItemReference.cs:71
+			if (this.AssociatedFeature.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemReference.cs:71
 			if (this.FibroAdenomaType.Validate(sb) == false) retVal = false;                                                                         // BuildElementItemComponent.cs:81
 			//- ValidateCode
 			return retVal;
@@ -214,7 +214,7 @@ namespace BreastRadLib
 			this.ObsDistRegionSize.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemComponent.cs:75
 			this.ObsSize.Write(this.Doc, this.Resource);                                                                                             // BuildElementItemComponent.cs:75
 			this.PreviouslyDemonstratedBy.Write(this.Doc, this.Resource);                                                                            // BuildElementItemComponent.cs:75
-			this.AssociatedFeatures.Write(this.Doc, this.Resource);                                                                                  // BuildElementItemReference.cs:65
+			this.AssociatedFeature.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:65
 			this.FibroAdenomaType.Write(this.Doc, this.Resource);                                                                                    // BuildElementItemComponent.cs:75
 			//- WriteCode
 		}
@@ -240,7 +240,7 @@ namespace BreastRadLib
 			this.ObsDistRegionSize.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemComponent.cs:78
 			this.ObsSize.Read(this.Doc, this.Resource);                                                                                              // BuildElementItemComponent.cs:78
 			this.PreviouslyDemonstratedBy.Read(this.Doc, this.Resource);                                                                             // BuildElementItemComponent.cs:78
-			this.AssociatedFeatures.Read(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:68
+			this.AssociatedFeature.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemReference.cs:68
 			this.FibroAdenomaType.Read(this.Doc, this.Resource);                                                                                     // BuildElementItemComponent.cs:78
 			//- ReadCode
 		}
