@@ -17,24 +17,27 @@ namespace FireFragger.CS.BuildMembers
         protected ClassCodeBlocks codeBlocks;
         protected CodeBlockNested containerCode;
         protected CodeBlockNested itemCode;
+        protected String elementId;
+        protected Int32 Min;
+        protected Int32 Max;
+
+        protected bool Singleton => this.Max == 1;
 
         /// <summary>
-        /// true if cardinality is 0..1 or 1..1. False if max is > 1.
+        /// Name of class that stored each item read/written.
+        /// May be same as ItemElementName.
         /// </summary>
-        protected abstract bool Single { get; }
+        protected abstract String FhirElementItemName { get; }
 
         /// <summary>
-        /// Name of class that acesses a .
-        /// </summary>
-        protected abstract String ItemClassName { get; }
-
-        /// <summary>
-        /// Name of each item
+        /// Name of each item.
         /// </summary>
         protected abstract String ItemElementName { get; }
-        protected abstract String ContainerClassName { get; }
 
-        protected String elementId;
+        /// <summary>
+        /// Name of item container class.
+        /// </summary>
+        protected abstract String ContainerClassName { get; }
 
         public BuildMemberBase(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
@@ -47,7 +50,7 @@ namespace FireFragger.CS.BuildMembers
 
         void BuildItemClass()
         {
-            this.containerCode
+            this.itemCode
                 .SummaryOpen()
                 .Summary($"Item class for {this.elementId}.")
                 .SummaryClose()
@@ -63,20 +66,128 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Container class for {this.elementId}.")
                 .SummaryClose()
-                .AppendCode($"public class {this.ContainerClassName}")
+                .AppendCode($"public class {this.ContainerClassName} : MContainer, ITMItem<{FhirElementItemName}> ")
                 .OpenBrace()
                 .DefineBlock(out this.itemCode)
+                .BlankLine()
+                .AppendCode($"// Properties")
+                .DefineBlock(out CodeBlockNested propertiesBlock)
+                .BlankLine()
+                .SummaryOpen()
+                .Summary($"Constructor")
+                .SummaryClose()
+                .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{elementId}\", min, max)")
+                .OpenBrace()
+                .DefineBlock(out CodeBlockNested constructorBlock)
+                .CloseBrace()
+                .BlankLine()
+                .AppendCode($"// Methods")
+                .DefineBlock(out CodeBlockNested methodsBlock)
                 .CloseBrace()
                 ;
+
+            if (this.Singleton)
+            {
+                propertiesBlock
+                    .SummaryOpen()
+                    .Summary($"Value")
+                    .SummaryClose()
+                    .AppendCode($"public {ItemElementName} Value {{ get; set; }}")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Count property")
+                    .SummaryClose()
+                    .AppendCode($"public override Int32 Count => this.Value == null ? 0 : 1;")
+                    ;
+            }
+            else
+            {
+                propertiesBlock
+                    .AppendCode($"List<{ItemElementName}> items = new List<{ItemElementName}>();")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Count property")
+                    .SummaryClose()
+                    .AppendCode($"public override Int32 Count => items.Count;")
+                    ;
+            }
+
+            methodsBlock
+
+               .BlankLine()
+               .SummaryOpen()
+               .Summary("Write out member item as a fhir element.")
+               .SummaryClose()
+               .AppendCode($"public IEnumerable<{FhirElementItemName}> Write(BreastRadiologyDocument doc)")
+               .OpenBrace()
+               .AppendCode($"throw new NotImplementedException();")
+               //.AppendCode($"foreach ({propertyType} item in this.All())")
+               //.OpenBrace()
+               //.AppendCode($"{ClassItemName} c = new {ClassItemName}")
+               //.OpenBrace()
+               //.AppendCode($"Value = item,")
+               //.AppendCode($"Code = {componentCodeMethodName}()")
+               //.CloseBrace(";")
+               //.AppendCode($"yield return c;")
+               //.CloseBrace()
+               .CloseBrace()
+
+               .BlankLine()
+               .SummaryOpen()
+               .Summary("Read data from fhir element into member item.")
+               .SummaryClose()
+               .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirElementItemName}> element)")
+               .OpenBrace()
+               .AppendCode($"throw new NotImplementedException();")
+            //   .AppendCode($"List<{ClassItemName}> items = element")
+            //   .AppendCode($"    .Where((a) => a.Code.IsCode(this.{componentCodeMethodName}()))")
+            //   .AppendCode($"    .ToList()")
+            //   .AppendCode($"    ;")
+            //   ;
+
+            //if (max == 1)
+            //{
+            //    methodsBlock
+            //        .AppendCode($"switch (items.Count)")
+            //        .OpenBrace()
+            //        .AppendCode($"case 0:")
+            //        .AppendCode($"    break;")
+            //        .AppendCode($"case 1:")
+            //        .AppendCode($"    this.value = ({propertyType}) items[0].Value;")
+            //        .AppendCode($"    break;")
+            //        .AppendCode($"default:")
+            //        .AppendCode($"    throw new Exception(\"error reading component {sliceName}. Multiple items found for single element\");")
+            //        .CloseBrace()
+            //        ;
+            //}
+            //else
+            //{
+            //    methodsBlock
+            //        .AppendCode($"this.values.Clear();")
+            //        .AppendCode($"foreach ({ClassItemName} c in items)")
+            //        .AppendCode($"    this.values.Add(({propertyType}) c.Value);")
+            //        ;
+            //}
+
+            //methodsBlock
+               .CloseBrace()
+               ;
+            ;
         }
 
 
-        public virtual void Build()
+        public virtual void BuildOne(Int32 min, Int32 max)
         {
+            this.Min = min;
+            this.Max = max;
+
             this.containerCode = this.codeBlocks.LocalClassDefs.AppendBlock();
             BuildContainerClass();
             BuildItemClass();
         }
 
+        public abstract void Build();
     }
 }

@@ -8,16 +8,17 @@ namespace BreastRadLib
     /// <summary>
     /// Interface that all Member classes implement.
     /// </summary>
-    public interface ITMItem
+    public interface ITMItem<T>
     {
         /// <summary>
         /// Write out member item as a fhir element.
         /// </summary>
-        IEnumerable<Element> Write();
+        IEnumerable<T> Write(BreastRadiologyDocument doc);
 
         /// <summary>
         /// Read data from fhir element into member item.
         /// </summary>
-        void Read(IEnumerable<Element> element);
+        void Read(BreastRadiologyDocument doc,
+            IEnumerable<T> element);
     }
 }

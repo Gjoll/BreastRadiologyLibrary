@@ -54,20 +54,21 @@ namespace BreastRadLib
         /// <returns></returns>
         public virtual bool Validate(StringBuilder sb)
         {
-            bool retVal = true;
-            if (this.Count < this.Min)
-            {
-                sb.Append($"{this.FhirPath} min cardinality is invalid. Found {this.Count} items, expected at least {this.Min} items.");
-                retVal = false;
-            }
+            throw new NotImplementedException();
+            //bool retVal = true;
+            //if (this.Count < this.Min)
+            //{
+            //    sb.Append($"{this.FhirPath} min cardinality is invalid. Found {this.Count} items, expected at least {this.Min} items.");
+            //    retVal = false;
+            //}
 
-            if ((this.Max >= 0) && (this.Count > this.Max))
-            {
-                sb.Append($"{this.FhirPath} max cardinality is invalid. Found {this.Count} items, expected less than {this.Max} items.");
-                retVal = false;
-            }
+            //if ((this.Max >= 0) && (this.Count > this.Max))
+            //{
+            //    sb.Append($"{this.FhirPath} max cardinality is invalid. Found {this.Count} items, expected less than {this.Max} items.");
+            //    retVal = false;
+            //}
 
-            return retVal;
+            //return retVal;
         }
 
         //PropertyInfo PInfo(Base resource, String fhirName)
