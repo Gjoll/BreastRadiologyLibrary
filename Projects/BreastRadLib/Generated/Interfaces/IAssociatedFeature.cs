@@ -26,7 +26,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// FeatureType
 		/// </summary>
-		FeatureTypeContainer FeatureType { get ; }                                                                                                // BuildMemberBase.cs:294
+		FeatureTypeContainer FeatureType { get ; }                                                                                                // BuildMemberBase.cs:297
 		//- Properties
 
 		//+ Methods

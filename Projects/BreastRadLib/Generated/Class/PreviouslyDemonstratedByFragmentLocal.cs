@@ -43,51 +43,51 @@ namespace BreastRadLib.PreviouslyDemonstratedByFragmentLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:83
 	                                                                                                                                           // BuildMemberBase.cs:113
 	    // Properties                                                                                                                          // BuildMemberBase.cs:114
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:198
-	                                                                                                                                           // BuildMemberBase.cs:200
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:201
+	                                                                                                                                           // BuildMemberBase.cs:203
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:204
-	                                                                                                                                           // BuildMemberBase.cs:206
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:207
+	                                                                                                                                           // BuildMemberBase.cs:209
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:210
-	                                                                                                                                           // BuildMemberBase.cs:212
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:213
+	                                                                                                                                           // BuildMemberBase.cs:215
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:216
-	                                                                                                                                           // BuildMemberBase.cs:218
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:219
+	                                                                                                                                           // BuildMemberBase.cs:221
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<CodeableConcept> All()                                                                                              // BuildMemberBase.cs:222
-	    {                                                                                                                                      // BuildMemberBase.cs:223
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:224
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:225
-	    }                                                                                                                                      // BuildMemberBase.cs:226
-	                                                                                                                                           // BuildMemberBase.cs:228
+	    public IEnumerable<CodeableConcept> All()                                                                                              // BuildMemberBase.cs:225
+	    {                                                                                                                                      // BuildMemberBase.cs:226
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:227
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:228
+	    }                                                                                                                                      // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:231
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public CodeableConcept GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:232
-	                                                                                                                                           // BuildMemberBase.cs:234
+	    public CodeableConcept GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:235
+	                                                                                                                                           // BuildMemberBase.cs:237
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:238
-	                                                                                                                                           // BuildMemberBase.cs:240
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:241
+	                                                                                                                                           // BuildMemberBase.cs:243
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:244
-	                                                                                                                                           // BuildMemberBase.cs:250
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:247
+	                                                                                                                                           // BuildMemberBase.cs:253
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public void Append(CodeableConcept value) => this.items.Add(new Item(value));                                                          // BuildMemberBase.cs:254
+	    public void Append(CodeableConcept value) => this.items.Add(new Item(value));                                                          // BuildMemberBase.cs:257
 	                                                                                                                                           // BuildMemberBase.cs:116
 	    /// <summary>
 	    /// Constructor
@@ -111,7 +111,7 @@ namespace BreastRadLib.PreviouslyDemonstratedByFragmentLocal
 	        }                                                                                                                                  // FhirConstruct.cs:814
 	        return retVal;                                                                                                                     // FhirConstruct.cs:829
 	    }                                                                                                                                      // FhirConstruct.cs:830
-	                                                                                                                                           // BuildMemberBase.cs:260
+	                                                                                                                                           // BuildMemberBase.cs:263
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -127,7 +127,7 @@ namespace BreastRadLib.PreviouslyDemonstratedByFragmentLocal
 	            yield return component;                                                                                                        // BuildMemberComponents.cs:84
 	        }                                                                                                                                  // BuildMemberComponents.cs:85
 	    }                                                                                                                                      // BuildMemberComponents.cs:86
-	                                                                                                                                           // BuildMemberBase.cs:266
+	                                                                                                                                           // BuildMemberBase.cs:269
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>

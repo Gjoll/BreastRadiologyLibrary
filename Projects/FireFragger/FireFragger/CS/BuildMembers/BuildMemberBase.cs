@@ -138,7 +138,10 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryOpen()
                     .Summary($"Get All Items")
                     .SummaryClose()
-                    .AppendCode($"IEnumerable<Item> GetAllItems() => new Item[] {{ this.item }};")
+                    .AppendCode($"IEnumerable<Item> GetAllItems()")
+                    .OpenBrace()
+                    .AppendCode($"if (this.item != null) yield return this.item;")
+                    .CloseBrace()
 
                     .BlankLine()
                     .SummaryOpen()

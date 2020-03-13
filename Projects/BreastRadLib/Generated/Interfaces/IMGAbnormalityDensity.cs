@@ -34,7 +34,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// DensityType
 		/// </summary>
-		DensityTypeContainer DensityType { get ; }                                                                                                // BuildMemberBase.cs:294
+		DensityTypeContainer DensityType { get ; }                                                                                                // BuildMemberBase.cs:297
 		//- Properties
 
 		//+ Methods
