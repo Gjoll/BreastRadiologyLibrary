@@ -32,9 +32,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access LymphNodeType
+		/// LymphNodeType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> LymphNodeType { get ; }                                                                             // BuildElementItemComponent.cs:64
+		LymphNodeTypeContainer LymphNodeType { get ; }                                                                                            // BuildMemberBase.cs:294
 		//- Properties
 
 		//+ Methods

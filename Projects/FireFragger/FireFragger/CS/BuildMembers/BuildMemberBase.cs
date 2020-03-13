@@ -27,7 +27,8 @@ namespace FireFragger.CS.BuildMembers
         /// Name of class that stored each item read/written.
         /// May be same as ItemElementName.
         /// </summary>
-        protected abstract String FhirElementItemName { get; }
+        protected abstract String FhirClassName { get; }
+        protected abstract String PropertyName { get; }
 
         /// <summary>
         /// Name of property type that we get (base of all set types)
@@ -46,12 +47,10 @@ namespace FireFragger.CS.BuildMembers
         protected abstract String ContainerClassName { get; }
 
         public BuildMemberBase(DefineBase defineBase,
-            ClassCodeBlocks codeBlocks,
-            String elementId)
+            ClassCodeBlocks codeBlocks)
         {
             this.defineBase = defineBase;
             this.codeBlocks = codeBlocks;
-            this.elementId = elementId;
         }
 
         void BuildItemClass()
@@ -99,8 +98,8 @@ namespace FireFragger.CS.BuildMembers
         {
         }
 
-        protected abstract void WriteItem(CodeBlockNested b);
-        protected abstract void ReadItem(CodeBlockNested b);
+        protected abstract void BuildWrite(CodeBlockNested b);
+        protected abstract void BuildRead(CodeBlockNested b);
 
         void BuildContainerClass()
         {
@@ -108,7 +107,7 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Container class for {this.elementId}.")
                 .SummaryClose()
-                .AppendCode($"public class {this.ContainerClassName} : MContainer, ITMItem<{FhirElementItemName}> ")
+                .AppendCode($"public class {this.ContainerClassName} : MContainer, ITMItem<{FhirClassName}> ")
                 .OpenBrace()
                 .DefineBlock(out this.itemCode)
                 .BlankLine()
@@ -137,9 +136,23 @@ namespace FireFragger.CS.BuildMembers
                 containerPropertiesBlock
                     .BlankLine()
                     .SummaryOpen()
-                    .Summary($"All Items")
+                    .Summary($"Get All Items")
                     .SummaryClose()
-                    .AppendCode($"IEnumerable<Item> AllItems => new Item[] {{ this.item }};")
+                    .AppendCode($"IEnumerable<Item> GetAllItems() => new Item[] {{ this.item }};")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Set All Items")
+                    .SummaryClose()
+                    .AppendCode($"void SetAllItems(IEnumerable<Item> items)")
+                    .OpenBrace()
+                    .AppendCode($"switch (items.Count())")
+                    .OpenBrace()
+                    .AppendCode($"case 0: break;")
+                    .AppendCode($"case 1: this.item = items.First(); break;")
+                    .AppendCode($"default: throw new Exception(\"Found multiple elements while reading single item\");")
+                    .CloseBrace()
+                    .CloseBrace()
 
                     .BlankLine()
                     .SummaryOpen()
@@ -186,9 +199,15 @@ namespace FireFragger.CS.BuildMembers
 
                     .BlankLine()
                     .SummaryOpen()
-                    .Summary($"All Items")
+                    .Summary($"Get All Items")
                     .SummaryClose()
-                    .AppendCode($"IEnumerable<Item> AllItems => this.items;")
+                    .AppendCode($"IEnumerable<Item> GetAllItems() => this.items;")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Set All Items")
+                    .SummaryClose()
+                    .AppendCode($"void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();")
 
                     .BlankLine()
                     .SummaryOpen()
@@ -242,74 +261,14 @@ namespace FireFragger.CS.BuildMembers
                .SummaryOpen()
                .Summary("Write single item as a fhir element.")
                .SummaryClose()
-               .AppendCode($"public {FhirElementItemName} WriteItem(BreastRadiologyDocument doc, Item item)")
-               .OpenBrace()
-               .AppendCode($"return new {FhirElementItemName}")
-               .OpenBrace()
-               .Call(WriteItem)
-               .CloseBrace(";")
-               .CloseBrace()
-
-               .BlankLine()
-               .SummaryOpen()
-               .Summary("Write out member item as a fhir element.")
-               .SummaryClose()
-               .AppendCode($"public IEnumerable<{FhirElementItemName}> Write(BreastRadiologyDocument doc)")
-               .OpenBrace()
-               .AppendCode($"foreach (Item item in this.AllItems)")
-               .AppendCode($"    yield return WriteItem(doc, item);")
-               .CloseBrace()
-
-               .BlankLine()
-               .SummaryOpen()
-               .Summary("Read single item as a fhir element.")
-               .SummaryClose()
-               .AppendCode($"public Item ReadItem(BreastRadiologyDocument doc, {FhirElementItemName} element)")
-               .OpenBrace()
-               .Call(ReadItem)
-               .CloseBrace()
+               .Call(BuildWrite)
 
                .BlankLine()
                .SummaryOpen()
                .Summary("Read data from fhir element into member item.")
                .SummaryClose()
-               .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirElementItemName}> elements)")
-               .OpenBrace()
-               .AppendCode($"List<Item> items = new List<Item>();")
-               .AppendCode($"foreach ({FhirElementItemName} element in elements)")
-               .OpenBrace()
-               .AppendCode($"Item item = ReadItem(doc, element);")
-               .AppendCode($"if (item != null)")
-               .AppendCode($"   items.Add(item);")
-               .CloseBrace()
-            ;
-            if (this.Max == 1)
-            {
-                containerMethodsBlock
-                    .AppendCode($"switch (items.Count)")
-                    .OpenBrace()
-                    .AppendCode($"case 0:")
-                    .AppendCode($"    break;")
-                    .AppendCode($"case 1:")
-                    .AppendCode($"    this.item = items[0];")
-                    .AppendCode($"    break;")
-                    .AppendCode($"default:")
-                    .AppendCode($"    throw new Exception(\"error reading component {this.FhirElementItemName}. Multiple items found. Expected single element\");")
-                    .CloseBrace()
-                    ;
-            }
-            else
-            {
-                containerMethodsBlock
-                    .AppendCode($"this.items.Clear();")
-                    .AppendCode($"this.items.AddRange(items);")
-                    ;
-            }
-
-            containerMethodsBlock
-               .CloseBrace()
+               .Call(BuildRead)
                ;
-            ;
         }
 
 
@@ -322,14 +281,48 @@ namespace FireFragger.CS.BuildMembers
         {
         }
 
-        public virtual void BuildOne(Int32 min, Int32 max)
+        void BuildProperty()
         {
+            this.codeBlocks.ClassConstructor
+                .AppendCode($"this.{this.PropertyName} = new {this.ContainerClassName}({this.Min}, {this.Min});")
+                ;
+
+            this.codeBlocks.InterfaceProperties
+                .SummaryOpen()
+                .Summary($"{PropertyName}")
+                .SummaryClose()
+                .AppendCode($"{this.ContainerClassName} {this.PropertyName} {{ get ; }}")
+                ;
+
+            this.codeBlocks.ClassProperties
+                .BlankLine()
+                .SummaryOpen()
+                .Summary($"{this.PropertyName}")
+                .Summary($"Access fhir element '{this.elementId}'")
+                .SummaryClose()
+                .AppendCode($"public {this.ContainerClassName} {this.PropertyName} {{ get ; protected set; }}")
+                ;
+
+            //this.codeBlocks.ClassReadCode
+            //    .AppendCode($"this.{PropertyName}.Read(this.Doc);")
+            //    ;
+            //this.codeBlocks.ClassValidateCode
+            //    .AppendCode($"if (this.{PropertyName}.Validate(sb) == false) retVal = false;")
+            //    ;
+        }
+
+        public virtual void BuildOne(String elementId,
+            Int32 min,
+            Int32 max)
+        {
+            this.elementId = elementId;
             this.Min = min;
             this.Max = max;
 
             this.containerCode = this.codeBlocks.LocalClassDefs.AppendBlock();
             BuildContainerClass();
             BuildItemClass();
+            BuildProperty();
         }
 
         public abstract void Build();

@@ -7,10 +7,10 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "FhirKhit.Tools.R4/2.18.0": {
+      "FhirKhit.Tools.R4/2.19.0": {
         "dependencies": {
           "CommonMark.NET": "0.15.1",
-          "FhirKhit.Tools": "2.18.0",
+          "FhirKhit.Tools": "2.19.0",
           "Hl7.Fhir.ElementModel": "1.5.0",
           "Hl7.Fhir.R4": "1.5.0",
           "Hl7.Fhir.Serialization": "1.5.0",
@@ -747,7 +747,7 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
-      "FhirKhit.Tools/2.18.0": {
+      "FhirKhit.Tools/2.19.0": {
         "dependencies": {
           "CommonMark.NET": "0.15.1",
           "Newtonsoft.Json": "12.0.3",
@@ -760,7 +760,7 @@
     }
   },
   "libraries": {
-    "FhirKhit.Tools.R4/2.18.0": {
+    "FhirKhit.Tools.R4/2.19.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1290,7 +1290,7 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "FhirKhit.Tools/2.18.0": {
+    "FhirKhit.Tools/2.19.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

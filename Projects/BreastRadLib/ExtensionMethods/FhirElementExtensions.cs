@@ -1,6 +1,9 @@
-﻿using Hl7.Fhir.Model;
+﻿using Hl7.Fhir.Introspection;
+using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace BreastRadLib
@@ -22,6 +25,94 @@ namespace BreastRadLib
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// Set property of fhir element to passed value.
+        /// Uses reflection.
+        /// </summary>
+        public static IEnumerable<T> GetValue<T>(this Base fhirElement,
+            String fhirName)
+            where T : Element
+        {
+            PropertyInfo pi = fhirElement.GetFhirProperty(fhirName);
+            if (pi == null)
+                throw new Exception($"Fhir property {fhirName} not found in class {fhirElement.GetType()}");
+            if (pi.PropertyType.IsAssignableFrom(typeof(List<T>)))
+            {
+                return (List<T>)pi.GetValue(fhirElement);
+            }
+            else
+            {
+                return new T[] { (T)pi.GetValue(fhirElement) };
+            }
+        }
+
+        /// <summary>
+        /// Set property of fhir element to passed value.
+        /// Uses reflection.
+        /// </summary>
+        public static void SetValue<T>(this Base fhirElement,
+            String fhirName,
+            T value)
+            where T : Element
+        {
+            PropertyInfo pi = fhirElement.GetFhirProperty(fhirName);
+            if (pi == null)
+                throw new Exception($"Fhir property {fhirName} not found in class {fhirElement.GetType()}");
+            if (pi.PropertyType.IsAssignableFrom(typeof(List<T>)))
+            {
+                List<T> list = new List<T>();
+                list.Add(value);
+                pi.SetValue(fhirElement, list);
+            }
+            else
+            {
+                pi.SetValue(fhirElement, value);
+            }
+        }
+
+        /// <summary>
+        /// Set property of fhir element to passed value.
+        /// Uses reflection.
+        /// </summary>
+        public static void SetValue<T>(this Base fhirElement,
+            String fhirName,
+            IEnumerable<T> value)
+            where T : Element
+        {
+            PropertyInfo pi = fhirElement.GetFhirProperty(fhirName);
+            if (pi == null)
+                throw new Exception($"Fhir property {fhirName} not found in class {fhirElement.GetType()}");
+            if (pi.PropertyType.IsAssignableFrom(typeof(List<T>)))
+            {
+                pi.SetValue(fhirElement, value.ToList());
+            }
+            else
+            {
+                if (value.Count() > 1)
+                    throw new Exception($"Can not set multiple values to single element");
+                pi.SetValue(fhirElement, value.First());
+            }
+        }
+
+        /// <summary>
+        /// Get PropertyInfo on property with the matching
+        /// FhirAttribute tag name.
+        /// </summary>
+        public static PropertyInfo GetFhirProperty(this Base fhirElement,
+            String fhirName)
+        {
+            foreach (PropertyInfo propertyInfo in fhirElement.GetType().GetProperties())
+            {
+                object[] attributes = propertyInfo.GetCustomAttributes(typeof(FhirElementAttribute), false);
+                foreach (FhirElementAttribute attribute in attributes)
+                {
+                    if (String.Compare(attribute.Name, fhirName, StringComparison.OrdinalIgnoreCase) == 0)
+                        return propertyInfo;
+                }
+            }
+            return null;
         }
     }
 }

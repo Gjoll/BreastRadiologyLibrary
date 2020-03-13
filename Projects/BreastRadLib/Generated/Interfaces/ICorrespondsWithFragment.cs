@@ -18,9 +18,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access CorrespondsWith
+		/// CorrespondsWith
 		/// </summary>
-		TItemComponentMultiple<CodeableConcept> CorrespondsWith { get ; }                                                                         // BuildElementItemComponent.cs:64
+		CorrespondsWithContainer CorrespondsWith { get ; }                                                                                        // BuildMemberBase.cs:294
 		//- Properties
 
 		//+ Methods

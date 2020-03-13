@@ -29,9 +29,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access FibroAdenomaType
+		/// FibroAdenomaType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> FibroAdenomaType { get ; }                                                                          // BuildElementItemComponent.cs:64
+		FibroAdenomaTypeContainer FibroAdenomaType { get ; }                                                                                      // BuildMemberBase.cs:294
 		//- Properties
 
 		//+ Methods

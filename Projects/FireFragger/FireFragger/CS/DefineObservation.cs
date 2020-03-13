@@ -27,13 +27,6 @@ namespace FireFragger.CS
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
                 return;
             {
-                BuildItemComponent bml = new BuildItemComponent(this,
-                    this.fragBase.CodeBlocks,
-                    "Component",
-                    componentNode);
-                bml.Define();
-            }
-            {
                 BuildMembers.BuildMemberComponents bm = new BuildMembers.BuildMemberComponents(this,
                     this.fragBase.CodeBlocks,
                     componentNode);

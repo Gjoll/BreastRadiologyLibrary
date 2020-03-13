@@ -18,9 +18,12 @@ namespace FireFragger.CS.BuildMembers
         String sliceName;
         String componentCodeMethodName;
         CodeableConcept componentCode;
+        CodeBlockNested readBlock;
+        CodeBlockNested writeBlock;
 
         protected ElementTreeNode memberNode;
 
+        protected override string PropertyName => $"{this.sliceName.ToMachineName()}";
         protected override string ElementGetName => this.itemElementGetName;
         protected override IEnumerable<string> ElementSetNames => this.itemElementSetName;
         protected override string ContainerClassName => this.containerClassName;
@@ -28,7 +31,7 @@ namespace FireFragger.CS.BuildMembers
         /// <summary>
         /// Name of fhir element (as stored in resource).
         /// </summary>
-        protected override String FhirElementItemName => "Observation.ComponentComponent";
+        protected override String FhirClassName => "Observation.ComponentComponent";
 
         /// <summary>
         /// Perform local processing of container class.
@@ -45,22 +48,47 @@ namespace FireFragger.CS.BuildMembers
             FhirConstruct.Construct(containerMethodsBlock, componentCode, componentCodeMethodName, out String dummy);
         }
 
-        protected override void ReadItem(CodeBlockNested b)
+        protected override void BuildRead(CodeBlockNested b)
         {
             b
-                .AppendCode($"Item item = null;")
-                .AppendCode($"if (element.Code.IsCode(this.{componentCodeMethodName}()))")
-                .AppendCode($"    item = new Item(({this.ElementGetName}) element.Value);")
-                .AppendCode($"return item;")
+                .BlankLine()
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> components)")
+                .OpenBrace()
+                .AppendCode($"List<Item> items = new List<Item>();")
+                .AppendCode($"foreach (Observation.ComponentComponent component in components)")
+                .OpenBrace()
+                .AppendCode($"if (component.Code.IsCode(this.{componentCodeMethodName}()))")
+                .AppendCode($"    items.Add(new Item(({this.ElementGetName}) component.Value));")
+                .CloseBrace()
+                .AppendCode($"this.SetAllItems(items);")
+                .CloseBrace()
+                ;
+
+            this.readBlock
+                .AppendCode($"this.{PropertyName}.Read(this.Doc, items);")
                 ;
         }
 
-        protected override void WriteItem(CodeBlockNested b)
+        protected override void BuildWrite(CodeBlockNested b)
         {
             b
-            .AppendCode($"Value = item.Value,")
-            .AppendCode($"Code = {componentCodeMethodName}()")
-            ;
+               .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+               .OpenBrace()
+               .AppendCode($"foreach (Item item in this.GetAllItems())")
+               .OpenBrace()
+               .AppendCode($"{FhirClassName} component = new {FhirClassName}")
+               .OpenBrace()
+               .AppendCode($"Value = item.Value,")
+               .AppendCode($"Code = {componentCodeMethodName}()")
+               .CloseBrace(";")
+               .AppendCode($"yield return component;")
+               .CloseBrace()
+               .CloseBrace()
+               ;
+
+            this.writeBlock
+                .AppendCode($"items.AddRange(this.{PropertyName}.Write(this.Doc));")
+                ;
         }
 
         public override void Build()
@@ -69,77 +97,65 @@ namespace FireFragger.CS.BuildMembers
                 return;
 
             // Block is marked with !, so the top level lines are not merged, so we
-            // dont have duplicate Read/Write {this.fhirName} methods.
+            // dont have duplicate Read/Write Components methods.
             // component block may have been defined in a class merged into this one,
             // so check to see if it exists.
-            String readBlockName = $"Read{this.fhirName}";
-            String writeBlockName = $"Write{this.fhirName}";
-            String initBlockName = $"Init{this.fhirName}";
-            String componentBlockName = $"!{this.fhirName}";
+            String readBlockName = $"ReadComponents";
+            String writeBlockName = $"WriteComponents";
+            String componentBlockName = $"!Components";
             CodeBlockNested componentBlock = this.codeBlocks.ClassMethods.Find(componentBlockName, false);
-            //if (componentBlock == null)
-            //{
-            //    this.codeBlocks.ClassMethods
-            //        .BlankLine()
-            //        .StartBlock(componentBlockName)
-            //        .SummaryOpen()
-            //        .Summary($"Init all {this.fhirName} items")
-            //        .SummaryClose()
-            //        .AppendCode($"private void Init{this.fhirName}()")
-            //        .OpenBrace()
-            //        .DefineBlock(out initBlock, initBlockName)
-            //        .CloseBrace()
+            if (componentBlock == null)
+            {
+                this.codeBlocks.ClassMethods
+                    .BlankLine()
+                    .StartBlock(componentBlockName)
 
-            //        .BlankLine()
-            //        .SummaryOpen()
-            //        .Summary($"Read all component values from resource into this instance")
-            //        .SummaryClose()
-            //        .AppendCode($"private void Read{this.fhirName}(BreastRadiologyDocument doc)")
-            //        .OpenBrace()
-            //        .AppendCode($"List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>(\"component\").ToList();")
-            //        .DefineBlock(out readBlock, readBlockName)
-            //        .CloseBrace()
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Read all component values from resource into this instance")
+                    .SummaryClose()
+                    .AppendCode($"private void ReadComponents(BreastRadiologyDocument doc)")
+                    .OpenBrace()
+                    .AppendCode($"List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>(\"component\").ToList();")
+                    .DefineBlock(out this.readBlock, readBlockName)
+                    .CloseBrace()
 
-            //        .BlankLine()
-            //        .SummaryOpen()
-            //        .Summary($"Write all component values from this instance into resource")
-            //        .SummaryClose()
-            //        .AppendCode($"private void Write{this.fhirName}(BreastRadiologyDocument doc)")
-            //        .OpenBrace()
-            //        .AppendCode($"List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();")
-            //        .DefineBlock(out writeBlock, writeBlockName)
-            //        .AppendCode($"this.Resource.SetValue(\"component\", items);")
-            //        .CloseBrace()
-            //        .EndBlock()
-            //        ;
-            //}
-            //else
-            //{
-            //    this.initBlock = componentBlock.Find(initBlockName);
-            //    this.readBlock = componentBlock.Find(readBlockName);
-            //    this.writeBlock = componentBlock.Find(writeBlockName);
-            //    Debug.Assert(this.writeBlock != null);
-            //    Debug.Assert(this.readBlock != null);
-            //    Debug.Assert(this.initBlock != null);
-            //}
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Write all component values from this instance into resource")
+                    .SummaryClose()
+                    .AppendCode($"private void WriteComponents(BreastRadiologyDocument doc)")
+                    .OpenBrace()
+                    .AppendCode($"List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();")
+                    .DefineBlock(out this.writeBlock, writeBlockName)
+                    .AppendCode($"this.Resource.SetValue(\"component\", items);")
+                    .CloseBrace()
+                    .EndBlock()
+                    ;
+            }
+            else
+            {
+                this.readBlock = componentBlock.Find(readBlockName);
+                this.writeBlock = componentBlock.Find(writeBlockName);
+            }
 
-            //if (this.codeBlocks.ClassWriteCode.Find("!Write{this.fhirName}") == null)
-            //{
-            //    this.codeBlocks.ClassWriteCode
-            //    .StartBlock("!Write{this.fhirName}")
-            //    .AppendCode($"this.Write{this.fhirName}(doc);")
-            //    .EndBlock()
-            //    ;
-            //}
+            if (this.codeBlocks.ClassWriteCode.Find("!WriteComponents") == null)
+            {
+                this.codeBlocks.ClassWriteCode
+                .StartBlock("!WriteComponents")
+                .AppendCode($"this.WriteComponents(this.Doc);")
+                .EndBlock()
+                ;
+            }
 
-            //if (this.codeBlocks.ClassReadCode.Find("!Read{this.fhirName}") == null)
-            //{
-            //    this.codeBlocks.ClassReadCode
-            //        .StartBlock("!Read{this.fhirName}")
-            //        .AppendCode($"this.Read{this.fhirName}(doc);")
-            //        .EndBlock()
-            //        ;
-            //}
+            if (this.codeBlocks.ClassReadCode.Find("!ReadComponents") == null)
+            {
+                this.codeBlocks.ClassReadCode
+                    .StartBlock("!ReadComponents")
+                    .AppendCode($"this.ReadComponents(this.Doc);")
+                    .EndBlock()
+                    ;
+            }
 
             foreach (ElementTreeSlice memberSlice in this.memberNode.Slices.Skip(1))
             {
@@ -167,28 +183,15 @@ namespace FireFragger.CS.BuildMembers
 
                 this.containerClassName = $"{this.SliceName}Container";
                 this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
-                base.BuildOne(min, max);
-
-                //String localClassName =
-                //    this.DefineLocalContainerClass(memberSlice,
-                //    componentCode,
-                //    min,
-                //    max,
-                //    propertyName,
-                //    valueNode);
-
-                //this.DefineProperty(localClassName,
-                //    max,
-                //    min,
-                //    propertyName,
-                //    types.ToArray());
+                base.BuildOne(memberSlice.ElementDefinition.ElementId, min, max);
             }
+            //BuildProperty();
         }
 
         public BuildMemberComponents(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
             ElementTreeNode componentNode) : 
-            base(defineBase, codeBlocks, componentNode.ElementDefinition.ElementId)
+            base(defineBase, codeBlocks)
         {
             this.memberNode = componentNode;
             this.fhirName = memberNode.ElementDefinition.Path.LastPathPart().ToMachineName();

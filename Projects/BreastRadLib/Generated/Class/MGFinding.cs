@@ -185,7 +185,6 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearComponent();
 			this.ClearHasMember();
 			//- WriteCodeStart
 			//+ WriteCode

@@ -33,9 +33,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access CystType
+		/// CystType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> CystType { get ; }                                                                                  // BuildElementItemComponent.cs:64
+		CystTypeContainer CystType { get ; }                                                                                                      // BuildMemberBase.cs:294
 		//- Properties
 
 		//+ Methods
