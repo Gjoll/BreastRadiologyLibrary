@@ -30,9 +30,15 @@ namespace FireFragger.CS.BuildMembers
         protected abstract String FhirElementItemName { get; }
 
         /// <summary>
-        /// Name of each item.
+        /// Name of property type that we get (base of all set types)
         /// </summary>
-        protected abstract String ItemElementName { get; }
+        protected abstract String ElementGetName { get; }
+
+        /// <summary>
+        /// Names of each type that we can set. Must be implicit conversion to
+        /// ElementGetName. Often is same as ElementGetName.
+        /// </summary>
+        protected abstract IEnumerable<String> ElementSetNames { get; }
 
         /// <summary>
         /// Name of item container class.
@@ -56,9 +62,45 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryClose()
                 .AppendCode($"public class Item")
                 .OpenBrace()
+                .AppendCode($"// Properties")
+                .SummaryOpen()
+                .Summary($"Value")
+                .SummaryClose()
+                .AppendCode($"public {ElementGetName} Value {{ get; set; }}")
+                .DefineBlock(out CodeBlockNested itemPropertiesBlock)
+                .BlankLine()
+                .SummaryOpen()
+                .Summary($"Constructor")
+                .SummaryClose()
+                .AppendCode($"public Item({ElementGetName} value)")
+                .OpenBrace()
+                .AppendCode($"this.Value = value;")
+                .DefineBlock(out CodeBlockNested itemConstructorBlock)
+                .CloseBrace()
+
+                .BlankLine()
+                .AppendCode($"// Methods")
+                .DefineBlock(out CodeBlockNested itemMethodsBlock)
                 .CloseBrace()
                 ;
+
+
+            BuildItemClassLocal(itemConstructorBlock,
+                itemPropertiesBlock,
+                itemMethodsBlock);
         }
+
+        /// <summary>
+        /// Child classes can overload this to do local processing of item class.
+        /// </summary>
+        protected virtual void BuildItemClassLocal(CodeBlockNested itemConstructorBlock,
+            CodeBlockNested itemPropertiesBlock,
+            CodeBlockNested itemMethodsBlock)
+        {
+        }
+
+        protected abstract void WriteItem(CodeBlockNested b);
+        protected abstract void ReadItem(CodeBlockNested b);
 
         void BuildContainerClass()
         {
@@ -71,50 +113,142 @@ namespace FireFragger.CS.BuildMembers
                 .DefineBlock(out this.itemCode)
                 .BlankLine()
                 .AppendCode($"// Properties")
-                .DefineBlock(out CodeBlockNested propertiesBlock)
+                .DefineBlock(out CodeBlockNested containerPropertiesBlock)
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
                 .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{elementId}\", min, max)")
                 .OpenBrace()
-                .DefineBlock(out CodeBlockNested constructorBlock)
+                .DefineBlock(out CodeBlockNested containerConstructorBlock)
                 .CloseBrace()
                 .BlankLine()
                 .AppendCode($"// Methods")
-                .DefineBlock(out CodeBlockNested methodsBlock)
+                .DefineBlock(out CodeBlockNested containerMethodsBlock)
                 .CloseBrace()
                 ;
 
+            this.BuildContainerClassLocal(containerConstructorBlock,
+                containerPropertiesBlock,
+                containerMethodsBlock);
+
             if (this.Singleton)
             {
-                propertiesBlock
+                containerPropertiesBlock
+                    .BlankLine()
                     .SummaryOpen()
-                    .Summary($"Value")
+                    .Summary($"All Items")
                     .SummaryClose()
-                    .AppendCode($"public {ItemElementName} Value {{ get; set; }}")
+                    .AppendCode($"IEnumerable<Item> AllItems => new Item[] {{ this.item }};")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Item")
+                    .SummaryClose()
+                    .AppendCode($"Item item;")
 
                     .BlankLine()
                     .SummaryOpen()
                     .Summary($"Count property")
                     .SummaryClose()
-                    .AppendCode($"public override Int32 Count => this.Value == null ? 0 : 1;")
+                    .AppendCode($"public override Int32 Count => this.item == null ? 0 : 1;")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Get Item's Value")
+                    .SummaryClose()
+                    .AppendCode($"public {ElementGetName} Get()")
+                    .OpenBrace()
+                    .AppendCode($"if (item == null)")
+                    .AppendCode($"    return null;")
+                    .AppendCode($"return item.Value;")
+                    .CloseBrace()
                     ;
+
+                foreach (String elementSetName in this.ElementSetNames)
+                {
+                    containerPropertiesBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Set Item's Value")
+                        .SummaryClose()
+                        .AppendCode($"public void Set({elementSetName} value)")
+                        .OpenBrace()
+                        .AppendCode($"this.item = new Item(value);")
+                        .CloseBrace()
+                        ;
+                }
             }
             else
             {
-                propertiesBlock
-                    .AppendCode($"List<{ItemElementName}> items = new List<{ItemElementName}>();")
+                containerPropertiesBlock
+                    .AppendCode($"List<Item> items = new List<Item>();")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"All Items")
+                    .SummaryClose()
+                    .AppendCode($"IEnumerable<Item> AllItems => this.items;")
 
                     .BlankLine()
                     .SummaryOpen()
                     .Summary($"Count property")
                     .SummaryClose()
                     .AppendCode($"public override Int32 Count => items.Count;")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Return all items")
+                    .SummaryClose()
+                    .AppendCode($"public IEnumerable<{ElementGetName}> All()")
+                    .OpenBrace()
+                    .AppendCode($"foreach (Item item in items)")
+                    .AppendCode($"   yield return item.Value;")
+                    .CloseBrace()
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Get Item's Value at indicated index")
+                    .SummaryClose()
+                    .AppendCode($"public {ElementGetName} GetAt(Int32 i) => this.items[i].Value;")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Remove Item at indicated index")
+                    .SummaryClose()
+                    .AppendCode($"public void RemoveAt(Int32 i) => this.items.RemoveAt(i);")
+
+                    .BlankLine()
+                    .SummaryOpen()
+                    .Summary($"Clear all items from collection")
+                    .SummaryClose()
+                    .AppendCode($"public void Clear() => this.items.Clear();")
                     ;
+
+                foreach (String elementSetName in this.ElementSetNames)
+                {
+                    containerPropertiesBlock
+                        .BlankLine()
+                        .SummaryOpen()
+                        .Summary($"Append value to collection")
+                        .SummaryClose()
+                        .AppendCode($"public void Append({elementSetName} value) => this.items.Add(new Item(value));")
+                        ;
+                }
             }
 
-            methodsBlock
+            containerMethodsBlock
+               .BlankLine()
+               .SummaryOpen()
+               .Summary("Write single item as a fhir element.")
+               .SummaryClose()
+               .AppendCode($"public {FhirElementItemName} WriteItem(BreastRadiologyDocument doc, Item item)")
+               .OpenBrace()
+               .AppendCode($"return new {FhirElementItemName}")
+               .OpenBrace()
+               .Call(WriteItem)
+               .CloseBrace(";")
+               .CloseBrace()
 
                .BlankLine()
                .SummaryOpen()
@@ -122,61 +256,71 @@ namespace FireFragger.CS.BuildMembers
                .SummaryClose()
                .AppendCode($"public IEnumerable<{FhirElementItemName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
-               .AppendCode($"throw new NotImplementedException();")
-               //.AppendCode($"foreach ({propertyType} item in this.All())")
-               //.OpenBrace()
-               //.AppendCode($"{ClassItemName} c = new {ClassItemName}")
-               //.OpenBrace()
-               //.AppendCode($"Value = item,")
-               //.AppendCode($"Code = {componentCodeMethodName}()")
-               //.CloseBrace(";")
-               //.AppendCode($"yield return c;")
-               //.CloseBrace()
+               .AppendCode($"foreach (Item item in this.AllItems)")
+               .AppendCode($"    yield return WriteItem(doc, item);")
+               .CloseBrace()
+
+               .BlankLine()
+               .SummaryOpen()
+               .Summary("Read single item as a fhir element.")
+               .SummaryClose()
+               .AppendCode($"public Item ReadItem(BreastRadiologyDocument doc, {FhirElementItemName} element)")
+               .OpenBrace()
+               .Call(ReadItem)
                .CloseBrace()
 
                .BlankLine()
                .SummaryOpen()
                .Summary("Read data from fhir element into member item.")
                .SummaryClose()
-               .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirElementItemName}> element)")
+               .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirElementItemName}> elements)")
                .OpenBrace()
-               .AppendCode($"throw new NotImplementedException();")
-            //   .AppendCode($"List<{ClassItemName}> items = element")
-            //   .AppendCode($"    .Where((a) => a.Code.IsCode(this.{componentCodeMethodName}()))")
-            //   .AppendCode($"    .ToList()")
-            //   .AppendCode($"    ;")
-            //   ;
+               .AppendCode($"List<Item> items = new List<Item>();")
+               .AppendCode($"foreach ({FhirElementItemName} element in elements)")
+               .OpenBrace()
+               .AppendCode($"Item item = ReadItem(doc, element);")
+               .AppendCode($"if (item != null)")
+               .AppendCode($"   items.Add(item);")
+               .CloseBrace()
+            ;
+            if (this.Max == 1)
+            {
+                containerMethodsBlock
+                    .AppendCode($"switch (items.Count)")
+                    .OpenBrace()
+                    .AppendCode($"case 0:")
+                    .AppendCode($"    break;")
+                    .AppendCode($"case 1:")
+                    .AppendCode($"    this.item = items[0];")
+                    .AppendCode($"    break;")
+                    .AppendCode($"default:")
+                    .AppendCode($"    throw new Exception(\"error reading component {this.FhirElementItemName}. Multiple items found. Expected single element\");")
+                    .CloseBrace()
+                    ;
+            }
+            else
+            {
+                containerMethodsBlock
+                    .AppendCode($"this.items.Clear();")
+                    .AppendCode($"this.items.AddRange(items);")
+                    ;
+            }
 
-            //if (max == 1)
-            //{
-            //    methodsBlock
-            //        .AppendCode($"switch (items.Count)")
-            //        .OpenBrace()
-            //        .AppendCode($"case 0:")
-            //        .AppendCode($"    break;")
-            //        .AppendCode($"case 1:")
-            //        .AppendCode($"    this.value = ({propertyType}) items[0].Value;")
-            //        .AppendCode($"    break;")
-            //        .AppendCode($"default:")
-            //        .AppendCode($"    throw new Exception(\"error reading component {sliceName}. Multiple items found for single element\");")
-            //        .CloseBrace()
-            //        ;
-            //}
-            //else
-            //{
-            //    methodsBlock
-            //        .AppendCode($"this.values.Clear();")
-            //        .AppendCode($"foreach ({ClassItemName} c in items)")
-            //        .AppendCode($"    this.values.Add(({propertyType}) c.Value);")
-            //        ;
-            //}
-
-            //methodsBlock
+            containerMethodsBlock
                .CloseBrace()
                ;
             ;
         }
 
+
+        /// <summary>
+        /// Child classes can overload this to do local processing of container class.
+        /// </summary>
+        protected virtual void BuildContainerClassLocal(CodeBlockNested containerConstructorBlock,
+            CodeBlockNested containerPropertiesBlock,
+            CodeBlockNested containerMethodsBlock)
+        {
+        }
 
         public virtual void BuildOne(Int32 min, Int32 max)
         {

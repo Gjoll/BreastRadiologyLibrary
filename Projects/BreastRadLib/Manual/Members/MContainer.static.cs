@@ -16,22 +16,5 @@ namespace BreastRadLib
             if ((item.Max > 0) && (item.Count > item.Max))
                 throw new Exception($"Error writing Composition.section '{item.FhirPath}'. Max cardinality sb {item.Max}, is {item.Count}");
         }
-
-        public static bool IsCode(CodeableConcept code1,
-            CodeableConcept code2)
-        {
-            foreach (Coding c in code1.Coding)
-            {
-                foreach (Coding d in code2.Coding)
-                {
-                    if (
-                        (String.Compare(c.System, d.System, true) == 0) &&
-                        (String.Compare(c.Code, d.Code, true) == 0)
-                        )
-                        return true;
-                }
-            }
-            return false;
-        }
     }
 }

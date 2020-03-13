@@ -12,19 +12,56 @@ namespace FireFragger.CS.BuildMembers
     {
         String fhirName;
         String SliceName;
-        String itemElementName;
+        String itemElementGetName;
+        List<String> itemElementSetName = new List<String>();
         String containerClassName;
+        String sliceName;
+        String componentCodeMethodName;
+        CodeableConcept componentCode;
 
         protected ElementTreeNode memberNode;
 
-        protected override string ItemElementName => this.itemElementName;
-
+        protected override string ElementGetName => this.itemElementGetName;
+        protected override IEnumerable<string> ElementSetNames => this.itemElementSetName;
         protected override string ContainerClassName => this.containerClassName;
 
         /// <summary>
         /// Name of fhir element (as stored in resource).
         /// </summary>
         protected override String FhirElementItemName => "Observation.ComponentComponent";
+
+        /// <summary>
+        /// Perform local processing of container class.
+        /// </summary>
+        protected override void BuildContainerClassLocal(CodeBlockNested containerConstructorBlock,
+            CodeBlockNested containerPropertiesBlock,
+            CodeBlockNested containerMethodsBlock)
+        {
+            base.BuildContainerClassLocal(containerConstructorBlock,
+                containerPropertiesBlock,
+                containerMethodsBlock);
+
+            componentCodeMethodName = $"{sliceName.ToMachineName()}_ComponentCode";
+            FhirConstruct.Construct(containerMethodsBlock, componentCode, componentCodeMethodName, out String dummy);
+        }
+
+        protected override void ReadItem(CodeBlockNested b)
+        {
+            b
+                .AppendCode($"Item item = null;")
+                .AppendCode($"if (element.Code.IsCode(this.{componentCodeMethodName}()))")
+                .AppendCode($"    item = new Item(({this.ElementGetName}) element.Value);")
+                .AppendCode($"return item;")
+                ;
+        }
+
+        protected override void WriteItem(CodeBlockNested b)
+        {
+            b
+            .AppendCode($"Value = item.Value,")
+            .AppendCode($"Code = {componentCodeMethodName}()")
+            ;
+        }
 
         public override void Build()
         {
@@ -106,14 +143,14 @@ namespace FireFragger.CS.BuildMembers
 
             foreach (ElementTreeSlice memberSlice in this.memberNode.Slices.Skip(1))
             {
-                String sliceName = memberSlice.ElementDefinition.SliceName;
+                this.sliceName = memberSlice.ElementDefinition.SliceName;
 
                 if (memberSlice.Nodes.TryGetItem("value[x]", out ElementTreeNode valueNode) == false)
                     throw new Exception("{this.fhirName} missing value[x] node");
                 if (memberSlice.Nodes.TryGetItem("code", out ElementTreeNode codeNode) == false)
                     throw new Exception("{this.fhirName} missing code node");
 
-                CodeableConcept componentCode = (CodeableConcept)codeNode.ElementDefinition.Fixed;
+                componentCode = (CodeableConcept)codeNode.ElementDefinition.Fixed;
                 if (componentCode == null)
                     componentCode = (CodeableConcept)codeNode.ElementDefinition.Pattern;
                 if (componentCode == null)
@@ -124,12 +161,12 @@ namespace FireFragger.CS.BuildMembers
                 Int32 min = sliceDef.Min.Value;
                 this.SliceName = sliceName.ToMachineName();
 
-                List<String> types = new List<String>();
+                this.itemElementSetName = new List<String>();
                 foreach (var type in valueNode.ElementDefinition.Type)
-                    types.Add(type.Code);
+                    itemElementSetName.Add(type.Code);
 
                 this.containerClassName = $"{this.SliceName}Container";
-                this.itemElementName = (types.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
+                this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
                 base.BuildOne(min, max);
 
                 //String localClassName =
