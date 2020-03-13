@@ -1,33 +1,62 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemReference.cs:58
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
-		/// Access AssociatedFeature
+		/// AssociatedFeature
+		/// Access fhir element 'Observation.hasMember:associatedFeature'
 		/// </summary>
-		public TItemReferenceMultiple<AssociatedFeature> AssociatedFeature { get ; protected set; }                                               // BuildElementItemReference.cs:62
+		public AssociatedFeatureContainer AssociatedFeature { get ; protected set; }                                                              // BuildMemberBase.cs:311
 		//- Properties
 
 			//+ Constructor
-			this.AssociatedFeature = new TItemReferenceMultiple<AssociatedFeature>("Observation.hasMember:associatedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");// BuildElementItemReference.cs:47
+			this.AssociatedFeature = new AssociatedFeatureContainer(0, 0);                                                                           // BuildMemberBase.cs:295
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.AssociatedFeature.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemReference.cs:71
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearHasMember();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.AssociatedFeature.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:65
+			//+ !WriteHasMembers
+			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:157
+			//- !WriteHasMembers
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.AssociatedFeature.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemReference.cs:68
+			//+ !ReadHasMembers
+			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:166
+			//- !ReadHasMembers
 			//- ReadCode
 
 			//+ Methods
+			                                                                                                                                         // BuildMemberReferences.cs:121
+			//+ !HasMembers
+			                                                                                                                                         // BuildMemberReferences.cs:124
+			/// <summary>
+			/// Read all values from resource into this instance
+			/// </summary>
+			private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:128
+			{                                                                                                                                        // BuildMemberReferences.cs:129
+			    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                     // BuildMemberReferences.cs:130
+			    //+ ReadHasMembers
+			    this.AssociatedFeature.Read(this.Doc, items);                                                                                        // BuildMemberReferences.cs:80
+			    //- ReadHasMembers
+			}                                                                                                                                        // BuildMemberReferences.cs:132
+			                                                                                                                                         // BuildMemberReferences.cs:134
+			/// <summary>
+			/// Write all values from this instance into resource
+			/// </summary>
+			private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                // BuildMemberReferences.cs:138
+			{                                                                                                                                        // BuildMemberReferences.cs:139
+			    List<ResourceReference> items = new List<ResourceReference>();                                                                       // BuildMemberReferences.cs:140
+			    //+ WriteHasMembers
+			    items.AddRange(this.AssociatedFeature.Write(this.Doc));                                                                              // BuildMemberReferences.cs:101
+			    //- WriteHasMembers
+			    this.Resource.SetValue("hasMember", items);                                                                                          // BuildMemberReferences.cs:142
+			}                                                                                                                                        // BuildMemberReferences.cs:143
+			//- !HasMembers
 			//- Methods

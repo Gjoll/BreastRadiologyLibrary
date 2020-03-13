@@ -38,11 +38,20 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
                 return;
-            BuildItemReference bcr = new BuildItemReference(this,
-                this.fragBase.CodeBlocks, 
-                "HasMembers", 
-                hasMemberNode);
-            bcr.Define();
+            //{
+            //    BuildItemReference bcr = new BuildItemReference(this,
+            //        this.fragBase.CodeBlocks,
+            //        "HasMembers",
+            //        hasMemberNode);
+            //    bcr.Define();
+            //}
+
+            {
+                BuildMembers.BuildMemberReferences bcr = new BuildMembers.BuildMemberReferences(this,
+                    this.fragBase.CodeBlocks,
+                    hasMemberNode);
+                bcr.Build();
+            }
         }
 
         public override void Build()

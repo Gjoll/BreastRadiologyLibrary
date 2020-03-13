@@ -1,21 +1,21 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:301
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsDistribution
 		/// Access fhir element 'Observation.component:obsDistribution'
 		/// </summary>
-		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsDistRegionSize
 		/// Access fhir element 'Observation.component:obsDistRegionSize'
 		/// </summary>
-		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:306
+		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:311
 		//- Properties
 
 			//+ Constructor
-			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:290
-			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:290
+			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:295
+			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:295
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -56,7 +56,7 @@
 			}                                                                                                                                        // BuildMemberComponents.cs:121
 			                                                                                                                                         // BuildMemberComponents.cs:123
 			/// <summary>
-			/// Write all component values from this instance into resource
+			/// Write all values from this instance into resource
 			/// </summary>
 			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:127
 			{                                                                                                                                        // BuildMemberComponents.cs:128

@@ -37,83 +37,84 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
-		                                                                                                                                          // BuildMemberBase.cs:301
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsChanges
 		/// Access fhir element 'Observation.component:obsChanges'
 		/// </summary>
-		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// Access fhir element 'Observation.component:biRadsAssessmentCategory'
 		/// </summary>
-		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// Orientation
 		/// Access fhir element 'Observation.component:orientation'
 		/// </summary>
-		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// Shape
 		/// Access fhir element 'Observation.component:shape'
 		/// </summary>
-		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// Margin
 		/// Access fhir element 'Observation.component:margin'
 		/// </summary>
-		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// MgDensity
 		/// Access fhir element 'Observation.component:mgDensity'
 		/// </summary>
-		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsDistribution
 		/// Access fhir element 'Observation.component:obsDistribution'
 		/// </summary>
-		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsDistRegionSize
 		/// Access fhir element 'Observation.component:obsDistRegionSize'
 		/// </summary>
-		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsSize
 		/// Access fhir element 'Observation.component:obsSize'
 		/// </summary>
-		public ObsSizeContainer ObsSize { get ; protected set; }                                                                                  // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ObsSizeContainer ObsSize { get ; protected set; }                                                                                  // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// Access fhir element 'Observation.component:PreviouslyDemonstratedBy'
 		/// </summary>
-		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildElementItemReference.cs:58
+		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
-		/// Access AssociatedFeature
+		/// AssociatedFeature
+		/// Access fhir element 'Observation.hasMember:associatedFeature'
 		/// </summary>
-		public TItemReferenceMultiple<AssociatedFeature> AssociatedFeature { get ; protected set; }                                               // BuildElementItemReference.cs:62
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public AssociatedFeatureContainer AssociatedFeature { get ; protected set; }                                                              // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// FibroAdenomaType
 		/// Access fhir element 'Observation.component:fibroAdenomaType'
 		/// </summary>
-		public FibroAdenomaTypeContainer FibroAdenomaType { get ; protected set; }                                                                // BuildMemberBase.cs:306
+		public FibroAdenomaTypeContainer FibroAdenomaType { get ; protected set; }                                                                // BuildMemberBase.cs:311
 		//- Properties
 
 		/// <summary>
@@ -158,19 +159,19 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma");                                    // DefineBase.cs:220
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
-			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:290
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:290
-			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:290
-			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:290
-			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:290
-			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:290
-			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:290
-			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:290
-			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:290
-			this.ObsSize = new ObsSizeContainer(0, 0);                                                                                               // BuildMemberBase.cs:290
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:290
-			this.AssociatedFeature = new TItemReferenceMultiple<AssociatedFeature>("Observation.hasMember:associatedFeature", 0, -1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");// BuildElementItemReference.cs:47
-			this.FibroAdenomaType = new FibroAdenomaTypeContainer(0, 0);                                                                             // BuildMemberBase.cs:290
+			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:295
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:295
+			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:295
+			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:295
+			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:295
+			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:295
+			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:295
+			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:295
+			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:295
+			this.ObsSize = new ObsSizeContainer(0, 0);                                                                                               // BuildMemberBase.cs:295
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:295
+			this.AssociatedFeature = new AssociatedFeatureContainer(0, 0);                                                                           // BuildMemberBase.cs:295
+			this.FibroAdenomaType = new FibroAdenomaTypeContainer(0, 0);                                                                             // BuildMemberBase.cs:295
 			//- Constructor
 		}
 
@@ -186,7 +187,6 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.AssociatedFeature.Validate(sb) == false) retVal = false;                                                                        // BuildElementItemReference.cs:71
 			//- ValidateCode
 			return retVal;
 		}
@@ -198,14 +198,15 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();
 			//- WriteCodeStart
 			//+ WriteCode
 			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
 			//+ !WriteComponents
 			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:146
 			//- !WriteComponents
-			this.AssociatedFeature.Write(this.Doc, this.Resource);                                                                                   // BuildElementItemReference.cs:65
+			//+ !WriteHasMembers
+			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:157
+			//- !WriteHasMembers
 			//- WriteCode
 		}
 
@@ -222,7 +223,9 @@ namespace BreastRadLib
 			//+ !ReadComponents
 			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:155
 			//- !ReadComponents
-			this.AssociatedFeature.Read(this.Doc, this.Resource);                                                                                    // BuildElementItemReference.cs:68
+			//+ !ReadHasMembers
+			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:166
+			//- !ReadHasMembers
 			//- ReadCode
 		}
 
@@ -274,7 +277,7 @@ namespace BreastRadLib
 			}                                                                                                                                        // BuildMemberComponents.cs:121
 			                                                                                                                                         // BuildMemberComponents.cs:123
 			/// <summary>
-			/// Write all component values from this instance into resource
+			/// Write all values from this instance into resource
 			/// </summary>
 			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:127
 			{                                                                                                                                        // BuildMemberComponents.cs:128
@@ -302,6 +305,32 @@ namespace BreastRadLib
 			                                                                                                                                         // BuildMemberComponents.cs:110
 			                                                                                                                                         // BuildMemberComponents.cs:110
 			                                                                                                                                         // BuildMemberComponents.cs:110
+			                                                                                                                                         // BuildMemberReferences.cs:121
+		//+ !HasMembers
+			                                                                                                                                         // BuildMemberReferences.cs:124
+			/// <summary>
+			/// Read all values from resource into this instance
+			/// </summary>
+			private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:128
+			{                                                                                                                                        // BuildMemberReferences.cs:129
+			    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                     // BuildMemberReferences.cs:130
+			    //+ ReadHasMembers
+			    this.AssociatedFeature.Read(this.Doc, items);                                                                                        // BuildMemberReferences.cs:80
+			    //- ReadHasMembers
+			}                                                                                                                                        // BuildMemberReferences.cs:132
+			                                                                                                                                         // BuildMemberReferences.cs:134
+			/// <summary>
+			/// Write all values from this instance into resource
+			/// </summary>
+			private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                // BuildMemberReferences.cs:138
+			{                                                                                                                                        // BuildMemberReferences.cs:139
+			    List<ResourceReference> items = new List<ResourceReference>();                                                                       // BuildMemberReferences.cs:140
+			    //+ WriteHasMembers
+			    items.AddRange(this.AssociatedFeature.Write(this.Doc));                                                                              // BuildMemberReferences.cs:101
+			    //- WriteHasMembers
+			    this.Resource.SetValue("hasMember", items);                                                                                          // BuildMemberReferences.cs:142
+			}                                                                                                                                        // BuildMemberReferences.cs:143
+		//- !HasMembers
 		//- Methods
 	}
 }

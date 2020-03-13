@@ -19,9 +19,9 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access AssociatedFeature
+		/// AssociatedFeature
 		/// </summary>
-		TItemReferenceMultiple<AssociatedFeature> AssociatedFeature { get ; }                                                                     // BuildElementItemReference.cs:54
+		AssociatedFeatureContainer AssociatedFeature { get ; }                                                                                    // BuildMemberBase.cs:302
 		//- Properties
 
 		//+ Methods

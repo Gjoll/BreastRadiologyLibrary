@@ -29,18 +29,18 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
-		                                                                                                                                          // BuildMemberBase.cs:301
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:306
-		                                                                                                                                          // BuildMemberBase.cs:301
+		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// FeatureType
 		/// Access fhir element 'Observation.component:featureType'
 		/// </summary>
-		public FeatureTypeContainer FeatureType { get ; protected set; }                                                                          // BuildMemberBase.cs:306
+		public FeatureTypeContainer FeatureType { get ; protected set; }                                                                          // BuildMemberBase.cs:311
 		//- Properties
 
 		/// <summary>
@@ -85,8 +85,8 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:220
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
-			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:290
-			this.FeatureType = new FeatureTypeContainer(1, 1);                                                                                       // BuildMemberBase.cs:290
+			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:295
+			this.FeatureType = new FeatureTypeContainer(1, 1);                                                                                       // BuildMemberBase.cs:295
 			//- Constructor
 		}
 
@@ -113,7 +113,6 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();
 			//- WriteCodeStart
 			//+ WriteCode
 			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
@@ -177,7 +176,7 @@ namespace BreastRadLib
 			}                                                                                                                                        // BuildMemberComponents.cs:121
 			                                                                                                                                         // BuildMemberComponents.cs:123
 			/// <summary>
-			/// Write all component values from this instance into resource
+			/// Write all values from this instance into resource
 			/// </summary>
 			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:127
 			{                                                                                                                                        // BuildMemberComponents.cs:128

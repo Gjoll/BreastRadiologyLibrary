@@ -8,7 +8,7 @@ using System.Text;
 
 namespace FireFragger.CS.BuildMembers
 {
-    internal class BuildMemberComponents : BuildMemberBase
+    internal class BuildMemberReferences : BuildMemberBase
     {
         String fhirName;
         String SliceName;
@@ -16,13 +16,11 @@ namespace FireFragger.CS.BuildMembers
         List<String> itemElementSetName = new List<String>();
         String containerClassName;
         String sliceName;
-        String componentCodeMethodName;
-        CodeableConcept componentCode;
         CodeBlockNested readBlock;
         CodeBlockNested writeBlock;
+        List<String> targetProfiles = new List<string>();
 
         protected ElementTreeNode memberNode;
-
         protected override string PropertyName => $"{this.sliceName.ToMachineName()}";
         protected override string ElementGetName => this.itemElementGetName;
         protected override IEnumerable<string> ElementSetNames => this.itemElementSetName;
@@ -31,7 +29,7 @@ namespace FireFragger.CS.BuildMembers
         /// <summary>
         /// Name of fhir element (as stored in resource).
         /// </summary>
-        protected override String FhirClassName => "Observation.ComponentComponent";
+        protected override String FhirClassName => "ResourceReference";
 
         /// <summary>
         /// Perform local processing of container class.
@@ -44,21 +42,35 @@ namespace FireFragger.CS.BuildMembers
                 containerPropertiesBlock,
                 containerMethodsBlock);
 
-            componentCodeMethodName = $"{sliceName.ToMachineName()}_ComponentCode";
-            FhirConstruct.Construct(containerMethodsBlock, componentCode, componentCodeMethodName, out String dummy);
+            containerPropertiesBlock
+                .AppendCode("String[] targetUrls = new string[]")
+                .OpenBrace()
+                ;
+
+            for (Int32 i = 0; i < this.targetProfiles.Count - 1; i++)
+                containerPropertiesBlock.AppendCode($"\"{targetProfiles[i]}\",");
+
+            containerPropertiesBlock
+                .AppendCode($"\"{this.targetProfiles[targetProfiles.Count - 1]}\"")
+                .CloseBrace(";")
+               ;
+            ;
         }
 
         protected override void BuildRead(CodeBlockNested b)
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> components)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> references)")
                 .OpenBrace()
+                .AppendCode("IEnumerable<ResourceBase> resources = base.IsMember(doc,")
+                .AppendCode("    references,")
+                .AppendCode("    this.targetUrls);")
                 .AppendCode($"List<Item> items = new List<Item>();")
-                .AppendCode($"foreach ({FhirClassName} component in components)")
+                .AppendCode($"foreach (ResourceBase resource in resources)")
                 .OpenBrace()
-                .AppendCode($"if (component.Code.IsCode(this.{componentCodeMethodName}()))")
-                .AppendCode($"    items.Add(new Item(({this.ElementGetName}) component.Value));")
+                .AppendCode($"Item item = new Item(({this.itemElementGetName}) resource);")
+                .AppendCode($"items.Add(item);")
                 .CloseBrace()
                 .AppendCode($"this.SetAllItems(items);")
                 .CloseBrace()
@@ -76,12 +88,11 @@ namespace FireFragger.CS.BuildMembers
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
                .OpenBrace()
-               .AppendCode($"{FhirClassName} component = new {FhirClassName}")
+               .AppendCode($"{FhirClassName} reference = new {FhirClassName}")
                .OpenBrace()
-               .AppendCode($"Value = item.Value,")
-               .AppendCode($"Code = {componentCodeMethodName}()")
+               .AppendCode($"Reference = item.Value.Id")
                .CloseBrace(";")
-               .AppendCode($"yield return component;")
+               .AppendCode($"yield return reference;")
                .CloseBrace()
                .CloseBrace()
                ;
@@ -97,26 +108,26 @@ namespace FireFragger.CS.BuildMembers
                 return;
 
             // Block is marked with !, so the top level lines are not merged, so we
-            // dont have duplicate Read/Write Components methods.
-            // component block may have been defined in a class merged into this one,
+            // dont have duplicate Read/Write methods.
+            // block may have been defined in a class merged into this one,
             // so check to see if it exists.
-            String readBlockName = $"ReadComponents";
-            String writeBlockName = $"WriteComponents";
-            String componentBlockName = $"!Components";
-            CodeBlockNested componentBlock = this.codeBlocks.ClassMethods.Find(componentBlockName, false);
-            if (componentBlock == null)
+            String readBlockName = $"ReadHasMembers";
+            String writeBlockName = $"WriteHasMembers";
+            String referenceBlockName = $"!HasMembers";
+            CodeBlockNested memberBlock = this.codeBlocks.ClassMethods.Find(referenceBlockName, false);
+            if (memberBlock == null)
             {
                 this.codeBlocks.ClassMethods
                     .BlankLine()
-                    .StartBlock(componentBlockName)
+                    .StartBlock(referenceBlockName)
 
                     .BlankLine()
                     .SummaryOpen()
-                    .Summary($"Read all component values from resource into this instance")
+                    .Summary($"Read all values from resource into this instance")
                     .SummaryClose()
-                    .AppendCode($"private void ReadComponents(BreastRadiologyDocument doc)")
+                    .AppendCode($"private void ReadHasMembers(BreastRadiologyDocument doc)")
                     .OpenBrace()
-                    .AppendCode($"List<{FhirClassName}> items = this.Resource.GetValue<{FhirClassName}>(\"{this.fhirName}\").ToList();")
+                    .AppendCode($"List<{FhirClassName}> items = this.Resource.GetValue<{FhirClassName}>(\"hasMember\").ToList();")
                     .DefineBlock(out this.readBlock, readBlockName)
                     .CloseBrace()
 
@@ -124,76 +135,72 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryOpen()
                     .Summary($"Write all values from this instance into resource")
                     .SummaryClose()
-                    .AppendCode($"private void WriteComponents(BreastRadiologyDocument doc)")
+                    .AppendCode($"private void WriteHasMembers(BreastRadiologyDocument doc)")
                     .OpenBrace()
                     .AppendCode($"List<{FhirClassName}> items = new List<{FhirClassName}>();")
                     .DefineBlock(out this.writeBlock, writeBlockName)
-                    .AppendCode($"this.Resource.SetValue(\"{this.fhirName}\", items);")
+                    .AppendCode($"this.Resource.SetValue(\"hasMember\", items);")
                     .CloseBrace()
                     .EndBlock()
                     ;
             }
             else
             {
-                this.readBlock = componentBlock.Find(readBlockName);
-                this.writeBlock = componentBlock.Find(writeBlockName);
+                this.readBlock = memberBlock.Find(readBlockName);
+                this.writeBlock = memberBlock.Find(writeBlockName);
             }
 
-            if (this.codeBlocks.ClassWriteCode.Find("!WriteComponents") == null)
+            if (this.codeBlocks.ClassWriteCode.Find("!WriteHasMembers") == null)
             {
                 this.codeBlocks.ClassWriteCode
-                .StartBlock("!WriteComponents")
-                .AppendCode($"this.WriteComponents(this.Doc);")
+                .StartBlock("!WriteHasMembers")
+                .AppendCode($"this.WriteHasMembers(this.Doc);")
                 .EndBlock()
                 ;
             }
 
-            if (this.codeBlocks.ClassReadCode.Find("!ReadComponents") == null)
+            if (this.codeBlocks.ClassReadCode.Find("!ReadHasMembers") == null)
             {
                 this.codeBlocks.ClassReadCode
-                    .StartBlock("!ReadComponents")
-                    .AppendCode($"this.ReadComponents(this.Doc);")
+                    .StartBlock("!ReadHasMembers")
+                    .AppendCode($"this.ReadHasMembers(this.Doc);")
                     .EndBlock()
                     ;
             }
 
             foreach (ElementTreeSlice memberSlice in this.memberNode.Slices.Skip(1))
             {
-                this.sliceName = memberSlice.ElementDefinition.SliceName;
-
-                if (memberSlice.Nodes.TryGetItem("value[x]", out ElementTreeNode valueNode) == false)
-                    throw new Exception("{this.fhirName} missing value[x] node");
-                if (memberSlice.Nodes.TryGetItem("code", out ElementTreeNode codeNode) == false)
-                    throw new Exception("{this.fhirName} missing code node");
-
-                componentCode = (CodeableConcept)codeNode.ElementDefinition.Fixed;
-                if (componentCode == null)
-                    componentCode = (CodeableConcept)codeNode.ElementDefinition.Pattern;
-                if (componentCode == null)
-                    throw new Exception("Missing {this.fhirName}.code fixed value");
-
                 ElementDefinition sliceDef = memberSlice.ElementDefinition;
+                this.sliceName = sliceDef.SliceName;
+
                 Int32 max = CSMisc.ToMax(sliceDef.Max);
                 Int32 min = sliceDef.Min.Value;
                 this.SliceName = sliceName.ToMachineName();
 
+                if ((sliceDef.Type.Count != 1) || (sliceDef.Type[0].Code != "Reference"))
+                    throw new Exception($"Invalid reference types");
                 this.itemElementSetName = new List<String>();
-                foreach (var type in valueNode.ElementDefinition.Type)
-                    itemElementSetName.Add(type.Code);
+                this.targetProfiles.Clear();
+                foreach (String profile in sliceDef.Type[0].TargetProfile)
+                {
+                    this.targetProfiles.Add(profile);
+                    String propertyClassName = CSMisc.ResourceClassName(profile);
+                    itemElementSetName.Add(propertyClassName);
+                }
 
                 this.containerClassName = $"{this.SliceName}Container";
-                this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
+                this.itemElementGetName = (itemElementSetName.Count == 1) ? itemElementSetName [0] : "ResourceBase";
                 base.BuildOne(memberSlice.ElementDefinition.ElementId, min, max);
             }
             //BuildProperty();
         }
 
-        public BuildMemberComponents(DefineBase defineBase,
+        public BuildMemberReferences(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
-            ElementTreeNode componentNode) : 
+            ElementTreeNode memberNode) : 
             base(defineBase, codeBlocks)
         {
-            this.memberNode = componentNode;
+            this.memberNode = memberNode;
             this.fhirName = memberNode.ElementDefinition.Path.LastPathPart();
         }
     }

@@ -24,26 +24,30 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, ISectionFindingsLeftBreast
 	{
 		//+ Properties
-		                                                                                                                                          // BuildElementItemReference.cs:58
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
-		/// Access MGFinding
+		/// MGFinding
+		/// Access fhir element 'Observation.hasMember:mGFinding'
 		/// </summary>
-		public TItemReferenceSingle<MGFinding> MGFinding { get ; protected set; }                                                                 // BuildElementItemReference.cs:62
-		                                                                                                                                          // BuildElementItemReference.cs:58
+		public MGFindingContainer MGFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
-		/// Access MRIFinding
+		/// MRIFinding
+		/// Access fhir element 'Observation.hasMember:mRIFinding'
 		/// </summary>
-		public TItemReferenceSingle<MRIFinding> MRIFinding { get ; protected set; }                                                               // BuildElementItemReference.cs:62
-		                                                                                                                                          // BuildElementItemReference.cs:58
+		public MRIFindingContainer MRIFinding { get ; protected set; }                                                                            // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
-		/// Access NMFinding
+		/// NMFinding
+		/// Access fhir element 'Observation.hasMember:nMFinding'
 		/// </summary>
-		public TItemReferenceSingle<NMFinding> NMFinding { get ; protected set; }                                                                 // BuildElementItemReference.cs:62
-		                                                                                                                                          // BuildElementItemReference.cs:58
+		public NMFindingContainer NMFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:311
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
-		/// Access USFinding
+		/// USFinding
+		/// Access fhir element 'Observation.hasMember:uSFinding'
 		/// </summary>
-		public TItemReferenceSingle<USFinding> USFinding { get ; protected set; }                                                                 // BuildElementItemReference.cs:62
+		public USFindingContainer USFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:311
 		//- Properties
 
 		/// <summary>
@@ -88,10 +92,10 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:220
-			this.MGFinding = new TItemReferenceSingle<MGFinding>("Observation.hasMember:mGFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");// BuildElementItemReference.cs:47
-			this.MRIFinding = new TItemReferenceSingle<MRIFinding>("Observation.hasMember:mRIFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding");// BuildElementItemReference.cs:47
-			this.NMFinding = new TItemReferenceSingle<NMFinding>("Observation.hasMember:nMFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding");// BuildElementItemReference.cs:47
-			this.USFinding = new TItemReferenceSingle<USFinding>("Observation.hasMember:uSFinding", 0, 1, doc, "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding");// BuildElementItemReference.cs:47
+			this.MGFinding = new MGFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:295
+			this.MRIFinding = new MRIFindingContainer(0, 0);                                                                                         // BuildMemberBase.cs:295
+			this.NMFinding = new NMFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:295
+			this.USFinding = new USFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:295
 			//- Constructor
 		}
 
@@ -107,10 +111,6 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemReference.cs:71
-			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildElementItemReference.cs:71
-			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemReference.cs:71
-			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildElementItemReference.cs:71
 			//- ValidateCode
 			return retVal;
 		}
@@ -122,13 +122,11 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.MGFinding.Write(this.Doc, this.Resource);                                                                                           // BuildElementItemReference.cs:65
-			this.MRIFinding.Write(this.Doc, this.Resource);                                                                                          // BuildElementItemReference.cs:65
-			this.NMFinding.Write(this.Doc, this.Resource);                                                                                           // BuildElementItemReference.cs:65
-			this.USFinding.Write(this.Doc, this.Resource);                                                                                           // BuildElementItemReference.cs:65
+			//+ !WriteHasMembers
+			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:157
+			//- !WriteHasMembers
 			//- WriteCode
 		}
 
@@ -141,10 +139,9 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.MGFinding.Read(this.Doc, this.Resource);                                                                                            // BuildElementItemReference.cs:68
-			this.MRIFinding.Read(this.Doc, this.Resource);                                                                                           // BuildElementItemReference.cs:68
-			this.NMFinding.Read(this.Doc, this.Resource);                                                                                            // BuildElementItemReference.cs:68
-			this.USFinding.Read(this.Doc, this.Resource);                                                                                            // BuildElementItemReference.cs:68
+			//+ !ReadHasMembers
+			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:166
+			//- !ReadHasMembers
 			//- ReadCode
 		}
 
@@ -198,6 +195,38 @@ namespace BreastRadLib
 			{                                                                                                                                        // DefineBase.cs:185
 			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:187
 			}                                                                                                                                        // DefineBase.cs:190
+			                                                                                                                                         // BuildMemberReferences.cs:121
+		//+ !HasMembers
+			                                                                                                                                         // BuildMemberReferences.cs:124
+			/// <summary>
+			/// Read all values from resource into this instance
+			/// </summary>
+			private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:128
+			{                                                                                                                                        // BuildMemberReferences.cs:129
+			    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                     // BuildMemberReferences.cs:130
+			    //+ ReadHasMembers
+			    this.MGFinding.Read(this.Doc, items);                                                                                                // BuildMemberReferences.cs:80
+			    this.MRIFinding.Read(this.Doc, items);                                                                                               // BuildMemberReferences.cs:80
+			    this.NMFinding.Read(this.Doc, items);                                                                                                // BuildMemberReferences.cs:80
+			    this.USFinding.Read(this.Doc, items);                                                                                                // BuildMemberReferences.cs:80
+			    //- ReadHasMembers
+			}                                                                                                                                        // BuildMemberReferences.cs:132
+			                                                                                                                                         // BuildMemberReferences.cs:134
+			/// <summary>
+			/// Write all values from this instance into resource
+			/// </summary>
+			private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                // BuildMemberReferences.cs:138
+			{                                                                                                                                        // BuildMemberReferences.cs:139
+			    List<ResourceReference> items = new List<ResourceReference>();                                                                       // BuildMemberReferences.cs:140
+			    //+ WriteHasMembers
+			    items.AddRange(this.MGFinding.Write(this.Doc));                                                                                      // BuildMemberReferences.cs:101
+			    items.AddRange(this.MRIFinding.Write(this.Doc));                                                                                     // BuildMemberReferences.cs:101
+			    items.AddRange(this.NMFinding.Write(this.Doc));                                                                                      // BuildMemberReferences.cs:101
+			    items.AddRange(this.USFinding.Write(this.Doc));                                                                                      // BuildMemberReferences.cs:101
+			    //- WriteHasMembers
+			    this.Resource.SetValue("hasMember", items);                                                                                          // BuildMemberReferences.cs:142
+			}                                                                                                                                        // BuildMemberReferences.cs:143
+		//- !HasMembers
 		//- Methods
 	}
 }

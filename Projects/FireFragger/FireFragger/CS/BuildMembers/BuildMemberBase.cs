@@ -188,9 +188,10 @@ namespace FireFragger.CS.BuildMembers
                         .SummaryOpen()
                         .Summary($"Set Item's Value")
                         .SummaryClose()
-                        .AppendCode($"public void Set({elementSetName} value)")
+                        .AppendCode($"public {elementSetName} Set({elementSetName} value)")
                         .OpenBrace()
                         .AppendCode($"this.item = new Item(value);")
+                        .AppendCode($"return value;")
                         .CloseBrace()
                         ;
                 }
@@ -249,12 +250,16 @@ namespace FireFragger.CS.BuildMembers
 
                 foreach (String elementSetName in this.ElementSetNames)
                 {
-                    containerPropertiesBlock
+                    containerMethodsBlock
                         .BlankLine()
                         .SummaryOpen()
                         .Summary($"Append value to collection")
                         .SummaryClose()
-                        .AppendCode($"public void Append({elementSetName} value) => this.items.Add(new Item(value));")
+                        .AppendCode($"public {elementSetName} Append({elementSetName} value)")
+                        .OpenBrace()
+                        .AppendCode($"this.items.Add(new Item(value));")
+                        .AppendCode($"return value;")
+                        .CloseBrace()
                         ;
                 }
             }

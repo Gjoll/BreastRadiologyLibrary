@@ -88,18 +88,20 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public void Set(Quantity value)                                                                                                        // BuildMemberBase.cs:191
+	    public Quantity Set(Quantity value)                                                                                                    // BuildMemberBase.cs:191
 	    {                                                                                                                                      // BuildMemberBase.cs:192
 	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:193
-	    }                                                                                                                                      // BuildMemberBase.cs:194
+	        return value;                                                                                                                      // BuildMemberBase.cs:194
+	    }                                                                                                                                      // BuildMemberBase.cs:195
 	                                                                                                                                           // BuildMemberBase.cs:187
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public void Set(Range value)                                                                                                           // BuildMemberBase.cs:191
+	    public Range Set(Range value)                                                                                                          // BuildMemberBase.cs:191
 	    {                                                                                                                                      // BuildMemberBase.cs:192
 	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:193
-	    }                                                                                                                                      // BuildMemberBase.cs:194
+	        return value;                                                                                                                      // BuildMemberBase.cs:194
+	    }                                                                                                                                      // BuildMemberBase.cs:195
 	                                                                                                                                           // BuildMemberBase.cs:116
 	    /// <summary>
 	    /// Constructor
@@ -123,7 +125,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	        }                                                                                                                                  // FhirConstruct.cs:814
 	        return retVal;                                                                                                                     // FhirConstruct.cs:829
 	    }                                                                                                                                      // FhirConstruct.cs:830
-	                                                                                                                                           // BuildMemberBase.cs:263
+	                                                                                                                                           // BuildMemberBase.cs:268
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -139,7 +141,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	            yield return component;                                                                                                        // BuildMemberComponents.cs:84
 	        }                                                                                                                                  // BuildMemberComponents.cs:85
 	    }                                                                                                                                      // BuildMemberComponents.cs:86
-	                                                                                                                                           // BuildMemberBase.cs:269
+	                                                                                                                                           // BuildMemberBase.cs:274
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>

@@ -92,5 +92,14 @@ namespace FireFragger.CS
         {
             return slice.ElementDefinition.ElementId;
         }
+
+        public static String ResourceClassName(String targetUrl)
+        {
+            String retVal = targetUrl.LastUriPart();
+            if (targetUrl.StartsWith("http://hl7.org/fhir/StructureDefinition/") == true)
+                return $"{retVal.ToMachineName()}Base";
+            return ClassName(retVal);
+        }
+
     }
 }

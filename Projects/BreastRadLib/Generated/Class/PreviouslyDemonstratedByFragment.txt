@@ -1,14 +1,14 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:301
+		                                                                                                                                          // BuildMemberBase.cs:306
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// Access fhir element 'Observation.component:PreviouslyDemonstratedBy'
 		/// </summary>
-		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:306
+		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:311
 		//- Properties
 
 			//+ Constructor
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:290
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:295
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -48,7 +48,7 @@
 			}                                                                                                                                        // BuildMemberComponents.cs:121
 			                                                                                                                                         // BuildMemberComponents.cs:123
 			/// <summary>
-			/// Write all component values from this instance into resource
+			/// Write all values from this instance into resource
 			/// </summary>
 			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:127
 			{                                                                                                                                        // BuildMemberComponents.cs:128

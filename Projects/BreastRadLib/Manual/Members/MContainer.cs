@@ -71,6 +71,46 @@ namespace BreastRadLib
             //return retVal;
         }
 
+        protected IEnumerable<ResourceBase> IsMember(BreastRadiologyDocument doc,
+            IEnumerable<Composition.SectionComponent> sections,
+            CodeableConcept code)
+        {
+            foreach (Composition.SectionComponent section in sections)
+            {
+                if (section.Code.IsCode(code))
+                {
+                    foreach (ResourceReference resRef in section.Entry)
+                    {
+                        Resource referencedResource = doc.ReferencedResource<Resource>(resRef);
+                        if (doc.TryGetRegisteredItem(referencedResource, out ResourceBase item) == false)
+                            throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
+                        yield return item;
+                    }
+                }
+            }
+        }
+
+        protected IEnumerable<ResourceBase> IsMember(BreastRadiologyDocument doc,
+            IEnumerable<ResourceReference> references,
+            IEnumerable<String> targetUrls)
+        {
+            foreach (ResourceReference resRef in references)
+            {
+                Observation referencedResource = doc.ReferencedResource<Observation>(resRef);
+                String profile = referencedResource.Meta.Profile.First();
+                foreach (String targetUrl in targetUrls)
+                {
+                    if (BLMisc.SameUrl(profile, targetUrl))
+                    {
+                        if (doc.TryGetRegisteredItem(referencedResource, out ObservationBase item) == false)
+                            throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
+                        yield return item;
+                        break;
+                    }
+                }
+            }
+        }
+
         //PropertyInfo PInfo(Base resource, String fhirName)
         //{
         //    foreach (var propertyInfo in resource.GetType().GetProperties())

@@ -35,7 +35,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// CystType
 		/// </summary>
-		CystTypeContainer CystType { get ; }                                                                                                      // BuildMemberBase.cs:297
+		CystTypeContainer CystType { get ; }                                                                                                      // BuildMemberBase.cs:302
 		//- Properties
 
 		//+ Methods
