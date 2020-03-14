@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// NotPreviouslySeen
 		/// </summary>
-		NotPreviouslySeenContainer NotPreviouslySeen { get ; }                                                                                    // BuildMemberBase.cs:302
+		NotPreviouslySeenContainer NotPreviouslySeen { get ; }                                                                                    // BuildMemberBase.cs:323
 		//- Properties
 
 		//+ Methods

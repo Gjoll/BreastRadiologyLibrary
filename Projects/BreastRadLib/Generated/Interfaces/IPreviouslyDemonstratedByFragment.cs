@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// </summary>
-		PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; }                                                                      // BuildMemberBase.cs:302
+		PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; }                                                                      // BuildMemberBase.cs:323
 		//- Properties
 
 		//+ Methods

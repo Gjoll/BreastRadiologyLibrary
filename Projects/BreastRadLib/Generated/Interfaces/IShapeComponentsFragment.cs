@@ -21,19 +21,19 @@ namespace BreastRadLib
 		/// <summary>
 		/// Orientation
 		/// </summary>
-		OrientationContainer Orientation { get ; }                                                                                                // BuildMemberBase.cs:302
+		OrientationContainer Orientation { get ; }                                                                                                // BuildMemberBase.cs:323
 		/// <summary>
 		/// Shape
 		/// </summary>
-		ShapeContainer Shape { get ; }                                                                                                            // BuildMemberBase.cs:302
+		ShapeContainer Shape { get ; }                                                                                                            // BuildMemberBase.cs:323
 		/// <summary>
 		/// Margin
 		/// </summary>
-		MarginContainer Margin { get ; }                                                                                                          // BuildMemberBase.cs:302
+		MarginContainer Margin { get ; }                                                                                                          // BuildMemberBase.cs:323
 		/// <summary>
 		/// MgDensity
 		/// </summary>
-		MgDensityContainer MgDensity { get ; }                                                                                                    // BuildMemberBase.cs:302
+		MgDensityContainer MgDensity { get ; }                                                                                                    // BuildMemberBase.cs:323
 		//- Properties
 
 		//+ Methods

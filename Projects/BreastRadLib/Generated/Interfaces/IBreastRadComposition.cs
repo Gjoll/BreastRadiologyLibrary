@@ -19,29 +19,29 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		/// <summary>
-		/// Access Report
+		/// Report
 		/// </summary>
-		TItemSectionSingle<BreastRadReport> Report { get ; }                                                                                      // BuildElementItemSection.cs:67
+		ReportContainer Report { get ; }                                                                                                          // BuildMemberBase.cs:323
 		/// <summary>
-		/// Access Impressions
+		/// Impressions
 		/// </summary>
-		TItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; }                                                                        // BuildElementItemSection.cs:67
+		ImpressionsContainer Impressions { get ; }                                                                                                // BuildMemberBase.cs:323
 		/// <summary>
-		/// Access FindingsRightBreast
+		/// FindingsRightBreast
 		/// </summary>
-		TItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; }                                                              // BuildElementItemSection.cs:67
+		FindingsRightBreastContainer FindingsRightBreast { get ; }                                                                                // BuildMemberBase.cs:323
 		/// <summary>
-		/// Access FindingsLeftBreast
+		/// FindingsLeftBreast
 		/// </summary>
-		TItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; }                                                                // BuildElementItemSection.cs:67
+		FindingsLeftBreastContainer FindingsLeftBreast { get ; }                                                                                  // BuildMemberBase.cs:323
 		/// <summary>
-		/// Access RelatedResources
+		/// RelatedResources
 		/// </summary>
-		TItemSectionMultiple<ResourceBase> RelatedResources { get ; }                                                                             // BuildElementItemSection.cs:67
+		RelatedResourcesContainer RelatedResources { get ; }                                                                                      // BuildMemberBase.cs:323
 		/// <summary>
-		/// Access Recommendations
+		/// Recommendations
 		/// </summary>
-		TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; }                          // BuildElementItemSection.cs:67
+		RecommendationsContainer Recommendations { get ; }                                                                                        // BuildMemberBase.cs:323
 		//- Properties
 
 		//+ Methods

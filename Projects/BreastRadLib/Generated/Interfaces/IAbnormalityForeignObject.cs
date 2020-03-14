@@ -30,7 +30,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// AbnormalityForeignObjectType
 		/// </summary>
-		AbnormalityForeignObjectTypeContainer AbnormalityForeignObjectType { get ; }                                                              // BuildMemberBase.cs:302
+		AbnormalityForeignObjectTypeContainer AbnormalityForeignObjectType { get ; }                                                              // BuildMemberBase.cs:323
 		//- Properties
 
 		//+ Methods

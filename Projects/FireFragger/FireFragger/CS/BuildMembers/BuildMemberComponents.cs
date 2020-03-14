@@ -11,11 +11,10 @@ namespace FireFragger.CS.BuildMembers
     internal class BuildMemberComponents : BuildMemberBase
     {
         String fhirName;
-        String SliceName;
+        String sliceName;
         String itemElementGetName;
         List<String> itemElementSetName = new List<String>();
         String containerClassName;
-        String sliceName;
         String componentCodeMethodName;
         CodeableConcept componentCode;
         CodeBlockNested readBlock;
@@ -175,17 +174,16 @@ namespace FireFragger.CS.BuildMembers
                 ElementDefinition sliceDef = memberSlice.ElementDefinition;
                 Int32 max = CSMisc.ToMax(sliceDef.Max);
                 Int32 min = sliceDef.Min.Value;
-                this.SliceName = sliceName.ToMachineName();
+                this.sliceName = sliceName.ToMachineName();
 
-                this.itemElementSetName = new List<String>();
+                this.itemElementSetName.Clear();
                 foreach (var type in valueNode.ElementDefinition.Type)
                     itemElementSetName.Add(type.Code);
 
-                this.containerClassName = $"{this.SliceName}Container";
+                this.containerClassName = $"{this.sliceName.ToMachineName()}Container";
                 this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
                 base.BuildOne(memberSlice.ElementDefinition.ElementId, min, max);
             }
-            //BuildProperty();
         }
 
         public BuildMemberComponents(DefineBase defineBase,

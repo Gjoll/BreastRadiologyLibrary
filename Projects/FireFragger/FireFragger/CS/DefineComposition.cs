@@ -40,13 +40,14 @@ namespace FireFragger.CS
 
         void DefineSections()
         {
-            if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode hasMemberNode) == false)
+            if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
                 return;
-            BuildItemSection bcr = new BuildItemSection(this,
-                this.fragBase.CodeBlocks,
-                "Section",
-                hasMemberNode);
-            bcr.Define();
+            {
+                BuildMembers.BuildMemberSection bcr = new BuildMembers.BuildMemberSection(this,
+                    this.fragBase.CodeBlocks,
+                    sectionNode);
+                bcr.Build();
+            }
         }
     }
 }

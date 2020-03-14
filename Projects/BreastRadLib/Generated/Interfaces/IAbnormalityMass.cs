@@ -35,7 +35,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// MassType
 		/// </summary>
-		MassTypeContainer MassType { get ; }                                                                                                      // BuildMemberBase.cs:302
+		MassTypeContainer MassType { get ; }                                                                                                      // BuildMemberBase.cs:323
 		//- Properties
 
 		//+ Methods

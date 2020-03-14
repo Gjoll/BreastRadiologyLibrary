@@ -11,14 +11,13 @@ namespace FireFragger.CS.BuildMembers
     internal class BuildMemberReferences : BuildMemberBase
     {
         String fhirName;
-        String SliceName;
+        String sliceName;
         String itemElementGetName;
         List<String> itemElementSetName = new List<String>();
+        List<String> targetProfiles = new List<string>();
         String containerClassName;
-        String sliceName;
         CodeBlockNested readBlock;
         CodeBlockNested writeBlock;
-        List<String> targetProfiles = new List<string>();
 
         protected ElementTreeNode memberNode;
         protected override string PropertyName => $"{this.sliceName.ToMachineName()}";
@@ -42,19 +41,7 @@ namespace FireFragger.CS.BuildMembers
                 containerPropertiesBlock,
                 containerMethodsBlock);
 
-            containerPropertiesBlock
-                .AppendCode("String[] targetUrls = new string[]")
-                .OpenBrace()
-                ;
-
-            for (Int32 i = 0; i < this.targetProfiles.Count - 1; i++)
-                containerPropertiesBlock.AppendCode($"\"{targetProfiles[i]}\",");
-
-            containerPropertiesBlock
-                .AppendCode($"\"{this.targetProfiles[targetProfiles.Count - 1]}\"")
-                .CloseBrace(";")
-               ;
-            ;
+            BuildTargeturls(containerPropertiesBlock, targetProfiles);
         }
 
         protected override void BuildRead(CodeBlockNested b)
@@ -175,24 +162,23 @@ namespace FireFragger.CS.BuildMembers
 
                 Int32 max = CSMisc.ToMax(sliceDef.Max);
                 Int32 min = sliceDef.Min.Value;
-                this.SliceName = sliceName.ToMachineName();
+                this.sliceName = this.sliceName.ToMachineName();
 
                 if ((sliceDef.Type.Count != 1) || (sliceDef.Type[0].Code != "Reference"))
                     throw new Exception($"Invalid reference types");
-                this.itemElementSetName = new List<String>();
+                this.itemElementSetName.Clear();
                 this.targetProfiles.Clear();
                 foreach (String profile in sliceDef.Type[0].TargetProfile)
                 {
                     this.targetProfiles.Add(profile);
                     String propertyClassName = CSMisc.ResourceClassName(profile);
-                    itemElementSetName.Add(propertyClassName);
+                    this.itemElementSetName.Add(propertyClassName);
                 }
 
-                this.containerClassName = $"{this.SliceName}Container";
+                this.containerClassName = $"{this.sliceName.ToMachineName()}Container";
                 this.itemElementGetName = (itemElementSetName.Count == 1) ? itemElementSetName [0] : "ResourceBase";
                 base.BuildOne(memberSlice.ElementDefinition.ElementId, min, max);
             }
-            //BuildProperty();
         }
 
         public BuildMemberReferences(DefineBase defineBase,

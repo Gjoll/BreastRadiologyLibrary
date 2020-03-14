@@ -24,11 +24,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// Value
 		/// </summary>
-		ValueContainer Value { get ; }                                                                                                            // BuildMemberBase.cs:302
+		ValueContainer Value { get ; }                                                                                                            // BuildMemberBase.cs:323
 		/// <summary>
 		/// Qualifier
 		/// </summary>
-		QualifierContainer Qualifier { get ; }                                                                                                    // BuildMemberBase.cs:302
+		QualifierContainer Qualifier { get ; }                                                                                                    // BuildMemberBase.cs:323
 		//- Properties
 
 		//+ Methods

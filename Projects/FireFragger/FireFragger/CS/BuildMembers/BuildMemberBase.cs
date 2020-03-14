@@ -3,6 +3,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -101,8 +102,28 @@ namespace FireFragger.CS.BuildMembers
         protected abstract void BuildWrite(CodeBlockNested b);
         protected abstract void BuildRead(CodeBlockNested b);
 
+        protected void BuildTargeturls(CodeBlockNested containerPropertiesBlock,
+            List<String> targetProfiles)
+        {
+            containerPropertiesBlock
+                .AppendCode("String[] targetUrls = new string[]")
+                .OpenBrace()
+                ;
+
+            for (Int32 i = 0; i < targetProfiles.Count - 1; i++)
+                containerPropertiesBlock.AppendCode($"\"{targetProfiles[i]}\",");
+
+            containerPropertiesBlock
+                .AppendCode($"\"{targetProfiles[targetProfiles.Count - 1]}\"")
+                .CloseBrace(";")
+               ;
+
+        }
+
         void BuildContainerClass()
         {
+            Debug.Assert(String.IsNullOrEmpty(this.ContainerClassName) == false);
+
             this.containerCode
                 .SummaryOpen()
                 .Summary($"Container class for {this.elementId}.")

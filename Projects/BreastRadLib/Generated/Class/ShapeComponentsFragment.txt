@@ -1,35 +1,35 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:306
+		                                                                                                                                          // BuildMemberBase.cs:327
 		/// <summary>
 		/// Orientation
 		/// Access fhir element 'Observation.component:orientation'
 		/// </summary>
-		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:311
-		                                                                                                                                          // BuildMemberBase.cs:306
+		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:332
+		                                                                                                                                          // BuildMemberBase.cs:327
 		/// <summary>
 		/// Shape
 		/// Access fhir element 'Observation.component:shape'
 		/// </summary>
-		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:311
-		                                                                                                                                          // BuildMemberBase.cs:306
+		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:332
+		                                                                                                                                          // BuildMemberBase.cs:327
 		/// <summary>
 		/// Margin
 		/// Access fhir element 'Observation.component:margin'
 		/// </summary>
-		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:311
-		                                                                                                                                          // BuildMemberBase.cs:306
+		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:332
+		                                                                                                                                          // BuildMemberBase.cs:327
 		/// <summary>
 		/// MgDensity
 		/// Access fhir element 'Observation.component:mgDensity'
 		/// </summary>
-		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:311
+		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:332
 		//- Properties
 
 			//+ Constructor
-			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:295
-			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:295
-			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:295
-			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:295
+			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:316
+			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:316
+			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:316
+			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -41,7 +41,7 @@
 			//- WriteCodeStart
 			//+ WriteCode
 			//+ !WriteComponents
-			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:146
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:145
 			//- !WriteComponents
 			//- WriteCode
 
@@ -49,41 +49,41 @@
 			//- ReadCodeStart
 			//+ ReadCode
 			//+ !ReadComponents
-			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:155
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:154
 			//- !ReadComponents
 			//- ReadCode
 
 			//+ Methods
-			                                                                                                                                         // BuildMemberComponents.cs:110
+			                                                                                                                                         // BuildMemberComponents.cs:109
 			//+ !Components
-			                                                                                                                                         // BuildMemberComponents.cs:113
+			                                                                                                                                         // BuildMemberComponents.cs:112
 			/// <summary>
 			/// Read all component values from resource into this instance
 			/// </summary>
-			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:117
-			{                                                                                                                                        // BuildMemberComponents.cs:118
-			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:119
+			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:116
+			{                                                                                                                                        // BuildMemberComponents.cs:117
+			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:118
 			    //+ ReadComponents
-			    this.Orientation.Read(this.Doc, items);                                                                                              // BuildMemberComponents.cs:68
-			    this.Shape.Read(this.Doc, items);                                                                                                    // BuildMemberComponents.cs:68
-			    this.Margin.Read(this.Doc, items);                                                                                                   // BuildMemberComponents.cs:68
-			    this.MgDensity.Read(this.Doc, items);                                                                                                // BuildMemberComponents.cs:68
+			    this.Orientation.Read(this.Doc, items);                                                                                              // BuildMemberComponents.cs:67
+			    this.Shape.Read(this.Doc, items);                                                                                                    // BuildMemberComponents.cs:67
+			    this.Margin.Read(this.Doc, items);                                                                                                   // BuildMemberComponents.cs:67
+			    this.MgDensity.Read(this.Doc, items);                                                                                                // BuildMemberComponents.cs:67
 			    //- ReadComponents
-			}                                                                                                                                        // BuildMemberComponents.cs:121
-			                                                                                                                                         // BuildMemberComponents.cs:123
+			}                                                                                                                                        // BuildMemberComponents.cs:120
+			                                                                                                                                         // BuildMemberComponents.cs:122
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>
-			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:127
-			{                                                                                                                                        // BuildMemberComponents.cs:128
-			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:129
+			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:126
+			{                                                                                                                                        // BuildMemberComponents.cs:127
+			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:128
 			    //+ WriteComponents
-			    items.AddRange(this.Orientation.Write(this.Doc));                                                                                    // BuildMemberComponents.cs:90
-			    items.AddRange(this.Shape.Write(this.Doc));                                                                                          // BuildMemberComponents.cs:90
-			    items.AddRange(this.Margin.Write(this.Doc));                                                                                         // BuildMemberComponents.cs:90
-			    items.AddRange(this.MgDensity.Write(this.Doc));                                                                                      // BuildMemberComponents.cs:90
+			    items.AddRange(this.Orientation.Write(this.Doc));                                                                                    // BuildMemberComponents.cs:89
+			    items.AddRange(this.Shape.Write(this.Doc));                                                                                          // BuildMemberComponents.cs:89
+			    items.AddRange(this.Margin.Write(this.Doc));                                                                                         // BuildMemberComponents.cs:89
+			    items.AddRange(this.MgDensity.Write(this.Doc));                                                                                      // BuildMemberComponents.cs:89
 			    //- WriteComponents
-			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:131
-			}                                                                                                                                        // BuildMemberComponents.cs:132
+			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:130
+			}                                                                                                                                        // BuildMemberComponents.cs:131
 			//- !Components
 			//- Methods
