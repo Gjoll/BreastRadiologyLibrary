@@ -71,6 +71,17 @@ namespace BreastRadLib
             //return retVal;
         }
 
+        protected IEnumerable<Element> IsMember(BreastRadiologyDocument doc,
+            IEnumerable<Observation.ComponentComponent> components,
+            CodeableConcept code)
+        {
+            foreach (Observation.ComponentComponent component in components)
+            {
+                if (component.Code.IsCode(code))
+                    yield return component.Value;
+            }
+        }
+
         protected IEnumerable<ResourceBase> IsMember(BreastRadiologyDocument doc,
             IEnumerable<Composition.SectionComponent> sections,
             CodeableConcept code)

@@ -138,12 +138,12 @@ namespace BreastRadLib.CorrespondsWithFragmentLocal
 	                                                                                                                                           // BuildMemberComponents.cs:54
 	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:55
 	    {                                                                                                                                      // BuildMemberComponents.cs:56
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:57
-	        foreach (Observation.ComponentComponent component in components)                                                                   // BuildMemberComponents.cs:58
-	        {                                                                                                                                  // BuildMemberComponents.cs:59
-	            if (component.Code.IsCode(this.CorrespondsWith_ComponentCode()))                                                               // BuildMemberComponents.cs:60
-	                items.Add(new Item((CodeableConcept) component.Value));                                                                    // BuildMemberComponents.cs:61
-	        }                                                                                                                                  // BuildMemberComponents.cs:62
+	        IEnumerable<Element> elements = base.IsMember(doc,                                                                                 // BuildMemberComponents.cs:57
+	            components,                                                                                                                    // BuildMemberComponents.cs:58
+	            this.CorrespondsWith_ComponentCode());                                                                                         // BuildMemberComponents.cs:59
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:60
+	        foreach (Element element in elements)                                                                                              // BuildMemberComponents.cs:61
+	            items.Add(new Item((CodeableConcept) element));                                                                                // BuildMemberComponents.cs:62
 	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:63
 	    }                                                                                                                                      // BuildMemberComponents.cs:64
 	}                                                                                                                                          // BuildMemberBase.cs:127
