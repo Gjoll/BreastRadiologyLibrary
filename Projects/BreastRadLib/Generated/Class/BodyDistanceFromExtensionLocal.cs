@@ -15,127 +15,133 @@ using BreastRadLib.ExtensionLocal;
 namespace BreastRadLib.BodyDistanceFromExtensionLocal
 {
 	//+ LocalClassDefs
+	#region BodyDistanceFromExtension Container Class                                                                                          // BuildMemberBase.cs:137
 	/// <summary>
-	/// Container class for Extension.
+	/// Container class for BodyDistanceFromExtension.
 	/// </summary>
-	public class BodyDistanceFromExtensionCollection : MContainer, ITMItem<Extension>                                                          // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class BodyDistanceFromExtensionCollection : MContainer, ITMItem<Extension>                                                          // BuildMemberBase.cs:141
+	{                                                                                                                                          // BuildMemberBase.cs:142
+	    #region BodyDistanceFromExtension Item Class                                                                                           // BuildMemberBase.cs:73
 	    /// <summary>
-	    /// Item class for Extension.
+	    /// Item class for BodyDistanceFromExtension.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:73
-	    {                                                                                                                                      // BuildMemberBase.cs:74
-	        // Properties                                                                                                                      // BuildMemberBase.cs:75
+	    public class Item                                                                                                                      // BuildMemberBase.cs:77
+	    {                                                                                                                                      // BuildMemberBase.cs:78
+	        // Properties                                                                                                                      // BuildMemberBase.cs:79
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public BodyDistanceFromExtension Value { get; set; }                                                                               // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
+	        public BodyDistanceFromExtension Value { get; set; }                                                                               // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(BodyDistanceFromExtension value)                                                                                       // BuildMemberBase.cs:85
-	        {                                                                                                                                  // BuildMemberBase.cs:86
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
-	        }                                                                                                                                  // BuildMemberBase.cs:89
-	                                                                                                                                           // BuildMemberBase.cs:91
-	        // Methods                                                                                                                         // BuildMemberBase.cs:92
-	    }                                                                                                                                      // BuildMemberBase.cs:94
+	        public Item(BodyDistanceFromExtension value)                                                                                       // BuildMemberBase.cs:89
+	        {                                                                                                                                  // BuildMemberBase.cs:90
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:91
+	        }                                                                                                                                  // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:95
+	        // Methods                                                                                                                         // BuildMemberBase.cs:96
+	    }                                                                                                                                      // BuildMemberBase.cs:98
+	    #endregion                                                                                                                             // BuildMemberBase.cs:99
 	    /// <summary>
 	    /// Extension Item class for BodyDistanceFromExtension.
 	    /// </summary>
 	    public class BodyDistanceFromExtension                                                                                                 // BuildMemberExtensionComplex.cs:84
 	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:85
 	        // Definitions                                                                                                                     // BuildMemberExtensionComplex.cs:86
+	        #region Extension.extension:landMark Container Class                                                                               // BuildMemberBase.cs:137
 	        /// <summary>
 	        /// Container class for Extension.extension:landMark.
 	        /// </summary>
-	        public class LandMarkCollection : MContainer, ITMItem<Extension>                                                                   // BuildMemberBase.cs:135
-	        {                                                                                                                                  // BuildMemberBase.cs:136
+	        public class LandMarkCollection : MContainer, ITMItem<Extension>                                                                   // BuildMemberBase.cs:141
+	        {                                                                                                                                  // BuildMemberBase.cs:142
+	            #region Extension.extension:landMark Item Class                                                                                // BuildMemberBase.cs:73
 	            /// <summary>
 	            /// Item class for Extension.extension:landMark.
 	            /// </summary>
-	            public class Item                                                                                                              // BuildMemberBase.cs:73
-	            {                                                                                                                              // BuildMemberBase.cs:74
-	                // Properties                                                                                                              // BuildMemberBase.cs:75
+	            public class Item                                                                                                              // BuildMemberBase.cs:77
+	            {                                                                                                                              // BuildMemberBase.cs:78
+	                // Properties                                                                                                              // BuildMemberBase.cs:79
 	                /// <summary>
 	                /// Value
 	                /// </summary>
-	                public CodeableConcept Value { get; set; }                                                                                 // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
+	                public CodeableConcept Value { get; set; }                                                                                 // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
 	                /// <summary>
 	                /// Constructor
 	                /// </summary>
-	                public Item(CodeableConcept value)                                                                                         // BuildMemberBase.cs:85
-	                {                                                                                                                          // BuildMemberBase.cs:86
-	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:87
-	                }                                                                                                                          // BuildMemberBase.cs:89
-	                                                                                                                                           // BuildMemberBase.cs:91
-	                // Methods                                                                                                                 // BuildMemberBase.cs:92
-	            }                                                                                                                              // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:138
-	            // Properties                                                                                                                  // BuildMemberBase.cs:139
+	                public Item(CodeableConcept value)                                                                                         // BuildMemberBase.cs:89
+	                {                                                                                                                          // BuildMemberBase.cs:90
+	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:91
+	                }                                                                                                                          // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:95
+	                // Methods                                                                                                                 // BuildMemberBase.cs:96
+	            }                                                                                                                              // BuildMemberBase.cs:98
+	            #endregion                                                                                                                     // BuildMemberBase.cs:99
+	                                                                                                                                           // BuildMemberBase.cs:144
+	            // Properties                                                                                                                  // BuildMemberBase.cs:145
 	            public const String ExtensionUrl = "landMark";                                                                                 // BuildMemberExtensionSimple.cs:39
-	                                                                                                                                           // BuildMemberBase.cs:160
+	                                                                                                                                           // BuildMemberBase.cs:167
 	            /// <summary>
 	            /// Get All Items
 	            /// </summary>
-	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:164
-	            {                                                                                                                              // BuildMemberBase.cs:165
-	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:166
-	            }                                                                                                                              // BuildMemberBase.cs:167
-	                                                                                                                                           // BuildMemberBase.cs:169
+	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:171
+	            {                                                                                                                              // BuildMemberBase.cs:172
+	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:173
+	            }                                                                                                                              // BuildMemberBase.cs:174
+	                                                                                                                                           // BuildMemberBase.cs:176
 	            /// <summary>
 	            /// Set All Items
 	            /// </summary>
-	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:173
-	            {                                                                                                                              // BuildMemberBase.cs:174
-	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:175
-	                {                                                                                                                          // BuildMemberBase.cs:176
-	                    case 0: break;                                                                                                         // BuildMemberBase.cs:177
-	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:178
-	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:179
-	                }                                                                                                                          // BuildMemberBase.cs:180
-	            }                                                                                                                              // BuildMemberBase.cs:181
-	                                                                                                                                           // BuildMemberBase.cs:183
+	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:180
+	            {                                                                                                                              // BuildMemberBase.cs:181
+	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:182
+	                {                                                                                                                          // BuildMemberBase.cs:183
+	                    case 0: break;                                                                                                         // BuildMemberBase.cs:184
+	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:185
+	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:186
+	                }                                                                                                                          // BuildMemberBase.cs:187
+	            }                                                                                                                              // BuildMemberBase.cs:188
+	                                                                                                                                           // BuildMemberBase.cs:190
 	            /// <summary>
 	            /// Item
 	            /// </summary>
-	            Item item;                                                                                                                     // BuildMemberBase.cs:187
-	                                                                                                                                           // BuildMemberBase.cs:189
+	            Item item;                                                                                                                     // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
 	            /// <summary>
 	            /// Count property
 	            /// </summary>
-	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
+	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:200
+	                                                                                                                                           // BuildMemberBase.cs:202
 	            /// <summary>
 	            /// Get Item's Value
 	            /// </summary>
-	            public CodeableConcept Get()                                                                                                   // BuildMemberBase.cs:199
-	            {                                                                                                                              // BuildMemberBase.cs:200
-	                if (item == null)                                                                                                          // BuildMemberBase.cs:201
-	                    return null;                                                                                                           // BuildMemberBase.cs:202
-	                return item.Value;                                                                                                         // BuildMemberBase.cs:203
-	            }                                                                                                                              // BuildMemberBase.cs:204
-	                                                                                                                                           // BuildMemberBase.cs:210
+	            public CodeableConcept Get()                                                                                                   // BuildMemberBase.cs:206
+	            {                                                                                                                              // BuildMemberBase.cs:207
+	                if (item == null)                                                                                                          // BuildMemberBase.cs:208
+	                    return null;                                                                                                           // BuildMemberBase.cs:209
+	                return item.Value;                                                                                                         // BuildMemberBase.cs:210
+	            }                                                                                                                              // BuildMemberBase.cs:211
+	                                                                                                                                           // BuildMemberBase.cs:217
 	            /// <summary>
 	            /// Set Item's Value
 	            /// </summary>
-	            public CodeableConcept Set(CodeableConcept value)                                                                              // BuildMemberBase.cs:214
-	            {                                                                                                                              // BuildMemberBase.cs:215
-	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:216
-	                return value;                                                                                                              // BuildMemberBase.cs:217
-	            }                                                                                                                              // BuildMemberBase.cs:218
-	                                                                                                                                           // BuildMemberBase.cs:141
+	            public CodeableConcept Set(CodeableConcept value)                                                                              // BuildMemberBase.cs:221
+	            {                                                                                                                              // BuildMemberBase.cs:222
+	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:223
+	                return value;                                                                                                              // BuildMemberBase.cs:224
+	            }                                                                                                                              // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:147
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public LandMarkCollection(Int32 min, Int32 max) : base("Extension.extension:landMark", min, max)                               // BuildMemberBase.cs:145
-	            {                                                                                                                              // BuildMemberBase.cs:146
-	            }                                                                                                                              // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	            // Methods                                                                                                                     // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:291
+	            public LandMarkCollection(Int32 min, Int32 max) : base("Extension.extension:landMark", min, max)                               // BuildMemberBase.cs:151
+	            {                                                                                                                              // BuildMemberBase.cs:152
+	            }                                                                                                                              // BuildMemberBase.cs:154
+	                                                                                                                                           // BuildMemberBase.cs:155
+	            // Methods                                                                                                                     // BuildMemberBase.cs:156
+	                                                                                                                                           // BuildMemberBase.cs:298
 	            /// <summary>
 	            /// Write single item as a fhir element.
 	            /// </summary>
@@ -150,7 +156,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	                    };                                                                                                                     // BuildMemberExtensionSimple.cs:76
 	                }                                                                                                                          // BuildMemberExtensionSimple.cs:77
 	            }                                                                                                                              // BuildMemberExtensionSimple.cs:78
-	                                                                                                                                           // BuildMemberBase.cs:297
+	                                                                                                                                           // BuildMemberBase.cs:304
 	            /// <summary>
 	            /// Read data from fhir element into member item.
 	            /// </summary>
@@ -166,96 +172,100 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	                    items.Add(new Item((CodeableConcept) myExtension.Value));                                                              // BuildMemberExtensionSimple.cs:55
 	                this.SetAllItems(items);                                                                                                   // BuildMemberExtensionSimple.cs:56
 	            }                                                                                                                              // BuildMemberExtensionSimple.cs:57
-	        }                                                                                                                                  // BuildMemberBase.cs:152
+	        }                                                                                                                                  // BuildMemberBase.cs:158
+	        #endregion                                                                                                                         // BuildMemberBase.cs:159
+	        #region Extension.extension:distanceFromLandMark Container Class                                                                   // BuildMemberBase.cs:137
 	        /// <summary>
 	        /// Container class for Extension.extension:distanceFromLandMark.
 	        /// </summary>
-	        public class DistanceFromLandMarkCollection : MContainer, ITMItem<Extension>                                                       // BuildMemberBase.cs:135
-	        {                                                                                                                                  // BuildMemberBase.cs:136
+	        public class DistanceFromLandMarkCollection : MContainer, ITMItem<Extension>                                                       // BuildMemberBase.cs:141
+	        {                                                                                                                                  // BuildMemberBase.cs:142
+	            #region Extension.extension:distanceFromLandMark Item Class                                                                    // BuildMemberBase.cs:73
 	            /// <summary>
 	            /// Item class for Extension.extension:distanceFromLandMark.
 	            /// </summary>
-	            public class Item                                                                                                              // BuildMemberBase.cs:73
-	            {                                                                                                                              // BuildMemberBase.cs:74
-	                // Properties                                                                                                              // BuildMemberBase.cs:75
+	            public class Item                                                                                                              // BuildMemberBase.cs:77
+	            {                                                                                                                              // BuildMemberBase.cs:78
+	                // Properties                                                                                                              // BuildMemberBase.cs:79
 	                /// <summary>
 	                /// Value
 	                /// </summary>
-	                public Quantity Value { get; set; }                                                                                        // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
+	                public Quantity Value { get; set; }                                                                                        // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
 	                /// <summary>
 	                /// Constructor
 	                /// </summary>
-	                public Item(Quantity value)                                                                                                // BuildMemberBase.cs:85
-	                {                                                                                                                          // BuildMemberBase.cs:86
-	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:87
-	                }                                                                                                                          // BuildMemberBase.cs:89
-	                                                                                                                                           // BuildMemberBase.cs:91
-	                // Methods                                                                                                                 // BuildMemberBase.cs:92
-	            }                                                                                                                              // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:138
-	            // Properties                                                                                                                  // BuildMemberBase.cs:139
+	                public Item(Quantity value)                                                                                                // BuildMemberBase.cs:89
+	                {                                                                                                                          // BuildMemberBase.cs:90
+	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:91
+	                }                                                                                                                          // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:95
+	                // Methods                                                                                                                 // BuildMemberBase.cs:96
+	            }                                                                                                                              // BuildMemberBase.cs:98
+	            #endregion                                                                                                                     // BuildMemberBase.cs:99
+	                                                                                                                                           // BuildMemberBase.cs:144
+	            // Properties                                                                                                                  // BuildMemberBase.cs:145
 	            public const String ExtensionUrl = "distanceFromLandMark";                                                                     // BuildMemberExtensionSimple.cs:39
-	                                                                                                                                           // BuildMemberBase.cs:160
+	                                                                                                                                           // BuildMemberBase.cs:167
 	            /// <summary>
 	            /// Get All Items
 	            /// </summary>
-	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:164
-	            {                                                                                                                              // BuildMemberBase.cs:165
-	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:166
-	            }                                                                                                                              // BuildMemberBase.cs:167
-	                                                                                                                                           // BuildMemberBase.cs:169
+	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:171
+	            {                                                                                                                              // BuildMemberBase.cs:172
+	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:173
+	            }                                                                                                                              // BuildMemberBase.cs:174
+	                                                                                                                                           // BuildMemberBase.cs:176
 	            /// <summary>
 	            /// Set All Items
 	            /// </summary>
-	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:173
-	            {                                                                                                                              // BuildMemberBase.cs:174
-	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:175
-	                {                                                                                                                          // BuildMemberBase.cs:176
-	                    case 0: break;                                                                                                         // BuildMemberBase.cs:177
-	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:178
-	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:179
-	                }                                                                                                                          // BuildMemberBase.cs:180
-	            }                                                                                                                              // BuildMemberBase.cs:181
-	                                                                                                                                           // BuildMemberBase.cs:183
+	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:180
+	            {                                                                                                                              // BuildMemberBase.cs:181
+	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:182
+	                {                                                                                                                          // BuildMemberBase.cs:183
+	                    case 0: break;                                                                                                         // BuildMemberBase.cs:184
+	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:185
+	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:186
+	                }                                                                                                                          // BuildMemberBase.cs:187
+	            }                                                                                                                              // BuildMemberBase.cs:188
+	                                                                                                                                           // BuildMemberBase.cs:190
 	            /// <summary>
 	            /// Item
 	            /// </summary>
-	            Item item;                                                                                                                     // BuildMemberBase.cs:187
-	                                                                                                                                           // BuildMemberBase.cs:189
+	            Item item;                                                                                                                     // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
 	            /// <summary>
 	            /// Count property
 	            /// </summary>
-	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
+	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:200
+	                                                                                                                                           // BuildMemberBase.cs:202
 	            /// <summary>
 	            /// Get Item's Value
 	            /// </summary>
-	            public Quantity Get()                                                                                                          // BuildMemberBase.cs:199
-	            {                                                                                                                              // BuildMemberBase.cs:200
-	                if (item == null)                                                                                                          // BuildMemberBase.cs:201
-	                    return null;                                                                                                           // BuildMemberBase.cs:202
-	                return item.Value;                                                                                                         // BuildMemberBase.cs:203
-	            }                                                                                                                              // BuildMemberBase.cs:204
-	                                                                                                                                           // BuildMemberBase.cs:210
+	            public Quantity Get()                                                                                                          // BuildMemberBase.cs:206
+	            {                                                                                                                              // BuildMemberBase.cs:207
+	                if (item == null)                                                                                                          // BuildMemberBase.cs:208
+	                    return null;                                                                                                           // BuildMemberBase.cs:209
+	                return item.Value;                                                                                                         // BuildMemberBase.cs:210
+	            }                                                                                                                              // BuildMemberBase.cs:211
+	                                                                                                                                           // BuildMemberBase.cs:217
 	            /// <summary>
 	            /// Set Item's Value
 	            /// </summary>
-	            public Quantity Set(Quantity value)                                                                                            // BuildMemberBase.cs:214
-	            {                                                                                                                              // BuildMemberBase.cs:215
-	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:216
-	                return value;                                                                                                              // BuildMemberBase.cs:217
-	            }                                                                                                                              // BuildMemberBase.cs:218
-	                                                                                                                                           // BuildMemberBase.cs:141
+	            public Quantity Set(Quantity value)                                                                                            // BuildMemberBase.cs:221
+	            {                                                                                                                              // BuildMemberBase.cs:222
+	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:223
+	                return value;                                                                                                              // BuildMemberBase.cs:224
+	            }                                                                                                                              // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:147
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public DistanceFromLandMarkCollection(Int32 min, Int32 max) : base("Extension.extension:distanceFromLandMark", min, max)       // BuildMemberBase.cs:145
-	            {                                                                                                                              // BuildMemberBase.cs:146
-	            }                                                                                                                              // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	            // Methods                                                                                                                     // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:291
+	            public DistanceFromLandMarkCollection(Int32 min, Int32 max) : base("Extension.extension:distanceFromLandMark", min, max)       // BuildMemberBase.cs:151
+	            {                                                                                                                              // BuildMemberBase.cs:152
+	            }                                                                                                                              // BuildMemberBase.cs:154
+	                                                                                                                                           // BuildMemberBase.cs:155
+	            // Methods                                                                                                                     // BuildMemberBase.cs:156
+	                                                                                                                                           // BuildMemberBase.cs:298
 	            /// <summary>
 	            /// Write single item as a fhir element.
 	            /// </summary>
@@ -270,7 +280,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	                    };                                                                                                                     // BuildMemberExtensionSimple.cs:76
 	                }                                                                                                                          // BuildMemberExtensionSimple.cs:77
 	            }                                                                                                                              // BuildMemberExtensionSimple.cs:78
-	                                                                                                                                           // BuildMemberBase.cs:297
+	                                                                                                                                           // BuildMemberBase.cs:304
 	            /// <summary>
 	            /// Read data from fhir element into member item.
 	            /// </summary>
@@ -286,93 +296,94 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	                    items.Add(new Item((Quantity) myExtension.Value));                                                                     // BuildMemberExtensionSimple.cs:55
 	                this.SetAllItems(items);                                                                                                   // BuildMemberExtensionSimple.cs:56
 	            }                                                                                                                              // BuildMemberExtensionSimple.cs:57
-	        }                                                                                                                                  // BuildMemberBase.cs:152
+	        }                                                                                                                                  // BuildMemberBase.cs:158
+	        #endregion                                                                                                                         // BuildMemberBase.cs:159
 	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:330
+	                                                                                                                                           // BuildMemberBase.cs:337
 	        /// <summary>
 	        /// LandMark
 	        /// Access fhir element 'Extension.extension:landMark'
 	        /// </summary>
-	        public LandMarkCollection LandMark { get ; protected set; }                                                                        // BuildMemberBase.cs:335
-	                                                                                                                                           // BuildMemberBase.cs:330
+	        public LandMarkCollection LandMark { get ; protected set; }                                                                        // BuildMemberBase.cs:342
+	                                                                                                                                           // BuildMemberBase.cs:337
 	        /// <summary>
 	        /// DistanceFromLandMark
 	        /// Access fhir element 'Extension.extension:distanceFromLandMark'
 	        /// </summary>
-	        public DistanceFromLandMarkCollection DistanceFromLandMark { get ; protected set; }                                                // BuildMemberBase.cs:335
+	        public DistanceFromLandMarkCollection DistanceFromLandMark { get ; protected set; }                                                // BuildMemberBase.cs:342
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:90
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
 	        public BodyDistanceFromExtension()                                                                                                 // BuildMemberExtensionComplex.cs:94
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:95
-	            this.LandMark = new LandMarkCollection(0, 0);                                                                                  // BuildMemberBase.cs:316
-	            this.DistanceFromLandMark = new DistanceFromLandMarkCollection(0, 0);                                                          // BuildMemberBase.cs:316
+	            this.LandMark = new LandMarkCollection(0, 0);                                                                                  // BuildMemberBase.cs:323
+	            this.DistanceFromLandMark = new DistanceFromLandMarkCollection(0, 0);                                                          // BuildMemberBase.cs:323
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:97
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:99
 	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:100
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:102
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
-	                                                                                                                                           // BuildMemberBase.cs:227
+	                                                                                                                                           // BuildMemberBase.cs:144
+	    // Properties                                                                                                                          // BuildMemberBase.cs:145
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:232
+	                                                                                                                                           // BuildMemberBase.cs:234
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
-	                                                                                                                                           // BuildMemberBase.cs:233
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:238
+	                                                                                                                                           // BuildMemberBase.cs:240
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
-	                                                                                                                                           // BuildMemberBase.cs:239
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:244
+	                                                                                                                                           // BuildMemberBase.cs:246
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
-	                                                                                                                                           // BuildMemberBase.cs:245
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:250
+	                                                                                                                                           // BuildMemberBase.cs:252
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<BodyDistanceFromExtension> All()                                                                                    // BuildMemberBase.cs:249
-	    {                                                                                                                                      // BuildMemberBase.cs:250
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
-	    }                                                                                                                                      // BuildMemberBase.cs:253
-	                                                                                                                                           // BuildMemberBase.cs:255
+	    public IEnumerable<BodyDistanceFromExtension> All()                                                                                    // BuildMemberBase.cs:256
+	    {                                                                                                                                      // BuildMemberBase.cs:257
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:258
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:259
+	    }                                                                                                                                      // BuildMemberBase.cs:260
+	                                                                                                                                           // BuildMemberBase.cs:262
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public BodyDistanceFromExtension GetAt(Int32 i) => this.items[i].Value;                                                                // BuildMemberBase.cs:259
-	                                                                                                                                           // BuildMemberBase.cs:261
+	    public BodyDistanceFromExtension GetAt(Int32 i) => this.items[i].Value;                                                                // BuildMemberBase.cs:266
+	                                                                                                                                           // BuildMemberBase.cs:268
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
-	                                                                                                                                           // BuildMemberBase.cs:267
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:272
+	                                                                                                                                           // BuildMemberBase.cs:274
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
-	                                                                                                                                           // BuildMemberBase.cs:141
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:278
+	                                                                                                                                           // BuildMemberBase.cs:147
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BodyDistanceFromExtensionCollection(Int32 min, Int32 max) : base("Extension", min, max)                                         // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:277
+	    public BodyDistanceFromExtensionCollection(Int32 min, Int32 max) : base("BodyDistanceFromExtension", min, max)                         // BuildMemberBase.cs:151
+	    {                                                                                                                                      // BuildMemberBase.cs:152
+	    }                                                                                                                                      // BuildMemberBase.cs:154
+	                                                                                                                                           // BuildMemberBase.cs:155
+	    // Methods                                                                                                                             // BuildMemberBase.cs:156
+	                                                                                                                                           // BuildMemberBase.cs:284
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public BodyDistanceFromExtension Append(BodyDistanceFromExtension value)                                                               // BuildMemberBase.cs:281
-	    {                                                                                                                                      // BuildMemberBase.cs:282
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
-	        return value;                                                                                                                      // BuildMemberBase.cs:284
-	    }                                                                                                                                      // BuildMemberBase.cs:285
-	                                                                                                                                           // BuildMemberBase.cs:291
+	    public BodyDistanceFromExtension Append(BodyDistanceFromExtension value)                                                               // BuildMemberBase.cs:288
+	    {                                                                                                                                      // BuildMemberBase.cs:289
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:290
+	        return value;                                                                                                                      // BuildMemberBase.cs:291
+	    }                                                                                                                                      // BuildMemberBase.cs:292
+	                                                                                                                                           // BuildMemberBase.cs:298
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -380,7 +391,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:57
 	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:58
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:68
-	                                                                                                                                           // BuildMemberBase.cs:297
+	                                                                                                                                           // BuildMemberBase.cs:304
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -389,6 +400,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:39
 	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:40
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:45
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	}                                                                                                                                          // BuildMemberBase.cs:158
+	#endregion                                                                                                                                 // BuildMemberBase.cs:159
 	//- LocalClassDefs
 }

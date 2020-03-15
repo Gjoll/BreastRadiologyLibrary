@@ -20,11 +20,11 @@ namespace BreastRadLib
 		/// <summary>
 		/// ObsDistribution
 		/// </summary>
-		ObsDistributionContainer ObsDistribution { get ; }                                                                                        // BuildMemberBase.cs:325
+		ObsDistributionContainer ObsDistribution { get ; }                                                                                        // BuildMemberBase.cs:332
 		/// <summary>
 		/// ObsDistRegionSize
 		/// </summary>
-		ObsDistRegionSizeContainer ObsDistRegionSize { get ; }                                                                                    // BuildMemberBase.cs:325
+		ObsDistRegionSizeContainer ObsDistRegionSize { get ; }                                                                                    // BuildMemberBase.cs:332
 		//- Properties
 
 		//+ Methods

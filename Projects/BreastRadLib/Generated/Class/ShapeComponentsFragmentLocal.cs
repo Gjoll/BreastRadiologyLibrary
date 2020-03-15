@@ -15,93 +15,96 @@ using BreastRadLib.ObservationLocal;
 namespace BreastRadLib.ShapeComponentsFragmentLocal
 {
 	//+ LocalClassDefs
+	#region Observation.component:orientation Container Class                                                                                  // BuildMemberBase.cs:137
 	/// <summary>
 	/// Container class for Observation.component:orientation.
 	/// </summary>
-	public class OrientationContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                    // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class OrientationContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                    // BuildMemberBase.cs:141
+	{                                                                                                                                          // BuildMemberBase.cs:142
+	    #region Observation.component:orientation Item Class                                                                                   // BuildMemberBase.cs:73
 	    /// <summary>
 	    /// Item class for Observation.component:orientation.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:73
-	    {                                                                                                                                      // BuildMemberBase.cs:74
-	        // Properties                                                                                                                      // BuildMemberBase.cs:75
+	    public class Item                                                                                                                      // BuildMemberBase.cs:77
+	    {                                                                                                                                      // BuildMemberBase.cs:78
+	        // Properties                                                                                                                      // BuildMemberBase.cs:79
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
+	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:85
-	        {                                                                                                                                  // BuildMemberBase.cs:86
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
-	        }                                                                                                                                  // BuildMemberBase.cs:89
-	                                                                                                                                           // BuildMemberBase.cs:91
-	        // Methods                                                                                                                         // BuildMemberBase.cs:92
-	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	                                                                                                                                           // BuildMemberBase.cs:160
+	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:89
+	        {                                                                                                                                  // BuildMemberBase.cs:90
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:91
+	        }                                                                                                                                  // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:95
+	        // Methods                                                                                                                         // BuildMemberBase.cs:96
+	    }                                                                                                                                      // BuildMemberBase.cs:98
+	    #endregion                                                                                                                             // BuildMemberBase.cs:99
+	                                                                                                                                           // BuildMemberBase.cs:144
+	    // Properties                                                                                                                          // BuildMemberBase.cs:145
+	                                                                                                                                           // BuildMemberBase.cs:167
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:164
-	    {                                                                                                                                      // BuildMemberBase.cs:165
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:166
-	    }                                                                                                                                      // BuildMemberBase.cs:167
-	                                                                                                                                           // BuildMemberBase.cs:169
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:171
+	    {                                                                                                                                      // BuildMemberBase.cs:172
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:173
+	    }                                                                                                                                      // BuildMemberBase.cs:174
+	                                                                                                                                           // BuildMemberBase.cs:176
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:173
-	    {                                                                                                                                      // BuildMemberBase.cs:174
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:175
-	        {                                                                                                                                  // BuildMemberBase.cs:176
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:177
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:178
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:179
-	        }                                                                                                                                  // BuildMemberBase.cs:180
-	    }                                                                                                                                      // BuildMemberBase.cs:181
-	                                                                                                                                           // BuildMemberBase.cs:183
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:180
+	    {                                                                                                                                      // BuildMemberBase.cs:181
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:182
+	        {                                                                                                                                  // BuildMemberBase.cs:183
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:184
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:185
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:186
+	        }                                                                                                                                  // BuildMemberBase.cs:187
+	    }                                                                                                                                      // BuildMemberBase.cs:188
+	                                                                                                                                           // BuildMemberBase.cs:190
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:187
-	                                                                                                                                           // BuildMemberBase.cs:189
+	    Item item;                                                                                                                             // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:200
+	                                                                                                                                           // BuildMemberBase.cs:202
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:199
-	    {                                                                                                                                      // BuildMemberBase.cs:200
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:201
-	            return null;                                                                                                                   // BuildMemberBase.cs:202
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:203
-	    }                                                                                                                                      // BuildMemberBase.cs:204
-	                                                                                                                                           // BuildMemberBase.cs:210
+	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:206
+	    {                                                                                                                                      // BuildMemberBase.cs:207
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:208
+	            return null;                                                                                                                   // BuildMemberBase.cs:209
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:210
+	    }                                                                                                                                      // BuildMemberBase.cs:211
+	                                                                                                                                           // BuildMemberBase.cs:217
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:214
-	    {                                                                                                                                      // BuildMemberBase.cs:215
-	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:216
-	        return value;                                                                                                                      // BuildMemberBase.cs:217
-	    }                                                                                                                                      // BuildMemberBase.cs:218
-	                                                                                                                                           // BuildMemberBase.cs:141
+	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:221
+	    {                                                                                                                                      // BuildMemberBase.cs:222
+	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:223
+	        return value;                                                                                                                      // BuildMemberBase.cs:224
+	    }                                                                                                                                      // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:147
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public OrientationContainer(Int32 min, Int32 max) : base("Observation.component:orientation", min, max)                                // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public OrientationContainer(Int32 min, Int32 max) : base("Observation.component:orientation", min, max)                                // BuildMemberBase.cs:151
+	    {                                                                                                                                      // BuildMemberBase.cs:152
+	    }                                                                                                                                      // BuildMemberBase.cs:154
+	                                                                                                                                           // BuildMemberBase.cs:155
+	    // Methods                                                                                                                             // BuildMemberBase.cs:156
 	    public CodeableConcept Orientation_ComponentCode()                                                                                     // FhirConstruct.cs:753
 	    {                                                                                                                                      // FhirConstruct.cs:754
 	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
@@ -116,7 +119,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	        }                                                                                                                                  // FhirConstruct.cs:814
 	        return retVal;                                                                                                                     // FhirConstruct.cs:829
 	    }                                                                                                                                      // FhirConstruct.cs:830
-	                                                                                                                                           // BuildMemberBase.cs:291
+	                                                                                                                                           // BuildMemberBase.cs:298
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -132,7 +135,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            yield return component;                                                                                                        // BuildMemberComponents.cs:79
 	        }                                                                                                                                  // BuildMemberComponents.cs:80
 	    }                                                                                                                                      // BuildMemberComponents.cs:81
-	                                                                                                                                           // BuildMemberBase.cs:297
+	                                                                                                                                           // BuildMemberBase.cs:304
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -147,94 +150,98 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            items.Add(new Item((CodeableConcept) element));                                                                                // BuildMemberComponents.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:58
 	    }                                                                                                                                      // BuildMemberComponents.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	}                                                                                                                                          // BuildMemberBase.cs:158
+	#endregion                                                                                                                                 // BuildMemberBase.cs:159
+	#region Observation.component:shape Container Class                                                                                        // BuildMemberBase.cs:137
 	/// <summary>
 	/// Container class for Observation.component:shape.
 	/// </summary>
-	public class ShapeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                          // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class ShapeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                          // BuildMemberBase.cs:141
+	{                                                                                                                                          // BuildMemberBase.cs:142
+	    #region Observation.component:shape Item Class                                                                                         // BuildMemberBase.cs:73
 	    /// <summary>
 	    /// Item class for Observation.component:shape.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:73
-	    {                                                                                                                                      // BuildMemberBase.cs:74
-	        // Properties                                                                                                                      // BuildMemberBase.cs:75
+	    public class Item                                                                                                                      // BuildMemberBase.cs:77
+	    {                                                                                                                                      // BuildMemberBase.cs:78
+	        // Properties                                                                                                                      // BuildMemberBase.cs:79
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
+	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:85
-	        {                                                                                                                                  // BuildMemberBase.cs:86
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
-	        }                                                                                                                                  // BuildMemberBase.cs:89
-	                                                                                                                                           // BuildMemberBase.cs:91
-	        // Methods                                                                                                                         // BuildMemberBase.cs:92
-	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	                                                                                                                                           // BuildMemberBase.cs:160
+	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:89
+	        {                                                                                                                                  // BuildMemberBase.cs:90
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:91
+	        }                                                                                                                                  // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:95
+	        // Methods                                                                                                                         // BuildMemberBase.cs:96
+	    }                                                                                                                                      // BuildMemberBase.cs:98
+	    #endregion                                                                                                                             // BuildMemberBase.cs:99
+	                                                                                                                                           // BuildMemberBase.cs:144
+	    // Properties                                                                                                                          // BuildMemberBase.cs:145
+	                                                                                                                                           // BuildMemberBase.cs:167
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:164
-	    {                                                                                                                                      // BuildMemberBase.cs:165
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:166
-	    }                                                                                                                                      // BuildMemberBase.cs:167
-	                                                                                                                                           // BuildMemberBase.cs:169
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:171
+	    {                                                                                                                                      // BuildMemberBase.cs:172
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:173
+	    }                                                                                                                                      // BuildMemberBase.cs:174
+	                                                                                                                                           // BuildMemberBase.cs:176
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:173
-	    {                                                                                                                                      // BuildMemberBase.cs:174
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:175
-	        {                                                                                                                                  // BuildMemberBase.cs:176
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:177
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:178
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:179
-	        }                                                                                                                                  // BuildMemberBase.cs:180
-	    }                                                                                                                                      // BuildMemberBase.cs:181
-	                                                                                                                                           // BuildMemberBase.cs:183
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:180
+	    {                                                                                                                                      // BuildMemberBase.cs:181
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:182
+	        {                                                                                                                                  // BuildMemberBase.cs:183
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:184
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:185
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:186
+	        }                                                                                                                                  // BuildMemberBase.cs:187
+	    }                                                                                                                                      // BuildMemberBase.cs:188
+	                                                                                                                                           // BuildMemberBase.cs:190
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:187
-	                                                                                                                                           // BuildMemberBase.cs:189
+	    Item item;                                                                                                                             // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:200
+	                                                                                                                                           // BuildMemberBase.cs:202
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:199
-	    {                                                                                                                                      // BuildMemberBase.cs:200
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:201
-	            return null;                                                                                                                   // BuildMemberBase.cs:202
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:203
-	    }                                                                                                                                      // BuildMemberBase.cs:204
-	                                                                                                                                           // BuildMemberBase.cs:210
+	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:206
+	    {                                                                                                                                      // BuildMemberBase.cs:207
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:208
+	            return null;                                                                                                                   // BuildMemberBase.cs:209
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:210
+	    }                                                                                                                                      // BuildMemberBase.cs:211
+	                                                                                                                                           // BuildMemberBase.cs:217
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:214
-	    {                                                                                                                                      // BuildMemberBase.cs:215
-	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:216
-	        return value;                                                                                                                      // BuildMemberBase.cs:217
-	    }                                                                                                                                      // BuildMemberBase.cs:218
-	                                                                                                                                           // BuildMemberBase.cs:141
+	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:221
+	    {                                                                                                                                      // BuildMemberBase.cs:222
+	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:223
+	        return value;                                                                                                                      // BuildMemberBase.cs:224
+	    }                                                                                                                                      // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:147
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ShapeContainer(Int32 min, Int32 max) : base("Observation.component:shape", min, max)                                            // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public ShapeContainer(Int32 min, Int32 max) : base("Observation.component:shape", min, max)                                            // BuildMemberBase.cs:151
+	    {                                                                                                                                      // BuildMemberBase.cs:152
+	    }                                                                                                                                      // BuildMemberBase.cs:154
+	                                                                                                                                           // BuildMemberBase.cs:155
+	    // Methods                                                                                                                             // BuildMemberBase.cs:156
 	    public CodeableConcept Shape_ComponentCode()                                                                                           // FhirConstruct.cs:753
 	    {                                                                                                                                      // FhirConstruct.cs:754
 	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
@@ -249,7 +256,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	        }                                                                                                                                  // FhirConstruct.cs:814
 	        return retVal;                                                                                                                     // FhirConstruct.cs:829
 	    }                                                                                                                                      // FhirConstruct.cs:830
-	                                                                                                                                           // BuildMemberBase.cs:291
+	                                                                                                                                           // BuildMemberBase.cs:298
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -265,7 +272,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            yield return component;                                                                                                        // BuildMemberComponents.cs:79
 	        }                                                                                                                                  // BuildMemberComponents.cs:80
 	    }                                                                                                                                      // BuildMemberComponents.cs:81
-	                                                                                                                                           // BuildMemberBase.cs:297
+	                                                                                                                                           // BuildMemberBase.cs:304
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -280,94 +287,98 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            items.Add(new Item((CodeableConcept) element));                                                                                // BuildMemberComponents.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:58
 	    }                                                                                                                                      // BuildMemberComponents.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	}                                                                                                                                          // BuildMemberBase.cs:158
+	#endregion                                                                                                                                 // BuildMemberBase.cs:159
+	#region Observation.component:margin Container Class                                                                                       // BuildMemberBase.cs:137
 	/// <summary>
 	/// Container class for Observation.component:margin.
 	/// </summary>
-	public class MarginContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                         // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MarginContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                         // BuildMemberBase.cs:141
+	{                                                                                                                                          // BuildMemberBase.cs:142
+	    #region Observation.component:margin Item Class                                                                                        // BuildMemberBase.cs:73
 	    /// <summary>
 	    /// Item class for Observation.component:margin.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:73
-	    {                                                                                                                                      // BuildMemberBase.cs:74
-	        // Properties                                                                                                                      // BuildMemberBase.cs:75
+	    public class Item                                                                                                                      // BuildMemberBase.cs:77
+	    {                                                                                                                                      // BuildMemberBase.cs:78
+	        // Properties                                                                                                                      // BuildMemberBase.cs:79
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
+	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:85
-	        {                                                                                                                                  // BuildMemberBase.cs:86
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
-	        }                                                                                                                                  // BuildMemberBase.cs:89
-	                                                                                                                                           // BuildMemberBase.cs:91
-	        // Methods                                                                                                                         // BuildMemberBase.cs:92
-	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	                                                                                                                                           // BuildMemberBase.cs:160
+	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:89
+	        {                                                                                                                                  // BuildMemberBase.cs:90
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:91
+	        }                                                                                                                                  // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:95
+	        // Methods                                                                                                                         // BuildMemberBase.cs:96
+	    }                                                                                                                                      // BuildMemberBase.cs:98
+	    #endregion                                                                                                                             // BuildMemberBase.cs:99
+	                                                                                                                                           // BuildMemberBase.cs:144
+	    // Properties                                                                                                                          // BuildMemberBase.cs:145
+	                                                                                                                                           // BuildMemberBase.cs:167
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:164
-	    {                                                                                                                                      // BuildMemberBase.cs:165
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:166
-	    }                                                                                                                                      // BuildMemberBase.cs:167
-	                                                                                                                                           // BuildMemberBase.cs:169
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:171
+	    {                                                                                                                                      // BuildMemberBase.cs:172
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:173
+	    }                                                                                                                                      // BuildMemberBase.cs:174
+	                                                                                                                                           // BuildMemberBase.cs:176
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:173
-	    {                                                                                                                                      // BuildMemberBase.cs:174
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:175
-	        {                                                                                                                                  // BuildMemberBase.cs:176
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:177
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:178
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:179
-	        }                                                                                                                                  // BuildMemberBase.cs:180
-	    }                                                                                                                                      // BuildMemberBase.cs:181
-	                                                                                                                                           // BuildMemberBase.cs:183
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:180
+	    {                                                                                                                                      // BuildMemberBase.cs:181
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:182
+	        {                                                                                                                                  // BuildMemberBase.cs:183
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:184
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:185
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:186
+	        }                                                                                                                                  // BuildMemberBase.cs:187
+	    }                                                                                                                                      // BuildMemberBase.cs:188
+	                                                                                                                                           // BuildMemberBase.cs:190
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:187
-	                                                                                                                                           // BuildMemberBase.cs:189
+	    Item item;                                                                                                                             // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:200
+	                                                                                                                                           // BuildMemberBase.cs:202
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:199
-	    {                                                                                                                                      // BuildMemberBase.cs:200
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:201
-	            return null;                                                                                                                   // BuildMemberBase.cs:202
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:203
-	    }                                                                                                                                      // BuildMemberBase.cs:204
-	                                                                                                                                           // BuildMemberBase.cs:210
+	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:206
+	    {                                                                                                                                      // BuildMemberBase.cs:207
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:208
+	            return null;                                                                                                                   // BuildMemberBase.cs:209
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:210
+	    }                                                                                                                                      // BuildMemberBase.cs:211
+	                                                                                                                                           // BuildMemberBase.cs:217
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:214
-	    {                                                                                                                                      // BuildMemberBase.cs:215
-	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:216
-	        return value;                                                                                                                      // BuildMemberBase.cs:217
-	    }                                                                                                                                      // BuildMemberBase.cs:218
-	                                                                                                                                           // BuildMemberBase.cs:141
+	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:221
+	    {                                                                                                                                      // BuildMemberBase.cs:222
+	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:223
+	        return value;                                                                                                                      // BuildMemberBase.cs:224
+	    }                                                                                                                                      // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:147
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MarginContainer(Int32 min, Int32 max) : base("Observation.component:margin", min, max)                                          // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MarginContainer(Int32 min, Int32 max) : base("Observation.component:margin", min, max)                                          // BuildMemberBase.cs:151
+	    {                                                                                                                                      // BuildMemberBase.cs:152
+	    }                                                                                                                                      // BuildMemberBase.cs:154
+	                                                                                                                                           // BuildMemberBase.cs:155
+	    // Methods                                                                                                                             // BuildMemberBase.cs:156
 	    public CodeableConcept Margin_ComponentCode()                                                                                          // FhirConstruct.cs:753
 	    {                                                                                                                                      // FhirConstruct.cs:754
 	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
@@ -382,7 +393,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	        }                                                                                                                                  // FhirConstruct.cs:814
 	        return retVal;                                                                                                                     // FhirConstruct.cs:829
 	    }                                                                                                                                      // FhirConstruct.cs:830
-	                                                                                                                                           // BuildMemberBase.cs:291
+	                                                                                                                                           // BuildMemberBase.cs:298
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -398,7 +409,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            yield return component;                                                                                                        // BuildMemberComponents.cs:79
 	        }                                                                                                                                  // BuildMemberComponents.cs:80
 	    }                                                                                                                                      // BuildMemberComponents.cs:81
-	                                                                                                                                           // BuildMemberBase.cs:297
+	                                                                                                                                           // BuildMemberBase.cs:304
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -413,94 +424,98 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            items.Add(new Item((CodeableConcept) element));                                                                                // BuildMemberComponents.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:58
 	    }                                                                                                                                      // BuildMemberComponents.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	}                                                                                                                                          // BuildMemberBase.cs:158
+	#endregion                                                                                                                                 // BuildMemberBase.cs:159
+	#region Observation.component:mgDensity Container Class                                                                                    // BuildMemberBase.cs:137
 	/// <summary>
 	/// Container class for Observation.component:mgDensity.
 	/// </summary>
-	public class MgDensityContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                      // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MgDensityContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                      // BuildMemberBase.cs:141
+	{                                                                                                                                          // BuildMemberBase.cs:142
+	    #region Observation.component:mgDensity Item Class                                                                                     // BuildMemberBase.cs:73
 	    /// <summary>
 	    /// Item class for Observation.component:mgDensity.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:73
-	    {                                                                                                                                      // BuildMemberBase.cs:74
-	        // Properties                                                                                                                      // BuildMemberBase.cs:75
+	    public class Item                                                                                                                      // BuildMemberBase.cs:77
+	    {                                                                                                                                      // BuildMemberBase.cs:78
+	        // Properties                                                                                                                      // BuildMemberBase.cs:79
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
+	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:85
-	        {                                                                                                                                  // BuildMemberBase.cs:86
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
-	        }                                                                                                                                  // BuildMemberBase.cs:89
-	                                                                                                                                           // BuildMemberBase.cs:91
-	        // Methods                                                                                                                         // BuildMemberBase.cs:92
-	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	                                                                                                                                           // BuildMemberBase.cs:160
+	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:89
+	        {                                                                                                                                  // BuildMemberBase.cs:90
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:91
+	        }                                                                                                                                  // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:95
+	        // Methods                                                                                                                         // BuildMemberBase.cs:96
+	    }                                                                                                                                      // BuildMemberBase.cs:98
+	    #endregion                                                                                                                             // BuildMemberBase.cs:99
+	                                                                                                                                           // BuildMemberBase.cs:144
+	    // Properties                                                                                                                          // BuildMemberBase.cs:145
+	                                                                                                                                           // BuildMemberBase.cs:167
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:164
-	    {                                                                                                                                      // BuildMemberBase.cs:165
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:166
-	    }                                                                                                                                      // BuildMemberBase.cs:167
-	                                                                                                                                           // BuildMemberBase.cs:169
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:171
+	    {                                                                                                                                      // BuildMemberBase.cs:172
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:173
+	    }                                                                                                                                      // BuildMemberBase.cs:174
+	                                                                                                                                           // BuildMemberBase.cs:176
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:173
-	    {                                                                                                                                      // BuildMemberBase.cs:174
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:175
-	        {                                                                                                                                  // BuildMemberBase.cs:176
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:177
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:178
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:179
-	        }                                                                                                                                  // BuildMemberBase.cs:180
-	    }                                                                                                                                      // BuildMemberBase.cs:181
-	                                                                                                                                           // BuildMemberBase.cs:183
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:180
+	    {                                                                                                                                      // BuildMemberBase.cs:181
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:182
+	        {                                                                                                                                  // BuildMemberBase.cs:183
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:184
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:185
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:186
+	        }                                                                                                                                  // BuildMemberBase.cs:187
+	    }                                                                                                                                      // BuildMemberBase.cs:188
+	                                                                                                                                           // BuildMemberBase.cs:190
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:187
-	                                                                                                                                           // BuildMemberBase.cs:189
+	    Item item;                                                                                                                             // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:200
+	                                                                                                                                           // BuildMemberBase.cs:202
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:199
-	    {                                                                                                                                      // BuildMemberBase.cs:200
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:201
-	            return null;                                                                                                                   // BuildMemberBase.cs:202
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:203
-	    }                                                                                                                                      // BuildMemberBase.cs:204
-	                                                                                                                                           // BuildMemberBase.cs:210
+	    public CodeableConcept Get()                                                                                                           // BuildMemberBase.cs:206
+	    {                                                                                                                                      // BuildMemberBase.cs:207
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:208
+	            return null;                                                                                                                   // BuildMemberBase.cs:209
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:210
+	    }                                                                                                                                      // BuildMemberBase.cs:211
+	                                                                                                                                           // BuildMemberBase.cs:217
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:214
-	    {                                                                                                                                      // BuildMemberBase.cs:215
-	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:216
-	        return value;                                                                                                                      // BuildMemberBase.cs:217
-	    }                                                                                                                                      // BuildMemberBase.cs:218
-	                                                                                                                                           // BuildMemberBase.cs:141
+	    public CodeableConcept Set(CodeableConcept value)                                                                                      // BuildMemberBase.cs:221
+	    {                                                                                                                                      // BuildMemberBase.cs:222
+	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:223
+	        return value;                                                                                                                      // BuildMemberBase.cs:224
+	    }                                                                                                                                      // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:147
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MgDensityContainer(Int32 min, Int32 max) : base("Observation.component:mgDensity", min, max)                                    // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MgDensityContainer(Int32 min, Int32 max) : base("Observation.component:mgDensity", min, max)                                    // BuildMemberBase.cs:151
+	    {                                                                                                                                      // BuildMemberBase.cs:152
+	    }                                                                                                                                      // BuildMemberBase.cs:154
+	                                                                                                                                           // BuildMemberBase.cs:155
+	    // Methods                                                                                                                             // BuildMemberBase.cs:156
 	    public CodeableConcept MgDensity_ComponentCode()                                                                                       // FhirConstruct.cs:753
 	    {                                                                                                                                      // FhirConstruct.cs:754
 	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
@@ -515,7 +530,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	        }                                                                                                                                  // FhirConstruct.cs:814
 	        return retVal;                                                                                                                     // FhirConstruct.cs:829
 	    }                                                                                                                                      // FhirConstruct.cs:830
-	                                                                                                                                           // BuildMemberBase.cs:291
+	                                                                                                                                           // BuildMemberBase.cs:298
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -531,7 +546,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            yield return component;                                                                                                        // BuildMemberComponents.cs:79
 	        }                                                                                                                                  // BuildMemberComponents.cs:80
 	    }                                                                                                                                      // BuildMemberComponents.cs:81
-	                                                                                                                                           // BuildMemberBase.cs:297
+	                                                                                                                                           // BuildMemberBase.cs:304
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -546,6 +561,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	            items.Add(new Item((CodeableConcept) element));                                                                                // BuildMemberComponents.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:58
 	    }                                                                                                                                      // BuildMemberComponents.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	}                                                                                                                                          // BuildMemberBase.cs:158
+	#endregion                                                                                                                                 // BuildMemberBase.cs:159
 	//- LocalClassDefs
 }

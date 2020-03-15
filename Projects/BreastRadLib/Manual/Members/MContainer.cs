@@ -17,7 +17,7 @@ namespace BreastRadLib
         /// Path to the item that this references.
         /// This includes slice names, so it is really the same as the Fhir element id.
         /// </summary>
-        public String FhirPath { get; }
+        public String PathName { get; }
 
         /// <summary>
         /// Count of items
@@ -38,11 +38,11 @@ namespace BreastRadLib
         /// Constructor.
         /// </summary>
         /// <param name="fhirPath"></param>
-        protected MContainer(String fhirPath,
+        protected MContainer(String pathName,
             Int32 min,
             Int32 max)
         {
-            this.FhirPath = fhirPath;
+            this.PathName = pathName;
             this.Min = min;
             this.Max = max;
         }

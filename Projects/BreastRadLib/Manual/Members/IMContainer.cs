@@ -13,7 +13,7 @@ namespace BreastRadLib
 		/// Path to item in fhir resource
 		/// This may include slice names.
 		/// </summary>
-		String FhirPath{ get; }
+		String PathName{ get; }
 
 		/// <summary>
 		/// Count of items

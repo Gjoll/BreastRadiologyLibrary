@@ -39,96 +39,96 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
-		                                                                                                                                          // BuildMemberBase.cs:330
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// ObsChanges
 		/// Access fhir element 'Observation.component:obsChanges'
 		/// </summary>
-		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// Access fhir element 'Observation.component:biRadsAssessmentCategory'
 		/// </summary>
-		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// Orientation
 		/// Access fhir element 'Observation.component:orientation'
 		/// </summary>
-		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// Shape
 		/// Access fhir element 'Observation.component:shape'
 		/// </summary>
-		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// Margin
 		/// Access fhir element 'Observation.component:margin'
 		/// </summary>
-		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// MgDensity
 		/// Access fhir element 'Observation.component:mgDensity'
 		/// </summary>
-		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// ObsDistribution
 		/// Access fhir element 'Observation.component:obsDistribution'
 		/// </summary>
-		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// ObsDistRegionSize
 		/// Access fhir element 'Observation.component:obsDistRegionSize'
 		/// </summary>
-		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// ObsSize
 		/// Access fhir element 'Observation.component:obsSize'
 		/// </summary>
-		public ObsSizeContainer ObsSize { get ; protected set; }                                                                                  // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public ObsSizeContainer ObsSize { get ; protected set; }                                                                                  // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// NotPreviouslySeen
 		/// Access fhir element 'Observation.component:notPreviouslySeen'
 		/// </summary>
-		public NotPreviouslySeenContainer NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public NotPreviouslySeenContainer NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// CorrespondsWith
 		/// Access fhir element 'Observation.component:correspondsWith'
 		/// </summary>
-		public CorrespondsWithContainer CorrespondsWith { get ; protected set; }                                                                  // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public CorrespondsWithContainer CorrespondsWith { get ; protected set; }                                                                  // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// Access fhir element 'Observation.component:PreviouslyDemonstratedBy'
 		/// </summary>
-		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// ConsistentWith
 		/// Access fhir element 'Observation.hasMember:consistentWith'
 		/// </summary>
-		public ConsistentWithContainer ConsistentWith { get ; protected set; }                                                                    // BuildMemberBase.cs:335
-		                                                                                                                                          // BuildMemberBase.cs:330
+		public ConsistentWithContainer ConsistentWith { get ; protected set; }                                                                    // BuildMemberBase.cs:342
+		                                                                                                                                          // BuildMemberBase.cs:337
 		/// <summary>
 		/// DuctType
 		/// Access fhir element 'Observation.component:ductType'
 		/// </summary>
-		public DuctTypeContainer DuctType { get ; protected set; }                                                                                // BuildMemberBase.cs:335
+		public DuctTypeContainer DuctType { get ; protected set; }                                                                                // BuildMemberBase.cs:342
 		//- Properties
 
 		/// <summary>
@@ -173,21 +173,21 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct");                                            // DefineBase.cs:220
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
-			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:316
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:316
-			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:316
-			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:316
-			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:316
-			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
-			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:316
-			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:316
-			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:316
-			this.ObsSize = new ObsSizeContainer(0, 0);                                                                                               // BuildMemberBase.cs:316
-			this.NotPreviouslySeen = new NotPreviouslySeenContainer(0, 0);                                                                           // BuildMemberBase.cs:316
-			this.CorrespondsWith = new CorrespondsWithContainer(0, 0);                                                                               // BuildMemberBase.cs:316
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:316
-			this.ConsistentWith = new ConsistentWithContainer(0, 0);                                                                                 // BuildMemberBase.cs:316
-			this.DuctType = new DuctTypeContainer(0, 0);                                                                                             // BuildMemberBase.cs:316
+			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:323
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:323
+			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:323
+			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:323
+			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:323
+			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:323
+			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:323
+			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:323
+			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:323
+			this.ObsSize = new ObsSizeContainer(0, 0);                                                                                               // BuildMemberBase.cs:323
+			this.NotPreviouslySeen = new NotPreviouslySeenContainer(0, 0);                                                                           // BuildMemberBase.cs:323
+			this.CorrespondsWith = new CorrespondsWithContainer(0, 0);                                                                               // BuildMemberBase.cs:323
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:323
+			this.ConsistentWith = new ConsistentWithContainer(0, 0);                                                                                 // BuildMemberBase.cs:323
+			this.DuctType = new DuctTypeContainer(0, 0);                                                                                             // BuildMemberBase.cs:323
 			//- Constructor
 		}
 

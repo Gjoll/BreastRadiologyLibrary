@@ -117,7 +117,7 @@ namespace FireFragger.CS.BuildMembers
         {
             Int32 max = CSMisc.ToMax(this.extensionSlice.ElementDefinition.Max);
             Int32 min = this.extensionSlice.ElementDefinition.Min.Value;
-            base.BuildOne(extensionSlice.ElementDefinition.ElementId, min, max);
+            base.BuildOne(extensionName, min, max);
             this.BuildExtensionItemClass();
         }
 

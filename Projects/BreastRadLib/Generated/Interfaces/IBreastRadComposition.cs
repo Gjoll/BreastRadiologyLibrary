@@ -21,27 +21,27 @@ namespace BreastRadLib
 		/// <summary>
 		/// Report
 		/// </summary>
-		ReportContainer Report { get ; }                                                                                                          // BuildMemberBase.cs:325
+		ReportContainer Report { get ; }                                                                                                          // BuildMemberBase.cs:332
 		/// <summary>
 		/// Impressions
 		/// </summary>
-		ImpressionsContainer Impressions { get ; }                                                                                                // BuildMemberBase.cs:325
+		ImpressionsContainer Impressions { get ; }                                                                                                // BuildMemberBase.cs:332
 		/// <summary>
 		/// FindingsRightBreast
 		/// </summary>
-		FindingsRightBreastContainer FindingsRightBreast { get ; }                                                                                // BuildMemberBase.cs:325
+		FindingsRightBreastContainer FindingsRightBreast { get ; }                                                                                // BuildMemberBase.cs:332
 		/// <summary>
 		/// FindingsLeftBreast
 		/// </summary>
-		FindingsLeftBreastContainer FindingsLeftBreast { get ; }                                                                                  // BuildMemberBase.cs:325
+		FindingsLeftBreastContainer FindingsLeftBreast { get ; }                                                                                  // BuildMemberBase.cs:332
 		/// <summary>
 		/// RelatedResources
 		/// </summary>
-		RelatedResourcesContainer RelatedResources { get ; }                                                                                      // BuildMemberBase.cs:325
+		RelatedResourcesContainer RelatedResources { get ; }                                                                                      // BuildMemberBase.cs:332
 		/// <summary>
 		/// Recommendations
 		/// </summary>
-		RecommendationsContainer Recommendations { get ; }                                                                                        // BuildMemberBase.cs:325
+		RecommendationsContainer Recommendations { get ; }                                                                                        // BuildMemberBase.cs:332
 		//- Properties
 
 		//+ Methods

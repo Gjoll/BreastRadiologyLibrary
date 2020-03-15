@@ -28,7 +28,10 @@ namespace FireFragger.CS.BuildMembers
 
         protected CodeBlockNested containerCode;
         protected CodeBlockNested itemCode;
-        protected String elementId;
+        /// <summary>
+        /// Name for debugging/documentation. Uniquely identifies element.
+        /// </summary>
+        protected String pathName;
         protected Int32 Min;
         protected Int32 Max;
 
@@ -67,8 +70,9 @@ namespace FireFragger.CS.BuildMembers
         protected virtual void BuildItemClass()
         {
             this.itemCode
+                .AppendCode($"#region {this.pathName} Item Class")
                 .SummaryOpen()
-                .Summary($"Item class for {this.elementId}.")
+                .Summary($"Item class for {this.pathName}.")
                 .SummaryClose()
                 .AppendCode($"public class Item")
                 .OpenBrace()
@@ -92,6 +96,7 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"// Methods")
                 .DefineBlock(out itemCodeBlocks.ClassMethods)
                 .CloseBrace()
+                .AppendCode($"#endregion")
                 ;
             BuildItemClassLocal(this.itemCodeBlocks);
         }
@@ -129,8 +134,9 @@ namespace FireFragger.CS.BuildMembers
             Debug.Assert(String.IsNullOrEmpty(this.ContainerClassName) == false);
 
             this.containerCode
+                .AppendCode($"#region {this.pathName} Container Class")
                 .SummaryOpen()
-                .Summary($"Container class for {this.elementId}.")
+                .Summary($"Container class for {this.pathName}.")
                 .SummaryClose()
                 .AppendCode($"public class {this.ContainerClassName} : MContainer, ITMItem<{FhirClassName}> ")
                 .OpenBrace()
@@ -142,7 +148,7 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
-                .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{elementId}\", min, max)")
+                .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{pathName}\", min, max)")
                 .OpenBrace()
                 .DefineBlock(out this.containerCodeBlocks.ClassConstructor)
                 .CloseBrace()
@@ -150,6 +156,7 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"// Methods")
                 .DefineBlock(out this.containerCodeBlocks.ClassMethods)
                 .CloseBrace()
+                .AppendCode($"#endregion")
                 ;
 
             this.BuildContainerClassLocal(this.containerCodeBlocks);
@@ -330,7 +337,7 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"{this.PropertyName}")
-                .Summary($"Access fhir element '{this.elementId}'")
+                .Summary($"Access fhir element '{this.pathName}'")
                 .SummaryClose()
                 .AppendCode($"public {this.ContainerClassName} {this.PropertyName} {{ get ; protected set; }}")
                 ;
@@ -343,11 +350,11 @@ namespace FireFragger.CS.BuildMembers
             //    ;
         }
 
-        public virtual void BuildOne(String elementId,
+        public virtual void BuildOne(String pathName,
             Int32 min,
             Int32 max)
         {
-            this.elementId = elementId;
+            this.pathName = pathName;
             this.Min = min;
             this.Max = max;
 
