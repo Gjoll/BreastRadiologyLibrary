@@ -44,19 +44,19 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    /// <summary>
 	    /// Extension Item class for BodyDistanceFromExtension.
 	    /// </summary>
-	    public class BodyDistanceFromExtension                                                                                                 // BuildMemberExtensionComplex.cs:87
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:88
-	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:89
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:91
+	    public class BodyDistanceFromExtension                                                                                                 // BuildMemberExtensionComplex.cs:86
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:87
+	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:88
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:90
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public BodyDistanceFromExtension()                                                                                                 // BuildMemberExtensionComplex.cs:95
-	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:96
-	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:98
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:100
-	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:101
-	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:103
+	        public BodyDistanceFromExtension()                                                                                                 // BuildMemberExtensionComplex.cs:94
+	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:95
+	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:97
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:99
+	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:100
+	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:102
 	                                                                                                                                           // BuildMemberBase.cs:138
 	    // Properties                                                                                                                          // BuildMemberBase.cs:139
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
@@ -121,19 +121,19 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                                       // BuildMemberExtensionComplex.cs:61
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:62
-	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:63
-	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:73
+	    public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                                       // BuildMemberExtensionComplex.cs:60
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:61
+	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:62
+	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:72
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:42
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> components)                                                       // BuildMemberExtensionComplex.cs:43
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:44
-	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:45
-	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:50
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:41
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> components)                                                       // BuildMemberExtensionComplex.cs:42
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:43
+	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:44
+	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:49
 	}                                                                                                                                          // BuildMemberBase.cs:152
 	//- LocalClassDefs
 }

@@ -11,7 +11,6 @@ namespace FireFragger.CS.BuildMembers
     internal class BuildMemberExtensionComplex : BuildMemberBase
     {
         String extensionName;
-        String containerClassName;
         protected ElementTreeNode valueNode;
 
         protected override string PropertyName => $"{extensionName.ToMachineName()}";

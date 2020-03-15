@@ -22,7 +22,7 @@ namespace FireFragger.CS
 
         public void DefineStart()
         {
-            if (this.codeBlocks.ClassEditor != null)
+            if (this.codeBlocks.ClassWriteCodeStart != null)
             {
                 this.codeBlocks.ClassWriteCodeStart
                     ?.AppendCode($"this.ClearExtensions();")
@@ -391,8 +391,7 @@ namespace FireFragger.CS
                        $"Unimplemented code. external extension reference");
                 return;
             }
-            CodeBlockNested usingBlock = this.codeBlocks.SubClassEditor.Blocks.Find("Usings", false);
-            usingBlock.AppendUniqueLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
+            this.codeBlocks.LocalUsings.AppendUniqueLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
             String propertyName = CSMisc.PropertyName(extensionSlice.Name);
             String sliceClassName = CSMisc.ClassName(profile.LastUriPart());
             //$DefineProperty(sliceClassName, propertyName,

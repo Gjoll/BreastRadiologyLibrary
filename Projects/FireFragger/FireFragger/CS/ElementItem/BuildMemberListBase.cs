@@ -54,7 +54,7 @@ namespace FireFragger.CS
             String propertyName,
             String methodSuffix)
         {
-            if (this.codeBlocks.ClassEditor != null)
+            if (this.codeBlocks.ClassConstructor != null)
             {
                 this.codeBlocks.InterfaceProperties
                     .SummaryOpen()

@@ -55,7 +55,7 @@ namespace FireFragger.CS.BuildMembers
         public void Build()
         {
             //$ TODO: Implement validation
-            const String fcn = "BuildSlice";
+            //const String fcn = "BuildSlice";
 
             ElementTreeNode valueXNode = memberNode.GetChild("value[x]");
             ElementTreeNode subExtensionNode = memberNode.GetChild("extension");

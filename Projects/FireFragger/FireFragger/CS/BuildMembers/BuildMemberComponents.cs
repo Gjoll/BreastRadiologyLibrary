@@ -102,7 +102,7 @@ namespace FireFragger.CS.BuildMembers
             String readBlockName = $"ReadComponents";
             String writeBlockName = $"WriteComponents";
             String componentBlockName = $"!Components";
-            CodeBlockNested componentBlock = this.codeBlocks.ClassMethods.Find(componentBlockName, false);
+            CodeBlockNested componentBlock = this.codeBlocks.ClassMethods?.Find(componentBlockName, false);
             if (componentBlock == null)
             {
                 this.codeBlocks.ClassMethods
