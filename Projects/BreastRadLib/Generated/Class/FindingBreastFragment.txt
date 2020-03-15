@@ -1,35 +1,35 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:329
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// MGFinding
 		/// Access fhir element 'Observation.hasMember:mGFinding'
 		/// </summary>
-		public MGFindingContainer MGFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:334
-		                                                                                                                                          // BuildMemberBase.cs:329
+		public MGFindingContainer MGFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:335
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// MRIFinding
 		/// Access fhir element 'Observation.hasMember:mRIFinding'
 		/// </summary>
-		public MRIFindingContainer MRIFinding { get ; protected set; }                                                                            // BuildMemberBase.cs:334
-		                                                                                                                                          // BuildMemberBase.cs:329
+		public MRIFindingContainer MRIFinding { get ; protected set; }                                                                            // BuildMemberBase.cs:335
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// NMFinding
 		/// Access fhir element 'Observation.hasMember:nMFinding'
 		/// </summary>
-		public NMFindingContainer NMFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:334
-		                                                                                                                                          // BuildMemberBase.cs:329
+		public NMFindingContainer NMFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:335
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// USFinding
 		/// Access fhir element 'Observation.hasMember:uSFinding'
 		/// </summary>
-		public USFindingContainer USFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:334
+		public USFindingContainer USFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:335
 		//- Properties
 
 			//+ Constructor
-			this.MGFinding = new MGFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:318
-			this.MRIFinding = new MRIFindingContainer(0, 0);                                                                                         // BuildMemberBase.cs:318
-			this.NMFinding = new NMFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:318
-			this.USFinding = new USFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:318
+			this.MGFinding = new MGFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
+			this.MRIFinding = new MRIFindingContainer(0, 0);                                                                                         // BuildMemberBase.cs:316
+			this.NMFinding = new NMFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
+			this.USFinding = new USFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
 			//- Constructor
 
 			//+ ValidateCodeStart

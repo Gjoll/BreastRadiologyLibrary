@@ -93,8 +93,6 @@ namespace FireFragger.CS.BuildMembers
                 .DefineBlock(out itemCodeBlocks.ClassMethods)
                 .CloseBrace()
                 ;
-
-
             BuildItemClassLocal(this.itemCodeBlocks);
         }
 
@@ -318,12 +316,15 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"this.{this.PropertyName} = new {this.ContainerClassName}({this.Min}, {this.Min});")
                 ;
 
-            this.codeBlocks.InterfaceProperties
-                .SummaryOpen()
-                .Summary($"{PropertyName}")
-                .SummaryClose()
-                .AppendCode($"{this.ContainerClassName} {this.PropertyName} {{ get ; }}")
-                ;
+            if (this.codeBlocks.InterfaceProperties != null)
+            {
+                this.codeBlocks.InterfaceProperties
+                    .SummaryOpen()
+                    .Summary($"{PropertyName}")
+                    .SummaryClose()
+                    .AppendCode($"{this.ContainerClassName} {this.PropertyName} {{ get ; }}")
+                    ;
+            }
 
             this.codeBlocks.ClassProperties
                 .BlankLine()

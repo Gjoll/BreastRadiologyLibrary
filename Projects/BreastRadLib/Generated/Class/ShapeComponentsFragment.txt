@@ -1,35 +1,35 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:329
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// Orientation
 		/// Access fhir element 'Observation.component:orientation'
 		/// </summary>
-		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:334
-		                                                                                                                                          // BuildMemberBase.cs:329
+		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:335
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// Shape
 		/// Access fhir element 'Observation.component:shape'
 		/// </summary>
-		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:334
-		                                                                                                                                          // BuildMemberBase.cs:329
+		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:335
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// Margin
 		/// Access fhir element 'Observation.component:margin'
 		/// </summary>
-		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:334
-		                                                                                                                                          // BuildMemberBase.cs:329
+		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:335
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// MgDensity
 		/// Access fhir element 'Observation.component:mgDensity'
 		/// </summary>
-		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:334
+		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:335
 		//- Properties
 
 			//+ Constructor
-			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:318
-			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:318
-			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:318
-			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:318
+			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:316
+			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:316
+			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:316
+			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
 			//- Constructor
 
 			//+ ValidateCodeStart

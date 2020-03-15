@@ -16,34 +16,36 @@ namespace FireFragger.CS.BuildMembers
         protected Builder csBuilder => this.defineBase.CSBuilder;
         protected DefineBase defineBase;
         protected ClassCodeBlocks codeBlocks;
-        protected ElementTreeNode memberNode;
+        protected ElementTreeSlice extensionSlice;
         String extensionName;
 
         public BuildMemberExtension(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
-            ElementTreeNode extensionNode,
+            ElementTreeSlice extensionSlice,
             String extensionName)
         {
             this.extensionName = extensionName;
             this.defineBase = defineBase;
             this.codeBlocks = codeBlocks;
-            this.memberNode = extensionNode;
+            this.extensionSlice = extensionSlice;
         }
 
         void BuildOneComplexExtension(String extensionName)
         {
             BuildMemberExtensionComplex bm = new BuildMemberExtensionComplex(this.defineBase,
                 this.codeBlocks,
-                this.memberNode,
+                this.extensionSlice,
                 extensionName);
             bm.Build();
         }
 
-        void BuildOneSimpleExtension(ElementTreeNode valueXNode)
+        void BuildOneSimpleExtension(ElementTreeNode valueXNode,
+            String extensionName)
         {
             BuildMemberExtensionSimple bm = new BuildMemberExtensionSimple(this.defineBase,
                 this.codeBlocks,
-                valueXNode);
+                valueXNode,
+                extensionName);
             bm.Build();
         }
 
@@ -55,10 +57,30 @@ namespace FireFragger.CS.BuildMembers
         public void Build()
         {
             //$ TODO: Implement validation
-            //const String fcn = "BuildSlice";
 
-            ElementTreeNode valueXNode = memberNode.GetChild("value[x]");
-            ElementTreeNode subExtensionNode = memberNode.GetChild("extension");
+            const String fcn = "Build";
+            ElementDefinition extensionDef = extensionSlice.ElementDefinition;
+            if (
+                (extensionDef.Type.Count == 1) &&
+                (extensionDef.Type[0].Code == "Extension")
+                )
+            {
+                if (extensionDef.Type[0].Profile.Count() > 0)
+                {
+                    if (extensionDef.Type[0].Profile.Count() != 1)
+                        throw new Exception($"Invalid extension ProfileProfile definition {extensionName}");
+                    if (extensionSlice.Nodes.Count > 0)
+                        throw new Exception($"Invalid eternal extension {extensionName}. Nodes.Count ==  {extensionSlice.Nodes.Count}. Expected 0.");
+
+                    this.defineBase.CSBuilder.ConversionError(this.GetType().Name,
+                       fcn,
+                       $"Unimplemented external extension reference {extensionDef.Type[0].Profile.First()}");
+                    return;
+                }
+            }
+
+            ElementTreeNode valueXNode = extensionSlice.Nodes.GetItem("value[x]");
+            ElementTreeNode subExtensionNode = extensionSlice.Nodes.GetItem("extension");
             Int32 valueXCardMax = CSMisc.ToMax(valueXNode.ElementDefinition.Max);
 
             if ((valueXCardMax != 0) && (subExtensionNode.Slices.Count > 1))
@@ -74,7 +96,7 @@ namespace FireFragger.CS.BuildMembers
             else if (valueXCardMax != 0)
             {
                 // Build Simple Extension
-                BuildOneSimpleExtension(valueXNode);
+                BuildOneSimpleExtension(valueXNode, extensionName);
             }
             else
             {

@@ -26,18 +26,18 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:329
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// Value
 		/// Access fhir element 'Observation.component:value'
 		/// </summary>
-		public ValueContainer Value { get ; protected set; }                                                                                      // BuildMemberBase.cs:334
-		                                                                                                                                          // BuildMemberBase.cs:329
+		public ValueContainer Value { get ; protected set; }                                                                                      // BuildMemberBase.cs:335
+		                                                                                                                                          // BuildMemberBase.cs:330
 		/// <summary>
 		/// Qualifier
 		/// Access fhir element 'Observation.component:qualifier'
 		/// </summary>
-		public QualifierContainer Qualifier { get ; protected set; }                                                                              // BuildMemberBase.cs:334
+		public QualifierContainer Qualifier { get ; protected set; }                                                                              // BuildMemberBase.cs:335
 		//- Properties
 
 		/// <summary>
@@ -81,8 +81,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:220
-			this.Value = new ValueContainer(1, 1);                                                                                                   // BuildMemberBase.cs:318
-			this.Qualifier = new QualifierContainer(0, 0);                                                                                           // BuildMemberBase.cs:318
+			this.Value = new ValueContainer(1, 1);                                                                                                   // BuildMemberBase.cs:316
+			this.Qualifier = new QualifierContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
 			//- Constructor
 		}
 

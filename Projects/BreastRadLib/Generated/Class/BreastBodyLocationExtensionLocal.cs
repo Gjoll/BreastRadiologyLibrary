@@ -18,8 +18,8 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	/// <summary>
 	/// Container class for Extension.
 	/// </summary>
-	public class BreastBodyLocationExtensionCollection : MContainer, ITMItem<Extension>                                                        // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class BreastBodyLocationExtensionCollection : MContainer, ITMItem<Extension>                                                        // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Extension.
 	    /// </summary>
@@ -44,80 +44,529 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    /// <summary>
 	    /// Extension Item class for BreastBodyLocationExtension.
 	    /// </summary>
-	    public class BreastBodyLocationExtension                                                                                               // BuildMemberExtensionComplex.cs:82
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:83
-	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:84
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:86
+	    public class BreastBodyLocationExtension                                                                                               // BuildMemberExtensionComplex.cs:84
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:85
+	        // Definitions                                                                                                                     // BuildMemberExtensionComplex.cs:86
+	        /// <summary>
+	        /// Container class for Extension.extension:quadrant.value[x].
+	        /// </summary>
+	        public class QuadrantCollection : MContainer, ITMItem<Observation.ComponentComponent>                                              // BuildMemberBase.cs:135
+	        {                                                                                                                                  // BuildMemberBase.cs:136
+	            /// <summary>
+	            /// Item class for Extension.extension:quadrant.value[x].
+	            /// </summary>
+	            public class Item                                                                                                              // BuildMemberBase.cs:73
+	            {                                                                                                                              // BuildMemberBase.cs:74
+	                // Properties                                                                                                              // BuildMemberBase.cs:75
+	                /// <summary>
+	                /// Value
+	                /// </summary>
+	                public Element Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
+	                /// <summary>
+	                /// Constructor
+	                /// </summary>
+	                public Item(Element value)                                                                                                 // BuildMemberBase.cs:85
+	                {                                                                                                                          // BuildMemberBase.cs:86
+	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:87
+	                }                                                                                                                          // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	                // Methods                                                                                                                 // BuildMemberBase.cs:92
+	            }                                                                                                                              // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:138
+	            // Properties                                                                                                                  // BuildMemberBase.cs:139
+	                                                                                                                                           // BuildMemberBase.cs:160
+	            /// <summary>
+	            /// Get All Items
+	            /// </summary>
+	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:164
+	            {                                                                                                                              // BuildMemberBase.cs:165
+	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:166
+	            }                                                                                                                              // BuildMemberBase.cs:167
+	                                                                                                                                           // BuildMemberBase.cs:169
+	            /// <summary>
+	            /// Set All Items
+	            /// </summary>
+	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:173
+	            {                                                                                                                              // BuildMemberBase.cs:174
+	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:175
+	                {                                                                                                                          // BuildMemberBase.cs:176
+	                    case 0: break;                                                                                                         // BuildMemberBase.cs:177
+	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:178
+	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:179
+	                }                                                                                                                          // BuildMemberBase.cs:180
+	            }                                                                                                                              // BuildMemberBase.cs:181
+	                                                                                                                                           // BuildMemberBase.cs:183
+	            /// <summary>
+	            /// Item
+	            /// </summary>
+	            Item item;                                                                                                                     // BuildMemberBase.cs:187
+	                                                                                                                                           // BuildMemberBase.cs:189
+	            /// <summary>
+	            /// Count property
+	            /// </summary>
+	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:193
+	                                                                                                                                           // BuildMemberBase.cs:195
+	            /// <summary>
+	            /// Get Item's Value
+	            /// </summary>
+	            public Element Get()                                                                                                           // BuildMemberBase.cs:199
+	            {                                                                                                                              // BuildMemberBase.cs:200
+	                if (item == null)                                                                                                          // BuildMemberBase.cs:201
+	                    return null;                                                                                                           // BuildMemberBase.cs:202
+	                return item.Value;                                                                                                         // BuildMemberBase.cs:203
+	            }                                                                                                                              // BuildMemberBase.cs:204
+	                                                                                                                                           // BuildMemberBase.cs:210
+	            /// <summary>
+	            /// Set Item's Value
+	            /// </summary>
+	            public CodeableConcept Set(CodeableConcept value)                                                                              // BuildMemberBase.cs:214
+	            {                                                                                                                              // BuildMemberBase.cs:215
+	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:216
+	                return value;                                                                                                              // BuildMemberBase.cs:217
+	            }                                                                                                                              // BuildMemberBase.cs:218
+	                                                                                                                                           // BuildMemberBase.cs:141
+	            /// <summary>
+	            /// Constructor
+	            /// </summary>
+	            public QuadrantCollection(Int32 min, Int32 max) : base("Extension.extension:quadrant.value[x]", min, max)                      // BuildMemberBase.cs:145
+	            {                                                                                                                              // BuildMemberBase.cs:146
+	            }                                                                                                                              // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	            // Methods                                                                                                                     // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:291
+	            /// <summary>
+	            /// Write single item as a fhir element.
+	            /// </summary>
+	            public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                          // BuildMemberExtensionSimple.cs:58
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:59
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:60
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:70
+	                                                                                                                                           // BuildMemberBase.cs:297
+	            /// <summary>
+	            /// Read data from fhir element into member item.
+	            /// </summary>
+	                                                                                                                                           // BuildMemberExtensionSimple.cs:39
+	            public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                          // BuildMemberExtensionSimple.cs:40
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:41
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:42
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:47
+	        }                                                                                                                                  // BuildMemberBase.cs:152
+	        /// <summary>
+	        /// Container class for Extension.extension:region.value[x].
+	        /// </summary>
+	        public class RegionCollection : MContainer, ITMItem<Observation.ComponentComponent>                                                // BuildMemberBase.cs:135
+	        {                                                                                                                                  // BuildMemberBase.cs:136
+	            /// <summary>
+	            /// Item class for Extension.extension:region.value[x].
+	            /// </summary>
+	            public class Item                                                                                                              // BuildMemberBase.cs:73
+	            {                                                                                                                              // BuildMemberBase.cs:74
+	                // Properties                                                                                                              // BuildMemberBase.cs:75
+	                /// <summary>
+	                /// Value
+	                /// </summary>
+	                public Element Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
+	                /// <summary>
+	                /// Constructor
+	                /// </summary>
+	                public Item(Element value)                                                                                                 // BuildMemberBase.cs:85
+	                {                                                                                                                          // BuildMemberBase.cs:86
+	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:87
+	                }                                                                                                                          // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	                // Methods                                                                                                                 // BuildMemberBase.cs:92
+	            }                                                                                                                              // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:138
+	            // Properties                                                                                                                  // BuildMemberBase.cs:139
+	                                                                                                                                           // BuildMemberBase.cs:160
+	            /// <summary>
+	            /// Get All Items
+	            /// </summary>
+	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:164
+	            {                                                                                                                              // BuildMemberBase.cs:165
+	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:166
+	            }                                                                                                                              // BuildMemberBase.cs:167
+	                                                                                                                                           // BuildMemberBase.cs:169
+	            /// <summary>
+	            /// Set All Items
+	            /// </summary>
+	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:173
+	            {                                                                                                                              // BuildMemberBase.cs:174
+	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:175
+	                {                                                                                                                          // BuildMemberBase.cs:176
+	                    case 0: break;                                                                                                         // BuildMemberBase.cs:177
+	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:178
+	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:179
+	                }                                                                                                                          // BuildMemberBase.cs:180
+	            }                                                                                                                              // BuildMemberBase.cs:181
+	                                                                                                                                           // BuildMemberBase.cs:183
+	            /// <summary>
+	            /// Item
+	            /// </summary>
+	            Item item;                                                                                                                     // BuildMemberBase.cs:187
+	                                                                                                                                           // BuildMemberBase.cs:189
+	            /// <summary>
+	            /// Count property
+	            /// </summary>
+	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:193
+	                                                                                                                                           // BuildMemberBase.cs:195
+	            /// <summary>
+	            /// Get Item's Value
+	            /// </summary>
+	            public Element Get()                                                                                                           // BuildMemberBase.cs:199
+	            {                                                                                                                              // BuildMemberBase.cs:200
+	                if (item == null)                                                                                                          // BuildMemberBase.cs:201
+	                    return null;                                                                                                           // BuildMemberBase.cs:202
+	                return item.Value;                                                                                                         // BuildMemberBase.cs:203
+	            }                                                                                                                              // BuildMemberBase.cs:204
+	                                                                                                                                           // BuildMemberBase.cs:210
+	            /// <summary>
+	            /// Set Item's Value
+	            /// </summary>
+	            public CodeableConcept Set(CodeableConcept value)                                                                              // BuildMemberBase.cs:214
+	            {                                                                                                                              // BuildMemberBase.cs:215
+	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:216
+	                return value;                                                                                                              // BuildMemberBase.cs:217
+	            }                                                                                                                              // BuildMemberBase.cs:218
+	                                                                                                                                           // BuildMemberBase.cs:141
+	            /// <summary>
+	            /// Constructor
+	            /// </summary>
+	            public RegionCollection(Int32 min, Int32 max) : base("Extension.extension:region.value[x]", min, max)                          // BuildMemberBase.cs:145
+	            {                                                                                                                              // BuildMemberBase.cs:146
+	            }                                                                                                                              // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	            // Methods                                                                                                                     // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:291
+	            /// <summary>
+	            /// Write single item as a fhir element.
+	            /// </summary>
+	            public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                          // BuildMemberExtensionSimple.cs:58
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:59
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:60
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:70
+	                                                                                                                                           // BuildMemberBase.cs:297
+	            /// <summary>
+	            /// Read data from fhir element into member item.
+	            /// </summary>
+	                                                                                                                                           // BuildMemberExtensionSimple.cs:39
+	            public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                          // BuildMemberExtensionSimple.cs:40
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:41
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:42
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:47
+	        }                                                                                                                                  // BuildMemberBase.cs:152
+	        /// <summary>
+	        /// Container class for Extension.extension:clockDirection.value[x].
+	        /// </summary>
+	        public class ClockDirectionCollection : MContainer, ITMItem<Observation.ComponentComponent>                                        // BuildMemberBase.cs:135
+	        {                                                                                                                                  // BuildMemberBase.cs:136
+	            /// <summary>
+	            /// Item class for Extension.extension:clockDirection.value[x].
+	            /// </summary>
+	            public class Item                                                                                                              // BuildMemberBase.cs:73
+	            {                                                                                                                              // BuildMemberBase.cs:74
+	                // Properties                                                                                                              // BuildMemberBase.cs:75
+	                /// <summary>
+	                /// Value
+	                /// </summary>
+	                public Element Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
+	                /// <summary>
+	                /// Constructor
+	                /// </summary>
+	                public Item(Element value)                                                                                                 // BuildMemberBase.cs:85
+	                {                                                                                                                          // BuildMemberBase.cs:86
+	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:87
+	                }                                                                                                                          // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	                // Methods                                                                                                                 // BuildMemberBase.cs:92
+	            }                                                                                                                              // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:138
+	            // Properties                                                                                                                  // BuildMemberBase.cs:139
+	                                                                                                                                           // BuildMemberBase.cs:160
+	            /// <summary>
+	            /// Get All Items
+	            /// </summary>
+	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:164
+	            {                                                                                                                              // BuildMemberBase.cs:165
+	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:166
+	            }                                                                                                                              // BuildMemberBase.cs:167
+	                                                                                                                                           // BuildMemberBase.cs:169
+	            /// <summary>
+	            /// Set All Items
+	            /// </summary>
+	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:173
+	            {                                                                                                                              // BuildMemberBase.cs:174
+	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:175
+	                {                                                                                                                          // BuildMemberBase.cs:176
+	                    case 0: break;                                                                                                         // BuildMemberBase.cs:177
+	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:178
+	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:179
+	                }                                                                                                                          // BuildMemberBase.cs:180
+	            }                                                                                                                              // BuildMemberBase.cs:181
+	                                                                                                                                           // BuildMemberBase.cs:183
+	            /// <summary>
+	            /// Item
+	            /// </summary>
+	            Item item;                                                                                                                     // BuildMemberBase.cs:187
+	                                                                                                                                           // BuildMemberBase.cs:189
+	            /// <summary>
+	            /// Count property
+	            /// </summary>
+	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:193
+	                                                                                                                                           // BuildMemberBase.cs:195
+	            /// <summary>
+	            /// Get Item's Value
+	            /// </summary>
+	            public Element Get()                                                                                                           // BuildMemberBase.cs:199
+	            {                                                                                                                              // BuildMemberBase.cs:200
+	                if (item == null)                                                                                                          // BuildMemberBase.cs:201
+	                    return null;                                                                                                           // BuildMemberBase.cs:202
+	                return item.Value;                                                                                                         // BuildMemberBase.cs:203
+	            }                                                                                                                              // BuildMemberBase.cs:204
+	                                                                                                                                           // BuildMemberBase.cs:210
+	            /// <summary>
+	            /// Set Item's Value
+	            /// </summary>
+	            public CodeableConcept Set(CodeableConcept value)                                                                              // BuildMemberBase.cs:214
+	            {                                                                                                                              // BuildMemberBase.cs:215
+	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:216
+	                return value;                                                                                                              // BuildMemberBase.cs:217
+	            }                                                                                                                              // BuildMemberBase.cs:218
+	                                                                                                                                           // BuildMemberBase.cs:141
+	            /// <summary>
+	            /// Constructor
+	            /// </summary>
+	            public ClockDirectionCollection(Int32 min, Int32 max) : base("Extension.extension:clockDirection.value[x]", min, max)          // BuildMemberBase.cs:145
+	            {                                                                                                                              // BuildMemberBase.cs:146
+	            }                                                                                                                              // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	            // Methods                                                                                                                     // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:291
+	            /// <summary>
+	            /// Write single item as a fhir element.
+	            /// </summary>
+	            public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                          // BuildMemberExtensionSimple.cs:58
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:59
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:60
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:70
+	                                                                                                                                           // BuildMemberBase.cs:297
+	            /// <summary>
+	            /// Read data from fhir element into member item.
+	            /// </summary>
+	                                                                                                                                           // BuildMemberExtensionSimple.cs:39
+	            public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                          // BuildMemberExtensionSimple.cs:40
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:41
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:42
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:47
+	        }                                                                                                                                  // BuildMemberBase.cs:152
+	        /// <summary>
+	        /// Container class for Extension.extension:depth.value[x].
+	        /// </summary>
+	        public class DepthCollection : MContainer, ITMItem<Observation.ComponentComponent>                                                 // BuildMemberBase.cs:135
+	        {                                                                                                                                  // BuildMemberBase.cs:136
+	            /// <summary>
+	            /// Item class for Extension.extension:depth.value[x].
+	            /// </summary>
+	            public class Item                                                                                                              // BuildMemberBase.cs:73
+	            {                                                                                                                              // BuildMemberBase.cs:74
+	                // Properties                                                                                                              // BuildMemberBase.cs:75
+	                /// <summary>
+	                /// Value
+	                /// </summary>
+	                public Element Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
+	                /// <summary>
+	                /// Constructor
+	                /// </summary>
+	                public Item(Element value)                                                                                                 // BuildMemberBase.cs:85
+	                {                                                                                                                          // BuildMemberBase.cs:86
+	                    this.Value = value;                                                                                                    // BuildMemberBase.cs:87
+	                }                                                                                                                          // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	                // Methods                                                                                                                 // BuildMemberBase.cs:92
+	            }                                                                                                                              // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:138
+	            // Properties                                                                                                                  // BuildMemberBase.cs:139
+	                                                                                                                                           // BuildMemberBase.cs:160
+	            /// <summary>
+	            /// Get All Items
+	            /// </summary>
+	            IEnumerable<Item> GetAllItems()                                                                                                // BuildMemberBase.cs:164
+	            {                                                                                                                              // BuildMemberBase.cs:165
+	                if (this.item != null) yield return this.item;                                                                             // BuildMemberBase.cs:166
+	            }                                                                                                                              // BuildMemberBase.cs:167
+	                                                                                                                                           // BuildMemberBase.cs:169
+	            /// <summary>
+	            /// Set All Items
+	            /// </summary>
+	            void SetAllItems(IEnumerable<Item> items)                                                                                      // BuildMemberBase.cs:173
+	            {                                                                                                                              // BuildMemberBase.cs:174
+	                switch (items.Count())                                                                                                     // BuildMemberBase.cs:175
+	                {                                                                                                                          // BuildMemberBase.cs:176
+	                    case 0: break;                                                                                                         // BuildMemberBase.cs:177
+	                    case 1: this.item = items.First(); break;                                                                              // BuildMemberBase.cs:178
+	                    default: throw new Exception("Found multiple elements while reading single item");                                     // BuildMemberBase.cs:179
+	                }                                                                                                                          // BuildMemberBase.cs:180
+	            }                                                                                                                              // BuildMemberBase.cs:181
+	                                                                                                                                           // BuildMemberBase.cs:183
+	            /// <summary>
+	            /// Item
+	            /// </summary>
+	            Item item;                                                                                                                     // BuildMemberBase.cs:187
+	                                                                                                                                           // BuildMemberBase.cs:189
+	            /// <summary>
+	            /// Count property
+	            /// </summary>
+	            public override Int32 Count => this.item == null ? 0 : 1;                                                                      // BuildMemberBase.cs:193
+	                                                                                                                                           // BuildMemberBase.cs:195
+	            /// <summary>
+	            /// Get Item's Value
+	            /// </summary>
+	            public Element Get()                                                                                                           // BuildMemberBase.cs:199
+	            {                                                                                                                              // BuildMemberBase.cs:200
+	                if (item == null)                                                                                                          // BuildMemberBase.cs:201
+	                    return null;                                                                                                           // BuildMemberBase.cs:202
+	                return item.Value;                                                                                                         // BuildMemberBase.cs:203
+	            }                                                                                                                              // BuildMemberBase.cs:204
+	                                                                                                                                           // BuildMemberBase.cs:210
+	            /// <summary>
+	            /// Set Item's Value
+	            /// </summary>
+	            public CodeableConcept Set(CodeableConcept value)                                                                              // BuildMemberBase.cs:214
+	            {                                                                                                                              // BuildMemberBase.cs:215
+	                this.item = new Item(value);                                                                                               // BuildMemberBase.cs:216
+	                return value;                                                                                                              // BuildMemberBase.cs:217
+	            }                                                                                                                              // BuildMemberBase.cs:218
+	                                                                                                                                           // BuildMemberBase.cs:141
+	            /// <summary>
+	            /// Constructor
+	            /// </summary>
+	            public DepthCollection(Int32 min, Int32 max) : base("Extension.extension:depth.value[x]", min, max)                            // BuildMemberBase.cs:145
+	            {                                                                                                                              // BuildMemberBase.cs:146
+	            }                                                                                                                              // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	            // Methods                                                                                                                     // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:291
+	            /// <summary>
+	            /// Write single item as a fhir element.
+	            /// </summary>
+	            public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                          // BuildMemberExtensionSimple.cs:58
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:59
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:60
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:70
+	                                                                                                                                           // BuildMemberBase.cs:297
+	            /// <summary>
+	            /// Read data from fhir element into member item.
+	            /// </summary>
+	                                                                                                                                           // BuildMemberExtensionSimple.cs:39
+	            public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                          // BuildMemberExtensionSimple.cs:40
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:41
+	                throw new NotImplementedException();                                                                                       // BuildMemberExtensionSimple.cs:42
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:47
+	        }                                                                                                                                  // BuildMemberBase.cs:152
+	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:88
+	                                                                                                                                           // BuildMemberBase.cs:330
+	        /// <summary>
+	        /// Quadrant
+	        /// Access fhir element 'Extension.extension:quadrant.value[x]'
+	        /// </summary>
+	        public QuadrantCollection Quadrant { get ; protected set; }                                                                        // BuildMemberBase.cs:335
+	                                                                                                                                           // BuildMemberBase.cs:330
+	        /// <summary>
+	        /// Region
+	        /// Access fhir element 'Extension.extension:region.value[x]'
+	        /// </summary>
+	        public RegionCollection Region { get ; protected set; }                                                                            // BuildMemberBase.cs:335
+	                                                                                                                                           // BuildMemberBase.cs:330
+	        /// <summary>
+	        /// ClockDirection
+	        /// Access fhir element 'Extension.extension:clockDirection.value[x]'
+	        /// </summary>
+	        public ClockDirectionCollection ClockDirection { get ; protected set; }                                                            // BuildMemberBase.cs:335
+	                                                                                                                                           // BuildMemberBase.cs:330
+	        /// <summary>
+	        /// Depth
+	        /// Access fhir element 'Extension.extension:depth.value[x]'
+	        /// </summary>
+	        public DepthCollection Depth { get ; protected set; }                                                                              // BuildMemberBase.cs:335
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:90
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public BreastBodyLocationExtension()                                                                                               // BuildMemberExtensionComplex.cs:90
-	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:91
-	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:93
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:95
-	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:96
-	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:98
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	        public BreastBodyLocationExtension()                                                                                               // BuildMemberExtensionComplex.cs:94
+	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:95
+	            this.Quadrant = new QuadrantCollection(1, 1);                                                                                  // BuildMemberBase.cs:316
+	            this.Region = new RegionCollection(1, 1);                                                                                      // BuildMemberBase.cs:316
+	            this.ClockDirection = new ClockDirectionCollection(1, 1);                                                                      // BuildMemberBase.cs:316
+	            this.Depth = new DepthCollection(1, 1);                                                                                        // BuildMemberBase.cs:316
+	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:97
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:99
+	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:100
+	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:102
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<BreastBodyLocationExtension> All()                                                                                  // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<BreastBodyLocationExtension> All()                                                                                  // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public BreastBodyLocationExtension GetAt(Int32 i) => this.items[i].Value;                                                              // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public BreastBodyLocationExtension GetAt(Int32 i) => this.items[i].Value;                                                              // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BreastBodyLocationExtensionCollection(Int32 min, Int32 max) : base("Extension", min, max)                                       // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public BreastBodyLocationExtensionCollection(Int32 min, Int32 max) : base("Extension", min, max)                                       // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public BreastBodyLocationExtension Append(BreastBodyLocationExtension value)                                                           // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public BreastBodyLocationExtension Append(BreastBodyLocationExtension value)                                                           // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -125,7 +574,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:57
 	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:58
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:68
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -134,6 +583,6 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:39
 	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:40
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:45
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	//- LocalClassDefs
 }

@@ -12,14 +12,13 @@ namespace FireFragger.CS.BuildMembers
     {
         String itemElementGetName;
         List<String> itemElementSetName = new List<String>();
-        String containerClassName;
+        String extensionName;
         protected ElementTreeNode valueNode;
 
-        protected string ElementName => $"{this.valueNode.ElementDefinition.Path.LastPathPart()}";
-        protected override string PropertyName => $"{ElementName.ToMachineName()}";
+        protected override string PropertyName => $"{this.extensionName.ToMachineName()}";
         protected override string ElementGetName => this.itemElementGetName;
         protected override IEnumerable<string> ElementSetNames => this.itemElementSetName;
-        protected override string ContainerClassName => this.containerClassName;
+        protected override string ContainerClassName => $"{this.extensionName.ToMachineName()}Collection";
 
         /// <summary>
         /// Name of fhir element (as stored in resource).
@@ -40,6 +39,7 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> components)")
                 .OpenBrace()
+                .AppendCode($"throw new NotImplementedException();")
                 //.AppendCode($"List<Item> items = new List<Item>();")
                 //.AppendCode($"foreach (Element element in elements)")
                 //.AppendCode($"    items.Add(new Item(({this.ElementGetName}) element));")
@@ -57,6 +57,7 @@ namespace FireFragger.CS.BuildMembers
             b
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
+               .AppendCode($"throw new NotImplementedException();")
                //.AppendCode($"foreach (Item item in this.GetAllItems())")
                //.OpenBrace()
                //.AppendCode($"{FhirClassName} component = new {FhirClassName}")
@@ -79,21 +80,22 @@ namespace FireFragger.CS.BuildMembers
             Int32 max = CSMisc.ToMax(this.valueNode.ElementDefinition.Max);
             Int32 min = this.valueNode.ElementDefinition.Min.Value;
 
+            this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
             this.itemElementSetName.Clear();
             foreach (var type in valueNode.ElementDefinition.Type)
                 itemElementSetName.Add(type.Code);
 
-            this.containerClassName = $"{this.ElementName}Container";
-            this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
             base.BuildOne(valueNode.ElementDefinition.ElementId, min, max);
         }
 
         public BuildMemberExtensionSimple(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
-            ElementTreeNode valueNode) :
+            ElementTreeNode valueNode,
+            String extensionName) :
             base(defineBase, codeBlocks)
         {
             this.valueNode = valueNode;
+            this.extensionName = extensionName;
         }
     }
 }

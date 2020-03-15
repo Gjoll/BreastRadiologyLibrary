@@ -38,7 +38,7 @@ namespace FireFragger.CS
             {
                 BuildMembers.BuildMemberExtension bm = new BuildMembers.BuildMemberExtension(this,
                     this.fragBase.CodeBlocks,
-                    this.fragBase.SnapNodes,
+                    this.fragBase.SnapNodes.DefaultSlice,
                     CSMisc.ClassName(this.fragBase));
                 bm.Build();
             }

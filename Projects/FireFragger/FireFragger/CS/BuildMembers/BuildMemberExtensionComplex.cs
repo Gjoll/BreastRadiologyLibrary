@@ -11,12 +11,12 @@ namespace FireFragger.CS.BuildMembers
     internal class BuildMemberExtensionComplex : BuildMemberBase
     {
         String extensionName;
-        protected ElementTreeNode valueNode;
+        protected ElementTreeSlice extensionSlice;
 
-        protected override string PropertyName => $"{extensionName.ToMachineName()}";
+        protected override string PropertyName => $"{this.extensionName.ToMachineName()}";
         protected override string ElementGetName => this.extensionName;
         protected override IEnumerable<string> ElementSetNames => new String[] { this.extensionName };
-        protected override string ContainerClassName => $"{extensionName.ToMachineName()}Collection";
+        protected override string ContainerClassName => $"{this.extensionName.ToMachineName()}Collection";
 
         /// <summary>
         /// Name of fhir element (as stored in resource).
@@ -75,46 +75,60 @@ namespace FireFragger.CS.BuildMembers
 
         void BuildExtensionItemClass()
         {
+            ClassCodeBlocks itemClassBlocks = new ClassCodeBlocks();
+
             this.itemCode
                 .SummaryOpen()
                 .Summary($"Extension Item class for {this.extensionName}.")
                 .SummaryClose()
                 .AppendCode($"public class {ElementGetName}")
                 .OpenBrace()
+                .AppendCode($"// Definitions")
+                .DefineBlock(out itemClassBlocks.LocalClassDefs)
                 .AppendCode($"// Properties")
-                .DefineBlock(out CodeBlockNested extensionItemPropertiesBlock)
+                .DefineBlock(out itemClassBlocks.ClassProperties)
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
                 .AppendCode($"public {ElementGetName}()")
                 .OpenBrace()
-                .DefineBlock(out CodeBlockNested extensionItemConstructorBlock)
+                .DefineBlock(out itemClassBlocks.ClassConstructor)
                 .CloseBrace()
 
                 .BlankLine()
                 .AppendCode($"// Methods")
-                .DefineBlock(out CodeBlockNested extensionItemMethodsBlock)
+                .DefineBlock(out itemClassBlocks.ClassMethods)
                 .CloseBrace()
                 ;
+
+            ElementTreeNode extension = this.extensionSlice.Nodes.GetItem("extension");
+            foreach (var extensionSlice in extension.Slices.Skip(1))
+            {
+                BuildMemberExtension bm = new BuildMemberExtension(this.defineBase,
+                    itemClassBlocks,
+                    extensionSlice,
+                    extensionSlice.ElementDefinition.SliceName);
+                bm.Build();
+            }
         }
 
         public override void Build()
         {
-            Int32 max = CSMisc.ToMax(this.valueNode.ElementDefinition.Max);
-            Int32 min = this.valueNode.ElementDefinition.Min.Value;
-            base.BuildOne(valueNode.ElementDefinition.ElementId, min, max);
+            Int32 max = CSMisc.ToMax(this.extensionSlice.ElementDefinition.Max);
+            Int32 min = this.extensionSlice.ElementDefinition.Min.Value;
+            base.BuildOne(extensionSlice.ElementDefinition.ElementId, min, max);
             this.BuildExtensionItemClass();
         }
 
         public BuildMemberExtensionComplex(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
-            ElementTreeNode valueNode,
+            ElementTreeSlice extensionSlice,
             String extensionName) :
             base(defineBase, codeBlocks)
         {
             this.extensionName = extensionName;
-            this.valueNode = valueNode;
+            this.extensionSlice = extensionSlice;
         }
     }
 }

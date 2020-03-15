@@ -18,8 +18,8 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityCyst.
 	/// </summary>
-	public class AbnormalityCystContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class AbnormalityCystContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityCyst.
 	    /// </summary>
@@ -41,71 +41,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst"                                                      // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst"                                                      // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<AbnormalityCyst> All()                                                                                              // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<AbnormalityCyst> All()                                                                                              // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public AbnormalityCyst GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public AbnormalityCyst GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityCystContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityCyst", min, max)                        // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public AbnormalityCystContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityCyst", min, max)                        // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public AbnormalityCyst Append(AbnormalityCyst value)                                                                                   // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public AbnormalityCyst Append(AbnormalityCyst value)                                                                                   // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -120,7 +120,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -138,12 +138,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityDuct.
 	/// </summary>
-	public class AbnormalityDuctContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class AbnormalityDuctContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityDuct.
 	    /// </summary>
@@ -165,71 +165,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct"                                                      // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct"                                                      // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<AbnormalityDuct> All()                                                                                              // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<AbnormalityDuct> All()                                                                                              // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public AbnormalityDuct GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public AbnormalityDuct GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityDuctContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityDuct", min, max)                        // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public AbnormalityDuctContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityDuct", min, max)                        // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public AbnormalityDuct Append(AbnormalityDuct value)                                                                                   // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public AbnormalityDuct Append(AbnormalityDuct value)                                                                                   // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -244,7 +244,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -262,12 +262,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityForeignObject.
 	/// </summary>
-	public class AbnormalityForeignObjectContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class AbnormalityForeignObjectContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityForeignObject.
 	    /// </summary>
@@ -289,71 +289,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject"                                             // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject"                                             // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<AbnormalityForeignObject> All()                                                                                     // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<AbnormalityForeignObject> All()                                                                                     // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public AbnormalityForeignObject GetAt(Int32 i) => this.items[i].Value;                                                                 // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public AbnormalityForeignObject GetAt(Int32 i) => this.items[i].Value;                                                                 // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityForeignObjectContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityForeignObject", min, max)      // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public AbnormalityForeignObjectContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityForeignObject", min, max)      // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public AbnormalityForeignObject Append(AbnormalityForeignObject value)                                                                 // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public AbnormalityForeignObject Append(AbnormalityForeignObject value)                                                                 // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -368,7 +368,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -386,12 +386,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityLymphNode.
 	/// </summary>
-	public class AbnormalityLymphNodeContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class AbnormalityLymphNodeContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityLymphNode.
 	    /// </summary>
@@ -413,71 +413,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode"                                                 // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode"                                                 // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<AbnormalityLymphNode> All()                                                                                         // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<AbnormalityLymphNode> All()                                                                                         // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public AbnormalityLymphNode GetAt(Int32 i) => this.items[i].Value;                                                                     // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public AbnormalityLymphNode GetAt(Int32 i) => this.items[i].Value;                                                                     // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityLymphNodeContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityLymphNode", min, max)              // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public AbnormalityLymphNodeContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityLymphNode", min, max)              // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public AbnormalityLymphNode Append(AbnormalityLymphNode value)                                                                         // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public AbnormalityLymphNode Append(AbnormalityLymphNode value)                                                                         // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -492,7 +492,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -510,12 +510,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityMass.
 	/// </summary>
-	public class AbnormalityMassContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class AbnormalityMassContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityMass.
 	    /// </summary>
@@ -537,71 +537,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass"                                                      // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass"                                                      // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<AbnormalityMass> All()                                                                                              // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<AbnormalityMass> All()                                                                                              // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public AbnormalityMass GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public AbnormalityMass GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityMassContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityMass", min, max)                        // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public AbnormalityMassContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityMass", min, max)                        // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public AbnormalityMass Append(AbnormalityMass value)                                                                                   // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public AbnormalityMass Append(AbnormalityMass value)                                                                                   // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -616,7 +616,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -634,12 +634,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:associatedFeature.
 	/// </summary>
-	public class AssociatedFeatureContainer : MContainer, ITMItem<ResourceReference>                                                           // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class AssociatedFeatureContainer : MContainer, ITMItem<ResourceReference>                                                           // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:associatedFeature.
 	    /// </summary>
@@ -661,71 +661,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature"                                                    // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature"                                                    // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<AssociatedFeature> All()                                                                                            // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<AssociatedFeature> All()                                                                                            // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public AssociatedFeature GetAt(Int32 i) => this.items[i].Value;                                                                        // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public AssociatedFeature GetAt(Int32 i) => this.items[i].Value;                                                                        // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AssociatedFeatureContainer(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                    // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public AssociatedFeatureContainer(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                    // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public AssociatedFeature Append(AssociatedFeature value)                                                                               // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public AssociatedFeature Append(AssociatedFeature value)                                                                               // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -740,7 +740,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -758,12 +758,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityFibroadenoma.
 	/// </summary>
-	public class AbnormalityFibroadenomaContainer : MContainer, ITMItem<ResourceReference>                                                     // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class AbnormalityFibroadenomaContainer : MContainer, ITMItem<ResourceReference>                                                     // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityFibroadenoma.
 	    /// </summary>
@@ -785,71 +785,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma"                                              // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma"                                              // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<AbnormalityFibroadenoma> All()                                                                                      // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<AbnormalityFibroadenoma> All()                                                                                      // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public AbnormalityFibroadenoma GetAt(Int32 i) => this.items[i].Value;                                                                  // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public AbnormalityFibroadenoma GetAt(Int32 i) => this.items[i].Value;                                                                  // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityFibroadenomaContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityFibroadenoma", min, max)        // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public AbnormalityFibroadenomaContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityFibroadenoma", min, max)        // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public AbnormalityFibroadenoma Append(AbnormalityFibroadenoma value)                                                                   // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public AbnormalityFibroadenoma Append(AbnormalityFibroadenoma value)                                                                   // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -864,7 +864,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -882,12 +882,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityArchitecturalDistortion.
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortionContainer : MContainer, ITMItem<ResourceReference>                                        // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class MGAbnormalityArchitecturalDistortionContainer : MContainer, ITMItem<ResourceReference>                                        // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityArchitecturalDistortion.
 	    /// </summary>
@@ -909,71 +909,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion"                                 // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion"                                 // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<MGAbnormalityArchitecturalDistortion> All()                                                                         // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<MGAbnormalityArchitecturalDistortion> All()                                                                         // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortion GetAt(Int32 i) => this.items[i].Value;                                                     // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public MGAbnormalityArchitecturalDistortion GetAt(Int32 i) => this.items[i].Value;                                                     // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortionContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityArchitecturalDistortion", min, max)// BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public MGAbnormalityArchitecturalDistortionContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityArchitecturalDistortion", min, max)// BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortion Append(MGAbnormalityArchitecturalDistortion value)                                         // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public MGAbnormalityArchitecturalDistortion Append(MGAbnormalityArchitecturalDistortion value)                                         // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -988,7 +988,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -1006,12 +1006,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityAsymmetry.
 	/// </summary>
-	public class MGAbnormalityAsymmetryContainer : MContainer, ITMItem<ResourceReference>                                                      // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class MGAbnormalityAsymmetryContainer : MContainer, ITMItem<ResourceReference>                                                      // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityAsymmetry.
 	    /// </summary>
@@ -1033,71 +1033,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry"                                               // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry"                                               // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<MGAbnormalityAsymmetry> All()                                                                                       // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<MGAbnormalityAsymmetry> All()                                                                                       // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public MGAbnormalityAsymmetry GetAt(Int32 i) => this.items[i].Value;                                                                   // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public MGAbnormalityAsymmetry GetAt(Int32 i) => this.items[i].Value;                                                                   // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityAsymmetryContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityAsymmetry", min, max)          // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public MGAbnormalityAsymmetryContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityAsymmetry", min, max)          // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public MGAbnormalityAsymmetry Append(MGAbnormalityAsymmetry value)                                                                     // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public MGAbnormalityAsymmetry Append(MGAbnormalityAsymmetry value)                                                                     // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -1112,7 +1112,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -1130,12 +1130,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityCalcification.
 	/// </summary>
-	public class MGAbnormalityCalcificationContainer : MContainer, ITMItem<ResourceReference>                                                  // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class MGAbnormalityCalcificationContainer : MContainer, ITMItem<ResourceReference>                                                  // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityCalcification.
 	    /// </summary>
@@ -1157,71 +1157,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification"                                           // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification"                                           // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<MGAbnormalityCalcification> All()                                                                                   // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<MGAbnormalityCalcification> All()                                                                                   // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public MGAbnormalityCalcification GetAt(Int32 i) => this.items[i].Value;                                                               // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public MGAbnormalityCalcification GetAt(Int32 i) => this.items[i].Value;                                                               // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityCalcificationContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityCalcification", min, max)  // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public MGAbnormalityCalcificationContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityCalcification", min, max)  // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public MGAbnormalityCalcification Append(MGAbnormalityCalcification value)                                                             // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public MGAbnormalityCalcification Append(MGAbnormalityCalcification value)                                                             // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -1236,7 +1236,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -1254,12 +1254,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityDensity.
 	/// </summary>
-	public class MGAbnormalityDensityContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class MGAbnormalityDensityContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityDensity.
 	    /// </summary>
@@ -1281,71 +1281,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity"                                                 // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity"                                                 // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<MGAbnormalityDensity> All()                                                                                         // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<MGAbnormalityDensity> All()                                                                                         // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public MGAbnormalityDensity GetAt(Int32 i) => this.items[i].Value;                                                                     // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public MGAbnormalityDensity GetAt(Int32 i) => this.items[i].Value;                                                                     // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityDensity", min, max)              // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public MGAbnormalityDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityDensity", min, max)              // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public MGAbnormalityDensity Append(MGAbnormalityDensity value)                                                                         // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public MGAbnormalityDensity Append(MGAbnormalityDensity value)                                                                         // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -1360,7 +1360,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -1378,12 +1378,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityFatNecrosis.
 	/// </summary>
-	public class MGAbnormalityFatNecrosisContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class MGAbnormalityFatNecrosisContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityFatNecrosis.
 	    /// </summary>
@@ -1405,71 +1405,71 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis"                                             // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
-	                                                                                                                                           // BuildMemberBase.cs:229
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis"                                             // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:225
+	                                                                                                                                           // BuildMemberBase.cs:227
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
-	                                                                                                                                           // BuildMemberBase.cs:235
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
-	                                                                                                                                           // BuildMemberBase.cs:241
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
-	                                                                                                                                           // BuildMemberBase.cs:247
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<MGAbnormalityFatNecrosis> All()                                                                                     // BuildMemberBase.cs:251
-	    {                                                                                                                                      // BuildMemberBase.cs:252
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
-	    }                                                                                                                                      // BuildMemberBase.cs:255
-	                                                                                                                                           // BuildMemberBase.cs:257
+	    public IEnumerable<MGAbnormalityFatNecrosis> All()                                                                                     // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:251
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:252
+	    }                                                                                                                                      // BuildMemberBase.cs:253
+	                                                                                                                                           // BuildMemberBase.cs:255
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public MGAbnormalityFatNecrosis GetAt(Int32 i) => this.items[i].Value;                                                                 // BuildMemberBase.cs:261
-	                                                                                                                                           // BuildMemberBase.cs:263
+	    public MGAbnormalityFatNecrosis GetAt(Int32 i) => this.items[i].Value;                                                                 // BuildMemberBase.cs:259
+	                                                                                                                                           // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
-	                                                                                                                                           // BuildMemberBase.cs:269
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:265
+	                                                                                                                                           // BuildMemberBase.cs:267
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:271
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityFatNecrosisContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityFatNecrosis", min, max)      // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:279
+	    public MGAbnormalityFatNecrosisContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityFatNecrosis", min, max)      // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:277
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public MGAbnormalityFatNecrosis Append(MGAbnormalityFatNecrosis value)                                                                 // BuildMemberBase.cs:283
-	    {                                                                                                                                      // BuildMemberBase.cs:284
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
-	        return value;                                                                                                                      // BuildMemberBase.cs:286
-	    }                                                                                                                                      // BuildMemberBase.cs:287
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public MGAbnormalityFatNecrosis Append(MGAbnormalityFatNecrosis value)                                                                 // BuildMemberBase.cs:281
+	    {                                                                                                                                      // BuildMemberBase.cs:282
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:283
+	        return value;                                                                                                                      // BuildMemberBase.cs:284
+	    }                                                                                                                                      // BuildMemberBase.cs:285
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -1484,7 +1484,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -1502,12 +1502,12 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	/// <summary>
 	/// Container class for Observation.hasMember:mGBreastDensity.
 	/// </summary>
-	public class MGBreastDensityContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
-	{                                                                                                                                          // BuildMemberBase.cs:138
+	public class MGBreastDensityContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGBreastDensity.
 	    /// </summary>
@@ -1529,72 +1529,72 @@ namespace BreastRadLib.MGFindingLocal
 	                                                                                                                                           // BuildMemberBase.cs:91
 	        // Methods                                                                                                                         // BuildMemberBase.cs:92
 	    }                                                                                                                                      // BuildMemberBase.cs:94
-	                                                                                                                                           // BuildMemberBase.cs:140
-	    // Properties                                                                                                                          // BuildMemberBase.cs:141
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
-	    {                                                                                                                                      // BuildMemberBase.cs:116
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity"                                                      // BuildMemberBase.cs:123
-	    };                                                                                                                                     // BuildMemberBase.cs:124
-	                                                                                                                                           // BuildMemberBase.cs:162
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity"                                                      // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	                                                                                                                                           // BuildMemberBase.cs:160
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:166
-	    {                                                                                                                                      // BuildMemberBase.cs:167
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:168
-	    }                                                                                                                                      // BuildMemberBase.cs:169
-	                                                                                                                                           // BuildMemberBase.cs:171
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:164
+	    {                                                                                                                                      // BuildMemberBase.cs:165
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:166
+	    }                                                                                                                                      // BuildMemberBase.cs:167
+	                                                                                                                                           // BuildMemberBase.cs:169
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:175
-	    {                                                                                                                                      // BuildMemberBase.cs:176
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:177
-	        {                                                                                                                                  // BuildMemberBase.cs:178
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:179
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:180
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:181
-	        }                                                                                                                                  // BuildMemberBase.cs:182
-	    }                                                                                                                                      // BuildMemberBase.cs:183
-	                                                                                                                                           // BuildMemberBase.cs:185
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:173
+	    {                                                                                                                                      // BuildMemberBase.cs:174
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:175
+	        {                                                                                                                                  // BuildMemberBase.cs:176
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:177
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:178
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:179
+	        }                                                                                                                                  // BuildMemberBase.cs:180
+	    }                                                                                                                                      // BuildMemberBase.cs:181
+	                                                                                                                                           // BuildMemberBase.cs:183
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:189
-	                                                                                                                                           // BuildMemberBase.cs:191
+	    Item item;                                                                                                                             // BuildMemberBase.cs:187
+	                                                                                                                                           // BuildMemberBase.cs:189
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:195
-	                                                                                                                                           // BuildMemberBase.cs:197
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:193
+	                                                                                                                                           // BuildMemberBase.cs:195
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public MGBreastDensity Get()                                                                                                           // BuildMemberBase.cs:201
-	    {                                                                                                                                      // BuildMemberBase.cs:202
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:203
-	            return null;                                                                                                                   // BuildMemberBase.cs:204
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:205
-	    }                                                                                                                                      // BuildMemberBase.cs:206
-	                                                                                                                                           // BuildMemberBase.cs:212
+	    public MGBreastDensity Get()                                                                                                           // BuildMemberBase.cs:199
+	    {                                                                                                                                      // BuildMemberBase.cs:200
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:201
+	            return null;                                                                                                                   // BuildMemberBase.cs:202
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:203
+	    }                                                                                                                                      // BuildMemberBase.cs:204
+	                                                                                                                                           // BuildMemberBase.cs:210
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public MGBreastDensity Set(MGBreastDensity value)                                                                                      // BuildMemberBase.cs:216
-	    {                                                                                                                                      // BuildMemberBase.cs:217
-	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:218
-	        return value;                                                                                                                      // BuildMemberBase.cs:219
-	    }                                                                                                                                      // BuildMemberBase.cs:220
-	                                                                                                                                           // BuildMemberBase.cs:143
+	    public MGBreastDensity Set(MGBreastDensity value)                                                                                      // BuildMemberBase.cs:214
+	    {                                                                                                                                      // BuildMemberBase.cs:215
+	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:216
+	        return value;                                                                                                                      // BuildMemberBase.cs:217
+	    }                                                                                                                                      // BuildMemberBase.cs:218
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGBreastDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGBreastDensity", min, max)                        // BuildMemberBase.cs:147
-	    {                                                                                                                                      // BuildMemberBase.cs:148
-	    }                                                                                                                                      // BuildMemberBase.cs:150
-	                                                                                                                                           // BuildMemberBase.cs:151
-	    // Methods                                                                                                                             // BuildMemberBase.cs:152
-	                                                                                                                                           // BuildMemberBase.cs:293
+	    public MGBreastDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGBreastDensity", min, max)                        // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:291
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -1609,7 +1609,7 @@ namespace BreastRadLib.MGFindingLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
 	        }                                                                                                                                  // BuildMemberReferences.cs:79
 	    }                                                                                                                                      // BuildMemberReferences.cs:80
-	                                                                                                                                           // BuildMemberBase.cs:299
+	                                                                                                                                           // BuildMemberBase.cs:297
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -1627,6 +1627,6 @@ namespace BreastRadLib.MGFindingLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:57
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
 	    }                                                                                                                                      // BuildMemberReferences.cs:59
-	}                                                                                                                                          // BuildMemberBase.cs:154
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	//- LocalClassDefs
 }
