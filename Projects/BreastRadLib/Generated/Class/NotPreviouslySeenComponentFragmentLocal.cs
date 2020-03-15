@@ -18,31 +18,31 @@ namespace BreastRadLib.NotPreviouslySeenComponentFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:notPreviouslySeen.
 	/// </summary>
-	public class NotPreviouslySeenContainer : MContainer, ITMItem<Observation.ComponentComponent>                                              // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class NotPreviouslySeenContainer : MContainer, ITMItem<Observation.ComponentComponent>                                              // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.component:notPreviouslySeen.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	        public Item(CodeableConcept value)                                                                                                 // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -83,15 +83,15 @@ namespace BreastRadLib.NotPreviouslySeenComponentFragmentLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public NotPreviouslySeenContainer(Int32 min, Int32 max) : base("Observation.component:notPreviouslySeen", min, max)                    // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public NotPreviouslySeenContainer(Int32 min, Int32 max) : base("Observation.component:notPreviouslySeen", min, max)                    // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	    public CodeableConcept NotPreviouslySeen_ComponentCode()                                                                               // FhirConstruct.cs:753
 	    {                                                                                                                                      // FhirConstruct.cs:754
 	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
@@ -119,33 +119,33 @@ namespace BreastRadLib.NotPreviouslySeenComponentFragmentLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                                  // BuildMemberComponents.cs:74
-	    {                                                                                                                                      // BuildMemberComponents.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberComponents.cs:76
-	        {                                                                                                                                  // BuildMemberComponents.cs:77
-	            Observation.ComponentComponent component = new Observation.ComponentComponent                                                  // BuildMemberComponents.cs:78
-	            {                                                                                                                              // BuildMemberComponents.cs:79
-	                Value = item.Value,                                                                                                        // BuildMemberComponents.cs:80
-	                Code = NotPreviouslySeen_ComponentCode()                                                                                   // BuildMemberComponents.cs:81
-	            };                                                                                                                             // BuildMemberComponents.cs:82
-	            yield return component;                                                                                                        // BuildMemberComponents.cs:83
-	        }                                                                                                                                  // BuildMemberComponents.cs:84
-	    }                                                                                                                                      // BuildMemberComponents.cs:85
+	    public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                                  // BuildMemberComponents.cs:70
+	    {                                                                                                                                      // BuildMemberComponents.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberComponents.cs:72
+	        {                                                                                                                                  // BuildMemberComponents.cs:73
+	            Observation.ComponentComponent component = new Observation.ComponentComponent                                                  // BuildMemberComponents.cs:74
+	            {                                                                                                                              // BuildMemberComponents.cs:75
+	                Value = item.Value,                                                                                                        // BuildMemberComponents.cs:76
+	                Code = NotPreviouslySeen_ComponentCode()                                                                                   // BuildMemberComponents.cs:77
+	            };                                                                                                                             // BuildMemberComponents.cs:78
+	            yield return component;                                                                                                        // BuildMemberComponents.cs:79
+	        }                                                                                                                                  // BuildMemberComponents.cs:80
+	    }                                                                                                                                      // BuildMemberComponents.cs:81
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberComponents.cs:53
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:54
-	    {                                                                                                                                      // BuildMemberComponents.cs:55
-	        IEnumerable<Element> elements = base.IsMember(doc,                                                                                 // BuildMemberComponents.cs:56
-	            components,                                                                                                                    // BuildMemberComponents.cs:57
-	            this.NotPreviouslySeen_ComponentCode());                                                                                       // BuildMemberComponents.cs:58
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:59
-	        foreach (Element element in elements)                                                                                              // BuildMemberComponents.cs:60
-	            items.Add(new Item((CodeableConcept) element));                                                                                // BuildMemberComponents.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:62
-	    }                                                                                                                                      // BuildMemberComponents.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberComponents.cs:49
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:50
+	    {                                                                                                                                      // BuildMemberComponents.cs:51
+	        IEnumerable<Element> elements = base.IsMember(doc,                                                                                 // BuildMemberComponents.cs:52
+	            components,                                                                                                                    // BuildMemberComponents.cs:53
+	            this.NotPreviouslySeen_ComponentCode());                                                                                       // BuildMemberComponents.cs:54
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:55
+	        foreach (Element element in elements)                                                                                              // BuildMemberComponents.cs:56
+	            items.Add(new Item((CodeableConcept) element));                                                                                // BuildMemberComponents.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:58
+	    }                                                                                                                                      // BuildMemberComponents.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	//- LocalClassDefs
 }

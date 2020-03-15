@@ -18,47 +18,47 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	/// <summary>
 	/// Container class for Extension.
 	/// </summary>
-	public class BreastBodyLocationExtensionCollection : MContainer, ITMItem<Extension>                                                        // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class BreastBodyLocationExtensionCollection : MContainer, ITMItem<Extension>                                                        // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Extension.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public BreastBodyLocationExtension Value { get; set; }                                                                             // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public BreastBodyLocationExtension Value { get; set; }                                                                             // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(BreastBodyLocationExtension value)                                                                                     // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
+	        public Item(BreastBodyLocationExtension value)                                                                                     // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
 	    /// <summary>
 	    /// Extension Item class for BreastBodyLocationExtension.
 	    /// </summary>
-	    public class BreastBodyLocationExtension                                                                                               // BuildMemberExtensionComplex.cs:86
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:87
-	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:88
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:90
+	    public class BreastBodyLocationExtension                                                                                               // BuildMemberExtensionComplex.cs:82
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:83
+	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:84
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:86
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public BreastBodyLocationExtension()                                                                                               // BuildMemberExtensionComplex.cs:94
-	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:95
-	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:97
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:99
-	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:100
-	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:102
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	        public BreastBodyLocationExtension()                                                                                               // BuildMemberExtensionComplex.cs:90
+	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:91
+	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:93
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:95
+	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:96
+	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:98
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -99,15 +99,15 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BreastBodyLocationExtensionCollection(Int32 min, Int32 max) : base("Extension", min, max)                                       // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public BreastBodyLocationExtensionCollection(Int32 min, Int32 max) : base("Extension", min, max)                                       // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -121,19 +121,19 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                                       // BuildMemberExtensionComplex.cs:60
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:61
-	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:62
-	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:72
+	    public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                                       // BuildMemberExtensionComplex.cs:56
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:57
+	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:58
+	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:68
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:41
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> components)                                                       // BuildMemberExtensionComplex.cs:42
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:43
-	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:44
-	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:49
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:37
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> components)                                                       // BuildMemberExtensionComplex.cs:38
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:39
+	        throw new NotImplementedException();                                                                                               // BuildMemberExtensionComplex.cs:40
+	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:45
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	//- LocalClassDefs
 }

@@ -16,10 +16,16 @@ namespace FireFragger.CS.BuildMembers
         protected Builder csBuilder => this.defineBase.CSBuilder;
         protected DefineBase defineBase;
         protected ClassCodeBlocks codeBlocks;
-        ///// <summary>
-        ///// Code blocks for the container class.
-        ///// </summary>
-        //protected ClassCodeBlocks containerCode = new ClassCodeBlocks();
+        /// <summary>
+        /// Code blocks for the container class.
+        /// </summary>
+        protected ClassCodeBlocks containerCodeBlocks = new ClassCodeBlocks();
+
+        /// <summary>
+        /// Code blocks for the item class.
+        /// </summary>
+        protected ClassCodeBlocks itemCodeBlocks = new ClassCodeBlocks();
+
         protected CodeBlockNested containerCode;
         protected CodeBlockNested itemCode;
         protected String elementId;
@@ -71,7 +77,7 @@ namespace FireFragger.CS.BuildMembers
                 .Summary($"Value")
                 .SummaryClose()
                 .AppendCode($"public {ElementGetName} Value {{ get; set; }}")
-                .DefineBlock(out CodeBlockNested itemPropertiesBlock)
+                .DefineBlock(out itemCodeBlocks.ClassProperties)
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Constructor")
@@ -79,27 +85,23 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"public Item({ElementGetName} value)")
                 .OpenBrace()
                 .AppendCode($"this.Value = value;")
-                .DefineBlock(out CodeBlockNested itemConstructorBlock)
+                .DefineBlock(out itemCodeBlocks.ClassConstructor)
                 .CloseBrace()
 
                 .BlankLine()
                 .AppendCode($"// Methods")
-                .DefineBlock(out CodeBlockNested itemMethodsBlock)
+                .DefineBlock(out itemCodeBlocks.ClassMethods)
                 .CloseBrace()
                 ;
 
 
-            BuildItemClassLocal(itemConstructorBlock,
-                itemPropertiesBlock,
-                itemMethodsBlock);
+            BuildItemClassLocal(this.itemCodeBlocks);
         }
 
         /// <summary>
         /// Child classes can overload this to do local processing of item class.
         /// </summary>
-        protected virtual void BuildItemClassLocal(CodeBlockNested itemConstructorBlock,
-            CodeBlockNested itemPropertiesBlock,
-            CodeBlockNested itemMethodsBlock)
+        protected virtual void BuildItemClassLocal(ClassCodeBlocks itemCodeBlocks)
         {
         }
 
@@ -137,28 +139,26 @@ namespace FireFragger.CS.BuildMembers
                 .DefineBlock(out this.itemCode)
                 .BlankLine()
                 .AppendCode($"// Properties")
-                .DefineBlock(out CodeBlockNested containerPropertiesBlock)
+                .DefineBlock(out this.containerCodeBlocks.ClassProperties)
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
                 .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{elementId}\", min, max)")
                 .OpenBrace()
-                .DefineBlock(out CodeBlockNested containerConstructorBlock)
+                .DefineBlock(out this.containerCodeBlocks.ClassConstructor)
                 .CloseBrace()
                 .BlankLine()
                 .AppendCode($"// Methods")
-                .DefineBlock(out CodeBlockNested containerMethodsBlock)
+                .DefineBlock(out this.containerCodeBlocks.ClassMethods)
                 .CloseBrace()
                 ;
 
-            this.BuildContainerClassLocal(containerConstructorBlock,
-                containerPropertiesBlock,
-                containerMethodsBlock);
+            this.BuildContainerClassLocal(this.containerCodeBlocks);
 
             if (this.Singleton)
             {
-                containerPropertiesBlock
+                this.containerCodeBlocks.ClassProperties
                     .BlankLine()
                     .SummaryOpen()
                     .Summary($"Get All Items")
@@ -208,7 +208,7 @@ namespace FireFragger.CS.BuildMembers
 
                 foreach (String elementSetName in this.ElementSetNames)
                 {
-                    containerPropertiesBlock
+                    this.containerCodeBlocks.ClassProperties
                         .BlankLine()
                         .SummaryOpen()
                         .Summary($"Set Item's Value")
@@ -223,7 +223,7 @@ namespace FireFragger.CS.BuildMembers
             }
             else
             {
-                containerPropertiesBlock
+                this.containerCodeBlocks.ClassProperties
                     .AppendCode($"List<Item> items = new List<Item>();")
 
                     .BlankLine()
@@ -275,7 +275,7 @@ namespace FireFragger.CS.BuildMembers
 
                 foreach (String elementSetName in this.ElementSetNames)
                 {
-                    containerMethodsBlock
+                    this.containerCodeBlocks.ClassMethods
                         .BlankLine()
                         .SummaryOpen()
                         .Summary($"Append value to collection")
@@ -289,7 +289,7 @@ namespace FireFragger.CS.BuildMembers
                 }
             }
 
-            containerMethodsBlock
+            this.containerCodeBlocks.ClassMethods
                .BlankLine()
                .SummaryOpen()
                .Summary("Write single item as a fhir element.")
@@ -308,9 +308,7 @@ namespace FireFragger.CS.BuildMembers
         /// <summary>
         /// Child classes can overload this to do local processing of container class.
         /// </summary>
-        protected virtual void BuildContainerClassLocal(CodeBlockNested containerConstructorBlock,
-            CodeBlockNested containerPropertiesBlock,
-            CodeBlockNested containerMethodsBlock)
+        protected virtual void BuildContainerClassLocal(ClassCodeBlocks itemCodeBlocks)
         {
         }
 

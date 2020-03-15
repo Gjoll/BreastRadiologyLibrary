@@ -22,19 +22,19 @@ namespace BreastRadLib
 		/// <summary>
 		/// MGFinding
 		/// </summary>
-		MGFindingContainer MGFinding { get ; }                                                                                                    // BuildMemberBase.cs:327
+		MGFindingContainer MGFinding { get ; }                                                                                                    // BuildMemberBase.cs:325
 		/// <summary>
 		/// MRIFinding
 		/// </summary>
-		MRIFindingContainer MRIFinding { get ; }                                                                                                  // BuildMemberBase.cs:327
+		MRIFindingContainer MRIFinding { get ; }                                                                                                  // BuildMemberBase.cs:325
 		/// <summary>
 		/// NMFinding
 		/// </summary>
-		NMFindingContainer NMFinding { get ; }                                                                                                    // BuildMemberBase.cs:327
+		NMFindingContainer NMFinding { get ; }                                                                                                    // BuildMemberBase.cs:325
 		/// <summary>
 		/// USFinding
 		/// </summary>
-		USFindingContainer USFinding { get ; }                                                                                                    // BuildMemberBase.cs:327
+		USFindingContainer USFinding { get ; }                                                                                                    // BuildMemberBase.cs:325
 		//- Properties
 
 		//+ Methods

@@ -18,35 +18,35 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityCyst.
 	/// </summary>
-	public class AbnormalityCystContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class AbnormalityCystContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityCyst.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public AbnormalityCyst Value { get; set; }                                                                                         // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public AbnormalityCyst Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(AbnormalityCyst value)                                                                                                 // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst"                                                      // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(AbnormalityCyst value)                                                                                                 // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst"                                                      // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -87,15 +87,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityCystContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityCyst", min, max)                        // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public AbnormalityCystContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityCyst", min, max)                        // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -109,68 +109,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((AbnormalityCyst) resource);                                                                              // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((AbnormalityCyst) resource);                                                                              // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityDuct.
 	/// </summary>
-	public class AbnormalityDuctContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class AbnormalityDuctContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityDuct.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public AbnormalityDuct Value { get; set; }                                                                                         // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public AbnormalityDuct Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(AbnormalityDuct value)                                                                                                 // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct"                                                      // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(AbnormalityDuct value)                                                                                                 // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct"                                                      // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -211,15 +211,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityDuctContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityDuct", min, max)                        // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public AbnormalityDuctContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityDuct", min, max)                        // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -233,68 +233,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((AbnormalityDuct) resource);                                                                              // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((AbnormalityDuct) resource);                                                                              // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityForeignObject.
 	/// </summary>
-	public class AbnormalityForeignObjectContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class AbnormalityForeignObjectContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityForeignObject.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public AbnormalityForeignObject Value { get; set; }                                                                                // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public AbnormalityForeignObject Value { get; set; }                                                                                // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(AbnormalityForeignObject value)                                                                                        // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject"                                             // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(AbnormalityForeignObject value)                                                                                        // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject"                                             // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -335,15 +335,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityForeignObjectContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityForeignObject", min, max)      // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public AbnormalityForeignObjectContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityForeignObject", min, max)      // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -357,68 +357,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((AbnormalityForeignObject) resource);                                                                     // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((AbnormalityForeignObject) resource);                                                                     // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityLymphNode.
 	/// </summary>
-	public class AbnormalityLymphNodeContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class AbnormalityLymphNodeContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityLymphNode.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public AbnormalityLymphNode Value { get; set; }                                                                                    // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public AbnormalityLymphNode Value { get; set; }                                                                                    // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(AbnormalityLymphNode value)                                                                                            // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode"                                                 // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(AbnormalityLymphNode value)                                                                                            // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode"                                                 // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -459,15 +459,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityLymphNodeContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityLymphNode", min, max)              // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public AbnormalityLymphNodeContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityLymphNode", min, max)              // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -481,68 +481,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((AbnormalityLymphNode) resource);                                                                         // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((AbnormalityLymphNode) resource);                                                                         // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityMass.
 	/// </summary>
-	public class AbnormalityMassContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class AbnormalityMassContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityMass.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public AbnormalityMass Value { get; set; }                                                                                         // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public AbnormalityMass Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(AbnormalityMass value)                                                                                                 // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass"                                                      // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(AbnormalityMass value)                                                                                                 // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass"                                                      // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -583,15 +583,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityMassContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityMass", min, max)                        // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public AbnormalityMassContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityMass", min, max)                        // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -605,68 +605,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((AbnormalityMass) resource);                                                                              // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((AbnormalityMass) resource);                                                                              // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:associatedFeature.
 	/// </summary>
-	public class AssociatedFeatureContainer : MContainer, ITMItem<ResourceReference>                                                           // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class AssociatedFeatureContainer : MContainer, ITMItem<ResourceReference>                                                           // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:associatedFeature.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public AssociatedFeature Value { get; set; }                                                                                       // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public AssociatedFeature Value { get; set; }                                                                                       // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(AssociatedFeature value)                                                                                               // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature"                                                    // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(AssociatedFeature value)                                                                                               // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature"                                                    // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -707,15 +707,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AssociatedFeatureContainer(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                    // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public AssociatedFeatureContainer(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                    // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -729,68 +729,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((AssociatedFeature) resource);                                                                            // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((AssociatedFeature) resource);                                                                            // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityFibroadenoma.
 	/// </summary>
-	public class AbnormalityFibroadenomaContainer : MContainer, ITMItem<ResourceReference>                                                     // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class AbnormalityFibroadenomaContainer : MContainer, ITMItem<ResourceReference>                                                     // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityFibroadenoma.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public AbnormalityFibroadenoma Value { get; set; }                                                                                 // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public AbnormalityFibroadenoma Value { get; set; }                                                                                 // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(AbnormalityFibroadenoma value)                                                                                         // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma"                                              // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(AbnormalityFibroadenoma value)                                                                                         // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma"                                              // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -831,15 +831,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityFibroadenomaContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityFibroadenoma", min, max)        // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public AbnormalityFibroadenomaContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityFibroadenoma", min, max)        // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -853,68 +853,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((AbnormalityFibroadenoma) resource);                                                                      // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((AbnormalityFibroadenoma) resource);                                                                      // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityArchitecturalDistortion.
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortionContainer : MContainer, ITMItem<ResourceReference>                                        // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MGAbnormalityArchitecturalDistortionContainer : MContainer, ITMItem<ResourceReference>                                        // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityArchitecturalDistortion.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public MGAbnormalityArchitecturalDistortion Value { get; set; }                                                                    // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public MGAbnormalityArchitecturalDistortion Value { get; set; }                                                                    // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(MGAbnormalityArchitecturalDistortion value)                                                                            // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion"                                 // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(MGAbnormalityArchitecturalDistortion value)                                                                            // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion"                                 // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -955,15 +955,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortionContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityArchitecturalDistortion", min, max)// BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MGAbnormalityArchitecturalDistortionContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityArchitecturalDistortion", min, max)// BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -977,68 +977,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((MGAbnormalityArchitecturalDistortion) resource);                                                         // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((MGAbnormalityArchitecturalDistortion) resource);                                                         // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityAsymmetry.
 	/// </summary>
-	public class MGAbnormalityAsymmetryContainer : MContainer, ITMItem<ResourceReference>                                                      // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MGAbnormalityAsymmetryContainer : MContainer, ITMItem<ResourceReference>                                                      // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityAsymmetry.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public MGAbnormalityAsymmetry Value { get; set; }                                                                                  // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public MGAbnormalityAsymmetry Value { get; set; }                                                                                  // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(MGAbnormalityAsymmetry value)                                                                                          // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry"                                               // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(MGAbnormalityAsymmetry value)                                                                                          // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry"                                               // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -1079,15 +1079,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityAsymmetryContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityAsymmetry", min, max)          // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MGAbnormalityAsymmetryContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityAsymmetry", min, max)          // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -1101,68 +1101,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((MGAbnormalityAsymmetry) resource);                                                                       // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((MGAbnormalityAsymmetry) resource);                                                                       // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityCalcification.
 	/// </summary>
-	public class MGAbnormalityCalcificationContainer : MContainer, ITMItem<ResourceReference>                                                  // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MGAbnormalityCalcificationContainer : MContainer, ITMItem<ResourceReference>                                                  // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityCalcification.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public MGAbnormalityCalcification Value { get; set; }                                                                              // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public MGAbnormalityCalcification Value { get; set; }                                                                              // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(MGAbnormalityCalcification value)                                                                                      // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification"                                           // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(MGAbnormalityCalcification value)                                                                                      // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification"                                           // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -1203,15 +1203,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityCalcificationContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityCalcification", min, max)  // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MGAbnormalityCalcificationContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityCalcification", min, max)  // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -1225,68 +1225,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((MGAbnormalityCalcification) resource);                                                                   // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((MGAbnormalityCalcification) resource);                                                                   // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityDensity.
 	/// </summary>
-	public class MGAbnormalityDensityContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MGAbnormalityDensityContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityDensity.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public MGAbnormalityDensity Value { get; set; }                                                                                    // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public MGAbnormalityDensity Value { get; set; }                                                                                    // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(MGAbnormalityDensity value)                                                                                            // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity"                                                 // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(MGAbnormalityDensity value)                                                                                            // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity"                                                 // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -1327,15 +1327,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityDensity", min, max)              // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MGAbnormalityDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityDensity", min, max)              // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -1349,68 +1349,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((MGAbnormalityDensity) resource);                                                                         // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((MGAbnormalityDensity) resource);                                                                         // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityFatNecrosis.
 	/// </summary>
-	public class MGAbnormalityFatNecrosisContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MGAbnormalityFatNecrosisContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityFatNecrosis.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public MGAbnormalityFatNecrosis Value { get; set; }                                                                                // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public MGAbnormalityFatNecrosis Value { get; set; }                                                                                // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(MGAbnormalityFatNecrosis value)                                                                                        // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis"                                             // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(MGAbnormalityFatNecrosis value)                                                                                        // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis"                                             // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
 	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
@@ -1451,15 +1451,15 @@ namespace BreastRadLib.MGFindingLocal
 	    /// Clear all items from collection
 	    /// </summary>
 	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityFatNecrosisContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityFatNecrosis", min, max)      // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MGAbnormalityFatNecrosisContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityFatNecrosis", min, max)      // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
@@ -1473,68 +1473,68 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((MGAbnormalityFatNecrosis) resource);                                                                     // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((MGAbnormalityFatNecrosis) resource);                                                                     // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	/// <summary>
 	/// Container class for Observation.hasMember:mGBreastDensity.
 	/// </summary>
-	public class MGBreastDensityContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:135
-	{                                                                                                                                          // BuildMemberBase.cs:136
+	public class MGBreastDensityContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:137
+	{                                                                                                                                          // BuildMemberBase.cs:138
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGBreastDensity.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:67
-	    {                                                                                                                                      // BuildMemberBase.cs:68
-	        // Properties                                                                                                                      // BuildMemberBase.cs:69
+	    public class Item                                                                                                                      // BuildMemberBase.cs:73
+	    {                                                                                                                                      // BuildMemberBase.cs:74
+	        // Properties                                                                                                                      // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public MGBreastDensity Value { get; set; }                                                                                         // BuildMemberBase.cs:73
-	                                                                                                                                           // BuildMemberBase.cs:75
+	        public MGBreastDensity Value { get; set; }                                                                                         // BuildMemberBase.cs:79
+	                                                                                                                                           // BuildMemberBase.cs:81
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(MGBreastDensity value)                                                                                                 // BuildMemberBase.cs:79
-	        {                                                                                                                                  // BuildMemberBase.cs:80
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
-	        }                                                                                                                                  // BuildMemberBase.cs:83
-	                                                                                                                                           // BuildMemberBase.cs:85
-	        // Methods                                                                                                                         // BuildMemberBase.cs:86
-	    }                                                                                                                                      // BuildMemberBase.cs:88
-	                                                                                                                                           // BuildMemberBase.cs:138
-	    // Properties                                                                                                                          // BuildMemberBase.cs:139
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
-	    {                                                                                                                                      // BuildMemberBase.cs:114
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity"                                                      // BuildMemberBase.cs:121
-	    };                                                                                                                                     // BuildMemberBase.cs:122
+	        public Item(MGBreastDensity value)                                                                                                 // BuildMemberBase.cs:85
+	        {                                                                                                                                  // BuildMemberBase.cs:86
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:87
+	        }                                                                                                                                  // BuildMemberBase.cs:89
+	                                                                                                                                           // BuildMemberBase.cs:91
+	        // Methods                                                                                                                         // BuildMemberBase.cs:92
+	    }                                                                                                                                      // BuildMemberBase.cs:94
+	                                                                                                                                           // BuildMemberBase.cs:140
+	    // Properties                                                                                                                          // BuildMemberBase.cs:141
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:115
+	    {                                                                                                                                      // BuildMemberBase.cs:116
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity"                                                      // BuildMemberBase.cs:123
+	    };                                                                                                                                     // BuildMemberBase.cs:124
 	                                                                                                                                           // BuildMemberBase.cs:162
 	    /// <summary>
 	    /// Get All Items
@@ -1585,48 +1585,48 @@ namespace BreastRadLib.MGFindingLocal
 	        this.item = new Item(value);                                                                                                       // BuildMemberBase.cs:218
 	        return value;                                                                                                                      // BuildMemberBase.cs:219
 	    }                                                                                                                                      // BuildMemberBase.cs:220
-	                                                                                                                                           // BuildMemberBase.cs:141
+	                                                                                                                                           // BuildMemberBase.cs:143
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGBreastDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGBreastDensity", min, max)                        // BuildMemberBase.cs:145
-	    {                                                                                                                                      // BuildMemberBase.cs:146
-	    }                                                                                                                                      // BuildMemberBase.cs:148
-	                                                                                                                                           // BuildMemberBase.cs:149
-	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	    public MGBreastDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGBreastDensity", min, max)                        // BuildMemberBase.cs:147
+	    {                                                                                                                                      // BuildMemberBase.cs:148
+	    }                                                                                                                                      // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:151
+	    // Methods                                                                                                                             // BuildMemberBase.cs:152
 	                                                                                                                                           // BuildMemberBase.cs:293
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:74
-	    {                                                                                                                                      // BuildMemberReferences.cs:75
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:76
-	        {                                                                                                                                  // BuildMemberReferences.cs:77
-	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:78
-	            {                                                                                                                              // BuildMemberReferences.cs:79
-	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:80
-	            };                                                                                                                             // BuildMemberReferences.cs:81
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
-	        }                                                                                                                                  // BuildMemberReferences.cs:83
-	    }                                                                                                                                      // BuildMemberReferences.cs:84
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:70
+	    {                                                                                                                                      // BuildMemberReferences.cs:71
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:72
+	        {                                                                                                                                  // BuildMemberReferences.cs:73
+	            ResourceReference reference = new ResourceReference                                                                            // BuildMemberReferences.cs:74
+	            {                                                                                                                              // BuildMemberReferences.cs:75
+	                Reference = item.Value.Id                                                                                                  // BuildMemberReferences.cs:76
+	            };                                                                                                                             // BuildMemberReferences.cs:77
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:78
+	        }                                                                                                                                  // BuildMemberReferences.cs:79
+	    }                                                                                                                                      // BuildMemberReferences.cs:80
 	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:50
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:51
-	    {                                                                                                                                      // BuildMemberReferences.cs:52
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:53
-	            references,                                                                                                                    // BuildMemberReferences.cs:54
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:55
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:56
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:57
-	        {                                                                                                                                  // BuildMemberReferences.cs:58
-	            Item item = new Item((MGBreastDensity) resource);                                                                              // BuildMemberReferences.cs:59
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
-	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:152
+	                                                                                                                                           // BuildMemberReferences.cs:46
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:47
+	    {                                                                                                                                      // BuildMemberReferences.cs:48
+	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberReferences.cs:49
+	            references,                                                                                                                    // BuildMemberReferences.cs:50
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:51
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:52
+	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberReferences.cs:53
+	        {                                                                                                                                  // BuildMemberReferences.cs:54
+	            Item item = new Item((MGBreastDensity) resource);                                                                              // BuildMemberReferences.cs:55
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:56
+	        }                                                                                                                                  // BuildMemberReferences.cs:57
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:58
+	    }                                                                                                                                      // BuildMemberReferences.cs:59
+	}                                                                                                                                          // BuildMemberBase.cs:154
 	//- LocalClassDefs
 }

@@ -26,18 +26,18 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:331
+		                                                                                                                                          // BuildMemberBase.cs:329
 		/// <summary>
 		/// Value
 		/// Access fhir element 'Observation.component:value'
 		/// </summary>
-		public ValueContainer Value { get ; protected set; }                                                                                      // BuildMemberBase.cs:336
-		                                                                                                                                          // BuildMemberBase.cs:331
+		public ValueContainer Value { get ; protected set; }                                                                                      // BuildMemberBase.cs:334
+		                                                                                                                                          // BuildMemberBase.cs:329
 		/// <summary>
 		/// Qualifier
 		/// Access fhir element 'Observation.component:qualifier'
 		/// </summary>
-		public QualifierContainer Qualifier { get ; protected set; }                                                                              // BuildMemberBase.cs:336
+		public QualifierContainer Qualifier { get ; protected set; }                                                                              // BuildMemberBase.cs:334
 		//- Properties
 
 		/// <summary>
@@ -81,8 +81,8 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:220
-			this.Value = new ValueContainer(1, 1);                                                                                                   // BuildMemberBase.cs:320
-			this.Qualifier = new QualifierContainer(0, 0);                                                                                           // BuildMemberBase.cs:320
+			this.Value = new ValueContainer(1, 1);                                                                                                   // BuildMemberBase.cs:318
+			this.Qualifier = new QualifierContainer(0, 0);                                                                                           // BuildMemberBase.cs:318
 			//- Constructor
 		}
 
@@ -112,7 +112,7 @@ namespace BreastRadLib
 			//- WriteCodeStart
 			//+ WriteCode
 			//+ !WriteComponents
-			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:145
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:141
 			//- !WriteComponents
 			//- WriteCode
 		}
@@ -127,7 +127,7 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			//+ !ReadComponents
-			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:154
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:150
 			//- !ReadComponents
 			//- ReadCode
 		}
@@ -154,33 +154,33 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "Consistent With observation";                                                                             // FhirConstruct.cs:821
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
-		                                                                                                                                          // BuildMemberComponents.cs:109
+		                                                                                                                                          // BuildMemberComponents.cs:105
 		//+ !Components
-		                                                                                                                                          // BuildMemberComponents.cs:112
+		                                                                                                                                          // BuildMemberComponents.cs:108
 		/// <summary>
 		/// Read all component values from resource into this instance
 		/// </summary>
-		private void ReadComponents(BreastRadiologyDocument doc)                                                                                  // BuildMemberComponents.cs:116
-		{                                                                                                                                         // BuildMemberComponents.cs:117
-		    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();            // BuildMemberComponents.cs:118
+		private void ReadComponents(BreastRadiologyDocument doc)                                                                                  // BuildMemberComponents.cs:112
+		{                                                                                                                                         // BuildMemberComponents.cs:113
+		    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();            // BuildMemberComponents.cs:114
 		    //+ ReadComponents
-		    this.Value.Read(this.Doc, items);                                                                                                     // BuildMemberComponents.cs:67
-		    this.Qualifier.Read(this.Doc, items);                                                                                                 // BuildMemberComponents.cs:67
+		    this.Value.Read(this.Doc, items);                                                                                                     // BuildMemberComponents.cs:63
+		    this.Qualifier.Read(this.Doc, items);                                                                                                 // BuildMemberComponents.cs:63
 		    //- ReadComponents
-		}                                                                                                                                         // BuildMemberComponents.cs:120
-		                                                                                                                                          // BuildMemberComponents.cs:122
+		}                                                                                                                                         // BuildMemberComponents.cs:116
+		                                                                                                                                          // BuildMemberComponents.cs:118
 		/// <summary>
 		/// Write all values from this instance into resource
 		/// </summary>
-		private void WriteComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:126
-		{                                                                                                                                         // BuildMemberComponents.cs:127
-		    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                              // BuildMemberComponents.cs:128
+		private void WriteComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:122
+		{                                                                                                                                         // BuildMemberComponents.cs:123
+		    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                              // BuildMemberComponents.cs:124
 		    //+ WriteComponents
-		    items.AddRange(this.Value.Write(this.Doc));                                                                                           // BuildMemberComponents.cs:89
-		    items.AddRange(this.Qualifier.Write(this.Doc));                                                                                       // BuildMemberComponents.cs:89
+		    items.AddRange(this.Value.Write(this.Doc));                                                                                           // BuildMemberComponents.cs:85
+		    items.AddRange(this.Qualifier.Write(this.Doc));                                                                                       // BuildMemberComponents.cs:85
 		    //- WriteComponents
-		    this.Resource.SetValue("component", items);                                                                                           // BuildMemberComponents.cs:130
-		}                                                                                                                                         // BuildMemberComponents.cs:131
+		    this.Resource.SetValue("component", items);                                                                                           // BuildMemberComponents.cs:126
+		}                                                                                                                                         // BuildMemberComponents.cs:127
 		//- !Components
 		//- Methods
 	}

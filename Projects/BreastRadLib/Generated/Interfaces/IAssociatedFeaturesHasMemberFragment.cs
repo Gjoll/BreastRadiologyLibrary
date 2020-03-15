@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// AssociatedFeature
 		/// </summary>
-		AssociatedFeatureContainer AssociatedFeature { get ; }                                                                                    // BuildMemberBase.cs:327
+		AssociatedFeatureContainer AssociatedFeature { get ; }                                                                                    // BuildMemberBase.cs:325
 		//- Properties
 
 		//+ Methods

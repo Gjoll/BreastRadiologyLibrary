@@ -21,55 +21,55 @@ namespace BreastRadLib
 		/// <summary>
 		/// AbnormalityCyst
 		/// </summary>
-		AbnormalityCystContainer AbnormalityCyst { get ; }                                                                                        // BuildMemberBase.cs:327
+		AbnormalityCystContainer AbnormalityCyst { get ; }                                                                                        // BuildMemberBase.cs:325
 		/// <summary>
 		/// AbnormalityDuct
 		/// </summary>
-		AbnormalityDuctContainer AbnormalityDuct { get ; }                                                                                        // BuildMemberBase.cs:327
+		AbnormalityDuctContainer AbnormalityDuct { get ; }                                                                                        // BuildMemberBase.cs:325
 		/// <summary>
 		/// AbnormalityForeignObject
 		/// </summary>
-		AbnormalityForeignObjectContainer AbnormalityForeignObject { get ; }                                                                      // BuildMemberBase.cs:327
+		AbnormalityForeignObjectContainer AbnormalityForeignObject { get ; }                                                                      // BuildMemberBase.cs:325
 		/// <summary>
 		/// AbnormalityLymphNode
 		/// </summary>
-		AbnormalityLymphNodeContainer AbnormalityLymphNode { get ; }                                                                              // BuildMemberBase.cs:327
+		AbnormalityLymphNodeContainer AbnormalityLymphNode { get ; }                                                                              // BuildMemberBase.cs:325
 		/// <summary>
 		/// AbnormalityMass
 		/// </summary>
-		AbnormalityMassContainer AbnormalityMass { get ; }                                                                                        // BuildMemberBase.cs:327
+		AbnormalityMassContainer AbnormalityMass { get ; }                                                                                        // BuildMemberBase.cs:325
 		/// <summary>
 		/// AssociatedFeature
 		/// </summary>
-		AssociatedFeatureContainer AssociatedFeature { get ; }                                                                                    // BuildMemberBase.cs:327
+		AssociatedFeatureContainer AssociatedFeature { get ; }                                                                                    // BuildMemberBase.cs:325
 		/// <summary>
 		/// AbnormalityFibroadenoma
 		/// </summary>
-		AbnormalityFibroadenomaContainer AbnormalityFibroadenoma { get ; }                                                                        // BuildMemberBase.cs:327
+		AbnormalityFibroadenomaContainer AbnormalityFibroadenoma { get ; }                                                                        // BuildMemberBase.cs:325
 		/// <summary>
 		/// MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		MGAbnormalityArchitecturalDistortionContainer MGAbnormalityArchitecturalDistortion { get ; }                                              // BuildMemberBase.cs:327
+		MGAbnormalityArchitecturalDistortionContainer MGAbnormalityArchitecturalDistortion { get ; }                                              // BuildMemberBase.cs:325
 		/// <summary>
 		/// MGAbnormalityAsymmetry
 		/// </summary>
-		MGAbnormalityAsymmetryContainer MGAbnormalityAsymmetry { get ; }                                                                          // BuildMemberBase.cs:327
+		MGAbnormalityAsymmetryContainer MGAbnormalityAsymmetry { get ; }                                                                          // BuildMemberBase.cs:325
 		/// <summary>
 		/// MGAbnormalityCalcification
 		/// </summary>
-		MGAbnormalityCalcificationContainer MGAbnormalityCalcification { get ; }                                                                  // BuildMemberBase.cs:327
+		MGAbnormalityCalcificationContainer MGAbnormalityCalcification { get ; }                                                                  // BuildMemberBase.cs:325
 		/// <summary>
 		/// MGAbnormalityDensity
 		/// </summary>
-		MGAbnormalityDensityContainer MGAbnormalityDensity { get ; }                                                                              // BuildMemberBase.cs:327
+		MGAbnormalityDensityContainer MGAbnormalityDensity { get ; }                                                                              // BuildMemberBase.cs:325
 		/// <summary>
 		/// MGAbnormalityFatNecrosis
 		/// </summary>
-		MGAbnormalityFatNecrosisContainer MGAbnormalityFatNecrosis { get ; }                                                                      // BuildMemberBase.cs:327
+		MGAbnormalityFatNecrosisContainer MGAbnormalityFatNecrosis { get ; }                                                                      // BuildMemberBase.cs:325
 		/// <summary>
 		/// MGBreastDensity
 		/// </summary>
-		MGBreastDensityContainer MGBreastDensity { get ; }                                                                                        // BuildMemberBase.cs:327
+		MGBreastDensityContainer MGBreastDensity { get ; }                                                                                        // BuildMemberBase.cs:325
 		//- Properties
 
 		//+ Methods

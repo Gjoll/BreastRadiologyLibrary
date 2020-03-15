@@ -36,16 +36,12 @@ namespace FireFragger.CS.BuildMembers
         /// <summary>
         /// Perform local processing of container class.
         /// </summary>
-        protected override void BuildContainerClassLocal(CodeBlockNested containerConstructorBlock,
-            CodeBlockNested containerPropertiesBlock,
-            CodeBlockNested containerMethodsBlock)
+        protected override void BuildContainerClassLocal(ClassCodeBlocks itemCodeBlocks)
         {
-            base.BuildContainerClassLocal(containerConstructorBlock,
-                containerPropertiesBlock,
-                containerMethodsBlock);
+            base.BuildContainerClassLocal(itemCodeBlocks);
 
             sectionCodeMethodName = $"SectionCode";
-            FhirConstruct.Construct(containerMethodsBlock, sectionCode, sectionCodeMethodName, out String dummy);
+            FhirConstruct.Construct(itemCodeBlocks.ClassMethods, sectionCode, sectionCodeMethodName, out String dummy);
         }
 
         protected override void BuildRead(CodeBlockNested b)

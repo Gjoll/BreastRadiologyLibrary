@@ -9,23 +9,23 @@ using System.Text;
 
 namespace FireFragger.CS
 {
-    class ClassCodeBlocks
+    struct ClassCodeBlocks
     {
-        public CodeBlockNested ClassProperties { get; set; }
-        public CodeBlockNested ClassConstructor { get; set; }
-        public CodeBlockNested ClassMethods { get; set; }
-        public CodeBlockNested ClassValidateCodeStart { get; set; }
-        public CodeBlockNested ClassValidateCode { get; set; }
-        public CodeBlockNested ClassWriteCodeStart { get; set; }
-        public CodeBlockNested ClassWriteCode { get; set; }
-        public CodeBlockNested ClassReadCodeStart { get; set; }
-        public CodeBlockNested ClassReadCode { get; set; }
+        public CodeBlockNested ClassProperties;
+        public CodeBlockNested ClassConstructor;
+        public CodeBlockNested ClassMethods;
+        public CodeBlockNested ClassValidateCodeStart;
+        public CodeBlockNested ClassValidateCode;
+        public CodeBlockNested ClassWriteCodeStart;
+        public CodeBlockNested ClassWriteCode;
+        public CodeBlockNested ClassReadCodeStart;
+        public CodeBlockNested ClassReadCode;
 
-        public CodeBlockNested LocalClassDefs { get; set; }
-        public CodeBlockNested LocalUsings { get; set; }
+        public CodeBlockNested LocalClassDefs;
+        public CodeBlockNested LocalUsings;
 
-        public CodeBlockNested InterfaceProperties { get; set; }
-        public CodeBlockNested InterfaceMethods { get; set; }
+        public CodeBlockNested InterfaceProperties;
+        public CodeBlockNested InterfaceMethods;
 
         public static ClassCodeBlocks Create(CodeEditor interfaceEditor,
             CodeEditor classEditor,

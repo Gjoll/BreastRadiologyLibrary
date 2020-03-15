@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// </summary>
-		BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberBase.cs:327
+		BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; }                                                                      // BuildMemberBase.cs:325
 		//- Properties
 
 		//+ Methods

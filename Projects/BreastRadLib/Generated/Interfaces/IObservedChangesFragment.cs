@@ -20,7 +20,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// ObsChanges
 		/// </summary>
-		ObsChangesContainer ObsChanges { get ; }                                                                                                  // BuildMemberBase.cs:327
+		ObsChangesContainer ObsChanges { get ; }                                                                                                  // BuildMemberBase.cs:325
 		//- Properties
 
 		//+ Methods
