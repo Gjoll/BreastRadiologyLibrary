@@ -13,7 +13,7 @@ namespace FireFragger.CS.BuildMembers
         String itemElementGetName;
         List<String> itemElementSetName = new List<String>();
         String extensionName;
-        protected ElementTreeNode valueNode;
+        protected ElementTreeSlice extensionSlice;
 
         protected override string PropertyName => $"{this.extensionName.ToMachineName()}";
         protected override string ElementGetName => this.itemElementGetName;
@@ -23,7 +23,7 @@ namespace FireFragger.CS.BuildMembers
         /// <summary>
         /// Name of fhir element (as stored in resource).
         /// </summary>
-        protected override String FhirClassName => "Observation.ComponentComponent";
+        protected override String FhirClassName => "Extension";
 
         /// <summary>
         /// Perform local processing of container class.
@@ -31,21 +31,31 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildContainerClassLocal(ClassCodeBlocks itemCodeBlocks)
         {
             base.BuildContainerClassLocal(itemCodeBlocks);
+
+            ElementTreeNode urlNode = extensionSlice.Nodes["url"];
+            String extensionUrl = ((FhirUrl)urlNode.ElementDefinition.Fixed).Value;
+
+            itemCodeBlocks.ClassProperties
+                .AppendCode($"public const String ExtensionUrl = \"{extensionUrl}\";")
+                ;
         }
 
         protected override void BuildRead(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> components)")
-                .OpenBrace()
-                .AppendCode($"throw new NotImplementedException();")
-                //.AppendCode($"List<Item> items = new List<Item>();")
-                //.AppendCode($"foreach (Element element in elements)")
-                //.AppendCode($"    items.Add(new Item(({this.ElementGetName}) element));")
-                //.AppendCode($"this.SetAllItems(items);")
-                .CloseBrace()
-                ;
+               .BlankLine()
+               .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
+               .OpenBrace()
+               .AppendCode($"List<Extension> myExtensions = extensions")
+               .AppendCode($"    .Where((a) => String.Compare(a.Url, ExtensionUrl, true) == 0)")
+               .AppendCode($"    .ToList()")
+               .AppendCode($"    ;")
+               .AppendCode($"List<Item> items = new List<Item>();")
+               .AppendCode($"foreach (Extension myExtension in myExtensions)")
+               .AppendCode($"    items.Add(new Item(({this.ElementGetName}) myExtension.Value));")
+               .AppendCode($"this.SetAllItems(items);")
+               .CloseBrace()
+               ;
 
             //this.readBlock
             //    .AppendCode($"this.{PropertyName}.Read(this.Doc, items);")
@@ -57,16 +67,14 @@ namespace FireFragger.CS.BuildMembers
             b
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
-               .AppendCode($"throw new NotImplementedException();")
-               //.AppendCode($"foreach (Item item in this.GetAllItems())")
-               //.OpenBrace()
-               //.AppendCode($"{FhirClassName} component = new {FhirClassName}")
-               //.OpenBrace()
-               //.AppendCode($"Value = item.Value,")
-               //.AppendCode($"Code = {componentCodeMethodName}()")
-               //.CloseBrace(";")
-               //.AppendCode($"yield return component;")
-               //.CloseBrace()
+               .AppendCode($"foreach (Item item in this.GetAllItems())")
+               .OpenBrace()
+               .AppendCode($"yield return new Extension")
+               .OpenBrace()
+               .AppendCode($"Value = item.Value,")
+               .AppendCode($"Url = ExtensionUrl")
+               .CloseBrace(";")
+               .CloseBrace()
                .CloseBrace()
                ;
 
@@ -77,24 +85,25 @@ namespace FireFragger.CS.BuildMembers
 
         public override void Build()
         {
-            Int32 max = CSMisc.ToMax(this.valueNode.ElementDefinition.Max);
-            Int32 min = this.valueNode.ElementDefinition.Min.Value;
+            Int32 max = CSMisc.ToMax(this.extensionSlice.ElementDefinition.Max);
+            Int32 min = this.extensionSlice.ElementDefinition.Min.Value;
 
-            this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
+            ElementTreeNode valueNode = this.extensionSlice.Nodes["value[x]"];
             this.itemElementSetName.Clear();
             foreach (var type in valueNode.ElementDefinition.Type)
                 itemElementSetName.Add(type.Code);
+            this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
 
-            base.BuildOne(valueNode.ElementDefinition.ElementId, min, max);
+            base.BuildOne(extensionSlice.ElementDefinition.ElementId, min, max);
         }
 
         public BuildMemberExtensionSimple(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
-            ElementTreeNode valueNode,
+            ElementTreeSlice extensionSlice,
             String extensionName) :
             base(defineBase, codeBlocks)
         {
-            this.valueNode = valueNode;
+            this.extensionSlice = extensionSlice;
             this.extensionName = extensionName;
         }
     }

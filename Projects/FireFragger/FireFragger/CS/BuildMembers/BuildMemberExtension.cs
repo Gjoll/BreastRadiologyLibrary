@@ -39,12 +39,11 @@ namespace FireFragger.CS.BuildMembers
             bm.Build();
         }
 
-        void BuildOneSimpleExtension(ElementTreeNode valueXNode,
-            String extensionName)
+        void BuildOneSimpleExtension(String extensionName)
         {
             BuildMemberExtensionSimple bm = new BuildMemberExtensionSimple(this.defineBase,
                 this.codeBlocks,
-                valueXNode,
+                this.extensionSlice,
                 extensionName);
             bm.Build();
         }
@@ -96,7 +95,7 @@ namespace FireFragger.CS.BuildMembers
             else if (valueXCardMax != 0)
             {
                 // Build Simple Extension
-                BuildOneSimpleExtension(valueXNode, extensionName);
+                BuildOneSimpleExtension(extensionName);
             }
             else
             {
