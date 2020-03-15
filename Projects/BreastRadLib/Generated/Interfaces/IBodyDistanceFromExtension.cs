@@ -18,6 +18,10 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		/// <summary>
+		/// BodyDistanceFromExtension
+		/// </summary>
+		BodyDistanceFromExtensionCollection BodyDistanceFromExtension { get ; }                                                                   // BuildMemberBase.cs:327
 		//- Properties
 
 		//+ Methods

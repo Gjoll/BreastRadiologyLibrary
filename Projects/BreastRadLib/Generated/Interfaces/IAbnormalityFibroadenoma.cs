@@ -31,7 +31,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// FibroAdenomaType
 		/// </summary>
-		FibroAdenomaTypeContainer FibroAdenomaType { get ; }                                                                                      // BuildMemberBase.cs:323
+		FibroAdenomaTypeContainer FibroAdenomaType { get ; }                                                                                      // BuildMemberBase.cs:327
 		//- Properties
 
 		//+ Methods

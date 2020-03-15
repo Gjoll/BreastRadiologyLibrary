@@ -21,7 +21,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// TumorSatellite
 		/// </summary>
-		TumorSatelliteContainer TumorSatellite { get ; }                                                                                          // BuildMemberBase.cs:323
+		TumorSatelliteContainer TumorSatellite { get ; }                                                                                          // BuildMemberBase.cs:327
 		//- Properties
 
 		//+ Methods

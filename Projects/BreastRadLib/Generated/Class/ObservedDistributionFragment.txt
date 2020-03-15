@@ -1,21 +1,21 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:327
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// ObsDistribution
 		/// Access fhir element 'Observation.component:obsDistribution'
 		/// </summary>
-		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:332
-		                                                                                                                                          // BuildMemberBase.cs:327
+		public ObsDistributionContainer ObsDistribution { get ; protected set; }                                                                  // BuildMemberBase.cs:336
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// ObsDistRegionSize
 		/// Access fhir element 'Observation.component:obsDistRegionSize'
 		/// </summary>
-		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:332
+		public ObsDistRegionSizeContainer ObsDistRegionSize { get ; protected set; }                                                              // BuildMemberBase.cs:336
 		//- Properties
 
 			//+ Constructor
-			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:316
-			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:316
+			this.ObsDistribution = new ObsDistributionContainer(0, 0);                                                                               // BuildMemberBase.cs:320
+			this.ObsDistRegionSize = new ObsDistRegionSizeContainer(0, 0);                                                                           // BuildMemberBase.cs:320
 			//- Constructor
 
 			//+ ValidateCodeStart

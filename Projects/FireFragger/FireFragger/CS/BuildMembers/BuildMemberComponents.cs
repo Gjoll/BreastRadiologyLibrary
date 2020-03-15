@@ -160,10 +160,8 @@ namespace FireFragger.CS.BuildMembers
             {
                 this.sliceName = memberSlice.ElementDefinition.SliceName;
 
-                if (memberSlice.Nodes.TryGetItem("value[x]", out ElementTreeNode valueNode) == false)
-                    throw new Exception("{this.fhirName} missing value[x] node");
-                if (memberSlice.Nodes.TryGetItem("code", out ElementTreeNode codeNode) == false)
-                    throw new Exception("{this.fhirName} missing code node");
+                ElementTreeNode valueNode = memberSlice.Nodes.GetItem("value[x]");
+                ElementTreeNode codeNode = memberSlice.Nodes.GetItem("code");
 
                 componentCode = (CodeableConcept)codeNode.ElementDefinition.Fixed;
                 if (componentCode == null)

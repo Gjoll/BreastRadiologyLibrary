@@ -169,12 +169,9 @@ namespace FireFragger.CS.BuildMembers
                 ElementDefinition memberDef = memberSlice.ElementDefinition;
                 this.sliceName = memberDef.SliceName;
 
-                if (memberSlice.Nodes.TryGetItem("entry", out ElementTreeNode entryNode) == false)
-                    throw new Exception("Section missing entry node");
-                if (memberSlice.Nodes.TryGetItem("title", out ElementTreeNode titleNode) == false)
-                    throw new Exception("Section missing title node");
-                if (memberSlice.Nodes.TryGetItem("code", out ElementTreeNode codeNode) == false)
-                    throw new Exception("Section missing code node");
+                ElementTreeNode entryNode = memberSlice.Nodes.GetItem("entry");
+                ElementTreeNode titleNode = memberSlice.Nodes.GetItem("title");
+                ElementTreeNode codeNode = memberSlice.Nodes.GetItem("code");
 
                 sectionCode = (CodeableConcept)codeNode.ElementDefinition.Fixed;
                 if (sectionCode == null)

@@ -34,7 +34,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// LymphNodeType
 		/// </summary>
-		LymphNodeTypeContainer LymphNodeType { get ; }                                                                                            // BuildMemberBase.cs:323
+		LymphNodeTypeContainer LymphNodeType { get ; }                                                                                            // BuildMemberBase.cs:327
 		//- Properties
 
 		//+ Methods

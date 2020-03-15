@@ -9,18 +9,18 @@ namespace BreastRadLib
     public class BodySiteExtended : IItemElementMember
     {
         public CodeableConcept BodySite { get; set; }
-        TItemExtensionComplexSingle<BreastBodyLocationExtensionItem> BreastBodyLocation;
+        //TItemExtensionComplexSingle<BreastBodyLocationExtensionItem> BreastBodyLocation;
 
         /// <summary>
         /// Constructor
         /// </summary>
         public BodySiteExtended()                                                                     
         {
-            this.BreastBodyLocation = 
-                new TItemExtensionComplexSingle<BreastBodyLocationExtensionItem>("BreastBodyLocation",
-                    0, 
-                    1,
-                    "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");
+            //$this.BreastBodyLocation = 
+            //    new TItemExtensionComplexSingle<BreastBodyLocationExtensionItem>("BreastBodyLocation",
+            //        0, 
+            //        1,
+            //        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");
         }
 
         /// <summary>
@@ -46,10 +46,10 @@ namespace BreastRadLib
             Element retVal = this.BodySite;
             if (retVal == null)
                 throw new Exception($"Invalid empty element value");
-            foreach (IItemExtensionComplexInstance extensionItem in this.BreastBodyLocation.GetElements())
-            {
+            //foreach (IItemExtensionComplexInstance extensionItem in this.BreastBodyLocation.GetElements())
+            //{
 
-            }
+            //}
             return retVal;
         }
         public void SetElement(Element e) => throw new NotImplementedException();

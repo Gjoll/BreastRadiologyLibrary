@@ -1,14 +1,14 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:327
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// NotPreviouslySeen
 		/// Access fhir element 'Observation.component:notPreviouslySeen'
 		/// </summary>
-		public NotPreviouslySeenContainer NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberBase.cs:332
+		public NotPreviouslySeenContainer NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberBase.cs:336
 		//- Properties
 
 			//+ Constructor
-			this.NotPreviouslySeen = new NotPreviouslySeenContainer(0, 0);                                                                           // BuildMemberBase.cs:316
+			this.NotPreviouslySeen = new NotPreviouslySeenContainer(0, 0);                                                                           // BuildMemberBase.cs:320
 			//- Constructor
 
 			//+ ValidateCodeStart

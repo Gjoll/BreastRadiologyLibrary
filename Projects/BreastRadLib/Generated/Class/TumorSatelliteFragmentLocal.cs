@@ -18,94 +18,94 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:tumorSatellite.
 	/// </summary>
-	public class TumorSatelliteContainer : MContainer, ITMItem<ResourceReference>                                                              // BuildMemberBase.cs:131
-	{                                                                                                                                          // BuildMemberBase.cs:132
+	public class TumorSatelliteContainer : MContainer, ITMItem<ResourceReference>                                                              // BuildMemberBase.cs:135
+	{                                                                                                                                          // BuildMemberBase.cs:136
 	    /// <summary>
 	    /// Item class for Observation.hasMember:tumorSatellite.
 	    /// </summary>
-	    public class Item                                                                                                                      // BuildMemberBase.cs:63
-	    {                                                                                                                                      // BuildMemberBase.cs:64
-	        // Properties                                                                                                                      // BuildMemberBase.cs:65
+	    public class Item                                                                                                                      // BuildMemberBase.cs:67
+	    {                                                                                                                                      // BuildMemberBase.cs:68
+	        // Properties                                                                                                                      // BuildMemberBase.cs:69
 	        /// <summary>
 	        /// Value
 	        /// </summary>
-	        public TumorSatellite Value { get; set; }                                                                                          // BuildMemberBase.cs:69
-	                                                                                                                                           // BuildMemberBase.cs:71
+	        public TumorSatellite Value { get; set; }                                                                                          // BuildMemberBase.cs:73
+	                                                                                                                                           // BuildMemberBase.cs:75
 	        /// <summary>
 	        /// Constructor
 	        /// </summary>
-	        public Item(TumorSatellite value)                                                                                                  // BuildMemberBase.cs:75
-	        {                                                                                                                                  // BuildMemberBase.cs:76
-	            this.Value = value;                                                                                                            // BuildMemberBase.cs:77
-	        }                                                                                                                                  // BuildMemberBase.cs:79
-	                                                                                                                                           // BuildMemberBase.cs:81
-	        // Methods                                                                                                                         // BuildMemberBase.cs:82
-	    }                                                                                                                                      // BuildMemberBase.cs:84
-	                                                                                                                                           // BuildMemberBase.cs:134
-	    // Properties                                                                                                                          // BuildMemberBase.cs:135
-	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:109
-	    {                                                                                                                                      // BuildMemberBase.cs:110
-	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite"                                                       // BuildMemberBase.cs:117
-	    };                                                                                                                                     // BuildMemberBase.cs:118
-	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:223
-	                                                                                                                                           // BuildMemberBase.cs:225
+	        public Item(TumorSatellite value)                                                                                                  // BuildMemberBase.cs:79
+	        {                                                                                                                                  // BuildMemberBase.cs:80
+	            this.Value = value;                                                                                                            // BuildMemberBase.cs:81
+	        }                                                                                                                                  // BuildMemberBase.cs:83
+	                                                                                                                                           // BuildMemberBase.cs:85
+	        // Methods                                                                                                                         // BuildMemberBase.cs:86
+	    }                                                                                                                                      // BuildMemberBase.cs:88
+	                                                                                                                                           // BuildMemberBase.cs:138
+	    // Properties                                                                                                                          // BuildMemberBase.cs:139
+	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:113
+	    {                                                                                                                                      // BuildMemberBase.cs:114
+	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite"                                                       // BuildMemberBase.cs:121
+	    };                                                                                                                                     // BuildMemberBase.cs:122
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:227
+	                                                                                                                                           // BuildMemberBase.cs:229
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:229
-	                                                                                                                                           // BuildMemberBase.cs:231
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:233
+	                                                                                                                                           // BuildMemberBase.cs:235
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:235
-	                                                                                                                                           // BuildMemberBase.cs:237
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:239
+	                                                                                                                                           // BuildMemberBase.cs:241
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:241
-	                                                                                                                                           // BuildMemberBase.cs:243
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:245
+	                                                                                                                                           // BuildMemberBase.cs:247
 	    /// <summary>
 	    /// Return all items
 	    /// </summary>
-	    public IEnumerable<TumorSatellite> All()                                                                                               // BuildMemberBase.cs:247
-	    {                                                                                                                                      // BuildMemberBase.cs:248
-	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:249
-	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:250
-	    }                                                                                                                                      // BuildMemberBase.cs:251
-	                                                                                                                                           // BuildMemberBase.cs:253
+	    public IEnumerable<TumorSatellite> All()                                                                                               // BuildMemberBase.cs:251
+	    {                                                                                                                                      // BuildMemberBase.cs:252
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:253
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:254
+	    }                                                                                                                                      // BuildMemberBase.cs:255
+	                                                                                                                                           // BuildMemberBase.cs:257
 	    /// <summary>
 	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public TumorSatellite GetAt(Int32 i) => this.items[i].Value;                                                                           // BuildMemberBase.cs:257
-	                                                                                                                                           // BuildMemberBase.cs:259
+	    public TumorSatellite GetAt(Int32 i) => this.items[i].Value;                                                                           // BuildMemberBase.cs:261
+	                                                                                                                                           // BuildMemberBase.cs:263
 	    /// <summary>
 	    /// Remove Item at indicated index
 	    /// </summary>
-	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:263
-	                                                                                                                                           // BuildMemberBase.cs:265
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:267
+	                                                                                                                                           // BuildMemberBase.cs:269
 	    /// <summary>
 	    /// Clear all items from collection
 	    /// </summary>
-	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:269
-	                                                                                                                                           // BuildMemberBase.cs:137
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:273
+	                                                                                                                                           // BuildMemberBase.cs:141
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public TumorSatelliteContainer(Int32 min, Int32 max) : base("Observation.hasMember:tumorSatellite", min, max)                          // BuildMemberBase.cs:141
-	    {                                                                                                                                      // BuildMemberBase.cs:142
-	    }                                                                                                                                      // BuildMemberBase.cs:144
-	                                                                                                                                           // BuildMemberBase.cs:145
-	    // Methods                                                                                                                             // BuildMemberBase.cs:146
-	                                                                                                                                           // BuildMemberBase.cs:275
+	    public TumorSatelliteContainer(Int32 min, Int32 max) : base("Observation.hasMember:tumorSatellite", min, max)                          // BuildMemberBase.cs:145
+	    {                                                                                                                                      // BuildMemberBase.cs:146
+	    }                                                                                                                                      // BuildMemberBase.cs:148
+	                                                                                                                                           // BuildMemberBase.cs:149
+	    // Methods                                                                                                                             // BuildMemberBase.cs:150
+	                                                                                                                                           // BuildMemberBase.cs:279
 	    /// <summary>
 	    /// Append value to collection
 	    /// </summary>
-	    public TumorSatellite Append(TumorSatellite value)                                                                                     // BuildMemberBase.cs:279
-	    {                                                                                                                                      // BuildMemberBase.cs:280
-	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:281
-	        return value;                                                                                                                      // BuildMemberBase.cs:282
-	    }                                                                                                                                      // BuildMemberBase.cs:283
-	                                                                                                                                           // BuildMemberBase.cs:289
+	    public TumorSatellite Append(TumorSatellite value)                                                                                     // BuildMemberBase.cs:283
+	    {                                                                                                                                      // BuildMemberBase.cs:284
+	        this.items.Add(new Item(value));                                                                                                   // BuildMemberBase.cs:285
+	        return value;                                                                                                                      // BuildMemberBase.cs:286
+	    }                                                                                                                                      // BuildMemberBase.cs:287
+	                                                                                                                                           // BuildMemberBase.cs:293
 	    /// <summary>
 	    /// Write single item as a fhir element.
 	    /// </summary>
@@ -120,7 +120,7 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:82
 	        }                                                                                                                                  // BuildMemberReferences.cs:83
 	    }                                                                                                                                      // BuildMemberReferences.cs:84
-	                                                                                                                                           // BuildMemberBase.cs:295
+	                                                                                                                                           // BuildMemberBase.cs:299
 	    /// <summary>
 	    /// Read data from fhir element into member item.
 	    /// </summary>
@@ -138,6 +138,6 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:61
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:62
 	    }                                                                                                                                      // BuildMemberReferences.cs:63
-	}                                                                                                                                          // BuildMemberBase.cs:148
+	}                                                                                                                                          // BuildMemberBase.cs:152
 	//- LocalClassDefs
 }

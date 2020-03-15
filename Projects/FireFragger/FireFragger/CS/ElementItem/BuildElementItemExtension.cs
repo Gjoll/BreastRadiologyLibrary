@@ -34,12 +34,9 @@ namespace FireFragger.CS
             String extensionUrl,
             ElementTreeSlice extensionSlice)
         {
-            ElementTreeNode GetChild(String name)
-            {
-                if (extensionSlice.Nodes.TryGetItem($"{extensionSlice.ElementDefinition.ElementId}.{name}", out ElementTreeNode n) == false)
-                    throw new Exception($"Cant find child {name}");
-                return n;
-            }
+            ElementTreeNode GetChild(String name) => 
+                extensionSlice.Nodes.GetItem($"{extensionSlice.ElementDefinition.ElementId}.{name}");
+
             ElementTreeNode valueNode = GetChild("value[x]");
 
             Int32 max = CSMisc.ToMax(extensionSlice.ElementDefinition.Max);
@@ -419,8 +416,7 @@ namespace FireFragger.CS
                 return;
             }
 
-            if (extensionSlice.Nodes.TryGetItem("extension", out ElementTreeNode subExtensionNode) == false)
-                throw new Exception($"extension.extension is missing");
+            ElementTreeNode subExtensionNode = extensionSlice.Nodes.GetItem("extension");
             Int32 valueXCardMax = CSMisc.ToMax(valueXNode.ElementDefinition.Max);
 
             this.DefineStart();

@@ -11,24 +11,32 @@ namespace FireFragger.CS.BuildMembers
 {
     /// <summary>
     /// </summary>
-    internal abstract class BuildMemberExtension
+    internal class BuildMemberExtension
     {
         protected Builder csBuilder => this.defineBase.CSBuilder;
         protected DefineBase defineBase;
         protected ClassCodeBlocks codeBlocks;
         protected ElementTreeNode memberNode;
+        String extensionName;
 
         public BuildMemberExtension(DefineBase defineBase,
             ClassCodeBlocks codeBlocks,
-            ElementTreeNode extensionNode)
+            ElementTreeNode extensionNode,
+            String extensionName)
         {
+            this.extensionName = extensionName;
             this.defineBase = defineBase;
             this.codeBlocks = codeBlocks;
             this.memberNode = extensionNode;
         }
 
-        void BuildOneComplexExtension()
+        void BuildOneComplexExtension(String extensionName)
         {
+            BuildMemberExtensionComplex bm = new BuildMemberExtensionComplex(this.defineBase,
+                this.codeBlocks,
+                this.memberNode,
+                extensionName);
+            bm.Build();
         }
 
         void BuildOneSimpleExtension(ElementTreeNode valueXNode)
@@ -39,21 +47,18 @@ namespace FireFragger.CS.BuildMembers
             bm.Build();
         }
 
-        public void BuildOne(ElementTreeSlice extensionSlice)
+        /// <summary>
+        /// Build a class to implement an extension.
+        /// This determines if a simple extension is to be defined,
+        /// or a complex extension.
+        /// </summary>
+        public void Build()
         {
             //$ TODO: Implement validation
             const String fcn = "BuildSlice";
 
-            if (extensionSlice.Nodes.TryGetItem("value[x]", out ElementTreeNode valueXNode) == false)
-            {
-                this.csBuilder.ConversionError(this.GetType().Name,
-                       fcn,
-                       $"Unimplemented code. value[x] not found");
-                return;
-            }
-
-            if (extensionSlice.Nodes.TryGetItem("extension", out ElementTreeNode subExtensionNode) == false)
-                throw new Exception($"extension.extension is missing");
+            ElementTreeNode valueXNode = memberNode.GetChild("value[x]");
+            ElementTreeNode subExtensionNode = memberNode.GetChild("extension");
             Int32 valueXCardMax = CSMisc.ToMax(valueXNode.ElementDefinition.Max);
 
             if ((valueXCardMax != 0) && (subExtensionNode.Slices.Count > 1))
@@ -74,14 +79,8 @@ namespace FireFragger.CS.BuildMembers
             else
             {
                 // Build Complex Extension
-                BuildOneComplexExtension();
+                BuildOneComplexExtension(extensionName);
             }
-        }
-
-        public void Build()
-        {
-            foreach (ElementTreeSlice memberSlice in this.memberNode.Slices.Skip(1))
-                BuildOne(memberSlice);
         }
     }
 }

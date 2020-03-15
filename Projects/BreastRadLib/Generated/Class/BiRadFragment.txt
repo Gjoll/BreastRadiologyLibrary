@@ -1,14 +1,14 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:327
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// Access fhir element 'Observation.component:biRadsAssessmentCategory'
 		/// </summary>
-		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:332
+		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:336
 		//- Properties
 
 			//+ Constructor
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:316
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:320
 			//- Constructor
 
 			//+ ValidateCodeStart

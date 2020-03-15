@@ -16,6 +16,10 @@ namespace FireFragger.CS.BuildMembers
         protected Builder csBuilder => this.defineBase.CSBuilder;
         protected DefineBase defineBase;
         protected ClassCodeBlocks codeBlocks;
+        ///// <summary>
+        ///// Code blocks for the container class.
+        ///// </summary>
+        //protected ClassCodeBlocks containerCode = new ClassCodeBlocks();
         protected CodeBlockNested containerCode;
         protected CodeBlockNested itemCode;
         protected String elementId;
@@ -54,7 +58,7 @@ namespace FireFragger.CS.BuildMembers
             this.codeBlocks = codeBlocks;
         }
 
-        void BuildItemClass()
+        protected virtual void BuildItemClass()
         {
             this.itemCode
                 .SummaryOpen()
@@ -120,7 +124,7 @@ namespace FireFragger.CS.BuildMembers
 
         }
 
-        void BuildContainerClass()
+        protected virtual void BuildContainerClass()
         {
             Debug.Assert(String.IsNullOrEmpty(this.ContainerClassName) == false);
 
@@ -310,7 +314,7 @@ namespace FireFragger.CS.BuildMembers
         {
         }
 
-        void BuildProperty()
+        protected virtual void BuildProperty()
         {
             this.codeBlocks.ClassConstructor
                 .AppendCode($"this.{this.PropertyName} = new {this.ContainerClassName}({this.Min}, {this.Min});")

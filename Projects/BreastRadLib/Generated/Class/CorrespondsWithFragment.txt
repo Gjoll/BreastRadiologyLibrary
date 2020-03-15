@@ -1,14 +1,14 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:327
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// CorrespondsWith
 		/// Access fhir element 'Observation.component:correspondsWith'
 		/// </summary>
-		public CorrespondsWithContainer CorrespondsWith { get ; protected set; }                                                                  // BuildMemberBase.cs:332
+		public CorrespondsWithContainer CorrespondsWith { get ; protected set; }                                                                  // BuildMemberBase.cs:336
 		//- Properties
 
 			//+ Constructor
-			this.CorrespondsWith = new CorrespondsWithContainer(0, 0);                                                                               // BuildMemberBase.cs:316
+			this.CorrespondsWith = new CorrespondsWithContainer(0, 0);                                                                               // BuildMemberBase.cs:320
 			//- Constructor
 
 			//+ ValidateCodeStart

@@ -20,6 +20,12 @@ namespace BreastRadLib
 	public class BreastBodyLocationExtension : ExtensionBase, IBreastBodyLocationExtension
 	{
 		//+ Properties
+		                                                                                                                                          // BuildMemberBase.cs:331
+		/// <summary>
+		/// BreastBodyLocationExtension
+		/// Access fhir element 'Extension'
+		/// </summary>
+		public BreastBodyLocationExtensionCollection BreastBodyLocationExtension { get ; protected set; }                                         // BuildMemberBase.cs:336
 		//- Properties
 
 		/// <summary>
@@ -62,6 +68,7 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // DefineBase.cs:220
+			this.BreastBodyLocationExtension = new BreastBodyLocationExtensionCollection(0, 0);                                                      // BuildMemberBase.cs:320
 			//- Constructor
 		}
 
@@ -88,10 +95,6 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearExtensions();                                                                                                                  // BuildElementItemExtension.cs:28
-			this.ClearExtensions();                                                                                                                  // BuildElementItemExtension.cs:28
-			this.ClearExtensions();                                                                                                                  // BuildElementItemExtension.cs:28
-			this.ClearExtensions();                                                                                                                  // BuildElementItemExtension.cs:28
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

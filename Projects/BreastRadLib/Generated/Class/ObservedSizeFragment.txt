@@ -1,14 +1,14 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:327
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// ObsSize
 		/// Access fhir element 'Observation.component:obsSize'
 		/// </summary>
-		public ObsSizeContainer ObsSize { get ; protected set; }                                                                                  // BuildMemberBase.cs:332
+		public ObsSizeContainer ObsSize { get ; protected set; }                                                                                  // BuildMemberBase.cs:336
 		//- Properties
 
 			//+ Constructor
-			this.ObsSize = new ObsSizeContainer(0, 0);                                                                                               // BuildMemberBase.cs:316
+			this.ObsSize = new ObsSizeContainer(0, 0);                                                                                               // BuildMemberBase.cs:320
 			//- Constructor
 
 			//+ ValidateCodeStart

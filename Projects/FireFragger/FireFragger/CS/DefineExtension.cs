@@ -12,9 +12,6 @@ using System.Text;
 
 namespace FireFragger.CS
 {
-    /// <summary>
-    /// Perform Observation specific build
-    /// </summary>
     class DefineExtension : DefineBase
     {
         public DefineExtension(Builder csBuilder,
@@ -32,11 +29,19 @@ namespace FireFragger.CS
 
             base.Build();
 
-            if (this.fragBase.SnapNodes.TryGetElementNode("Extension.extension", out ElementTreeNode extensionNode) == false)
-                throw new Exception($"Extension.extension node is missing");
-
-            BuildItemExtension bmv = new BuildItemExtension(this, this.fragBase.CodeBlocks);
-            bmv.Build(CSMisc.ClassName(this.fragBase), extensionNode);
+            //{
+            //    if (this.fragBase.SnapNodes.TryGetElementNode("Extension.extension", out ElementTreeNode extensionNode) == false)
+            //        throw new Exception($"Extension.extension node is missing");
+            //    BuildItemExtension bmv = new BuildItemExtension(this, this.fragBase.CodeBlocks);
+            //    bmv.Build(CSMisc.ClassName(this.fragBase), extensionNode);
+            //}
+            {
+                BuildMembers.BuildMemberExtension bm = new BuildMembers.BuildMemberExtension(this,
+                    this.fragBase.CodeBlocks,
+                    this.fragBase.SnapNodes,
+                    CSMisc.ClassName(this.fragBase));
+                bm.Build();
+            }
         }
     }
 }

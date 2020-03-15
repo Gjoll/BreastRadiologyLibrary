@@ -24,30 +24,30 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, ISectionFindingsLeftBreast
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:327
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// MGFinding
 		/// Access fhir element 'Observation.hasMember:mGFinding'
 		/// </summary>
-		public MGFindingContainer MGFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:332
-		                                                                                                                                          // BuildMemberBase.cs:327
+		public MGFindingContainer MGFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:336
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// MRIFinding
 		/// Access fhir element 'Observation.hasMember:mRIFinding'
 		/// </summary>
-		public MRIFindingContainer MRIFinding { get ; protected set; }                                                                            // BuildMemberBase.cs:332
-		                                                                                                                                          // BuildMemberBase.cs:327
+		public MRIFindingContainer MRIFinding { get ; protected set; }                                                                            // BuildMemberBase.cs:336
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// NMFinding
 		/// Access fhir element 'Observation.hasMember:nMFinding'
 		/// </summary>
-		public NMFindingContainer NMFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:332
-		                                                                                                                                          // BuildMemberBase.cs:327
+		public NMFindingContainer NMFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:336
+		                                                                                                                                          // BuildMemberBase.cs:331
 		/// <summary>
 		/// USFinding
 		/// Access fhir element 'Observation.hasMember:uSFinding'
 		/// </summary>
-		public USFindingContainer USFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:332
+		public USFindingContainer USFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:336
 		//- Properties
 
 		/// <summary>
@@ -92,10 +92,10 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:220
-			this.MGFinding = new MGFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
-			this.MRIFinding = new MRIFindingContainer(0, 0);                                                                                         // BuildMemberBase.cs:316
-			this.NMFinding = new NMFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
-			this.USFinding = new USFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:316
+			this.MGFinding = new MGFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:320
+			this.MRIFinding = new MRIFindingContainer(0, 0);                                                                                         // BuildMemberBase.cs:320
+			this.NMFinding = new NMFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:320
+			this.USFinding = new USFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:320
 			//- Constructor
 		}
 
