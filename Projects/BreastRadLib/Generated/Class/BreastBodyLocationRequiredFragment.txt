@@ -1,9 +1,7 @@
 		//+ Properties
-		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
 		//- Properties
 
 			//+ Constructor
-			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -14,13 +12,11 @@
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.BodySite.Read(this.Doc, this.Resource);                                                                                             // DefineBase.cs:82
 			//- ReadCode
 
 			//+ Methods

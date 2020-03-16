@@ -28,7 +28,6 @@ namespace BreastRadLib
 	public class AssociatedFeature : ObservationBase, IAssociatedFeature
 	{
 		//+ Properties
-		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
 		                                                                                                                                          // BuildMemberBase.cs:374
 		// Called from BuildMemberComponents.cs, Line 206
 		// BuildMemberBase.cs:376
@@ -88,7 +87,6 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:220
-			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
 			// Called from BuildMemberComponents.cs, Line 206
 			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:359
 			// Called from BuildMemberComponents.cs, Line 206
@@ -121,7 +119,6 @@ namespace BreastRadLib
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
 			//+ !WriteComponents
 			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:168
 			//- !WriteComponents
@@ -137,7 +134,6 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.BodySite.Read(this.Doc, this.Resource);                                                                                             // DefineBase.cs:82
 			//+ !ReadComponents
 			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:177
 			//- !ReadComponents

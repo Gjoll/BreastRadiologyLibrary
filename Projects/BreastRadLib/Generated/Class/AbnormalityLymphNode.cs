@@ -47,7 +47,6 @@ namespace BreastRadLib
 		/// Access fhir element 'Observation.hasMember:tumorSatellite'
 		/// </summary>
 		public TumorSatelliteContainer TumorSatellite { get ; protected set; }                                                                    // BuildMemberBase.cs:380
-		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
 		                                                                                                                                          // BuildMemberBase.cs:374
 		// Called from BuildMemberComponents.cs, Line 206
 		// BuildMemberBase.cs:376
@@ -213,7 +212,6 @@ namespace BreastRadLib
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode");                                       // DefineBase.cs:220
 			// Called from BuildMemberReferences.cs, Line 199
 			this.TumorSatellite = new TumorSatelliteContainer(0, 0);                                                                                 // BuildMemberBase.cs:359
-			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
 			// Called from BuildMemberComponents.cs, Line 206
 			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:359
 			// Called from BuildMemberComponents.cs, Line 206
@@ -275,7 +273,6 @@ namespace BreastRadLib
 			//+ !WriteHasMembers
 			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:163
 			//- !WriteHasMembers
-			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
 			//+ !WriteComponents
 			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:168
 			//- !WriteComponents
@@ -294,7 +291,6 @@ namespace BreastRadLib
 			//+ !ReadHasMembers
 			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:172
 			//- !ReadHasMembers
-			this.BodySite.Read(this.Doc, this.Resource);                                                                                             // DefineBase.cs:82
 			//+ !ReadComponents
 			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:177
 			//- !ReadComponents

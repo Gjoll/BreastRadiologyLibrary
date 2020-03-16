@@ -58,32 +58,32 @@ namespace FireFragger.CS
         /// </summary>
         protected void DefineBodySite()
         {
-            String baseName = this.fragBase.StructDef.Differential.Element[0].Path;
-            String fhirPath = $"{baseName}.bodySite";
-            if (this.fragBase.DiffNodes.TryGetElementNode(fhirPath,
-                out ElementTreeNode bodySiteNode) == false)
-                return;
-            if (this.fragBase.DiffNodes.TryGetElementNode($"{fhirPath}.extension",
-                out ElementTreeNode bodySiteExtensionNode) == false)
-                return;
-            if (bodySiteExtensionNode.Slices.Count <= 1)
-                return;
-            Int32 min = bodySiteNode.ElementDefinition.Min.Value;
-            Int32 max = CSMisc.ToMax(bodySiteNode.ElementDefinition.Max);
-            if (max != 1)
-                throw new Exception($"Expected bodySite max of 1");
-            this.fragBase.ClassProperties
-                .AppendCode($"public TItemElementSingle<BodySiteExtended> BodySite {{ get; private set; }}")
-                ;
-            this.fragBase.ClassConstructor
-                .AppendCode($"this.BodySite = new TItemElementSingle<BodySiteExtended>(\"{fhirPath}\", {min}, {max});")
-                ;
-            this.fragBase.ClassReadCode
-                .AppendCode($"this.BodySite.Read(this.Doc, this.Resource);")
-                ;
-            this.fragBase.ClassWriteCode
-                .AppendCode($"this.BodySite.Write(this.Doc, this.Resource);")
-                ;
+            //$String baseName = this.fragBase.StructDef.Differential.Element[0].Path;
+            //String fhirPath = $"{baseName}.bodySite";
+            //if (this.fragBase.DiffNodes.TryGetElementNode(fhirPath,
+            //    out ElementTreeNode bodySiteNode) == false)
+            //    return;
+            //if (this.fragBase.DiffNodes.TryGetElementNode($"{fhirPath}.extension",
+            //    out ElementTreeNode bodySiteExtensionNode) == false)
+            //    return;
+            //if (bodySiteExtensionNode.Slices.Count <= 1)
+            //    return;
+            //Int32 min = bodySiteNode.ElementDefinition.Min.Value;
+            //Int32 max = CSMisc.ToMax(bodySiteNode.ElementDefinition.Max);
+            //if (max != 1)
+            //    throw new Exception($"Expected bodySite max of 1");
+            //this.fragBase.ClassProperties
+            //    .AppendCode($"public TItemElementSingle<BodySiteExtended> BodySite {{ get; private set; }}")
+            //    ;
+            //this.fragBase.ClassConstructor
+            //    .AppendCode($"this.BodySite = new TItemElementSingle<BodySiteExtended>(\"{fhirPath}\", {min}, {max});")
+            //    ;
+            //this.fragBase.ClassReadCode
+            //    .AppendCode($"this.BodySite.Read(this.Doc, this.Resource);")
+            //    ;
+            //this.fragBase.ClassWriteCode
+            //    .AppendCode($"this.BodySite.Write(this.Doc, this.Resource);")
+            //    ;
         }
 
         public virtual void Build()
