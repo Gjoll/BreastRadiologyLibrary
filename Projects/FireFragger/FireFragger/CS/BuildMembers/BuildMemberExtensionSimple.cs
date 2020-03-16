@@ -40,7 +40,29 @@ namespace FireFragger.CS.BuildMembers
                 ;
         }
 
-        protected override void BuildRead(CodeBlockNested b)
+        protected override void BuildItemRead(CodeBlockNested b)
+        {
+            b
+                .BlankLine()
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .OpenBrace()
+                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .CloseBrace()
+                ;
+        }
+
+        protected override void BuildItemWrite(CodeBlockNested b)
+        {
+            b
+                .BlankLine()
+                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .OpenBrace()
+                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .CloseBrace()
+                ;
+        }
+
+        protected override void BuildContainerRead(CodeBlockNested b)
         {
             b
                .BlankLine()
@@ -52,7 +74,11 @@ namespace FireFragger.CS.BuildMembers
                .AppendCode($"    ;")
                .AppendCode($"List<Item> items = new List<Item>();")
                .AppendCode($"foreach (Extension myExtension in myExtensions)")
-               .AppendCode($"    items.Add(new Item(({this.ElementGetName}) myExtension.Value));")
+               .OpenBrace()
+               .AppendCode($"    Item item = new Item();")
+               .AppendCode($"    item.Value = ({this.ElementGetName}) myExtension.Value;")
+               .AppendCode($"    items.Add(item);")
+               .CloseBrace()
                .AppendCode($"this.SetAllItems(items);")
                .CloseBrace()
                ;
@@ -62,7 +88,7 @@ namespace FireFragger.CS.BuildMembers
                 ;
         }
 
-        protected override void BuildWrite(CodeBlockNested b)
+        protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")

@@ -29,22 +29,22 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
-		                                                                                                                                          // BuildMemberBase.cs:349
-		// Called from BuildMemberComponents.cs, Line 179
-		// BuildMemberBase.cs:351
+		                                                                                                                                          // BuildMemberBase.cs:374
+		// Called from BuildMemberComponents.cs, Line 206
+		// BuildMemberBase.cs:376
 		/// <summary>
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:355
-		                                                                                                                                          // BuildMemberBase.cs:349
-		// Called from BuildMemberComponents.cs, Line 179
-		// BuildMemberBase.cs:351
+		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:380
+		                                                                                                                                          // BuildMemberBase.cs:374
+		// Called from BuildMemberComponents.cs, Line 206
+		// BuildMemberBase.cs:376
 		/// <summary>
 		/// FeatureType
 		/// Access fhir element 'Observation.component:featureType'
 		/// </summary>
-		public FeatureTypeContainer FeatureType { get ; protected set; }                                                                          // BuildMemberBase.cs:355
+		public FeatureTypeContainer FeatureType { get ; protected set; }                                                                          // BuildMemberBase.cs:380
 		//- Properties
 
 		/// <summary>
@@ -89,10 +89,10 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:220
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
-			// Called from BuildMemberComponents.cs, Line 179
-			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:334
-			// Called from BuildMemberComponents.cs, Line 179
-			this.FeatureType = new FeatureTypeContainer(1, 1);                                                                                       // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 206
+			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:359
+			// Called from BuildMemberComponents.cs, Line 206
+			this.FeatureType = new FeatureTypeContainer(1, 1);                                                                                       // BuildMemberBase.cs:359
 			//- Constructor
 		}
 
@@ -123,7 +123,7 @@ namespace BreastRadLib
 			//+ WriteCode
 			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
 			//+ !WriteComponents
-			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:141
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:168
 			//- !WriteComponents
 			//- WriteCode
 		}
@@ -139,7 +139,7 @@ namespace BreastRadLib
 			//+ ReadCode
 			this.BodySite.Read(this.Doc, this.Resource);                                                                                             // DefineBase.cs:82
 			//+ !ReadComponents
-			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:150
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:177
 			//- !ReadComponents
 			//- ReadCode
 		}
@@ -167,35 +167,35 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "Associated Features observation";                                                                         // FhirConstruct.cs:821
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
-			                                                                                                                                         // BuildMemberComponents.cs:105
+			                                                                                                                                         // BuildMemberComponents.cs:132
 		//+ !Components
-			                                                                                                                                         // BuildMemberComponents.cs:108
-			// BuildMemberComponents.cs:109
+			                                                                                                                                         // BuildMemberComponents.cs:135
+			// BuildMemberComponents.cs:136
 			/// <summary>
 			/// Read all component values from resource into this instance
 			/// </summary>
-			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:112
-			{                                                                                                                                        // BuildMemberComponents.cs:113
-			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:114
+			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:139
+			{                                                                                                                                        // BuildMemberComponents.cs:140
+			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:141
 			    //+ ReadComponents
-			    this.ObsCount.Read(this.Doc, items);                                                                                                 // BuildMemberComponents.cs:63
-			    this.FeatureType.Read(this.Doc, items);                                                                                              // BuildMemberComponents.cs:63
+			    this.ObsCount.Read(this.Doc, items);                                                                                                 // BuildMemberComponents.cs:90
+			    this.FeatureType.Read(this.Doc, items);                                                                                              // BuildMemberComponents.cs:90
 			    //- ReadComponents
-			}                                                                                                                                        // BuildMemberComponents.cs:116
-			                                                                                                                                         // BuildMemberComponents.cs:118
-			// BuildMemberComponents.cs:119
+			}                                                                                                                                        // BuildMemberComponents.cs:143
+			                                                                                                                                         // BuildMemberComponents.cs:145
+			// BuildMemberComponents.cs:146
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>
-			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:122
-			{                                                                                                                                        // BuildMemberComponents.cs:123
-			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:124
+			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:149
+			{                                                                                                                                        // BuildMemberComponents.cs:150
+			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:151
 			    //+ WriteComponents
-			    items.AddRange(this.ObsCount.Write(this.Doc));                                                                                       // BuildMemberComponents.cs:85
-			    items.AddRange(this.FeatureType.Write(this.Doc));                                                                                    // BuildMemberComponents.cs:85
+			    items.AddRange(this.ObsCount.Write(this.Doc));                                                                                       // BuildMemberComponents.cs:112
+			    items.AddRange(this.FeatureType.Write(this.Doc));                                                                                    // BuildMemberComponents.cs:112
 			    //- WriteComponents
-			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:126
-			}                                                                                                                                        // BuildMemberComponents.cs:127
+			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:153
+			}                                                                                                                                        // BuildMemberComponents.cs:154
 		//- !Components
 		//- Methods
 	}

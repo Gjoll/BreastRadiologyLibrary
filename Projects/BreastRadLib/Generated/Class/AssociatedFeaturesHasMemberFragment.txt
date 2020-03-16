@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:349
-		// Called from BuildMemberReferences.cs, Line 176
-		// BuildMemberBase.cs:351
+		                                                                                                                                          // BuildMemberBase.cs:374
+		// Called from BuildMemberReferences.cs, Line 199
+		// BuildMemberBase.cs:376
 		/// <summary>
 		/// AssociatedFeature
 		/// Access fhir element 'Observation.hasMember:associatedFeature'
 		/// </summary>
-		public AssociatedFeatureContainer AssociatedFeature { get ; protected set; }                                                              // BuildMemberBase.cs:355
+		public AssociatedFeatureContainer AssociatedFeature { get ; protected set; }                                                              // BuildMemberBase.cs:380
 		//- Properties
 
 			//+ Constructor
-			// Called from BuildMemberReferences.cs, Line 176
-			this.AssociatedFeature = new AssociatedFeatureContainer(0, 0);                                                                           // BuildMemberBase.cs:334
+			// Called from BuildMemberReferences.cs, Line 199
+			this.AssociatedFeature = new AssociatedFeatureContainer(0, 0);                                                                           // BuildMemberBase.cs:359
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -23,7 +23,7 @@
 			//- WriteCodeStart
 			//+ WriteCode
 			//+ !WriteHasMembers
-			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:140
+			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:163
 			//- !WriteHasMembers
 			//- WriteCode
 
@@ -31,37 +31,37 @@
 			//- ReadCodeStart
 			//+ ReadCode
 			//+ !ReadHasMembers
-			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:149
+			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:172
 			//- !ReadHasMembers
 			//- ReadCode
 
 			//+ Methods
-			                                                                                                                                         // BuildMemberReferences.cs:104
+			                                                                                                                                         // BuildMemberReferences.cs:127
 			//+ !HasMembers
-			                                                                                                                                         // BuildMemberReferences.cs:107
-			// BuildMemberReferences.cs:108
+			                                                                                                                                         // BuildMemberReferences.cs:130
+			// BuildMemberReferences.cs:131
 			/// <summary>
 			/// Read all values from resource into this instance
 			/// </summary>
-			private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:111
-			{                                                                                                                                        // BuildMemberReferences.cs:112
-			    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                     // BuildMemberReferences.cs:113
+			private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:134
+			{                                                                                                                                        // BuildMemberReferences.cs:135
+			    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                     // BuildMemberReferences.cs:136
 			    //+ ReadHasMembers
-			    this.AssociatedFeature.Read(this.Doc, items);                                                                                        // BuildMemberReferences.cs:63
+			    this.AssociatedFeature.Read(this.Doc, items);                                                                                        // BuildMemberReferences.cs:86
 			    //- ReadHasMembers
-			}                                                                                                                                        // BuildMemberReferences.cs:115
-			                                                                                                                                         // BuildMemberReferences.cs:117
-			// BuildMemberReferences.cs:118
+			}                                                                                                                                        // BuildMemberReferences.cs:138
+			                                                                                                                                         // BuildMemberReferences.cs:140
+			// BuildMemberReferences.cs:141
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>
-			private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                // BuildMemberReferences.cs:121
-			{                                                                                                                                        // BuildMemberReferences.cs:122
-			    List<ResourceReference> items = new List<ResourceReference>();                                                                       // BuildMemberReferences.cs:123
+			private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                // BuildMemberReferences.cs:144
+			{                                                                                                                                        // BuildMemberReferences.cs:145
+			    List<ResourceReference> items = new List<ResourceReference>();                                                                       // BuildMemberReferences.cs:146
 			    //+ WriteHasMembers
-			    items.AddRange(this.AssociatedFeature.Write(this.Doc));                                                                              // BuildMemberReferences.cs:84
+			    items.AddRange(this.AssociatedFeature.Write(this.Doc));                                                                              // BuildMemberReferences.cs:107
 			    //- WriteHasMembers
-			    this.Resource.SetValue("hasMember", items);                                                                                          // BuildMemberReferences.cs:125
-			}                                                                                                                                        // BuildMemberReferences.cs:126
+			    this.Resource.SetValue("hasMember", items);                                                                                          // BuildMemberReferences.cs:148
+			}                                                                                                                                        // BuildMemberReferences.cs:149
 			//- !HasMembers
 			//- Methods

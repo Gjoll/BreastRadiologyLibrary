@@ -18,12 +18,12 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberReferences.cs, Line 176
-		// BuildMemberBase.cs:341
+		// Called from BuildMemberReferences.cs, Line 199
+		// BuildMemberBase.cs:366
 		/// <summary>
 		/// TumorSatellite
 		/// </summary>
-		TumorSatelliteContainer TumorSatellite { get ; }                                                                                          // BuildMemberBase.cs:344
+		TumorSatelliteContainer TumorSatellite { get ; }                                                                                          // BuildMemberBase.cs:369
 		//- Properties
 
 		//+ Methods

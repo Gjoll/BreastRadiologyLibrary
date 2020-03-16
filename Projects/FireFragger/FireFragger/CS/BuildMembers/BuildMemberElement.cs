@@ -34,7 +34,29 @@ namespace FireFragger.CS.BuildMembers
             base.BuildContainerClassLocal(itemCodeBlocks);
         }
 
-        protected override void BuildRead(CodeBlockNested b)
+        protected override void BuildItemRead(CodeBlockNested b)
+        {
+            b
+                .BlankLine()
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .OpenBrace()
+                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .CloseBrace()
+                ;
+        }
+
+        protected override void BuildItemWrite(CodeBlockNested b)
+        {
+            b
+                .BlankLine()
+                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .OpenBrace()
+                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .CloseBrace()
+                ;
+        }
+
+        protected override void BuildContainerRead(CodeBlockNested b)
         {
             b
                 .BlankLine()
@@ -52,7 +74,7 @@ namespace FireFragger.CS.BuildMembers
             //    ;
         }
 
-        protected override void BuildWrite(CodeBlockNested b)
+        protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")

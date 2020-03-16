@@ -17,18 +17,18 @@ namespace BreastRadLib
 	public interface IObservedDistributionFragment 
 	{
 		//+ Properties
-		// Called from BuildMemberComponents.cs, Line 179
-		// BuildMemberBase.cs:341
+		// Called from BuildMemberComponents.cs, Line 206
+		// BuildMemberBase.cs:366
 		/// <summary>
 		/// ObsDistribution
 		/// </summary>
-		ObsDistributionContainer ObsDistribution { get ; }                                                                                        // BuildMemberBase.cs:344
-		// Called from BuildMemberComponents.cs, Line 179
-		// BuildMemberBase.cs:341
+		ObsDistributionContainer ObsDistribution { get ; }                                                                                        // BuildMemberBase.cs:369
+		// Called from BuildMemberComponents.cs, Line 206
+		// BuildMemberBase.cs:366
 		/// <summary>
 		/// ObsDistRegionSize
 		/// </summary>
-		ObsDistRegionSizeContainer ObsDistRegionSize { get ; }                                                                                    // BuildMemberBase.cs:344
+		ObsDistRegionSizeContainer ObsDistRegionSize { get ; }                                                                                    // BuildMemberBase.cs:369
 		//- Properties
 
 		//+ Methods

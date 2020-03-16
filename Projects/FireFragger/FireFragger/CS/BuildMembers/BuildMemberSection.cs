@@ -44,7 +44,29 @@ namespace FireFragger.CS.BuildMembers
             FhirConstruct.Construct(itemCodeBlocks.ClassMethods, sectionCode, sectionCodeMethodName, out String dummy);
         }
 
-        protected override void BuildRead(CodeBlockNested b)
+        protected override void BuildItemRead(CodeBlockNested b)
+        {
+            b
+                .BlankLine()
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, Composition.SectionComponent section)")
+                .OpenBrace()
+                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .CloseBrace()
+                ;
+        }
+
+        protected override void BuildItemWrite(CodeBlockNested b)
+        {
+            b
+                .BlankLine()
+                .AppendCode($"public void Write(BreastRadiologyDocument doc, Composition.SectionComponent section)")
+                .OpenBrace()
+                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .CloseBrace()
+                ;
+        }
+
+        protected override void BuildContainerRead(CodeBlockNested b)
         {
             b
                 .BlankLine()
@@ -56,7 +78,8 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"List<Item> items = new List<Item>();")
                 .AppendCode($"foreach (ResourceBase resource in resources)")
                 .OpenBrace()
-                .AppendCode($"Item item = new Item(({this.itemElementGetName}) resource);")
+                .AppendCode($"Item item = new Item();")
+                .AppendCode($"item.Value = ({this.itemElementGetName}) resource;")
                 .AppendCode($"items.Add(item);")
                 .CloseBrace()
                 .AppendCode($"this.SetAllItems(items);")
@@ -68,7 +91,7 @@ namespace FireFragger.CS.BuildMembers
                 ;
         }
 
-        protected override void BuildWrite(CodeBlockNested b)
+        protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
                 .AppendCode("public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)")

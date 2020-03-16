@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:349
-		// Called from BuildMemberComponents.cs, Line 179
-		// BuildMemberBase.cs:351
+		                                                                                                                                          // BuildMemberBase.cs:374
+		// Called from BuildMemberComponents.cs, Line 206
+		// BuildMemberBase.cs:376
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// Access fhir element 'Observation.component:biRadsAssessmentCategory'
 		/// </summary>
-		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:355
+		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:380
 		//- Properties
 
 			//+ Constructor
-			// Called from BuildMemberComponents.cs, Line 179
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 206
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:359
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -23,7 +23,7 @@
 			//- WriteCodeStart
 			//+ WriteCode
 			//+ !WriteComponents
-			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:141
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:168
 			//- !WriteComponents
 			//- WriteCode
 
@@ -31,37 +31,37 @@
 			//- ReadCodeStart
 			//+ ReadCode
 			//+ !ReadComponents
-			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:150
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:177
 			//- !ReadComponents
 			//- ReadCode
 
 			//+ Methods
-			                                                                                                                                         // BuildMemberComponents.cs:105
+			                                                                                                                                         // BuildMemberComponents.cs:132
 			//+ !Components
-			                                                                                                                                         // BuildMemberComponents.cs:108
-			// BuildMemberComponents.cs:109
+			                                                                                                                                         // BuildMemberComponents.cs:135
+			// BuildMemberComponents.cs:136
 			/// <summary>
 			/// Read all component values from resource into this instance
 			/// </summary>
-			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:112
-			{                                                                                                                                        // BuildMemberComponents.cs:113
-			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:114
+			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:139
+			{                                                                                                                                        // BuildMemberComponents.cs:140
+			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:141
 			    //+ ReadComponents
-			    this.BiRadsAssessmentCategory.Read(this.Doc, items);                                                                                 // BuildMemberComponents.cs:63
+			    this.BiRadsAssessmentCategory.Read(this.Doc, items);                                                                                 // BuildMemberComponents.cs:90
 			    //- ReadComponents
-			}                                                                                                                                        // BuildMemberComponents.cs:116
-			                                                                                                                                         // BuildMemberComponents.cs:118
-			// BuildMemberComponents.cs:119
+			}                                                                                                                                        // BuildMemberComponents.cs:143
+			                                                                                                                                         // BuildMemberComponents.cs:145
+			// BuildMemberComponents.cs:146
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>
-			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:122
-			{                                                                                                                                        // BuildMemberComponents.cs:123
-			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:124
+			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:149
+			{                                                                                                                                        // BuildMemberComponents.cs:150
+			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:151
 			    //+ WriteComponents
-			    items.AddRange(this.BiRadsAssessmentCategory.Write(this.Doc));                                                                       // BuildMemberComponents.cs:85
+			    items.AddRange(this.BiRadsAssessmentCategory.Write(this.Doc));                                                                       // BuildMemberComponents.cs:112
 			    //- WriteComponents
-			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:126
-			}                                                                                                                                        // BuildMemberComponents.cs:127
+			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:153
+			}                                                                                                                                        // BuildMemberComponents.cs:154
 			//- !Components
 			//- Methods

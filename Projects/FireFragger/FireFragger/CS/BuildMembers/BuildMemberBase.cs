@@ -72,35 +72,49 @@ namespace FireFragger.CS.BuildMembers
         protected virtual void BuildItemClass(String buildMsg)
         {
             this.itemCode
-                .AppendCode($"#region {this.pathName} Item Class")
-                .AppendLine($"// {buildMsg}")
-                .SummaryOpen()
-                .Summary($"Item class for {this.pathName}.")
-                .SummaryClose()
-                .AppendCode($"public class Item")
-                .OpenBrace()
-                .AppendCode($"// Properties")
-                .SummaryOpen()
-                .Summary($"Value")
-                .SummaryClose()
-                .AppendCode($"public {ElementGetName} Value {{ get; set; }}")
-                .DefineBlock(out itemCodeBlocks.ClassProperties)
-                .BlankLine()
-                .SummaryOpen()
-                .Summary($"Constructor")
-                .SummaryClose()
-                .AppendCode($"public Item({ElementGetName} value)")
-                .OpenBrace()
-                .AppendCode($"this.Value = value;")
-                .DefineBlock(out itemCodeBlocks.ClassConstructor)
-                .CloseBrace()
+                 .AppendCode($"#region {this.pathName} Item Class")
+                 .AppendLine($"// {buildMsg}")
+                 .SummaryOpen()
+                 .Summary($"Item class for {this.pathName}.")
+                 .SummaryClose()
+                 .AppendCode($"public class Item")
+                 .OpenBrace()
+                 .AppendCode($"// Properties")
+                 .SummaryOpen()
+                 .Summary($"Value")
+                 .SummaryClose()
+                 .AppendCode($"public {ElementGetName} Value {{ get; set; }}")
+                 .DefineBlock(out itemCodeBlocks.ClassProperties)
+   
+                 .BlankLine()
+                 .SummaryOpen()
+                 .Summary($"Constructor")
+                 .SummaryClose()
+                 .AppendCode($"public Item()")
+                 .OpenBrace()
+                 .DefineBlock(out itemCodeBlocks.ClassConstructor)
+                 .CloseBrace()
+
+                 .BlankLine()
+                 .AppendCode($"// Methods")
 
                 .BlankLine()
-                .AppendCode($"// Methods")
+                .SummaryOpen()
+                .Summary("Write item.")
+                .SummaryClose()
+                .Call(BuildItemWrite)
+
+                .BlankLine()
+                .SummaryOpen()
+                .Summary("Read item.")
+                .SummaryClose()
+                .Call(BuildItemRead)
+
                 .DefineBlock(out itemCodeBlocks.ClassMethods)
                 .CloseBrace()
                 .AppendCode($"#endregion")
                 ;
+
             BuildItemClassLocal(this.itemCodeBlocks);
         }
 
@@ -111,8 +125,11 @@ namespace FireFragger.CS.BuildMembers
         {
         }
 
-        protected abstract void BuildWrite(CodeBlockNested b);
-        protected abstract void BuildRead(CodeBlockNested b);
+        protected abstract void BuildItemWrite(CodeBlockNested b);
+        protected abstract void BuildItemRead(CodeBlockNested b);
+
+        protected abstract void BuildContainerWrite(CodeBlockNested b);
+        protected abstract void BuildContainerRead(CodeBlockNested b);
 
         protected void BuildTargeturls(CodeBlockNested containerPropertiesBlock,
             List<String> targetProfiles)
@@ -145,9 +162,11 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"public class {this.ContainerClassName} : MContainer, ITMItem<{FhirClassName}> ")
                 .OpenBrace()
                 .DefineBlock(out this.itemCode)
+
                 .BlankLine()
                 .AppendCode($"// Properties")
                 .DefineBlock(out this.containerCodeBlocks.ClassProperties)
+
                 .BlankLine()
                 .SummaryOpen()
                 .Summary($"Constructor")
@@ -156,6 +175,7 @@ namespace FireFragger.CS.BuildMembers
                 .OpenBrace()
                 .DefineBlock(out this.containerCodeBlocks.ClassConstructor)
                 .CloseBrace()
+
                 .BlankLine()
                 .AppendCode($"// Methods")
                 .DefineBlock(out this.containerCodeBlocks.ClassMethods)
@@ -169,6 +189,7 @@ namespace FireFragger.CS.BuildMembers
             {
                 this.containerCodeBlocks.ClassProperties
                     .AppendCode($"#region Common Singleton Properties")
+
                     .BlankLine()
                     .SummaryOpen()
                     .Summary($"Get All Items")
@@ -225,7 +246,9 @@ namespace FireFragger.CS.BuildMembers
                         .SummaryClose()
                         .AppendCode($"public {elementSetName} Set({elementSetName} value)")
                         .OpenBrace()
-                        .AppendCode($"this.item = new Item(value);")
+                        .AppendCode($"Item item = new Item();")
+                        .AppendCode($"item.Value = value;")
+                        .AppendCode($"this.item = item;")
                         .AppendCode($"return value;")
                         .CloseBrace()
                         ;
@@ -293,7 +316,9 @@ namespace FireFragger.CS.BuildMembers
                         .SummaryClose()
                         .AppendCode($"public {elementSetName} Append({elementSetName} value)")
                         .OpenBrace()
-                        .AppendCode($"this.items.Add(new Item(value));")
+                        .AppendCode($"Item item = new Item();")
+                        .AppendCode($"item.Value = value;")
+                        .AppendCode($"this.items.Add(item);")
                         .AppendCode($"return value;")
                         .CloseBrace()
                         ;
@@ -307,15 +332,15 @@ namespace FireFragger.CS.BuildMembers
             this.containerCodeBlocks.ClassMethods
                .BlankLine()
                .SummaryOpen()
-               .Summary("Write single item as a fhir element.")
+               .Summary("Write container items.")
                .SummaryClose()
-               .Call(BuildWrite)
+               .Call(BuildContainerWrite)
 
                .BlankLine()
                .SummaryOpen()
-               .Summary("Read data from fhir element into member item.")
+               .Summary("Read container items.")
                .SummaryClose()
-               .Call(BuildRead)
+               .Call(BuildContainerRead)
                ;
         }
 
