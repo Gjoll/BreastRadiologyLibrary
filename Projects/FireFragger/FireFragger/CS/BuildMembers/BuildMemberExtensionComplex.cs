@@ -55,16 +55,16 @@ namespace FireFragger.CS.BuildMembers
             b
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
-               .AppendCode($"throw new NotImplementedException();")
-               //.AppendCode($"foreach (Item item in this.GetAllItems())")
-               //.OpenBrace()
-               //.AppendCode($"{FhirClassName} component = new {FhirClassName}")
-               //.OpenBrace()
+               .AppendCode($"foreach (Item item in this.GetAllItems())")
+               .OpenBrace()
+               .DefineBlock(out this.itemCodeBlocks.ClassWriteCode)
+               .AppendCode($"{FhirClassName} extension = new {FhirClassName}")
+               .OpenBrace()
                //.AppendCode($"Value = item.Value,")
                //.AppendCode($"Code = {componentCodeMethodName}()")
-               //.CloseBrace(";")
-               //.AppendCode($"yield return component;")
-               //.CloseBrace()
+               .CloseBrace(";")
+               .AppendCode($"yield return extension;")
+               .CloseBrace()
                .CloseBrace()
                ;
 
@@ -77,6 +77,9 @@ namespace FireFragger.CS.BuildMembers
         {
             ClassCodeBlocks itemClassBlocks = new ClassCodeBlocks();
 
+            ElementTreeNode urlNode = extensionSlice.Nodes["url"];
+            String extensionUrl = ((FhirUri)urlNode.ElementDefinition.Fixed).Value;
+
             this.itemCode
                 .SummaryOpen()
                 .Summary($"Extension Item class for {this.extensionName}.")
@@ -84,6 +87,7 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"public class {ElementGetName}")
                 .OpenBrace()
                 .AppendCode($"// Definitions")
+                .AppendCode($"public const String ExtensionUrl = \"{extensionUrl}\";")
                 .DefineBlock(out itemClassBlocks.LocalClassDefs)
                 .AppendCode($"// Properties")
                 .DefineBlock(out itemClassBlocks.ClassProperties)
@@ -99,6 +103,31 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .AppendCode($"// Methods")
                 .DefineBlock(out itemClassBlocks.ClassMethods)
+
+                .BlankLine()
+                .SummaryOpen()
+                .Summary("Write item as a fhir element.")
+                .SummaryClose()
+                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+                .OpenBrace()
+                .AppendCode($"List<Extension> items = new List<Extension>();")
+                .DefineBlock(out itemClassBlocks.ClassWriteCode)
+                .AppendCode($"yield return new {FhirClassName}")
+                .OpenBrace()
+                .AppendCode($"Url = ExtensionUrl,")
+                .AppendCode($"Extension = items")
+                .CloseBrace(";")
+                .CloseBrace()
+
+                .BlankLine()
+                .SummaryOpen()
+                .Summary("Read from fhir element into member item.")
+                .SummaryClose()
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
+                .OpenBrace()
+                .DefineBlock(out itemClassBlocks.ClassReadCode)
+                .CloseBrace()
+
                 .CloseBrace()
                 ;
 
