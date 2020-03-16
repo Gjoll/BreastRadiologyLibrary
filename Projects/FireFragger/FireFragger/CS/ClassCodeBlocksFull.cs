@@ -16,9 +16,7 @@ namespace FireFragger.CS
         public CodeBlockNested ClassMethods;
         public CodeBlockNested ClassValidateCodeStart;
         public CodeBlockNested ClassValidateCode;
-        public CodeBlockNested ClassWriteCodeStart;
         public CodeBlockNested ClassWriteCode;
-        public CodeBlockNested ClassReadCodeStart;
         public CodeBlockNested ClassReadCode;
 
         public CodeBlockNested LocalClassDefs;
@@ -38,9 +36,7 @@ namespace FireFragger.CS
             retVal.ClassMethods = classEditor?.Blocks.Find("Methods", false);
             retVal.ClassValidateCodeStart = classEditor?.Blocks.Find("ValidateCodeStart", false);
             retVal.ClassValidateCode = classEditor?.Blocks.Find("ValidateCode", false);
-            retVal.ClassWriteCodeStart = classEditor?.Blocks.Find("WriteCodeStart", false);
             retVal.ClassWriteCode = classEditor?.Blocks.Find("WriteCode", false);
-            retVal.ClassReadCodeStart = classEditor?.Blocks.Find("ReadCodeStart", false);
             retVal.ClassReadCode = classEditor?.Blocks.Find("ReadCode", false);
 
             retVal.LocalClassDefs = subClassEditor?.Blocks.Find("LocalClassDefs", false);

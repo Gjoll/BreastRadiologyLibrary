@@ -28,9 +28,7 @@ namespace FireFragger.CS
         public CodeBlockNested ClassMethods => CodeBlocks.ClassMethods;
         public CodeBlockNested ClassValidateCodeStart => CodeBlocks.ClassValidateCodeStart;
         public CodeBlockNested ClassValidateCode => CodeBlocks.ClassValidateCode;
-        public CodeBlockNested ClassWriteCodeStart => CodeBlocks.ClassWriteCodeStart;
         public CodeBlockNested ClassWriteCode => CodeBlocks.ClassWriteCode;
-        public CodeBlockNested ClassReadCodeStart => CodeBlocks.ClassReadCodeStart;
         public CodeBlockNested ClassReadCode => CodeBlocks.ClassReadCode;
 
         public CodeBlockNested LocalClassDefs => CodeBlocks.LocalClassDefs;

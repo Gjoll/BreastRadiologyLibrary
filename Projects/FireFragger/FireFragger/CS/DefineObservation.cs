@@ -60,8 +60,6 @@ namespace FireFragger.CS
             this.DefineBodySite();
             this.DefineComponents();
             this.DefineHasMembers();
-            ClearDuplicateLines(this.fragBase.ClassWriteCodeStart);
-            ClearDuplicateLines(this.fragBase.ClassReadCodeStart);
             this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");

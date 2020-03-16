@@ -22,12 +22,6 @@ namespace FireFragger.CS
 
         public void DefineStart()
         {
-            if (this.codeBlocks.ClassWriteCodeStart != null)
-            {
-                this.codeBlocks.ClassWriteCodeStart
-                    ?.AppendCode($"this.ClearExtensions();")
-                    ;
-            }
         }
 
         void Define(String extensionName,
@@ -506,7 +500,7 @@ namespace FireFragger.CS
             String GetExtensionUrl()
             {
                 ElementTreeNode urlNode = extensionSlice.Nodes["url"];
-                return ((FhirUrl)urlNode.ElementDefinition.Fixed).Value;
+                return ((FhirUri)urlNode.ElementDefinition.Fixed).Value;
             }
 
             void GetValueNode(out String typeCode,
