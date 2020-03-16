@@ -14,6 +14,7 @@ using System.Globalization;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using BreastRadLib;
+using BreastRadLib.BodyDistanceFromExtensionLocal;
 
 namespace BreastRadiology.XUnitTests
 {
@@ -121,7 +122,7 @@ namespace BreastRadiology.XUnitTests
                 }
                 Assert.IsTrue(doc.Index.Recommendations.Count == 2);
                 {
-                    ServiceRecommendation rec = doc.Index.Recommendations.GetAt(0)  as ServiceRecommendation;
+                    ServiceRecommendation rec = doc.Index.Recommendations.GetAt(0) as ServiceRecommendation;
                     Assert.IsTrue(rec != null);
                     Assert.IsTrue(rec.Resource.Meta.Profile.Count() == 1);
                     Assert.IsTrue(rec.Resource.Meta.Profile.First() == "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendation");
@@ -208,6 +209,35 @@ namespace BreastRadiology.XUnitTests
                 MGAbnormalityAsymmetry[] asymmetry = mgFinding.MGAbnormalityAsymmetry.All().ToArray();
                 Assert.IsTrue(asymmetry.Length == 3);
             }
+        }
+
+        [TestMethod]
+        public void E_BodyDistanceFromExtension()
+        {
+            IEnumerable<Extension> Write()
+            {
+                BreastRadiologyDocument doc = MakeDoc();
+                BodyDistanceFromExtensionCollection bdc = new BodyDistanceFromExtensionCollection(0, 10);
+                {
+                    BodyDistanceFromExtensionCollection.BodyDistanceFromExtension item = bdc.Append(new BodyDistanceFromExtensionCollection.BodyDistanceFromExtension());
+                    item.DistanceFromLandMark.Set(new Quantity(1, "m"));
+                }
+                {
+                    BodyDistanceFromExtensionCollection.BodyDistanceFromExtension item = bdc.Append(new BodyDistanceFromExtensionCollection.BodyDistanceFromExtension());
+                    item.DistanceFromLandMark.Set(new Quantity(2, "m"));
+                }
+                return bdc.Write(doc);
+            }
+
+            BodyDistanceFromExtensionCollection Read(IEnumerable<Extension> extensions)
+            {
+                BreastRadiologyDocument doc = MakeDoc();
+                BodyDistanceFromExtensionCollection bdc = new BodyDistanceFromExtensionCollection(0, 10);
+                bdc.Read(doc, extensions);
+                return bdc;
+            }
+            IEnumerable<Extension> extensions = Write();
+            BodyDistanceFromExtensionCollection bdc = Read(extensions);
         }
 
         [TestMethod]

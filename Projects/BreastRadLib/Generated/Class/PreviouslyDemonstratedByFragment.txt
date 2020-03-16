@@ -1,14 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:337
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// Access fhir element 'Observation.component:PreviouslyDemonstratedBy'
 		/// </summary>
-		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:342
+		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:355
 		//- Properties
 
 			//+ Constructor
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:323
+			// Called from BuildMemberComponents.cs, Line 179
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:334
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -36,6 +39,7 @@
 			                                                                                                                                         // BuildMemberComponents.cs:105
 			//+ !Components
 			                                                                                                                                         // BuildMemberComponents.cs:108
+			// BuildMemberComponents.cs:109
 			/// <summary>
 			/// Read all component values from resource into this instance
 			/// </summary>
@@ -47,6 +51,7 @@
 			    //- ReadComponents
 			}                                                                                                                                        // BuildMemberComponents.cs:116
 			                                                                                                                                         // BuildMemberComponents.cs:118
+			// BuildMemberComponents.cs:119
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>

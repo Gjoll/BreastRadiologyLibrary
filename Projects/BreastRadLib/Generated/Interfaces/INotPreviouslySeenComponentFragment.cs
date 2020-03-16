@@ -18,10 +18,12 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:341
 		/// <summary>
 		/// NotPreviouslySeen
 		/// </summary>
-		NotPreviouslySeenContainer NotPreviouslySeen { get ; }                                                                                    // BuildMemberBase.cs:332
+		NotPreviouslySeenContainer NotPreviouslySeen { get ; }                                                                                    // BuildMemberBase.cs:344
 		//- Properties
 
 		//+ Methods

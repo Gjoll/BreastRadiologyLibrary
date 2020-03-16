@@ -112,6 +112,7 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
+		// DefineBase.cs:137
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -133,6 +134,7 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "MG Breast Density observation";                                                                           // FhirConstruct.cs:821
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
+		// DefineBase.cs:181
 		/// <summary>
 		/// Set Observation.value[x] to one of the predefined items
 		/// </summary>

@@ -29,18 +29,31 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildContainerClassLocal(ClassCodeBlocks itemCodeBlocks)
         {
             base.BuildContainerClassLocal(itemCodeBlocks);
+
+            ElementTreeNode urlNode = extensionSlice.Nodes["url"];
+            String extensionUrl = ((FhirUri)urlNode.ElementDefinition.Fixed).Value;
+            itemCodeBlocks.ClassProperties
+                .AppendCode($"public const String ExtensionUrl = \"{extensionUrl}\";")
+                ;
         }
 
         protected override void BuildRead(CodeBlockNested b)
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> components)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
                 .OpenBrace()
                 .AppendCode($"throw new NotImplementedException();")
+                //.AppendCode($"IEnumerable<Extension> extensions = base.IsMember(doc,")
+                //.AppendCode($"    extensions,")
+                //.AppendCode($"    ExtensionUrl);")
                 //.AppendCode($"List<Item> items = new List<Item>();")
-                //.AppendCode($"foreach (Element element in elements)")
-                //.AppendCode($"    items.Add(new Item(({this.ElementGetName}) element));")
+                //.AppendCode($"foreach (Extension extension in extensions)")
+                //.OpenBrace()
+                //.AppendCode($"    Item item = new Item();")
+                //.AppendCode($"    item.Read(extension);")
+                //.AppendCode($"    items.Add(item);")
+                //.CloseBrace()
                 //.AppendCode($"this.SetAllItems(items);")
                 .CloseBrace()
                 ;
@@ -55,16 +68,16 @@ namespace FireFragger.CS.BuildMembers
             b
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
-               .AppendCode($"foreach (Item item in this.GetAllItems())")
-               .OpenBrace()
-               .DefineBlock(out this.itemCodeBlocks.ClassWriteCode)
-               .AppendCode($"{FhirClassName} extension = new {FhirClassName}")
-               .OpenBrace()
-               //.AppendCode($"Value = item.Value,")
-               //.AppendCode($"Code = {componentCodeMethodName}()")
-               .CloseBrace(";")
-               .AppendCode($"yield return extension;")
-               .CloseBrace()
+                .AppendCode($"throw new NotImplementedException();")
+               //.AppendCode($"foreach (Item item in this.GetAllItems())")
+               //.OpenBrace()
+               //.AppendCode($"{FhirClassName} extension = new {FhirClassName}")
+               //.OpenBrace()
+               //.AppendCode($"Url = ExtensionUrl")
+               //.CloseBrace(";")
+               //.AppendCode($"extension.Extension.AddRange(item.Value.Write(doc));")
+               //.AppendCode($"yield return extension;")
+               //.CloseBrace()
                .CloseBrace()
                ;
 
@@ -77,17 +90,13 @@ namespace FireFragger.CS.BuildMembers
         {
             ClassCodeBlocks itemClassBlocks = new ClassCodeBlocks();
 
-            ElementTreeNode urlNode = extensionSlice.Nodes["url"];
-            String extensionUrl = ((FhirUri)urlNode.ElementDefinition.Fixed).Value;
-
             this.itemCode
                 .SummaryOpen()
-                .Summary($"Extension Item class for {this.extensionName}.")
+                .Summary($"Extension class for {this.extensionName}.")
                 .SummaryClose()
                 .AppendCode($"public class {ElementGetName}")
                 .OpenBrace()
                 .AppendCode($"// Definitions")
-                .AppendCode($"public const String ExtensionUrl = \"{extensionUrl}\";")
                 .DefineBlock(out itemClassBlocks.LocalClassDefs)
                 .AppendCode($"// Properties")
                 .DefineBlock(out itemClassBlocks.ClassProperties)
@@ -140,6 +149,15 @@ namespace FireFragger.CS.BuildMembers
                     extensionSlice.ElementDefinition.SliceName);
                 bm.Build();
             }
+        }
+
+        /// <summary>
+        /// Child classes can overload this to do local processing of item class.
+        /// </summary>
+        protected override void BuildItemClassLocal(ClassCodeBlocks itemCodeBlocks)
+        {
+            base.BuildItemClassLocal(itemCodeBlocks);
+
         }
 
         public override void Build()

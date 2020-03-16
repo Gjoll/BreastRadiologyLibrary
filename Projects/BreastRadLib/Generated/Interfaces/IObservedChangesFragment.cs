@@ -17,10 +17,12 @@ namespace BreastRadLib
 	public interface IObservedChangesFragment 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:341
 		/// <summary>
 		/// ObsChanges
 		/// </summary>
-		ObsChangesContainer ObsChanges { get ; }                                                                                                  // BuildMemberBase.cs:332
+		ObsChangesContainer ObsChanges { get ; }                                                                                                  // BuildMemberBase.cs:344
 		//- Properties
 
 		//+ Methods

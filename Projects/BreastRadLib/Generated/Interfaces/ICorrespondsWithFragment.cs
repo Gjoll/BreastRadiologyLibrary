@@ -17,10 +17,12 @@ namespace BreastRadLib
 	public interface ICorrespondsWithFragment 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:341
 		/// <summary>
 		/// CorrespondsWith
 		/// </summary>
-		CorrespondsWithContainer CorrespondsWith { get ; }                                                                                        // BuildMemberBase.cs:332
+		CorrespondsWithContainer CorrespondsWith { get ; }                                                                                        // BuildMemberBase.cs:344
 		//- Properties
 
 		//+ Methods

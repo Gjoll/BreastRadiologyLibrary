@@ -1,14 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:337
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberReferences.cs, Line 176
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// ConsistentWith
 		/// Access fhir element 'Observation.hasMember:consistentWith'
 		/// </summary>
-		public ConsistentWithContainer ConsistentWith { get ; protected set; }                                                                    // BuildMemberBase.cs:342
+		public ConsistentWithContainer ConsistentWith { get ; protected set; }                                                                    // BuildMemberBase.cs:355
 		//- Properties
 
 			//+ Constructor
-			this.ConsistentWith = new ConsistentWithContainer(0, 0);                                                                                 // BuildMemberBase.cs:323
+			// Called from BuildMemberReferences.cs, Line 176
+			this.ConsistentWith = new ConsistentWithContainer(0, 0);                                                                                 // BuildMemberBase.cs:334
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -36,6 +39,7 @@
 			                                                                                                                                         // BuildMemberReferences.cs:104
 			//+ !HasMembers
 			                                                                                                                                         // BuildMemberReferences.cs:107
+			// BuildMemberReferences.cs:108
 			/// <summary>
 			/// Read all values from resource into this instance
 			/// </summary>
@@ -47,6 +51,7 @@
 			    //- ReadHasMembers
 			}                                                                                                                                        // BuildMemberReferences.cs:115
 			                                                                                                                                         // BuildMemberReferences.cs:117
+			// BuildMemberReferences.cs:118
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>

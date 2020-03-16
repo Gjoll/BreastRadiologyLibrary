@@ -26,18 +26,22 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:337
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// Value
 		/// Access fhir element 'Observation.component:value'
 		/// </summary>
-		public ValueContainer Value { get ; protected set; }                                                                                      // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public ValueContainer Value { get ; protected set; }                                                                                      // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// Qualifier
 		/// Access fhir element 'Observation.component:qualifier'
 		/// </summary>
-		public QualifierContainer Qualifier { get ; protected set; }                                                                              // BuildMemberBase.cs:342
+		public QualifierContainer Qualifier { get ; protected set; }                                                                              // BuildMemberBase.cs:355
 		//- Properties
 
 		/// <summary>
@@ -81,8 +85,10 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:220
-			this.Value = new ValueContainer(1, 1);                                                                                                   // BuildMemberBase.cs:323
-			this.Qualifier = new QualifierContainer(0, 0);                                                                                           // BuildMemberBase.cs:323
+			// Called from BuildMemberComponents.cs, Line 179
+			this.Value = new ValueContainer(1, 1);                                                                                                   // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 179
+			this.Qualifier = new QualifierContainer(0, 0);                                                                                           // BuildMemberBase.cs:334
 			//- Constructor
 		}
 
@@ -133,6 +139,7 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
+		// DefineBase.cs:137
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -157,6 +164,7 @@ namespace BreastRadLib
 		                                                                                                                                          // BuildMemberComponents.cs:105
 		//+ !Components
 		                                                                                                                                          // BuildMemberComponents.cs:108
+		// BuildMemberComponents.cs:109
 		/// <summary>
 		/// Read all component values from resource into this instance
 		/// </summary>
@@ -169,6 +177,7 @@ namespace BreastRadLib
 		    //- ReadComponents
 		}                                                                                                                                         // BuildMemberComponents.cs:116
 		                                                                                                                                          // BuildMemberComponents.cs:118
+		// BuildMemberComponents.cs:119
 		/// <summary>
 		/// Write all values from this instance into resource
 		/// </summary>

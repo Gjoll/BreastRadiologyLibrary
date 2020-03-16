@@ -35,54 +35,70 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
-		                                                                                                                                          // BuildMemberBase.cs:337
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// ObsChanges
 		/// Access fhir element 'Observation.component:obsChanges'
 		/// </summary>
-		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// Access fhir element 'Observation.component:biRadsAssessmentCategory'
 		/// </summary>
-		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public BiRadsAssessmentCategoryContainer BiRadsAssessmentCategory { get ; protected set; }                                                // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// NotPreviouslySeen
 		/// Access fhir element 'Observation.component:notPreviouslySeen'
 		/// </summary>
-		public NotPreviouslySeenContainer NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public NotPreviouslySeenContainer NotPreviouslySeen { get ; protected set; }                                                              // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// CorrespondsWith
 		/// Access fhir element 'Observation.component:correspondsWith'
 		/// </summary>
-		public CorrespondsWithContainer CorrespondsWith { get ; protected set; }                                                                  // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public CorrespondsWithContainer CorrespondsWith { get ; protected set; }                                                                  // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// Access fhir element 'Observation.component:PreviouslyDemonstratedBy'
 		/// </summary>
-		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberReferences.cs, Line 176
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// AssociatedFeature
 		/// Access fhir element 'Observation.hasMember:associatedFeature'
 		/// </summary>
-		public AssociatedFeatureContainer AssociatedFeature { get ; protected set; }                                                              // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public AssociatedFeatureContainer AssociatedFeature { get ; protected set; }                                                              // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberReferences.cs, Line 176
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// ConsistentWith
 		/// Access fhir element 'Observation.hasMember:consistentWith'
 		/// </summary>
-		public ConsistentWithContainer ConsistentWith { get ; protected set; }                                                                    // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public ConsistentWithContainer ConsistentWith { get ; protected set; }                                                                    // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// AbnormalityForeignObjectType
 		/// Access fhir element 'Observation.component:abnormalityForeignObjectType'
 		/// </summary>
-		public AbnormalityForeignObjectTypeContainer AbnormalityForeignObjectType { get ; protected set; }                                        // BuildMemberBase.cs:342
+		public AbnormalityForeignObjectTypeContainer AbnormalityForeignObjectType { get ; protected set; }                                        // BuildMemberBase.cs:355
 		//- Properties
 
 		/// <summary>
@@ -127,14 +143,22 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                                   // DefineBase.cs:220
 			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
-			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:323
-			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:323
-			this.NotPreviouslySeen = new NotPreviouslySeenContainer(0, 0);                                                                           // BuildMemberBase.cs:323
-			this.CorrespondsWith = new CorrespondsWithContainer(0, 0);                                                                               // BuildMemberBase.cs:323
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:323
-			this.AssociatedFeature = new AssociatedFeatureContainer(0, 0);                                                                           // BuildMemberBase.cs:323
-			this.ConsistentWith = new ConsistentWithContainer(0, 0);                                                                                 // BuildMemberBase.cs:323
-			this.AbnormalityForeignObjectType = new AbnormalityForeignObjectTypeContainer(1, 1);                                                     // BuildMemberBase.cs:323
+			// Called from BuildMemberComponents.cs, Line 179
+			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 179
+			this.BiRadsAssessmentCategory = new BiRadsAssessmentCategoryContainer(0, 0);                                                             // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 179
+			this.NotPreviouslySeen = new NotPreviouslySeenContainer(0, 0);                                                                           // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 179
+			this.CorrespondsWith = new CorrespondsWithContainer(0, 0);                                                                               // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 179
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:334
+			// Called from BuildMemberReferences.cs, Line 176
+			this.AssociatedFeature = new AssociatedFeatureContainer(0, 0);                                                                           // BuildMemberBase.cs:334
+			// Called from BuildMemberReferences.cs, Line 176
+			this.ConsistentWith = new ConsistentWithContainer(0, 0);                                                                                 // BuildMemberBase.cs:334
+			// Called from BuildMemberComponents.cs, Line 179
+			this.AbnormalityForeignObjectType = new AbnormalityForeignObjectTypeContainer(1, 1);                                                     // BuildMemberBase.cs:334
 			//- Constructor
 		}
 
@@ -193,6 +217,7 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
+		// DefineBase.cs:137
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -217,6 +242,7 @@ namespace BreastRadLib
 			                                                                                                                                         // BuildMemberComponents.cs:105
 		//+ !Components
 			                                                                                                                                         // BuildMemberComponents.cs:108
+			// BuildMemberComponents.cs:109
 			/// <summary>
 			/// Read all component values from resource into this instance
 			/// </summary>
@@ -233,6 +259,7 @@ namespace BreastRadLib
 			    //- ReadComponents
 			}                                                                                                                                        // BuildMemberComponents.cs:116
 			                                                                                                                                         // BuildMemberComponents.cs:118
+			// BuildMemberComponents.cs:119
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>
@@ -257,6 +284,7 @@ namespace BreastRadLib
 			                                                                                                                                         // BuildMemberReferences.cs:104
 		//+ !HasMembers
 			                                                                                                                                         // BuildMemberReferences.cs:107
+			// BuildMemberReferences.cs:108
 			/// <summary>
 			/// Read all values from resource into this instance
 			/// </summary>
@@ -269,6 +297,7 @@ namespace BreastRadLib
 			    //- ReadHasMembers
 			}                                                                                                                                        // BuildMemberReferences.cs:115
 			                                                                                                                                         // BuildMemberReferences.cs:117
+			// BuildMemberReferences.cs:118
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>

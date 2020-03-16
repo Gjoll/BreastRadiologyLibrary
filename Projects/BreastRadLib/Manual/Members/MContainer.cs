@@ -71,6 +71,17 @@ namespace BreastRadLib
             //return retVal;
         }
 
+        protected IEnumerable<Extension> IsMember(BreastRadiologyDocument doc,
+            IEnumerable<Extension> extensions,
+            String url)
+        {
+            foreach (Extension extension in extensions)
+            {
+                if (String.Compare(extension.Url, url, StringComparison.OrdinalIgnoreCase) == 0)
+                    yield return extension;
+            }
+        }
+
         protected IEnumerable<Element> IsMember(BreastRadiologyDocument doc,
             IEnumerable<Observation.ComponentComponent> components,
             CodeableConcept code)

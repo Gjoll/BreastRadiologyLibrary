@@ -24,30 +24,38 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, ISectionFindingsLeftBreast
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:337
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberReferences.cs, Line 176
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// MGFinding
 		/// Access fhir element 'Observation.hasMember:mGFinding'
 		/// </summary>
-		public MGFindingContainer MGFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public MGFindingContainer MGFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberReferences.cs, Line 176
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// MRIFinding
 		/// Access fhir element 'Observation.hasMember:mRIFinding'
 		/// </summary>
-		public MRIFindingContainer MRIFinding { get ; protected set; }                                                                            // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public MRIFindingContainer MRIFinding { get ; protected set; }                                                                            // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberReferences.cs, Line 176
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// NMFinding
 		/// Access fhir element 'Observation.hasMember:nMFinding'
 		/// </summary>
-		public NMFindingContainer NMFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:342
-		                                                                                                                                          // BuildMemberBase.cs:337
+		public NMFindingContainer NMFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:355
+		                                                                                                                                          // BuildMemberBase.cs:349
+		// Called from BuildMemberReferences.cs, Line 176
+		// BuildMemberBase.cs:351
 		/// <summary>
 		/// USFinding
 		/// Access fhir element 'Observation.hasMember:uSFinding'
 		/// </summary>
-		public USFindingContainer USFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:342
+		public USFindingContainer USFinding { get ; protected set; }                                                                              // BuildMemberBase.cs:355
 		//- Properties
 
 		/// <summary>
@@ -92,10 +100,14 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:220
-			this.MGFinding = new MGFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:323
-			this.MRIFinding = new MRIFindingContainer(0, 0);                                                                                         // BuildMemberBase.cs:323
-			this.NMFinding = new NMFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:323
-			this.USFinding = new USFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:323
+			// Called from BuildMemberReferences.cs, Line 176
+			this.MGFinding = new MGFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:334
+			// Called from BuildMemberReferences.cs, Line 176
+			this.MRIFinding = new MRIFindingContainer(0, 0);                                                                                         // BuildMemberBase.cs:334
+			// Called from BuildMemberReferences.cs, Line 176
+			this.NMFinding = new NMFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:334
+			// Called from BuildMemberReferences.cs, Line 176
+			this.USFinding = new USFindingContainer(0, 0);                                                                                           // BuildMemberBase.cs:334
 			//- Constructor
 		}
 
@@ -146,6 +158,7 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
+		// DefineBase.cs:137
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -167,6 +180,7 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "Findings Left Breast observation";                                                                        // FhirConstruct.cs:821
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
+		// DefineBase.cs:137
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -188,6 +202,7 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "Left breast structure (body structure)";                                                                  // FhirConstruct.cs:821
 		    return retVal;                                                                                                                        // FhirConstruct.cs:829
 		}                                                                                                                                         // FhirConstruct.cs:830
+			// DefineBase.cs:181
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
@@ -198,6 +213,7 @@ namespace BreastRadLib
 			                                                                                                                                         // BuildMemberReferences.cs:104
 		//+ !HasMembers
 			                                                                                                                                         // BuildMemberReferences.cs:107
+			// BuildMemberReferences.cs:108
 			/// <summary>
 			/// Read all values from resource into this instance
 			/// </summary>
@@ -212,6 +228,7 @@ namespace BreastRadLib
 			    //- ReadHasMembers
 			}                                                                                                                                        // BuildMemberReferences.cs:115
 			                                                                                                                                         // BuildMemberReferences.cs:117
+			// BuildMemberReferences.cs:118
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>

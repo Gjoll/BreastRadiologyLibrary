@@ -4,7 +4,9 @@ using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace FireFragger.CS.BuildMembers
@@ -67,10 +69,11 @@ namespace FireFragger.CS.BuildMembers
             this.codeBlocks = codeBlocks;
         }
 
-        protected virtual void BuildItemClass()
+        protected virtual void BuildItemClass(String buildMsg)
         {
             this.itemCode
                 .AppendCode($"#region {this.pathName} Item Class")
+                .AppendLine($"// {buildMsg}")
                 .SummaryOpen()
                 .Summary($"Item class for {this.pathName}.")
                 .SummaryClose()
@@ -129,12 +132,13 @@ namespace FireFragger.CS.BuildMembers
 
         }
 
-        protected virtual void BuildContainerClass()
+        protected virtual void BuildContainerClass(String buildMsg)
         {
             Debug.Assert(String.IsNullOrEmpty(this.ContainerClassName) == false);
 
             this.containerCode
                 .AppendCode($"#region {this.pathName} Container Class")
+                .AppendLine($"// {buildMsg}")
                 .SummaryOpen()
                 .Summary($"Container class for {this.pathName}.")
                 .SummaryClose()
@@ -164,6 +168,7 @@ namespace FireFragger.CS.BuildMembers
             if (this.Singleton)
             {
                 this.containerCodeBlocks.ClassProperties
+                    .AppendCode($"#region Common Singleton Properties")
                     .BlankLine()
                     .SummaryOpen()
                     .Summary($"Get All Items")
@@ -229,6 +234,7 @@ namespace FireFragger.CS.BuildMembers
             else
             {
                 this.containerCodeBlocks.ClassProperties
+                    .AppendCode($"#region Common Non-Singleton Properties")
                     .AppendCode($"List<Item> items = new List<Item>();")
 
                     .BlankLine()
@@ -294,6 +300,10 @@ namespace FireFragger.CS.BuildMembers
                 }
             }
 
+            this.containerCodeBlocks.ClassProperties
+                .AppendCode($"#endregion")
+                ;
+
             this.containerCodeBlocks.ClassMethods
                .BlankLine()
                .SummaryOpen()
@@ -317,15 +327,17 @@ namespace FireFragger.CS.BuildMembers
         {
         }
 
-        protected virtual void BuildProperty()
+        protected virtual void BuildProperty(String buildMsg)
         {
             this.codeBlocks.ClassConstructor
+                .AppendLine($"// {buildMsg}")
                 .AppendCode($"this.{this.PropertyName} = new {this.ContainerClassName}({this.Min}, {this.Min});")
                 ;
 
             if (this.codeBlocks.InterfaceProperties != null)
             {
                 this.codeBlocks.InterfaceProperties
+                    .AppendLine($"// {buildMsg}")
                     .SummaryOpen()
                     .Summary($"{PropertyName}")
                     .SummaryClose()
@@ -335,6 +347,7 @@ namespace FireFragger.CS.BuildMembers
 
             this.codeBlocks.ClassProperties
                 .BlankLine()
+                .AppendLine($"// {buildMsg}")
                 .SummaryOpen()
                 .Summary($"{this.PropertyName}")
                 .Summary($"Access fhir element '{this.pathName}'")
@@ -352,16 +365,19 @@ namespace FireFragger.CS.BuildMembers
 
         public virtual void BuildOne(String pathName,
             Int32 min,
-            Int32 max)
+            Int32 max,
+            [CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
         {
             this.pathName = pathName;
             this.Min = min;
             this.Max = max;
 
+            String buildMsg = $"Called from {Path.GetFileName(filePath)}, Line {lineNumber}";
             this.containerCode = this.codeBlocks.LocalClassDefs.AppendBlock();
-            BuildContainerClass();
-            BuildItemClass();
-            BuildProperty();
+            BuildContainerClass(buildMsg);
+            BuildItemClass(buildMsg);
+            BuildProperty(buildMsg);
         }
 
         public abstract void Build();

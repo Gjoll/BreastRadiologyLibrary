@@ -17,10 +17,12 @@ namespace BreastRadLib
 	public interface IObservedSizeFragment 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 179
+		// BuildMemberBase.cs:341
 		/// <summary>
 		/// ObsSize
 		/// </summary>
-		ObsSizeContainer ObsSize { get ; }                                                                                                        // BuildMemberBase.cs:332
+		ObsSizeContainer ObsSize { get ; }                                                                                                        // BuildMemberBase.cs:344
 		//- Properties
 
 		//+ Methods
