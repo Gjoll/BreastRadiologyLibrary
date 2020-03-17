@@ -214,19 +214,21 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void E_BodyDistanceFromExtension()
         {
-            IEnumerable<Extension> Write()
+            Extension[] Write()
             {
                 BreastRadiologyDocument doc = MakeDoc();
                 MBodyDistanceFromExtension bdc = new MBodyDistanceFromExtension(0, 10);
                 {
                     MBodyDistanceFromExtension.Members item = bdc.Append(new MBodyDistanceFromExtension.Members());
                     item.DistanceFromLandMark.Set(new Quantity(1, "m"));
+                    item.LandMark.Set(new CodeableConcept("system1", "code1"));
                 }
                 {
                     MBodyDistanceFromExtension.Members item = bdc.Append(new MBodyDistanceFromExtension.Members());
                     item.DistanceFromLandMark.Set(new Quantity(2, "m"));
+                    item.LandMark.Set(new CodeableConcept("system2", "code2"));
                 }
-                return bdc.Write(doc);
+                return bdc.Write(doc).ToArray();
             }
 
             MBodyDistanceFromExtension Read(IEnumerable<Extension> extensions)
@@ -236,28 +238,28 @@ namespace BreastRadiology.XUnitTests
                 bdc.Read(doc, extensions);
                 return bdc;
             }
-            IEnumerable<Extension> extensions = Write();
+            Extension[] extensions = Write();
             MBodyDistanceFromExtension bdc = Read(extensions);
         }
 
-        [TestMethod]
-        public void E_Observation_BodySite()
-        {
-            GlobalSettings.IgnoreCardinalityErrors = true;
+        //[TestMethod]
+        //public void E_Observation_BodySite()
+        //{
+        //    GlobalSettings.IgnoreCardinalityErrors = true;
 
-            CodeableConcept bodySiteCode = new CodeableConcept("bsSys", "bsCode", "bsDisplay");
-            Bundle b;
-            {
-                BreastRadiologyDocument doc = MakeDoc();
-                BreastRadReport report = doc.Index.Report.Set(new BreastRadReport(doc));
-                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Set(new SectionFindingsLeftBreast(doc));
-                MGFinding mgFinding = findLeft.MGFinding.Set(new MGFinding(doc));
-                AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append(new AbnormalityCyst(doc));
-                //$BodySiteExtended bodySite = abCyst.BodySite.Create();
-                //$bodySite.BodySite = bodySiteCode;
-                //$b = doc.Write();
-            }
-        }
+        //    CodeableConcept bodySiteCode = new CodeableConcept("bsSys", "bsCode", "bsDisplay");
+        //    Bundle b;
+        //    {
+        //        BreastRadiologyDocument doc = MakeDoc();
+        //        BreastRadReport report = doc.Index.Report.Set(new BreastRadReport(doc));
+        //        SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Set(new SectionFindingsLeftBreast(doc));
+        //        MGFinding mgFinding = findLeft.MGFinding.Set(new MGFinding(doc));
+        //        AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append(new AbnormalityCyst(doc));
+        //        //$BodySiteExtended bodySite = abCyst.BodySite.Create();
+        //        //$bodySite.BodySite = bodySiteCode;
+        //        //$b = doc.Write();
+        //    }
+        //}
 
         [TestMethod]
         public void Z_Validate()
