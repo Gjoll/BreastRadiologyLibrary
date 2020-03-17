@@ -23,25 +23,25 @@ namespace BreastRadLib
 		/// <summary>
 		/// Orientation
 		/// </summary>
-		OrientationContainer Orientation { get ; }                                                                                                // BuildMemberBase.cs:370
+		MOrientation Orientation { get ; }                                                                                                        // BuildMemberBase.cs:370
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// Shape
 		/// </summary>
-		ShapeContainer Shape { get ; }                                                                                                            // BuildMemberBase.cs:370
+		MShape Shape { get ; }                                                                                                                    // BuildMemberBase.cs:370
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// Margin
 		/// </summary>
-		MarginContainer Margin { get ; }                                                                                                          // BuildMemberBase.cs:370
+		MMargin Margin { get ; }                                                                                                                  // BuildMemberBase.cs:370
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// MgDensity
 		/// </summary>
-		MgDensityContainer MgDensity { get ; }                                                                                                    // BuildMemberBase.cs:370
+		MMgDensity MgDensity { get ; }                                                                                                            // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

@@ -21,7 +21,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// <summary>
 	/// Container class for Composition.section:report.
 	/// </summary>
-	public class ReportContainer : MContainer, ITMItem<Composition.SectionComponent>                                                           // BuildMemberBase.cs:163
+	public class MReport : MContainer, ITMItem<Composition.SectionComponent>                                                                   // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Composition.section:report Item Class                                                                                          // BuildMemberBase.cs:75
 	    // Called from BuildMemberSection.cs, Line 226
@@ -137,7 +137,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ReportContainer(Int32 min, Int32 max) : base("Composition.section:report", min, max)                                            // BuildMemberBase.cs:175
+	    public MReport(Int32 min, Int32 max) : base("Composition.section:report", min, max)                                                    // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -206,7 +206,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// <summary>
 	/// Container class for Composition.section:impressions.
 	/// </summary>
-	public class ImpressionsContainer : MContainer, ITMItem<Composition.SectionComponent>                                                      // BuildMemberBase.cs:163
+	public class MImpressions : MContainer, ITMItem<Composition.SectionComponent>                                                              // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Composition.section:impressions Item Class                                                                                     // BuildMemberBase.cs:75
 	    // Called from BuildMemberSection.cs, Line 226
@@ -311,7 +311,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ImpressionsContainer(Int32 min, Int32 max) : base("Composition.section:impressions", min, max)                                  // BuildMemberBase.cs:175
+	    public MImpressions(Int32 min, Int32 max) : base("Composition.section:impressions", min, max)                                          // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -392,7 +392,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// <summary>
 	/// Container class for Composition.section:findingsRightBreast.
 	/// </summary>
-	public class FindingsRightBreastContainer : MContainer, ITMItem<Composition.SectionComponent>                                              // BuildMemberBase.cs:163
+	public class MFindingsRightBreast : MContainer, ITMItem<Composition.SectionComponent>                                                      // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Composition.section:findingsRightBreast Item Class                                                                             // BuildMemberBase.cs:75
 	    // Called from BuildMemberSection.cs, Line 226
@@ -508,7 +508,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public FindingsRightBreastContainer(Int32 min, Int32 max) : base("Composition.section:findingsRightBreast", min, max)                  // BuildMemberBase.cs:175
+	    public MFindingsRightBreast(Int32 min, Int32 max) : base("Composition.section:findingsRightBreast", min, max)                          // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -577,7 +577,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// <summary>
 	/// Container class for Composition.section:findingsLeftBreast.
 	/// </summary>
-	public class FindingsLeftBreastContainer : MContainer, ITMItem<Composition.SectionComponent>                                               // BuildMemberBase.cs:163
+	public class MFindingsLeftBreast : MContainer, ITMItem<Composition.SectionComponent>                                                       // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Composition.section:findingsLeftBreast Item Class                                                                              // BuildMemberBase.cs:75
 	    // Called from BuildMemberSection.cs, Line 226
@@ -693,7 +693,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public FindingsLeftBreastContainer(Int32 min, Int32 max) : base("Composition.section:findingsLeftBreast", min, max)                    // BuildMemberBase.cs:175
+	    public MFindingsLeftBreast(Int32 min, Int32 max) : base("Composition.section:findingsLeftBreast", min, max)                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -762,7 +762,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// <summary>
 	/// Container class for Composition.section:relatedResources.
 	/// </summary>
-	public class RelatedResourcesContainer : MContainer, ITMItem<Composition.SectionComponent>                                                 // BuildMemberBase.cs:163
+	public class MRelatedResources : MContainer, ITMItem<Composition.SectionComponent>                                                         // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Composition.section:relatedResources Item Class                                                                                // BuildMemberBase.cs:75
 	    // Called from BuildMemberSection.cs, Line 226
@@ -867,7 +867,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public RelatedResourcesContainer(Int32 min, Int32 max) : base("Composition.section:relatedResources", min, max)                        // BuildMemberBase.cs:175
+	    public MRelatedResources(Int32 min, Int32 max) : base("Composition.section:relatedResources", min, max)                                // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -948,7 +948,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	/// <summary>
 	/// Container class for Composition.section:recommendations.
 	/// </summary>
-	public class RecommendationsContainer : MContainer, ITMItem<Composition.SectionComponent>                                                  // BuildMemberBase.cs:163
+	public class MRecommendations : MContainer, ITMItem<Composition.SectionComponent>                                                          // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Composition.section:recommendations Item Class                                                                                 // BuildMemberBase.cs:75
 	    // Called from BuildMemberSection.cs, Line 226
@@ -1053,7 +1053,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public RecommendationsContainer(Int32 min, Int32 max) : base("Composition.section:recommendations", min, max)                          // BuildMemberBase.cs:175
+	    public MRecommendations(Int32 min, Int32 max) : base("Composition.section:recommendations", min, max)                                  // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

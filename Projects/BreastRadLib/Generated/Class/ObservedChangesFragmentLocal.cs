@@ -21,7 +21,7 @@ namespace BreastRadLib.ObservedChangesFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:obsChanges.
 	/// </summary>
-	public class ObsChangesContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                     // BuildMemberBase.cs:163
+	public class MObsChanges : MContainer, ITMItem<Observation.ComponentComponent>                                                             // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:obsChanges Item Class                                                                                    // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -127,7 +127,7 @@ namespace BreastRadLib.ObservedChangesFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ObsChangesContainer(Int32 min, Int32 max) : base("Observation.component:obsChanges", min, max)                                  // BuildMemberBase.cs:175
+	    public MObsChanges(Int32 min, Int32 max) : base("Observation.component:obsChanges", min, max)                                          // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

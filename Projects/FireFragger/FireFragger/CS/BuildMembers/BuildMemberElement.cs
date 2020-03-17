@@ -105,7 +105,7 @@ namespace FireFragger.CS.BuildMembers
             foreach (var type in valueNode.ElementDefinition.Type)
                 itemElementSetName.Add(type.Code);
 
-            this.containerClassName = $"{this.ElementName}Container";
+            this.containerClassName = $"M{this.ElementName}";
             this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
             base.BuildOne(valueNode.ElementDefinition.ElementId, min, max);
         }

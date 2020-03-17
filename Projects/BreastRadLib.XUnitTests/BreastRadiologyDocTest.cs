@@ -217,27 +217,27 @@ namespace BreastRadiology.XUnitTests
             IEnumerable<Extension> Write()
             {
                 BreastRadiologyDocument doc = MakeDoc();
-                BodyDistanceFromExtensionCollection bdc = new BodyDistanceFromExtensionCollection(0, 10);
+                MBodyDistanceFromExtension bdc = new MBodyDistanceFromExtension(0, 10);
                 {
-                    BodyDistanceFromExtensionCollection.Members item = bdc.Append(new BodyDistanceFromExtensionCollection.Members());
+                    MBodyDistanceFromExtension.Members item = bdc.Append(new MBodyDistanceFromExtension.Members());
                     item.DistanceFromLandMark.Set(new Quantity(1, "m"));
                 }
                 {
-                    BodyDistanceFromExtensionCollection.Members item = bdc.Append(new BodyDistanceFromExtensionCollection.Members());
+                    MBodyDistanceFromExtension.Members item = bdc.Append(new MBodyDistanceFromExtension.Members());
                     item.DistanceFromLandMark.Set(new Quantity(2, "m"));
                 }
                 return bdc.Write(doc);
             }
 
-            BodyDistanceFromExtensionCollection Read(IEnumerable<Extension> extensions)
+            MBodyDistanceFromExtension Read(IEnumerable<Extension> extensions)
             {
                 BreastRadiologyDocument doc = MakeDoc();
-                BodyDistanceFromExtensionCollection bdc = new BodyDistanceFromExtensionCollection(0, 10);
+                MBodyDistanceFromExtension bdc = new MBodyDistanceFromExtension(0, 10);
                 bdc.Read(doc, extensions);
                 return bdc;
             }
             IEnumerable<Extension> extensions = Write();
-            BodyDistanceFromExtensionCollection bdc = Read(extensions);
+            MBodyDistanceFromExtension bdc = Read(extensions);
         }
 
         [TestMethod]

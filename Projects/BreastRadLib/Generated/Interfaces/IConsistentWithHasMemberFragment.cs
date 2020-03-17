@@ -23,7 +23,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// ConsistentWith
 		/// </summary>
-		ConsistentWithContainer ConsistentWith { get ; }                                                                                          // BuildMemberBase.cs:370
+		MConsistentWith ConsistentWith { get ; }                                                                                                  // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

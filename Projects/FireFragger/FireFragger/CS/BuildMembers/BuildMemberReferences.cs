@@ -194,7 +194,7 @@ namespace FireFragger.CS.BuildMembers
                     this.itemElementSetName.Add(propertyClassName);
                 }
 
-                this.containerClassName = $"{this.sliceName.ToMachineName()}Container";
+                this.containerClassName = $"M{this.sliceName.ToMachineName()}";
                 this.itemElementGetName = (itemElementSetName.Count == 1) ? itemElementSetName [0] : "ResourceBase";
                 base.BuildOne(memberSlice.ElementDefinition.ElementId, min, max);
             }

@@ -21,7 +21,7 @@ namespace BreastRadLib.AbnormalityDuctLocal
 	/// <summary>
 	/// Container class for Observation.component:ductType.
 	/// </summary>
-	public class DuctTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                       // BuildMemberBase.cs:163
+	public class MDuctType : MContainer, ITMItem<Observation.ComponentComponent>                                                               // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:ductType Item Class                                                                                      // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.AbnormalityDuctLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public DuctTypeContainer(Int32 min, Int32 max) : base("Observation.component:ductType", min, max)                                      // BuildMemberBase.cs:175
+	    public MDuctType(Int32 min, Int32 max) : base("Observation.component:ductType", min, max)                                              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

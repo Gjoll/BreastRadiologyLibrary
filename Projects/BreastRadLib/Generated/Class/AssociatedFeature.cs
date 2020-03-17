@@ -35,7 +35,7 @@ namespace BreastRadLib
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:381
+		public MObsCount ObsCount { get ; protected set; }                                                                                        // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:377
@@ -43,7 +43,7 @@ namespace BreastRadLib
 		/// FeatureType
 		/// Access fhir element 'Observation.component:featureType'
 		/// </summary>
-		public FeatureTypeContainer FeatureType { get ; protected set; }                                                                          // BuildMemberBase.cs:381
+		public MFeatureType FeatureType { get ; protected set; }                                                                                  // BuildMemberBase.cs:381
 		//- Properties
 
 		/// <summary>
@@ -88,9 +88,9 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:220
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:360
+			this.ObsCount = new MObsCount(0, 0);                                                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.FeatureType = new FeatureTypeContainer(1, 1);                                                                                       // BuildMemberBase.cs:360
+			this.FeatureType = new MFeatureType(1, 1);                                                                                               // BuildMemberBase.cs:360
 			//- Constructor
 		}
 

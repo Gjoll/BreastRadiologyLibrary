@@ -24,25 +24,25 @@ namespace BreastRadLib
 		/// <summary>
 		/// MGFinding
 		/// </summary>
-		MGFindingContainer MGFinding { get ; }                                                                                                    // BuildMemberBase.cs:370
+		MMGFinding MGFinding { get ; }                                                                                                            // BuildMemberBase.cs:370
 		// Called from BuildMemberReferences.cs, Line 199
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// MRIFinding
 		/// </summary>
-		MRIFindingContainer MRIFinding { get ; }                                                                                                  // BuildMemberBase.cs:370
+		MMRIFinding MRIFinding { get ; }                                                                                                          // BuildMemberBase.cs:370
 		// Called from BuildMemberReferences.cs, Line 199
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// NMFinding
 		/// </summary>
-		NMFindingContainer NMFinding { get ; }                                                                                                    // BuildMemberBase.cs:370
+		MNMFinding NMFinding { get ; }                                                                                                            // BuildMemberBase.cs:370
 		// Called from BuildMemberReferences.cs, Line 199
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// USFinding
 		/// </summary>
-		USFindingContainer USFinding { get ; }                                                                                                    // BuildMemberBase.cs:370
+		MUSFinding USFinding { get ; }                                                                                                            // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

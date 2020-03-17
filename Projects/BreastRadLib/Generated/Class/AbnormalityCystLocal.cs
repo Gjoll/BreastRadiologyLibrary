@@ -21,7 +21,7 @@ namespace BreastRadLib.AbnormalityCystLocal
 	/// <summary>
 	/// Container class for Observation.component:cystType.
 	/// </summary>
-	public class CystTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                       // BuildMemberBase.cs:163
+	public class MCystType : MContainer, ITMItem<Observation.ComponentComponent>                                                               // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:cystType Item Class                                                                                      // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.AbnormalityCystLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public CystTypeContainer(Int32 min, Int32 max) : base("Observation.component:cystType", min, max)                                      // BuildMemberBase.cs:175
+	    public MCystType(Int32 min, Int32 max) : base("Observation.component:cystType", min, max)                                              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

@@ -21,7 +21,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	/// <summary>
 	/// Container class for BodyDistanceFromExtension.
 	/// </summary>
-	public class BodyDistanceFromExtensionCollection : MContainer, ITMItem<Extension>                                                          // BuildMemberBase.cs:163
+	public class MBodyDistanceFromExtension : MContainer, ITMItem<Extension>                                                                   // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region BodyDistanceFromExtension Item Class                                                                                           // BuildMemberBase.cs:75
 	    // Called from BuildMemberExtensionComplex.cs, Line 191
@@ -82,7 +82,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        /// <summary>
 	        /// Container class for Extension.extension:landMark.
 	        /// </summary>
-	        public class LandMarkCollection : MContainer, ITMItem<Extension>                                                                   // BuildMemberBase.cs:163
+	        public class MLandMark : MContainer, ITMItem<Extension>                                                                            // BuildMemberBase.cs:163
 	        {                                                                                                                                  // BuildMemberBase.cs:164
 	            #region Extension.extension:landMark Item Class                                                                                // BuildMemberBase.cs:75
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
@@ -202,7 +202,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public LandMarkCollection(Int32 min, Int32 max) : base("Extension.extension:landMark", min, max)                               // BuildMemberBase.cs:175
+	            public MLandMark(Int32 min, Int32 max) : base("Extension.extension:landMark", min, max)                                        // BuildMemberBase.cs:175
 	            {                                                                                                                              // BuildMemberBase.cs:176
 	            }                                                                                                                              // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -246,7 +246,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        /// <summary>
 	        /// Container class for Extension.extension:distanceFromLandMark.
 	        /// </summary>
-	        public class DistanceFromLandMarkCollection : MContainer, ITMItem<Extension>                                                       // BuildMemberBase.cs:163
+	        public class MDistanceFromLandMark : MContainer, ITMItem<Extension>                                                                // BuildMemberBase.cs:163
 	        {                                                                                                                                  // BuildMemberBase.cs:164
 	            #region Extension.extension:distanceFromLandMark Item Class                                                                    // BuildMemberBase.cs:75
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
@@ -366,7 +366,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public DistanceFromLandMarkCollection(Int32 min, Int32 max) : base("Extension.extension:distanceFromLandMark", min, max)       // BuildMemberBase.cs:175
+	            public MDistanceFromLandMark(Int32 min, Int32 max) : base("Extension.extension:distanceFromLandMark", min, max)                // BuildMemberBase.cs:175
 	            {                                                                                                                              // BuildMemberBase.cs:176
 	            }                                                                                                                              // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -412,7 +412,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        /// LandMark
 	        /// Access fhir element 'Extension.extension:landMark'
 	        /// </summary>
-	        public LandMarkCollection LandMark { get ; protected set; }                                                                        // BuildMemberBase.cs:381
+	        public MLandMark LandMark { get ; protected set; }                                                                                 // BuildMemberBase.cs:381
 	                                                                                                                                           // BuildMemberBase.cs:375
 	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:377
@@ -420,7 +420,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        /// DistanceFromLandMark
 	        /// Access fhir element 'Extension.extension:distanceFromLandMark'
 	        /// </summary>
-	        public DistanceFromLandMarkCollection DistanceFromLandMark { get ; protected set; }                                                // BuildMemberBase.cs:381
+	        public MDistanceFromLandMark DistanceFromLandMark { get ; protected set; }                                                         // BuildMemberBase.cs:381
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:127
 	        // BuildMemberExtensionComplex.cs:128
 	        /// <summary>
@@ -429,9 +429,9 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        public Members()                                                                                                                   // BuildMemberExtensionComplex.cs:131
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:132
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.LandMark = new LandMarkCollection(0, 0);                                                                                  // BuildMemberBase.cs:360
+	            this.LandMark = new MLandMark(0, 0);                                                                                           // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.DistanceFromLandMark = new DistanceFromLandMarkCollection(0, 0);                                                          // BuildMemberBase.cs:360
+	            this.DistanceFromLandMark = new MDistanceFromLandMark(0, 0);                                                                   // BuildMemberBase.cs:360
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:134
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:136
 	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:137
@@ -519,7 +519,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BodyDistanceFromExtensionCollection(Int32 min, Int32 max) : base("BodyDistanceFromExtension", min, max)                         // BuildMemberBase.cs:175
+	    public MBodyDistanceFromExtension(Int32 min, Int32 max) : base("BodyDistanceFromExtension", min, max)                                  // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

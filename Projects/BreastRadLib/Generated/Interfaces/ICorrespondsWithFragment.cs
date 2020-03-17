@@ -22,7 +22,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// CorrespondsWith
 		/// </summary>
-		CorrespondsWithContainer CorrespondsWith { get ; }                                                                                        // BuildMemberBase.cs:370
+		MCorrespondsWith CorrespondsWith { get ; }                                                                                                // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

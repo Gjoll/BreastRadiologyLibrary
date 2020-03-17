@@ -23,7 +23,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// BreastBodyLocationExtension
 		/// </summary>
-		BreastBodyLocationExtensionCollection BreastBodyLocationExtension { get ; }                                                               // BuildMemberBase.cs:370
+		MBreastBodyLocationExtension BreastBodyLocationExtension { get ; }                                                                        // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

@@ -21,7 +21,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	/// <summary>
 	/// Container class for Observation.component:calcificationType.
 	/// </summary>
-	public class CalcificationTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                              // BuildMemberBase.cs:163
+	public class MCalcificationType : MContainer, ITMItem<Observation.ComponentComponent>                                                      // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:calcificationType Item Class                                                                             // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public CalcificationTypeContainer(Int32 min, Int32 max) : base("Observation.component:calcificationType", min, max)                    // BuildMemberBase.cs:175
+	    public MCalcificationType(Int32 min, Int32 max) : base("Observation.component:calcificationType", min, max)                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -198,7 +198,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	/// <summary>
 	/// Container class for Observation.component:calcificationDistribution.
 	/// </summary>
-	public class CalcificationDistributionContainer : MContainer, ITMItem<Observation.ComponentComponent>                                      // BuildMemberBase.cs:163
+	public class MCalcificationDistribution : MContainer, ITMItem<Observation.ComponentComponent>                                              // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:calcificationDistribution Item Class                                                                     // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -315,7 +315,7 @@ namespace BreastRadLib.MGAbnormalityCalcificationLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public CalcificationDistributionContainer(Int32 min, Int32 max) : base("Observation.component:calcificationDistribution", min, max)    // BuildMemberBase.cs:175
+	    public MCalcificationDistribution(Int32 min, Int32 max) : base("Observation.component:calcificationDistribution", min, max)            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

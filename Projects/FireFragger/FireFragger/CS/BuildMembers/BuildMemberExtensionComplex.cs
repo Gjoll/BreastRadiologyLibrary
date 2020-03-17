@@ -16,7 +16,7 @@ namespace FireFragger.CS.BuildMembers
         protected override string PropertyName => $"{this.extensionName.ToMachineName()}";
         protected override string ElementGetName => "Members";
         protected override IEnumerable<string> ElementSetNames => new String[] { "Members" };
-        protected override string ContainerClassName => $"{this.extensionName.ToMachineName()}Collection";
+        protected override string ContainerClassName => $"M{this.extensionName.ToMachineName()}";
 
         /// <summary>
         /// Name of fhir element (as stored in resource).

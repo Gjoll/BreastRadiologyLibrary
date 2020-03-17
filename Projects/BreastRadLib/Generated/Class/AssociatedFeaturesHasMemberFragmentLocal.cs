@@ -21,7 +21,7 @@ namespace BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:associatedFeature.
 	/// </summary>
-	public class AssociatedFeatureContainer : MContainer, ITMItem<ResourceReference>                                                           // BuildMemberBase.cs:163
+	public class MAssociatedFeature : MContainer, ITMItem<ResourceReference>                                                                   // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:associatedFeature Item Class                                                                             // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -132,7 +132,7 @@ namespace BreastRadLib.AssociatedFeaturesHasMemberFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AssociatedFeatureContainer(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                    // BuildMemberBase.cs:175
+	    public MAssociatedFeature(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

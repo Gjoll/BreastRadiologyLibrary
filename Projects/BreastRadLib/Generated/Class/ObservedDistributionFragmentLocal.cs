@@ -21,7 +21,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:obsDistribution.
 	/// </summary>
-	public class ObsDistributionContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                // BuildMemberBase.cs:163
+	public class MObsDistribution : MContainer, ITMItem<Observation.ComponentComponent>                                                        // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:obsDistribution Item Class                                                                               // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -127,7 +127,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ObsDistributionContainer(Int32 min, Int32 max) : base("Observation.component:obsDistribution", min, max)                        // BuildMemberBase.cs:175
+	    public MObsDistribution(Int32 min, Int32 max) : base("Observation.component:obsDistribution", min, max)                                // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -199,7 +199,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:obsDistRegionSize.
 	/// </summary>
-	public class ObsDistRegionSizeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                              // BuildMemberBase.cs:163
+	public class MObsDistRegionSize : MContainer, ITMItem<Observation.ComponentComponent>                                                      // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:obsDistRegionSize Item Class                                                                             // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -305,7 +305,7 @@ namespace BreastRadLib.ObservedDistributionFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ObsDistRegionSizeContainer(Int32 min, Int32 max) : base("Observation.component:obsDistRegionSize", min, max)                    // BuildMemberBase.cs:175
+	    public MObsDistRegionSize(Int32 min, Int32 max) : base("Observation.component:obsDistRegionSize", min, max)                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

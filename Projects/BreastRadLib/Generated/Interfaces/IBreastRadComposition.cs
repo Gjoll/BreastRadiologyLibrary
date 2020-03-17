@@ -23,37 +23,37 @@ namespace BreastRadLib
 		/// <summary>
 		/// Report
 		/// </summary>
-		ReportContainer Report { get ; }                                                                                                          // BuildMemberBase.cs:370
+		MReport Report { get ; }                                                                                                                  // BuildMemberBase.cs:370
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// Impressions
 		/// </summary>
-		ImpressionsContainer Impressions { get ; }                                                                                                // BuildMemberBase.cs:370
+		MImpressions Impressions { get ; }                                                                                                        // BuildMemberBase.cs:370
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// FindingsRightBreast
 		/// </summary>
-		FindingsRightBreastContainer FindingsRightBreast { get ; }                                                                                // BuildMemberBase.cs:370
+		MFindingsRightBreast FindingsRightBreast { get ; }                                                                                        // BuildMemberBase.cs:370
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// FindingsLeftBreast
 		/// </summary>
-		FindingsLeftBreastContainer FindingsLeftBreast { get ; }                                                                                  // BuildMemberBase.cs:370
+		MFindingsLeftBreast FindingsLeftBreast { get ; }                                                                                          // BuildMemberBase.cs:370
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// RelatedResources
 		/// </summary>
-		RelatedResourcesContainer RelatedResources { get ; }                                                                                      // BuildMemberBase.cs:370
+		MRelatedResources RelatedResources { get ; }                                                                                              // BuildMemberBase.cs:370
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// Recommendations
 		/// </summary>
-		RecommendationsContainer Recommendations { get ; }                                                                                        // BuildMemberBase.cs:370
+		MRecommendations Recommendations { get ; }                                                                                                // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

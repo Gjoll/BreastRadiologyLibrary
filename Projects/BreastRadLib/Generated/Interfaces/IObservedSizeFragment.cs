@@ -22,7 +22,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// ObsSize
 		/// </summary>
-		ObsSizeContainer ObsSize { get ; }                                                                                                        // BuildMemberBase.cs:370
+		MObsSize ObsSize { get ; }                                                                                                                // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

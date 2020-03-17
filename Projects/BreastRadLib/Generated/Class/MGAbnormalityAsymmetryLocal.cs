@@ -21,7 +21,7 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 	/// <summary>
 	/// Container class for Observation.component:asymmetryType.
 	/// </summary>
-	public class AsymmetryTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                  // BuildMemberBase.cs:163
+	public class MAsymmetryType : MContainer, ITMItem<Observation.ComponentComponent>                                                          // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:asymmetryType Item Class                                                                                 // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AsymmetryTypeContainer(Int32 min, Int32 max) : base("Observation.component:asymmetryType", min, max)                            // BuildMemberBase.cs:175
+	    public MAsymmetryType(Int32 min, Int32 max) : base("Observation.component:asymmetryType", min, max)                                    // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

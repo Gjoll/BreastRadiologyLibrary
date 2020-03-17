@@ -6,12 +6,12 @@
 		/// ConsistentWith
 		/// Access fhir element 'Observation.hasMember:consistentWith'
 		/// </summary>
-		public ConsistentWithContainer ConsistentWith { get ; protected set; }                                                                    // BuildMemberBase.cs:381
+		public MConsistentWith ConsistentWith { get ; protected set; }                                                                            // BuildMemberBase.cs:381
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberReferences.cs, Line 199
-			this.ConsistentWith = new ConsistentWithContainer(0, 0);                                                                                 // BuildMemberBase.cs:360
+			this.ConsistentWith = new MConsistentWith(0, 0);                                                                                         // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

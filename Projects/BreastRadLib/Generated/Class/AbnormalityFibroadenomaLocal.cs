@@ -21,7 +21,7 @@ namespace BreastRadLib.AbnormalityFibroadenomaLocal
 	/// <summary>
 	/// Container class for Observation.component:fibroAdenomaType.
 	/// </summary>
-	public class FibroAdenomaTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                               // BuildMemberBase.cs:163
+	public class MFibroAdenomaType : MContainer, ITMItem<Observation.ComponentComponent>                                                       // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:fibroAdenomaType Item Class                                                                              // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.AbnormalityFibroadenomaLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public FibroAdenomaTypeContainer(Int32 min, Int32 max) : base("Observation.component:fibroAdenomaType", min, max)                      // BuildMemberBase.cs:175
+	    public MFibroAdenomaType(Int32 min, Int32 max) : base("Observation.component:fibroAdenomaType", min, max)                              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

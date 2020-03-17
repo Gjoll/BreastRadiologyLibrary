@@ -6,12 +6,12 @@
 		/// ObsSize
 		/// Access fhir element 'Observation.component:obsSize'
 		/// </summary>
-		public ObsSizeContainer ObsSize { get ; protected set; }                                                                                  // BuildMemberBase.cs:381
+		public MObsSize ObsSize { get ; protected set; }                                                                                          // BuildMemberBase.cs:381
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsSize = new ObsSizeContainer(0, 0);                                                                                               // BuildMemberBase.cs:360
+			this.ObsSize = new MObsSize(0, 0);                                                                                                       // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

@@ -21,7 +21,7 @@ namespace BreastRadLib.ConsistentWithHasMemberFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:consistentWith.
 	/// </summary>
-	public class ConsistentWithContainer : MContainer, ITMItem<ResourceReference>                                                              // BuildMemberBase.cs:163
+	public class MConsistentWith : MContainer, ITMItem<ResourceReference>                                                                      // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:consistentWith Item Class                                                                                // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -132,7 +132,7 @@ namespace BreastRadLib.ConsistentWithHasMemberFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ConsistentWithContainer(Int32 min, Int32 max) : base("Observation.hasMember:consistentWith", min, max)                          // BuildMemberBase.cs:175
+	    public MConsistentWith(Int32 min, Int32 max) : base("Observation.hasMember:consistentWith", min, max)                                  // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

@@ -21,7 +21,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mGFinding.
 	/// </summary>
-	public class MGFindingContainer : MContainer, ITMItem<ResourceReference>                                                                   // BuildMemberBase.cs:163
+	public class MMGFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mGFinding Item Class                                                                                     // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -143,7 +143,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGFindingContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGFinding", min, max)                                    // BuildMemberBase.cs:175
+	    public MMGFinding(Int32 min, Int32 max) : base("Observation.hasMember:mGFinding", min, max)                                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -189,7 +189,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mRIFinding.
 	/// </summary>
-	public class MRIFindingContainer : MContainer, ITMItem<ResourceReference>                                                                  // BuildMemberBase.cs:163
+	public class MMRIFinding : MContainer, ITMItem<ResourceReference>                                                                          // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mRIFinding Item Class                                                                                    // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -311,7 +311,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MRIFindingContainer(Int32 min, Int32 max) : base("Observation.hasMember:mRIFinding", min, max)                                  // BuildMemberBase.cs:175
+	    public MMRIFinding(Int32 min, Int32 max) : base("Observation.hasMember:mRIFinding", min, max)                                          // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -357,7 +357,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:nMFinding.
 	/// </summary>
-	public class NMFindingContainer : MContainer, ITMItem<ResourceReference>                                                                   // BuildMemberBase.cs:163
+	public class MNMFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:nMFinding Item Class                                                                                     // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -479,7 +479,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public NMFindingContainer(Int32 min, Int32 max) : base("Observation.hasMember:nMFinding", min, max)                                    // BuildMemberBase.cs:175
+	    public MNMFinding(Int32 min, Int32 max) : base("Observation.hasMember:nMFinding", min, max)                                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -525,7 +525,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:uSFinding.
 	/// </summary>
-	public class USFindingContainer : MContainer, ITMItem<ResourceReference>                                                                   // BuildMemberBase.cs:163
+	public class MUSFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:uSFinding Item Class                                                                                     // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -647,7 +647,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public USFindingContainer(Int32 min, Int32 max) : base("Observation.hasMember:uSFinding", min, max)                                    // BuildMemberBase.cs:175
+	    public MUSFinding(Int32 min, Int32 max) : base("Observation.hasMember:uSFinding", min, max)                                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

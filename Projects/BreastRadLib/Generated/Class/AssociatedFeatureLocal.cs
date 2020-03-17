@@ -21,7 +21,7 @@ namespace BreastRadLib.AssociatedFeatureLocal
 	/// <summary>
 	/// Container class for Observation.component:featureType.
 	/// </summary>
-	public class FeatureTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                    // BuildMemberBase.cs:163
+	public class MFeatureType : MContainer, ITMItem<Observation.ComponentComponent>                                                            // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:featureType Item Class                                                                                   // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.AssociatedFeatureLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public FeatureTypeContainer(Int32 min, Int32 max) : base("Observation.component:featureType", min, max)                                // BuildMemberBase.cs:175
+	    public MFeatureType(Int32 min, Int32 max) : base("Observation.component:featureType", min, max)                                        // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

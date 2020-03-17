@@ -21,7 +21,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:orientation.
 	/// </summary>
-	public class OrientationContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                    // BuildMemberBase.cs:163
+	public class MOrientation : MContainer, ITMItem<Observation.ComponentComponent>                                                            // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:orientation Item Class                                                                                   // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public OrientationContainer(Int32 min, Int32 max) : base("Observation.component:orientation", min, max)                                // BuildMemberBase.cs:175
+	    public MOrientation(Int32 min, Int32 max) : base("Observation.component:orientation", min, max)                                        // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -198,7 +198,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:shape.
 	/// </summary>
-	public class ShapeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                          // BuildMemberBase.cs:163
+	public class MShape : MContainer, ITMItem<Observation.ComponentComponent>                                                                  // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:shape Item Class                                                                                         // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -315,7 +315,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ShapeContainer(Int32 min, Int32 max) : base("Observation.component:shape", min, max)                                            // BuildMemberBase.cs:175
+	    public MShape(Int32 min, Int32 max) : base("Observation.component:shape", min, max)                                                    // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -375,7 +375,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:margin.
 	/// </summary>
-	public class MarginContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                         // BuildMemberBase.cs:163
+	public class MMargin : MContainer, ITMItem<Observation.ComponentComponent>                                                                 // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:margin Item Class                                                                                        // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -492,7 +492,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MarginContainer(Int32 min, Int32 max) : base("Observation.component:margin", min, max)                                          // BuildMemberBase.cs:175
+	    public MMargin(Int32 min, Int32 max) : base("Observation.component:margin", min, max)                                                  // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -552,7 +552,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:mgDensity.
 	/// </summary>
-	public class MgDensityContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                      // BuildMemberBase.cs:163
+	public class MMgDensity : MContainer, ITMItem<Observation.ComponentComponent>                                                              // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:mgDensity Item Class                                                                                     // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -669,7 +669,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MgDensityContainer(Int32 min, Int32 max) : base("Observation.component:mgDensity", min, max)                                    // BuildMemberBase.cs:175
+	    public MMgDensity(Int32 min, Int32 max) : base("Observation.component:mgDensity", min, max)                                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

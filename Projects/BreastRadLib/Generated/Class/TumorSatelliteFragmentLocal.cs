@@ -21,7 +21,7 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:tumorSatellite.
 	/// </summary>
-	public class TumorSatelliteContainer : MContainer, ITMItem<ResourceReference>                                                              // BuildMemberBase.cs:163
+	public class MTumorSatellite : MContainer, ITMItem<ResourceReference>                                                                      // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:tumorSatellite Item Class                                                                                // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -132,7 +132,7 @@ namespace BreastRadLib.TumorSatelliteFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public TumorSatelliteContainer(Int32 min, Int32 max) : base("Observation.hasMember:tumorSatellite", min, max)                          // BuildMemberBase.cs:175
+	    public MTumorSatellite(Int32 min, Int32 max) : base("Observation.hasMember:tumorSatellite", min, max)                                  // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

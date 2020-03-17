@@ -6,12 +6,12 @@
 		/// ObsChanges
 		/// Access fhir element 'Observation.component:obsChanges'
 		/// </summary>
-		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:381
+		public MObsChanges ObsChanges { get ; protected set; }                                                                                    // BuildMemberBase.cs:381
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:360
+			this.ObsChanges = new MObsChanges(0, 0);                                                                                                 // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

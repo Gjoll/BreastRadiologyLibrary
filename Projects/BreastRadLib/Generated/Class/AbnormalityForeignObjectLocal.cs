@@ -21,7 +21,7 @@ namespace BreastRadLib.AbnormalityForeignObjectLocal
 	/// <summary>
 	/// Container class for Observation.component:abnormalityForeignObjectType.
 	/// </summary>
-	public class AbnormalityForeignObjectTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                   // BuildMemberBase.cs:163
+	public class MAbnormalityForeignObjectType : MContainer, ITMItem<Observation.ComponentComponent>                                           // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:abnormalityForeignObjectType Item Class                                                                  // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.AbnormalityForeignObjectLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityForeignObjectTypeContainer(Int32 min, Int32 max) : base("Observation.component:abnormalityForeignObjectType", min, max)// BuildMemberBase.cs:175
+	    public MAbnormalityForeignObjectType(Int32 min, Int32 max) : base("Observation.component:abnormalityForeignObjectType", min, max)      // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

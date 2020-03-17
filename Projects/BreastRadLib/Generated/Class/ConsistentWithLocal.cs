@@ -21,7 +21,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	/// <summary>
 	/// Container class for Observation.component:value.
 	/// </summary>
-	public class ValueContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                          // BuildMemberBase.cs:163
+	public class MValue : MContainer, ITMItem<Observation.ComponentComponent>                                                                  // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:value Item Class                                                                                         // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ValueContainer(Int32 min, Int32 max) : base("Observation.component:value", min, max)                                            // BuildMemberBase.cs:175
+	    public MValue(Int32 min, Int32 max) : base("Observation.component:value", min, max)                                                    // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -198,7 +198,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	/// <summary>
 	/// Container class for Observation.component:qualifier.
 	/// </summary>
-	public class QualifierContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                      // BuildMemberBase.cs:163
+	public class MQualifier : MContainer, ITMItem<Observation.ComponentComponent>                                                              // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:qualifier Item Class                                                                                     // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -304,7 +304,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public QualifierContainer(Int32 min, Int32 max) : base("Observation.component:qualifier", min, max)                                    // BuildMemberBase.cs:175
+	    public MQualifier(Int32 min, Int32 max) : base("Observation.component:qualifier", min, max)                                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

@@ -33,7 +33,7 @@ namespace BreastRadLib
 		/// Value
 		/// Access fhir element 'Observation.component:value'
 		/// </summary>
-		public ValueContainer Value { get ; protected set; }                                                                                      // BuildMemberBase.cs:381
+		public MValue Value { get ; protected set; }                                                                                              // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:377
@@ -41,7 +41,7 @@ namespace BreastRadLib
 		/// Qualifier
 		/// Access fhir element 'Observation.component:qualifier'
 		/// </summary>
-		public QualifierContainer Qualifier { get ; protected set; }                                                                              // BuildMemberBase.cs:381
+		public MQualifier Qualifier { get ; protected set; }                                                                                      // BuildMemberBase.cs:381
 		//- Properties
 
 		/// <summary>
@@ -86,9 +86,9 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:220
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Value = new ValueContainer(1, 1);                                                                                                   // BuildMemberBase.cs:360
+			this.Value = new MValue(1, 1);                                                                                                           // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Qualifier = new QualifierContainer(0, 0);                                                                                           // BuildMemberBase.cs:360
+			this.Qualifier = new MQualifier(0, 0);                                                                                                   // BuildMemberBase.cs:360
 			//- Constructor
 		}
 

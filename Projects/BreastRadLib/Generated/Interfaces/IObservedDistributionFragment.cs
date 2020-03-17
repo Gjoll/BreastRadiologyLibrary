@@ -22,13 +22,13 @@ namespace BreastRadLib
 		/// <summary>
 		/// ObsDistribution
 		/// </summary>
-		ObsDistributionContainer ObsDistribution { get ; }                                                                                        // BuildMemberBase.cs:370
+		MObsDistribution ObsDistribution { get ; }                                                                                                // BuildMemberBase.cs:370
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// ObsDistRegionSize
 		/// </summary>
-		ObsDistRegionSizeContainer ObsDistRegionSize { get ; }                                                                                    // BuildMemberBase.cs:370
+		MObsDistRegionSize ObsDistRegionSize { get ; }                                                                                            // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

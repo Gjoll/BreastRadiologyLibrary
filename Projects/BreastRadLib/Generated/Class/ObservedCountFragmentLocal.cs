@@ -21,7 +21,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:obsCount.
 	/// </summary>
-	public class ObsCountContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                       // BuildMemberBase.cs:163
+	public class MObsCount : MContainer, ITMItem<Observation.ComponentComponent>                                                               // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:obsCount Item Class                                                                                      // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -150,7 +150,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public ObsCountContainer(Int32 min, Int32 max) : base("Observation.component:obsCount", min, max)                                      // BuildMemberBase.cs:175
+	    public MObsCount(Int32 min, Int32 max) : base("Observation.component:obsCount", min, max)                                              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

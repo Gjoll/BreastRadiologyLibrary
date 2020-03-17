@@ -21,7 +21,7 @@ namespace BreastRadLib.BiRadFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:biRadsAssessmentCategory.
 	/// </summary>
-	public class BiRadsAssessmentCategoryContainer : MContainer, ITMItem<Observation.ComponentComponent>                                       // BuildMemberBase.cs:163
+	public class MBiRadsAssessmentCategory : MContainer, ITMItem<Observation.ComponentComponent>                                               // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:biRadsAssessmentCategory Item Class                                                                      // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -138,7 +138,7 @@ namespace BreastRadLib.BiRadFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BiRadsAssessmentCategoryContainer(Int32 min, Int32 max) : base("Observation.component:biRadsAssessmentCategory", min, max)      // BuildMemberBase.cs:175
+	    public MBiRadsAssessmentCategory(Int32 min, Int32 max) : base("Observation.component:biRadsAssessmentCategory", min, max)              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

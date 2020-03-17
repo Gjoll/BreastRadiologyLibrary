@@ -21,7 +21,7 @@ namespace BreastRadLib.PreviouslyDemonstratedByFragmentLocal
 	/// <summary>
 	/// Container class for Observation.component:PreviouslyDemonstratedBy.
 	/// </summary>
-	public class PreviouslyDemonstratedByContainer : MContainer, ITMItem<Observation.ComponentComponent>                                       // BuildMemberBase.cs:163
+	public class MPreviouslyDemonstratedBy : MContainer, ITMItem<Observation.ComponentComponent>                                               // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.component:PreviouslyDemonstratedBy Item Class                                                                      // BuildMemberBase.cs:75
 	    // Called from BuildMemberComponents.cs, Line 208
@@ -127,7 +127,7 @@ namespace BreastRadLib.PreviouslyDemonstratedByFragmentLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public PreviouslyDemonstratedByContainer(Int32 min, Int32 max) : base("Observation.component:PreviouslyDemonstratedBy", min, max)      // BuildMemberBase.cs:175
+	    public MPreviouslyDemonstratedBy(Int32 min, Int32 max) : base("Observation.component:PreviouslyDemonstratedBy", min, max)              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

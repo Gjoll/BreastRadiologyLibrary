@@ -21,7 +21,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityCyst.
 	/// </summary>
-	public class AbnormalityCystContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:163
+	public class MAbnormalityCyst : MContainer, ITMItem<ResourceReference>                                                                     // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:abnormalityCyst Item Class                                                                               // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -132,7 +132,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityCystContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityCyst", min, max)                        // BuildMemberBase.cs:175
+	    public MAbnormalityCyst(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityCyst", min, max)                                // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -190,7 +190,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityDuct.
 	/// </summary>
-	public class AbnormalityDuctContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:163
+	public class MAbnormalityDuct : MContainer, ITMItem<ResourceReference>                                                                     // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:abnormalityDuct Item Class                                                                               // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -301,7 +301,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityDuctContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityDuct", min, max)                        // BuildMemberBase.cs:175
+	    public MAbnormalityDuct(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityDuct", min, max)                                // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -359,7 +359,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityForeignObject.
 	/// </summary>
-	public class AbnormalityForeignObjectContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:163
+	public class MAbnormalityForeignObject : MContainer, ITMItem<ResourceReference>                                                            // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:abnormalityForeignObject Item Class                                                                      // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -470,7 +470,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityForeignObjectContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityForeignObject", min, max)      // BuildMemberBase.cs:175
+	    public MAbnormalityForeignObject(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityForeignObject", min, max)              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -528,7 +528,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityLymphNode.
 	/// </summary>
-	public class AbnormalityLymphNodeContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:163
+	public class MAbnormalityLymphNode : MContainer, ITMItem<ResourceReference>                                                                // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:abnormalityLymphNode Item Class                                                                          // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -639,7 +639,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityLymphNodeContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityLymphNode", min, max)              // BuildMemberBase.cs:175
+	    public MAbnormalityLymphNode(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityLymphNode", min, max)                      // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -697,7 +697,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityMass.
 	/// </summary>
-	public class AbnormalityMassContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:163
+	public class MAbnormalityMass : MContainer, ITMItem<ResourceReference>                                                                     // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:abnormalityMass Item Class                                                                               // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -808,7 +808,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityMassContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityMass", min, max)                        // BuildMemberBase.cs:175
+	    public MAbnormalityMass(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityMass", min, max)                                // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -866,7 +866,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:associatedFeature.
 	/// </summary>
-	public class AssociatedFeatureContainer : MContainer, ITMItem<ResourceReference>                                                           // BuildMemberBase.cs:163
+	public class MAssociatedFeature : MContainer, ITMItem<ResourceReference>                                                                   // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:associatedFeature Item Class                                                                             // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -977,7 +977,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AssociatedFeatureContainer(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                    // BuildMemberBase.cs:175
+	    public MAssociatedFeature(Int32 min, Int32 max) : base("Observation.hasMember:associatedFeature", min, max)                            // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -1035,7 +1035,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityFibroadenoma.
 	/// </summary>
-	public class AbnormalityFibroadenomaContainer : MContainer, ITMItem<ResourceReference>                                                     // BuildMemberBase.cs:163
+	public class MAbnormalityFibroadenoma : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:abnormalityFibroadenoma Item Class                                                                       // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -1146,7 +1146,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public AbnormalityFibroadenomaContainer(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityFibroadenoma", min, max)        // BuildMemberBase.cs:175
+	    public MAbnormalityFibroadenoma(Int32 min, Int32 max) : base("Observation.hasMember:abnormalityFibroadenoma", min, max)                // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -1204,7 +1204,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityArchitecturalDistortion.
 	/// </summary>
-	public class MGAbnormalityArchitecturalDistortionContainer : MContainer, ITMItem<ResourceReference>                                        // BuildMemberBase.cs:163
+	public class MMGAbnormalityArchitecturalDistortion : MContainer, ITMItem<ResourceReference>                                                // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mGAbnormalityArchitecturalDistortion Item Class                                                          // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -1315,7 +1315,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityArchitecturalDistortionContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityArchitecturalDistortion", min, max)// BuildMemberBase.cs:175
+	    public MMGAbnormalityArchitecturalDistortion(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityArchitecturalDistortion", min, max)// BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -1373,7 +1373,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityAsymmetry.
 	/// </summary>
-	public class MGAbnormalityAsymmetryContainer : MContainer, ITMItem<ResourceReference>                                                      // BuildMemberBase.cs:163
+	public class MMGAbnormalityAsymmetry : MContainer, ITMItem<ResourceReference>                                                              // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mGAbnormalityAsymmetry Item Class                                                                        // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -1484,7 +1484,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityAsymmetryContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityAsymmetry", min, max)          // BuildMemberBase.cs:175
+	    public MMGAbnormalityAsymmetry(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityAsymmetry", min, max)                  // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -1542,7 +1542,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityCalcification.
 	/// </summary>
-	public class MGAbnormalityCalcificationContainer : MContainer, ITMItem<ResourceReference>                                                  // BuildMemberBase.cs:163
+	public class MMGAbnormalityCalcification : MContainer, ITMItem<ResourceReference>                                                          // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mGAbnormalityCalcification Item Class                                                                    // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -1653,7 +1653,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityCalcificationContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityCalcification", min, max)  // BuildMemberBase.cs:175
+	    public MMGAbnormalityCalcification(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityCalcification", min, max)          // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -1711,7 +1711,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityDensity.
 	/// </summary>
-	public class MGAbnormalityDensityContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:163
+	public class MMGAbnormalityDensity : MContainer, ITMItem<ResourceReference>                                                                // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mGAbnormalityDensity Item Class                                                                          // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -1822,7 +1822,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityDensity", min, max)              // BuildMemberBase.cs:175
+	    public MMGAbnormalityDensity(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityDensity", min, max)                      // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -1880,7 +1880,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityFatNecrosis.
 	/// </summary>
-	public class MGAbnormalityFatNecrosisContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:163
+	public class MMGAbnormalityFatNecrosis : MContainer, ITMItem<ResourceReference>                                                            // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mGAbnormalityFatNecrosis Item Class                                                                      // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -1991,7 +1991,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGAbnormalityFatNecrosisContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityFatNecrosis", min, max)      // BuildMemberBase.cs:175
+	    public MMGAbnormalityFatNecrosis(Int32 min, Int32 max) : base("Observation.hasMember:mGAbnormalityFatNecrosis", min, max)              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -2049,7 +2049,7 @@ namespace BreastRadLib.MGFindingLocal
 	/// <summary>
 	/// Container class for Observation.hasMember:mGBreastDensity.
 	/// </summary>
-	public class MGBreastDensityContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:163
+	public class MMGBreastDensity : MContainer, ITMItem<ResourceReference>                                                                     // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.hasMember:mGBreastDensity Item Class                                                                               // BuildMemberBase.cs:75
 	    // Called from BuildMemberReferences.cs, Line 199
@@ -2171,7 +2171,7 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MGBreastDensityContainer(Int32 min, Int32 max) : base("Observation.hasMember:mGBreastDensity", min, max)                        // BuildMemberBase.cs:175
+	    public MMGBreastDensity(Int32 min, Int32 max) : base("Observation.hasMember:mGBreastDensity", min, max)                                // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180

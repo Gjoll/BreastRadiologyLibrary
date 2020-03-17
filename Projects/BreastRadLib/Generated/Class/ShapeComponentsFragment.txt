@@ -6,7 +6,7 @@
 		/// Orientation
 		/// Access fhir element 'Observation.component:orientation'
 		/// </summary>
-		public OrientationContainer Orientation { get ; protected set; }                                                                          // BuildMemberBase.cs:381
+		public MOrientation Orientation { get ; protected set; }                                                                                  // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:377
@@ -14,7 +14,7 @@
 		/// Shape
 		/// Access fhir element 'Observation.component:shape'
 		/// </summary>
-		public ShapeContainer Shape { get ; protected set; }                                                                                      // BuildMemberBase.cs:381
+		public MShape Shape { get ; protected set; }                                                                                              // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:377
@@ -22,7 +22,7 @@
 		/// Margin
 		/// Access fhir element 'Observation.component:margin'
 		/// </summary>
-		public MarginContainer Margin { get ; protected set; }                                                                                    // BuildMemberBase.cs:381
+		public MMargin Margin { get ; protected set; }                                                                                            // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:377
@@ -30,18 +30,18 @@
 		/// MgDensity
 		/// Access fhir element 'Observation.component:mgDensity'
 		/// </summary>
-		public MgDensityContainer MgDensity { get ; protected set; }                                                                              // BuildMemberBase.cs:381
+		public MMgDensity MgDensity { get ; protected set; }                                                                                      // BuildMemberBase.cs:381
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Orientation = new OrientationContainer(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.Orientation = new MOrientation(0, 0);                                                                                               // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Shape = new ShapeContainer(0, 0);                                                                                                   // BuildMemberBase.cs:360
+			this.Shape = new MShape(0, 0);                                                                                                           // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Margin = new MarginContainer(0, 0);                                                                                                 // BuildMemberBase.cs:360
+			this.Margin = new MMargin(0, 0);                                                                                                         // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.MgDensity = new MgDensityContainer(0, 0);                                                                                           // BuildMemberBase.cs:360
+			this.MgDensity = new MMgDensity(0, 0);                                                                                                   // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

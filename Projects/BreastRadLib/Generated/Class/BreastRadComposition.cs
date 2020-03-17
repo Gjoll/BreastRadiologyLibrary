@@ -27,7 +27,7 @@ namespace BreastRadLib
 		/// Report
 		/// Access fhir element 'Composition.section:report'
 		/// </summary>
-		public ReportContainer Report { get ; protected set; }                                                                                    // BuildMemberBase.cs:381
+		public MReport Report { get ; protected set; }                                                                                            // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:377
@@ -35,7 +35,7 @@ namespace BreastRadLib
 		/// Impressions
 		/// Access fhir element 'Composition.section:impressions'
 		/// </summary>
-		public ImpressionsContainer Impressions { get ; protected set; }                                                                          // BuildMemberBase.cs:381
+		public MImpressions Impressions { get ; protected set; }                                                                                  // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:377
@@ -43,7 +43,7 @@ namespace BreastRadLib
 		/// FindingsRightBreast
 		/// Access fhir element 'Composition.section:findingsRightBreast'
 		/// </summary>
-		public FindingsRightBreastContainer FindingsRightBreast { get ; protected set; }                                                          // BuildMemberBase.cs:381
+		public MFindingsRightBreast FindingsRightBreast { get ; protected set; }                                                                  // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:377
@@ -51,7 +51,7 @@ namespace BreastRadLib
 		/// FindingsLeftBreast
 		/// Access fhir element 'Composition.section:findingsLeftBreast'
 		/// </summary>
-		public FindingsLeftBreastContainer FindingsLeftBreast { get ; protected set; }                                                            // BuildMemberBase.cs:381
+		public MFindingsLeftBreast FindingsLeftBreast { get ; protected set; }                                                                    // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:377
@@ -59,7 +59,7 @@ namespace BreastRadLib
 		/// RelatedResources
 		/// Access fhir element 'Composition.section:relatedResources'
 		/// </summary>
-		public RelatedResourcesContainer RelatedResources { get ; protected set; }                                                                // BuildMemberBase.cs:381
+		public MRelatedResources RelatedResources { get ; protected set; }                                                                        // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:377
@@ -67,7 +67,7 @@ namespace BreastRadLib
 		/// Recommendations
 		/// Access fhir element 'Composition.section:recommendations'
 		/// </summary>
-		public RecommendationsContainer Recommendations { get ; protected set; }                                                                  // BuildMemberBase.cs:381
+		public MRecommendations Recommendations { get ; protected set; }                                                                          // BuildMemberBase.cs:381
 		//- Properties
 
 		/// <summary>
@@ -111,17 +111,17 @@ namespace BreastRadLib
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:220
 			// Called from BuildMemberSection.cs, Line 226
-			this.Report = new ReportContainer(1, 1);                                                                                                 // BuildMemberBase.cs:360
+			this.Report = new MReport(1, 1);                                                                                                         // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.Impressions = new ImpressionsContainer(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.Impressions = new MImpressions(0, 0);                                                                                               // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.FindingsRightBreast = new FindingsRightBreastContainer(0, 0);                                                                       // BuildMemberBase.cs:360
+			this.FindingsRightBreast = new MFindingsRightBreast(0, 0);                                                                               // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.FindingsLeftBreast = new FindingsLeftBreastContainer(0, 0);                                                                         // BuildMemberBase.cs:360
+			this.FindingsLeftBreast = new MFindingsLeftBreast(0, 0);                                                                                 // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.RelatedResources = new RelatedResourcesContainer(0, 0);                                                                             // BuildMemberBase.cs:360
+			this.RelatedResources = new MRelatedResources(0, 0);                                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.Recommendations = new RecommendationsContainer(0, 0);                                                                               // BuildMemberBase.cs:360
+			this.Recommendations = new MRecommendations(0, 0);                                                                                       // BuildMemberBase.cs:360
 			//- Constructor
 		}
 

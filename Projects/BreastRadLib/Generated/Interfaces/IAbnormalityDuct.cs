@@ -35,7 +35,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// DuctType
 		/// </summary>
-		DuctTypeContainer DuctType { get ; }                                                                                                      // BuildMemberBase.cs:370
+		MDuctType DuctType { get ; }                                                                                                              // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

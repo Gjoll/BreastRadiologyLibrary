@@ -21,7 +21,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	/// <summary>
 	/// Container class for BreastBodyLocationExtension.
 	/// </summary>
-	public class BreastBodyLocationExtensionCollection : MContainer, ITMItem<Extension>                                                        // BuildMemberBase.cs:163
+	public class MBreastBodyLocationExtension : MContainer, ITMItem<Extension>                                                                 // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region BreastBodyLocationExtension Item Class                                                                                         // BuildMemberBase.cs:75
 	    // Called from BuildMemberExtensionComplex.cs, Line 191
@@ -82,7 +82,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// <summary>
 	        /// Container class for Extension.extension:quadrant.
 	        /// </summary>
-	        public class QuadrantCollection : MContainer, ITMItem<Extension>                                                                   // BuildMemberBase.cs:163
+	        public class MQuadrant : MContainer, ITMItem<Extension>                                                                            // BuildMemberBase.cs:163
 	        {                                                                                                                                  // BuildMemberBase.cs:164
 	            #region Extension.extension:quadrant Item Class                                                                                // BuildMemberBase.cs:75
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
@@ -202,7 +202,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public QuadrantCollection(Int32 min, Int32 max) : base("Extension.extension:quadrant", min, max)                               // BuildMemberBase.cs:175
+	            public MQuadrant(Int32 min, Int32 max) : base("Extension.extension:quadrant", min, max)                                        // BuildMemberBase.cs:175
 	            {                                                                                                                              // BuildMemberBase.cs:176
 	            }                                                                                                                              // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -246,7 +246,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// <summary>
 	        /// Container class for Extension.extension:region.
 	        /// </summary>
-	        public class RegionCollection : MContainer, ITMItem<Extension>                                                                     // BuildMemberBase.cs:163
+	        public class MRegion : MContainer, ITMItem<Extension>                                                                              // BuildMemberBase.cs:163
 	        {                                                                                                                                  // BuildMemberBase.cs:164
 	            #region Extension.extension:region Item Class                                                                                  // BuildMemberBase.cs:75
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
@@ -355,7 +355,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public RegionCollection(Int32 min, Int32 max) : base("Extension.extension:region", min, max)                                   // BuildMemberBase.cs:175
+	            public MRegion(Int32 min, Int32 max) : base("Extension.extension:region", min, max)                                            // BuildMemberBase.cs:175
 	            {                                                                                                                              // BuildMemberBase.cs:176
 	            }                                                                                                                              // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -411,7 +411,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// <summary>
 	        /// Container class for Extension.extension:clockDirection.
 	        /// </summary>
-	        public class ClockDirectionCollection : MContainer, ITMItem<Extension>                                                             // BuildMemberBase.cs:163
+	        public class MClockDirection : MContainer, ITMItem<Extension>                                                                      // BuildMemberBase.cs:163
 	        {                                                                                                                                  // BuildMemberBase.cs:164
 	            #region Extension.extension:clockDirection Item Class                                                                          // BuildMemberBase.cs:75
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
@@ -531,7 +531,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public ClockDirectionCollection(Int32 min, Int32 max) : base("Extension.extension:clockDirection", min, max)                   // BuildMemberBase.cs:175
+	            public MClockDirection(Int32 min, Int32 max) : base("Extension.extension:clockDirection", min, max)                            // BuildMemberBase.cs:175
 	            {                                                                                                                              // BuildMemberBase.cs:176
 	            }                                                                                                                              // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -575,7 +575,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// <summary>
 	        /// Container class for Extension.extension:depth.
 	        /// </summary>
-	        public class DepthCollection : MContainer, ITMItem<Extension>                                                                      // BuildMemberBase.cs:163
+	        public class MDepth : MContainer, ITMItem<Extension>                                                                               // BuildMemberBase.cs:163
 	        {                                                                                                                                  // BuildMemberBase.cs:164
 	            #region Extension.extension:depth Item Class                                                                                   // BuildMemberBase.cs:75
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
@@ -695,7 +695,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	            /// <summary>
 	            /// Constructor
 	            /// </summary>
-	            public DepthCollection(Int32 min, Int32 max) : base("Extension.extension:depth", min, max)                                     // BuildMemberBase.cs:175
+	            public MDepth(Int32 min, Int32 max) : base("Extension.extension:depth", min, max)                                              // BuildMemberBase.cs:175
 	            {                                                                                                                              // BuildMemberBase.cs:176
 	            }                                                                                                                              // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
@@ -741,7 +741,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// Quadrant
 	        /// Access fhir element 'Extension.extension:quadrant'
 	        /// </summary>
-	        public QuadrantCollection Quadrant { get ; protected set; }                                                                        // BuildMemberBase.cs:381
+	        public MQuadrant Quadrant { get ; protected set; }                                                                                 // BuildMemberBase.cs:381
 	                                                                                                                                           // BuildMemberBase.cs:375
 	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:377
@@ -749,7 +749,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// Region
 	        /// Access fhir element 'Extension.extension:region'
 	        /// </summary>
-	        public RegionCollection Region { get ; protected set; }                                                                            // BuildMemberBase.cs:381
+	        public MRegion Region { get ; protected set; }                                                                                     // BuildMemberBase.cs:381
 	                                                                                                                                           // BuildMemberBase.cs:375
 	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:377
@@ -757,7 +757,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// ClockDirection
 	        /// Access fhir element 'Extension.extension:clockDirection'
 	        /// </summary>
-	        public ClockDirectionCollection ClockDirection { get ; protected set; }                                                            // BuildMemberBase.cs:381
+	        public MClockDirection ClockDirection { get ; protected set; }                                                                     // BuildMemberBase.cs:381
 	                                                                                                                                           // BuildMemberBase.cs:375
 	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:377
@@ -765,7 +765,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// Depth
 	        /// Access fhir element 'Extension.extension:depth'
 	        /// </summary>
-	        public DepthCollection Depth { get ; protected set; }                                                                              // BuildMemberBase.cs:381
+	        public MDepth Depth { get ; protected set; }                                                                                       // BuildMemberBase.cs:381
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:127
 	        // BuildMemberExtensionComplex.cs:128
 	        /// <summary>
@@ -774,13 +774,13 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        public Members()                                                                                                                   // BuildMemberExtensionComplex.cs:131
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:132
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.Quadrant = new QuadrantCollection(0, 0);                                                                                  // BuildMemberBase.cs:360
+	            this.Quadrant = new MQuadrant(0, 0);                                                                                           // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.Region = new RegionCollection(0, 0);                                                                                      // BuildMemberBase.cs:360
+	            this.Region = new MRegion(0, 0);                                                                                               // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.ClockDirection = new ClockDirectionCollection(0, 0);                                                                      // BuildMemberBase.cs:360
+	            this.ClockDirection = new MClockDirection(0, 0);                                                                               // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.Depth = new DepthCollection(0, 0);                                                                                        // BuildMemberBase.cs:360
+	            this.Depth = new MDepth(0, 0);                                                                                                 // BuildMemberBase.cs:360
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:134
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:136
 	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:137
@@ -872,7 +872,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public BreastBodyLocationExtensionCollection(Int32 min, Int32 max) : base("BreastBodyLocationExtension", min, max)                     // BuildMemberBase.cs:175
+	    public MBreastBodyLocationExtension(Int32 min, Int32 max) : base("BreastBodyLocationExtension", min, max)                              // BuildMemberBase.cs:175
 	    {                                                                                                                                      // BuildMemberBase.cs:176
 	    }                                                                                                                                      // BuildMemberBase.cs:178
 	                                                                                                                                           // BuildMemberBase.cs:180
