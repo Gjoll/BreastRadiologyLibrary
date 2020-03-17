@@ -44,9 +44,9 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} extension)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode($"this.Value = ({this.ElementGetName}) extension.Value;")
                 .CloseBrace()
                 ;
         }
@@ -55,9 +55,13 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public {FhirClassName} WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode($"return new Extension")
+                .OpenBrace()
+                .AppendCode($"Value = this.Value,")
+                .AppendCode($"Url = ExtensionUrl")
+                .CloseBrace(";")
                 .CloseBrace()
                 ;
         }
@@ -68,15 +72,15 @@ namespace FireFragger.CS.BuildMembers
                .BlankLine()
                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
                .OpenBrace()
-               .AppendCode($"List<Extension> myExtensions = extensions")
+               .AppendCode($"List<Extension> memberExtensions = extensions")
                .AppendCode($"    .Where((a) => String.Compare(a.Url, ExtensionUrl, true) == 0)")
                .AppendCode($"    .ToList()")
                .AppendCode($"    ;")
                .AppendCode($"List<Item> items = new List<Item>();")
-               .AppendCode($"foreach (Extension myExtension in myExtensions)")
+               .AppendCode($"foreach (Extension memberExtension in memberExtensions)")
                .OpenBrace()
                .AppendCode($"    Item item = new Item();")
-               .AppendCode($"    item.Value = ({this.ElementGetName}) myExtension.Value;")
+               .AppendCode($"    item.ReadItem(doc, memberExtension);")
                .AppendCode($"    items.Add(item);")
                .CloseBrace()
                .AppendCode($"this.SetAllItems(items);")
@@ -94,13 +98,7 @@ namespace FireFragger.CS.BuildMembers
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
-               .OpenBrace()
-               .AppendCode($"yield return new Extension")
-               .OpenBrace()
-               .AppendCode($"Value = item.Value,")
-               .AppendCode($"Url = ExtensionUrl")
-               .CloseBrace(";")
-               .CloseBrace()
+               .AppendCode($"    yield return item.WriteItem(doc);")
                .CloseBrace()
                ;
 

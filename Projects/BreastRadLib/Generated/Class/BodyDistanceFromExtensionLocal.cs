@@ -77,7 +77,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:120
 	        // Definitions                                                                                                                     // BuildMemberExtensionComplex.cs:121
 	        #region Extension.extension:landMark Container Class                                                                               // BuildMemberBase.cs:157
-	        // Called from BuildMemberExtensionSimple.cs, Line 123
+	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:159
 	        /// <summary>
 	        /// Container class for Extension.extension:landMark.
@@ -85,7 +85,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        public class LandMarkCollection : MContainer, ITMItem<Extension>                                                                   // BuildMemberBase.cs:162
 	        {                                                                                                                                  // BuildMemberBase.cs:163
 	            #region Extension.extension:landMark Item Class                                                                                // BuildMemberBase.cs:75
-	            // Called from BuildMemberExtensionSimple.cs, Line 123
+	            // Called from BuildMemberExtensionSimple.cs, Line 121
 	            // BuildMemberBase.cs:77
 	            /// <summary>
 	            /// Item class for Extension.extension:landMark.
@@ -114,19 +114,23 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	                /// Write item.
 	                /// </summary>
 	                                                                                                                                           // BuildMemberExtensionSimple.cs:57
-	                public void Write(BreastRadiologyDocument doc, Extension component)                                                        // BuildMemberExtensionSimple.cs:58
+	                public Extension WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberExtensionSimple.cs:58
 	                {                                                                                                                          // BuildMemberExtensionSimple.cs:59
-	                    throw new NotImplementedException("xxyyz");                                                                            // BuildMemberExtensionSimple.cs:60
-	                }                                                                                                                          // BuildMemberExtensionSimple.cs:61
+	                    return new Extension                                                                                                   // BuildMemberExtensionSimple.cs:60
+	                    {                                                                                                                      // BuildMemberExtensionSimple.cs:61
+	                        Value = this.Value,                                                                                                // BuildMemberExtensionSimple.cs:62
+	                        Url = ExtensionUrl                                                                                                 // BuildMemberExtensionSimple.cs:63
+	                    };                                                                                                                     // BuildMemberExtensionSimple.cs:64
+	                }                                                                                                                          // BuildMemberExtensionSimple.cs:65
 	                                                                                                                                           // BuildMemberBase.cs:107
 	                // BuildMemberBase.cs:108
 	                /// <summary>
 	                /// Read item.
 	                /// </summary>
 	                                                                                                                                           // BuildMemberExtensionSimple.cs:46
-	                public void Read(BreastRadiologyDocument doc, Extension component)                                                         // BuildMemberExtensionSimple.cs:47
+	                public void ReadItem(BreastRadiologyDocument doc, Extension extension)                                                     // BuildMemberExtensionSimple.cs:47
 	                {                                                                                                                          // BuildMemberExtensionSimple.cs:48
-	                    throw new NotImplementedException("xxyyz");                                                                            // BuildMemberExtensionSimple.cs:49
+	                    this.Value = (CodeableConcept) extension.Value;                                                                        // BuildMemberExtensionSimple.cs:49
 	                }                                                                                                                          // BuildMemberExtensionSimple.cs:50
 	            }                                                                                                                              // BuildMemberBase.cs:114
 	            #endregion                                                                                                                     // BuildMemberBase.cs:115
@@ -208,42 +212,36 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	            /// <summary>
 	            /// Write container items.
 	            /// </summary>
-	            public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                               // BuildMemberExtensionSimple.cs:94
-	            {                                                                                                                              // BuildMemberExtensionSimple.cs:95
-	                foreach (Item item in this.GetAllItems())                                                                                  // BuildMemberExtensionSimple.cs:96
-	                {                                                                                                                          // BuildMemberExtensionSimple.cs:97
-	                    yield return new Extension                                                                                             // BuildMemberExtensionSimple.cs:98
-	                    {                                                                                                                      // BuildMemberExtensionSimple.cs:99
-	                        Value = item.Value,                                                                                                // BuildMemberExtensionSimple.cs:100
-	                        Url = ExtensionUrl                                                                                                 // BuildMemberExtensionSimple.cs:101
-	                    };                                                                                                                     // BuildMemberExtensionSimple.cs:102
-	                }                                                                                                                          // BuildMemberExtensionSimple.cs:103
-	            }                                                                                                                              // BuildMemberExtensionSimple.cs:104
+	            public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                               // BuildMemberExtensionSimple.cs:98
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:99
+	                foreach (Item item in this.GetAllItems())                                                                                  // BuildMemberExtensionSimple.cs:100
+	                    yield return item.WriteItem(doc);                                                                                      // BuildMemberExtensionSimple.cs:101
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:102
 	                                                                                                                                           // BuildMemberBase.cs:339
 	            // BuildMemberBase.cs:340
 	            /// <summary>
 	            /// Read container items.
 	            /// </summary>
-	                                                                                                                                           // BuildMemberExtensionSimple.cs:68
-	            public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> extensions)                                               // BuildMemberExtensionSimple.cs:69
-	            {                                                                                                                              // BuildMemberExtensionSimple.cs:70
-	                List<Extension> myExtensions = extensions                                                                                  // BuildMemberExtensionSimple.cs:71
-	                    .Where((a) => String.Compare(a.Url, ExtensionUrl, true) == 0)                                                          // BuildMemberExtensionSimple.cs:72
-	                    .ToList()                                                                                                              // BuildMemberExtensionSimple.cs:73
-	                    ;                                                                                                                      // BuildMemberExtensionSimple.cs:74
-	                List<Item> items = new List<Item>();                                                                                       // BuildMemberExtensionSimple.cs:75
-	                foreach (Extension myExtension in myExtensions)                                                                            // BuildMemberExtensionSimple.cs:76
-	                {                                                                                                                          // BuildMemberExtensionSimple.cs:77
-	                        Item item = new Item();                                                                                            // BuildMemberExtensionSimple.cs:78
-	                        item.Value = (CodeableConcept) myExtension.Value;                                                                  // BuildMemberExtensionSimple.cs:79
-	                        items.Add(item);                                                                                                   // BuildMemberExtensionSimple.cs:80
-	                }                                                                                                                          // BuildMemberExtensionSimple.cs:81
-	                this.SetAllItems(items);                                                                                                   // BuildMemberExtensionSimple.cs:82
-	            }                                                                                                                              // BuildMemberExtensionSimple.cs:83
+	                                                                                                                                           // BuildMemberExtensionSimple.cs:72
+	            public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> extensions)                                               // BuildMemberExtensionSimple.cs:73
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:74
+	                List<Extension> memberExtensions = extensions                                                                              // BuildMemberExtensionSimple.cs:75
+	                    .Where((a) => String.Compare(a.Url, ExtensionUrl, true) == 0)                                                          // BuildMemberExtensionSimple.cs:76
+	                    .ToList()                                                                                                              // BuildMemberExtensionSimple.cs:77
+	                    ;                                                                                                                      // BuildMemberExtensionSimple.cs:78
+	                List<Item> items = new List<Item>();                                                                                       // BuildMemberExtensionSimple.cs:79
+	                foreach (Extension memberExtension in memberExtensions)                                                                    // BuildMemberExtensionSimple.cs:80
+	                {                                                                                                                          // BuildMemberExtensionSimple.cs:81
+	                        Item item = new Item();                                                                                            // BuildMemberExtensionSimple.cs:82
+	                        item.ReadItem(doc, memberExtension);                                                                               // BuildMemberExtensionSimple.cs:83
+	                        items.Add(item);                                                                                                   // BuildMemberExtensionSimple.cs:84
+	                }                                                                                                                          // BuildMemberExtensionSimple.cs:85
+	                this.SetAllItems(items);                                                                                                   // BuildMemberExtensionSimple.cs:86
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:87
 	        }                                                                                                                                  // BuildMemberBase.cs:182
 	        #endregion                                                                                                                         // BuildMemberBase.cs:183
 	        #region Extension.extension:distanceFromLandMark Container Class                                                                   // BuildMemberBase.cs:157
-	        // Called from BuildMemberExtensionSimple.cs, Line 123
+	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:159
 	        /// <summary>
 	        /// Container class for Extension.extension:distanceFromLandMark.
@@ -251,7 +249,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        public class DistanceFromLandMarkCollection : MContainer, ITMItem<Extension>                                                       // BuildMemberBase.cs:162
 	        {                                                                                                                                  // BuildMemberBase.cs:163
 	            #region Extension.extension:distanceFromLandMark Item Class                                                                    // BuildMemberBase.cs:75
-	            // Called from BuildMemberExtensionSimple.cs, Line 123
+	            // Called from BuildMemberExtensionSimple.cs, Line 121
 	            // BuildMemberBase.cs:77
 	            /// <summary>
 	            /// Item class for Extension.extension:distanceFromLandMark.
@@ -280,19 +278,23 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	                /// Write item.
 	                /// </summary>
 	                                                                                                                                           // BuildMemberExtensionSimple.cs:57
-	                public void Write(BreastRadiologyDocument doc, Extension component)                                                        // BuildMemberExtensionSimple.cs:58
+	                public Extension WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberExtensionSimple.cs:58
 	                {                                                                                                                          // BuildMemberExtensionSimple.cs:59
-	                    throw new NotImplementedException("xxyyz");                                                                            // BuildMemberExtensionSimple.cs:60
-	                }                                                                                                                          // BuildMemberExtensionSimple.cs:61
+	                    return new Extension                                                                                                   // BuildMemberExtensionSimple.cs:60
+	                    {                                                                                                                      // BuildMemberExtensionSimple.cs:61
+	                        Value = this.Value,                                                                                                // BuildMemberExtensionSimple.cs:62
+	                        Url = ExtensionUrl                                                                                                 // BuildMemberExtensionSimple.cs:63
+	                    };                                                                                                                     // BuildMemberExtensionSimple.cs:64
+	                }                                                                                                                          // BuildMemberExtensionSimple.cs:65
 	                                                                                                                                           // BuildMemberBase.cs:107
 	                // BuildMemberBase.cs:108
 	                /// <summary>
 	                /// Read item.
 	                /// </summary>
 	                                                                                                                                           // BuildMemberExtensionSimple.cs:46
-	                public void Read(BreastRadiologyDocument doc, Extension component)                                                         // BuildMemberExtensionSimple.cs:47
+	                public void ReadItem(BreastRadiologyDocument doc, Extension extension)                                                     // BuildMemberExtensionSimple.cs:47
 	                {                                                                                                                          // BuildMemberExtensionSimple.cs:48
-	                    throw new NotImplementedException("xxyyz");                                                                            // BuildMemberExtensionSimple.cs:49
+	                    this.Value = (Quantity) extension.Value;                                                                               // BuildMemberExtensionSimple.cs:49
 	                }                                                                                                                          // BuildMemberExtensionSimple.cs:50
 	            }                                                                                                                              // BuildMemberBase.cs:114
 	            #endregion                                                                                                                     // BuildMemberBase.cs:115
@@ -374,43 +376,37 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	            /// <summary>
 	            /// Write container items.
 	            /// </summary>
-	            public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                               // BuildMemberExtensionSimple.cs:94
-	            {                                                                                                                              // BuildMemberExtensionSimple.cs:95
-	                foreach (Item item in this.GetAllItems())                                                                                  // BuildMemberExtensionSimple.cs:96
-	                {                                                                                                                          // BuildMemberExtensionSimple.cs:97
-	                    yield return new Extension                                                                                             // BuildMemberExtensionSimple.cs:98
-	                    {                                                                                                                      // BuildMemberExtensionSimple.cs:99
-	                        Value = item.Value,                                                                                                // BuildMemberExtensionSimple.cs:100
-	                        Url = ExtensionUrl                                                                                                 // BuildMemberExtensionSimple.cs:101
-	                    };                                                                                                                     // BuildMemberExtensionSimple.cs:102
-	                }                                                                                                                          // BuildMemberExtensionSimple.cs:103
-	            }                                                                                                                              // BuildMemberExtensionSimple.cs:104
+	            public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                               // BuildMemberExtensionSimple.cs:98
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:99
+	                foreach (Item item in this.GetAllItems())                                                                                  // BuildMemberExtensionSimple.cs:100
+	                    yield return item.WriteItem(doc);                                                                                      // BuildMemberExtensionSimple.cs:101
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:102
 	                                                                                                                                           // BuildMemberBase.cs:339
 	            // BuildMemberBase.cs:340
 	            /// <summary>
 	            /// Read container items.
 	            /// </summary>
-	                                                                                                                                           // BuildMemberExtensionSimple.cs:68
-	            public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> extensions)                                               // BuildMemberExtensionSimple.cs:69
-	            {                                                                                                                              // BuildMemberExtensionSimple.cs:70
-	                List<Extension> myExtensions = extensions                                                                                  // BuildMemberExtensionSimple.cs:71
-	                    .Where((a) => String.Compare(a.Url, ExtensionUrl, true) == 0)                                                          // BuildMemberExtensionSimple.cs:72
-	                    .ToList()                                                                                                              // BuildMemberExtensionSimple.cs:73
-	                    ;                                                                                                                      // BuildMemberExtensionSimple.cs:74
-	                List<Item> items = new List<Item>();                                                                                       // BuildMemberExtensionSimple.cs:75
-	                foreach (Extension myExtension in myExtensions)                                                                            // BuildMemberExtensionSimple.cs:76
-	                {                                                                                                                          // BuildMemberExtensionSimple.cs:77
-	                        Item item = new Item();                                                                                            // BuildMemberExtensionSimple.cs:78
-	                        item.Value = (Quantity) myExtension.Value;                                                                         // BuildMemberExtensionSimple.cs:79
-	                        items.Add(item);                                                                                                   // BuildMemberExtensionSimple.cs:80
-	                }                                                                                                                          // BuildMemberExtensionSimple.cs:81
-	                this.SetAllItems(items);                                                                                                   // BuildMemberExtensionSimple.cs:82
-	            }                                                                                                                              // BuildMemberExtensionSimple.cs:83
+	                                                                                                                                           // BuildMemberExtensionSimple.cs:72
+	            public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> extensions)                                               // BuildMemberExtensionSimple.cs:73
+	            {                                                                                                                              // BuildMemberExtensionSimple.cs:74
+	                List<Extension> memberExtensions = extensions                                                                              // BuildMemberExtensionSimple.cs:75
+	                    .Where((a) => String.Compare(a.Url, ExtensionUrl, true) == 0)                                                          // BuildMemberExtensionSimple.cs:76
+	                    .ToList()                                                                                                              // BuildMemberExtensionSimple.cs:77
+	                    ;                                                                                                                      // BuildMemberExtensionSimple.cs:78
+	                List<Item> items = new List<Item>();                                                                                       // BuildMemberExtensionSimple.cs:79
+	                foreach (Extension memberExtension in memberExtensions)                                                                    // BuildMemberExtensionSimple.cs:80
+	                {                                                                                                                          // BuildMemberExtensionSimple.cs:81
+	                        Item item = new Item();                                                                                            // BuildMemberExtensionSimple.cs:82
+	                        item.ReadItem(doc, memberExtension);                                                                               // BuildMemberExtensionSimple.cs:83
+	                        items.Add(item);                                                                                                   // BuildMemberExtensionSimple.cs:84
+	                }                                                                                                                          // BuildMemberExtensionSimple.cs:85
+	                this.SetAllItems(items);                                                                                                   // BuildMemberExtensionSimple.cs:86
+	            }                                                                                                                              // BuildMemberExtensionSimple.cs:87
 	        }                                                                                                                                  // BuildMemberBase.cs:182
 	        #endregion                                                                                                                         // BuildMemberBase.cs:183
 	        // Properties                                                                                                                      // BuildMemberExtensionComplex.cs:123
 	                                                                                                                                           // BuildMemberBase.cs:374
-	        // Called from BuildMemberExtensionSimple.cs, Line 123
+	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:376
 	        /// <summary>
 	        /// LandMark
@@ -418,7 +414,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        /// </summary>
 	        public LandMarkCollection LandMark { get ; protected set; }                                                                        // BuildMemberBase.cs:380
 	                                                                                                                                           // BuildMemberBase.cs:374
-	        // Called from BuildMemberExtensionSimple.cs, Line 123
+	        // Called from BuildMemberExtensionSimple.cs, Line 121
 	        // BuildMemberBase.cs:376
 	        /// <summary>
 	        /// DistanceFromLandMark
@@ -432,9 +428,9 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        /// </summary>
 	        public BodyDistanceFromExtension()                                                                                                 // BuildMemberExtensionComplex.cs:129
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:130
-	            // Called from BuildMemberExtensionSimple.cs, Line 123
+	            // Called from BuildMemberExtensionSimple.cs, Line 121
 	            this.LandMark = new LandMarkCollection(0, 0);                                                                                  // BuildMemberBase.cs:359
-	            // Called from BuildMemberExtensionSimple.cs, Line 123
+	            // Called from BuildMemberExtensionSimple.cs, Line 121
 	            this.DistanceFromLandMark = new DistanceFromLandMarkCollection(0, 0);                                                          // BuildMemberBase.cs:359
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:132
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:134
@@ -447,8 +443,8 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        public IEnumerable<Extension> Write(BreastRadiologyDocument doc)                                                                   // BuildMemberExtensionComplex.cs:142
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:143
 	            List<Extension> items = new List<Extension>();                                                                                 // BuildMemberExtensionComplex.cs:144
-	            items.AddRange(this.LandMark.Write(doc));                                                                                      // BuildMemberExtensionSimple.cs:108
-	            items.AddRange(this.DistanceFromLandMark.Write(doc));                                                                          // BuildMemberExtensionSimple.cs:108
+	            items.AddRange(this.LandMark.Write(doc));                                                                                      // BuildMemberExtensionSimple.cs:106
+	            items.AddRange(this.DistanceFromLandMark.Write(doc));                                                                          // BuildMemberExtensionSimple.cs:106
 	            yield return new Extension                                                                                                     // BuildMemberExtensionComplex.cs:146
 	            {                                                                                                                              // BuildMemberExtensionComplex.cs:147
 	                Url = ExtensionUrl,                                                                                                        // BuildMemberExtensionComplex.cs:148
@@ -462,8 +458,8 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	        /// </summary>
 	        public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> extensions)                                                   // BuildMemberExtensionComplex.cs:157
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:158
-	            this.LandMark.Read(doc, extensions);                                                                                           // BuildMemberExtensionSimple.cs:87
-	            this.DistanceFromLandMark.Read(doc, extensions);                                                                               // BuildMemberExtensionSimple.cs:87
+	            this.LandMark.Read(doc, extensions);                                                                                           // BuildMemberExtensionSimple.cs:91
+	            this.DistanceFromLandMark.Read(doc, extensions);                                                                               // BuildMemberExtensionSimple.cs:91
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:160
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:162
 	                                                                                                                                           // BuildMemberBase.cs:166
