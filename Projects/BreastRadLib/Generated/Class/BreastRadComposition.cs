@@ -109,7 +109,7 @@ namespace BreastRadLib
 				resource = new Composition();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:220
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:238
 			// Called from BuildMemberSection.cs, Line 226
 			this.Report = new MReport(1, 1);                                                                                                         // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226

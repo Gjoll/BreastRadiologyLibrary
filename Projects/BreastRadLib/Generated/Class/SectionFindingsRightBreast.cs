@@ -56,6 +56,14 @@ namespace BreastRadLib
 		/// Access fhir element 'Observation.hasMember:uSFinding'
 		/// </summary>
 		public MUSFinding USFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:381
+		                                                                                                                                          // BuildMemberBase.cs:375
+		// Called from BuildMemberElement.cs, Line 108
+		// BuildMemberBase.cs:377
+		/// <summary>
+		/// BodySite
+		/// Access fhir element 'Observation.bodySite'
+		/// </summary>
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:381
 		//- Properties
 
 		/// <summary>
@@ -97,9 +105,9 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
-			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:159
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // DefineBase.cs:220
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
+			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:177
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // DefineBase.cs:238
 			// Called from BuildMemberReferences.cs, Line 199
 			this.MGFinding = new MMGFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
@@ -108,6 +116,8 @@ namespace BreastRadLib
 			this.NMFinding = new MNMFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
 			this.USFinding = new MUSFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
+			// Called from BuildMemberElement.cs, Line 108
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
 			//- Constructor
 		}
 
@@ -139,6 +149,7 @@ namespace BreastRadLib
 			//+ !WriteHasMembers
 			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:163
 			//- !WriteHasMembers
+			this.Resource.SetValue("bodySite", this.BodySite.Write(this.Doc));                                                                       // BuildMemberElement.cs:93
 			//- WriteCode
 		}
 
@@ -154,11 +165,12 @@ namespace BreastRadLib
 			//+ !ReadHasMembers
 			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:172
 			//- !ReadHasMembers
+			this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>("bodySite"));                                                       // BuildMemberElement.cs:78
 			//- ReadCode
 		}
 
 		//+ Methods
-		// DefineBase.cs:137
+		// DefineBase.cs:155
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -180,7 +192,7 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "Findings Right Breast observation";                                                                       // FhirConstruct.cs:827
 		    return retVal;                                                                                                                        // FhirConstruct.cs:835
 		}                                                                                                                                         // FhirConstruct.cs:836
-		// DefineBase.cs:137
+		// DefineBase.cs:155
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -202,14 +214,14 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "Right breast structure (body structure)";                                                                 // FhirConstruct.cs:827
 		    return retVal;                                                                                                                        // FhirConstruct.cs:835
 		}                                                                                                                                         // FhirConstruct.cs:836
-			// DefineBase.cs:181
+			// DefineBase.cs:199
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:184
-			{                                                                                                                                        // DefineBase.cs:185
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:187
-			}                                                                                                                                        // DefineBase.cs:190
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:202
+			{                                                                                                                                        // DefineBase.cs:203
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:205
+			}                                                                                                                                        // DefineBase.cs:208
 			                                                                                                                                         // BuildMemberReferences.cs:127
 		//+ !HasMembers
 			                                                                                                                                         // BuildMemberReferences.cs:130

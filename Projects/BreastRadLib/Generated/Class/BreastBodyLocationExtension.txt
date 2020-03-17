@@ -69,7 +69,7 @@ namespace BreastRadLib
 				resource = new Extension();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // DefineBase.cs:220
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // DefineBase.cs:238
 			// Called from BuildMemberExtensionComplex.cs, Line 188
 			this.BreastBodyLocationExtension = new MBreastBodyLocationExtension(0, -1);                                                              // BuildMemberBase.cs:360
 			//- Constructor

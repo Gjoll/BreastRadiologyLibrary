@@ -58,11 +58,29 @@ namespace FireFragger.CS
         /// </summary>
         protected void DefineBodySite()
         {
-            //$String baseName = this.fragBase.StructDef.Differential.Element[0].Path;
-            //String fhirPath = $"{baseName}.bodySite";
-            //if (this.fragBase.DiffNodes.TryGetElementNode(fhirPath,
-            //    out ElementTreeNode bodySiteNode) == false)
-            //    return;
+            String baseName = this.fragBase.StructDef.Differential.Element[0].Path;
+            String fhirPath = $"{baseName}.bodySite";
+
+            /*
+             * This is a bit kludgy. bodySite can be found in multiple fragments that are coalesced togother
+             * into one. It is actually only defined in one base fragment that is included in multiple
+             * intermediate fragments.
+             * To stop MBodySite from being defined multiple times, we only include it if it is in the differential,
+             * i.e. it has been modified, which as of right now only happens one place.
+             */
+            if (this.fragBase.DiffNodes.TryGetElementNode(fhirPath,
+                out ElementTreeNode _) == false)
+                return;
+
+            if (this.fragBase.SnapNodes.TryGetElementNode(fhirPath,
+                out ElementTreeNode bodySiteNode) == false)
+                throw new Exception($"Body site node found in differentiual, but not snapshot");
+
+            BuildMembers.BuildMemberElement bme = new BuildMembers.BuildMemberElement(this,
+                this.fragBase.CodeBlocks,
+                bodySiteNode);
+            bme.Build();
+
             //if (this.fragBase.DiffNodes.TryGetElementNode($"{fhirPath}.extension",
             //    out ElementTreeNode bodySiteExtensionNode) == false)
             //    return;

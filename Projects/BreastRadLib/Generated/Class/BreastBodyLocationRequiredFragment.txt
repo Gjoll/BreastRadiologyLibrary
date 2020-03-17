@@ -1,7 +1,17 @@
 		//+ Properties
+		                                                                                                                                          // BuildMemberBase.cs:375
+		// Called from BuildMemberElement.cs, Line 108
+		// BuildMemberBase.cs:377
+		/// <summary>
+		/// BodySite
+		/// Access fhir element 'Observation.bodySite'
+		/// </summary>
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:381
 		//- Properties
 
 			//+ Constructor
+			// Called from BuildMemberElement.cs, Line 108
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -12,11 +22,13 @@
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
+			this.Resource.SetValue("bodySite", this.BodySite.Write(this.Doc));                                                                       // BuildMemberElement.cs:93
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
+			this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>("bodySite"));                                                       // BuildMemberElement.cs:78
 			//- ReadCode
 
 			//+ Methods

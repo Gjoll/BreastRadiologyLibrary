@@ -66,8 +66,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // DefineBase.cs:220
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity");                                            // DefineBase.cs:238
 			//- Constructor
 		}
 
@@ -112,7 +112,7 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
-		// DefineBase.cs:137
+		// DefineBase.cs:155
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
@@ -134,14 +134,14 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "MG Breast Density observation";                                                                           // FhirConstruct.cs:827
 		    return retVal;                                                                                                                        // FhirConstruct.cs:835
 		}                                                                                                                                         // FhirConstruct.cs:836
-		// DefineBase.cs:181
+		// DefineBase.cs:199
 		/// <summary>
 		/// Set Observation.value[x] to one of the predefined items
 		/// </summary>
-		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // DefineBase.cs:184
-		{                                                                                                                                         // DefineBase.cs:185
-		    this.Resource.Value = (CodeableConcept) code;                                                                                         // DefineBase.cs:187
-		}                                                                                                                                         // DefineBase.cs:190
+		public void SetValueX(MGBreastDensityVS.TCoding code)                                                                                     // DefineBase.cs:202
+		{                                                                                                                                         // DefineBase.cs:203
+		    this.Resource.Value = (CodeableConcept) code;                                                                                         // DefineBase.cs:205
+		}                                                                                                                                         // DefineBase.cs:208
 		//- Methods
 	}
 }

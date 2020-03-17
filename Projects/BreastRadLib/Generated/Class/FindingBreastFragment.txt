@@ -66,14 +66,14 @@
 			//- ReadCode
 
 			//+ Methods
-			// DefineBase.cs:181
+			// DefineBase.cs:199
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:184
-			{                                                                                                                                        // DefineBase.cs:185
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:187
-			}                                                                                                                                        // DefineBase.cs:190
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:202
+			{                                                                                                                                        // DefineBase.cs:203
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:205
+			}                                                                                                                                        // DefineBase.cs:208
 			                                                                                                                                         // BuildMemberReferences.cs:127
 			//+ !HasMembers
 			                                                                                                                                         // BuildMemberReferences.cs:130

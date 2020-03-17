@@ -66,8 +66,8 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                                             // DefineBase.cs:220
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite");                                             // DefineBase.cs:238
 			//- Constructor
 		}
 
@@ -112,7 +112,7 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
-		// DefineBase.cs:137
+		// DefineBase.cs:155
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>

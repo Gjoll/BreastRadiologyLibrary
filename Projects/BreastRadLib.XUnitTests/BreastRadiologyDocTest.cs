@@ -256,24 +256,42 @@ namespace BreastRadiology.XUnitTests
             Debug.Assert(item2.LandMark.Get().Coding[0].Code == "code2");
         }
 
-        //[TestMethod]
-        //public void E_Observation_BodySite()
-        //{
-        //    GlobalSettings.IgnoreCardinalityErrors = true;
+        [TestMethod]
+        public void F_Observation_BodySite()
+        {
+            GlobalSettings.IgnoreCardinalityErrors = true;
 
-        //    CodeableConcept bodySiteCode = new CodeableConcept("bsSys", "bsCode", "bsDisplay");
-        //    Bundle b;
-        //    {
-        //        BreastRadiologyDocument doc = MakeDoc();
-        //        BreastRadReport report = doc.Index.Report.Set(new BreastRadReport(doc));
-        //        SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Set(new SectionFindingsLeftBreast(doc));
-        //        MGFinding mgFinding = findLeft.MGFinding.Set(new MGFinding(doc));
-        //        AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append(new AbnormalityCyst(doc));
-        //        //$BodySiteExtended bodySite = abCyst.BodySite.Create();
-        //        //$bodySite.BodySite = bodySiteCode;
-        //        //$b = doc.Write();
-        //    }
-        //}
+            CodeableConcept bodySiteCode = new CodeableConcept("bsSys", "bsCode", "bsDisplay");
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = MakeDoc();
+                BreastRadReport report = doc.Index.Report.Set(new BreastRadReport(doc));
+                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Set(new SectionFindingsLeftBreast(doc));
+                MGFinding mgFinding = findLeft.MGFinding.Set(new MGFinding(doc));
+                AbnormalityCyst abCyst = mgFinding.AbnormalityCyst.Append(new AbnormalityCyst(doc));
+                var bodySite = abCyst.BodySite.Set(new CodeableConcept("bsSystem", "bsCode"));
+                b = doc.Write();
+            }
+
+            {
+                BreastRadiologyDocument doc = BreastRadiologyDocument.Read(b);
+                BreastRadReport report = doc.Index.Report.Get();
+                Assert.IsTrue(report != null);
+
+                SectionFindingsLeftBreast findLeft = doc.Index.FindingsLeftBreast.Get();
+                Assert.IsTrue(findLeft != null);
+
+                MGFinding mgFinding = findLeft.MGFinding.Get();
+                Assert.IsTrue(mgFinding != null);
+
+                AbnormalityCyst[] abCyst = mgFinding.AbnormalityCyst.All().ToArray();
+                Assert.IsTrue(abCyst.Length == 1);
+                CodeableConcept bodySite = abCyst[0].BodySite.Get();
+                Assert.IsTrue(bodySite.Coding.Count == 1);
+                Assert.IsTrue(bodySite.Coding[0].System == "bsSystem");
+                Assert.IsTrue(bodySite.Coding[0].Code == "bsCode");
+            }
+        }
 
         [TestMethod]
         public void Z_Validate()

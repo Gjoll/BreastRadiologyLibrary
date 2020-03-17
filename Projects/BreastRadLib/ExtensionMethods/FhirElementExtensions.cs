@@ -90,9 +90,17 @@ namespace BreastRadLib
             }
             else
             {
-                if (value.Count() > 1)
-                    throw new Exception($"Can not set multiple values to single element");
-                pi.SetValue(fhirElement, value.First());
+                switch(value.Count())
+                {
+                    case 0:
+                        pi.SetValue(fhirElement, null);
+                        break;
+                    case 1:
+                        pi.SetValue(fhirElement, value.First());
+                        break;
+                    default:
+                        throw new Exception($"Can not set multiple values to single element");
+                }
             }
         }
 

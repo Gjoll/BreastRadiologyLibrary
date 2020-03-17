@@ -49,6 +49,14 @@ namespace BreastRadLib
 		/// </summary>
 		public MTumorSatellite TumorSatellite { get ; protected set; }                                                                            // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
+		// Called from BuildMemberElement.cs, Line 108
+		// BuildMemberBase.cs:377
+		/// <summary>
+		/// BodySite
+		/// Access fhir element 'Observation.bodySite'
+		/// </summary>
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:381
+		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:377
 		/// <summary>
@@ -217,10 +225,12 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // DefineBase.cs:220
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // DefineBase.cs:238
 			// Called from BuildMemberReferences.cs, Line 199
 			this.TumorSatellite = new MTumorSatellite(0, -1);                                                                                        // BuildMemberBase.cs:360
+			// Called from BuildMemberElement.cs, Line 108
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
 			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
@@ -284,6 +294,7 @@ namespace BreastRadLib
 			//+ !WriteHasMembers
 			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:163
 			//- !WriteHasMembers
+			this.Resource.SetValue("bodySite", this.BodySite.Write(this.Doc));                                                                       // BuildMemberElement.cs:93
 			//+ !WriteComponents
 			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:170
 			//- !WriteComponents
@@ -302,6 +313,7 @@ namespace BreastRadLib
 			//+ !ReadHasMembers
 			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:172
 			//- !ReadHasMembers
+			this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>("bodySite"));                                                       // BuildMemberElement.cs:78
 			//+ !ReadComponents
 			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:179
 			//- !ReadComponents
@@ -309,7 +321,7 @@ namespace BreastRadLib
 		}
 
 		//+ Methods
-		// DefineBase.cs:137
+		// DefineBase.cs:155
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>

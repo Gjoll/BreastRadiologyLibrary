@@ -24,7 +24,7 @@ namespace FireFragger.CS.BuildMembers
         /// <summary>
         /// Name of fhir element (as stored in resource).
         /// </summary>
-        protected override String FhirClassName => "Observation.ComponentComponent";
+        protected override String FhirClassName => this.itemElementGetName;
 
         /// <summary>
         /// Perform local processing of container class.
@@ -38,9 +38,9 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} element)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode("this.Value = element;")
                 .CloseBrace()
                 ;
         }
@@ -49,9 +49,10 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public {FhirClassName} WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode($"{FhirClassName} retVal = this.Value;")
+                .AppendCode($"return retVal;")
                 .CloseBrace()
                 ;
         }
@@ -60,40 +61,37 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> components)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> elements)")
                 .OpenBrace()
-                //.AppendCode($"List<Item> items = new List<Item>();")
-                //.AppendCode($"foreach (Element element in elements)")
-                //.AppendCode($"    items.Add(new Item(({this.ElementGetName}) element));")
-                //.AppendCode($"this.SetAllItems(items);")
+                .AppendCode($"List<Item> items = new List<Item>();")
+                .AppendCode($"foreach (Element element in elements)")
+                .OpenBrace()
+                .AppendCode($"Item item = new Item();")
+                .AppendCode($"item.ReadItem(doc, ({this.ElementGetName}) element);")
+                .AppendCode($"items.Add(item);")
+                .CloseBrace()
+                .AppendCode($"this.SetAllItems(items);")
                 .CloseBrace()
                 ;
 
-            //this.readBlock
-            //    .AppendCode($"this.{PropertyName}.Read(this.Doc, items);")
-            //    ;
+            this.codeBlocks.ClassReadCode
+                .AppendCode($"this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>(\"bodySite\"));")
+                ;
         }
 
         protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
-               .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
-               .OpenBrace()
-               //.AppendCode($"foreach (Item item in this.GetAllItems())")
-               //.OpenBrace()
-               //.AppendCode($"{FhirClassName} component = new {FhirClassName}")
-               //.OpenBrace()
-               //.AppendCode($"Value = item.Value,")
-               //.AppendCode($"Code = {componentCodeMethodName}()")
-               //.CloseBrace(";")
-               //.AppendCode($"yield return component;")
-               //.CloseBrace()
-               .CloseBrace()
-               ;
+                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+                .OpenBrace()
+                .AppendCode($"foreach (Item item in this.GetAllItems())")
+                .AppendCode($"    yield return item.WriteItem(doc);")
+                .CloseBrace()
+                ;
 
-            //this.writeBlock
-            //    .AppendCode($"items.AddRange(this.{PropertyName}.Write(this.Doc));")
-            //    ;
+            this.codeBlocks.ClassWriteCode
+                .AppendCode($"this.Resource.SetValue(\"bodySite\", this.BodySite.Write(this.Doc));")
+            ;
         }
 
         public override void Build()
@@ -105,7 +103,7 @@ namespace FireFragger.CS.BuildMembers
             foreach (var type in valueNode.ElementDefinition.Type)
                 itemElementSetName.Add(type.Code);
 
-            this.containerClassName = $"M{this.ElementName}";
+            this.containerClassName = $"M{this.ElementName.ToMachineName()}";
             this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
             base.BuildOne(valueNode.ElementDefinition.ElementId, min, max);
         }

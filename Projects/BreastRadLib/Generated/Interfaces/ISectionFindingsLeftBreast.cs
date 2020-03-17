@@ -18,6 +18,12 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberElement.cs, Line 108
+		// BuildMemberBase.cs:367
+		/// <summary>
+		/// BodySite
+		/// </summary>
+		MBodySite BodySite { get ; }                                                                                                              // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods
