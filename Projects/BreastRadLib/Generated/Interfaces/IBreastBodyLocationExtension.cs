@@ -18,7 +18,7 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberExtensionComplex.cs, Line 193
+		// Called from BuildMemberExtensionComplex.cs, Line 188
 		// BuildMemberBase.cs:367
 		/// <summary>
 		/// BreastBodyLocationExtension

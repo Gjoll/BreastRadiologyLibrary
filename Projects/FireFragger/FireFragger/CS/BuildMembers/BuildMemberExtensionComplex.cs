@@ -43,7 +43,7 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} extension)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode("this.Value.ReadMember(doc, extension);")
                 .CloseBrace()
                 ;
         }
@@ -55,7 +55,7 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"public Extension WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
                 .DefineBlock(out this.itemCodeBlocks.ClassWriteCode)
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode("return this.Value.WriteMember(doc);")
                 .CloseBrace()
                 ;
         }
@@ -92,16 +92,8 @@ namespace FireFragger.CS.BuildMembers
             b
                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
-                .AppendCode($"throw new NotImplementedException(\"xxyyz\");")
-               //.AppendCode($"foreach (Item item in this.GetAllItems())")
-               //.OpenBrace()
-               //.AppendCode($"{FhirClassName} extension = new {FhirClassName}")
-               //.OpenBrace()
-               //.AppendCode($"Url = ExtensionUrl")
-               //.CloseBrace(";")
-               //.AppendCode($"extension.Extension.AddRange(item.Value.Write(doc));")
-               //.AppendCode($"yield return extension;")
-               //.CloseBrace()
+               .AppendCode($"foreach (Item item in this.GetAllItems())")
+               .AppendCode($"    yield return item.WriteItem(doc);")
                .CloseBrace()
                ;
 
@@ -142,11 +134,11 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary("Write item as a fhir element.")
                 .SummaryClose()
-                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+                .AppendCode($"public Extension WriteMember(BreastRadiologyDocument doc)")
                 .OpenBrace()
                 .AppendCode($"List<Extension> items = new List<Extension>();")
                 .DefineBlock(out itemClassBlocks.ClassWriteCode)
-                .AppendCode($"yield return new {FhirClassName}")
+                .AppendCode($"return new {FhirClassName}")
                 .OpenBrace()
                 .AppendCode($"Url = ExtensionUrl,")
                 .AppendCode($"Extension = items")
@@ -157,8 +149,11 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary("Read from fhir element into member item.")
                 .SummaryClose()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
+                .AppendCode($"public void ReadMember(BreastRadiologyDocument doc, Extension extension)")
                 .OpenBrace()
+                .AppendCode($"if (extension.Url != ExtensionUrl)")
+                .AppendCode($"    throw new Exception($\"Invalid extension url '{{extension.Url}}', expected '{{ExtensionUrl}}'\");")
+                .AppendCode($"List<Extension> extensions = extension.Extension;")
                 .DefineBlock(out itemClassBlocks.ClassReadCode)
                 .CloseBrace()
 
