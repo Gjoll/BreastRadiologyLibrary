@@ -78,7 +78,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding"                                                            // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
@@ -246,7 +246,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding"                                                           // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
@@ -414,7 +414,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding"                                                            // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
@@ -582,7 +582,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding"                                                            // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>

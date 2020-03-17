@@ -115,6 +115,7 @@ namespace FireFragger.CS.BuildMembers
             ClassCodeBlocks itemClassBlocks = new ClassCodeBlocks();
 
             this.itemCode
+                .AppendCode($"#region {this.pathName} Member Class")
                 .SummaryOpen()
                 .Summary($"Extension class for {this.extensionName}.")
                 .SummaryClose()
@@ -162,6 +163,7 @@ namespace FireFragger.CS.BuildMembers
                 .CloseBrace()
 
                 .CloseBrace()
+                .AppendCode($"#endregion")
                 ;
 
             ElementTreeNode extension = this.extensionSlice.Nodes.GetItem("extension");

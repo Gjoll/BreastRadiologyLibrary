@@ -73,7 +73,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    #endregion                                                                                                                             // BuildMemberBase.cs:116
 	                                                                                                                                           // BuildMemberBase.cs:167
 	    // Properties                                                                                                                          // BuildMemberBase.cs:168
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
@@ -250,7 +250,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    #endregion                                                                                                                             // BuildMemberBase.cs:116
 	                                                                                                                                           // BuildMemberBase.cs:167
 	    // Properties                                                                                                                          // BuildMemberBase.cs:168
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
@@ -427,7 +427,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    #endregion                                                                                                                             // BuildMemberBase.cs:116
 	                                                                                                                                           // BuildMemberBase.cs:167
 	    // Properties                                                                                                                          // BuildMemberBase.cs:168
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
@@ -604,7 +604,7 @@ namespace BreastRadLib.ShapeComponentsFragmentLocal
 	    #endregion                                                                                                                             // BuildMemberBase.cs:116
 	                                                                                                                                           // BuildMemberBase.cs:167
 	    // Properties                                                                                                                          // BuildMemberBase.cs:168
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>

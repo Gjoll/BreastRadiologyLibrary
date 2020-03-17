@@ -78,7 +78,7 @@ namespace BreastRadLib.ConsistentWithHasMemberFragmentLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith"                                                       // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265

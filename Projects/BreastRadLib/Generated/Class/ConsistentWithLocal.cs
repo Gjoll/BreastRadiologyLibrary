@@ -73,7 +73,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	    #endregion                                                                                                                             // BuildMemberBase.cs:116
 	                                                                                                                                           // BuildMemberBase.cs:167
 	    // Properties                                                                                                                          // BuildMemberBase.cs:168
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
@@ -250,7 +250,7 @@ namespace BreastRadLib.ConsistentWithLocal
 	    #endregion                                                                                                                             // BuildMemberBase.cs:116
 	                                                                                                                                           // BuildMemberBase.cs:167
 	    // Properties                                                                                                                          // BuildMemberBase.cs:168
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265

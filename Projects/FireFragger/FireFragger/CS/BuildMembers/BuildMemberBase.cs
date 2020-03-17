@@ -189,7 +189,7 @@ namespace FireFragger.CS.BuildMembers
             if (this.Singleton)
             {
                 this.containerCodeBlocks.ClassProperties
-                    .AppendCode($"#region Common Singleton Properties")
+                    .AppendCode($"#region Common Properties (Singleton)")
 
                     .BlankLine()
                     .SummaryOpen()
@@ -258,7 +258,7 @@ namespace FireFragger.CS.BuildMembers
             else
             {
                 this.containerCodeBlocks.ClassProperties
-                    .AppendCode($"#region Common Non-Singleton Properties")
+                    .AppendCode($"#region Common Properties (Non-Singleton)")
                     .AppendCode($"List<Item> items = new List<Item>();")
 
                     .BlankLine()

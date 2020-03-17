@@ -78,7 +78,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst"                                                      // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -247,7 +247,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct"                                                      // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -416,7 +416,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject"                                             // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -585,7 +585,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode"                                                 // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -754,7 +754,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass"                                                      // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -923,7 +923,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature"                                                    // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -1092,7 +1092,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma"                                              // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -1261,7 +1261,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityArchitecturalDistortion"                                 // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -1430,7 +1430,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityAsymmetry"                                               // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -1599,7 +1599,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityCalcification"                                           // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -1768,7 +1768,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity"                                                 // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -1937,7 +1937,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis"                                             // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Non-Singleton Properties                                                                                                // BuildMemberBase.cs:261
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:261
 	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:262
 	                                                                                                                                           // BuildMemberBase.cs:264
 	    // BuildMemberBase.cs:265
@@ -2106,7 +2106,7 @@ namespace BreastRadLib.MGFindingLocal
 	    {                                                                                                                                      // BuildMemberBase.cs:140
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity"                                                      // BuildMemberBase.cs:147
 	    };                                                                                                                                     // BuildMemberBase.cs:148
-	    #region Common Singleton Properties                                                                                                    // BuildMemberBase.cs:192
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:192
 	                                                                                                                                           // BuildMemberBase.cs:194
 	    // BuildMemberBase.cs:195
 	    /// <summary>
