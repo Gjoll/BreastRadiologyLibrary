@@ -44,7 +44,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} reference)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} reference)")
                 .OpenBrace()
                 .AppendCode($"this.Value = ({ElementGetName}) doc.GetResource(reference);")
                 .CloseBrace()
@@ -55,9 +55,12 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} reference)")
+                .AppendCode($"public {FhirClassName} WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
-                .AppendCode("reference.Reference = this.Value.Id;")
+                .AppendCode("return new ResourceReference")
+                .OpenBrace()
+                .AppendCode("Reference = this.Value.Id")
+                .CloseBrace(";")
                 .CloseBrace()
                 ;
         }
@@ -75,7 +78,7 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"foreach (ResourceReference resourceReference in resourceReferences)")
                 .OpenBrace()
                 .AppendCode($"Item item = new Item();")
-                .AppendCode($"item.Read(doc, resourceReference);")
+                .AppendCode($"item.ReadItem(doc, resourceReference);")
                 .AppendCode($"items.Add(item);")
                 .CloseBrace()
                 .AppendCode($"this.SetAllItems(items);")
@@ -94,8 +97,7 @@ namespace FireFragger.CS.BuildMembers
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
                .OpenBrace()
-               .AppendCode($"{FhirClassName} reference = new {FhirClassName}();")
-               .AppendCode($"item.Write(doc, reference);")
+               .AppendCode($"{FhirClassName} reference = item.WriteItem(doc);")
                .AppendCode($"yield return reference;")
                .CloseBrace()
                .CloseBrace()

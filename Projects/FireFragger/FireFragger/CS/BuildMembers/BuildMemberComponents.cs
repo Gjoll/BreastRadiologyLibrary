@@ -40,13 +40,17 @@ namespace FireFragger.CS.BuildMembers
             base.BuildContainerClassLocal(itemCodeBlocks);
 
             componentCodeMethodName = $"{sliceName.ToMachineName()}_ComponentCode";
-            FhirConstruct.Construct(itemCodeBlocks.ClassMethods, componentCode, componentCodeMethodName, out String dummy);
+            FhirConstruct.Construct(itemCodeBlocks.ClassMethods, 
+                componentCode, 
+                componentCodeMethodName, 
+                out String dummy,
+                "private static");
         }
 
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} component)")
                 .OpenBrace()
                 .AppendCode($"this.Value = ({ElementGetName}) component.Value;")
                 .CloseBrace()
@@ -56,9 +60,13 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public {FhirClassName} WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
-                .AppendCode($"component.Value = this.Value;")
+                .AppendCode($"return new {FhirClassName}")
+                .OpenBrace()
+                .AppendCode($"Value = this.Value,")
+                .AppendCode($"Code = {componentCodeMethodName}()")
+                .CloseBrace(";")
                 .CloseBrace()
                 ;
         }
@@ -70,14 +78,14 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> components)")
                 .OpenBrace()
-                .AppendCode($"IEnumerable<Element> elements = base.IsMember(doc,")
+                .AppendCode($"IEnumerable<Observation.ComponentComponent> memberComponents = base.IsMember(doc,")
                 .AppendCode($"    components,")
-                .AppendCode($"    this.{componentCodeMethodName}());")
+                .AppendCode($"    {componentCodeMethodName}());")
                 .AppendCode($"List<Item> items = new List<Item>();")
-                .AppendCode($"foreach (Element element in elements)")
+                .AppendCode($"foreach (Observation.ComponentComponent memberComponent in memberComponents)")
                 .OpenBrace()
                 .AppendCode($"Item item = new Item();")
-                .AppendCode($"item.Value = ({this.ElementGetName}) element;")
+                .AppendCode($"item.ReadItem(doc, memberComponent);")
                 .AppendCode($"items.Add(item);")
                 .CloseBrace()
                 .AppendCode($"this.SetAllItems(items);")
@@ -96,11 +104,7 @@ namespace FireFragger.CS.BuildMembers
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
                .OpenBrace()
-               .AppendCode($"{FhirClassName} component = new {FhirClassName}")
-               .OpenBrace()
-               .AppendCode($"Value = item.Value,")
-               .AppendCode($"Code = {componentCodeMethodName}()")
-               .CloseBrace(";")
+               .AppendCode($"{FhirClassName} component = item.WriteItem(doc);")
                .AppendCode($"yield return component;")
                .CloseBrace()
                .CloseBrace()

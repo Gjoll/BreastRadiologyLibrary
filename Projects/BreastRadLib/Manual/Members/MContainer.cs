@@ -82,18 +82,25 @@ namespace BreastRadLib
             }
         }
 
-        protected IEnumerable<Element> IsMember(BreastRadiologyDocument doc,
+        /// <summary>
+        /// Return all components that have the indicated component code.
+        /// </summary>
+        protected IEnumerable<Observation.ComponentComponent> IsMember(BreastRadiologyDocument doc,
             IEnumerable<Observation.ComponentComponent> components,
             CodeableConcept code)
         {
             foreach (Observation.ComponentComponent component in components)
             {
                 if (component.Code.IsCode(code))
-                    yield return component.Value;
+                    yield return component;
             }
         }
 
-        protected IEnumerable<ResourceBase> IsMember(BreastRadiologyDocument doc,
+        /// <summary>
+        /// Return all sections that have the indicated section code.
+        /// There should only ever be one returned.
+        /// </summary>
+        protected IEnumerable<Composition.SectionComponent> IsMember(BreastRadiologyDocument doc,
             IEnumerable<Composition.SectionComponent> sections,
             CodeableConcept code)
         {
@@ -101,13 +108,7 @@ namespace BreastRadLib
             {
                 if (section.Code.IsCode(code))
                 {
-                    foreach (ResourceReference resRef in section.Entry)
-                    {
-                        Resource referencedResource = doc.ReferencedResource<Resource>(resRef);
-                        if (doc.TryGetRegisteredItem(referencedResource, out ResourceBase item) == false)
-                            throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
-                        yield return item;
-                    }
+                    yield return section;
                 }
             }
         }

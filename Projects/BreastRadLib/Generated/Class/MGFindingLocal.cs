@@ -16,7 +16,7 @@ namespace BreastRadLib.MGFindingLocal
 {
 	//+ LocalClassDefs
 	#region Observation.hasMember:abnormalityCyst Container Class                                                                              // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityCyst.
@@ -24,7 +24,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class AbnormalityCystContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:abnormalityCyst Item Class                                                                               // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityCyst.
@@ -53,17 +53,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (AbnormalityCyst) doc.GetResource(reference);                                                                     // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -151,39 +154,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:abnormalityDuct Container Class                                                                              // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityDuct.
@@ -191,7 +193,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class AbnormalityDuctContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:abnormalityDuct Item Class                                                                               // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityDuct.
@@ -220,17 +222,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (AbnormalityDuct) doc.GetResource(reference);                                                                     // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -318,39 +323,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:abnormalityForeignObject Container Class                                                                     // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityForeignObject.
@@ -358,7 +362,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class AbnormalityForeignObjectContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:abnormalityForeignObject Item Class                                                                      // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityForeignObject.
@@ -387,17 +391,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (AbnormalityForeignObject) doc.GetResource(reference);                                                            // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -485,39 +492,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:abnormalityLymphNode Container Class                                                                         // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityLymphNode.
@@ -525,7 +531,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class AbnormalityLymphNodeContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:abnormalityLymphNode Item Class                                                                          // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityLymphNode.
@@ -554,17 +560,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (AbnormalityLymphNode) doc.GetResource(reference);                                                                // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -652,39 +661,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:abnormalityMass Container Class                                                                              // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityMass.
@@ -692,7 +700,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class AbnormalityMassContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:abnormalityMass Item Class                                                                               // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityMass.
@@ -721,17 +729,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (AbnormalityMass) doc.GetResource(reference);                                                                     // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -819,39 +830,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:associatedFeature Container Class                                                                            // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:associatedFeature.
@@ -859,7 +869,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class AssociatedFeatureContainer : MContainer, ITMItem<ResourceReference>                                                           // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:associatedFeature Item Class                                                                             // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:associatedFeature.
@@ -888,17 +898,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (AssociatedFeature) doc.GetResource(reference);                                                                   // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -986,39 +999,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:abnormalityFibroadenoma Container Class                                                                      // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:abnormalityFibroadenoma.
@@ -1026,7 +1038,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class AbnormalityFibroadenomaContainer : MContainer, ITMItem<ResourceReference>                                                     // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:abnormalityFibroadenoma Item Class                                                                       // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:abnormalityFibroadenoma.
@@ -1055,17 +1067,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (AbnormalityFibroadenoma) doc.GetResource(reference);                                                             // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -1153,39 +1168,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:mGAbnormalityArchitecturalDistortion Container Class                                                         // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityArchitecturalDistortion.
@@ -1193,7 +1207,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class MGAbnormalityArchitecturalDistortionContainer : MContainer, ITMItem<ResourceReference>                                        // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:mGAbnormalityArchitecturalDistortion Item Class                                                          // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityArchitecturalDistortion.
@@ -1222,17 +1236,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (MGAbnormalityArchitecturalDistortion) doc.GetResource(reference);                                                // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -1320,39 +1337,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:mGAbnormalityAsymmetry Container Class                                                                       // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityAsymmetry.
@@ -1360,7 +1376,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class MGAbnormalityAsymmetryContainer : MContainer, ITMItem<ResourceReference>                                                      // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:mGAbnormalityAsymmetry Item Class                                                                        // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityAsymmetry.
@@ -1389,17 +1405,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (MGAbnormalityAsymmetry) doc.GetResource(reference);                                                              // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -1487,39 +1506,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:mGAbnormalityCalcification Container Class                                                                   // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityCalcification.
@@ -1527,7 +1545,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class MGAbnormalityCalcificationContainer : MContainer, ITMItem<ResourceReference>                                                  // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:mGAbnormalityCalcification Item Class                                                                    // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityCalcification.
@@ -1556,17 +1574,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (MGAbnormalityCalcification) doc.GetResource(reference);                                                          // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -1654,39 +1675,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:mGAbnormalityDensity Container Class                                                                         // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityDensity.
@@ -1694,7 +1714,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class MGAbnormalityDensityContainer : MContainer, ITMItem<ResourceReference>                                                        // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:mGAbnormalityDensity Item Class                                                                          // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityDensity.
@@ -1723,17 +1743,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (MGAbnormalityDensity) doc.GetResource(reference);                                                                // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -1821,39 +1844,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:mGAbnormalityFatNecrosis Container Class                                                                     // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:mGAbnormalityFatNecrosis.
@@ -1861,7 +1883,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class MGAbnormalityFatNecrosisContainer : MContainer, ITMItem<ResourceReference>                                                    // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:mGAbnormalityFatNecrosis Item Class                                                                      // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGAbnormalityFatNecrosis.
@@ -1890,17 +1912,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (MGAbnormalityFatNecrosis) doc.GetResource(reference);                                                            // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -1988,39 +2013,38 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Observation.hasMember:mGBreastDensity Container Class                                                                              // BuildMemberBase.cs:157
-	// Called from BuildMemberReferences.cs, Line 197
+	// Called from BuildMemberReferences.cs, Line 199
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.hasMember:mGBreastDensity.
@@ -2028,7 +2052,7 @@ namespace BreastRadLib.MGFindingLocal
 	public class MGBreastDensityContainer : MContainer, ITMItem<ResourceReference>                                                             // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.hasMember:mGBreastDensity Item Class                                                                               // BuildMemberBase.cs:75
-	    // Called from BuildMemberReferences.cs, Line 197
+	    // Called from BuildMemberReferences.cs, Line 199
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.hasMember:mGBreastDensity.
@@ -2057,17 +2081,20 @@ namespace BreastRadLib.MGFindingLocal
 	        /// Write item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:57
-	        public void Write(BreastRadiologyDocument doc, ResourceReference reference)                                                        // BuildMemberReferences.cs:58
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberReferences.cs:58
 	        {                                                                                                                                  // BuildMemberReferences.cs:59
-	            reference.Reference = this.Value.Id;                                                                                           // BuildMemberReferences.cs:60
-	        }                                                                                                                                  // BuildMemberReferences.cs:61
+	            return new ResourceReference                                                                                                   // BuildMemberReferences.cs:60
+	            {                                                                                                                              // BuildMemberReferences.cs:61
+	                Reference = this.Value.Id                                                                                                  // BuildMemberReferences.cs:62
+	            };                                                                                                                             // BuildMemberReferences.cs:63
+	        }                                                                                                                                  // BuildMemberReferences.cs:64
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
 	                                                                                                                                           // BuildMemberReferences.cs:46
-	        public void Read(BreastRadiologyDocument doc, ResourceReference reference)                                                         // BuildMemberReferences.cs:47
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference reference)                                                     // BuildMemberReferences.cs:47
 	        {                                                                                                                                  // BuildMemberReferences.cs:48
 	            this.Value = (MGBreastDensity) doc.GetResource(reference);                                                                     // BuildMemberReferences.cs:49
 	        }                                                                                                                                  // BuildMemberReferences.cs:50
@@ -2154,35 +2181,34 @@ namespace BreastRadLib.MGFindingLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:93
-	    {                                                                                                                                      // BuildMemberReferences.cs:94
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:95
-	        {                                                                                                                                  // BuildMemberReferences.cs:96
-	            ResourceReference reference = new ResourceReference();                                                                         // BuildMemberReferences.cs:97
-	            item.Write(doc, reference);                                                                                                    // BuildMemberReferences.cs:98
-	            yield return reference;                                                                                                        // BuildMemberReferences.cs:99
-	        }                                                                                                                                  // BuildMemberReferences.cs:100
-	    }                                                                                                                                      // BuildMemberReferences.cs:101
+	    public IEnumerable<ResourceReference> Write(BreastRadiologyDocument doc)                                                               // BuildMemberReferences.cs:96
+	    {                                                                                                                                      // BuildMemberReferences.cs:97
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberReferences.cs:98
+	        {                                                                                                                                  // BuildMemberReferences.cs:99
+	            ResourceReference reference = item.WriteItem(doc);                                                                             // BuildMemberReferences.cs:100
+	            yield return reference;                                                                                                        // BuildMemberReferences.cs:101
+	        }                                                                                                                                  // BuildMemberReferences.cs:102
+	    }                                                                                                                                      // BuildMemberReferences.cs:103
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberReferences.cs:68
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:69
-	    {                                                                                                                                      // BuildMemberReferences.cs:70
-	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:71
-	            references,                                                                                                                    // BuildMemberReferences.cs:72
-	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:73
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:74
-	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:75
-	        {                                                                                                                                  // BuildMemberReferences.cs:76
-	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:77
-	            item.Read(doc, resourceReference);                                                                                             // BuildMemberReferences.cs:78
-	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:79
-	        }                                                                                                                                  // BuildMemberReferences.cs:80
-	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:81
-	    }                                                                                                                                      // BuildMemberReferences.cs:82
+	                                                                                                                                           // BuildMemberReferences.cs:71
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<ResourceReference> references)                                               // BuildMemberReferences.cs:72
+	    {                                                                                                                                      // BuildMemberReferences.cs:73
+	        IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,                                                             // BuildMemberReferences.cs:74
+	            references,                                                                                                                    // BuildMemberReferences.cs:75
+	            this.targetUrls);                                                                                                              // BuildMemberReferences.cs:76
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberReferences.cs:77
+	        foreach (ResourceReference resourceReference in resourceReferences)                                                                // BuildMemberReferences.cs:78
+	        {                                                                                                                                  // BuildMemberReferences.cs:79
+	            Item item = new Item();                                                                                                        // BuildMemberReferences.cs:80
+	            item.ReadItem(doc, resourceReference);                                                                                         // BuildMemberReferences.cs:81
+	            items.Add(item);                                                                                                               // BuildMemberReferences.cs:82
+	        }                                                                                                                                  // BuildMemberReferences.cs:83
+	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:84
+	    }                                                                                                                                      // BuildMemberReferences.cs:85
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	//- LocalClassDefs

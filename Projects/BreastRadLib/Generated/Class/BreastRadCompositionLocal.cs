@@ -16,7 +16,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 {
 	//+ LocalClassDefs
 	#region Composition.section:report Container Class                                                                                         // BuildMemberBase.cs:157
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 226
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Composition.section:report.
@@ -24,7 +24,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class ReportContainer : MContainer, ITMItem<Composition.SectionComponent>                                                           // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Composition.section:report Item Class                                                                                          // BuildMemberBase.cs:75
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 226
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Composition.section:report.
@@ -52,16 +52,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	        public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                // BuildMemberSection.cs:60
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberSection.cs:60
 	        {                                                                                                                                  // BuildMemberSection.cs:61
-	            resourceReference.Reference = this.Value.Id;                                                                                   // BuildMemberSection.cs:62
-	        }                                                                                                                                  // BuildMemberSection.cs:63
+	            return new ResourceReference                                                                                                   // BuildMemberSection.cs:62
+	            {                                                                                                                              // BuildMemberSection.cs:63
+	                Reference = this.Value.Id                                                                                                  // BuildMemberSection.cs:64
+	            };                                                                                                                             // BuildMemberSection.cs:65
+	        }                                                                                                                                  // BuildMemberSection.cs:66
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	        public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                 // BuildMemberSection.cs:50
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)                                             // BuildMemberSection.cs:50
 	        {                                                                                                                                  // BuildMemberSection.cs:51
 	            this.Value = (BreastRadReport) doc.GetResource(resourceReference);                                                             // BuildMemberSection.cs:52
 	        }                                                                                                                                  // BuildMemberSection.cs:53
@@ -139,65 +142,66 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:177
 	                                                                                                                                           // BuildMemberBase.cs:179
 	    // Methods                                                                                                                             // BuildMemberBase.cs:180
-	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:753
-	    {                                                                                                                                      // FhirConstruct.cs:754
-	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
-	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:761
-	        {                                                                                                                                  // FhirConstruct.cs:764
-	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:765
-	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:768
-	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:770
-	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:784
-	            temp4.CodeElement.Value = "sectionReport";                                                                                     // FhirConstruct.cs:786
-	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:813
-	        }                                                                                                                                  // FhirConstruct.cs:814
-	        return retVal;                                                                                                                     // FhirConstruct.cs:829
-	    }                                                                                                                                      // FhirConstruct.cs:830
+	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "sectionReport";                                                                                     // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
 	                                                                                                                                           // BuildMemberBase.cs:333
 	    // BuildMemberBase.cs:334
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:95
-	    {                                                                                                                                      // BuildMemberSection.cs:96
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:97
-	        {                                                                                                                                  // BuildMemberSection.cs:98
-	            Title = "Breast Radiology Report",                                                                                             // BuildMemberSection.cs:99
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:100
-	        };                                                                                                                                 // BuildMemberSection.cs:101
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:102
-	        {                                                                                                                                  // BuildMemberSection.cs:103
-	            section.Entry.Add(new ResourceReference                                                                                        // BuildMemberSection.cs:104
-	            {                                                                                                                              // BuildMemberSection.cs:105
-	                Reference = item.Value.Id                                                                                                  // BuildMemberSection.cs:106
-	            });                                                                                                                            // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        yield return section;                                                                                                              // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:102
+	    {                                                                                                                                      // BuildMemberSection.cs:103
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:104
+	        {                                                                                                                                  // BuildMemberSection.cs:105
+	            Title = "Breast Radiology Report",                                                                                             // BuildMemberSection.cs:106
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:107
+	        };                                                                                                                                 // BuildMemberSection.cs:108
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:109
+	        {                                                                                                                                  // BuildMemberSection.cs:110
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:111
+	        }                                                                                                                                  // BuildMemberSection.cs:112
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:113
+	    }                                                                                                                                      // BuildMemberSection.cs:114
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberSection.cs:70
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:71
-	    {                                                                                                                                      // BuildMemberSection.cs:72
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberSection.cs:73
-	            sections,                                                                                                                      // BuildMemberSection.cs:74
-	            SectionCode());                                                                                                                // BuildMemberSection.cs:75
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:76
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberSection.cs:77
-	        {                                                                                                                                  // BuildMemberSection.cs:78
-	            Item item = new Item();                                                                                                        // BuildMemberSection.cs:79
-	            item.Value = (BreastRadReport) resource;                                                                                       // BuildMemberSection.cs:80
-	            items.Add(item);                                                                                                               // BuildMemberSection.cs:81
-	        }                                                                                                                                  // BuildMemberSection.cs:82
-	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:83
-	    }                                                                                                                                      // BuildMemberSection.cs:84
+	                                                                                                                                           // BuildMemberSection.cs:73
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:74
+	    {                                                                                                                                      // BuildMemberSection.cs:75
+	        IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,                                                      // BuildMemberSection.cs:76
+	            sections,                                                                                                                      // BuildMemberSection.cs:77
+	            SectionCode());                                                                                                                // BuildMemberSection.cs:78
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:79
+	        // There really should only ever be one section...                                                                                 // BuildMemberSection.cs:80
+	        foreach (Composition.SectionComponent memberSection in memberSections)                                                             // BuildMemberSection.cs:81
+	        {                                                                                                                                  // BuildMemberSection.cs:82
+	            foreach (ResourceReference entryRef in memberSection.Entry)                                                                    // BuildMemberSection.cs:83
+	            {                                                                                                                              // BuildMemberSection.cs:84
+	                Item item = new Item();                                                                                                    // BuildMemberSection.cs:85
+	                item.ReadItem(doc, entryRef);                                                                                              // BuildMemberSection.cs:86
+	                items.Add(item);                                                                                                           // BuildMemberSection.cs:87
+	            }                                                                                                                              // BuildMemberSection.cs:88
+	        }                                                                                                                                  // BuildMemberSection.cs:89
+	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:90
+	    }                                                                                                                                      // BuildMemberSection.cs:91
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Composition.section:impressions Container Class                                                                                    // BuildMemberBase.cs:157
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 226
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Composition.section:impressions.
@@ -205,7 +209,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class ImpressionsContainer : MContainer, ITMItem<Composition.SectionComponent>                                                      // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Composition.section:impressions Item Class                                                                                     // BuildMemberBase.cs:75
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 226
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Composition.section:impressions.
@@ -233,16 +237,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	        public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                // BuildMemberSection.cs:60
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberSection.cs:60
 	        {                                                                                                                                  // BuildMemberSection.cs:61
-	            resourceReference.Reference = this.Value.Id;                                                                                   // BuildMemberSection.cs:62
-	        }                                                                                                                                  // BuildMemberSection.cs:63
+	            return new ResourceReference                                                                                                   // BuildMemberSection.cs:62
+	            {                                                                                                                              // BuildMemberSection.cs:63
+	                Reference = this.Value.Id                                                                                                  // BuildMemberSection.cs:64
+	            };                                                                                                                             // BuildMemberSection.cs:65
+	        }                                                                                                                                  // BuildMemberSection.cs:66
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	        public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                 // BuildMemberSection.cs:50
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)                                             // BuildMemberSection.cs:50
 	        {                                                                                                                                  // BuildMemberSection.cs:51
 	            this.Value = (ClinicalImpressionBase) doc.GetResource(resourceReference);                                                      // BuildMemberSection.cs:52
 	        }                                                                                                                                  // BuildMemberSection.cs:53
@@ -309,20 +316,20 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:177
 	                                                                                                                                           // BuildMemberBase.cs:179
 	    // Methods                                                                                                                             // BuildMemberBase.cs:180
-	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:753
-	    {                                                                                                                                      // FhirConstruct.cs:754
-	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
-	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:761
-	        {                                                                                                                                  // FhirConstruct.cs:764
-	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:765
-	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:768
-	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:770
-	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:784
-	            temp4.CodeElement.Value = "sectionImpressions";                                                                                // FhirConstruct.cs:786
-	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:813
-	        }                                                                                                                                  // FhirConstruct.cs:814
-	        return retVal;                                                                                                                     // FhirConstruct.cs:829
-	    }                                                                                                                                      // FhirConstruct.cs:830
+	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "sectionImpressions";                                                                                // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
 	                                                                                                                                           // BuildMemberBase.cs:313
 	    // BuildMemberBase.cs:314
 	    /// <summary>
@@ -340,46 +347,47 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:95
-	    {                                                                                                                                      // BuildMemberSection.cs:96
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:97
-	        {                                                                                                                                  // BuildMemberSection.cs:98
-	            Title = "Clinical Impressions",                                                                                                // BuildMemberSection.cs:99
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:100
-	        };                                                                                                                                 // BuildMemberSection.cs:101
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:102
-	        {                                                                                                                                  // BuildMemberSection.cs:103
-	            section.Entry.Add(new ResourceReference                                                                                        // BuildMemberSection.cs:104
-	            {                                                                                                                              // BuildMemberSection.cs:105
-	                Reference = item.Value.Id                                                                                                  // BuildMemberSection.cs:106
-	            });                                                                                                                            // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        yield return section;                                                                                                              // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:102
+	    {                                                                                                                                      // BuildMemberSection.cs:103
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:104
+	        {                                                                                                                                  // BuildMemberSection.cs:105
+	            Title = "Clinical Impressions",                                                                                                // BuildMemberSection.cs:106
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:107
+	        };                                                                                                                                 // BuildMemberSection.cs:108
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:109
+	        {                                                                                                                                  // BuildMemberSection.cs:110
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:111
+	        }                                                                                                                                  // BuildMemberSection.cs:112
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:113
+	    }                                                                                                                                      // BuildMemberSection.cs:114
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberSection.cs:70
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:71
-	    {                                                                                                                                      // BuildMemberSection.cs:72
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberSection.cs:73
-	            sections,                                                                                                                      // BuildMemberSection.cs:74
-	            SectionCode());                                                                                                                // BuildMemberSection.cs:75
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:76
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberSection.cs:77
-	        {                                                                                                                                  // BuildMemberSection.cs:78
-	            Item item = new Item();                                                                                                        // BuildMemberSection.cs:79
-	            item.Value = (ClinicalImpressionBase) resource;                                                                                // BuildMemberSection.cs:80
-	            items.Add(item);                                                                                                               // BuildMemberSection.cs:81
-	        }                                                                                                                                  // BuildMemberSection.cs:82
-	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:83
-	    }                                                                                                                                      // BuildMemberSection.cs:84
+	                                                                                                                                           // BuildMemberSection.cs:73
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:74
+	    {                                                                                                                                      // BuildMemberSection.cs:75
+	        IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,                                                      // BuildMemberSection.cs:76
+	            sections,                                                                                                                      // BuildMemberSection.cs:77
+	            SectionCode());                                                                                                                // BuildMemberSection.cs:78
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:79
+	        // There really should only ever be one section...                                                                                 // BuildMemberSection.cs:80
+	        foreach (Composition.SectionComponent memberSection in memberSections)                                                             // BuildMemberSection.cs:81
+	        {                                                                                                                                  // BuildMemberSection.cs:82
+	            foreach (ResourceReference entryRef in memberSection.Entry)                                                                    // BuildMemberSection.cs:83
+	            {                                                                                                                              // BuildMemberSection.cs:84
+	                Item item = new Item();                                                                                                    // BuildMemberSection.cs:85
+	                item.ReadItem(doc, entryRef);                                                                                              // BuildMemberSection.cs:86
+	                items.Add(item);                                                                                                           // BuildMemberSection.cs:87
+	            }                                                                                                                              // BuildMemberSection.cs:88
+	        }                                                                                                                                  // BuildMemberSection.cs:89
+	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:90
+	    }                                                                                                                                      // BuildMemberSection.cs:91
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Composition.section:findingsRightBreast Container Class                                                                            // BuildMemberBase.cs:157
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 226
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Composition.section:findingsRightBreast.
@@ -387,7 +395,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class FindingsRightBreastContainer : MContainer, ITMItem<Composition.SectionComponent>                                              // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Composition.section:findingsRightBreast Item Class                                                                             // BuildMemberBase.cs:75
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 226
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Composition.section:findingsRightBreast.
@@ -415,16 +423,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	        public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                // BuildMemberSection.cs:60
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberSection.cs:60
 	        {                                                                                                                                  // BuildMemberSection.cs:61
-	            resourceReference.Reference = this.Value.Id;                                                                                   // BuildMemberSection.cs:62
-	        }                                                                                                                                  // BuildMemberSection.cs:63
+	            return new ResourceReference                                                                                                   // BuildMemberSection.cs:62
+	            {                                                                                                                              // BuildMemberSection.cs:63
+	                Reference = this.Value.Id                                                                                                  // BuildMemberSection.cs:64
+	            };                                                                                                                             // BuildMemberSection.cs:65
+	        }                                                                                                                                  // BuildMemberSection.cs:66
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	        public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                 // BuildMemberSection.cs:50
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)                                             // BuildMemberSection.cs:50
 	        {                                                                                                                                  // BuildMemberSection.cs:51
 	            this.Value = (SectionFindingsRightBreast) doc.GetResource(resourceReference);                                                  // BuildMemberSection.cs:52
 	        }                                                                                                                                  // BuildMemberSection.cs:53
@@ -502,65 +513,66 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:177
 	                                                                                                                                           // BuildMemberBase.cs:179
 	    // Methods                                                                                                                             // BuildMemberBase.cs:180
-	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:753
-	    {                                                                                                                                      // FhirConstruct.cs:754
-	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
-	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:761
-	        {                                                                                                                                  // FhirConstruct.cs:764
-	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:765
-	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:768
-	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:770
-	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:784
-	            temp4.CodeElement.Value = "sectionCodeFindingsRightBreast";                                                                    // FhirConstruct.cs:786
-	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:813
-	        }                                                                                                                                  // FhirConstruct.cs:814
-	        return retVal;                                                                                                                     // FhirConstruct.cs:829
-	    }                                                                                                                                      // FhirConstruct.cs:830
+	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "sectionCodeFindingsRightBreast";                                                                    // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
 	                                                                                                                                           // BuildMemberBase.cs:333
 	    // BuildMemberBase.cs:334
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:95
-	    {                                                                                                                                      // BuildMemberSection.cs:96
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:97
-	        {                                                                                                                                  // BuildMemberSection.cs:98
-	            Title = "Findings Right Breast",                                                                                               // BuildMemberSection.cs:99
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:100
-	        };                                                                                                                                 // BuildMemberSection.cs:101
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:102
-	        {                                                                                                                                  // BuildMemberSection.cs:103
-	            section.Entry.Add(new ResourceReference                                                                                        // BuildMemberSection.cs:104
-	            {                                                                                                                              // BuildMemberSection.cs:105
-	                Reference = item.Value.Id                                                                                                  // BuildMemberSection.cs:106
-	            });                                                                                                                            // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        yield return section;                                                                                                              // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:102
+	    {                                                                                                                                      // BuildMemberSection.cs:103
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:104
+	        {                                                                                                                                  // BuildMemberSection.cs:105
+	            Title = "Findings Right Breast",                                                                                               // BuildMemberSection.cs:106
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:107
+	        };                                                                                                                                 // BuildMemberSection.cs:108
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:109
+	        {                                                                                                                                  // BuildMemberSection.cs:110
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:111
+	        }                                                                                                                                  // BuildMemberSection.cs:112
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:113
+	    }                                                                                                                                      // BuildMemberSection.cs:114
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberSection.cs:70
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:71
-	    {                                                                                                                                      // BuildMemberSection.cs:72
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberSection.cs:73
-	            sections,                                                                                                                      // BuildMemberSection.cs:74
-	            SectionCode());                                                                                                                // BuildMemberSection.cs:75
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:76
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberSection.cs:77
-	        {                                                                                                                                  // BuildMemberSection.cs:78
-	            Item item = new Item();                                                                                                        // BuildMemberSection.cs:79
-	            item.Value = (SectionFindingsRightBreast) resource;                                                                            // BuildMemberSection.cs:80
-	            items.Add(item);                                                                                                               // BuildMemberSection.cs:81
-	        }                                                                                                                                  // BuildMemberSection.cs:82
-	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:83
-	    }                                                                                                                                      // BuildMemberSection.cs:84
+	                                                                                                                                           // BuildMemberSection.cs:73
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:74
+	    {                                                                                                                                      // BuildMemberSection.cs:75
+	        IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,                                                      // BuildMemberSection.cs:76
+	            sections,                                                                                                                      // BuildMemberSection.cs:77
+	            SectionCode());                                                                                                                // BuildMemberSection.cs:78
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:79
+	        // There really should only ever be one section...                                                                                 // BuildMemberSection.cs:80
+	        foreach (Composition.SectionComponent memberSection in memberSections)                                                             // BuildMemberSection.cs:81
+	        {                                                                                                                                  // BuildMemberSection.cs:82
+	            foreach (ResourceReference entryRef in memberSection.Entry)                                                                    // BuildMemberSection.cs:83
+	            {                                                                                                                              // BuildMemberSection.cs:84
+	                Item item = new Item();                                                                                                    // BuildMemberSection.cs:85
+	                item.ReadItem(doc, entryRef);                                                                                              // BuildMemberSection.cs:86
+	                items.Add(item);                                                                                                           // BuildMemberSection.cs:87
+	            }                                                                                                                              // BuildMemberSection.cs:88
+	        }                                                                                                                                  // BuildMemberSection.cs:89
+	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:90
+	    }                                                                                                                                      // BuildMemberSection.cs:91
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Composition.section:findingsLeftBreast Container Class                                                                             // BuildMemberBase.cs:157
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 226
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Composition.section:findingsLeftBreast.
@@ -568,7 +580,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class FindingsLeftBreastContainer : MContainer, ITMItem<Composition.SectionComponent>                                               // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Composition.section:findingsLeftBreast Item Class                                                                              // BuildMemberBase.cs:75
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 226
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Composition.section:findingsLeftBreast.
@@ -596,16 +608,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	        public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                // BuildMemberSection.cs:60
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberSection.cs:60
 	        {                                                                                                                                  // BuildMemberSection.cs:61
-	            resourceReference.Reference = this.Value.Id;                                                                                   // BuildMemberSection.cs:62
-	        }                                                                                                                                  // BuildMemberSection.cs:63
+	            return new ResourceReference                                                                                                   // BuildMemberSection.cs:62
+	            {                                                                                                                              // BuildMemberSection.cs:63
+	                Reference = this.Value.Id                                                                                                  // BuildMemberSection.cs:64
+	            };                                                                                                                             // BuildMemberSection.cs:65
+	        }                                                                                                                                  // BuildMemberSection.cs:66
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	        public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                 // BuildMemberSection.cs:50
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)                                             // BuildMemberSection.cs:50
 	        {                                                                                                                                  // BuildMemberSection.cs:51
 	            this.Value = (SectionFindingsLeftBreast) doc.GetResource(resourceReference);                                                   // BuildMemberSection.cs:52
 	        }                                                                                                                                  // BuildMemberSection.cs:53
@@ -683,65 +698,66 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:177
 	                                                                                                                                           // BuildMemberBase.cs:179
 	    // Methods                                                                                                                             // BuildMemberBase.cs:180
-	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:753
-	    {                                                                                                                                      // FhirConstruct.cs:754
-	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
-	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:761
-	        {                                                                                                                                  // FhirConstruct.cs:764
-	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:765
-	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:768
-	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:770
-	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:784
-	            temp4.CodeElement.Value = "sectionCodeFindingsLeftBreast";                                                                     // FhirConstruct.cs:786
-	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:813
-	        }                                                                                                                                  // FhirConstruct.cs:814
-	        return retVal;                                                                                                                     // FhirConstruct.cs:829
-	    }                                                                                                                                      // FhirConstruct.cs:830
+	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "sectionCodeFindingsLeftBreast";                                                                     // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
 	                                                                                                                                           // BuildMemberBase.cs:333
 	    // BuildMemberBase.cs:334
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:95
-	    {                                                                                                                                      // BuildMemberSection.cs:96
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:97
-	        {                                                                                                                                  // BuildMemberSection.cs:98
-	            Title = "Findings Left Breast",                                                                                                // BuildMemberSection.cs:99
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:100
-	        };                                                                                                                                 // BuildMemberSection.cs:101
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:102
-	        {                                                                                                                                  // BuildMemberSection.cs:103
-	            section.Entry.Add(new ResourceReference                                                                                        // BuildMemberSection.cs:104
-	            {                                                                                                                              // BuildMemberSection.cs:105
-	                Reference = item.Value.Id                                                                                                  // BuildMemberSection.cs:106
-	            });                                                                                                                            // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        yield return section;                                                                                                              // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:102
+	    {                                                                                                                                      // BuildMemberSection.cs:103
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:104
+	        {                                                                                                                                  // BuildMemberSection.cs:105
+	            Title = "Findings Left Breast",                                                                                                // BuildMemberSection.cs:106
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:107
+	        };                                                                                                                                 // BuildMemberSection.cs:108
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:109
+	        {                                                                                                                                  // BuildMemberSection.cs:110
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:111
+	        }                                                                                                                                  // BuildMemberSection.cs:112
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:113
+	    }                                                                                                                                      // BuildMemberSection.cs:114
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberSection.cs:70
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:71
-	    {                                                                                                                                      // BuildMemberSection.cs:72
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberSection.cs:73
-	            sections,                                                                                                                      // BuildMemberSection.cs:74
-	            SectionCode());                                                                                                                // BuildMemberSection.cs:75
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:76
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberSection.cs:77
-	        {                                                                                                                                  // BuildMemberSection.cs:78
-	            Item item = new Item();                                                                                                        // BuildMemberSection.cs:79
-	            item.Value = (SectionFindingsLeftBreast) resource;                                                                             // BuildMemberSection.cs:80
-	            items.Add(item);                                                                                                               // BuildMemberSection.cs:81
-	        }                                                                                                                                  // BuildMemberSection.cs:82
-	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:83
-	    }                                                                                                                                      // BuildMemberSection.cs:84
+	                                                                                                                                           // BuildMemberSection.cs:73
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:74
+	    {                                                                                                                                      // BuildMemberSection.cs:75
+	        IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,                                                      // BuildMemberSection.cs:76
+	            sections,                                                                                                                      // BuildMemberSection.cs:77
+	            SectionCode());                                                                                                                // BuildMemberSection.cs:78
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:79
+	        // There really should only ever be one section...                                                                                 // BuildMemberSection.cs:80
+	        foreach (Composition.SectionComponent memberSection in memberSections)                                                             // BuildMemberSection.cs:81
+	        {                                                                                                                                  // BuildMemberSection.cs:82
+	            foreach (ResourceReference entryRef in memberSection.Entry)                                                                    // BuildMemberSection.cs:83
+	            {                                                                                                                              // BuildMemberSection.cs:84
+	                Item item = new Item();                                                                                                    // BuildMemberSection.cs:85
+	                item.ReadItem(doc, entryRef);                                                                                              // BuildMemberSection.cs:86
+	                items.Add(item);                                                                                                           // BuildMemberSection.cs:87
+	            }                                                                                                                              // BuildMemberSection.cs:88
+	        }                                                                                                                                  // BuildMemberSection.cs:89
+	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:90
+	    }                                                                                                                                      // BuildMemberSection.cs:91
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Composition.section:relatedResources Container Class                                                                               // BuildMemberBase.cs:157
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 226
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Composition.section:relatedResources.
@@ -749,7 +765,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class RelatedResourcesContainer : MContainer, ITMItem<Composition.SectionComponent>                                                 // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Composition.section:relatedResources Item Class                                                                                // BuildMemberBase.cs:75
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 226
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Composition.section:relatedResources.
@@ -777,16 +793,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	        public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                // BuildMemberSection.cs:60
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberSection.cs:60
 	        {                                                                                                                                  // BuildMemberSection.cs:61
-	            resourceReference.Reference = this.Value.Id;                                                                                   // BuildMemberSection.cs:62
-	        }                                                                                                                                  // BuildMemberSection.cs:63
+	            return new ResourceReference                                                                                                   // BuildMemberSection.cs:62
+	            {                                                                                                                              // BuildMemberSection.cs:63
+	                Reference = this.Value.Id                                                                                                  // BuildMemberSection.cs:64
+	            };                                                                                                                             // BuildMemberSection.cs:65
+	        }                                                                                                                                  // BuildMemberSection.cs:66
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	        public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                 // BuildMemberSection.cs:50
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)                                             // BuildMemberSection.cs:50
 	        {                                                                                                                                  // BuildMemberSection.cs:51
 	            this.Value = (ResourceBase) doc.GetResource(resourceReference);                                                                // BuildMemberSection.cs:52
 	        }                                                                                                                                  // BuildMemberSection.cs:53
@@ -853,20 +872,20 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:177
 	                                                                                                                                           // BuildMemberBase.cs:179
 	    // Methods                                                                                                                             // BuildMemberBase.cs:180
-	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:753
-	    {                                                                                                                                      // FhirConstruct.cs:754
-	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
-	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:761
-	        {                                                                                                                                  // FhirConstruct.cs:764
-	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:765
-	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:768
-	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:770
-	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:784
-	            temp4.CodeElement.Value = "sectionRelatedResources";                                                                           // FhirConstruct.cs:786
-	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:813
-	        }                                                                                                                                  // FhirConstruct.cs:814
-	        return retVal;                                                                                                                     // FhirConstruct.cs:829
-	    }                                                                                                                                      // FhirConstruct.cs:830
+	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "sectionRelatedResources";                                                                           // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
 	                                                                                                                                           // BuildMemberBase.cs:313
 	    // BuildMemberBase.cs:314
 	    /// <summary>
@@ -884,46 +903,47 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:95
-	    {                                                                                                                                      // BuildMemberSection.cs:96
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:97
-	        {                                                                                                                                  // BuildMemberSection.cs:98
-	            Title = "Related Resources",                                                                                                   // BuildMemberSection.cs:99
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:100
-	        };                                                                                                                                 // BuildMemberSection.cs:101
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:102
-	        {                                                                                                                                  // BuildMemberSection.cs:103
-	            section.Entry.Add(new ResourceReference                                                                                        // BuildMemberSection.cs:104
-	            {                                                                                                                              // BuildMemberSection.cs:105
-	                Reference = item.Value.Id                                                                                                  // BuildMemberSection.cs:106
-	            });                                                                                                                            // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        yield return section;                                                                                                              // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:102
+	    {                                                                                                                                      // BuildMemberSection.cs:103
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:104
+	        {                                                                                                                                  // BuildMemberSection.cs:105
+	            Title = "Related Resources",                                                                                                   // BuildMemberSection.cs:106
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:107
+	        };                                                                                                                                 // BuildMemberSection.cs:108
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:109
+	        {                                                                                                                                  // BuildMemberSection.cs:110
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:111
+	        }                                                                                                                                  // BuildMemberSection.cs:112
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:113
+	    }                                                                                                                                      // BuildMemberSection.cs:114
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberSection.cs:70
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:71
-	    {                                                                                                                                      // BuildMemberSection.cs:72
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberSection.cs:73
-	            sections,                                                                                                                      // BuildMemberSection.cs:74
-	            SectionCode());                                                                                                                // BuildMemberSection.cs:75
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:76
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberSection.cs:77
-	        {                                                                                                                                  // BuildMemberSection.cs:78
-	            Item item = new Item();                                                                                                        // BuildMemberSection.cs:79
-	            item.Value = (ResourceBase) resource;                                                                                          // BuildMemberSection.cs:80
-	            items.Add(item);                                                                                                               // BuildMemberSection.cs:81
-	        }                                                                                                                                  // BuildMemberSection.cs:82
-	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:83
-	    }                                                                                                                                      // BuildMemberSection.cs:84
+	                                                                                                                                           // BuildMemberSection.cs:73
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:74
+	    {                                                                                                                                      // BuildMemberSection.cs:75
+	        IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,                                                      // BuildMemberSection.cs:76
+	            sections,                                                                                                                      // BuildMemberSection.cs:77
+	            SectionCode());                                                                                                                // BuildMemberSection.cs:78
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:79
+	        // There really should only ever be one section...                                                                                 // BuildMemberSection.cs:80
+	        foreach (Composition.SectionComponent memberSection in memberSections)                                                             // BuildMemberSection.cs:81
+	        {                                                                                                                                  // BuildMemberSection.cs:82
+	            foreach (ResourceReference entryRef in memberSection.Entry)                                                                    // BuildMemberSection.cs:83
+	            {                                                                                                                              // BuildMemberSection.cs:84
+	                Item item = new Item();                                                                                                    // BuildMemberSection.cs:85
+	                item.ReadItem(doc, entryRef);                                                                                              // BuildMemberSection.cs:86
+	                items.Add(item);                                                                                                           // BuildMemberSection.cs:87
+	            }                                                                                                                              // BuildMemberSection.cs:88
+	        }                                                                                                                                  // BuildMemberSection.cs:89
+	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:90
+	    }                                                                                                                                      // BuildMemberSection.cs:91
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	#region Composition.section:recommendations Container Class                                                                                // BuildMemberBase.cs:157
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 226
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Composition.section:recommendations.
@@ -931,7 +951,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class RecommendationsContainer : MContainer, ITMItem<Composition.SectionComponent>                                                  // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Composition.section:recommendations Item Class                                                                                 // BuildMemberBase.cs:75
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 226
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Composition.section:recommendations.
@@ -959,16 +979,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	        public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                // BuildMemberSection.cs:60
+	        public ResourceReference WriteItem(BreastRadiologyDocument doc)                                                                    // BuildMemberSection.cs:60
 	        {                                                                                                                                  // BuildMemberSection.cs:61
-	            resourceReference.Reference = this.Value.Id;                                                                                   // BuildMemberSection.cs:62
-	        }                                                                                                                                  // BuildMemberSection.cs:63
+	            return new ResourceReference                                                                                                   // BuildMemberSection.cs:62
+	            {                                                                                                                              // BuildMemberSection.cs:63
+	                Reference = this.Value.Id                                                                                                  // BuildMemberSection.cs:64
+	            };                                                                                                                             // BuildMemberSection.cs:65
+	        }                                                                                                                                  // BuildMemberSection.cs:66
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	        public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)                                                 // BuildMemberSection.cs:50
+	        public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)                                             // BuildMemberSection.cs:50
 	        {                                                                                                                                  // BuildMemberSection.cs:51
 	            this.Value = (ResourceBase) doc.GetResource(resourceReference);                                                                // BuildMemberSection.cs:52
 	        }                                                                                                                                  // BuildMemberSection.cs:53
@@ -1035,20 +1058,20 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:177
 	                                                                                                                                           // BuildMemberBase.cs:179
 	    // Methods                                                                                                                             // BuildMemberBase.cs:180
-	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:753
-	    {                                                                                                                                      // FhirConstruct.cs:754
-	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
-	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:761
-	        {                                                                                                                                  // FhirConstruct.cs:764
-	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:765
-	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:768
-	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:770
-	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:784
-	            temp4.CodeElement.Value = "sectionCodeRecommendations";                                                                        // FhirConstruct.cs:786
-	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:813
-	        }                                                                                                                                  // FhirConstruct.cs:814
-	        return retVal;                                                                                                                     // FhirConstruct.cs:829
-	    }                                                                                                                                      // FhirConstruct.cs:830
+	    public CodeableConcept SectionCode()                                                                                                   // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes";                 // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "sectionCodeRecommendations";                                                                        // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
 	                                                                                                                                           // BuildMemberBase.cs:313
 	    // BuildMemberBase.cs:314
 	    /// <summary>
@@ -1090,42 +1113,43 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:95
-	    {                                                                                                                                      // BuildMemberSection.cs:96
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:97
-	        {                                                                                                                                  // BuildMemberSection.cs:98
-	            Title = "Recommendations",                                                                                                     // BuildMemberSection.cs:99
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:100
-	        };                                                                                                                                 // BuildMemberSection.cs:101
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:102
-	        {                                                                                                                                  // BuildMemberSection.cs:103
-	            section.Entry.Add(new ResourceReference                                                                                        // BuildMemberSection.cs:104
-	            {                                                                                                                              // BuildMemberSection.cs:105
-	                Reference = item.Value.Id                                                                                                  // BuildMemberSection.cs:106
-	            });                                                                                                                            // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        yield return section;                                                                                                              // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:102
+	    {                                                                                                                                      // BuildMemberSection.cs:103
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:104
+	        {                                                                                                                                  // BuildMemberSection.cs:105
+	            Title = "Recommendations",                                                                                                     // BuildMemberSection.cs:106
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:107
+	        };                                                                                                                                 // BuildMemberSection.cs:108
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:109
+	        {                                                                                                                                  // BuildMemberSection.cs:110
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:111
+	        }                                                                                                                                  // BuildMemberSection.cs:112
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:113
+	    }                                                                                                                                      // BuildMemberSection.cs:114
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberSection.cs:70
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:71
-	    {                                                                                                                                      // BuildMemberSection.cs:72
-	        IEnumerable<ResourceBase> resources = base.IsMember(doc,                                                                           // BuildMemberSection.cs:73
-	            sections,                                                                                                                      // BuildMemberSection.cs:74
-	            SectionCode());                                                                                                                // BuildMemberSection.cs:75
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:76
-	        foreach (ResourceBase resource in resources)                                                                                       // BuildMemberSection.cs:77
-	        {                                                                                                                                  // BuildMemberSection.cs:78
-	            Item item = new Item();                                                                                                        // BuildMemberSection.cs:79
-	            item.Value = (ResourceBase) resource;                                                                                          // BuildMemberSection.cs:80
-	            items.Add(item);                                                                                                               // BuildMemberSection.cs:81
-	        }                                                                                                                                  // BuildMemberSection.cs:82
-	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:83
-	    }                                                                                                                                      // BuildMemberSection.cs:84
+	                                                                                                                                           // BuildMemberSection.cs:73
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)                                      // BuildMemberSection.cs:74
+	    {                                                                                                                                      // BuildMemberSection.cs:75
+	        IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,                                                      // BuildMemberSection.cs:76
+	            sections,                                                                                                                      // BuildMemberSection.cs:77
+	            SectionCode());                                                                                                                // BuildMemberSection.cs:78
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberSection.cs:79
+	        // There really should only ever be one section...                                                                                 // BuildMemberSection.cs:80
+	        foreach (Composition.SectionComponent memberSection in memberSections)                                                             // BuildMemberSection.cs:81
+	        {                                                                                                                                  // BuildMemberSection.cs:82
+	            foreach (ResourceReference entryRef in memberSection.Entry)                                                                    // BuildMemberSection.cs:83
+	            {                                                                                                                              // BuildMemberSection.cs:84
+	                Item item = new Item();                                                                                                    // BuildMemberSection.cs:85
+	                item.ReadItem(doc, entryRef);                                                                                              // BuildMemberSection.cs:86
+	                items.Add(item);                                                                                                           // BuildMemberSection.cs:87
+	            }                                                                                                                              // BuildMemberSection.cs:88
+	        }                                                                                                                                  // BuildMemberSection.cs:89
+	        this.SetAllItems(items);                                                                                                           // BuildMemberSection.cs:90
+	    }                                                                                                                                      // BuildMemberSection.cs:91
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	//- LocalClassDefs

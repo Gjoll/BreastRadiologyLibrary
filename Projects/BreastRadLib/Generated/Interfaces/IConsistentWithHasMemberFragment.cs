@@ -18,7 +18,7 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberReferences.cs, Line 197
+		// Called from BuildMemberReferences.cs, Line 199
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// ConsistentWith

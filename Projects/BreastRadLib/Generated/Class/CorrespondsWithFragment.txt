@@ -1,6 +1,6 @@
 		//+ Properties
 		                                                                                                                                          // BuildMemberBase.cs:374
-		// Called from BuildMemberComponents.cs, Line 204
+		// Called from BuildMemberComponents.cs, Line 208
 		// BuildMemberBase.cs:376
 		/// <summary>
 		/// CorrespondsWith
@@ -10,7 +10,7 @@
 		//- Properties
 
 			//+ Constructor
-			// Called from BuildMemberComponents.cs, Line 204
+			// Called from BuildMemberComponents.cs, Line 208
 			this.CorrespondsWith = new CorrespondsWithContainer(0, 0);                                                                               // BuildMemberBase.cs:359
 			//- Constructor
 
@@ -23,7 +23,7 @@
 			//- WriteCodeStart
 			//+ WriteCode
 			//+ !WriteComponents
-			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:166
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:170
 			//- !WriteComponents
 			//- WriteCode
 
@@ -31,37 +31,37 @@
 			//- ReadCodeStart
 			//+ ReadCode
 			//+ !ReadComponents
-			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:175
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:179
 			//- !ReadComponents
 			//- ReadCode
 
 			//+ Methods
-			                                                                                                                                         // BuildMemberComponents.cs:130
+			                                                                                                                                         // BuildMemberComponents.cs:134
 			//+ !Components
-			                                                                                                                                         // BuildMemberComponents.cs:133
-			// BuildMemberComponents.cs:134
+			                                                                                                                                         // BuildMemberComponents.cs:137
+			// BuildMemberComponents.cs:138
 			/// <summary>
 			/// Read all component values from resource into this instance
 			/// </summary>
-			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:137
-			{                                                                                                                                        // BuildMemberComponents.cs:138
-			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:139
+			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:141
+			{                                                                                                                                        // BuildMemberComponents.cs:142
+			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:143
 			    //+ ReadComponents
-			    this.CorrespondsWith.Read(this.Doc, items);                                                                                          // BuildMemberComponents.cs:88
+			    this.CorrespondsWith.Read(this.Doc, items);                                                                                          // BuildMemberComponents.cs:96
 			    //- ReadComponents
-			}                                                                                                                                        // BuildMemberComponents.cs:141
-			                                                                                                                                         // BuildMemberComponents.cs:143
-			// BuildMemberComponents.cs:144
+			}                                                                                                                                        // BuildMemberComponents.cs:145
+			                                                                                                                                         // BuildMemberComponents.cs:147
+			// BuildMemberComponents.cs:148
 			/// <summary>
 			/// Write all values from this instance into resource
 			/// </summary>
-			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:147
-			{                                                                                                                                        // BuildMemberComponents.cs:148
-			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:149
+			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:151
+			{                                                                                                                                        // BuildMemberComponents.cs:152
+			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:153
 			    //+ WriteComponents
-			    items.AddRange(this.CorrespondsWith.Write(this.Doc));                                                                                // BuildMemberComponents.cs:110
+			    items.AddRange(this.CorrespondsWith.Write(this.Doc));                                                                                // BuildMemberComponents.cs:114
 			    //- WriteComponents
-			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:151
-			}                                                                                                                                        // BuildMemberComponents.cs:152
+			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:155
+			}                                                                                                                                        // BuildMemberComponents.cs:156
 			//- !Components
 			//- Methods

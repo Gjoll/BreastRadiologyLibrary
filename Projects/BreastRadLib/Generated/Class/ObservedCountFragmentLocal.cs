@@ -16,7 +16,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 {
 	//+ LocalClassDefs
 	#region Observation.component:obsCount Container Class                                                                                     // BuildMemberBase.cs:157
-	// Called from BuildMemberComponents.cs, Line 204
+	// Called from BuildMemberComponents.cs, Line 208
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.component:obsCount.
@@ -24,7 +24,7 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	public class ObsCountContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                       // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.component:obsCount Item Class                                                                                      // BuildMemberBase.cs:75
-	    // Called from BuildMemberComponents.cs, Line 204
+	    // Called from BuildMemberComponents.cs, Line 208
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.component:obsCount.
@@ -52,19 +52,23 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	        public void Write(BreastRadiologyDocument doc, Observation.ComponentComponent component)                                           // BuildMemberComponents.cs:59
-	        {                                                                                                                                  // BuildMemberComponents.cs:60
-	            component.Value = this.Value;                                                                                                  // BuildMemberComponents.cs:61
-	        }                                                                                                                                  // BuildMemberComponents.cs:62
+	        public Observation.ComponentComponent WriteItem(BreastRadiologyDocument doc)                                                       // BuildMemberComponents.cs:63
+	        {                                                                                                                                  // BuildMemberComponents.cs:64
+	            return new Observation.ComponentComponent                                                                                      // BuildMemberComponents.cs:65
+	            {                                                                                                                              // BuildMemberComponents.cs:66
+	                Value = this.Value,                                                                                                        // BuildMemberComponents.cs:67
+	                Code = ObsCount_ComponentCode()                                                                                            // BuildMemberComponents.cs:68
+	            };                                                                                                                             // BuildMemberComponents.cs:69
+	        }                                                                                                                                  // BuildMemberComponents.cs:70
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	        public void Read(BreastRadiologyDocument doc, Observation.ComponentComponent component)                                            // BuildMemberComponents.cs:49
-	        {                                                                                                                                  // BuildMemberComponents.cs:50
-	            this.Value = (Element) component.Value;                                                                                        // BuildMemberComponents.cs:51
-	        }                                                                                                                                  // BuildMemberComponents.cs:52
+	        public void ReadItem(BreastRadiologyDocument doc, Observation.ComponentComponent component)                                        // BuildMemberComponents.cs:53
+	        {                                                                                                                                  // BuildMemberComponents.cs:54
+	            this.Value = (Element) component.Value;                                                                                        // BuildMemberComponents.cs:55
+	        }                                                                                                                                  // BuildMemberComponents.cs:56
 	    }                                                                                                                                      // BuildMemberBase.cs:114
 	    #endregion                                                                                                                             // BuildMemberBase.cs:115
 	                                                                                                                                           // BuildMemberBase.cs:166
@@ -151,57 +155,53 @@ namespace BreastRadLib.ObservedCountFragmentLocal
 	    }                                                                                                                                      // BuildMemberBase.cs:177
 	                                                                                                                                           // BuildMemberBase.cs:179
 	    // Methods                                                                                                                             // BuildMemberBase.cs:180
-	    public CodeableConcept ObsCount_ComponentCode()                                                                                        // FhirConstruct.cs:753
-	    {                                                                                                                                      // FhirConstruct.cs:754
-	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:755
-	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:761
-	        {                                                                                                                                  // FhirConstruct.cs:764
-	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:765
-	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:768
-	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";               // FhirConstruct.cs:770
-	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:784
-	            temp4.CodeElement.Value = "obsCount";                                                                                          // FhirConstruct.cs:786
-	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:813
-	        }                                                                                                                                  // FhirConstruct.cs:814
-	        return retVal;                                                                                                                     // FhirConstruct.cs:829
-	    }                                                                                                                                      // FhirConstruct.cs:830
+	    private static CodeableConcept ObsCount_ComponentCode()                                                                                // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";               // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "obsCount";                                                                                          // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
 	                                                                                                                                           // BuildMemberBase.cs:333
 	    // BuildMemberBase.cs:334
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                                  // BuildMemberComponents.cs:95
-	    {                                                                                                                                      // BuildMemberComponents.cs:96
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberComponents.cs:97
-	        {                                                                                                                                  // BuildMemberComponents.cs:98
-	            Observation.ComponentComponent component = new Observation.ComponentComponent                                                  // BuildMemberComponents.cs:99
-	            {                                                                                                                              // BuildMemberComponents.cs:100
-	                Value = item.Value,                                                                                                        // BuildMemberComponents.cs:101
-	                Code = ObsCount_ComponentCode()                                                                                            // BuildMemberComponents.cs:102
-	            };                                                                                                                             // BuildMemberComponents.cs:103
-	            yield return component;                                                                                                        // BuildMemberComponents.cs:104
-	        }                                                                                                                                  // BuildMemberComponents.cs:105
-	    }                                                                                                                                      // BuildMemberComponents.cs:106
+	    public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                                  // BuildMemberComponents.cs:103
+	    {                                                                                                                                      // BuildMemberComponents.cs:104
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberComponents.cs:105
+	        {                                                                                                                                  // BuildMemberComponents.cs:106
+	            Observation.ComponentComponent component = item.WriteItem(doc);                                                                // BuildMemberComponents.cs:107
+	            yield return component;                                                                                                        // BuildMemberComponents.cs:108
+	        }                                                                                                                                  // BuildMemberComponents.cs:109
+	    }                                                                                                                                      // BuildMemberComponents.cs:110
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberComponents.cs:70
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:71
-	    {                                                                                                                                      // BuildMemberComponents.cs:72
-	        IEnumerable<Element> elements = base.IsMember(doc,                                                                                 // BuildMemberComponents.cs:73
-	            components,                                                                                                                    // BuildMemberComponents.cs:74
-	            this.ObsCount_ComponentCode());                                                                                                // BuildMemberComponents.cs:75
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:76
-	        foreach (Element element in elements)                                                                                              // BuildMemberComponents.cs:77
-	        {                                                                                                                                  // BuildMemberComponents.cs:78
-	            Item item = new Item();                                                                                                        // BuildMemberComponents.cs:79
-	            item.Value = (Element) element;                                                                                                // BuildMemberComponents.cs:80
-	            items.Add(item);                                                                                                               // BuildMemberComponents.cs:81
-	        }                                                                                                                                  // BuildMemberComponents.cs:82
-	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:83
-	    }                                                                                                                                      // BuildMemberComponents.cs:84
+	                                                                                                                                           // BuildMemberComponents.cs:78
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:79
+	    {                                                                                                                                      // BuildMemberComponents.cs:80
+	        IEnumerable<Observation.ComponentComponent> memberComponents = base.IsMember(doc,                                                  // BuildMemberComponents.cs:81
+	            components,                                                                                                                    // BuildMemberComponents.cs:82
+	            ObsCount_ComponentCode());                                                                                                     // BuildMemberComponents.cs:83
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:84
+	        foreach (Observation.ComponentComponent memberComponent in memberComponents)                                                       // BuildMemberComponents.cs:85
+	        {                                                                                                                                  // BuildMemberComponents.cs:86
+	            Item item = new Item();                                                                                                        // BuildMemberComponents.cs:87
+	            item.ReadItem(doc, memberComponent);                                                                                           // BuildMemberComponents.cs:88
+	            items.Add(item);                                                                                                               // BuildMemberComponents.cs:89
+	        }                                                                                                                                  // BuildMemberComponents.cs:90
+	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:91
+	    }                                                                                                                                      // BuildMemberComponents.cs:92
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	//- LocalClassDefs

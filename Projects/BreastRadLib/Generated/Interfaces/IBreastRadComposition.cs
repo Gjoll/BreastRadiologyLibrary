@@ -18,37 +18,37 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberSection.cs, Line 222
+		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// Report
 		/// </summary>
 		ReportContainer Report { get ; }                                                                                                          // BuildMemberBase.cs:369
-		// Called from BuildMemberSection.cs, Line 222
+		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// Impressions
 		/// </summary>
 		ImpressionsContainer Impressions { get ; }                                                                                                // BuildMemberBase.cs:369
-		// Called from BuildMemberSection.cs, Line 222
+		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// FindingsRightBreast
 		/// </summary>
 		FindingsRightBreastContainer FindingsRightBreast { get ; }                                                                                // BuildMemberBase.cs:369
-		// Called from BuildMemberSection.cs, Line 222
+		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// FindingsLeftBreast
 		/// </summary>
 		FindingsLeftBreastContainer FindingsLeftBreast { get ; }                                                                                  // BuildMemberBase.cs:369
-		// Called from BuildMemberSection.cs, Line 222
+		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// RelatedResources
 		/// </summary>
 		RelatedResourcesContainer RelatedResources { get ; }                                                                                      // BuildMemberBase.cs:369
-		// Called from BuildMemberSection.cs, Line 222
+		// Called from BuildMemberSection.cs, Line 226
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// Recommendations

@@ -47,7 +47,7 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)")
                 .OpenBrace()
                 .AppendCode($"this.Value = ({ElementGetName}) doc.GetResource(resourceReference);")
                 .CloseBrace()
@@ -57,9 +57,12 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)")
+                .AppendCode($"public ResourceReference WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
-                .AppendCode($"resourceReference.Reference = this.Value.Id;")
+                .AppendCode($"return new ResourceReference")
+                .OpenBrace()
+                .AppendCode($"Reference = this.Value.Id")
+                .CloseBrace(";")
                 .CloseBrace()
                 ;
         }
@@ -70,15 +73,19 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<Composition.SectionComponent> sections)")
                 .OpenBrace()
-                .AppendCode($"IEnumerable<ResourceBase> resources = base.IsMember(doc,")
+                .AppendCode($"IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,")
                 .AppendCode($"    sections,")
                 .AppendCode($"    {sectionCodeMethodName}());")
                 .AppendCode($"List<Item> items = new List<Item>();")
-                .AppendCode($"foreach (ResourceBase resource in resources)")
+                .AppendCode($"// There really should only ever be one section...")
+                .AppendCode($"foreach (Composition.SectionComponent memberSection in memberSections)")
+                .OpenBrace()
+                .AppendCode($"foreach (ResourceReference entryRef in memberSection.Entry)")
                 .OpenBrace()
                 .AppendCode($"Item item = new Item();")
-                .AppendCode($"item.Value = ({this.itemElementGetName}) resource;")
+                .AppendCode($"item.ReadItem(doc, entryRef);")
                 .AppendCode($"items.Add(item);")
+                .CloseBrace()
                 .CloseBrace()
                 .AppendCode($"this.SetAllItems(items);")
                 .CloseBrace()
@@ -101,12 +108,9 @@ namespace FireFragger.CS.BuildMembers
                 .CloseBrace(";")
                 .AppendCode($"foreach (Item item in this.GetAllItems())")
                 .OpenBrace()
-                .AppendCode($"section.Entry.Add(new ResourceReference")
-                .OpenBrace()
-                .AppendCode($"Reference = item.Value.Id")
-                .CloseBrace(");")
+                .AppendCode($"section.Entry.Add(item.WriteItem(doc));")
                 .CloseBrace()
-                .AppendCode($"yield return section;")
+                .AppendCode($"return new Composition.SectionComponent[] {{ section }};")
                 .CloseBrace()
                ;
 
