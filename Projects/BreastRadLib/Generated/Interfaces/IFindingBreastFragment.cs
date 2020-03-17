@@ -19,25 +19,25 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberReferences.cs, Line 199
+		// Called from BuildMemberReferences.cs, Line 197
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// MGFinding
 		/// </summary>
 		MGFindingContainer MGFinding { get ; }                                                                                                    // BuildMemberBase.cs:369
-		// Called from BuildMemberReferences.cs, Line 199
+		// Called from BuildMemberReferences.cs, Line 197
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// MRIFinding
 		/// </summary>
 		MRIFindingContainer MRIFinding { get ; }                                                                                                  // BuildMemberBase.cs:369
-		// Called from BuildMemberReferences.cs, Line 199
+		// Called from BuildMemberReferences.cs, Line 197
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// NMFinding
 		/// </summary>
 		NMFindingContainer NMFinding { get ; }                                                                                                    // BuildMemberBase.cs:369
-		// Called from BuildMemberReferences.cs, Line 199
+		// Called from BuildMemberReferences.cs, Line 197
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// USFinding

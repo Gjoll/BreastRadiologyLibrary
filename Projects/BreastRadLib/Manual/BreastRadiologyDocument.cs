@@ -201,5 +201,13 @@ namespace BreastRadLib
                 throw new Exception($"Resource can not be converted to {typeof(T).Name}");
             return retVal;
         }
+
+        public ResourceBase GetResource(ResourceReference resRef)
+        {
+            Resource referencedResource = this.ReferencedResource<Resource>(resRef);
+            if (this.TryGetRegisteredItem(referencedResource, out ResourceBase item) == false)
+                throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
+            return item;
+        }
     }
 }

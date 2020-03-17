@@ -47,10 +47,9 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, Composition.SectionComponent section)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, ResourceReference resourceReference)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode($"this.Value = ({ElementGetName}) doc.GetResource(resourceReference);")
                 .CloseBrace()
                 ;
         }
@@ -58,10 +57,9 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, Composition.SectionComponent section)")
+                .AppendCode($"public void Write(BreastRadiologyDocument doc, ResourceReference resourceReference)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode($"resourceReference.Reference = this.Value.Id;")
                 .CloseBrace()
                 ;
         }

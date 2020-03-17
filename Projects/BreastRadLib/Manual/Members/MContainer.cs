@@ -112,7 +112,7 @@ namespace BreastRadLib
             }
         }
 
-        protected IEnumerable<ResourceBase> IsMember(BreastRadiologyDocument doc,
+        protected IEnumerable<ResourceReference> IsMember(BreastRadiologyDocument doc,
             IEnumerable<ResourceReference> references,
             IEnumerable<String> targetUrls)
         {
@@ -124,9 +124,7 @@ namespace BreastRadLib
                 {
                     if (BLMisc.SameUrl(profile, targetUrl))
                     {
-                        if (doc.TryGetRegisteredItem(referencedResource, out ObservationBase item) == false)
-                            throw new Exception($"Referenced resource {referencedResource.Id} not found in bundle");
-                        yield return item;
+                        yield return resRef;
                         break;
                     }
                 }

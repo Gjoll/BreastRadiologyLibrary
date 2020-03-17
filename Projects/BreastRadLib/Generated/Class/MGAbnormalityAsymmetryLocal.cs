@@ -16,7 +16,7 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 {
 	//+ LocalClassDefs
 	#region Observation.component:asymmetryType Container Class                                                                                // BuildMemberBase.cs:157
-	// Called from BuildMemberComponents.cs, Line 206
+	// Called from BuildMemberComponents.cs, Line 204
 	// BuildMemberBase.cs:159
 	/// <summary>
 	/// Container class for Observation.component:asymmetryType.
@@ -24,7 +24,7 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 	public class AsymmetryTypeContainer : MContainer, ITMItem<Observation.ComponentComponent>                                                  // BuildMemberBase.cs:162
 	{                                                                                                                                          // BuildMemberBase.cs:163
 	    #region Observation.component:asymmetryType Item Class                                                                                 // BuildMemberBase.cs:75
-	    // Called from BuildMemberComponents.cs, Line 206
+	    // Called from BuildMemberComponents.cs, Line 204
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.component:asymmetryType.
@@ -52,21 +52,19 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	                                                                                                                                           // BuildMemberComponents.cs:60
-	        public void Write(BreastRadiologyDocument doc, Observation.ComponentComponent component)                                           // BuildMemberComponents.cs:61
-	        {                                                                                                                                  // BuildMemberComponents.cs:62
-	            component.Value = this.Value;                                                                                                  // BuildMemberComponents.cs:63
-	        }                                                                                                                                  // BuildMemberComponents.cs:64
+	        public void Write(BreastRadiologyDocument doc, Observation.ComponentComponent component)                                           // BuildMemberComponents.cs:59
+	        {                                                                                                                                  // BuildMemberComponents.cs:60
+	            component.Value = this.Value;                                                                                                  // BuildMemberComponents.cs:61
+	        }                                                                                                                                  // BuildMemberComponents.cs:62
 	                                                                                                                                           // BuildMemberBase.cs:107
 	        // BuildMemberBase.cs:108
 	        /// <summary>
 	        /// Read item.
 	        /// </summary>
-	                                                                                                                                           // BuildMemberComponents.cs:49
-	        public void Read(BreastRadiologyDocument doc, Observation.ComponentComponent component)                                            // BuildMemberComponents.cs:50
-	        {                                                                                                                                  // BuildMemberComponents.cs:51
-	            this.Value = (CodeableConcept) component.Value;                                                                                // BuildMemberComponents.cs:52
-	        }                                                                                                                                  // BuildMemberComponents.cs:53
+	        public void Read(BreastRadiologyDocument doc, Observation.ComponentComponent component)                                            // BuildMemberComponents.cs:49
+	        {                                                                                                                                  // BuildMemberComponents.cs:50
+	            this.Value = (CodeableConcept) component.Value;                                                                                // BuildMemberComponents.cs:51
+	        }                                                                                                                                  // BuildMemberComponents.cs:52
 	    }                                                                                                                                      // BuildMemberBase.cs:114
 	    #endregion                                                                                                                             // BuildMemberBase.cs:115
 	                                                                                                                                           // BuildMemberBase.cs:166
@@ -160,38 +158,38 @@ namespace BreastRadLib.MGAbnormalityAsymmetryLocal
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
-	    public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                                  // BuildMemberComponents.cs:97
-	    {                                                                                                                                      // BuildMemberComponents.cs:98
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberComponents.cs:99
-	        {                                                                                                                                  // BuildMemberComponents.cs:100
-	            Observation.ComponentComponent component = new Observation.ComponentComponent                                                  // BuildMemberComponents.cs:101
-	            {                                                                                                                              // BuildMemberComponents.cs:102
-	                Value = item.Value,                                                                                                        // BuildMemberComponents.cs:103
-	                Code = AsymmetryType_ComponentCode()                                                                                       // BuildMemberComponents.cs:104
-	            };                                                                                                                             // BuildMemberComponents.cs:105
-	            yield return component;                                                                                                        // BuildMemberComponents.cs:106
-	        }                                                                                                                                  // BuildMemberComponents.cs:107
-	    }                                                                                                                                      // BuildMemberComponents.cs:108
+	    public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                                  // BuildMemberComponents.cs:95
+	    {                                                                                                                                      // BuildMemberComponents.cs:96
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberComponents.cs:97
+	        {                                                                                                                                  // BuildMemberComponents.cs:98
+	            Observation.ComponentComponent component = new Observation.ComponentComponent                                                  // BuildMemberComponents.cs:99
+	            {                                                                                                                              // BuildMemberComponents.cs:100
+	                Value = item.Value,                                                                                                        // BuildMemberComponents.cs:101
+	                Code = AsymmetryType_ComponentCode()                                                                                       // BuildMemberComponents.cs:102
+	            };                                                                                                                             // BuildMemberComponents.cs:103
+	            yield return component;                                                                                                        // BuildMemberComponents.cs:104
+	        }                                                                                                                                  // BuildMemberComponents.cs:105
+	    }                                                                                                                                      // BuildMemberComponents.cs:106
 	                                                                                                                                           // BuildMemberBase.cs:339
 	    // BuildMemberBase.cs:340
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberComponents.cs:72
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:73
-	    {                                                                                                                                      // BuildMemberComponents.cs:74
-	        IEnumerable<Element> elements = base.IsMember(doc,                                                                                 // BuildMemberComponents.cs:75
-	            components,                                                                                                                    // BuildMemberComponents.cs:76
-	            this.AsymmetryType_ComponentCode());                                                                                           // BuildMemberComponents.cs:77
-	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:78
-	        foreach (Element element in elements)                                                                                              // BuildMemberComponents.cs:79
-	        {                                                                                                                                  // BuildMemberComponents.cs:80
-	            Item item = new Item();                                                                                                        // BuildMemberComponents.cs:81
-	            item.Value = (CodeableConcept) element;                                                                                        // BuildMemberComponents.cs:82
-	            items.Add(item);                                                                                                               // BuildMemberComponents.cs:83
-	        }                                                                                                                                  // BuildMemberComponents.cs:84
-	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:85
-	    }                                                                                                                                      // BuildMemberComponents.cs:86
+	                                                                                                                                           // BuildMemberComponents.cs:70
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:71
+	    {                                                                                                                                      // BuildMemberComponents.cs:72
+	        IEnumerable<Element> elements = base.IsMember(doc,                                                                                 // BuildMemberComponents.cs:73
+	            components,                                                                                                                    // BuildMemberComponents.cs:74
+	            this.AsymmetryType_ComponentCode());                                                                                           // BuildMemberComponents.cs:75
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:76
+	        foreach (Element element in elements)                                                                                              // BuildMemberComponents.cs:77
+	        {                                                                                                                                  // BuildMemberComponents.cs:78
+	            Item item = new Item();                                                                                                        // BuildMemberComponents.cs:79
+	            item.Value = (CodeableConcept) element;                                                                                        // BuildMemberComponents.cs:80
+	            items.Add(item);                                                                                                               // BuildMemberComponents.cs:81
+	        }                                                                                                                                  // BuildMemberComponents.cs:82
+	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:83
+	    }                                                                                                                                      // BuildMemberComponents.cs:84
 	}                                                                                                                                          // BuildMemberBase.cs:182
 	#endregion                                                                                                                                 // BuildMemberBase.cs:183
 	//- LocalClassDefs

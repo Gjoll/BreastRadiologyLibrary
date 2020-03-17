@@ -21,13 +21,13 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberComponents.cs, Line 206
+		// Called from BuildMemberComponents.cs, Line 204
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// Value
 		/// </summary>
 		ValueContainer Value { get ; }                                                                                                            // BuildMemberBase.cs:369
-		// Called from BuildMemberComponents.cs, Line 206
+		// Called from BuildMemberComponents.cs, Line 204
 		// BuildMemberBase.cs:366
 		/// <summary>
 		/// Qualifier

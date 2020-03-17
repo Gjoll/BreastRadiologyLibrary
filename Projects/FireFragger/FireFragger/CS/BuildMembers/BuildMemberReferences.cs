@@ -44,9 +44,9 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} reference)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode($"this.Value = ({ElementGetName}) doc.GetResource(reference);")
                 .CloseBrace()
                 ;
         }
@@ -55,9 +55,9 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} reference)")
                 .OpenBrace()
-                .AppendCode("throw new NotImplementedException(\"xxyyz\");")
+                .AppendCode("reference.Reference = this.Value.Id;")
                 .CloseBrace()
                 ;
         }
@@ -68,14 +68,14 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> references)")
                 .OpenBrace()
-                .AppendCode("IEnumerable<ResourceBase> resources = base.IsMember(doc,")
+                .AppendCode("IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,")
                 .AppendCode("    references,")
                 .AppendCode("    this.targetUrls);")
                 .AppendCode($"List<Item> items = new List<Item>();")
-                .AppendCode($"foreach (ResourceBase resource in resources)")
+                .AppendCode($"foreach (ResourceReference resourceReference in resourceReferences)")
                 .OpenBrace()
                 .AppendCode($"Item item = new Item();")
-                .AppendCode($"item.Value = ({this.itemElementGetName}) resource;")
+                .AppendCode($"item.Read(doc, resourceReference);")
                 .AppendCode($"items.Add(item);")
                 .CloseBrace()
                 .AppendCode($"this.SetAllItems(items);")
@@ -94,10 +94,8 @@ namespace FireFragger.CS.BuildMembers
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
                .OpenBrace()
-               .AppendCode($"{FhirClassName} reference = new {FhirClassName}")
-               .OpenBrace()
-               .AppendCode($"Reference = item.Value.Id")
-               .CloseBrace(";")
+               .AppendCode($"{FhirClassName} reference = new {FhirClassName}();")
+               .AppendCode($"item.Write(doc, reference);")
                .AppendCode($"yield return reference;")
                .CloseBrace()
                .CloseBrace()
