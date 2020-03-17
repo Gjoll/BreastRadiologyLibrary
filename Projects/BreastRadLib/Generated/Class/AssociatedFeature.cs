@@ -28,22 +28,22 @@ namespace BreastRadLib
 	public class AssociatedFeature : ObservationBase, IAssociatedFeature
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:374
+		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:376
+		// BuildMemberBase.cs:377
 		/// <summary>
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:380
-		                                                                                                                                          // BuildMemberBase.cs:374
+		public ObsCountContainer ObsCount { get ; protected set; }                                                                                // BuildMemberBase.cs:381
+		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:376
+		// BuildMemberBase.cs:377
 		/// <summary>
 		/// FeatureType
 		/// Access fhir element 'Observation.component:featureType'
 		/// </summary>
-		public FeatureTypeContainer FeatureType { get ; protected set; }                                                                          // BuildMemberBase.cs:380
+		public FeatureTypeContainer FeatureType { get ; protected set; }                                                                          // BuildMemberBase.cs:381
 		//- Properties
 
 		/// <summary>
@@ -88,9 +88,9 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:220
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:359
+			this.ObsCount = new ObsCountContainer(0, 0);                                                                                             // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.FeatureType = new FeatureTypeContainer(1, 1);                                                                                       // BuildMemberBase.cs:359
+			this.FeatureType = new FeatureTypeContainer(1, 1);                                                                                       // BuildMemberBase.cs:360
 			//- Constructor
 		}
 

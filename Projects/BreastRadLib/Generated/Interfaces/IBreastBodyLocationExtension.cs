@@ -18,12 +18,12 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberExtensionComplex.cs, Line 189
-		// BuildMemberBase.cs:366
+		// Called from BuildMemberExtensionComplex.cs, Line 191
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// BreastBodyLocationExtension
 		/// </summary>
-		BreastBodyLocationExtensionCollection BreastBodyLocationExtension { get ; }                                                               // BuildMemberBase.cs:369
+		BreastBodyLocationExtensionCollection BreastBodyLocationExtension { get ; }                                                               // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

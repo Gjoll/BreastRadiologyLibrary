@@ -19,11 +19,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:366
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// AssociatedFeature
 		/// </summary>
-		AssociatedFeatureContainer AssociatedFeature { get ; }                                                                                    // BuildMemberBase.cs:369
+		AssociatedFeatureContainer AssociatedFeature { get ; }                                                                                    // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

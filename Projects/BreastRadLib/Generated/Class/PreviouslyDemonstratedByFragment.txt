@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:374
+		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:376
+		// BuildMemberBase.cs:377
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// Access fhir element 'Observation.component:PreviouslyDemonstratedBy'
 		/// </summary>
-		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:380
+		public PreviouslyDemonstratedByContainer PreviouslyDemonstratedBy { get ; protected set; }                                                // BuildMemberBase.cs:381
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:359
+			this.PreviouslyDemonstratedBy = new PreviouslyDemonstratedByContainer(0, 0);                                                             // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

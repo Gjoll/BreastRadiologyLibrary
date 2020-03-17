@@ -80,6 +80,7 @@ namespace FireFragger.CS.BuildMembers
                  .AppendCode($"public class Item")
                  .OpenBrace()
                  .AppendCode($"// Properties")
+                 .DefineBlock(out itemCodeBlocks.LocalClassDefs)
                  .SummaryOpen()
                  .Summary($"Value")
                  .SummaryClose()

@@ -24,11 +24,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:366
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// FeatureType
 		/// </summary>
-		FeatureTypeContainer FeatureType { get ; }                                                                                                // BuildMemberBase.cs:369
+		FeatureTypeContainer FeatureType { get ; }                                                                                                // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

@@ -219,11 +219,11 @@ namespace BreastRadiology.XUnitTests
                 BreastRadiologyDocument doc = MakeDoc();
                 BodyDistanceFromExtensionCollection bdc = new BodyDistanceFromExtensionCollection(0, 10);
                 {
-                    BodyDistanceFromExtensionCollection.BodyDistanceFromExtension item = bdc.Append(new BodyDistanceFromExtensionCollection.BodyDistanceFromExtension());
+                    BodyDistanceFromExtensionCollection.Members item = bdc.Append(new BodyDistanceFromExtensionCollection.Members());
                     item.DistanceFromLandMark.Set(new Quantity(1, "m"));
                 }
                 {
-                    BodyDistanceFromExtensionCollection.BodyDistanceFromExtension item = bdc.Append(new BodyDistanceFromExtensionCollection.BodyDistanceFromExtension());
+                    BodyDistanceFromExtensionCollection.Members item = bdc.Append(new BodyDistanceFromExtensionCollection.Members());
                     item.DistanceFromLandMark.Set(new Quantity(2, "m"));
                 }
                 return bdc.Write(doc);

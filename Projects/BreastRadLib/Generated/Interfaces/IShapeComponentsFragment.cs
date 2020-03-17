@@ -19,29 +19,29 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:366
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// Orientation
 		/// </summary>
-		OrientationContainer Orientation { get ; }                                                                                                // BuildMemberBase.cs:369
+		OrientationContainer Orientation { get ; }                                                                                                // BuildMemberBase.cs:370
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:366
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// Shape
 		/// </summary>
-		ShapeContainer Shape { get ; }                                                                                                            // BuildMemberBase.cs:369
+		ShapeContainer Shape { get ; }                                                                                                            // BuildMemberBase.cs:370
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:366
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// Margin
 		/// </summary>
-		MarginContainer Margin { get ; }                                                                                                          // BuildMemberBase.cs:369
+		MarginContainer Margin { get ; }                                                                                                          // BuildMemberBase.cs:370
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:366
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// MgDensity
 		/// </summary>
-		MgDensityContainer MgDensity { get ; }                                                                                                    // BuildMemberBase.cs:369
+		MgDensityContainer MgDensity { get ; }                                                                                                    // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

@@ -14,8 +14,8 @@ namespace FireFragger.CS.BuildMembers
         protected ElementTreeSlice extensionSlice;
 
         protected override string PropertyName => $"{this.extensionName.ToMachineName()}";
-        protected override string ElementGetName => this.extensionName;
-        protected override IEnumerable<string> ElementSetNames => new String[] { this.extensionName };
+        protected override string ElementGetName => "Members";
+        protected override IEnumerable<string> ElementSetNames => new String[] { "Members" };
         protected override string ContainerClassName => $"{this.extensionName.ToMachineName()}Collection";
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} extension)")
                 .OpenBrace()
                 .AppendCode("throw new NotImplementedException(\"xxyyz\");")
                 .CloseBrace()
@@ -52,8 +52,9 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Write(BreastRadiologyDocument doc, {FhirClassName} component)")
+                .AppendCode($"public Extension WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
+                .DefineBlock(out this.itemCodeBlocks.ClassWriteCode)
                 .AppendCode("throw new NotImplementedException(\"xxyyz\");")
                 .CloseBrace()
                 ;
@@ -65,6 +66,7 @@ namespace FireFragger.CS.BuildMembers
                 .BlankLine()
                 .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
                 .OpenBrace()
+                .DefineBlock(out this.itemCodeBlocks.ClassReadCode)
                 .AppendCode($"throw new NotImplementedException(\"xxyyz\");")
                 //.AppendCode($"IEnumerable<Extension> extensions = base.IsMember(doc,")
                 //.AppendCode($"    extensions,")

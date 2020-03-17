@@ -18,11 +18,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:366
+		// BuildMemberBase.cs:367
 		/// <summary>
 		/// ObsCount
 		/// </summary>
-		ObsCountContainer ObsCount { get ; }                                                                                                      // BuildMemberBase.cs:369
+		ObsCountContainer ObsCount { get ; }                                                                                                      // BuildMemberBase.cs:370
 		//- Properties
 
 		//+ Methods

@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:374
+		                                                                                                                                          // BuildMemberBase.cs:375
 		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:376
+		// BuildMemberBase.cs:377
 		/// <summary>
 		/// ObsChanges
 		/// Access fhir element 'Observation.component:obsChanges'
 		/// </summary>
-		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:380
+		public ObsChangesContainer ObsChanges { get ; protected set; }                                                                            // BuildMemberBase.cs:381
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:359
+			this.ObsChanges = new ObsChangesContainer(0, 0);                                                                                         // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

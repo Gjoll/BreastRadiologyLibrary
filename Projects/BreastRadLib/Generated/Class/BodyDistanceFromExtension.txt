@@ -20,14 +20,14 @@ namespace BreastRadLib
 	public class BodyDistanceFromExtension : ExtensionBase, IBodyDistanceFromExtension
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:374
-		// Called from BuildMemberExtensionComplex.cs, Line 189
-		// BuildMemberBase.cs:376
+		                                                                                                                                          // BuildMemberBase.cs:375
+		// Called from BuildMemberExtensionComplex.cs, Line 191
+		// BuildMemberBase.cs:377
 		/// <summary>
 		/// BodyDistanceFromExtension
 		/// Access fhir element 'BodyDistanceFromExtension'
 		/// </summary>
-		public BodyDistanceFromExtensionCollection BodyDistanceFromExtension { get ; protected set; }                                             // BuildMemberBase.cs:380
+		public BodyDistanceFromExtensionCollection BodyDistanceFromExtension { get ; protected set; }                                             // BuildMemberBase.cs:381
 		//- Properties
 
 		/// <summary>
@@ -70,8 +70,8 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BodyDistanceFromExtension");                                  // DefineBase.cs:220
-			// Called from BuildMemberExtensionComplex.cs, Line 189
-			this.BodyDistanceFromExtension = new BodyDistanceFromExtensionCollection(0, 0);                                                          // BuildMemberBase.cs:359
+			// Called from BuildMemberExtensionComplex.cs, Line 191
+			this.BodyDistanceFromExtension = new BodyDistanceFromExtensionCollection(0, 0);                                                          // BuildMemberBase.cs:360
 			//- Constructor
 		}
 
