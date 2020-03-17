@@ -11,7 +11,7 @@
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, 0);                                                                     // BuildMemberBase.cs:360
+			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, -1);                                                                    // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

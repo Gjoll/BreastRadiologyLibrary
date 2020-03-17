@@ -240,6 +240,20 @@ namespace BreastRadiology.XUnitTests
             }
             Extension[] extensions = Write();
             MBodyDistanceFromExtension bdc = Read(extensions);
+
+            Debug.Assert(bdc.Count == 2);
+            MBodyDistanceFromExtension.Members item1 = bdc.GetAt(0);
+            Debug.Assert(bdc.Count == 2);
+            Debug.Assert(item1.DistanceFromLandMark.Get().Value == 1);
+            Debug.Assert(item1.LandMark.Get().Coding.Count == 1);
+            Debug.Assert(item1.LandMark.Get().Coding[0].System == "system1");
+            Debug.Assert(item1.LandMark.Get().Coding[0].Code == "code1");
+
+            MBodyDistanceFromExtension.Members item2 = bdc.GetAt(1);
+            Debug.Assert(item2.DistanceFromLandMark.Get().Value == 2);
+            Debug.Assert(item2.LandMark.Get().Coding.Count == 1);
+            Debug.Assert(item2.LandMark.Get().Coding[0].System == "system2");
+            Debug.Assert(item2.LandMark.Get().Coding[0].Code == "code2");
         }
 
         //[TestMethod]

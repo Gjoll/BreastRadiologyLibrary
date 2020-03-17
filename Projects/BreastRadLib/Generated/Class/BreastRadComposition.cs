@@ -113,15 +113,15 @@ namespace BreastRadLib
 			// Called from BuildMemberSection.cs, Line 226
 			this.Report = new MReport(1, 1);                                                                                                         // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.Impressions = new MImpressions(0, 0);                                                                                               // BuildMemberBase.cs:360
+			this.Impressions = new MImpressions(0, -1);                                                                                              // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.FindingsRightBreast = new MFindingsRightBreast(0, 0);                                                                               // BuildMemberBase.cs:360
+			this.FindingsRightBreast = new MFindingsRightBreast(0, 1);                                                                               // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.FindingsLeftBreast = new MFindingsLeftBreast(0, 0);                                                                                 // BuildMemberBase.cs:360
+			this.FindingsLeftBreast = new MFindingsLeftBreast(0, 1);                                                                                 // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.RelatedResources = new MRelatedResources(0, 0);                                                                                     // BuildMemberBase.cs:360
+			this.RelatedResources = new MRelatedResources(0, -1);                                                                                    // BuildMemberBase.cs:360
 			// Called from BuildMemberSection.cs, Line 226
-			this.Recommendations = new MRecommendations(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.Recommendations = new MRecommendations(0, -1);                                                                                      // BuildMemberBase.cs:360
 			//- Constructor
 		}
 

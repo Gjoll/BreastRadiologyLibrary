@@ -11,7 +11,7 @@
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsChanges = new MObsChanges(0, 0);                                                                                                 // BuildMemberBase.cs:360
+			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

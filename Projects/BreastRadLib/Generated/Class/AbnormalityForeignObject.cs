@@ -142,19 +142,19 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject");                                   // DefineBase.cs:220
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsChanges = new MObsChanges(0, 0);                                                                                                 // BuildMemberBase.cs:360
+			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 0);                                                                     // BuildMemberBase.cs:360
+			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 1);                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.NotPreviouslySeen = new MNotPreviouslySeen(0, 0);                                                                                   // BuildMemberBase.cs:360
+			this.NotPreviouslySeen = new MNotPreviouslySeen(0, -1);                                                                                  // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.CorrespondsWith = new MCorrespondsWith(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.CorrespondsWith = new MCorrespondsWith(0, -1);                                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, 0);                                                                     // BuildMemberBase.cs:360
+			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, -1);                                                                    // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AssociatedFeature = new MAssociatedFeature(0, 0);                                                                                   // BuildMemberBase.cs:360
+			this.AssociatedFeature = new MAssociatedFeature(0, -1);                                                                                  // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.ConsistentWith = new MConsistentWith(0, 0);                                                                                         // BuildMemberBase.cs:360
+			this.ConsistentWith = new MConsistentWith(0, -1);                                                                                        // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
 			this.AbnormalityForeignObjectType = new MAbnormalityForeignObjectType(1, 1);                                                             // BuildMemberBase.cs:360
 			//- Constructor

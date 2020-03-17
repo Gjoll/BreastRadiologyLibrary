@@ -19,9 +19,9 @@
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsDistribution = new MObsDistribution(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.ObsDistribution = new MObsDistribution(0, -1);                                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsDistRegionSize = new MObsDistRegionSize(0, 0);                                                                                   // BuildMemberBase.cs:360
+			this.ObsDistRegionSize = new MObsDistRegionSize(0, 3);                                                                                   // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

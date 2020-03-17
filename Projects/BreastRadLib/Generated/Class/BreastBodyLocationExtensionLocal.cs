@@ -52,11 +52,11 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// <summary>
 	        /// Write item.
 	        /// </summary>
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:54
-	        public Extension WriteItem(BreastRadiologyDocument doc)                                                                            // BuildMemberExtensionComplex.cs:55
-	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:56
-	            return this.Value.WriteMember(doc);                                                                                            // BuildMemberExtensionComplex.cs:58
-	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:59
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:55
+	        public Extension WriteItem(BreastRadiologyDocument doc)                                                                            // BuildMemberExtensionComplex.cs:56
+	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:57
+	            return this.Value.WriteMember(doc);                                                                                            // BuildMemberExtensionComplex.cs:59
+	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:60
 	                                                                                                                                           // BuildMemberBase.cs:108
 	        // BuildMemberBase.cs:109
 	        /// <summary>
@@ -65,8 +65,9 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:43
 	        public void ReadItem(BreastRadiologyDocument doc, Extension extension)                                                             // BuildMemberExtensionComplex.cs:44
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:45
-	            this.Value.ReadMember(doc, extension);                                                                                         // BuildMemberExtensionComplex.cs:46
-	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:47
+	            this.Value = new Members();                                                                                                    // BuildMemberExtensionComplex.cs:46
+	            this.Value.ReadMember(doc, extension);                                                                                         // BuildMemberExtensionComplex.cs:47
+	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:48
 	    }                                                                                                                                      // BuildMemberBase.cs:115
 	    #endregion                                                                                                                             // BuildMemberBase.cs:116
 	    #region BreastBodyLocationExtension Member Class                                                                                       // BuildMemberExtensionComplex.cs:110
@@ -775,13 +776,13 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        public Members()                                                                                                                   // BuildMemberExtensionComplex.cs:124
 	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:125
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.Quadrant = new MQuadrant(0, 0);                                                                                           // BuildMemberBase.cs:360
+	            this.Quadrant = new MQuadrant(0, 1);                                                                                           // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.Region = new MRegion(0, 0);                                                                                               // BuildMemberBase.cs:360
+	            this.Region = new MRegion(0, -1);                                                                                              // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.ClockDirection = new MClockDirection(0, 0);                                                                               // BuildMemberBase.cs:360
+	            this.ClockDirection = new MClockDirection(0, 1);                                                                               // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
-	            this.Depth = new MDepth(0, 0);                                                                                                 // BuildMemberBase.cs:360
+	            this.Depth = new MDepth(0, 1);                                                                                                 // BuildMemberBase.cs:360
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:127
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:129
 	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:130
@@ -909,10 +910,20 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
-	                                                                                                                                           // BuildMemberExtensionComplex.cs:66
-	    public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> extensions)                                                       // BuildMemberExtensionComplex.cs:67
-	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:68
-	        throw new NotImplementedException("xxyyz");                                                                                        // BuildMemberExtensionComplex.cs:70
+	                                                                                                                                           // BuildMemberExtensionComplex.cs:67
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Extension> extensions)                                                       // BuildMemberExtensionComplex.cs:68
+	    {                                                                                                                                      // BuildMemberExtensionComplex.cs:69
+	        IEnumerable<Extension> memberExtensions = base.IsMember(doc,                                                                       // BuildMemberExtensionComplex.cs:71
+	            extensions,                                                                                                                    // BuildMemberExtensionComplex.cs:72
+	            ExtensionUrl);                                                                                                                 // BuildMemberExtensionComplex.cs:73
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberExtensionComplex.cs:74
+	        foreach (Extension memberExtension in memberExtensions)                                                                            // BuildMemberExtensionComplex.cs:75
+	        {                                                                                                                                  // BuildMemberExtensionComplex.cs:76
+	                Item item = new Item();                                                                                                    // BuildMemberExtensionComplex.cs:77
+	                item.ReadItem(doc, memberExtension);                                                                                       // BuildMemberExtensionComplex.cs:78
+	                items.Add(item);                                                                                                           // BuildMemberExtensionComplex.cs:79
+	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:80
+	        this.SetAllItems(items);                                                                                                           // BuildMemberExtensionComplex.cs:81
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:82
 	}                                                                                                                                          // BuildMemberBase.cs:183
 	#endregion                                                                                                                                 // BuildMemberBase.cs:184

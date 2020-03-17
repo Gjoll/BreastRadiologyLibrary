@@ -211,35 +211,35 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityDensity");                                       // DefineBase.cs:220
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsChanges = new MObsChanges(0, 0);                                                                                                 // BuildMemberBase.cs:360
+			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 0);                                                                     // BuildMemberBase.cs:360
+			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 1);                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Orientation = new MOrientation(0, 0);                                                                                               // BuildMemberBase.cs:360
+			this.Orientation = new MOrientation(0, 1);                                                                                               // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Shape = new MShape(0, 0);                                                                                                           // BuildMemberBase.cs:360
+			this.Shape = new MShape(0, 1);                                                                                                           // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Margin = new MMargin(0, 0);                                                                                                         // BuildMemberBase.cs:360
+			this.Margin = new MMargin(0, 1);                                                                                                         // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.MgDensity = new MMgDensity(0, 0);                                                                                                   // BuildMemberBase.cs:360
+			this.MgDensity = new MMgDensity(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.NotPreviouslySeen = new MNotPreviouslySeen(0, 0);                                                                                   // BuildMemberBase.cs:360
+			this.NotPreviouslySeen = new MNotPreviouslySeen(0, -1);                                                                                  // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsCount = new MObsCount(0, 0);                                                                                                     // BuildMemberBase.cs:360
+			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsSize = new MObsSize(0, 0);                                                                                                       // BuildMemberBase.cs:360
+			this.ObsSize = new MObsSize(0, 3);                                                                                                       // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsDistribution = new MObsDistribution(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.ObsDistribution = new MObsDistribution(0, -1);                                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsDistRegionSize = new MObsDistRegionSize(0, 0);                                                                                   // BuildMemberBase.cs:360
+			this.ObsDistRegionSize = new MObsDistRegionSize(0, 3);                                                                                   // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.CorrespondsWith = new MCorrespondsWith(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.CorrespondsWith = new MCorrespondsWith(0, -1);                                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, 0);                                                                     // BuildMemberBase.cs:360
+			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, -1);                                                                    // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AssociatedFeature = new MAssociatedFeature(0, 0);                                                                                   // BuildMemberBase.cs:360
+			this.AssociatedFeature = new MAssociatedFeature(0, -1);                                                                                  // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.ConsistentWith = new MConsistentWith(0, 0);                                                                                         // BuildMemberBase.cs:360
+			this.ConsistentWith = new MConsistentWith(0, -1);                                                                                        // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
 			this.DensityType = new MDensityType(1, 1);                                                                                               // BuildMemberBase.cs:360
 			//- Constructor

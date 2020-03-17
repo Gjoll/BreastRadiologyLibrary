@@ -35,13 +35,13 @@
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Orientation = new MOrientation(0, 0);                                                                                               // BuildMemberBase.cs:360
+			this.Orientation = new MOrientation(0, 1);                                                                                               // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Shape = new MShape(0, 0);                                                                                                           // BuildMemberBase.cs:360
+			this.Shape = new MShape(0, 1);                                                                                                           // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Margin = new MMargin(0, 0);                                                                                                         // BuildMemberBase.cs:360
+			this.Margin = new MMargin(0, 1);                                                                                                         // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.MgDensity = new MMgDensity(0, 0);                                                                                                   // BuildMemberBase.cs:360
+			this.MgDensity = new MMgDensity(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

@@ -357,7 +357,7 @@ namespace FireFragger.CS.BuildMembers
         {
             this.codeBlocks.ClassConstructor
                 .AppendLine($"// {buildMsg}")
-                .AppendCode($"this.{this.PropertyName} = new {this.ContainerClassName}({this.Min}, {this.Min});")
+                .AppendCode($"this.{this.PropertyName} = new {this.ContainerClassName}({this.Min}, {this.Max});")
                 ;
 
             if (this.codeBlocks.InterfaceProperties != null)

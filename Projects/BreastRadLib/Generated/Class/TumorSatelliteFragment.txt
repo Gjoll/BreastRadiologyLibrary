@@ -11,7 +11,7 @@
 
 			//+ Constructor
 			// Called from BuildMemberReferences.cs, Line 199
-			this.TumorSatellite = new MTumorSatellite(0, 0);                                                                                         // BuildMemberBase.cs:360
+			this.TumorSatellite = new MTumorSatellite(0, -1);                                                                                        // BuildMemberBase.cs:360
 			//- Constructor
 
 			//+ ValidateCodeStart

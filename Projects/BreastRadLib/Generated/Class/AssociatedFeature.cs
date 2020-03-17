@@ -88,7 +88,7 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:220
 			// Called from BuildMemberComponents.cs, Line 208
-			this.ObsCount = new MObsCount(0, 0);                                                                                                     // BuildMemberBase.cs:360
+			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
 			this.FeatureType = new MFeatureType(1, 1);                                                                                               // BuildMemberBase.cs:360
 			//- Constructor

@@ -88,7 +88,7 @@ namespace BreastRadLib
 			// Called from BuildMemberComponents.cs, Line 208
 			this.Value = new MValue(1, 1);                                                                                                           // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
-			this.Qualifier = new MQualifier(0, 0);                                                                                                   // BuildMemberBase.cs:360
+			this.Qualifier = new MQualifier(0, -1);                                                                                                  // BuildMemberBase.cs:360
 			//- Constructor
 		}
 

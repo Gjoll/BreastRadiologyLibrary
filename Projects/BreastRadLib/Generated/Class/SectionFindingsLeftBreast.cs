@@ -101,13 +101,13 @@ namespace BreastRadLib
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:220
 			// Called from BuildMemberReferences.cs, Line 199
-			this.MGFinding = new MMGFinding(0, 0);                                                                                                   // BuildMemberBase.cs:360
+			this.MGFinding = new MMGFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.MRIFinding = new MMRIFinding(0, 0);                                                                                                 // BuildMemberBase.cs:360
+			this.MRIFinding = new MMRIFinding(0, 1);                                                                                                 // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.NMFinding = new MNMFinding(0, 0);                                                                                                   // BuildMemberBase.cs:360
+			this.NMFinding = new MNMFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.USFinding = new MUSFinding(0, 0);                                                                                                   // BuildMemberBase.cs:360
+			this.USFinding = new MUSFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			//- Constructor
 		}
 

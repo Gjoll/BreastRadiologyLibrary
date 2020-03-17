@@ -173,29 +173,29 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // DefineBase.cs:220
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityCyst = new MAbnormalityCyst(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.AbnormalityCyst = new MAbnormalityCyst(0, -1);                                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityDuct = new MAbnormalityDuct(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.AbnormalityDuct = new MAbnormalityDuct(0, -1);                                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityForeignObject = new MAbnormalityForeignObject(0, 0);                                                                     // BuildMemberBase.cs:360
+			this.AbnormalityForeignObject = new MAbnormalityForeignObject(0, -1);                                                                    // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityLymphNode = new MAbnormalityLymphNode(0, 0);                                                                             // BuildMemberBase.cs:360
+			this.AbnormalityLymphNode = new MAbnormalityLymphNode(0, -1);                                                                            // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityMass = new MAbnormalityMass(0, 0);                                                                                       // BuildMemberBase.cs:360
+			this.AbnormalityMass = new MAbnormalityMass(0, -1);                                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AssociatedFeature = new MAssociatedFeature(0, 0);                                                                                   // BuildMemberBase.cs:360
+			this.AssociatedFeature = new MAssociatedFeature(0, -1);                                                                                  // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityFibroadenoma = new MAbnormalityFibroadenoma(0, 0);                                                                       // BuildMemberBase.cs:360
+			this.AbnormalityFibroadenoma = new MAbnormalityFibroadenoma(0, -1);                                                                      // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityArchitecturalDistortion = new MMGAbnormalityArchitecturalDistortion(0, 0);                                             // BuildMemberBase.cs:360
+			this.MGAbnormalityArchitecturalDistortion = new MMGAbnormalityArchitecturalDistortion(0, -1);                                            // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityAsymmetry = new MMGAbnormalityAsymmetry(0, 0);                                                                         // BuildMemberBase.cs:360
+			this.MGAbnormalityAsymmetry = new MMGAbnormalityAsymmetry(0, -1);                                                                        // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityCalcification = new MMGAbnormalityCalcification(0, 0);                                                                 // BuildMemberBase.cs:360
+			this.MGAbnormalityCalcification = new MMGAbnormalityCalcification(0, -1);                                                                // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityDensity = new MMGAbnormalityDensity(0, 0);                                                                             // BuildMemberBase.cs:360
+			this.MGAbnormalityDensity = new MMGAbnormalityDensity(0, -1);                                                                            // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityFatNecrosis = new MMGAbnormalityFatNecrosis(0, 0);                                                                     // BuildMemberBase.cs:360
+			this.MGAbnormalityFatNecrosis = new MMGAbnormalityFatNecrosis(0, -1);                                                                    // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
 			this.MGBreastDensity = new MMGBreastDensity(1, 1);                                                                                       // BuildMemberBase.cs:360
 			//- Constructor
