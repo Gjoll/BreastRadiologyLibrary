@@ -1,6 +1,6 @@
 		//+ Properties
 		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberElement.cs, Line 108
+		// Called from BuildMemberElement.cs, Line 129
 		// BuildMemberBase.cs:377
 		/// <summary>
 		/// BodySite
@@ -10,7 +10,7 @@
 		//- Properties
 
 			//+ Constructor
-			// Called from BuildMemberElement.cs, Line 108
+			// Called from BuildMemberElement.cs, Line 129
 			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
 			//- Constructor
 

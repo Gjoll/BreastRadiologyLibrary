@@ -49,7 +49,7 @@ namespace BreastRadLib
 		/// </summary>
 		public MTumorSatellite TumorSatellite { get ; protected set; }                                                                            // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberElement.cs, Line 108
+		// Called from BuildMemberElement.cs, Line 129
 		// BuildMemberBase.cs:377
 		/// <summary>
 		/// BodySite
@@ -229,7 +229,7 @@ namespace BreastRadLib
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass");                                            // DefineBase.cs:238
 			// Called from BuildMemberReferences.cs, Line 199
 			this.TumorSatellite = new MTumorSatellite(0, -1);                                                                                        // BuildMemberBase.cs:360
-			// Called from BuildMemberElement.cs, Line 108
+			// Called from BuildMemberElement.cs, Line 129
 			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
 			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:360

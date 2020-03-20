@@ -80,12 +80,12 @@ namespace FireFragger.CS.BuildMembers
                  .AppendCode($"public class Item")
                  .OpenBrace()
                  .AppendCode($"// Properties")
-                 .DefineBlock(out itemCodeBlocks.LocalClassDefs)
+                 .DefineBlock(out this.itemCodeBlocks.LocalClassDefs)
                  .SummaryOpen()
                  .Summary($"Value")
                  .SummaryClose()
-                 .AppendCode($"public {ElementGetName} Value {{ get; set; }}")
-                 .DefineBlock(out itemCodeBlocks.ClassProperties)
+                 .AppendCode($"public {this.ElementGetName} Value {{ get; set; }}")
+                 .DefineBlock(out this.itemCodeBlocks.ClassProperties)
    
                  .BlankLine()
                  .SummaryOpen()
@@ -93,7 +93,7 @@ namespace FireFragger.CS.BuildMembers
                  .SummaryClose()
                  .AppendCode($"public Item()")
                  .OpenBrace()
-                 .DefineBlock(out itemCodeBlocks.ClassConstructor)
+                 .DefineBlock(out this.itemCodeBlocks.ClassConstructor)
                  .CloseBrace()
 
                  .BlankLine()
@@ -103,20 +103,20 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary("Write item.")
                 .SummaryClose()
-                .Call(BuildItemWrite)
+                .Call(this.BuildItemWrite)
 
                 .BlankLine()
                 .SummaryOpen()
                 .Summary("Read item.")
                 .SummaryClose()
-                .Call(BuildItemRead)
+                .Call(this.BuildItemRead)
 
-                .DefineBlock(out itemCodeBlocks.ClassMethods)
+                .DefineBlock(out this.itemCodeBlocks.ClassMethods)
                 .CloseBrace()
                 .AppendCode($"#endregion")
                 ;
 
-            BuildItemClassLocal(this.itemCodeBlocks);
+            this.BuildItemClassLocal(this.itemCodeBlocks);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Container class for {this.pathName}.")
                 .SummaryClose()
-                .AppendCode($"public class {this.ContainerClassName} : MContainer, ITMItem<{FhirClassName}> ")
+                .AppendCode($"public class {this.ContainerClassName} : MContainer, ITMItem<{this.FhirClassName}> ")
                 .OpenBrace()
                 .DefineBlock(out this.itemCode)
 
@@ -172,7 +172,7 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
-                .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{pathName}\", min, max)")
+                .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{this.pathName}\", min, max)")
                 .OpenBrace()
                 .DefineBlock(out this.containerCodeBlocks.ClassConstructor)
                 .CloseBrace()
@@ -230,7 +230,7 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryOpen()
                     .Summary($"Get Item's Value")
                     .SummaryClose()
-                    .AppendCode($"public {ElementGetName} Get()")
+                    .AppendCode($"public {this.ElementGetName} Get()")
                     .OpenBrace()
                     .AppendCode($"if (item == null)")
                     .AppendCode($"    return null;")
@@ -283,7 +283,7 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryOpen()
                     .Summary($"Return all items")
                     .SummaryClose()
-                    .AppendCode($"public IEnumerable<{ElementGetName}> All()")
+                    .AppendCode($"public IEnumerable<{this.ElementGetName}> All()")
                     .OpenBrace()
                     .AppendCode($"foreach (Item item in items)")
                     .AppendCode($"   yield return item.Value;")
@@ -293,7 +293,7 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryOpen()
                     .Summary($"Get Item's Value at indicated index")
                     .SummaryClose()
-                    .AppendCode($"public {ElementGetName} GetAt(Int32 i) => this.items[i].Value;")
+                    .AppendCode($"public {this.ElementGetName} GetAt(Int32 i) => this.items[i].Value;")
 
                     .BlankLine()
                     .SummaryOpen()
@@ -335,13 +335,13 @@ namespace FireFragger.CS.BuildMembers
                .SummaryOpen()
                .Summary("Write container items.")
                .SummaryClose()
-               .Call(BuildContainerWrite)
+               .Call(this.BuildContainerWrite)
 
                .BlankLine()
                .SummaryOpen()
                .Summary("Read container items.")
                .SummaryClose()
-               .Call(BuildContainerRead)
+               .Call(this.BuildContainerRead)
                ;
         }
 
@@ -365,7 +365,7 @@ namespace FireFragger.CS.BuildMembers
                 this.codeBlocks.InterfaceProperties
                     .AppendLine($"// {buildMsg}")
                     .SummaryOpen()
-                    .Summary($"{PropertyName}")
+                    .Summary($"{this.PropertyName}")
                     .SummaryClose()
                     .AppendCode($"{this.ContainerClassName} {this.PropertyName} {{ get ; }}")
                     ;
@@ -401,9 +401,9 @@ namespace FireFragger.CS.BuildMembers
 
             String buildMsg = $"Called from {Path.GetFileName(filePath)}, Line {lineNumber}";
             this.containerCode = this.codeBlocks.LocalClassDefs.AppendBlock();
-            BuildContainerClass(buildMsg);
-            BuildItemClass(buildMsg);
-            BuildProperty(buildMsg);
+            this.BuildContainerClass(buildMsg);
+            this.BuildItemClass(buildMsg);
+            this.BuildProperty(buildMsg);
         }
 
         public abstract void Build();

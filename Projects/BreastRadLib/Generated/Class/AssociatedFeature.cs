@@ -29,7 +29,7 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberElement.cs, Line 108
+		// Called from BuildMemberElement.cs, Line 129
 		// BuildMemberBase.cs:377
 		/// <summary>
 		/// BodySite
@@ -95,7 +95,7 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:238
-			// Called from BuildMemberElement.cs, Line 108
+			// Called from BuildMemberElement.cs, Line 129
 			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
 			// Called from BuildMemberComponents.cs, Line 208
 			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:360

@@ -16,7 +16,7 @@ namespace FireFragger.CS.BuildMembers
         protected ElementTreeNode valueNode;
 
         protected string ElementName => $"{this.valueNode.ElementDefinition.Path.LastPathPart()}";
-        protected override string PropertyName => $"{ElementName.ToMachineName()}";
+        protected override string PropertyName => $"{this.ElementName.ToMachineName()}";
         protected override string ElementGetName => this.itemElementGetName;
         protected override IEnumerable<string> ElementSetNames => this.itemElementSetName;
         protected override string ContainerClassName => this.containerClassName;
@@ -38,7 +38,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} element)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} element)")
                 .OpenBrace()
                 .AppendCode("this.Value = element;")
                 .CloseBrace()
@@ -49,9 +49,9 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public {FhirClassName} WriteItem(BreastRadiologyDocument doc)")
+                .AppendCode($"public {this.FhirClassName} WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
-                .AppendCode($"{FhirClassName} retVal = this.Value;")
+                .AppendCode($"{this.FhirClassName} retVal = this.Value;")
                 .AppendCode($"return retVal;")
                 .CloseBrace()
                 ;
@@ -61,7 +61,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> elements)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{this.FhirClassName}> elements)")
                 .OpenBrace()
                 .AppendCode($"List<Item> items = new List<Item>();")
                 .AppendCode($"foreach (Element element in elements)")
@@ -82,7 +82,7 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
-                .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+                .AppendCode($"public IEnumerable<{this.FhirClassName}> Write(BreastRadiologyDocument doc)")
                 .OpenBrace()
                 .AppendCode($"foreach (Item item in this.GetAllItems())")
                 .AppendCode($"    yield return item.WriteItem(doc);")
@@ -94,18 +94,40 @@ namespace FireFragger.CS.BuildMembers
             ;
         }
 
+        void BuildExtension(ElementTreeSlice extensionSlice)
+        {
+            //$BuildMemberExtension bme = new BuildMemberExtension(this.defineBase,
+            //$    this.itemCodeBlocks,
+            //$    extensionSlice,
+            //$    extensionSlice.ElementDefinition.SliceName.ToMachineName());
+            //$bme.Build();
+        }
+
+        void BuildExtensions()
+        {
+            if (this.valueNode.TryGetChild("extension", out ElementTreeNode elementExtensionNode) == false)
+                return;
+            if (elementExtensionNode.Slices.Count <= 1)
+                return;
+
+            foreach (ElementTreeSlice extensionSlice in elementExtensionNode.Slices.Skip(1))
+                BuildExtension(extensionSlice);
+        }
+
         public override void Build()
         {
             Int32 max = CSMisc.ToMax(this.valueNode.ElementDefinition.Max);
             Int32 min = this.valueNode.ElementDefinition.Min.Value;
 
             this.itemElementSetName.Clear();
-            foreach (var type in valueNode.ElementDefinition.Type)
-                itemElementSetName.Add(type.Code);
+            foreach (var type in this.valueNode.ElementDefinition.Type)
+                this.itemElementSetName.Add(type.Code);
 
             this.containerClassName = $"M{this.ElementName.ToMachineName()}";
-            this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
-            base.BuildOne(valueNode.ElementDefinition.ElementId, min, max);
+            this.itemElementGetName = (this.itemElementSetName.Count == 1) ?
+                this.valueNode.ElementDefinition.Type[0].Code : "Element";
+            base.BuildOne(this.valueNode.ElementDefinition.ElementId, min, max);
+            this.BuildExtensions();
         }
 
         public BuildMemberElement(DefineBase defineBase,

@@ -16,7 +16,7 @@ namespace BreastRadLib.BreastBodyLocationRequiredFragmentLocal
 {
 	//+ LocalClassDefs
 	#region Observation.bodySite Container Class                                                                                               // BuildMemberBase.cs:158
-	// Called from BuildMemberElement.cs, Line 108
+	// Called from BuildMemberElement.cs, Line 129
 	// BuildMemberBase.cs:160
 	/// <summary>
 	/// Container class for Observation.bodySite.
@@ -24,7 +24,7 @@ namespace BreastRadLib.BreastBodyLocationRequiredFragmentLocal
 	public class MBodySite : MContainer, ITMItem<CodeableConcept>                                                                              // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region Observation.bodySite Item Class                                                                                                // BuildMemberBase.cs:75
-	    // Called from BuildMemberElement.cs, Line 108
+	    // Called from BuildMemberElement.cs, Line 129
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for Observation.bodySite.

@@ -32,7 +32,7 @@ namespace FireFragger.CS.BuildMembers
         {
             base.BuildContainerClassLocal(codeBlocks);
 
-            ElementTreeNode urlNode = extensionSlice.Nodes["url"];
+            ElementTreeNode urlNode = this.extensionSlice.Nodes["url"];
             String extensionUrl = ((FhirUri)urlNode.ElementDefinition.Fixed).Value;
 
             codeBlocks.ClassProperties
@@ -44,7 +44,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} extension)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} extension)")
                 .OpenBrace()
                 .AppendCode($"this.Value = ({this.ElementGetName}) extension.Value;")
                 .CloseBrace()
@@ -55,7 +55,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public {FhirClassName} WriteItem(BreastRadiologyDocument doc)")
+                .AppendCode($"public {this.FhirClassName} WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
                 .AppendCode($"return new Extension")
                 .OpenBrace()
@@ -70,7 +70,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                .BlankLine()
-               .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
+               .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{this.FhirClassName}> extensions)")
                .OpenBrace()
                .AppendCode($"List<Extension> memberExtensions = extensions")
                .AppendCode($"    .Where((a) => String.Compare(a.Url, ExtensionUrl, true) == 0)")
@@ -88,14 +88,14 @@ namespace FireFragger.CS.BuildMembers
                ;
 
             this.codeBlocks.ClassReadCode
-                .AppendCode($"this.{PropertyName}.Read(doc, extensions);")
+                .AppendCode($"this.{this.PropertyName}.Read(doc, extensions);")
                 ;
         }
 
         protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
-               .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+               .AppendCode($"public IEnumerable<{this.FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
                .AppendCode($"    yield return item.WriteItem(doc);")
@@ -103,7 +103,7 @@ namespace FireFragger.CS.BuildMembers
                ;
 
             this.codeBlocks.ClassWriteCode
-                .AppendCode($"items.AddRange(this.{PropertyName}.Write(doc));")
+                .AppendCode($"items.AddRange(this.{this.PropertyName}.Write(doc));")
                 ;
         }
 
@@ -115,10 +115,10 @@ namespace FireFragger.CS.BuildMembers
             ElementTreeNode valueNode = this.extensionSlice.Nodes["value[x]"];
             this.itemElementSetName.Clear();
             foreach (var type in valueNode.ElementDefinition.Type)
-                itemElementSetName.Add(type.Code);
-            this.itemElementGetName = (itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
+                this.itemElementSetName.Add(type.Code);
+            this.itemElementGetName = (this.itemElementSetName.Count == 1) ? valueNode.ElementDefinition.Type[0].Code : "Element";
 
-            base.BuildOne(extensionSlice.ElementDefinition.ElementId, min, max);
+            base.BuildOne(this.extensionSlice.ElementDefinition.ElementId, min, max);
         }
 
         public BuildMemberExtensionSimple(DefineBase defineBase,

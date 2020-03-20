@@ -49,6 +49,32 @@ namespace FireFragger.CS.BuildMembers
         }
 
         /// <summary>
+        /// Extension is a reference to a predefined extension. Build a reference to the
+        /// class that implements that extension.
+        /// </summary>
+        void BuildExtensionReference(ElementDefinition extensionDef)
+        {
+            const String fcn = "BuildExtensionReference";
+
+            if (extensionDef.Type[0].Profile.Count() > 1)
+            {
+                this.defineBase.CSBuilder.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"Don't know how to handle multiple extension type profiles.");
+                return;
+            }
+            String extensionUrl = extensionDef.Type[0].Profile.First();
+            if (extensionUrl.StartsWith(Global.BreastRadBaseUrl) == false)
+            {
+                this.defineBase.CSBuilder.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"Don't know how to handle externally defined extension profiles.");
+                return;
+            }
+
+        }
+
+        /// <summary>
         /// Build a class to implement an extension.
         /// This determines if a simple extension is to be defined,
         /// or a complex extension.
@@ -58,7 +84,7 @@ namespace FireFragger.CS.BuildMembers
             //$ TODO: Implement validation
 
             const String fcn = "Build";
-            ElementDefinition extensionDef = extensionSlice.ElementDefinition;
+            ElementDefinition extensionDef = this.extensionSlice.ElementDefinition;
             if (
                 (extensionDef.Type.Count == 1) &&
                 (extensionDef.Type[0].Code == "Extension")
@@ -67,19 +93,16 @@ namespace FireFragger.CS.BuildMembers
                 if (extensionDef.Type[0].Profile.Count() > 0)
                 {
                     if (extensionDef.Type[0].Profile.Count() != 1)
-                        throw new Exception($"Invalid extension ProfileProfile definition {extensionName}");
-                    if (extensionSlice.Nodes.Count > 0)
-                        throw new Exception($"Invalid eternal extension {extensionName}. Nodes.Count ==  {extensionSlice.Nodes.Count}. Expected 0.");
-
-                    this.defineBase.CSBuilder.ConversionError(this.GetType().Name,
-                       fcn,
-                       $"Unimplemented external extension reference {extensionDef.Type[0].Profile.First()}");
+                        throw new Exception($"Invalid extension ProfileProfile definition {this.extensionName}");
+                    if (this.extensionSlice.Nodes.Count > 0)
+                        throw new Exception($"Invalid eternal extension {this.extensionName}. Nodes.Count ==  {this.extensionSlice.Nodes.Count}. Expected 0.");
+                    BuildExtensionReference(extensionDef);
                     return;
                 }
             }
 
-            ElementTreeNode valueXNode = extensionSlice.Nodes.GetItem("value[x]");
-            ElementTreeNode subExtensionNode = extensionSlice.Nodes.GetItem("extension");
+            ElementTreeNode valueXNode = this.extensionSlice.Nodes.GetItem("value[x]");
+            ElementTreeNode subExtensionNode = this.extensionSlice.Nodes.GetItem("extension");
             Int32 valueXCardMax = CSMisc.ToMax(valueXNode.ElementDefinition.Max);
 
             if ((valueXCardMax != 0) && (subExtensionNode.Slices.Count > 1))
@@ -95,12 +118,12 @@ namespace FireFragger.CS.BuildMembers
             else if (valueXCardMax != 0)
             {
                 // Build Simple Extension
-                BuildOneSimpleExtension(extensionName);
+                this.BuildOneSimpleExtension(this.extensionName);
             }
             else
             {
                 // Build Complex Extension
-                BuildOneComplexExtension(extensionName);
+                this.BuildOneComplexExtension(this.extensionName);
             }
         }
     }

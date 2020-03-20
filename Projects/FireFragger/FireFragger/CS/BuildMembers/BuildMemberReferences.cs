@@ -37,16 +37,16 @@ namespace FireFragger.CS.BuildMembers
         {
             base.BuildContainerClassLocal(itemCodeBlocks);
 
-            BuildTargeturls(itemCodeBlocks.ClassProperties, targetProfiles);
+            this.BuildTargeturls(itemCodeBlocks.ClassProperties, this.targetProfiles);
         }
 
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
                 .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} reference)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} reference)")
                 .OpenBrace()
-                .AppendCode($"this.Value = ({ElementGetName}) doc.GetResource(reference);")
+                .AppendCode($"this.Value = ({this.ElementGetName}) doc.GetResource(reference);")
                 .CloseBrace()
                 ;
         }
@@ -55,7 +55,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public {FhirClassName} WriteItem(BreastRadiologyDocument doc)")
+                .AppendCode($"public {this.FhirClassName} WriteItem(BreastRadiologyDocument doc)")
                 .OpenBrace()
                 .AppendCode("return new ResourceReference")
                 .OpenBrace()
@@ -69,7 +69,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> references)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{this.FhirClassName}> references)")
                 .OpenBrace()
                 .AppendCode("IEnumerable<ResourceReference> resourceReferences = base.IsMember(doc,")
                 .AppendCode("    references,")
@@ -86,25 +86,25 @@ namespace FireFragger.CS.BuildMembers
                 ;
 
             this.readBlock
-                .AppendCode($"this.{PropertyName}.Read(this.Doc, items);")
+                .AppendCode($"this.{this.PropertyName}.Read(this.Doc, items);")
                 ;
         }
 
         protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
-               .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+               .AppendCode($"public IEnumerable<{this.FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
                .OpenBrace()
-               .AppendCode($"{FhirClassName} reference = item.WriteItem(doc);")
+               .AppendCode($"{this.FhirClassName} reference = item.WriteItem(doc);")
                .AppendCode($"yield return reference;")
                .CloseBrace()
                .CloseBrace()
                ;
 
             this.writeBlock
-                .AppendCode($"items.AddRange(this.{PropertyName}.Write(this.Doc));")
+                .AppendCode($"items.AddRange(this.{this.PropertyName}.Write(this.Doc));")
                 ;
         }
 
@@ -133,7 +133,7 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryClose()
                     .AppendCode($"private void ReadHasMembers(BreastRadiologyDocument doc)")
                     .OpenBrace()
-                    .AppendCode($"List<{FhirClassName}> items = this.Resource.GetValue<{FhirClassName}>(\"hasMember\").ToList();")
+                    .AppendCode($"List<{this.FhirClassName}> items = this.Resource.GetValue<{this.FhirClassName}>(\"hasMember\").ToList();")
                     .DefineBlock(out this.readBlock, readBlockName)
                     .CloseBrace()
 
@@ -143,7 +143,7 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryClose()
                     .AppendCode($"private void WriteHasMembers(BreastRadiologyDocument doc)")
                     .OpenBrace()
-                    .AppendCode($"List<{FhirClassName}> items = new List<{FhirClassName}>();")
+                    .AppendCode($"List<{this.FhirClassName}> items = new List<{this.FhirClassName}>();")
                     .DefineBlock(out this.writeBlock, writeBlockName)
                     .AppendCode($"this.Resource.SetValue(\"hasMember\", items);")
                     .CloseBrace()
@@ -195,7 +195,7 @@ namespace FireFragger.CS.BuildMembers
                 }
 
                 this.containerClassName = $"M{this.sliceName.ToMachineName()}";
-                this.itemElementGetName = (itemElementSetName.Count == 1) ? itemElementSetName [0] : "ResourceBase";
+                this.itemElementGetName = (this.itemElementSetName.Count == 1) ? this.itemElementSetName [0] : "ResourceBase";
                 base.BuildOne(memberSlice.ElementDefinition.ElementId, min, max);
             }
         }

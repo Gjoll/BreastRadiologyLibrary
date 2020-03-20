@@ -57,7 +57,7 @@ namespace BreastRadLib
 		/// </summary>
 		public MUSFinding USFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:381
 		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberElement.cs, Line 108
+		// Called from BuildMemberElement.cs, Line 129
 		// BuildMemberBase.cs:377
 		/// <summary>
 		/// BodySite
@@ -116,7 +116,7 @@ namespace BreastRadLib
 			this.NMFinding = new MNMFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
 			// Called from BuildMemberReferences.cs, Line 199
 			this.USFinding = new MUSFinding(0, 1);                                                                                                   // BuildMemberBase.cs:360
-			// Called from BuildMemberElement.cs, Line 108
+			// Called from BuildMemberElement.cs, Line 129
 			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
 			//- Constructor
 		}

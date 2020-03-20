@@ -24,17 +24,17 @@ namespace FireFragger.CS
         public ClassCodeBlocks CodeBlocks;
 
         public CodeBlockNested ClassProperties => this.CodeBlocks.ClassProperties;
-        public CodeBlockNested ClassConstructor => CodeBlocks.ClassConstructor;
-        public CodeBlockNested ClassMethods => CodeBlocks.ClassMethods;
-        public CodeBlockNested ClassValidateCodeStart => CodeBlocks.ClassValidateCodeStart;
-        public CodeBlockNested ClassValidateCode => CodeBlocks.ClassValidateCode;
-        public CodeBlockNested ClassWriteCode => CodeBlocks.ClassWriteCode;
-        public CodeBlockNested ClassReadCode => CodeBlocks.ClassReadCode;
+        public CodeBlockNested ClassConstructor => this.CodeBlocks.ClassConstructor;
+        public CodeBlockNested ClassMethods => this.CodeBlocks.ClassMethods;
+        public CodeBlockNested ClassValidateCodeStart => this.CodeBlocks.ClassValidateCodeStart;
+        public CodeBlockNested ClassValidateCode => this.CodeBlocks.ClassValidateCode;
+        public CodeBlockNested ClassWriteCode => this.CodeBlocks.ClassWriteCode;
+        public CodeBlockNested ClassReadCode => this.CodeBlocks.ClassReadCode;
 
-        public CodeBlockNested LocalClassDefs => CodeBlocks.LocalClassDefs;
+        public CodeBlockNested LocalClassDefs => this.CodeBlocks.LocalClassDefs;
 
-        public CodeBlockNested InterfaceProperties => CodeBlocks.InterfaceProperties;
-        public CodeBlockNested InterfaceMethods => CodeBlocks.InterfaceMethods;
+        public CodeBlockNested InterfaceProperties => this.CodeBlocks.InterfaceProperties;
+        public CodeBlockNested InterfaceMethods => this.CodeBlocks.InterfaceMethods;
 
         public String FhirBase => this.StructDef.BaseDefinition.LastUriPart();
 

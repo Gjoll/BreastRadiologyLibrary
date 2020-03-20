@@ -40,8 +40,8 @@ namespace FireFragger.CS.BuildMembers
         {
             base.BuildContainerClassLocal(itemCodeBlocks);
 
-            sectionCodeMethodName = $"SectionCode";
-            FhirConstruct.Construct(itemCodeBlocks.ClassMethods, sectionCode, sectionCodeMethodName, out String dummy);
+            this.sectionCodeMethodName = $"SectionCode";
+            FhirConstruct.Construct(itemCodeBlocks.ClassMethods, this.sectionCode, this.sectionCodeMethodName, out String dummy);
         }
 
         protected override void BuildItemRead(CodeBlockNested b)
@@ -49,7 +49,7 @@ namespace FireFragger.CS.BuildMembers
             b
                 .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)")
                 .OpenBrace()
-                .AppendCode($"this.Value = ({ElementGetName}) doc.GetResource(resourceReference);")
+                .AppendCode($"this.Value = ({this.ElementGetName}) doc.GetResource(resourceReference);")
                 .CloseBrace()
                 ;
         }
@@ -75,7 +75,7 @@ namespace FireFragger.CS.BuildMembers
                 .OpenBrace()
                 .AppendCode($"IEnumerable<Composition.SectionComponent> memberSections = base.IsMember(doc,")
                 .AppendCode($"    sections,")
-                .AppendCode($"    {sectionCodeMethodName}());")
+                .AppendCode($"    {this.sectionCodeMethodName}());")
                 .AppendCode($"List<Item> items = new List<Item>();")
                 .AppendCode($"// There really should only ever be one section...")
                 .AppendCode($"foreach (Composition.SectionComponent memberSection in memberSections)")
@@ -92,7 +92,7 @@ namespace FireFragger.CS.BuildMembers
                 ;
 
             this.readBlock
-                .AppendCode($"this.{PropertyName}.Read(this.Doc, items);")
+                .AppendCode($"this.{this.PropertyName}.Read(this.Doc, items);")
                 ;
         }
 
@@ -103,8 +103,8 @@ namespace FireFragger.CS.BuildMembers
                 .OpenBrace()
                 .AppendCode($"Composition.SectionComponent section = new Composition.SectionComponent")
                 .OpenBrace()
-                .AppendCode($"Title = \"{title}\",")
-                .AppendCode($"Code = {sectionCodeMethodName}()")
+                .AppendCode($"Title = \"{this.title}\",")
+                .AppendCode($"Code = {this.sectionCodeMethodName}()")
                 .CloseBrace(";")
                 .AppendCode($"foreach (Item item in this.GetAllItems())")
                 .OpenBrace()
@@ -115,7 +115,7 @@ namespace FireFragger.CS.BuildMembers
                ;
 
             this.writeBlock
-                .AppendCode($"items.AddRange(this.{PropertyName}.Write(this.Doc));")
+                .AppendCode($"items.AddRange(this.{this.PropertyName}.Write(this.Doc));")
                 ;
         }
 
@@ -144,7 +144,7 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryClose()
                     .AppendCode($"private void ReadSections(BreastRadiologyDocument doc)")
                     .OpenBrace()
-                    .AppendCode($"List<{FhirClassName}> items = this.Resource.GetValue<{FhirClassName}>(\"{this.fhirName}\").ToList();")
+                    .AppendCode($"List<{this.FhirClassName}> items = this.Resource.GetValue<{this.FhirClassName}>(\"{this.fhirName}\").ToList();")
                     .DefineBlock(out this.readBlock, readBlockName)
                     .CloseBrace()
 
@@ -154,7 +154,7 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryClose()
                     .AppendCode($"private void WriteSections(BreastRadiologyDocument doc)")
                     .OpenBrace()
-                    .AppendCode($"List<{FhirClassName}> items = new List<{FhirClassName}>();")
+                    .AppendCode($"List<{this.FhirClassName}> items = new List<{this.FhirClassName}>();")
                     .DefineBlock(out this.writeBlock, writeBlockName)
                     .AppendCode($"this.Resource.SetValue(\"{this.fhirName}\", items);")
                     .CloseBrace()
@@ -194,10 +194,10 @@ namespace FireFragger.CS.BuildMembers
                 ElementTreeNode titleNode = memberSlice.Nodes.GetItem("title");
                 ElementTreeNode codeNode = memberSlice.Nodes.GetItem("code");
 
-                sectionCode = (CodeableConcept)codeNode.ElementDefinition.Fixed;
-                if (sectionCode == null)
-                    sectionCode = (CodeableConcept)codeNode.ElementDefinition.Pattern;
-                if (sectionCode == null)
+                this.sectionCode = (CodeableConcept)codeNode.ElementDefinition.Fixed;
+                if (this.sectionCode == null)
+                    this.sectionCode = (CodeableConcept)codeNode.ElementDefinition.Pattern;
+                if (this.sectionCode == null)
                     throw new Exception("Missing section.code fixed value");
 
                 this.title = ((FhirString)titleNode.ElementDefinition?.Fixed)?.Value;
@@ -207,22 +207,22 @@ namespace FireFragger.CS.BuildMembers
                 ElementDefinition entryDef = entryNode.ElementDefinition;
                 Int32 max = CSMisc.ToMax(entryDef.Max);
                 Int32 min = entryDef.Min.Value;
-                String propertyName = sliceName.ToMachineName();
+                String propertyName = this.sliceName.ToMachineName();
 
                 if (entryDef.Type.Count != 1)
-                    throw new Exception($"Error processing slice {sliceName}. Expected single type. Got {entryDef.Type.Count}");
+                    throw new Exception($"Error processing slice {this.sliceName}. Expected single type. Got {entryDef.Type.Count}");
                 if (entryDef.Type[0].Code != "Reference")
-                    throw new Exception($"Error processing slice {sliceName}. Expected type Section. Got {entryDef.Type[0].Code}");
+                    throw new Exception($"Error processing slice {this.sliceName}. Expected type Section. Got {entryDef.Type[0].Code}");
 
                 this.itemElementSetName.Clear();
                 foreach (String profile in entryDef.Type[0].TargetProfile)
                 {
                     String propertyClassName = CSMisc.ResourceClassName(profile);
-                    itemElementSetName.Add(propertyClassName);
+                    this.itemElementSetName.Add(propertyClassName);
                 }
 
                 this.containerClassName = $"M{this.sliceName.ToMachineName()}";
-                this.itemElementGetName = (itemElementSetName.Count == 1) ? itemElementSetName[0] : "ResourceBase";
+                this.itemElementGetName = (this.itemElementSetName.Count == 1) ? this.itemElementSetName[0] : "ResourceBase";
                 base.BuildOne(memberDef.ElementId, min, max);
             }
         }
@@ -233,7 +233,7 @@ namespace FireFragger.CS.BuildMembers
             base(defineBase, codeBlocks)
         {
             this.memberNode = sectionNode;
-            this.fhirName = memberNode.ElementDefinition.Path.LastPathPart();
+            this.fhirName = this.memberNode.ElementDefinition.Path.LastPathPart();
         }
     }
 }

@@ -172,7 +172,7 @@ namespace FireFragger.CS
             String[] pathElements = elementDefinition.Path.Split('.').ToArray();
             if (pathElements.Length != 2)
                 return;
-            String methodName = DefineFixed(elementDefinition.ElementId, defaultValueElement);
+            String methodName = this.DefineFixed(elementDefinition.ElementId, defaultValueElement);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;

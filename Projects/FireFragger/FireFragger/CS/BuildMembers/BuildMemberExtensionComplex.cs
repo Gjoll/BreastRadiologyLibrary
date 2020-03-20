@@ -30,7 +30,7 @@ namespace FireFragger.CS.BuildMembers
         {
             base.BuildContainerClassLocal(itemCodeBlocks);
 
-            ElementTreeNode urlNode = extensionSlice.Nodes["url"];
+            ElementTreeNode urlNode = this.extensionSlice.Nodes["url"];
             String extensionUrl = ((FhirUri)urlNode.ElementDefinition.Fixed).Value;
             itemCodeBlocks.ClassProperties
                 .AppendCode($"public const String ExtensionUrl = \"{extensionUrl}\";")
@@ -41,7 +41,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {FhirClassName} extension)")
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} extension)")
                 .OpenBrace()
                 .AppendCode("this.Value = new Members();")
                 .AppendCode("this.Value.ReadMember(doc, extension);")
@@ -65,7 +65,7 @@ namespace FireFragger.CS.BuildMembers
         {
             b
                 .BlankLine()
-                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{FhirClassName}> extensions)")
+                .AppendCode($"public void Read(BreastRadiologyDocument doc, IEnumerable<{this.FhirClassName}> extensions)")
                 .OpenBrace()
                 .DefineBlock(out this.itemCodeBlocks.ClassReadCode)
                 .AppendCode($"IEnumerable<Extension> memberExtensions = base.IsMember(doc,")
@@ -90,7 +90,7 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildContainerWrite(CodeBlockNested b)
         {
             b
-               .AppendCode($"public IEnumerable<{FhirClassName}> Write(BreastRadiologyDocument doc)")
+               .AppendCode($"public IEnumerable<{this.FhirClassName}> Write(BreastRadiologyDocument doc)")
                .OpenBrace()
                .AppendCode($"foreach (Item item in this.GetAllItems())")
                .AppendCode($"    yield return item.WriteItem(doc);")
@@ -111,7 +111,7 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Extension class for {this.extensionName}.")
                 .SummaryClose()
-                .AppendCode($"public class {ElementGetName}")
+                .AppendCode($"public class {this.ElementGetName}")
                 .OpenBrace()
                 .AppendCode($"// Definitions")
                 .DefineBlock(out itemClassBlocks.LocalClassDefs)
@@ -121,7 +121,7 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
-                .AppendCode($"public {ElementGetName}()")
+                .AppendCode($"public {this.ElementGetName}()")
                 .OpenBrace()
                 .DefineBlock(out itemClassBlocks.ClassConstructor)
                 .CloseBrace()
@@ -138,7 +138,7 @@ namespace FireFragger.CS.BuildMembers
                 .OpenBrace()
                 .AppendCode($"List<Extension> items = new List<Extension>();")
                 .DefineBlock(out itemClassBlocks.ClassWriteCode)
-                .AppendCode($"return new {FhirClassName}")
+                .AppendCode($"return new {this.FhirClassName}")
                 .OpenBrace()
                 .AppendCode($"Url = ExtensionUrl,")
                 .AppendCode($"Extension = items")
@@ -185,7 +185,7 @@ namespace FireFragger.CS.BuildMembers
         {
             Int32 max = CSMisc.ToMax(this.extensionSlice.ElementDefinition.Max);
             Int32 min = this.extensionSlice.ElementDefinition.Min.Value;
-            base.BuildOne(extensionName, min, max);
+            base.BuildOne(this.extensionName, min, max);
             this.BuildExtensionItemClass();
         }
 
