@@ -16,7 +16,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 {
 	//+ LocalClassDefs
 	#region BodyDistanceFromExtension Container Class                                                                                          // BuildMemberBase.cs:158
-	// Called from BuildMemberExtensionComplex.cs, Line 188
+	// Called from BuildMemberExtensionComplex.cs, Line 189
 	// BuildMemberBase.cs:160
 	/// <summary>
 	/// Container class for BodyDistanceFromExtension.
@@ -24,7 +24,7 @@ namespace BreastRadLib.BodyDistanceFromExtensionLocal
 	public class MBodyDistanceFromExtension : MContainer, ITMItem<Extension>                                                                   // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region BodyDistanceFromExtension Item Class                                                                                           // BuildMemberBase.cs:75
-	    // Called from BuildMemberExtensionComplex.cs, Line 188
+	    // Called from BuildMemberExtensionComplex.cs, Line 189
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for BodyDistanceFromExtension.

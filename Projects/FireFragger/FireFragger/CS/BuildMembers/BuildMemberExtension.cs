@@ -72,6 +72,30 @@ namespace FireFragger.CS.BuildMembers
                 return;
             }
 
+            String extensionClass = CSMisc.ClassName(extensionUrl.LastUriPart());
+            String propertyName = this.extensionSlice.ElementDefinition.SliceName.ToMachineName();
+
+            this.codeBlocks.LocalUsings
+                .AppendUniqueLine($"using {CSMisc.LocalClassNameSpace(extensionClass)}")
+                ;
+            this.codeBlocks.ClassProperties
+                .AppendCode($"M{extensionClass} {propertyName};")
+                ;
+
+            Int32 min = this.extensionSlice.ElementDefinition.Min.Value;
+            Int32 max = this.extensionSlice.ElementDefinition.Max.ToMax();
+            this.codeBlocks.ClassConstructor
+                .AppendCode($"this.{propertyName} = new M{extensionClass}({min}, {max});")
+                ;
+
+            this.codeBlocks.ClassWriteCode
+                .AppendCode($"items.AddRange(this.{propertyName}.Write(doc));")
+                ;
+
+            this.codeBlocks.ClassReadCode
+                .AppendCode($"this.{propertyName}.Read(doc, extensions);")
+                ;
+
         }
 
         /// <summary>

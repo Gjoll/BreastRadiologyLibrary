@@ -10,13 +10,14 @@ using BreastRadLib;
 using BreastRadLib.ExtensionLocal;
 
 //+Usings
+using BreastRadLib.BodyDistanceFromExtensionLocal;
 //-Usings
 
 namespace BreastRadLib.BreastBodyLocationExtensionLocal
 {
 	//+ LocalClassDefs
 	#region BreastBodyLocationExtension Container Class                                                                                        // BuildMemberBase.cs:158
-	// Called from BuildMemberExtensionComplex.cs, Line 188
+	// Called from BuildMemberExtensionComplex.cs, Line 189
 	// BuildMemberBase.cs:160
 	/// <summary>
 	/// Container class for BreastBodyLocationExtension.
@@ -24,7 +25,7 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	public class MBreastBodyLocationExtension : MContainer, ITMItem<Extension>                                                                 // BuildMemberBase.cs:163
 	{                                                                                                                                          // BuildMemberBase.cs:164
 	    #region BreastBodyLocationExtension Item Class                                                                                         // BuildMemberBase.cs:75
-	    // Called from BuildMemberExtensionComplex.cs, Line 188
+	    // Called from BuildMemberExtensionComplex.cs, Line 189
 	    // BuildMemberBase.cs:77
 	    /// <summary>
 	    /// Item class for BreastBodyLocationExtension.
@@ -768,6 +769,9 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	        /// Access fhir element 'Extension.extension:depth'
 	        /// </summary>
 	        public MDepth Depth { get ; protected set; }                                                                                       // BuildMemberBase.cs:381
+	        MBodyDistanceFromExtension DistanceFromNipple;                                                                                     // BuildMemberExtension.cs:82
+	        MBodyDistanceFromExtension DistanceFromChestWall;                                                                                  // BuildMemberExtension.cs:82
+	        MBodyDistanceFromExtension DistanceFromSkin;                                                                                       // BuildMemberExtension.cs:82
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:120
 	        // BuildMemberExtensionComplex.cs:121
 	        /// <summary>
@@ -783,6 +787,9 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	            this.ClockDirection = new MClockDirection(0, 1);                                                                               // BuildMemberBase.cs:360
 	            // Called from BuildMemberExtensionSimple.cs, Line 121
 	            this.Depth = new MDepth(0, 1);                                                                                                 // BuildMemberBase.cs:360
+	            this.DistanceFromNipple = new MBodyDistanceFromExtension(0, 1);                                                                // BuildMemberExtension.cs:88
+	            this.DistanceFromChestWall = new MBodyDistanceFromExtension(0, 1);                                                             // BuildMemberExtension.cs:88
+	            this.DistanceFromSkin = new MBodyDistanceFromExtension(0, 1);                                                                  // BuildMemberExtension.cs:88
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:127
 	                                                                                                                                           // BuildMemberExtensionComplex.cs:129
 	        // Methods                                                                                                                         // BuildMemberExtensionComplex.cs:130
@@ -798,6 +805,9 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	            items.AddRange(this.Region.Write(doc));                                                                                        // BuildMemberExtensionSimple.cs:106
 	            items.AddRange(this.ClockDirection.Write(doc));                                                                                // BuildMemberExtensionSimple.cs:106
 	            items.AddRange(this.Depth.Write(doc));                                                                                         // BuildMemberExtensionSimple.cs:106
+	            items.AddRange(this.DistanceFromNipple.Write(doc));                                                                            // BuildMemberExtension.cs:92
+	            items.AddRange(this.DistanceFromChestWall.Write(doc));                                                                         // BuildMemberExtension.cs:92
+	            items.AddRange(this.DistanceFromSkin.Write(doc));                                                                              // BuildMemberExtension.cs:92
 	            return new Extension                                                                                                           // BuildMemberExtensionComplex.cs:141
 	            {                                                                                                                              // BuildMemberExtensionComplex.cs:142
 	                Url = ExtensionUrl,                                                                                                        // BuildMemberExtensionComplex.cs:143
@@ -818,6 +828,9 @@ namespace BreastRadLib.BreastBodyLocationExtensionLocal
 	            this.Region.Read(doc, extensions);                                                                                             // BuildMemberExtensionSimple.cs:91
 	            this.ClockDirection.Read(doc, extensions);                                                                                     // BuildMemberExtensionSimple.cs:91
 	            this.Depth.Read(doc, extensions);                                                                                              // BuildMemberExtensionSimple.cs:91
+	            this.DistanceFromNipple.Read(doc, extensions);                                                                                 // BuildMemberExtension.cs:96
+	            this.DistanceFromChestWall.Read(doc, extensions);                                                                              // BuildMemberExtension.cs:96
+	            this.DistanceFromSkin.Read(doc, extensions);                                                                                   // BuildMemberExtension.cs:96
 	        }                                                                                                                                  // BuildMemberExtensionComplex.cs:158
 	    }                                                                                                                                      // BuildMemberExtensionComplex.cs:160
 	    #endregion                                                                                                                             // BuildMemberExtensionComplex.cs:161

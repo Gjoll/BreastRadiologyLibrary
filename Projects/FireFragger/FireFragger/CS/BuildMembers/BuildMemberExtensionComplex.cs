@@ -164,6 +164,7 @@ namespace FireFragger.CS.BuildMembers
             ElementTreeNode extension = this.extensionSlice.Nodes.GetItem("extension");
             foreach (var extensionSlice in extension.Slices.Skip(1))
             {
+                itemClassBlocks.LocalUsings = this.codeBlocks.LocalUsings;
                 BuildMemberExtension bm = new BuildMemberExtension(this.defineBase,
                     itemClassBlocks,
                     extensionSlice,
