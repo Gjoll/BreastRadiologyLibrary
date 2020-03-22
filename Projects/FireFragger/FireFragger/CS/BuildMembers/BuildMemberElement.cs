@@ -37,23 +37,16 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} element)")
-                .OpenBrace()
-                .AppendCode("this.Value = element;")
-                .CloseBrace()
+                .AppendCode("this.Value = item;")
+                .AppendCode("List<Extension> extensionList = item.Extension;")
                 ;
         }
 
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public {this.FhirClassName} WriteItem(BreastRadiologyDocument doc)")
-                .OpenBrace()
                 .AppendCode($"{this.FhirClassName} retVal = this.Value;")
-                .AppendCode($"return retVal;")
-                .CloseBrace()
+                .AppendCode($"List<Extension> extensionList = retVal.Extension;")
                 ;
         }
 
@@ -96,11 +89,12 @@ namespace FireFragger.CS.BuildMembers
 
         void BuildExtension(ElementTreeSlice extensionSlice)
         {
-            //$BuildMemberExtension bme = new BuildMemberExtension(this.defineBase,
-            //$    this.itemCodeBlocks,
-            //$    extensionSlice,
-            //$    extensionSlice.ElementDefinition.SliceName.ToMachineName());
-            //$bme.Build();
+            this.itemCodeBlocks.LocalUsings = this.codeBlocks.LocalUsings;
+            BuildMemberExtension bme = new BuildMemberExtension(this.defineBase,
+                this.itemCodeBlocks,
+                extensionSlice,
+                extensionSlice.ElementDefinition.SliceName.ToMachineName());
+            bme.Build();
         }
 
         void BuildExtensions()

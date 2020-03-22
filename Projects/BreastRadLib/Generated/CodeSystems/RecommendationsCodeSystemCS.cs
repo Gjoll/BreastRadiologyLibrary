@@ -19,6 +19,7 @@ namespace BreastRadLib
 		/// a 3-dimensional picture of the breast.
 		/// Also called breast tomosynthesis.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_3DImaging = new Coding(System, "3DImaging", "3D Imaging");                                                      // Builder.cs:408
@@ -27,6 +28,7 @@ namespace BreastRadLib
 		/// Advanced Technology that takes multiple images, or X-rays, of breast tissue to recreate
 		/// a 3-dimensional picture of the breast.
 		/// Cranial-Caudal (CC) is a 3D view from above the breast.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -37,6 +39,7 @@ namespace BreastRadLib
 		/// a 3-dimensional picture of the breast.
 		/// Lateral-medial (LM) is
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_3DSpotLM = new Coding(System, "3DSpotLM", "3D spot LM");                                                        // Builder.cs:408
@@ -45,6 +48,7 @@ namespace BreastRadLib
 		/// Advanced Technology that takes multiple images, or X-rays, of breast tissue to recreate
 		/// a 3-dimensional picture of the breast.
 		/// Mediolateral (ML) is
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -55,6 +59,7 @@ namespace BreastRadLib
 		/// a 3-dimensional picture of the breast.
 		/// Mediolateral-oblique (MLO) is
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_3DSpotMLO = new Coding(System, "3DSpotMLO", "3D spot MLO");                                                     // Builder.cs:408
@@ -63,12 +68,14 @@ namespace BreastRadLib
 		/// Additional views in Mammography, MRI and US, help increase the chances of finding
 		/// any possible tumors in the breast.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_AdditionalViews = new Coding(System, "AdditionalViews", "Additional views");                                    // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Additional views in a Mammogram, MRI or Ultrasound are recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -84,6 +91,7 @@ namespace BreastRadLib
 		/// of the breast including the axillary tail, as well the pectoral muscle and the nipple
 		/// in profile.
 		/// [https://radiopaedia.org/articles/axillary-view?lang=us]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_AxillaView = new Coding(System, "AxillaView", "Axilla view");                                                   // Builder.cs:408
@@ -95,6 +103,7 @@ namespace BreastRadLib
 		/// It passes into the axilla through an opening in the deep fascia called foramen of
 		/// Langer.
 		/// [https://en.wikipedia.org/wiki/Tail_of_Spence]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_AxillaryTailView = new Coding(System, "AxillaryTailView", "Axillary tail view");                                // Builder.cs:408
@@ -104,12 +113,14 @@ namespace BreastRadLib
 		/// An examination under a microscope  of the specific tissue removed from the body.
 		/// The examination is used to check for abnormalities or cancer cells.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Based on the clinical exam, a biopsy is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -126,6 +137,7 @@ namespace BreastRadLib
 		/// the possibility to flatten it properly, reducing the formation of scar folds as well
 		/// artifacts from false parenchymal distortion.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_CaudocranialView = new Coding(System, "CaudocranialView", "Caudocranial view");                                 // Builder.cs:408
@@ -133,12 +145,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// The recommendation is for a CC with compression view to be completed on an Ultrasound and/or Mammogram.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_CCWithCompressionView = new Coding(System, "CCWithCompressionView", "CC with compression view");                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The recommendation is for a CC with magnification view to be completed on an Ultrasound and/or Mammogram.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -151,12 +165,14 @@ namespace BreastRadLib
 		/// To get as much central tissue as possible, the mammogram technologist will place
 		/// both breasts on the plate at the same time to image the medial half of both breasts.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_CleavageView = new Coding(System, "CleavageView", "Cleavage view");                                             // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A clinical consultation is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -165,6 +181,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The recommendation is for a clinicial correlation and/or comparison to be completed.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_ClinicalCorrelation = new Coding(System, "ClinicalCorrelation", "Clinical correlation");                        // Builder.cs:408
@@ -172,12 +189,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// The recommendation is for a clinical follow-up to be completed.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_ClinicalFollowUp = new Coding(System, "ClinicalFollow-up", "Clinical follow-up");                               // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The recommendation is for a compare to prior exams to be completed.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -191,6 +210,7 @@ namespace BreastRadLib
 		/// This results in better tissue separation and allows better visualization of the area
 		/// of the breast needing additional examination.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_CompressionViews = new Coding(System, "CompressionViews", "Compression views");                                 // Builder.cs:408
@@ -200,6 +220,7 @@ namespace BreastRadLib
 		/// and/or ultrasound.
 		/// Spot views apply the compression to a smaller area of tissue using a small compression
 		/// plate or &quot;cone&quot;.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -211,12 +232,14 @@ namespace BreastRadLib
 		/// from a mass or lump.
 		/// The tissue is then examined under a microscope for any abnormalities.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_CoreBiopsy = new Coding(System, "CoreBiopsy", "Core Biopsy");                                                   // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Cranial-Caudal (CC) is a view from above the breast during a mammogram or ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -229,6 +252,7 @@ namespace BreastRadLib
 		/// It may be used to treat a variety of skin conditions as well as tumors within the
 		/// liver, kidneys, bones, lungs and breasts.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Cryoablation = new Coding(System, "Cryoablation", "Cryoablation");                                              // Builder.cs:408
@@ -239,6 +263,7 @@ namespace BreastRadLib
 		/// Aspirating the fluid from a cyst may alleviate symptoms or discomfort.
 		/// In some cases, specimens are sent to pathology.
 		/// [www.carolmilgardbreastcenter.org &gt; Cyst_Aspiration]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_CystAspiration = new Coding(System, "CystAspiration", "Cyst aspiration");                                       // Builder.cs:408
@@ -247,6 +272,7 @@ namespace BreastRadLib
 		/// One way to get relief from the pain of a cyst is to remove fluid from
 		/// the cyst, thereby decreasing the pressure.
 		/// This is called aspiration for relief.
+		/// 
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
@@ -257,6 +283,7 @@ namespace BreastRadLib
 		/// In fine needle aspiration, a thin needle is inserted into an area of abnormal-appearing
 		/// tissue or body fluid.
 		/// [https://www.webmd.com &gt; a-to-z-guides &gt; fine-needle-aspiration]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_DiagnosticAspiration = new Coding(System, "DiagnosticAspiration", "Diagnostic aspiration");                     // Builder.cs:408
@@ -267,6 +294,7 @@ namespace BreastRadLib
 		/// signs of breast cancer alert the physician to check the tissue.These signs may include
 		/// a lump or breast pain.
 		/// [https://www.nationalbreastcancer.org/diagnostic-mammogram]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_DiagnosticMammogram = new Coding(System, "DiagnosticMammogram", "Diagnostic Mammogram");                        // Builder.cs:408
@@ -276,6 +304,7 @@ namespace BreastRadLib
 		/// A drainage tube is a tube used to remove pus, blood or other fluids from a wound.
 		/// This is a common practice by surgeons or interventional radiologists.
 		/// [https://en.wikipedia.org/wiki/Drain_(surgery)]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_DrainageTube = new Coding(System, "DrainageTube", "Drainage tube");                                             // Builder.cs:408
@@ -289,6 +318,7 @@ namespace BreastRadLib
 		/// Ductography can aid in diagnosing the cause of an abnormal nipple discharge and is
 		/// valuable in diagnosing intraductal papillomas and other conditions.
 		/// [https://www.imaginis.com/mammography/ductogram-galactogram-imaging-the-breast-ducts]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Ductography = new Coding(System, "Ductography", "Ductography");                                                 // Builder.cs:408
@@ -309,6 +339,7 @@ namespace BreastRadLib
 		/// An optimal XCCM view requires the most medial portion of the breast and the nipple
 		/// in profile to be clearly displayed.
 		/// [https://radiopaedia.org/articles/xccl-view?lang=us]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_ExaggeratedCCViews = new Coding(System, "ExaggeratedCCViews", "Exaggerated CC views");                          // Builder.cs:408
@@ -320,12 +351,14 @@ namespace BreastRadLib
 		/// As with other types of biopsies, the sample collected during fine needle aspiration
 		/// can help make a diagnosis or rule out conditions such as cancer.
 		/// [https://www.webmd.com/a-to-z-guides/fine-needle-aspiration#1]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_FNABiopsy = new Coding(System, "FNABiopsy", "FNA biopsy");                                                      // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// It is recommended to make a follow-up appointment.
+		/// 
 		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
@@ -334,12 +367,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// It is recommended to make a follow-up appointment in 3 months.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Followup3Months = new Coding(System, "Followup3Months", "Followup 3 months");                                   // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// It is recommended to make a follow-up appointment in 6 months.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -348,12 +383,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// The recommendation is for a if previous show no change to be completed.
 		/// 
+		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_IfPreviousShowNoChange = new Coding(System, "IfPreviousShowNoChange", "If previous show no change");            // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The recommendation is for a Lateral magnification view to be completed on Mammogram and/or Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -363,6 +400,7 @@ namespace BreastRadLib
 		/// There are different views of the breast in mammography.
 		/// For the LM view, the tube is lateral and the detector is placed medially
 		/// LM view is best for evaluating medial lesions.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -374,12 +412,14 @@ namespace BreastRadLib
 		/// A lateral view may be obtained as a mediolateral view (ML) or lateromedial view (LM)
 		/// view depending on where the imaging tube and detector are located.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_LateralView = new Coding(System, "LateralView", "Lateral view");                                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The recommendation is for a Lateral with compression view to be completed on Mammogram.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -388,12 +428,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// The recommendation is for a lateromedial oblique view to be completed on Mammogram and/or Ultrasound.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_LateromedialOblique = new Coding(System, "LateromedialOblique", "Lateromedial oblique");                        // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The recommendation is for a lateromedial view to be completed on Mammogram and/or Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -405,6 +447,7 @@ namespace BreastRadLib
 		/// a malignant or inflammatory process and the localization or generalization of that
 		/// process.
 		/// [https://stanfordmedicine25.stanford.edu/the25/lymph.html]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_LymphNodeAssessment = new Coding(System, "LymphNodeAssessment", "Lymph node assessment");                       // Builder.cs:408
@@ -417,6 +460,7 @@ namespace BreastRadLib
 		/// This allows the acquisition of magnified images (1.5x to 2x magnification) of the
 		/// region of interest.&#160;radiopaedia.org &gt; articles &gt; magnification-view-mammography
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_MagnificationViews = new Coding(System, "MagnificationViews", "Magnification views");                           // Builder.cs:408
@@ -425,12 +469,14 @@ namespace BreastRadLib
 		/// An X-Ray picture of the breast.
 		/// It&#39;s used to look for early signs of breast cancer.
 		/// 
+		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_Mammogram = new Coding(System, "Mammogram", "Mammogram");                                                       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A three month follow-up is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -439,12 +485,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A six month follow-up is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Mammogram6MonthFollowUp = new Coding(System, "Mammogram6MonthFollow-up", "Mammogram 6 month follow-up");        // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A three month follow-up with ultrasound is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -453,12 +501,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A six month follow-up with ultrasound is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MammogramAndUltrasound6MonthFollowUp = new Coding(System, "MammogramAndUltrasound6MonthFollow-up", "Mammogram and ultrasound 6 month follow-up");// Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A mediolateral oblique view is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -467,12 +517,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A mediolateral view is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_MediolateralView = new Coding(System, "MediolateralView", "Mediolateral view");                                 // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An additional MLO with compression view of the breast is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -481,12 +533,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// An additional MLO with magnification view of the breast is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MLOWithMagnificationView = new Coding(System, "MLOWithMagnificationView", "MLO with magnification view");       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An MRI is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -495,6 +549,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// An MRI with biopsy is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_MRIBiopsy = new Coding(System, "MRIBiopsy", "MRI biopsy");                                                      // Builder.cs:408
@@ -502,12 +557,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// An MRI follow-up is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MRI NM.
 		/// </summary>
 		public static Coding Code_MRIFollowUp = new Coding(System, "MRIFollow-up", "MRI follow-up");                                              // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A Needle localization and surgical biopsy is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -518,6 +575,7 @@ namespace BreastRadLib
 		/// inframammary fold and includes the pectoralis muscle extending down to the posterior
 		/// nipple line (an oblique line drawn straight back from the nipple.)
 		/// [https://www.mammoguide.com/mammo-techniques.html]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_NippleInProfileView = new Coding(System, "NippleInProfileView", "Nipple in profile view");                      // Builder.cs:408
@@ -525,12 +583,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// An additional off angle CC view of the breast is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_OffAngleCCView = new Coding(System, "OffAngleCCView", "Off angle CC view");                                     // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An additional off angle MLO  view of the breast is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -544,6 +604,7 @@ namespace BreastRadLib
 		/// an excellent way to evaluate calcium deposits or tiny masses that are not visible
 		/// on ultrasound.
 		/// [https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_PossStereotacticBx = new Coding(System, "Poss.StereotacticBx", "Poss. Stereotactic Bx");                        // Builder.cs:408
@@ -557,12 +618,14 @@ namespace BreastRadLib
 		/// A small cylinder (core) of tissue is taken out in the needle.
 		/// Several cores are often removed.
 		/// [https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/breast-biopsy/core-needle-biopsy-of-the-breast.html]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_PossibleCoreBiopsy = new Coding(System, "PossibleCoreBiopsy", "Possible core biopsy");                          // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A possible diagnostic mammogram is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -574,12 +637,14 @@ namespace BreastRadLib
 		/// a hollow needle, which is precisely guided to the correct location using x-rays and
 		/// computer generated coordinates of the concerning area of breast tissue.
 		/// [https://www.genesishealth.com/care-treatment/cancer/treat/breast/diagnosis/sterotactic_vacuum/]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_PossibleStereotacticVacuumBiopsy = new Coding(System, "PossibleStereotacticVacuumBiopsy", "Possible stereotactic vacuum biopsy");// Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A possible surgical consultation may be recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
@@ -588,12 +653,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A possible surgical evaluation is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_PossibleSurgicalEvaluation = new Coding(System, "PossibleSurgicalEvaluation", "Possible surgical evaluation");  // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A possible ultrasound is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -602,12 +669,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A possible ultrasound guided biopsy is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_PossibleUltrasoundGuidedBiopsy = new Coding(System, "PossibleUltrasoundGuidedBiopsy", "Possible ultrasound guided biopsy");// Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A possible vacuum biopsy is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -616,12 +685,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Another CC view of Mammogram is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_RepeatCCView = new Coding(System, "RepeatCCView", "Repeat CC view");                                            // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Another MLO view of Mammogram is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -639,12 +710,14 @@ namespace BreastRadLib
 		/// is rotated medially or laterally around the axis of the nipple prior to applying
 		/// compression.
 		/// [https://radiopaedia.org/articles/rolled-cc-view-1?lang=us]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_RolledLateralView = new Coding(System, "RolledLateralView", "Rolled lateral view");                             // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A rolled medial view is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -657,6 +730,7 @@ namespace BreastRadLib
 		/// 
 		/// This helps to guide the radiologist&#39;s biopsy equipment to the site of the imaging abnormality.
 		/// [https://www.radiologyinfo.org/en/info.cfm?pg=breastbixr]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_ScintimammogramGuidedBiopsy = new Coding(System, "ScintimammogramGuidedBiopsy", "Scintimammogram Guided Biopsy");// Builder.cs:408
@@ -672,6 +746,7 @@ namespace BreastRadLib
 		/// are present.
 		/// It can reduce unnecessary procedures by helping determine whether a biopsy is needed.
 		/// [https://www.radiologyinfo.org/en/info.cfm?pg=scintimammo]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Scintimammography = new Coding(System, "Scintimammography", "Scintimammography");                               // Builder.cs:408
@@ -688,6 +763,7 @@ namespace BreastRadLib
 		/// tissues, as well to better show the borders of an abnormality or questionable area
 		/// or a little cluster of faint microcalcifications in a dense area.
 		/// [https://radiopaedia.org/articles/spot-view-mammography?lang=us]
+		/// 
 		/// Valid for the following modalities: MG US NM.
 		/// </summary>
 		public static Coding Code_SpotCompression = new Coding(System, "SpotCompression", "Spot compression");                                    // Builder.cs:408
@@ -695,12 +771,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Spot magnification views are recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_SpotMagnificationViews = new Coding(System, "SpotMagnificationViews", "Spot magnification views");              // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A stereotactic biopsy is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
@@ -711,6 +789,7 @@ namespace BreastRadLib
 		/// The view of the upper outer quadrant of the breast.
 		/// This is the quadrant of the breast that is closest to the armpit.
 		/// There are 4 quadrants in the anatomy of a breast.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -724,12 +803,14 @@ namespace BreastRadLib
 		/// Surgical biopsies can be excisional (removal of an entire lump or abnormal area)
 		/// or incisional (removal of a piece of a lump or abnormal area).
 		/// [https://www.cancer.ca/en/cancer-information/diagnosis-and-treatment/tests-and-procedures/surgical-biopsy/?region=on]
+		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_SurgicalBiopsy = new Coding(System, "SurgicalBiopsy", "Surgical biopsy");                                       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A surgical consult is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
@@ -738,12 +819,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A surgical consult and biopsy is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SurgicalConsultAndBiopsy = new Coding(System, "SurgicalConsultAndBiopsy", "Surgical consult and biopsy");       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The recommendation is for a surgical evaluation.
+		/// 
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
@@ -752,12 +835,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// The recommendation is for a surgical excision.
 		/// 
+		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
 		public static Coding Code_SurgicalExcision = new Coding(System, "SurgicalExcision", "Surgical excision");                                 // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The recommendation is for a surgical oncologic evaluation.
+		/// 
 		/// 
 		/// Valid for the following modalities: NM.
 		/// </summary>
@@ -766,12 +851,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// The recommendation is for a surgical oncologic consult.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_SurgicalOncologicalConsult = new Coding(System, "SurgicalOncologicalConsult", "Surgical oncological consult");  // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A tangential view is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -780,12 +867,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Tangential views are recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_TangentialViews = new Coding(System, "TangentialViews", "Tangential views");                                    // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An ultrasound is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG MRI NM.
 		/// </summary>
@@ -794,12 +883,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// An additional ultrasound is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_Ultrasound2ndLook = new Coding(System, "Ultrasound2ndLook", "Ultrasound 2nd Look");                             // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An additional ultrasound is recommended in a 3 month follow-up.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -808,12 +899,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// An additional ultrasound is recommended in a 3 month follow-up.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Ultrasound6MonthFollowUp = new Coding(System, "Ultrasound6MonthFollow-up", "Ultrasound 6 month follow-up");     // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An ultrasound guided biopsy is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
@@ -822,12 +915,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// An ultrasound localized and surgical biopsy is recommended.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_UltrasoundLocationAndSurgicalBiopsy = new Coding(System, "UltrasoundLocationAndSurgicalBiopsy", "Ultrasound location and surgical biopsy");// Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An ultrasound with possible additional views are recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -836,12 +931,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Unspecified / other
 		/// 
+		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_UnspecifiedOther = new Coding(System, "Unspecified/Other", "Unspecified / other");                              // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A vacuum biopsy is recommended.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

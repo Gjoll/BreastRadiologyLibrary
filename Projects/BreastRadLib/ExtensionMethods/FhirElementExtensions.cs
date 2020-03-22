@@ -44,7 +44,10 @@ namespace BreastRadLib
             }
             else
             {
-                return new T[] { (T)pi.GetValue(fhirElement) };
+                T value = (T) pi.GetValue(fhirElement);
+                if (value == null)
+                    return new T[0];
+                return new T[] { value };
             }
         }
 

@@ -18,6 +18,7 @@ namespace BreastRadLib
 		/// A medical procedure that removes something from an area of the body.
 		/// These substances can be air, body fluids, or bone fragments.
 		/// [https://medlineplus.gov/ency/article/002216.htm]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Aspiration = new Coding(System, "Aspiration", "Aspiration");                                                    // Builder.cs:408
@@ -26,6 +27,7 @@ namespace BreastRadLib
 		/// An examination under a microscope  of the specific tissue removed from the body.
 		/// The examination is used to check for abnormalities or cancer cells.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Biopsy = new Coding(System, "Biopsy", "Biopsy");                                                                // Builder.cs:408
@@ -33,12 +35,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Findings on the Mammogram was previously demonstrated by the MRI.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Findings on the Mammogram was previously demonstrated by the Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>

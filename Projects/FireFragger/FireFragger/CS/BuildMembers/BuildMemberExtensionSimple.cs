@@ -43,26 +43,18 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} extension)")
-                .OpenBrace()
-                .AppendCode($"this.Value = ({this.ElementGetName}) extension.Value;")
-                .CloseBrace()
+                .AppendCode($"this.Value = ({this.ElementGetName}) item.Value;")
                 ;
         }
 
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public {this.FhirClassName} WriteItem(BreastRadiologyDocument doc)")
-                .OpenBrace()
-                .AppendCode($"return new Extension")
+                .AppendCode($"Extension retVal = new Extension")
                 .OpenBrace()
                 .AppendCode($"Value = this.Value,")
                 .AppendCode($"Url = ExtensionUrl")
                 .CloseBrace(";")
-                .CloseBrace()
                 ;
         }
 
@@ -88,7 +80,7 @@ namespace FireFragger.CS.BuildMembers
                ;
 
             this.codeBlocks.ClassReadCode
-                .AppendCode($"this.{this.PropertyName}.Read(doc, extensions);")
+                .AppendCode($"this.{this.PropertyName}.Read(doc, extensionList);")
                 ;
         }
 
@@ -103,7 +95,7 @@ namespace FireFragger.CS.BuildMembers
                ;
 
             this.codeBlocks.ClassWriteCode
-                .AppendCode($"items.AddRange(this.{this.PropertyName}.Write(doc));")
+                .AppendCode($"extensionList.AddRange(this.{this.PropertyName}.Write(doc));")
                 ;
         }
 

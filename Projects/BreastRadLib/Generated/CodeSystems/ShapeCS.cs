@@ -17,6 +17,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// A mass that can&#39;t be characterized by any specific shape.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_IrregularInShape = new Coding(System, "IrregularInShape", "Irregular in shape");                                // Builder.cs:408
@@ -25,12 +26,14 @@ namespace BreastRadLib
 		/// A mass that has an undulating  (having a smoothly rising and falling form or outline)
 		/// contour.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_LobulatedInShape = new Coding(System, "LobulatedInShape", "Lobulated in shape");                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// There is a mass that is elliptical or egg-shaped.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -39,12 +42,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// There is a mass that is reniform (kidney shape) in shape.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_Reniform = new Coding(System, "Reniform", "Reniform");                                                          // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// There is a mass that is spherical, ball-shaped, circular or global.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>

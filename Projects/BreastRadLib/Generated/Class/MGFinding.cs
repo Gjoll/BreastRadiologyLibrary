@@ -25,110 +25,110 @@ namespace BreastRadLib
 	public class MGFinding : ObservationBase, IMGFinding
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// AbnormalityCyst
 		/// Access fhir element 'Observation.hasMember:abnormalityCyst'
 		/// </summary>
-		public MAbnormalityCyst AbnormalityCyst { get ; protected set; }                                                                          // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MAbnormalityCyst AbnormalityCyst { get ; protected set; }                                                                          // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// AbnormalityDuct
 		/// Access fhir element 'Observation.hasMember:abnormalityDuct'
 		/// </summary>
-		public MAbnormalityDuct AbnormalityDuct { get ; protected set; }                                                                          // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MAbnormalityDuct AbnormalityDuct { get ; protected set; }                                                                          // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// AbnormalityForeignObject
 		/// Access fhir element 'Observation.hasMember:abnormalityForeignObject'
 		/// </summary>
-		public MAbnormalityForeignObject AbnormalityForeignObject { get ; protected set; }                                                        // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MAbnormalityForeignObject AbnormalityForeignObject { get ; protected set; }                                                        // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// AbnormalityLymphNode
 		/// Access fhir element 'Observation.hasMember:abnormalityLymphNode'
 		/// </summary>
-		public MAbnormalityLymphNode AbnormalityLymphNode { get ; protected set; }                                                                // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MAbnormalityLymphNode AbnormalityLymphNode { get ; protected set; }                                                                // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// AbnormalityMass
 		/// Access fhir element 'Observation.hasMember:abnormalityMass'
 		/// </summary>
-		public MAbnormalityMass AbnormalityMass { get ; protected set; }                                                                          // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MAbnormalityMass AbnormalityMass { get ; protected set; }                                                                          // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// AssociatedFeature
 		/// Access fhir element 'Observation.hasMember:associatedFeature'
 		/// </summary>
-		public MAssociatedFeature AssociatedFeature { get ; protected set; }                                                                      // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MAssociatedFeature AssociatedFeature { get ; protected set; }                                                                      // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// AbnormalityFibroadenoma
 		/// Access fhir element 'Observation.hasMember:abnormalityFibroadenoma'
 		/// </summary>
-		public MAbnormalityFibroadenoma AbnormalityFibroadenoma { get ; protected set; }                                                          // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MAbnormalityFibroadenoma AbnormalityFibroadenoma { get ; protected set; }                                                          // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// MGAbnormalityArchitecturalDistortion
 		/// Access fhir element 'Observation.hasMember:mGAbnormalityArchitecturalDistortion'
 		/// </summary>
-		public MMGAbnormalityArchitecturalDistortion MGAbnormalityArchitecturalDistortion { get ; protected set; }                                // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MMGAbnormalityArchitecturalDistortion MGAbnormalityArchitecturalDistortion { get ; protected set; }                                // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// MGAbnormalityAsymmetry
 		/// Access fhir element 'Observation.hasMember:mGAbnormalityAsymmetry'
 		/// </summary>
-		public MMGAbnormalityAsymmetry MGAbnormalityAsymmetry { get ; protected set; }                                                            // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MMGAbnormalityAsymmetry MGAbnormalityAsymmetry { get ; protected set; }                                                            // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// MGAbnormalityCalcification
 		/// Access fhir element 'Observation.hasMember:mGAbnormalityCalcification'
 		/// </summary>
-		public MMGAbnormalityCalcification MGAbnormalityCalcification { get ; protected set; }                                                    // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MMGAbnormalityCalcification MGAbnormalityCalcification { get ; protected set; }                                                    // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// MGAbnormalityDensity
 		/// Access fhir element 'Observation.hasMember:mGAbnormalityDensity'
 		/// </summary>
-		public MMGAbnormalityDensity MGAbnormalityDensity { get ; protected set; }                                                                // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MMGAbnormalityDensity MGAbnormalityDensity { get ; protected set; }                                                                // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// MGAbnormalityFatNecrosis
 		/// Access fhir element 'Observation.hasMember:mGAbnormalityFatNecrosis'
 		/// </summary>
-		public MMGAbnormalityFatNecrosis MGAbnormalityFatNecrosis { get ; protected set; }                                                        // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:377
+		public MMGAbnormalityFatNecrosis MGAbnormalityFatNecrosis { get ; protected set; }                                                        // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// MGBreastDensity
 		/// Access fhir element 'Observation.hasMember:mGBreastDensity'
 		/// </summary>
-		public MMGBreastDensity MGBreastDensity { get ; protected set; }                                                                          // BuildMemberBase.cs:381
+		public MMGBreastDensity MGBreastDensity { get ; protected set; }                                                                          // BuildMemberBase.cs:396
 		//- Properties
 
 		/// <summary>
@@ -172,32 +172,32 @@ namespace BreastRadLib
 			//+ Constructor
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding");                                                  // DefineBase.cs:238
-			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityCyst = new MAbnormalityCyst(0, -1);                                                                                      // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityDuct = new MAbnormalityDuct(0, -1);                                                                                      // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityForeignObject = new MAbnormalityForeignObject(0, -1);                                                                    // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityLymphNode = new MAbnormalityLymphNode(0, -1);                                                                            // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityMass = new MAbnormalityMass(0, -1);                                                                                      // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.AssociatedFeature = new MAssociatedFeature(0, -1);                                                                                  // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.AbnormalityFibroadenoma = new MAbnormalityFibroadenoma(0, -1);                                                                      // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityArchitecturalDistortion = new MMGAbnormalityArchitecturalDistortion(0, -1);                                            // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityAsymmetry = new MMGAbnormalityAsymmetry(0, -1);                                                                        // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityCalcification = new MMGAbnormalityCalcification(0, -1);                                                                // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityDensity = new MMGAbnormalityDensity(0, -1);                                                                            // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.MGAbnormalityFatNecrosis = new MMGAbnormalityFatNecrosis(0, -1);                                                                    // BuildMemberBase.cs:360
-			// Called from BuildMemberReferences.cs, Line 199
-			this.MGBreastDensity = new MMGBreastDensity(1, 1);                                                                                       // BuildMemberBase.cs:360
+			// Called from BuildMemberReferences.cs, Line 191
+			this.AbnormalityCyst = new MAbnormalityCyst(0, -1);                                                                                      // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.AbnormalityDuct = new MAbnormalityDuct(0, -1);                                                                                      // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.AbnormalityForeignObject = new MAbnormalityForeignObject(0, -1);                                                                    // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.AbnormalityLymphNode = new MAbnormalityLymphNode(0, -1);                                                                            // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.AbnormalityMass = new MAbnormalityMass(0, -1);                                                                                      // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.AssociatedFeature = new MAssociatedFeature(0, -1);                                                                                  // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.AbnormalityFibroadenoma = new MAbnormalityFibroadenoma(0, -1);                                                                      // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MGAbnormalityArchitecturalDistortion = new MMGAbnormalityArchitecturalDistortion(0, -1);                                            // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MGAbnormalityAsymmetry = new MMGAbnormalityAsymmetry(0, -1);                                                                        // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MGAbnormalityCalcification = new MMGAbnormalityCalcification(0, -1);                                                                // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MGAbnormalityDensity = new MMGAbnormalityDensity(0, -1);                                                                            // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MGAbnormalityFatNecrosis = new MMGAbnormalityFatNecrosis(0, -1);                                                                    // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MGBreastDensity = new MMGBreastDensity(1, 1);                                                                                       // BuildMemberBase.cs:375
 			//- Constructor
 		}
 
@@ -227,7 +227,7 @@ namespace BreastRadLib
 			//- WriteCodeStart
 			//+ WriteCode
 			//+ !WriteHasMembers
-			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:163
+			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:155
 			//- !WriteHasMembers
 			//- WriteCode
 		}
@@ -242,7 +242,7 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			//+ !ReadHasMembers
-			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:172
+			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:164
 			//- !ReadHasMembers
 			//- ReadCode
 		}
@@ -270,57 +270,57 @@ namespace BreastRadLib
 		    retVal.TextElement.Value = "MG Finding observation";                                                                                  // FhirConstruct.cs:827
 		    return retVal;                                                                                                                        // FhirConstruct.cs:835
 		}                                                                                                                                         // FhirConstruct.cs:836
-		                                                                                                                                          // BuildMemberReferences.cs:127
+		                                                                                                                                          // BuildMemberReferences.cs:119
 		//+ !HasMembers
-		                                                                                                                                          // BuildMemberReferences.cs:130
-		// BuildMemberReferences.cs:131
+		                                                                                                                                          // BuildMemberReferences.cs:122
+		// BuildMemberReferences.cs:123
 		/// <summary>
 		/// Read all values from resource into this instance
 		/// </summary>
-		private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                  // BuildMemberReferences.cs:134
-		{                                                                                                                                         // BuildMemberReferences.cs:135
-		    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                      // BuildMemberReferences.cs:136
+		private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                  // BuildMemberReferences.cs:126
+		{                                                                                                                                         // BuildMemberReferences.cs:127
+		    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                      // BuildMemberReferences.cs:128
 		    //+ ReadHasMembers
-		    this.AbnormalityCyst.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:89
-		    this.AbnormalityDuct.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:89
-		    this.AbnormalityForeignObject.Read(this.Doc, items);                                                                                  // BuildMemberReferences.cs:89
-		    this.AbnormalityLymphNode.Read(this.Doc, items);                                                                                      // BuildMemberReferences.cs:89
-		    this.AbnormalityMass.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:89
-		    this.AssociatedFeature.Read(this.Doc, items);                                                                                         // BuildMemberReferences.cs:89
-		    this.AbnormalityFibroadenoma.Read(this.Doc, items);                                                                                   // BuildMemberReferences.cs:89
-		    this.MGAbnormalityArchitecturalDistortion.Read(this.Doc, items);                                                                      // BuildMemberReferences.cs:89
-		    this.MGAbnormalityAsymmetry.Read(this.Doc, items);                                                                                    // BuildMemberReferences.cs:89
-		    this.MGAbnormalityCalcification.Read(this.Doc, items);                                                                                // BuildMemberReferences.cs:89
-		    this.MGAbnormalityDensity.Read(this.Doc, items);                                                                                      // BuildMemberReferences.cs:89
-		    this.MGAbnormalityFatNecrosis.Read(this.Doc, items);                                                                                  // BuildMemberReferences.cs:89
-		    this.MGBreastDensity.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:89
+		    this.AbnormalityCyst.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:81
+		    this.AbnormalityDuct.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:81
+		    this.AbnormalityForeignObject.Read(this.Doc, items);                                                                                  // BuildMemberReferences.cs:81
+		    this.AbnormalityLymphNode.Read(this.Doc, items);                                                                                      // BuildMemberReferences.cs:81
+		    this.AbnormalityMass.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:81
+		    this.AssociatedFeature.Read(this.Doc, items);                                                                                         // BuildMemberReferences.cs:81
+		    this.AbnormalityFibroadenoma.Read(this.Doc, items);                                                                                   // BuildMemberReferences.cs:81
+		    this.MGAbnormalityArchitecturalDistortion.Read(this.Doc, items);                                                                      // BuildMemberReferences.cs:81
+		    this.MGAbnormalityAsymmetry.Read(this.Doc, items);                                                                                    // BuildMemberReferences.cs:81
+		    this.MGAbnormalityCalcification.Read(this.Doc, items);                                                                                // BuildMemberReferences.cs:81
+		    this.MGAbnormalityDensity.Read(this.Doc, items);                                                                                      // BuildMemberReferences.cs:81
+		    this.MGAbnormalityFatNecrosis.Read(this.Doc, items);                                                                                  // BuildMemberReferences.cs:81
+		    this.MGBreastDensity.Read(this.Doc, items);                                                                                           // BuildMemberReferences.cs:81
 		    //- ReadHasMembers
-		}                                                                                                                                         // BuildMemberReferences.cs:138
-		                                                                                                                                          // BuildMemberReferences.cs:140
-		// BuildMemberReferences.cs:141
+		}                                                                                                                                         // BuildMemberReferences.cs:130
+		                                                                                                                                          // BuildMemberReferences.cs:132
+		// BuildMemberReferences.cs:133
 		/// <summary>
 		/// Write all values from this instance into resource
 		/// </summary>
-		private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:144
-		{                                                                                                                                         // BuildMemberReferences.cs:145
-		    List<ResourceReference> items = new List<ResourceReference>();                                                                        // BuildMemberReferences.cs:146
+		private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:136
+		{                                                                                                                                         // BuildMemberReferences.cs:137
+		    List<ResourceReference> items = new List<ResourceReference>();                                                                        // BuildMemberReferences.cs:138
 		    //+ WriteHasMembers
-		    items.AddRange(this.AbnormalityCyst.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:107
-		    items.AddRange(this.AbnormalityDuct.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:107
-		    items.AddRange(this.AbnormalityForeignObject.Write(this.Doc));                                                                        // BuildMemberReferences.cs:107
-		    items.AddRange(this.AbnormalityLymphNode.Write(this.Doc));                                                                            // BuildMemberReferences.cs:107
-		    items.AddRange(this.AbnormalityMass.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:107
-		    items.AddRange(this.AssociatedFeature.Write(this.Doc));                                                                               // BuildMemberReferences.cs:107
-		    items.AddRange(this.AbnormalityFibroadenoma.Write(this.Doc));                                                                         // BuildMemberReferences.cs:107
-		    items.AddRange(this.MGAbnormalityArchitecturalDistortion.Write(this.Doc));                                                            // BuildMemberReferences.cs:107
-		    items.AddRange(this.MGAbnormalityAsymmetry.Write(this.Doc));                                                                          // BuildMemberReferences.cs:107
-		    items.AddRange(this.MGAbnormalityCalcification.Write(this.Doc));                                                                      // BuildMemberReferences.cs:107
-		    items.AddRange(this.MGAbnormalityDensity.Write(this.Doc));                                                                            // BuildMemberReferences.cs:107
-		    items.AddRange(this.MGAbnormalityFatNecrosis.Write(this.Doc));                                                                        // BuildMemberReferences.cs:107
-		    items.AddRange(this.MGBreastDensity.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:107
+		    items.AddRange(this.AbnormalityCyst.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:99
+		    items.AddRange(this.AbnormalityDuct.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:99
+		    items.AddRange(this.AbnormalityForeignObject.Write(this.Doc));                                                                        // BuildMemberReferences.cs:99
+		    items.AddRange(this.AbnormalityLymphNode.Write(this.Doc));                                                                            // BuildMemberReferences.cs:99
+		    items.AddRange(this.AbnormalityMass.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:99
+		    items.AddRange(this.AssociatedFeature.Write(this.Doc));                                                                               // BuildMemberReferences.cs:99
+		    items.AddRange(this.AbnormalityFibroadenoma.Write(this.Doc));                                                                         // BuildMemberReferences.cs:99
+		    items.AddRange(this.MGAbnormalityArchitecturalDistortion.Write(this.Doc));                                                            // BuildMemberReferences.cs:99
+		    items.AddRange(this.MGAbnormalityAsymmetry.Write(this.Doc));                                                                          // BuildMemberReferences.cs:99
+		    items.AddRange(this.MGAbnormalityCalcification.Write(this.Doc));                                                                      // BuildMemberReferences.cs:99
+		    items.AddRange(this.MGAbnormalityDensity.Write(this.Doc));                                                                            // BuildMemberReferences.cs:99
+		    items.AddRange(this.MGAbnormalityFatNecrosis.Write(this.Doc));                                                                        // BuildMemberReferences.cs:99
+		    items.AddRange(this.MGBreastDensity.Write(this.Doc));                                                                                 // BuildMemberReferences.cs:99
 		    //- WriteHasMembers
-		    this.Resource.SetValue("hasMember", items);                                                                                           // BuildMemberReferences.cs:148
-		}                                                                                                                                         // BuildMemberReferences.cs:149
+		    this.Resource.SetValue("hasMember", items);                                                                                           // BuildMemberReferences.cs:140
+		}                                                                                                                                         // BuildMemberReferences.cs:141
 		//- !HasMembers
 		//- Methods
 	}

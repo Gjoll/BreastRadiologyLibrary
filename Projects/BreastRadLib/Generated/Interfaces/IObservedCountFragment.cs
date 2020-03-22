@@ -17,12 +17,12 @@ namespace BreastRadLib
 	public interface IObservedCountFragment 
 	{
 		//+ Properties
-		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:367
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// ObsCount
 		/// </summary>
-		MObsCount ObsCount { get ; }                                                                                                              // BuildMemberBase.cs:370
+		MObsCount ObsCount { get ; }                                                                                                              // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

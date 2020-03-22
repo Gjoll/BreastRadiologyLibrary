@@ -18,30 +18,30 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:367
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// Orientation
 		/// </summary>
-		MOrientation Orientation { get ; }                                                                                                        // BuildMemberBase.cs:370
-		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:367
+		MOrientation Orientation { get ; }                                                                                                        // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// Shape
 		/// </summary>
-		MShape Shape { get ; }                                                                                                                    // BuildMemberBase.cs:370
-		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:367
+		MShape Shape { get ; }                                                                                                                    // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// Margin
 		/// </summary>
-		MMargin Margin { get ; }                                                                                                                  // BuildMemberBase.cs:370
-		// Called from BuildMemberComponents.cs, Line 208
-		// BuildMemberBase.cs:367
+		MMargin Margin { get ; }                                                                                                                  // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// MgDensity
 		/// </summary>
-		MMgDensity MgDensity { get ; }                                                                                                            // BuildMemberBase.cs:370
+		MMgDensity MgDensity { get ; }                                                                                                            // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

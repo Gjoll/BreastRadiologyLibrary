@@ -23,6 +23,7 @@ namespace BreastRadLib
 		/// namely the lateral (humeral), anterior (pectoral), posterior (subscapular), central
 		/// and apical nodes.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_NodeAxillary = new Coding(System, "NodeAxillary", "Node axillary");                                             // Builder.cs:408
@@ -37,6 +38,7 @@ namespace BreastRadLib
 		/// Common areas where you might notice swollen lymph nodes include your neck, under
 		/// your chin, in your armpits and in your groin.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_NodeEnlarged = new Coding(System, "NodeEnlarged", "Node enlarged");                                             // Builder.cs:408
@@ -45,6 +47,7 @@ namespace BreastRadLib
 		/// The mammogram and/or ultrasound show enlargement of the cortex.
 		/// Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform.
 		/// [www.ncbi.nlm.nih.gov &gt; pmc &gt; articles &gt; PMC4337126]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_NodeFocalCortex = new Coding(System, "NodeFocalCortex", "Node focal cortex");                                   // Builder.cs:408
@@ -55,12 +58,14 @@ namespace BreastRadLib
 		/// major and deltoideus, immediately below the clavicle .
 		/// They are situated in the course of the external collecting trunks of the arm.
 		/// 
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_NodeInfraclavicular = new Coding(System, "NodeInfraclavicular", "Node infraclavicular");                        // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Intramammary lymph nodes are defined as lymph nodes surrounded by breast tissue.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -70,12 +75,14 @@ namespace BreastRadLib
 		/// Abnormal lymph node viewed on ultrasound and/or ultrasound.
 		/// Enlarged lymph nodes may warrant comment, clinical correlation and additional evaluation, especially if new or considerably larger or rounder when compared to previous examination.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_NodeLymph = new Coding(System, "NodeLymph", "Node lymph");                                                      // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The normal lymph node findings are probably benign.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -87,6 +94,7 @@ namespace BreastRadLib
 		/// Lymph nodes are responsible for filtering the lymphatic fluid of unwanted debris
 		/// and bacteria.
 		/// 
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_NodeSupraclavicular = new Coding(System, "NodeSupraclavicular", "Node supraclavicular");                        // Builder.cs:408
@@ -94,6 +102,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The mammogram and/or ultrasound shows thickening of the cortex is an indicator of an early change in metastasis.
 		/// The qualitative methods used for the diagnosis of lymph node metastases on US include a round morphology, hypoechogenicity, loss of central hilum, or eccentric cortical hypertrophy.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

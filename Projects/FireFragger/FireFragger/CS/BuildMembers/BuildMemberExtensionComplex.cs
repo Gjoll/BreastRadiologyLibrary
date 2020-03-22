@@ -40,24 +40,15 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} extension)")
-                .OpenBrace()
                 .AppendCode("this.Value = new Members();")
-                .AppendCode("this.Value.ReadMember(doc, extension);")
-                .CloseBrace()
+                .AppendCode("this.Value.ReadMember(doc, item);")
                 ;
         }
 
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public Extension WriteItem(BreastRadiologyDocument doc)")
-                .OpenBrace()
-                .DefineBlock(out this.itemCodeBlocks.ClassWriteCode)
-                .AppendCode("return this.Value.WriteMember(doc);")
-                .CloseBrace()
+                .AppendCode($"{this.FhirClassName} retVal = this.Value.WriteMember(doc);")
                 ;
         }
 
@@ -136,12 +127,12 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryClose()
                 .AppendCode($"public Extension WriteMember(BreastRadiologyDocument doc)")
                 .OpenBrace()
-                .AppendCode($"List<Extension> items = new List<Extension>();")
+                .AppendCode($"List<Extension> extensionList = new List<Extension>();")
                 .DefineBlock(out itemClassBlocks.ClassWriteCode)
                 .AppendCode($"return new {this.FhirClassName}")
                 .OpenBrace()
                 .AppendCode($"Url = ExtensionUrl,")
-                .AppendCode($"Extension = items")
+                .AppendCode($"Extension = extensionList")
                 .CloseBrace(";")
                 .CloseBrace()
 
@@ -153,7 +144,7 @@ namespace FireFragger.CS.BuildMembers
                 .OpenBrace()
                 .AppendCode($"if (extension.Url != ExtensionUrl)")
                 .AppendCode($"    throw new Exception($\"Invalid extension url '{{extension.Url}}', expected '{{ExtensionUrl}}'\");")
-                .AppendCode($"List<Extension> extensions = extension.Extension;")
+                .AppendCode($"List<Extension> extensionList = extension.Extension;")
                 .DefineBlock(out itemClassBlocks.ClassReadCode)
                 .CloseBrace()
 

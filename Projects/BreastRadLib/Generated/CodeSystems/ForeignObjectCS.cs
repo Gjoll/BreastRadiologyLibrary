@@ -17,12 +17,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A BB pellet is present in the body and is visible by the Mammogram, MRI and/or Ultrasound.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_BBPellet = new Coding(System, "BBPellet", "BB pellet");                                                         // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// BB pellets are present in the body and is visible by the Mammogram, MRI and/or Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -40,6 +42,7 @@ namespace BreastRadLib
 		/// most widely available in the United States today and to provide guidance regarding
 		/// selection of appropriate markers for various clinical settings.
 		/// [https://www.ncbi.nlm.nih.gov/pubmed/30059952]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_BiopsyClip = new Coding(System, "BiopsyClip", "Biopsy clip");                                                   // Builder.cs:408
@@ -56,6 +59,7 @@ namespace BreastRadLib
 		/// most widely available in the United States today and to provide guidance regarding
 		/// selection of appropriate markers for various clinical settings.
 		/// [https://www.ncbi.nlm.nih.gov/pubmed/30059952]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_BiopsyClips = new Coding(System, "BiopsyClips", "Biopsy clips");                                                // Builder.cs:408
@@ -70,6 +74,7 @@ namespace BreastRadLib
 		/// Numerous breast tissue markers are currently available, with varied shapes, composition,
 		/// and associated bio-absorbable components.
 		/// www.ncbi.nlm.nih.gov &gt; pubmed
+		/// 
 		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
@@ -88,6 +93,7 @@ namespace BreastRadLib
 		/// selection of appropriate markers for various clinical settings.
 		/// www.ncbi.nlm.nih.gov &gt; pubmed
 		/// 
+		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_BreastMarkers = new Coding(System, "BreastMarkers", "Breast markers");                                          // Builder.cs:408
@@ -96,6 +102,7 @@ namespace BreastRadLib
 		/// A catheter sleeve was viewed in the Mammogram, MRI, and/or ultrasound.
 		/// A catheter is a flexible tube used to deliver fluids into or withdraw fluids from the body.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_CatheterSleeves = new Coding(System, "CatheterSleeves", "Catheter sleeves");                                    // Builder.cs:408
@@ -103,6 +110,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// A soft thin tube called a catheter connects the port to a large vein for administering
 		/// chemotherapy is present in the MRI/Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -113,6 +121,7 @@ namespace BreastRadLib
 		/// ...
 		/// These marker clips are placed at most facilities around the country, and are considered a standard part of the breast biopsy procedure.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Clip = new Coding(System, "Clip", "Clip");                                                                      // Builder.cs:408
@@ -122,6 +131,7 @@ namespace BreastRadLib
 		/// ...
 		/// These marker clips are placed at most facilities around the country, and are considered a standard part of the breast biopsy procedure.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Clips = new Coding(System, "Clips", "Clips");                                                                   // Builder.cs:408
@@ -130,12 +140,14 @@ namespace BreastRadLib
 		/// The coil acts as an antenna to receive the radio frequency signal.
 		/// This is present on the Mammogram, MRI and/or Ultrasound.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Coil = new Coding(System, "Coil", "Coil");                                                                      // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Glass is present in the body and shows up on the MRI, Mammogram, and/or Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -145,12 +157,14 @@ namespace BreastRadLib
 		/// Tiny, gold seeds that are put in and/or around a tumor to show exactly where the
 		/// tumor is are present in the ultrasound/MRI.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_GoldSeed = new Coding(System, "GoldSeed", "Gold seed");                                                         // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// There is a gunshot would present in the body and is viewable on the Ultrasound, Mammogram and/or MRI
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -159,12 +173,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A marker clip (from possible previous biopsy) is visable in the Mammogram
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_MarkerClip = new Coding(System, "MarkerClip", "Marker clip");                                                   // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A piece of metal is present in the body and is viewable on the MRI and/or Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -173,12 +189,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A metallic tissue marker is present in the ultrasound/MRI.
 		/// 
+		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
 		public static Coding Code_MetallicMarker = new Coding(System, "MetallicMarker", "Metallic marker");                                       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Metallic tissue markers are present in the MRI/Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MRI.
 		/// </summary>
@@ -188,12 +206,14 @@ namespace BreastRadLib
 		/// The Mammogram suggests a foreign body in the breast that appears to be a metallic
 		/// object.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_MetallicObjects = new Coding(System, "MetallicObjects", "Metallic objects");                                    // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The Mammogram suggests a foreign body in the breast that appears to be a needle.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -203,6 +223,7 @@ namespace BreastRadLib
 		/// The Mammogram suggests a foreign body in the breast that appears to be a piece of
 		/// nipple jewelry.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_NippleJewelry = new Coding(System, "NippleJewelry", "Nipple jewelry");                                          // Builder.cs:408
@@ -210,12 +231,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// A non-metallic foreign body was located in the breast tissue.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_NonMetallicBody = new Coding(System, "Non-metallicBody", "Non-metallic body");                                  // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A pacemaker is present showing up on the MRI and/or Ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -230,12 +253,14 @@ namespace BreastRadLib
 		/// Silicone granulomas are a skin condition that occur as a reaction to liquid silicones,
 		/// and are characterized by the formation of nodules.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SiliconeGranuloma = new Coding(System, "SiliconeGranuloma", "Silicone granuloma");                              // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A surgical sponge can be viewed from the images in the Mammogram, MRI and/or ultrasound.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -245,6 +270,7 @@ namespace BreastRadLib
 		/// A surgical clip can be viewed within the Mammogram, MRI and/or Ultrasound.
 		/// A tissue marker (or clip) is placed in your breast after a breast biopsy to help locate the site for future reference.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SurgicalClip = new Coding(System, "SurgicalClip", "Surgical clip");                                             // Builder.cs:408
@@ -253,6 +279,7 @@ namespace BreastRadLib
 		/// Surgical clips can be viewed within the Mammogram, MRI and/or Ultrasound.
 		/// A tissue marker (or clip) is placed in your breast after a breast biopsy to help locate the site for future reference.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SurgicalClips = new Coding(System, "SurgicalClips", "Surgical clips");                                          // Builder.cs:408
@@ -260,6 +287,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// A Retained surgical swab appears to have been idenified in the breast during the
 		/// mammogram, ultrasound and/or MRI.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -271,6 +299,7 @@ namespace BreastRadLib
 		/// 
 		/// These marker clips are placed at most facilities around the country, and are considered a standard part of the breast biopsy procedure.
 		/// [https://med.nyu.edu/radiology/about-nyu-langone-radiology/subspecialty-sections/breast-imaging/image-guided-procedures]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_TitaniumClip = new Coding(System, "TitaniumClip", "Titanium clip");                                             // Builder.cs:408
@@ -281,6 +310,7 @@ namespace BreastRadLib
 		/// 
 		/// These marker clips are placed at most facilities around the country, and are considered a standard part of the breast biopsy procedure.
 		/// [https://med.nyu.edu/radiology/about-nyu-langone-radiology/subspecialty-sections/breast-imaging/image-guided-procedures]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_TitaniumClips = new Coding(System, "TitaniumClips", "Titanium clips");                                          // Builder.cs:408
@@ -291,6 +321,7 @@ namespace BreastRadLib
 		/// Guidewire is used during medical procedures such as biopsy or placement of medical
 		/// devices such as a catheter or pacemaker.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Wire = new Coding(System, "Wire", "Wire");                                                                      // Builder.cs:408
@@ -300,6 +331,7 @@ namespace BreastRadLib
 		/// It is viewable in the MRI and/or Ultrasound.
 		/// Guidewire is used during medical procedures such as a biopsy or  placement of medical
 		/// devices such as a catheter or pacemaker.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>

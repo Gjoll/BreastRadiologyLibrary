@@ -20,54 +20,54 @@ namespace BreastRadLib
 	public class BreastRadComposition : CompositionBase, IBreastRadComposition
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberSection.cs, Line 226
-		// BuildMemberBase.cs:377
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// Report
 		/// Access fhir element 'Composition.section:report'
 		/// </summary>
-		public MReport Report { get ; protected set; }                                                                                            // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberSection.cs, Line 226
-		// BuildMemberBase.cs:377
+		public MReport Report { get ; protected set; }                                                                                            // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// Impressions
 		/// Access fhir element 'Composition.section:impressions'
 		/// </summary>
-		public MImpressions Impressions { get ; protected set; }                                                                                  // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberSection.cs, Line 226
-		// BuildMemberBase.cs:377
+		public MImpressions Impressions { get ; protected set; }                                                                                  // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// FindingsRightBreast
 		/// Access fhir element 'Composition.section:findingsRightBreast'
 		/// </summary>
-		public MFindingsRightBreast FindingsRightBreast { get ; protected set; }                                                                  // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberSection.cs, Line 226
-		// BuildMemberBase.cs:377
+		public MFindingsRightBreast FindingsRightBreast { get ; protected set; }                                                                  // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// FindingsLeftBreast
 		/// Access fhir element 'Composition.section:findingsLeftBreast'
 		/// </summary>
-		public MFindingsLeftBreast FindingsLeftBreast { get ; protected set; }                                                                    // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberSection.cs, Line 226
-		// BuildMemberBase.cs:377
+		public MFindingsLeftBreast FindingsLeftBreast { get ; protected set; }                                                                    // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// RelatedResources
 		/// Access fhir element 'Composition.section:relatedResources'
 		/// </summary>
-		public MRelatedResources RelatedResources { get ; protected set; }                                                                        // BuildMemberBase.cs:381
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberSection.cs, Line 226
-		// BuildMemberBase.cs:377
+		public MRelatedResources RelatedResources { get ; protected set; }                                                                        // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// Recommendations
 		/// Access fhir element 'Composition.section:recommendations'
 		/// </summary>
-		public MRecommendations Recommendations { get ; protected set; }                                                                          // BuildMemberBase.cs:381
+		public MRecommendations Recommendations { get ; protected set; }                                                                          // BuildMemberBase.cs:396
 		//- Properties
 
 		/// <summary>
@@ -110,18 +110,18 @@ namespace BreastRadLib
 			base.Init(doc, resource);
 			//+ Constructor
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition");                                       // DefineBase.cs:238
-			// Called from BuildMemberSection.cs, Line 226
-			this.Report = new MReport(1, 1);                                                                                                         // BuildMemberBase.cs:360
-			// Called from BuildMemberSection.cs, Line 226
-			this.Impressions = new MImpressions(0, -1);                                                                                              // BuildMemberBase.cs:360
-			// Called from BuildMemberSection.cs, Line 226
-			this.FindingsRightBreast = new MFindingsRightBreast(0, 1);                                                                               // BuildMemberBase.cs:360
-			// Called from BuildMemberSection.cs, Line 226
-			this.FindingsLeftBreast = new MFindingsLeftBreast(0, 1);                                                                                 // BuildMemberBase.cs:360
-			// Called from BuildMemberSection.cs, Line 226
-			this.RelatedResources = new MRelatedResources(0, -1);                                                                                    // BuildMemberBase.cs:360
-			// Called from BuildMemberSection.cs, Line 226
-			this.Recommendations = new MRecommendations(0, -1);                                                                                      // BuildMemberBase.cs:360
+			// Called from BuildMemberSection.cs, Line 225
+			this.Report = new MReport(1, 1);                                                                                                         // BuildMemberBase.cs:375
+			// Called from BuildMemberSection.cs, Line 225
+			this.Impressions = new MImpressions(0, -1);                                                                                              // BuildMemberBase.cs:375
+			// Called from BuildMemberSection.cs, Line 225
+			this.FindingsRightBreast = new MFindingsRightBreast(0, 1);                                                                               // BuildMemberBase.cs:375
+			// Called from BuildMemberSection.cs, Line 225
+			this.FindingsLeftBreast = new MFindingsLeftBreast(0, 1);                                                                                 // BuildMemberBase.cs:375
+			// Called from BuildMemberSection.cs, Line 225
+			this.RelatedResources = new MRelatedResources(0, -1);                                                                                    // BuildMemberBase.cs:375
+			// Called from BuildMemberSection.cs, Line 225
+			this.Recommendations = new MRecommendations(0, -1);                                                                                      // BuildMemberBase.cs:375
 			//- Constructor
 		}
 
@@ -151,7 +151,7 @@ namespace BreastRadLib
 			//- WriteCodeStart
 			//+ WriteCode
 			//+ !WriteSections
-			this.WriteSections(this.Doc);                                                                                                            // BuildMemberSection.cs:174
+			this.WriteSections(this.Doc);                                                                                                            // BuildMemberSection.cs:173
 			//- !WriteSections
 			//- WriteCode
 		}
@@ -166,49 +166,49 @@ namespace BreastRadLib
 			//- ReadCodeStart
 			//+ ReadCode
 			//+ !ReadSections
-			this.ReadSections(this.Doc);                                                                                                             // BuildMemberSection.cs:183
+			this.ReadSections(this.Doc);                                                                                                             // BuildMemberSection.cs:182
 			//- !ReadSections
 			//- ReadCode
 		}
 
 		//+ Methods
-		                                                                                                                                          // BuildMemberSection.cs:138
+		                                                                                                                                          // BuildMemberSection.cs:137
 		//+ !Sections
-		                                                                                                                                          // BuildMemberSection.cs:141
-		// BuildMemberSection.cs:142
+		                                                                                                                                          // BuildMemberSection.cs:140
+		// BuildMemberSection.cs:141
 		/// <summary>
 		/// Read all values from resource into this instance
 		/// </summary>
-		private void ReadSections(BreastRadiologyDocument doc)                                                                                    // BuildMemberSection.cs:145
-		{                                                                                                                                         // BuildMemberSection.cs:146
-		    List<Composition.SectionComponent> items = this.Resource.GetValue<Composition.SectionComponent>("section").ToList();                  // BuildMemberSection.cs:147
+		private void ReadSections(BreastRadiologyDocument doc)                                                                                    // BuildMemberSection.cs:144
+		{                                                                                                                                         // BuildMemberSection.cs:145
+		    List<Composition.SectionComponent> items = this.Resource.GetValue<Composition.SectionComponent>("section").ToList();                  // BuildMemberSection.cs:146
 		    //+ ReadSections
-		    this.Report.Read(this.Doc, items);                                                                                                    // BuildMemberSection.cs:95
-		    this.Impressions.Read(this.Doc, items);                                                                                               // BuildMemberSection.cs:95
-		    this.FindingsRightBreast.Read(this.Doc, items);                                                                                       // BuildMemberSection.cs:95
-		    this.FindingsLeftBreast.Read(this.Doc, items);                                                                                        // BuildMemberSection.cs:95
-		    this.RelatedResources.Read(this.Doc, items);                                                                                          // BuildMemberSection.cs:95
-		    this.Recommendations.Read(this.Doc, items);                                                                                           // BuildMemberSection.cs:95
+		    this.Report.Read(this.Doc, items);                                                                                                    // BuildMemberSection.cs:94
+		    this.Impressions.Read(this.Doc, items);                                                                                               // BuildMemberSection.cs:94
+		    this.FindingsRightBreast.Read(this.Doc, items);                                                                                       // BuildMemberSection.cs:94
+		    this.FindingsLeftBreast.Read(this.Doc, items);                                                                                        // BuildMemberSection.cs:94
+		    this.RelatedResources.Read(this.Doc, items);                                                                                          // BuildMemberSection.cs:94
+		    this.Recommendations.Read(this.Doc, items);                                                                                           // BuildMemberSection.cs:94
 		    //- ReadSections
-		}                                                                                                                                         // BuildMemberSection.cs:149
-		                                                                                                                                          // BuildMemberSection.cs:151
-		// BuildMemberSection.cs:152
+		}                                                                                                                                         // BuildMemberSection.cs:148
+		                                                                                                                                          // BuildMemberSection.cs:150
+		// BuildMemberSection.cs:151
 		/// <summary>
 		/// Write all values from this instance into resource
 		/// </summary>
-		private void WriteSections(BreastRadiologyDocument doc)                                                                                   // BuildMemberSection.cs:155
-		{                                                                                                                                         // BuildMemberSection.cs:156
-		    List<Composition.SectionComponent> items = new List<Composition.SectionComponent>();                                                  // BuildMemberSection.cs:157
+		private void WriteSections(BreastRadiologyDocument doc)                                                                                   // BuildMemberSection.cs:154
+		{                                                                                                                                         // BuildMemberSection.cs:155
+		    List<Composition.SectionComponent> items = new List<Composition.SectionComponent>();                                                  // BuildMemberSection.cs:156
 		    //+ WriteSections
-		    items.AddRange(this.Report.Write(this.Doc));                                                                                          // BuildMemberSection.cs:118
-		    items.AddRange(this.Impressions.Write(this.Doc));                                                                                     // BuildMemberSection.cs:118
-		    items.AddRange(this.FindingsRightBreast.Write(this.Doc));                                                                             // BuildMemberSection.cs:118
-		    items.AddRange(this.FindingsLeftBreast.Write(this.Doc));                                                                              // BuildMemberSection.cs:118
-		    items.AddRange(this.RelatedResources.Write(this.Doc));                                                                                // BuildMemberSection.cs:118
-		    items.AddRange(this.Recommendations.Write(this.Doc));                                                                                 // BuildMemberSection.cs:118
+		    items.AddRange(this.Report.Write(this.Doc));                                                                                          // BuildMemberSection.cs:117
+		    items.AddRange(this.Impressions.Write(this.Doc));                                                                                     // BuildMemberSection.cs:117
+		    items.AddRange(this.FindingsRightBreast.Write(this.Doc));                                                                             // BuildMemberSection.cs:117
+		    items.AddRange(this.FindingsLeftBreast.Write(this.Doc));                                                                              // BuildMemberSection.cs:117
+		    items.AddRange(this.RelatedResources.Write(this.Doc));                                                                                // BuildMemberSection.cs:117
+		    items.AddRange(this.Recommendations.Write(this.Doc));                                                                                 // BuildMemberSection.cs:117
 		    //- WriteSections
-		    this.Resource.SetValue("section", items);                                                                                             // BuildMemberSection.cs:159
-		}                                                                                                                                         // BuildMemberSection.cs:160
+		    this.Resource.SetValue("section", items);                                                                                             // BuildMemberSection.cs:158
+		}                                                                                                                                         // BuildMemberSection.cs:159
 		//- !Sections
 		//- Methods
 	}

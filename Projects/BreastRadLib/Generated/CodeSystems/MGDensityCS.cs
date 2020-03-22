@@ -18,6 +18,7 @@ namespace BreastRadLib
 		/// These are round or oval calcifications that range from under 1 mm to over a centimeter.
 		/// They are the result of fat necrosis, calcified debris in ducts, and occasional fibroadenomas.
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis#benign-calcifications-lucent-centered]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_CentralLucent = new Coding(System, "CentralLucent", "Central lucent");                                          // Builder.cs:408
@@ -28,6 +29,7 @@ namespace BreastRadLib
 		/// 
 		/// fibroglandular breast tissue.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_EqualDensity = new Coding(System, "EqualDensity", "Equal density");                                             // Builder.cs:408
@@ -39,6 +41,7 @@ namespace BreastRadLib
 		/// 
 		/// benign mass.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_FatContaining = new Coding(System, "FatContaining", "Fat containing");                                          // Builder.cs:408
@@ -49,6 +52,7 @@ namespace BreastRadLib
 		/// Having dense breast tissue is common.
 		/// Some women have more dense breast tissue than others.
 		/// [https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/mammograms/breast-density-and-your-mammogram-report.html]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // Builder.cs:408
@@ -62,6 +66,7 @@ namespace BreastRadLib
 		/// 
 		/// be worked up.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_LowDensity = new Coding(System, "LowDensity", "Low density");                                                   // Builder.cs:408

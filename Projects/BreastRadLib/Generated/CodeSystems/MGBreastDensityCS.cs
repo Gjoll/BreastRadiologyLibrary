@@ -22,6 +22,7 @@ namespace BreastRadLib
 		/// Fatty breast tissue is one of four categories used to describe a level of breast
 		/// density seen on a mammogram.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/search?contains=false&amp;q=fatty]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_AlmostEntirelyFat = new Coding(System, "AlmostEntirelyFat", "Almost entirely fat");                             // Builder.cs:408
@@ -35,6 +36,7 @@ namespace BreastRadLib
 		/// a level of breast density seen on a mammogram.
 		/// About 40% of women have this type of breast tissue.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/scattered-fibroglandular-breast-tissue]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_ScatteredAreasOfFibroglandularDensity = new Coding(System, "ScatteredAreasOfFibroglandularDensity", "Scattered areas of fibroglandular density");// Builder.cs:408
@@ -48,6 +50,7 @@ namespace BreastRadLib
 		/// level of breast density seen on a mammogram.
 		/// About 40% of women have this type of breast tissue.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/heterogeneously-dense-breast-tissue]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_HeterogeneouslyDense = new Coding(System, "HeterogeneouslyDense", "Heterogeneously dense");                     // Builder.cs:408
@@ -64,6 +67,7 @@ namespace BreastRadLib
 		/// of breast density seen on a mammogram.
 		/// About 10% of women have this type of breast tissue.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/extremely-dense-breast-tissue]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_ExtremelyDense = new Coding(System, "ExtremelyDense", "Extremely dense");                                       // Builder.cs:408

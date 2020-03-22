@@ -19,12 +19,14 @@ namespace BreastRadLib
 		/// The process of weighing the probability of one disease versus that of other diseases
 		/// possibly accounting for a patient&#39;s illness.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_DifferentialDiagnosis = new Coding(System, "DifferentialDiagnosis", "Differential diagnosis");                  // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Likely represents
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
@@ -33,12 +35,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Most likely
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MostLikely = new Coding(System, "MostLikely", "Most likely");                                                   // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Resembles
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>

@@ -19,30 +19,30 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:367
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// MGFinding
 		/// </summary>
-		MMGFinding MGFinding { get ; }                                                                                                            // BuildMemberBase.cs:370
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:367
+		MMGFinding MGFinding { get ; }                                                                                                            // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// MRIFinding
 		/// </summary>
-		MMRIFinding MRIFinding { get ; }                                                                                                          // BuildMemberBase.cs:370
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:367
+		MMRIFinding MRIFinding { get ; }                                                                                                          // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// NMFinding
 		/// </summary>
-		MNMFinding NMFinding { get ; }                                                                                                            // BuildMemberBase.cs:370
-		// Called from BuildMemberReferences.cs, Line 199
-		// BuildMemberBase.cs:367
+		MNMFinding NMFinding { get ; }                                                                                                            // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
 		/// USFinding
 		/// </summary>
-		MUSFinding USFinding { get ; }                                                                                                            // BuildMemberBase.cs:370
+		MUSFinding USFinding { get ; }                                                                                                            // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

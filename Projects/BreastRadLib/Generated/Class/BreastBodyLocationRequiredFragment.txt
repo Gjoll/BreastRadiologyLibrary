@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:375
-		// Called from BuildMemberElement.cs, Line 129
-		// BuildMemberBase.cs:377
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberElement.cs, Line 123
+		// BuildMemberBase.cs:392
 		/// <summary>
 		/// BodySite
 		/// Access fhir element 'Observation.bodySite'
 		/// </summary>
-		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:381
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:396
 		//- Properties
 
 			//+ Constructor
-			// Called from BuildMemberElement.cs, Line 129
-			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:360
+			// Called from BuildMemberElement.cs, Line 123
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:375
 			//- Constructor
 
 			//+ ValidateCodeStart
@@ -22,13 +22,13 @@
 			//+ WriteCodeStart
 			//- WriteCodeStart
 			//+ WriteCode
-			this.Resource.SetValue("bodySite", this.BodySite.Write(this.Doc));                                                                       // BuildMemberElement.cs:93
+			this.Resource.SetValue("bodySite", this.BodySite.Write(this.Doc));                                                                       // BuildMemberElement.cs:86
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>("bodySite"));                                                       // BuildMemberElement.cs:78
+			this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>("bodySite"));                                                       // BuildMemberElement.cs:71
 			//- ReadCode
 
 			//+ Methods

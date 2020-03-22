@@ -18,6 +18,7 @@ namespace BreastRadLib
 		/// Some or all of the margin has sharp corners, often forming acute angles.
 		/// The margin of the mass is not circumscribed.
 		/// 
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_AngularMargin = new Coding(System, "AngularMargin", "Angular margin");                                          // Builder.cs:408
@@ -28,6 +29,7 @@ namespace BreastRadLib
 		/// For US, to describe a mass as circumscribed, its entire margin must be sharply defined.
 		/// Most circumscribed lesions have round or oval shapes.
 		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 49]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_CircumscribedMargin = new Coding(System, "CircumscribedMargin", "Circumscribed margin");                        // Builder.cs:408
@@ -41,6 +43,7 @@ namespace BreastRadLib
 		/// Use of this descriptor
 		/// usually implies a suspicious finding.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 23]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_IndistinctMargin = new Coding(System, "IndistinctMargin", "Indistinct margin");                                 // Builder.cs:408
@@ -49,6 +52,7 @@ namespace BreastRadLib
 		/// Intraductal tumor extension is a characteristic feature of primary breast carcinoma,
 		/// and is an important consideration in patients undergoing breast conservative surgery.
 		/// [https://www.ncbi.nlm.nih.gov/pubmed/8630874]
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_IntraductalExtension = new Coding(System, "IntraductalExtension", "Intraductal extension");                     // Builder.cs:408
@@ -56,6 +60,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Edges around the soft tissue that don&#39;t look smooth.
 		/// Indicative of some sort of growth or mass rather than a cyst.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
@@ -66,6 +71,7 @@ namespace BreastRadLib
 		/// Much like a 6 or 8 leaf clover.
 		/// The edge of all of the leaves would be considered lobulated.
 		/// 
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_LobulatedMargin = new Coding(System, "LobulatedMargin", "Lobulated margin");                                    // Builder.cs:408
@@ -73,6 +79,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// Smooth margin with distinct separation between the mass and the surrounding border.
 		/// They are  oval-shaped and  have a wide rather than tall formation.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
@@ -82,6 +89,7 @@ namespace BreastRadLib
 		/// The margin is characterized by short-cycle undulations or scalloped appearance,and
 		/// the margin of the mass is not circumscribed.
 		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 54]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MicrolobulatedMargin = new Coding(System, "MicrolobulatedMargin", "Microlobulated margin");                     // Builder.cs:408
@@ -92,6 +100,7 @@ namespace BreastRadLib
 		/// of the margin There is not a clear demarcation between the mass and the surrounding
 		/// tissue.
 		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 153]
+		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
 		public static Coding Code_NonCircumscribedMargin = new Coding(System, "NonCircumscribedMargin", "Non circumscribed margin");              // Builder.cs:408
@@ -101,6 +110,7 @@ namespace BreastRadLib
 		/// This is used primarily when some of the margin of the mass is circumscribed, but
 		/// the rest (more than 25%) is hidden.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
 		public static Coding Code_ObscuredMagin = new Coding(System, "ObscuredMagin", "Obscured magin");                                          // Builder.cs:408
@@ -108,6 +118,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The edges of the mass have a smooth appearance and distinct separation between the
 		/// mass and surrounding tissue.
+		/// 
 		/// 
 		/// Valid for the following modalities: US MRI.
 		/// </summary>
@@ -118,6 +129,7 @@ namespace BreastRadLib
 		/// of malignancy,
 		/// but the significant feature is that the margin of the mass is not circumscribed.
 		/// [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 55]
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_SpiculatedMargin = new Coding(System, "SpiculatedMargin", "Spiculated margin");                                 // Builder.cs:408

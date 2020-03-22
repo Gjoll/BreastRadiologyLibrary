@@ -34,6 +34,11 @@ namespace FireFragger.CS.BuildMembers
         protected override String FhirClassName => "Composition.SectionComponent";
 
         /// <summary>
+        /// Name of fhir item class. Usually the same as the FhirClassName.
+        /// </summary>
+        protected override String ItemClassName => "ResourceReference";
+
+        /// <summary>
         /// Perform local processing of container class.
         /// </summary>
         protected override void BuildContainerClassLocal(ClassCodeBlocks itemCodeBlocks)
@@ -47,23 +52,17 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, ResourceReference resourceReference)")
-                .OpenBrace()
-                .AppendCode($"this.Value = ({this.ElementGetName}) doc.GetResource(resourceReference);")
-                .CloseBrace()
+                .AppendCode($"this.Value = ({this.ElementGetName}) doc.GetResource(item);")
                 ;
         }
 
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .AppendCode($"public ResourceReference WriteItem(BreastRadiologyDocument doc)")
-                .OpenBrace()
-                .AppendCode($"return new ResourceReference")
+                .AppendCode($"ResourceReference retVal = new ResourceReference")
                 .OpenBrace()
                 .AppendCode($"Reference = this.Value.Id")
                 .CloseBrace(";")
-                .CloseBrace()
                 ;
         }
 

@@ -43,25 +43,17 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} reference)")
-                .OpenBrace()
-                .AppendCode($"this.Value = ({this.ElementGetName}) doc.GetResource(reference);")
-                .CloseBrace()
+                .AppendCode($"this.Value = ({this.ElementGetName}) doc.GetResource(item);")
                 ;
         }
 
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .BlankLine()
-                .AppendCode($"public {this.FhirClassName} WriteItem(BreastRadiologyDocument doc)")
-                .OpenBrace()
-                .AppendCode("return new ResourceReference")
+                .AppendCode("ResourceReference retVal = new ResourceReference")
                 .OpenBrace()
                 .AppendCode("Reference = this.Value.Id")
                 .CloseBrace(";")
-                .CloseBrace()
                 ;
         }
 

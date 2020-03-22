@@ -44,6 +44,12 @@ namespace FireFragger.CS.BuildMembers
         /// May be same as ItemElementName.
         /// </summary>
         protected abstract String FhirClassName { get; }
+        
+        /// <summary>
+        /// Name of fhir item class. Usually the same as the FhirClassName.
+        /// </summary>
+        protected virtual String ItemClassName => FhirClassName;
+
         protected abstract String PropertyName { get; }
 
         /// <summary>
@@ -103,13 +109,22 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary("Write item.")
                 .SummaryClose()
+                .AppendCode($"public {this.ItemClassName} WriteItem(BreastRadiologyDocument doc)")
+                .OpenBrace()
                 .Call(this.BuildItemWrite)
+                .DefineBlock(out this.itemCodeBlocks.ClassWriteCode)
+                .AppendCode($"return retVal;")
+                .CloseBrace()
 
                 .BlankLine()
                 .SummaryOpen()
                 .Summary("Read item.")
                 .SummaryClose()
+                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.ItemClassName} item)")
+                .OpenBrace()
                 .Call(this.BuildItemRead)
+                .DefineBlock(out this.itemCodeBlocks.ClassReadCode)
+                .CloseBrace()
 
                 .DefineBlock(out this.itemCodeBlocks.ClassMethods)
                 .CloseBrace()

@@ -50,24 +50,18 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemRead(CodeBlockNested b)
         {
             b
-                .AppendCode($"public void ReadItem(BreastRadiologyDocument doc, {this.FhirClassName} component)")
-                .OpenBrace()
-                .AppendCode($"this.Value = ({this.ElementGetName}) component.Value;")
-                .CloseBrace()
+                .AppendCode($"this.Value = ({this.ElementGetName}) item.Value;")
                 ;
         }
 
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .AppendCode($"public {this.FhirClassName} WriteItem(BreastRadiologyDocument doc)")
-                .OpenBrace()
-                .AppendCode($"return new {this.FhirClassName}")
+                .AppendCode($"{this.FhirClassName} retVal = new {this.FhirClassName}")
                 .OpenBrace()
                 .AppendCode($"Value = this.Value,")
                 .AppendCode($"Code = {this.componentCodeMethodName}()")
                 .CloseBrace(";")
-                .CloseBrace()
                 ;
         }
 

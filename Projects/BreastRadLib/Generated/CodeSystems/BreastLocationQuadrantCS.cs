@@ -18,6 +18,7 @@ namespace BreastRadLib
 		/// The lower inside (closest to the cleavage of your breasts) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_InferiorMedialQuadrent = new Coding(System, "InferiorMedialQuadrent", "Inferior medial quadrent (lower inner)");// Builder.cs:408
@@ -25,6 +26,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The upper inside (closest to the armpit of each breast) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -34,6 +36,7 @@ namespace BreastRadLib
 		/// The upper inside (closest to the cleavage of your breasts) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_SuperiorMedialQuadrent = new Coding(System, "SuperiorMedialQuadrent", "Superior medial quadrent (upper inner)");// Builder.cs:408
@@ -41,6 +44,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The upper outside (closest to your armpit on each breast) quadrant of each breast.
 		/// There are 4 quadrants to the anatomy of the breast.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

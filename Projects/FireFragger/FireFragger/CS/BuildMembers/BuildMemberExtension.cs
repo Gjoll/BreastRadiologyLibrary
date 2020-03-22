@@ -83,19 +83,18 @@ namespace FireFragger.CS.BuildMembers
                 ;
 
             Int32 min = this.extensionSlice.ElementDefinition.Min.Value;
-            Int32 max = this.extensionSlice.ElementDefinition.Max.ToMax();
+            Int32 max = CSMisc.ToMax(this.extensionSlice.ElementDefinition.Max);
             this.codeBlocks.ClassConstructor
                 .AppendCode($"this.{propertyName} = new M{extensionClass}({min}, {max});")
                 ;
 
             this.codeBlocks.ClassWriteCode
-                .AppendCode($"items.AddRange(this.{propertyName}.Write(doc));")
+                .AppendCode($"extensionList.AddRange(this.{propertyName}.Write(doc));")
                 ;
 
             this.codeBlocks.ClassReadCode
-                .AppendCode($"this.{propertyName}.Read(doc, extensions);")
+                .AppendCode($"this.{propertyName}.Read(doc, extensionList);")
                 ;
-
         }
 
         /// <summary>
