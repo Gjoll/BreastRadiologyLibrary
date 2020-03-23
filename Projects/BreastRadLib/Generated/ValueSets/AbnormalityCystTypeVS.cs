@@ -28,26 +28,26 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_Cyst = new TCoding(AbnormalityCystTypeCS.Code_Cyst);                                                           // Builder.cs:347
-		public static TCoding Code_CystComplex = new TCoding(AbnormalityCystTypeCS.Code_CystComplex);                                             // Builder.cs:347
-		public static TCoding Code_CystComplicated = new TCoding(AbnormalityCystTypeCS.Code_CystComplicated);                                     // Builder.cs:347
-		public static TCoding Code_CystMicro = new TCoding(AbnormalityCystTypeCS.Code_CystMicro);                                                 // Builder.cs:347
-		public static TCoding Code_CystOil = new TCoding(AbnormalityCystTypeCS.Code_CystOil);                                                     // Builder.cs:347
-		public static TCoding Code_CystSimple = new TCoding(AbnormalityCystTypeCS.Code_CystSimple);                                               // Builder.cs:347
-		public static TCoding Code_CystWithDebris = new TCoding(AbnormalityCystTypeCS.Code_CystWithDebris);                                       // Builder.cs:347
+		public static TCoding Code_Cyst = new TCoding(AbnormalityCystTypeCS.Code_Cyst);                                                           // Builder.cs:353
+		public static TCoding Code_CystComplex = new TCoding(AbnormalityCystTypeCS.Code_CystComplex);                                             // Builder.cs:353
+		public static TCoding Code_CystComplicated = new TCoding(AbnormalityCystTypeCS.Code_CystComplicated);                                     // Builder.cs:353
+		public static TCoding Code_CystMicro = new TCoding(AbnormalityCystTypeCS.Code_CystMicro);                                                 // Builder.cs:353
+		public static TCoding Code_CystOil = new TCoding(AbnormalityCystTypeCS.Code_CystOil);                                                     // Builder.cs:353
+		public static TCoding Code_CystSimple = new TCoding(AbnormalityCystTypeCS.Code_CystSimple);                                               // Builder.cs:353
+		public static TCoding Code_CystWithDebris = new TCoding(AbnormalityCystTypeCS.Code_CystWithDebris);                                       // Builder.cs:353
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
-		{                                                                                                                                         // Builder.cs:334
-		    yield return Code_Cyst;                                                                                                               // Builder.cs:350
-		    yield return Code_CystComplex;                                                                                                        // Builder.cs:350
-		    yield return Code_CystComplicated;                                                                                                    // Builder.cs:350
-		    yield return Code_CystMicro;                                                                                                          // Builder.cs:350
-		    yield return Code_CystOil;                                                                                                            // Builder.cs:350
-		    yield return Code_CystSimple;                                                                                                         // Builder.cs:350
-		    yield return Code_CystWithDebris;                                                                                                     // Builder.cs:350
-		}                                                                                                                                         // Builder.cs:356
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:339
+		{                                                                                                                                         // Builder.cs:340
+		    yield return Code_Cyst;                                                                                                               // Builder.cs:356
+		    yield return Code_CystComplex;                                                                                                        // Builder.cs:356
+		    yield return Code_CystComplicated;                                                                                                    // Builder.cs:356
+		    yield return Code_CystMicro;                                                                                                          // Builder.cs:356
+		    yield return Code_CystOil;                                                                                                            // Builder.cs:356
+		    yield return Code_CystSimple;                                                                                                         // Builder.cs:356
+		    yield return Code_CystWithDebris;                                                                                                     // Builder.cs:356
+		}                                                                                                                                         // Builder.cs:362
 		//- Methods
 	}
 }

@@ -28,18 +28,18 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_DuctNormal = new TCoding(AbnormalityDuctTypeCS.Code_DuctNormal);                                               // Builder.cs:347
-		public static TCoding Code_DuctDilatedATLASSolitaryDilatedDuct = new TCoding(AbnormalityDuctTypeCS.Code_DuctDilatedATLASSolitaryDilatedDuct);// Builder.cs:347
-		public static TCoding Code_DuctEctasia = new TCoding(AbnormalityDuctTypeCS.Code_DuctEctasia);                                             // Builder.cs:347
+		public static TCoding Code_DuctNormal = new TCoding(AbnormalityDuctTypeCS.Code_DuctNormal);                                               // Builder.cs:353
+		public static TCoding Code_SolitaryDilatedDuct = new TCoding(AbnormalityDuctTypeCS.Code_SolitaryDilatedDuct);                             // Builder.cs:353
+		public static TCoding Code_DuctEctasia = new TCoding(AbnormalityDuctTypeCS.Code_DuctEctasia);                                             // Builder.cs:353
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
-		{                                                                                                                                         // Builder.cs:334
-		    yield return Code_DuctNormal;                                                                                                         // Builder.cs:350
-		    yield return Code_DuctDilatedATLASSolitaryDilatedDuct;                                                                                // Builder.cs:350
-		    yield return Code_DuctEctasia;                                                                                                        // Builder.cs:350
-		}                                                                                                                                         // Builder.cs:356
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:339
+		{                                                                                                                                         // Builder.cs:340
+		    yield return Code_DuctNormal;                                                                                                         // Builder.cs:356
+		    yield return Code_SolitaryDilatedDuct;                                                                                                // Builder.cs:356
+		    yield return Code_DuctEctasia;                                                                                                        // Builder.cs:356
+		}                                                                                                                                         // Builder.cs:362
 		//- Methods
 	}
 }

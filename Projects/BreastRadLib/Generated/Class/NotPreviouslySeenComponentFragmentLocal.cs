@@ -6,52 +6,193 @@ using System.Text;
 using System.Linq;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using BreastRadLib;
 using BreastRadLib.ObservationLocal;
+
+//+Usings
+//-Usings
 
 namespace BreastRadLib.NotPreviouslySeenComponentFragmentLocal
 {
 	//+ LocalClassDefs
+	#region Observation.component:notPreviouslySeen Container Class                                                                            // BuildMemberBase.cs:173
+	// Called from BuildMemberComponents.cs, Line 202
+	// BuildMemberBase.cs:175
 	/// <summary>
-	/// Accessor class for 'notPreviouslySeen'
-	/// [Fhir Element 'Observation.component:notPreviouslySeen]'
+	/// Container class for Observation.component:notPreviouslySeen.
 	/// </summary>
-	public class NotPreviouslySeen_Accessor : MemberListCodedValue<CodeableConcept>                                                            // BuildMemberListCodedValue.cs:51
-	{                                                                                                                                          // BuildMemberListCodedValue.cs:52
-	    // Properties                                                                                                                          // BuildMemberListCodedValue.cs:53
+	public class MNotPreviouslySeen : MContainer, ITMItem<Observation.ComponentComponent>                                                      // BuildMemberBase.cs:178
+	{                                                                                                                                          // BuildMemberBase.cs:179
+	    #region Observation.component:notPreviouslySeen Item Class                                                                             // BuildMemberBase.cs:81
+	    // Called from BuildMemberComponents.cs, Line 202
+	    // BuildMemberBase.cs:83
 	    /// <summary>
-	    /// Access propertyName
+	    /// Item class for Observation.component:notPreviouslySeen.
 	    /// </summary>
-	    public IEnumerable<CodeableConcept> All() => this.items;                                                                               // BuildMemberListCodedValue.cs:118
-	                                                                                                                                           // BuildMemberListCodedValue.cs:120
+	    public class Item                                                                                                                      // BuildMemberBase.cs:86
+	    {                                                                                                                                      // BuildMemberBase.cs:87
+	        // Properties                                                                                                                      // BuildMemberBase.cs:88
+	        // BuildMemberBase.cs:90
+	        /// <summary>
+	        /// Value
+	        /// </summary>
+	        public CodeableConcept Value { get; set; }                                                                                         // BuildMemberBase.cs:93
+	                                                                                                                                           // BuildMemberBase.cs:96
+	        // BuildMemberBase.cs:97
+	        /// <summary>
+	        /// Constructor
+	        /// </summary>
+	        public Item()                                                                                                                      // BuildMemberBase.cs:100
+	        {                                                                                                                                  // BuildMemberBase.cs:101
+	        }                                                                                                                                  // BuildMemberBase.cs:103
+	                                                                                                                                           // BuildMemberBase.cs:105
+	        // Methods                                                                                                                         // BuildMemberBase.cs:106
+	                                                                                                                                           // BuildMemberBase.cs:108
+	        // BuildMemberBase.cs:109
+	        /// <summary>
+	        /// Write item.
+	        /// </summary>
+	        public Observation.ComponentComponent WriteItem(BreastRadiologyDocument doc)                                                       // BuildMemberBase.cs:112
+	        {                                                                                                                                  // BuildMemberBase.cs:113
+	            Observation.ComponentComponent retVal = new Observation.ComponentComponent                                                     // BuildMemberComponents.cs:60
+	            {                                                                                                                              // BuildMemberComponents.cs:61
+	                Value = this.Value,                                                                                                        // BuildMemberComponents.cs:62
+	                Code = NotPreviouslySeen_ComponentCode()                                                                                   // BuildMemberComponents.cs:63
+	            };                                                                                                                             // BuildMemberComponents.cs:64
+	            return retVal;                                                                                                                 // BuildMemberBase.cs:116
+	        }                                                                                                                                  // BuildMemberBase.cs:117
+	                                                                                                                                           // BuildMemberBase.cs:119
+	        // BuildMemberBase.cs:120
+	        /// <summary>
+	        /// Read item.
+	        /// </summary>
+	        public void ReadItem(BreastRadiologyDocument doc, Observation.ComponentComponent item)                                             // BuildMemberBase.cs:123
+	        {                                                                                                                                  // BuildMemberBase.cs:124
+	            this.Value = (CodeableConcept) item.Value;                                                                                     // BuildMemberComponents.cs:53
+	        }                                                                                                                                  // BuildMemberBase.cs:127
+	    }                                                                                                                                      // BuildMemberBase.cs:130
+	    #endregion                                                                                                                             // BuildMemberBase.cs:131
+	                                                                                                                                           // BuildMemberBase.cs:182
+	    // Properties                                                                                                                          // BuildMemberBase.cs:183
+	    #region Common Properties (Non-Singleton)                                                                                              // BuildMemberBase.cs:276
+	    List<Item> items = new List<Item>();                                                                                                   // BuildMemberBase.cs:277
+	                                                                                                                                           // BuildMemberBase.cs:279
+	    // BuildMemberBase.cs:280
 	    /// <summary>
-	    /// Access item at indicated location in list
+	    /// Get All Items
 	    /// </summary>
-	    public CodeableConcept At(Int32 i) => base.items[i];                                                                                   // BuildMemberListCodedValue.cs:124
-	                                                                                                                                           // BuildMemberListCodedValue.cs:126
+	    IEnumerable<Item> GetAllItems() => this.items;                                                                                         // BuildMemberBase.cs:283
+	                                                                                                                                           // BuildMemberBase.cs:285
+	    // BuildMemberBase.cs:286
 	    /// <summary>
-	    /// Access first item in list
+	    /// Set All Items
 	    /// </summary>
-	    public new CodeableConcept First() => base.First();                                                                                    // BuildMemberListCodedValue.cs:130
-	                                                                                                                                           // BuildMemberListCodedValue.cs:131
+	    void SetAllItems(IEnumerable<Item> items) => this.items = items.ToList();                                                              // BuildMemberBase.cs:289
+	                                                                                                                                           // BuildMemberBase.cs:291
+	    // BuildMemberBase.cs:292
 	    /// <summary>
-	    /// Access first item in list or default value if empty
+	    /// Count property
 	    /// </summary>
-	    public new CodeableConcept FirstOrDefault() => base.FirstOrDefault();                                                                  // BuildMemberListCodedValue.cs:135
-	                                                                                                                                           // BuildMemberListCodedValue.cs:55
-	    // Methods                                                                                                                             // BuildMemberListCodedValue.cs:56
-	                                                                                                                                           // BuildMemberListCodedValue.cs:105
+	    public override Int32 Count => items.Count;                                                                                            // BuildMemberBase.cs:295
+	                                                                                                                                           // BuildMemberBase.cs:297
+	    // BuildMemberBase.cs:298
 	    /// <summary>
-	    /// Append item to end of list
+	    /// Return all items
 	    /// </summary>
-	    public void Append(NotPreviouslySeenVS.TCoding value) => this.RawItems.Add(value);                                                     // BuildMemberListCodedValue.cs:109
-	                                                                                                                                           // BuildMemberListCodedValue.cs:58
+	    public IEnumerable<CodeableConcept> All()                                                                                              // BuildMemberBase.cs:301
+	    {                                                                                                                                      // BuildMemberBase.cs:302
+	        foreach (Item item in items)                                                                                                       // BuildMemberBase.cs:303
+	           yield return item.Value;                                                                                                        // BuildMemberBase.cs:304
+	    }                                                                                                                                      // BuildMemberBase.cs:305
+	                                                                                                                                           // BuildMemberBase.cs:307
+	    // BuildMemberBase.cs:308
 	    /// <summary>
-	    /// Accessor class constructor
+	    /// Get Item's Value at indicated index
 	    /// </summary>
-	    public NotPreviouslySeen_Accessor(BreastRadiologyDocument doc) : base("NotPreviouslySeen_Accessor")                                    // BuildMemberListCodedValue.cs:62
-	    {                                                                                                                                      // BuildMemberListCodedValue.cs:63
-	        this.Init(doc, 0, -1, new Coding("http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes", "notPreviouslySeen"));// BuildMemberListCodedValue.cs:64
-	    }                                                                                                                                      // BuildMemberListCodedValue.cs:66
-	}                                                                                                                                          // BuildMemberListCodedValue.cs:67
+	    public CodeableConcept GetAt(Int32 i) => this.items[i].Value;                                                                          // BuildMemberBase.cs:311
+	                                                                                                                                           // BuildMemberBase.cs:313
+	    // BuildMemberBase.cs:314
+	    /// <summary>
+	    /// Remove Item at indicated index
+	    /// </summary>
+	    public void RemoveAt(Int32 i) => this.items.RemoveAt(i);                                                                               // BuildMemberBase.cs:317
+	                                                                                                                                           // BuildMemberBase.cs:319
+	    // BuildMemberBase.cs:320
+	    /// <summary>
+	    /// Clear all items from collection
+	    /// </summary>
+	    public void Clear() => this.items.Clear();                                                                                             // BuildMemberBase.cs:323
+	    #endregion                                                                                                                             // BuildMemberBase.cs:345
+	                                                                                                                                           // BuildMemberBase.cs:186
+	    // BuildMemberBase.cs:187
+	    /// <summary>
+	    /// Constructor
+	    /// </summary>
+	    public MNotPreviouslySeen(Int32 min, Int32 max) : base("Observation.component:notPreviouslySeen", min, max)                            // BuildMemberBase.cs:190
+	    {                                                                                                                                      // BuildMemberBase.cs:191
+	    }                                                                                                                                      // BuildMemberBase.cs:193
+	                                                                                                                                           // BuildMemberBase.cs:195
+	    // Methods                                                                                                                             // BuildMemberBase.cs:196
+	    private static CodeableConcept NotPreviouslySeen_ComponentCode()                                                                       // FhirConstruct.cs:759
+	    {                                                                                                                                      // FhirConstruct.cs:760
+	        CodeableConcept retVal = new CodeableConcept();                                                                                    // FhirConstruct.cs:761
+	        retVal.Coding = new List<Coding>();                                                                                                // FhirConstruct.cs:767
+	        {                                                                                                                                  // FhirConstruct.cs:770
+	            var temp4 = new Coding();                                                                                                      // FhirConstruct.cs:771
+	            temp4.SystemElement = new FhirUri();                                                                                           // FhirConstruct.cs:774
+	            temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";               // FhirConstruct.cs:776
+	            temp4.CodeElement = new Code();                                                                                                // FhirConstruct.cs:790
+	            temp4.CodeElement.Value = "notPreviouslySeen";                                                                                 // FhirConstruct.cs:792
+	            retVal.Coding.Add(temp4);                                                                                                      // FhirConstruct.cs:819
+	        }                                                                                                                                  // FhirConstruct.cs:820
+	        return retVal;                                                                                                                     // FhirConstruct.cs:835
+	    }                                                                                                                                      // FhirConstruct.cs:836
+	                                                                                                                                           // BuildMemberBase.cs:329
+	    // BuildMemberBase.cs:330
+	    /// <summary>
+	    /// Append value to collection
+	    /// </summary>
+	    public CodeableConcept Append(CodeableConcept value)                                                                                   // BuildMemberBase.cs:333
+	    {                                                                                                                                      // BuildMemberBase.cs:334
+	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:335
+	        item.Value = value;                                                                                                                // BuildMemberBase.cs:336
+	        this.items.Add(item);                                                                                                              // BuildMemberBase.cs:337
+	        return value;                                                                                                                      // BuildMemberBase.cs:338
+	    }                                                                                                                                      // BuildMemberBase.cs:339
+	                                                                                                                                           // BuildMemberBase.cs:349
+	    // BuildMemberBase.cs:350
+	    /// <summary>
+	    /// Write container items.
+	    /// </summary>
+	    public IEnumerable<Observation.ComponentComponent> Write(BreastRadiologyDocument doc)                                                  // BuildMemberComponents.cs:97
+	    {                                                                                                                                      // BuildMemberComponents.cs:98
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberComponents.cs:99
+	        {                                                                                                                                  // BuildMemberComponents.cs:100
+	            Observation.ComponentComponent component = item.WriteItem(doc);                                                                // BuildMemberComponents.cs:101
+	            yield return component;                                                                                                        // BuildMemberComponents.cs:102
+	        }                                                                                                                                  // BuildMemberComponents.cs:103
+	    }                                                                                                                                      // BuildMemberComponents.cs:104
+	                                                                                                                                           // BuildMemberBase.cs:355
+	    // BuildMemberBase.cs:356
+	    /// <summary>
+	    /// Read container items.
+	    /// </summary>
+	                                                                                                                                           // BuildMemberComponents.cs:72
+	    public void Read(BreastRadiologyDocument doc, IEnumerable<Observation.ComponentComponent> components)                                  // BuildMemberComponents.cs:73
+	    {                                                                                                                                      // BuildMemberComponents.cs:74
+	        IEnumerable<Observation.ComponentComponent> memberComponents = base.IsMember(doc,                                                  // BuildMemberComponents.cs:75
+	            components,                                                                                                                    // BuildMemberComponents.cs:76
+	            NotPreviouslySeen_ComponentCode());                                                                                            // BuildMemberComponents.cs:77
+	        List<Item> items = new List<Item>();                                                                                               // BuildMemberComponents.cs:78
+	        foreach (Observation.ComponentComponent memberComponent in memberComponents)                                                       // BuildMemberComponents.cs:79
+	        {                                                                                                                                  // BuildMemberComponents.cs:80
+	            Item item = new Item();                                                                                                        // BuildMemberComponents.cs:81
+	            item.ReadItem(doc, memberComponent);                                                                                           // BuildMemberComponents.cs:82
+	            items.Add(item);                                                                                                               // BuildMemberComponents.cs:83
+	        }                                                                                                                                  // BuildMemberComponents.cs:84
+	        this.SetAllItems(items);                                                                                                           // BuildMemberComponents.cs:85
+	    }                                                                                                                                      // BuildMemberComponents.cs:86
+	}                                                                                                                                          // BuildMemberBase.cs:198
+	#endregion                                                                                                                                 // BuildMemberBase.cs:199
 	//- LocalClassDefs
 }

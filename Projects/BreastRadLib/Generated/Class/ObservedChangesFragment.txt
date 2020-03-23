@@ -1,35 +1,67 @@
 		//+ Properties
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access Component value ObsChanges
+		/// ObsChanges
+		/// Access fhir element 'Observation.component:obsChanges'
 		/// </summary>
-		public ObsChanges_Accessor ObsChanges { get ; protected set; }                                                                            // BuildMemberListBase.cs:69
+		public MObsChanges ObsChanges { get ; protected set; }                                                                                    // BuildMemberBase.cs:396
 		//- Properties
 
 			//+ Constructor
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.ObsChanges = new ObsChanges_Accessor(doc);                                                                                          // BuildMemberListBase.cs:75
+			// Called from BuildMemberComponents.cs, Line 202
+			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:375
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsChanges.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:84
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.ObsChanges);                                                                                                    // BuildMemberListBase.cs:78
+			//+ !WriteComponents
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:164
+			//- !WriteComponents
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.ObsChanges);                                                                                                     // BuildMemberListBase.cs:81
+			//+ !ReadComponents
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:173
+			//- !ReadComponents
 			//- ReadCode
 
 			//+ Methods
+			                                                                                                                                         // BuildMemberComponents.cs:128
+			//+ !Components
+			                                                                                                                                         // BuildMemberComponents.cs:131
+			// BuildMemberComponents.cs:132
+			/// <summary>
+			/// Read all component values from resource into this instance
+			/// </summary>
+			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:135
+			{                                                                                                                                        // BuildMemberComponents.cs:136
+			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:137
+			    //+ ReadComponents
+			    this.ObsChanges.Read(this.Doc, items);                                                                                               // BuildMemberComponents.cs:90
+			    //- ReadComponents
+			}                                                                                                                                        // BuildMemberComponents.cs:139
+			                                                                                                                                         // BuildMemberComponents.cs:141
+			// BuildMemberComponents.cs:142
+			/// <summary>
+			/// Write all values from this instance into resource
+			/// </summary>
+			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:145
+			{                                                                                                                                        // BuildMemberComponents.cs:146
+			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:147
+			    //+ WriteComponents
+			    items.AddRange(this.ObsChanges.Write(this.Doc));                                                                                     // BuildMemberComponents.cs:108
+			    //- WriteComponents
+			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:149
+			}                                                                                                                                        // BuildMemberComponents.cs:150
+			//- !Components
 			//- Methods

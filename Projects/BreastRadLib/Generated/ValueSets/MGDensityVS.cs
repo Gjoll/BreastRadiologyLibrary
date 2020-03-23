@@ -28,22 +28,22 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_CentralLucent = new TCoding(MGDensityCS.Code_CentralLucent);                                                   // Builder.cs:347
-		public static TCoding Code_EqualDensity = new TCoding(MGDensityCS.Code_EqualDensity);                                                     // Builder.cs:347
-		public static TCoding Code_FatContaining = new TCoding(MGDensityCS.Code_FatContaining);                                                   // Builder.cs:347
-		public static TCoding Code_HighDensity = new TCoding(MGDensityCS.Code_HighDensity);                                                       // Builder.cs:347
-		public static TCoding Code_LowDensity = new TCoding(MGDensityCS.Code_LowDensity);                                                         // Builder.cs:347
+		public static TCoding Code_CentralLucent = new TCoding(MGDensityCS.Code_CentralLucent);                                                   // Builder.cs:353
+		public static TCoding Code_EqualDensity = new TCoding(MGDensityCS.Code_EqualDensity);                                                     // Builder.cs:353
+		public static TCoding Code_FatContaining = new TCoding(MGDensityCS.Code_FatContaining);                                                   // Builder.cs:353
+		public static TCoding Code_HighDensity = new TCoding(MGDensityCS.Code_HighDensity);                                                       // Builder.cs:353
+		public static TCoding Code_LowDensity = new TCoding(MGDensityCS.Code_LowDensity);                                                         // Builder.cs:353
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
-		{                                                                                                                                         // Builder.cs:334
-		    yield return Code_CentralLucent;                                                                                                      // Builder.cs:350
-		    yield return Code_EqualDensity;                                                                                                       // Builder.cs:350
-		    yield return Code_FatContaining;                                                                                                      // Builder.cs:350
-		    yield return Code_HighDensity;                                                                                                        // Builder.cs:350
-		    yield return Code_LowDensity;                                                                                                         // Builder.cs:350
-		}                                                                                                                                         // Builder.cs:356
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:339
+		{                                                                                                                                         // Builder.cs:340
+		    yield return Code_CentralLucent;                                                                                                      // Builder.cs:356
+		    yield return Code_EqualDensity;                                                                                                       // Builder.cs:356
+		    yield return Code_FatContaining;                                                                                                      // Builder.cs:356
+		    yield return Code_HighDensity;                                                                                                        // Builder.cs:356
+		    yield return Code_LowDensity;                                                                                                         // Builder.cs:356
+		}                                                                                                                                         // Builder.cs:362
 		//- Methods
 	}
 }

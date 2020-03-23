@@ -28,76 +28,76 @@ namespace BreastRadLib
 		}
 
 		//+ Fields
-		public static TCoding Code_BBPellet = new TCoding(ForeignObjectCS.Code_BBPellet);                                                         // Builder.cs:347
-		public static TCoding Code_BBPellets = new TCoding(ForeignObjectCS.Code_BBPellets);                                                       // Builder.cs:347
-		public static TCoding Code_BiopsyClip = new TCoding(ForeignObjectCS.Code_BiopsyClip);                                                     // Builder.cs:347
-		public static TCoding Code_BiopsyClips = new TCoding(ForeignObjectCS.Code_BiopsyClips);                                                   // Builder.cs:347
-		public static TCoding Code_BreastMarker = new TCoding(ForeignObjectCS.Code_BreastMarker);                                                 // Builder.cs:347
-		public static TCoding Code_BreastMarkers = new TCoding(ForeignObjectCS.Code_BreastMarkers);                                               // Builder.cs:347
-		public static TCoding Code_CatheterSleeves = new TCoding(ForeignObjectCS.Code_CatheterSleeves);                                           // Builder.cs:347
-		public static TCoding Code_ChemotherapyPort = new TCoding(ForeignObjectCS.Code_ChemotherapyPort);                                         // Builder.cs:347
-		public static TCoding Code_Clip = new TCoding(ForeignObjectCS.Code_Clip);                                                                 // Builder.cs:347
-		public static TCoding Code_Clips = new TCoding(ForeignObjectCS.Code_Clips);                                                               // Builder.cs:347
-		public static TCoding Code_Coil = new TCoding(ForeignObjectCS.Code_Coil);                                                                 // Builder.cs:347
-		public static TCoding Code_Glass = new TCoding(ForeignObjectCS.Code_Glass);                                                               // Builder.cs:347
-		public static TCoding Code_GoldSeed = new TCoding(ForeignObjectCS.Code_GoldSeed);                                                         // Builder.cs:347
-		public static TCoding Code_GunshotWound = new TCoding(ForeignObjectCS.Code_GunshotWound);                                                 // Builder.cs:347
-		public static TCoding Code_MarkerClip = new TCoding(ForeignObjectCS.Code_MarkerClip);                                                     // Builder.cs:347
-		public static TCoding Code_Metal = new TCoding(ForeignObjectCS.Code_Metal);                                                               // Builder.cs:347
-		public static TCoding Code_MetallicMarker = new TCoding(ForeignObjectCS.Code_MetallicMarker);                                             // Builder.cs:347
-		public static TCoding Code_MetallicMarkers = new TCoding(ForeignObjectCS.Code_MetallicMarkers);                                           // Builder.cs:347
-		public static TCoding Code_MetallicObjects = new TCoding(ForeignObjectCS.Code_MetallicObjects);                                           // Builder.cs:347
-		public static TCoding Code_Needle = new TCoding(ForeignObjectCS.Code_Needle);                                                             // Builder.cs:347
-		public static TCoding Code_NippleJewelry = new TCoding(ForeignObjectCS.Code_NippleJewelry);                                               // Builder.cs:347
-		public static TCoding Code_NonMetallicBody = new TCoding(ForeignObjectCS.Code_NonMetallicBody);                                           // Builder.cs:347
-		public static TCoding Code_Pacemaker = new TCoding(ForeignObjectCS.Code_Pacemaker);                                                       // Builder.cs:347
-		public static TCoding Code_SiliconeGranuloma = new TCoding(ForeignObjectCS.Code_SiliconeGranuloma);                                       // Builder.cs:347
-		public static TCoding Code_Sponge = new TCoding(ForeignObjectCS.Code_Sponge);                                                             // Builder.cs:347
-		public static TCoding Code_SurgicalClip = new TCoding(ForeignObjectCS.Code_SurgicalClip);                                                 // Builder.cs:347
-		public static TCoding Code_SurgicalClips = new TCoding(ForeignObjectCS.Code_SurgicalClips);                                               // Builder.cs:347
-		public static TCoding Code_Swab = new TCoding(ForeignObjectCS.Code_Swab);                                                                 // Builder.cs:347
-		public static TCoding Code_TitaniumClip = new TCoding(ForeignObjectCS.Code_TitaniumClip);                                                 // Builder.cs:347
-		public static TCoding Code_TitaniumClips = new TCoding(ForeignObjectCS.Code_TitaniumClips);                                               // Builder.cs:347
-		public static TCoding Code_Wire = new TCoding(ForeignObjectCS.Code_Wire);                                                                 // Builder.cs:347
-		public static TCoding Code_WireFragment = new TCoding(ForeignObjectCS.Code_WireFragment);                                                 // Builder.cs:347
+		public static TCoding Code_BBPellet = new TCoding(ForeignObjectCS.Code_BBPellet);                                                         // Builder.cs:353
+		public static TCoding Code_BBPellets = new TCoding(ForeignObjectCS.Code_BBPellets);                                                       // Builder.cs:353
+		public static TCoding Code_BiopsyClip = new TCoding(ForeignObjectCS.Code_BiopsyClip);                                                     // Builder.cs:353
+		public static TCoding Code_BiopsyClips = new TCoding(ForeignObjectCS.Code_BiopsyClips);                                                   // Builder.cs:353
+		public static TCoding Code_BreastMarker = new TCoding(ForeignObjectCS.Code_BreastMarker);                                                 // Builder.cs:353
+		public static TCoding Code_BreastMarkers = new TCoding(ForeignObjectCS.Code_BreastMarkers);                                               // Builder.cs:353
+		public static TCoding Code_CatheterSleeves = new TCoding(ForeignObjectCS.Code_CatheterSleeves);                                           // Builder.cs:353
+		public static TCoding Code_ChemotherapyPort = new TCoding(ForeignObjectCS.Code_ChemotherapyPort);                                         // Builder.cs:353
+		public static TCoding Code_Clip = new TCoding(ForeignObjectCS.Code_Clip);                                                                 // Builder.cs:353
+		public static TCoding Code_Clips = new TCoding(ForeignObjectCS.Code_Clips);                                                               // Builder.cs:353
+		public static TCoding Code_Coil = new TCoding(ForeignObjectCS.Code_Coil);                                                                 // Builder.cs:353
+		public static TCoding Code_Glass = new TCoding(ForeignObjectCS.Code_Glass);                                                               // Builder.cs:353
+		public static TCoding Code_GoldSeed = new TCoding(ForeignObjectCS.Code_GoldSeed);                                                         // Builder.cs:353
+		public static TCoding Code_GunshotWound = new TCoding(ForeignObjectCS.Code_GunshotWound);                                                 // Builder.cs:353
+		public static TCoding Code_MarkerClip = new TCoding(ForeignObjectCS.Code_MarkerClip);                                                     // Builder.cs:353
+		public static TCoding Code_Metal = new TCoding(ForeignObjectCS.Code_Metal);                                                               // Builder.cs:353
+		public static TCoding Code_MetallicMarker = new TCoding(ForeignObjectCS.Code_MetallicMarker);                                             // Builder.cs:353
+		public static TCoding Code_MetallicMarkers = new TCoding(ForeignObjectCS.Code_MetallicMarkers);                                           // Builder.cs:353
+		public static TCoding Code_MetallicObjects = new TCoding(ForeignObjectCS.Code_MetallicObjects);                                           // Builder.cs:353
+		public static TCoding Code_Needle = new TCoding(ForeignObjectCS.Code_Needle);                                                             // Builder.cs:353
+		public static TCoding Code_NippleJewelry = new TCoding(ForeignObjectCS.Code_NippleJewelry);                                               // Builder.cs:353
+		public static TCoding Code_NonMetallicBody = new TCoding(ForeignObjectCS.Code_NonMetallicBody);                                           // Builder.cs:353
+		public static TCoding Code_Pacemaker = new TCoding(ForeignObjectCS.Code_Pacemaker);                                                       // Builder.cs:353
+		public static TCoding Code_SiliconeGranuloma = new TCoding(ForeignObjectCS.Code_SiliconeGranuloma);                                       // Builder.cs:353
+		public static TCoding Code_Sponge = new TCoding(ForeignObjectCS.Code_Sponge);                                                             // Builder.cs:353
+		public static TCoding Code_SurgicalClip = new TCoding(ForeignObjectCS.Code_SurgicalClip);                                                 // Builder.cs:353
+		public static TCoding Code_SurgicalClips = new TCoding(ForeignObjectCS.Code_SurgicalClips);                                               // Builder.cs:353
+		public static TCoding Code_Swab = new TCoding(ForeignObjectCS.Code_Swab);                                                                 // Builder.cs:353
+		public static TCoding Code_TitaniumClip = new TCoding(ForeignObjectCS.Code_TitaniumClip);                                                 // Builder.cs:353
+		public static TCoding Code_TitaniumClips = new TCoding(ForeignObjectCS.Code_TitaniumClips);                                               // Builder.cs:353
+		public static TCoding Code_Wire = new TCoding(ForeignObjectCS.Code_Wire);                                                                 // Builder.cs:353
+		public static TCoding Code_WireFragment = new TCoding(ForeignObjectCS.Code_WireFragment);                                                 // Builder.cs:353
 		//- Fields
 
 		//+ Methods
-		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:333
-		{                                                                                                                                         // Builder.cs:334
-		    yield return Code_BBPellet;                                                                                                           // Builder.cs:350
-		    yield return Code_BBPellets;                                                                                                          // Builder.cs:350
-		    yield return Code_BiopsyClip;                                                                                                         // Builder.cs:350
-		    yield return Code_BiopsyClips;                                                                                                        // Builder.cs:350
-		    yield return Code_BreastMarker;                                                                                                       // Builder.cs:350
-		    yield return Code_BreastMarkers;                                                                                                      // Builder.cs:350
-		    yield return Code_CatheterSleeves;                                                                                                    // Builder.cs:350
-		    yield return Code_ChemotherapyPort;                                                                                                   // Builder.cs:350
-		    yield return Code_Clip;                                                                                                               // Builder.cs:350
-		    yield return Code_Clips;                                                                                                              // Builder.cs:350
-		    yield return Code_Coil;                                                                                                               // Builder.cs:350
-		    yield return Code_Glass;                                                                                                              // Builder.cs:350
-		    yield return Code_GoldSeed;                                                                                                           // Builder.cs:350
-		    yield return Code_GunshotWound;                                                                                                       // Builder.cs:350
-		    yield return Code_MarkerClip;                                                                                                         // Builder.cs:350
-		    yield return Code_Metal;                                                                                                              // Builder.cs:350
-		    yield return Code_MetallicMarker;                                                                                                     // Builder.cs:350
-		    yield return Code_MetallicMarkers;                                                                                                    // Builder.cs:350
-		    yield return Code_MetallicObjects;                                                                                                    // Builder.cs:350
-		    yield return Code_Needle;                                                                                                             // Builder.cs:350
-		    yield return Code_NippleJewelry;                                                                                                      // Builder.cs:350
-		    yield return Code_NonMetallicBody;                                                                                                    // Builder.cs:350
-		    yield return Code_Pacemaker;                                                                                                          // Builder.cs:350
-		    yield return Code_SiliconeGranuloma;                                                                                                  // Builder.cs:350
-		    yield return Code_Sponge;                                                                                                             // Builder.cs:350
-		    yield return Code_SurgicalClip;                                                                                                       // Builder.cs:350
-		    yield return Code_SurgicalClips;                                                                                                      // Builder.cs:350
-		    yield return Code_Swab;                                                                                                               // Builder.cs:350
-		    yield return Code_TitaniumClip;                                                                                                       // Builder.cs:350
-		    yield return Code_TitaniumClips;                                                                                                      // Builder.cs:350
-		    yield return Code_Wire;                                                                                                               // Builder.cs:350
-		    yield return Code_WireFragment;                                                                                                       // Builder.cs:350
-		}                                                                                                                                         // Builder.cs:356
+		public static IEnumerable<TCoding> Codes()                                                                                                // Builder.cs:339
+		{                                                                                                                                         // Builder.cs:340
+		    yield return Code_BBPellet;                                                                                                           // Builder.cs:356
+		    yield return Code_BBPellets;                                                                                                          // Builder.cs:356
+		    yield return Code_BiopsyClip;                                                                                                         // Builder.cs:356
+		    yield return Code_BiopsyClips;                                                                                                        // Builder.cs:356
+		    yield return Code_BreastMarker;                                                                                                       // Builder.cs:356
+		    yield return Code_BreastMarkers;                                                                                                      // Builder.cs:356
+		    yield return Code_CatheterSleeves;                                                                                                    // Builder.cs:356
+		    yield return Code_ChemotherapyPort;                                                                                                   // Builder.cs:356
+		    yield return Code_Clip;                                                                                                               // Builder.cs:356
+		    yield return Code_Clips;                                                                                                              // Builder.cs:356
+		    yield return Code_Coil;                                                                                                               // Builder.cs:356
+		    yield return Code_Glass;                                                                                                              // Builder.cs:356
+		    yield return Code_GoldSeed;                                                                                                           // Builder.cs:356
+		    yield return Code_GunshotWound;                                                                                                       // Builder.cs:356
+		    yield return Code_MarkerClip;                                                                                                         // Builder.cs:356
+		    yield return Code_Metal;                                                                                                              // Builder.cs:356
+		    yield return Code_MetallicMarker;                                                                                                     // Builder.cs:356
+		    yield return Code_MetallicMarkers;                                                                                                    // Builder.cs:356
+		    yield return Code_MetallicObjects;                                                                                                    // Builder.cs:356
+		    yield return Code_Needle;                                                                                                             // Builder.cs:356
+		    yield return Code_NippleJewelry;                                                                                                      // Builder.cs:356
+		    yield return Code_NonMetallicBody;                                                                                                    // Builder.cs:356
+		    yield return Code_Pacemaker;                                                                                                          // Builder.cs:356
+		    yield return Code_SiliconeGranuloma;                                                                                                  // Builder.cs:356
+		    yield return Code_Sponge;                                                                                                             // Builder.cs:356
+		    yield return Code_SurgicalClip;                                                                                                       // Builder.cs:356
+		    yield return Code_SurgicalClips;                                                                                                      // Builder.cs:356
+		    yield return Code_Swab;                                                                                                               // Builder.cs:356
+		    yield return Code_TitaniumClip;                                                                                                       // Builder.cs:356
+		    yield return Code_TitaniumClips;                                                                                                      // Builder.cs:356
+		    yield return Code_Wire;                                                                                                               // Builder.cs:356
+		    yield return Code_WireFragment;                                                                                                       // Builder.cs:356
+		}                                                                                                                                         // Builder.cs:362
 		//- Methods
 	}
 }

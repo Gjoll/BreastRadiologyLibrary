@@ -12,26 +12,28 @@ namespace BreastRadLib
 	public class MGDensityCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGDensityCS";                                                   // Builder.cs:371
-		                                                                                                                                          // Builder.cs:383
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGDensityCS";                                                   // Builder.cs:377
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// These are round or oval calcifications that range from under 1 mm to over a centimeter.
 		/// They are the result of fat necrosis, calcified debris in ducts, and occasional fibroadenomas.
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis#benign-calcifications-lucent-centered]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_CentralLucent = new Coding(System, "CentralLucent", "Central lucent");                                          // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_CentralLucent = new Coding(System, "CentralLucent", "Central lucent");                                          // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// (historically, &quot;isodense&quot;)
 		/// X-ray attenuation of the mass is the same as the expected attenuation of an equal volume of
 		/// 
 		/// fibroglandular breast tissue.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_EqualDensity = new Coding(System, "EqualDensity", "Equal density");                                             // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_EqualDensity = new Coding(System, "EqualDensity", "Equal density");                                             // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// This includes all masses containing fat, such as oil cyst, lipoma or galactocele, as well as mixed
 		/// density masses such as hamartoma.
@@ -39,20 +41,22 @@ namespace BreastRadLib
 		/// 
 		/// benign mass.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_FatContaining = new Coding(System, "FatContaining", "Fat containing");                                          // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_FatContaining = new Coding(System, "FatContaining", "Fat containing");                                          // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Your breast tissue may be called dense if you have a lot of fibrous or glandular
 		/// tissue and not much fat in the breasts.
 		/// Having dense breast tissue is common.
 		/// Some women have more dense breast tissue than others.
 		/// [https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/mammograms/breast-density-and-your-mammogram-report.html]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_HighDensity = new Coding(System, "HighDensity", "High density");                                                // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// X-ray attenuation of the mass is less than the expected attenuation of an equal volume of
 		/// fibroglandular breast tissue.
@@ -62,9 +66,10 @@ namespace BreastRadLib
 		/// 
 		/// be worked up.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>
-		public static Coding Code_LowDensity = new Coding(System, "LowDensity", "Low density");                                                   // Builder.cs:402
+		public static Coding Code_LowDensity = new Coding(System, "LowDensity", "Low density");                                                   // Builder.cs:408
 		//- Fields
 	}
 }

@@ -20,6 +20,14 @@ namespace BreastRadLib
 	public class BreastBodyLocationExtension : ExtensionBase, IBreastBodyLocationExtension
 	{
 		//+ Properties
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberExtensionComplex.cs, Line 180
+		// BuildMemberBase.cs:392
+		/// <summary>
+		/// BreastBodyLocationExtension
+		/// Access fhir element 'BreastBodyLocationExtension'
+		/// </summary>
+		public MBreastBodyLocationExtension BreastBodyLocationExtension { get ; protected set; }                                                  // BuildMemberBase.cs:396
 		//- Properties
 
 		/// <summary>
@@ -61,7 +69,9 @@ namespace BreastRadLib
 				resource = new Extension();
 			base.Init(doc, resource);
 			//+ Constructor
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // DefineBase.cs:194
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");                                // DefineBase.cs:238
+			// Called from BuildMemberExtensionComplex.cs, Line 180
+			this.BreastBodyLocationExtension = new MBreastBodyLocationExtension(0, -1);                                                              // BuildMemberBase.cs:375
 			//- Constructor
 		}
 
@@ -88,10 +98,6 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
-			this.ClearExtensions();                                                                                                                  // BuildMemberListExtension.cs:29
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

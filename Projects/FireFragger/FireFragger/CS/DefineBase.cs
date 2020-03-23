@@ -14,7 +14,7 @@ namespace FireFragger.CS
 {
     abstract class DefineBase
     {
-        protected Builder csBuilder;
+        public Builder CSBuilder;
         protected SDInfo fragBase;
         protected delegate void VisitFragment(SDInfo fi, Int32 level);
 
@@ -41,7 +41,7 @@ namespace FireFragger.CS
         public DefineBase(Builder csBuilder,
                     SDInfo fragBase)
         {
-            this.csBuilder = csBuilder;
+            this.CSBuilder = csBuilder;
             this.fragBase = fragBase;
         }
 
@@ -52,21 +52,62 @@ namespace FireFragger.CS
             //this.fragBase.ClassConstructor?.Clear();
         }
 
-        void DefineExtensions()
+        /// <summary>
+        /// We hard code bodySite to be a reference to a hand coded body referrence
+        /// class.
+        /// </summary>
+        protected void DefineBodySite()
         {
-            String baseName = this.fragBase.DiffNodes.ElementDefinition.Path;
-            if (this.fragBase.DiffNodes.TryGetElementNode($"{baseName}.extension", out ElementTreeNode extensionNode) == false)
+            String baseName = this.fragBase.StructDef.Differential.Element[0].Path;
+            String fhirPath = $"{baseName}.bodySite";
+
+            /*
+             * This is a bit kludgy. bodySite can be found in multiple fragments that are coalesced togother
+             * into one. It is actually only defined in one base fragment that is included in multiple
+             * intermediate fragments.
+             * To stop MBodySite from being defined multiple times, we only include it if it is in the differential,
+             * i.e. it has been modified, which as of right now only happens one place.
+             */
+            if (this.fragBase.DiffNodes.TryGetElementNode(fhirPath,
+                out ElementTreeNode _) == false)
                 return;
-            BuildMemberListExtension bmv = new BuildMemberListExtension(this.csBuilder, this.fragBase.CodeBlocks);
-            bmv.Build(CSMisc.ClassName(this.fragBase), extensionNode);
+
+            if (this.fragBase.SnapNodes.TryGetElementNode(fhirPath,
+                out ElementTreeNode bodySiteNode) == false)
+                throw new Exception($"Body site node found in differentiual, but not snapshot");
+
+            BuildMembers.BuildMemberElement bme = new BuildMembers.BuildMemberElement(this,
+                this.fragBase.CodeBlocks,
+                bodySiteNode);
+            bme.Build();
+
+            //if (this.fragBase.DiffNodes.TryGetElementNode($"{fhirPath}.extension",
+            //    out ElementTreeNode bodySiteExtensionNode) == false)
+            //    return;
+            //if (bodySiteExtensionNode.Slices.Count <= 1)
+            //    return;
+            //Int32 min = bodySiteNode.ElementDefinition.Min.Value;
+            //Int32 max = CSMisc.ToMax(bodySiteNode.ElementDefinition.Max);
+            //if (max != 1)
+            //    throw new Exception($"Expected bodySite max of 1");
+            //this.fragBase.ClassProperties
+            //    .AppendCode($"public TItemElementSingle<BodySiteExtended> BodySite {{ get; private set; }}")
+            //    ;
+            //this.fragBase.ClassConstructor
+            //    .AppendCode($"this.BodySite = new TItemElementSingle<BodySiteExtended>(\"{fhirPath}\", {min}, {max});")
+            //    ;
+            //this.fragBase.ClassReadCode
+            //    .AppendCode($"this.BodySite.Read(this.Doc, this.Resource);")
+            //    ;
+            //this.fragBase.ClassWriteCode
+            //    .AppendCode($"this.BodySite.Write(this.Doc, this.Resource);")
+            //    ;
         }
 
         public virtual void Build()
         {
             this.MergeFragments();
-            this.DefineExtensions();
         }
-
 
         /// <summary>
         /// Merge code blocks in eah referencedframent into mqin class.
@@ -81,8 +122,7 @@ namespace FireFragger.CS
 
             foreach (SDInfo fiRef in this.fragBase.AllReferencedFragments)
             {
-                String fragmentName = CSMisc.ClassName(fiRef);
-                usingBlock.AppendLine($"using BreastRadLib.{fragmentName}Local;");
+                usingBlock.AppendUniqueLine($"using {CSMisc.LocalClassNameSpace(fiRef)}");
                 this.MergeFragment(fiRef);
             }
         }
@@ -91,7 +131,7 @@ namespace FireFragger.CS
         {
             const String fcn = "MergeFragment";
 
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Integrating fragment {fi.StructDef.Url.LastUriPart()}");
 
@@ -106,8 +146,20 @@ namespace FireFragger.CS
             }
         }
 
+        public String DefineFixed(String path, Element fixedValue)
+        {
 
-        Int32 defIndex = 1;
+            if (this.fragBase.StructDef.Url.LastUriPart().Contains("ObservedFeature") == true)
+                Trace.WriteLine("xxyyz");
+            this.fragBase.ClassMethods
+                .SummaryOpen()
+                .Summary($"Method to create fixed value")
+                .SummaryClose()
+                ;
+            String methodName = $"FixedValue_{path}".ToMachineName();
+            FhirConstruct.Construct(this.fragBase.ClassMethods, fixedValue, methodName, out String propertyType);
+            return methodName;
+        }
 
         void DefineDefaultElement(CodeBlockNested constructCode,
             ElementDefinition elementDefinition)
@@ -120,15 +172,7 @@ namespace FireFragger.CS
             String[] pathElements = elementDefinition.Path.Split('.').ToArray();
             if (pathElements.Length != 2)
                 return;
-
-            this.fragBase.ClassMethods
-                .SummaryOpen()
-                .Summary($"Method to create default value for element")
-                .Summary($"{elementDefinition.ElementId}")
-                .SummaryClose()
-                ;
-            String methodName = $"DefaultValue_{this.defIndex++}";
-            FhirConstruct.Construct(this.fragBase.ClassMethods, defaultValueElement, methodName, out String propertyType);
+            String methodName = this.DefineFixed(elementDefinition.ElementId, defaultValueElement);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;
@@ -136,7 +180,7 @@ namespace FireFragger.CS
 
         void DefineBinding(ElementDefinition elementDefinition)
         {
-            if (CSMisc.BindingClassName(elementDefinition, 
+            if (CSMisc.BindingClassName(elementDefinition,
                 out String bindingClassName,
                 out ElementDefinition.ElementDefinitionBindingComponent binding) == false)
                 return;
@@ -144,7 +188,7 @@ namespace FireFragger.CS
             String fieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String methodName = $"Set{elementDefinition.Path.LastPathPart().ToMachineName()}";
             String fhirFieldName = $"{elementDefinition.Path.LastPathPart().ToMachineName()}";
-            switch(fhirFieldName)
+            switch (fhirFieldName)
             {
                 case "ValueX":
                     fhirFieldName = "Value";

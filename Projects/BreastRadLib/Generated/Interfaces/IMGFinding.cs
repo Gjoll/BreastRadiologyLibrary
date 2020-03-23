@@ -18,58 +18,84 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value AbnormalityCyst
+		/// AbnormalityCyst
 		/// </summary>
-		AbnormalityCyst_Accessor AbnormalityCyst { get ; }                                                                                        // BuildMemberListBase.cs:62
+		MAbnormalityCyst AbnormalityCyst { get ; }                                                                                                // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value AbnormalityDuct
+		/// AbnormalityDuct
 		/// </summary>
-		AbnormalityDuct_Accessor AbnormalityDuct { get ; }                                                                                        // BuildMemberListBase.cs:62
+		MAbnormalityDuct AbnormalityDuct { get ; }                                                                                                // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value AbnormalityForeignObject
+		/// AbnormalityForeignObject
 		/// </summary>
-		AbnormalityForeignObject_Accessor AbnormalityForeignObject { get ; }                                                                      // BuildMemberListBase.cs:62
+		MAbnormalityForeignObject AbnormalityForeignObject { get ; }                                                                              // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value AbnormalityLymphNode
+		/// AbnormalityLymphNode
 		/// </summary>
-		AbnormalityLymphNode_Accessor AbnormalityLymphNode { get ; }                                                                              // BuildMemberListBase.cs:62
+		MAbnormalityLymphNode AbnormalityLymphNode { get ; }                                                                                      // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value AbnormalityMass
+		/// AbnormalityMass
 		/// </summary>
-		AbnormalityMass_Accessor AbnormalityMass { get ; }                                                                                        // BuildMemberListBase.cs:62
+		MAbnormalityMass AbnormalityMass { get ; }                                                                                                // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value AssociatedFeatures
+		/// AssociatedFeature
 		/// </summary>
-		AssociatedFeatures_Accessor AssociatedFeatures { get ; }                                                                                  // BuildMemberListBase.cs:62
+		MAssociatedFeature AssociatedFeature { get ; }                                                                                            // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value AbnormalityFibroadenoma
+		/// AbnormalityFibroadenoma
 		/// </summary>
-		AbnormalityFibroadenoma_Accessor AbnormalityFibroadenoma { get ; }                                                                        // BuildMemberListBase.cs:62
+		MAbnormalityFibroadenoma AbnormalityFibroadenoma { get ; }                                                                                // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityArchitecturalDistortion
+		/// MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		MGAbnormalityArchitecturalDistortion_Accessor MGAbnormalityArchitecturalDistortion { get ; }                                              // BuildMemberListBase.cs:62
+		MMGAbnormalityArchitecturalDistortion MGAbnormalityArchitecturalDistortion { get ; }                                                      // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityAsymmetry
+		/// MGAbnormalityAsymmetry
 		/// </summary>
-		MGAbnormalityAsymmetry_Accessor MGAbnormalityAsymmetry { get ; }                                                                          // BuildMemberListBase.cs:62
+		MMGAbnormalityAsymmetry MGAbnormalityAsymmetry { get ; }                                                                                  // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityCalcification
+		/// MGAbnormalityCalcification
 		/// </summary>
-		MGAbnormalityCalcification_Accessor MGAbnormalityCalcification { get ; }                                                                  // BuildMemberListBase.cs:62
+		MMGAbnormalityCalcification MGAbnormalityCalcification { get ; }                                                                          // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityDensity
+		/// MGAbnormalityDensity
 		/// </summary>
-		MGAbnormalityDensity_Accessor MGAbnormalityDensity { get ; }                                                                              // BuildMemberListBase.cs:62
+		MMGAbnormalityDensity MGAbnormalityDensity { get ; }                                                                                      // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MGAbnormalityFatNecrosis
+		/// MGAbnormalityFatNecrosis
 		/// </summary>
-		MGAbnormalityFatNecrosis_Accessor MGAbnormalityFatNecrosis { get ; }                                                                      // BuildMemberListBase.cs:62
+		MMGAbnormalityFatNecrosis MGAbnormalityFatNecrosis { get ; }                                                                              // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MGBreastDensity
+		/// MGBreastDensity
 		/// </summary>
-		MGBreastDensity_Accessor MGBreastDensity { get ; }                                                                                        // BuildMemberListBase.cs:62
+		MMGBreastDensity MGBreastDensity { get ; }                                                                                                // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

@@ -26,13 +26,14 @@ namespace FireFragger.CS
         {
             const String fcn = "Build";
 
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
             base.Build();
             this.DefineSections();
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.DefineBodySite();
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
         }
@@ -41,11 +42,12 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Composition.section", out ElementTreeNode sectionNode) == false)
                 return;
-            BuildMemberListSection bml = new BuildMemberListSection(this.csBuilder,
-                this.fragBase.CodeBlocks,
-                this.fragBase.SnapNodes,
-                this.fragBase.DiffNodes);
-            bml.Define();
+            {
+                BuildMembers.BuildMemberSection bcr = new BuildMembers.BuildMemberSection(this,
+                    this.fragBase.CodeBlocks,
+                    sectionNode);
+                bcr.Build();
+            }
         }
     }
 }

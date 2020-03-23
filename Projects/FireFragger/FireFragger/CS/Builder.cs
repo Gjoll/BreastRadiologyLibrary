@@ -268,8 +268,14 @@ namespace FireFragger.CS
                 }
             }
 
-            foreach (SDInfo fi in OrderedFragments())
+            SDInfo[] fiArr = OrderedFragments().ToArray();
+            for (Int32 i = 0; i < fiArr.Length; i++)
+            {
+                SDInfo fi = fiArr[i];
+                Trace.WriteLine($"Starting building fragment {fi.StructDef.Url.LastUriPart()}");
                 this.BuildFragment(fi);
+                Trace.WriteLine($"Completed building fragment {fi.StructDef.Url.LastUriPart()}");
+            }
         }
 
         /// <summary>

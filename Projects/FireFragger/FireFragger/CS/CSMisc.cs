@@ -38,7 +38,7 @@ namespace FireFragger.CS
             String valueSet = bindingComp.ValueSet;
 
             // currently we only do local value sets.
-            if (valueSet.StartsWith(Global.LocalValueSertUrl) == false)
+            if (valueSet.StartsWith(Global.LocalValueSetUrl) == false)
                 return false;
             String vsClassName = CSMisc.MachineName(valueSet.LastUriPart());
             bindingClassName = $"{vsClassName}.TCoding";
@@ -85,5 +85,22 @@ namespace FireFragger.CS
         public static String CodeSystemName(CSInfo ci) => $"{MachineName(ci.CodeSystem.Name)}";
         public static String ValueSetName(VSInfo vi) => $"{MachineName(vi.ValueSet.Name)}";
         public static String PropertyName(string name) => $"{MachineName(name)}";
+
+        public static String LocalClassNameSpace(SDInfo fi) => $"BreastRadLib.{CSMisc.ClassName(fi)}Local;";
+        public static String LocalClassNameSpace(String name) => $"BreastRadLib.{CSMisc.ClassName(name)}Local;";
+
+        public static String FhirPath(ElementTreeSlice slice)
+        {
+            return slice.ElementDefinition.ElementId;
+        }
+
+        public static String ResourceClassName(String targetUrl)
+        {
+            String retVal = targetUrl.LastUriPart();
+            if (targetUrl.StartsWith("http://hl7.org/fhir/StructureDefinition/") == true)
+                return $"{retVal.ToMachineName()}Base";
+            return ClassName(retVal);
+        }
+
     }
 }

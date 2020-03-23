@@ -25,8 +25,6 @@ namespace BreastRadLib
                     return new ConsistentWith(doc, (Observation) resource);                                                                 // Builder.cs:143
                 case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/mgbreastdensity":                                         // Builder.cs:142
                     return new MGBreastDensity(doc, (Observation) resource);                                                                // Builder.cs:143
-                case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/observedfeature":                                         // Builder.cs:142
-                    return new ObservedFeature(doc, (Observation) resource);                                                                // Builder.cs:143
                 case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/sectionfindingsleftbreast":                               // Builder.cs:142
                     return new SectionFindingsLeftBreast(doc, (Observation) resource);                                                      // Builder.cs:143
                 case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/sectionfindingsrightbreast":                              // Builder.cs:142
@@ -47,8 +45,8 @@ namespace BreastRadLib
                     return new AbnormalityLymphNode(doc, (Observation) resource);                                                           // Builder.cs:143
                 case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/abnormalitymass":                                         // Builder.cs:142
                     return new AbnormalityMass(doc, (Observation) resource);                                                                // Builder.cs:143
-                case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/associatedfeatures":                                      // Builder.cs:142
-                    return new AssociatedFeatures(doc, (Observation) resource);                                                             // Builder.cs:143
+                case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/associatedfeature":                                       // Builder.cs:142
+                    return new AssociatedFeature(doc, (Observation) resource);                                                              // Builder.cs:143
                 case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/mgabnormalityarchitecturaldistortion":                    // Builder.cs:142
                     return new MGAbnormalityArchitecturalDistortion(doc, (Observation) resource);                                           // Builder.cs:143
                 case "http://hl7.org/fhir/us/breast-radiology/structuredefinition/mgabnormalityasymmetry":                                  // Builder.cs:142

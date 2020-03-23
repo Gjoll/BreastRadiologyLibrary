@@ -19,22 +19,30 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MGFinding
+		/// MGFinding
 		/// </summary>
-		MGFinding_Accessor MGFinding { get ; }                                                                                                    // BuildMemberListBase.cs:62
+		MMGFinding MGFinding { get ; }                                                                                                            // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value MRIFinding
+		/// MRIFinding
 		/// </summary>
-		MRIFinding_Accessor MRIFinding { get ; }                                                                                                  // BuildMemberListBase.cs:62
+		MMRIFinding MRIFinding { get ; }                                                                                                          // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value NMFinding
+		/// NMFinding
 		/// </summary>
-		NMFinding_Accessor NMFinding { get ; }                                                                                                    // BuildMemberListBase.cs:62
+		MNMFinding NMFinding { get ; }                                                                                                            // BuildMemberBase.cs:385
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access HasMembers value USFinding
+		/// USFinding
 		/// </summary>
-		USFinding_Accessor USFinding { get ; }                                                                                                    // BuildMemberListBase.cs:62
+		MUSFinding USFinding { get ; }                                                                                                            // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

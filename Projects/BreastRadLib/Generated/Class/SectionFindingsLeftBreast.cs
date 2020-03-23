@@ -24,22 +24,46 @@ namespace BreastRadLib
 	public class SectionFindingsLeftBreast : ObservationBase, ISectionFindingsLeftBreast
 	{
 		//+ Properties
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access HasMembers value MGFinding
+		/// MGFinding
+		/// Access fhir element 'Observation.hasMember:mGFinding'
 		/// </summary>
-		public MGFinding_Accessor MGFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
+		public MMGFinding MGFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access HasMembers value MRIFinding
+		/// MRIFinding
+		/// Access fhir element 'Observation.hasMember:mRIFinding'
 		/// </summary>
-		public MRIFinding_Accessor MRIFinding { get ; protected set; }                                                                            // BuildMemberListBase.cs:69
+		public MMRIFinding MRIFinding { get ; protected set; }                                                                                    // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access HasMembers value NMFinding
+		/// NMFinding
+		/// Access fhir element 'Observation.hasMember:nMFinding'
 		/// </summary>
-		public NMFinding_Accessor NMFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
+		public MNMFinding NMFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access HasMembers value USFinding
+		/// USFinding
+		/// Access fhir element 'Observation.hasMember:uSFinding'
 		/// </summary>
-		public USFinding_Accessor USFinding { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
+		public MUSFinding USFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberElement.cs, Line 123
+		// BuildMemberBase.cs:392
+		/// <summary>
+		/// BodySite
+		/// Access fhir element 'Observation.bodySite'
+		/// </summary>
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:396
 		//- Properties
 
 		/// <summary>
@@ -81,24 +105,19 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:194
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.MGFinding = new MGFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.MRIFinding = new MRIFinding_Accessor(doc);                                                                                          // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.NMFinding = new NMFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.USFinding = new USFinding_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
+			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:177
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsLeftBreast");                                  // DefineBase.cs:238
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MGFinding = new MMGFinding(0, 1);                                                                                                   // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.MRIFinding = new MMRIFinding(0, 1);                                                                                                 // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.NMFinding = new MNMFinding(0, 1);                                                                                                   // BuildMemberBase.cs:375
+			// Called from BuildMemberReferences.cs, Line 191
+			this.USFinding = new MUSFinding(0, 1);                                                                                                   // BuildMemberBase.cs:375
+			// Called from BuildMemberElement.cs, Line 123
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:375
 			//- Constructor
 		}
 
@@ -114,10 +133,6 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.MGFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
-			if (this.MRIFinding.Validate(sb) == false) retVal = false;                                                                               // BuildMemberListBase.cs:84
-			if (this.NMFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
-			if (this.USFinding.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -129,13 +144,12 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteHasMember(this.MGFinding);                                                                                                     // BuildMemberListBase.cs:78
-			this.WriteHasMember(this.MRIFinding);                                                                                                    // BuildMemberListBase.cs:78
-			this.WriteHasMember(this.NMFinding);                                                                                                     // BuildMemberListBase.cs:78
-			this.WriteHasMember(this.USFinding);                                                                                                     // BuildMemberListBase.cs:78
+			//+ !WriteHasMembers
+			this.WriteHasMembers(this.Doc);                                                                                                          // BuildMemberReferences.cs:155
+			//- !WriteHasMembers
+			this.Resource.SetValue("bodySite", this.BodySite.Write(this.Doc));                                                                       // BuildMemberElement.cs:86
 			//- WriteCode
 		}
 
@@ -148,44 +162,100 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadHasMember(this.MGFinding);                                                                                                      // BuildMemberListBase.cs:81
-			this.ReadHasMember(this.MRIFinding);                                                                                                     // BuildMemberListBase.cs:81
-			this.ReadHasMember(this.NMFinding);                                                                                                      // BuildMemberListBase.cs:81
-			this.ReadHasMember(this.USFinding);                                                                                                      // BuildMemberListBase.cs:81
+			//+ !ReadHasMembers
+			this.ReadHasMembers(this.Doc);                                                                                                           // BuildMemberReferences.cs:164
+			//- !ReadHasMembers
+			this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>("bodySite"));                                                       // BuildMemberElement.cs:71
 			//- ReadCode
 		}
 
 		//+ Methods
+		// DefineBase.cs:155
 		/// <summary>
-		/// Method to create default value for element
-		/// Observation.code
+		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
-		{                                                                                                                                         // FhirConstruct.cs:754
-		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
-		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
-		    {                                                                                                                                     // FhirConstruct.cs:764
-		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
-		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
-		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:770
-		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
-		        temp4.CodeElement.Value = "findingsLeftBreastObservation";                                                                        // FhirConstruct.cs:786
-		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:792
-		        temp4.DisplayElement.Value = "Findings Left Breast observation";                                                                  // FhirConstruct.cs:794
-		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
-		    }                                                                                                                                     // FhirConstruct.cs:814
-		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
-		    retVal.TextElement.Value = "Findings Left Breast observation";                                                                        // FhirConstruct.cs:821
-		    return retVal;                                                                                                                        // FhirConstruct.cs:829
-		}                                                                                                                                         // FhirConstruct.cs:830
+		public CodeableConcept FixedValue_ObservationCode()                                                                                       // FhirConstruct.cs:759
+		{                                                                                                                                         // FhirConstruct.cs:760
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:761
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:767
+		    {                                                                                                                                     // FhirConstruct.cs:770
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:771
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:774
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:776
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:790
+		        temp4.CodeElement.Value = "findingsLeftBreastObservation";                                                                        // FhirConstruct.cs:792
+		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:798
+		        temp4.DisplayElement.Value = "Findings Left Breast observation";                                                                  // FhirConstruct.cs:800
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:819
+		    }                                                                                                                                     // FhirConstruct.cs:820
+		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:825
+		    retVal.TextElement.Value = "Findings Left Breast observation";                                                                        // FhirConstruct.cs:827
+		    return retVal;                                                                                                                        // FhirConstruct.cs:835
+		}                                                                                                                                         // FhirConstruct.cs:836
+		// DefineBase.cs:155
+		/// <summary>
+		/// Method to create fixed value
+		/// </summary>
+		public CodeableConcept FixedValue_ObservationBodySite()                                                                                   // FhirConstruct.cs:759
+		{                                                                                                                                         // FhirConstruct.cs:760
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:761
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:767
+		    {                                                                                                                                     // FhirConstruct.cs:770
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:771
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:774
+		        temp4.SystemElement.Value = "http://snomed.info/sct";                                                                             // FhirConstruct.cs:776
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:790
+		        temp4.CodeElement.Value = "80248007";                                                                                             // FhirConstruct.cs:792
+		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:798
+		        temp4.DisplayElement.Value = "Left breast structure (body structure)";                                                            // FhirConstruct.cs:800
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:819
+		    }                                                                                                                                     // FhirConstruct.cs:820
+		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:825
+		    retVal.TextElement.Value = "Left breast structure (body structure)";                                                                  // FhirConstruct.cs:827
+		    return retVal;                                                                                                                        // FhirConstruct.cs:835
+		}                                                                                                                                         // FhirConstruct.cs:836
+			// DefineBase.cs:199
 			/// <summary>
 			/// Set Observation.value[x] to one of the predefined items
 			/// </summary>
-			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:158
-			{                                                                                                                                        // DefineBase.cs:159
-			    //If: C:\Development\HL7\BreastRadiologyLibrary\Projects\FireFragger\FireFragger\CS\DefineBase.cs 160                                // CodeBlockNested.cs:588
-			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:161
-			}                                                                                                                                        // DefineBase.cs:164
+			public void SetValueX(BiRadsAssessmentCategoriesVS.TCoding code)                                                                         // DefineBase.cs:202
+			{                                                                                                                                        // DefineBase.cs:203
+			    this.Resource.Value = (CodeableConcept) code;                                                                                        // DefineBase.cs:205
+			}                                                                                                                                        // DefineBase.cs:208
+			                                                                                                                                         // BuildMemberReferences.cs:119
+		//+ !HasMembers
+			                                                                                                                                         // BuildMemberReferences.cs:122
+			// BuildMemberReferences.cs:123
+			/// <summary>
+			/// Read all values from resource into this instance
+			/// </summary>
+			private void ReadHasMembers(BreastRadiologyDocument doc)                                                                                 // BuildMemberReferences.cs:126
+			{                                                                                                                                        // BuildMemberReferences.cs:127
+			    List<ResourceReference> items = this.Resource.GetValue<ResourceReference>("hasMember").ToList();                                     // BuildMemberReferences.cs:128
+			    //+ ReadHasMembers
+			    this.MGFinding.Read(this.Doc, items);                                                                                                // BuildMemberReferences.cs:81
+			    this.MRIFinding.Read(this.Doc, items);                                                                                               // BuildMemberReferences.cs:81
+			    this.NMFinding.Read(this.Doc, items);                                                                                                // BuildMemberReferences.cs:81
+			    this.USFinding.Read(this.Doc, items);                                                                                                // BuildMemberReferences.cs:81
+			    //- ReadHasMembers
+			}                                                                                                                                        // BuildMemberReferences.cs:130
+			                                                                                                                                         // BuildMemberReferences.cs:132
+			// BuildMemberReferences.cs:133
+			/// <summary>
+			/// Write all values from this instance into resource
+			/// </summary>
+			private void WriteHasMembers(BreastRadiologyDocument doc)                                                                                // BuildMemberReferences.cs:136
+			{                                                                                                                                        // BuildMemberReferences.cs:137
+			    List<ResourceReference> items = new List<ResourceReference>();                                                                       // BuildMemberReferences.cs:138
+			    //+ WriteHasMembers
+			    items.AddRange(this.MGFinding.Write(this.Doc));                                                                                      // BuildMemberReferences.cs:99
+			    items.AddRange(this.MRIFinding.Write(this.Doc));                                                                                     // BuildMemberReferences.cs:99
+			    items.AddRange(this.NMFinding.Write(this.Doc));                                                                                      // BuildMemberReferences.cs:99
+			    items.AddRange(this.USFinding.Write(this.Doc));                                                                                      // BuildMemberReferences.cs:99
+			    //- WriteHasMembers
+			    this.Resource.SetValue("hasMember", items);                                                                                          // BuildMemberReferences.cs:140
+			}                                                                                                                                        // BuildMemberReferences.cs:141
+		//- !HasMembers
 		//- Methods
 	}
 }

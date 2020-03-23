@@ -26,12 +26,13 @@ namespace FireFragger.CS
         {
             const String fcn = "Build";
 
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Building {this.fragBase.StructDef.Url.LastUriPart()}");
 
             base.Build();
-            this.csBuilder.ConversionInfo(this.GetType().Name,
+            this.DefineBodySite();
+            this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");
         }

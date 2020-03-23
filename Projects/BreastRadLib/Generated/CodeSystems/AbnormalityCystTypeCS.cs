@@ -12,17 +12,18 @@ namespace BreastRadLib
 	public class AbnormalityCystTypeCS
 	{
 		//+ Fields
-		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityCystTypeCS";                                         // Builder.cs:371
-		                                                                                                                                          // Builder.cs:383
+		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityCystTypeCS";                                         // Builder.cs:377
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A cyst is a sac-like pocket of membranous tissue that contains fluid, air, or other
 		/// substances.
 		/// Cysts can grow almost anywhere in your body or under your skin.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
-		public static Coding Code_Cyst = new Coding(System, "Cyst", "Cyst");                                                                      // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_Cyst = new Coding(System, "Cyst", "Cyst");                                                                      // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Complex cysts have irregular or scalloped borders, thick walls, and some evidence
 		/// of solid areas and/or debris in the fluid.
@@ -32,10 +33,11 @@ namespace BreastRadLib
 		/// If blood or any unusual cells are present, further testing may be needed to rule
 		/// out breast cancer.
 		/// [https://www.breastcancer.org/symptoms/benign/cysts]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CystComplex = new Coding(System, "CystComplex", "Cyst complex");                                                // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_CystComplex = new Coding(System, "CystComplex", "Cyst complex");                                                // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Complicated cysts are &quot;in between&quot; simple and complex.
 		/// Although they share most of the features of simple cysts, they tend to have some
@@ -43,43 +45,48 @@ namespace BreastRadLib
 		/// However, they don&#39;t have the thick walls or obvious solid components that a complex
 		/// cyst has.
 		/// [https://www.breastcancer.org/symptoms/benign/cysts]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CystComplicated = new Coding(System, "CystComplicated", "Cyst complicated");                                    // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_CystComplicated = new Coding(System, "CystComplicated", "Cyst complicated");                                    // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Is a sac-like pocket of tissue that contains fluid, air, or other substances.
 		/// A Microcyst is small and less than 2-3 mm.
 		/// They are often in clusters and only show up on a mammogram or ultrasound.
 		/// 
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
-		public static Coding Code_CystMicro = new Coding(System, "CystMicro", "Cyst micro");                                                      // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_CystMicro = new Coding(System, "CystMicro", "Cyst micro");                                                      // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Oil cysts are filled with fluid that may feel smooth and soft/squishy.
 		/// They are caused by the breakdown of fatty tissue.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CystOil = new Coding(System, "CystOil", "Cyst oil");                                                            // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_CystOil = new Coding(System, "CystOil", "Cyst oil");                                                            // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A simple cyst is a sac-like pocket of membranous tissue that only contains clear
 		/// fluid.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CystSimple = new Coding(System, "CystSimple", "Cyst simple");                                                   // Builder.cs:402
-		                                                                                                                                          // Builder.cs:383
+		public static Coding Code_CystSimple = new Coding(System, "CystSimple", "Cyst simple");                                                   // Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A cyst that is filled with debris and fluid substance.
 		/// It Is either considered a complex or complicated cyst.
 		/// The type of debris determines what kind of cyst.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
-		public static Coding Code_CystWithDebris = new Coding(System, "CystWithDebris", "Cyst with debris");                                      // Builder.cs:402
+		public static Coding Code_CystWithDebris = new Coding(System, "CystWithDebris", "Cyst with debris");                                      // Builder.cs:408
 		//- Fields
 	}
 }

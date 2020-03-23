@@ -26,14 +26,22 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access Component value Value
+		/// Value
+		/// Access fhir element 'Observation.component:value'
 		/// </summary>
-		public Value_Accessor Value { get ; protected set; }                                                                                      // BuildMemberListBase.cs:69
+		public MValue Value { get ; protected set; }                                                                                              // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access Component value Qualifier
+		/// Qualifier
+		/// Access fhir element 'Observation.component:qualifier'
 		/// </summary>
-		public Qualifier_Accessor Qualifier { get ; protected set; }                                                                              // BuildMemberListBase.cs:69
+		public MQualifier Qualifier { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
 		//- Properties
 
 		/// <summary>
@@ -75,16 +83,12 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = DefaultValue_1();                                                                                                   // DefineBase.cs:133
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:194
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.Value = new Value_Accessor(doc);                                                                                                    // BuildMemberListBase.cs:75
-			/// <summary>
-			/// Constructor
-			/// </summary>
-			this.Qualifier = new Qualifier_Accessor(doc);                                                                                            // BuildMemberListBase.cs:75
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:238
+			// Called from BuildMemberComponents.cs, Line 202
+			this.Value = new MValue(1, 1);                                                                                                           // BuildMemberBase.cs:375
+			// Called from BuildMemberComponents.cs, Line 202
+			this.Qualifier = new MQualifier(0, -1);                                                                                                  // BuildMemberBase.cs:375
 			//- Constructor
 		}
 
@@ -100,8 +104,6 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.Value.Validate(sb) == false) retVal = false;                                                                                    // BuildMemberListBase.cs:84
-			if (this.Qualifier.Validate(sb) == false) retVal = false;                                                                                // BuildMemberListBase.cs:84
 			//- ValidateCode
 			return retVal;
 		}
@@ -113,13 +115,11 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();                                                                                                                   // BuildMemberListReference.cs:88
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
-			this.ClearComponents();                                                                                                                  // BuildMemberListCodedValue.cs:155
 			//- WriteCodeStart
 			//+ WriteCode
-			this.WriteComponent(this.Value);                                                                                                         // BuildMemberListBase.cs:78
-			this.WriteComponent(this.Qualifier);                                                                                                     // BuildMemberListBase.cs:78
+			//+ !WriteComponents
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:164
+			//- !WriteComponents
 			//- WriteCode
 		}
 
@@ -132,34 +132,65 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ReadComponent(this.Value);                                                                                                          // BuildMemberListBase.cs:81
-			this.ReadComponent(this.Qualifier);                                                                                                      // BuildMemberListBase.cs:81
+			//+ !ReadComponents
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:173
+			//- !ReadComponents
 			//- ReadCode
 		}
 
 		//+ Methods
+		// DefineBase.cs:155
 		/// <summary>
-		/// Method to create default value for element
-		/// Observation.code
+		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept DefaultValue_1()                                                                                                   // FhirConstruct.cs:753
-		{                                                                                                                                         // FhirConstruct.cs:754
-		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
-		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
-		    {                                                                                                                                     // FhirConstruct.cs:764
-		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
-		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
-		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:770
-		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
-		        temp4.CodeElement.Value = "consistentWithObservation";                                                                            // FhirConstruct.cs:786
-		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:792
-		        temp4.DisplayElement.Value = "Consistent With observation";                                                                       // FhirConstruct.cs:794
-		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
-		    }                                                                                                                                     // FhirConstruct.cs:814
-		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
-		    retVal.TextElement.Value = "Consistent With observation";                                                                             // FhirConstruct.cs:821
-		    return retVal;                                                                                                                        // FhirConstruct.cs:829
-		}                                                                                                                                         // FhirConstruct.cs:830
+		public CodeableConcept FixedValue_ObservationCode()                                                                                       // FhirConstruct.cs:759
+		{                                                                                                                                         // FhirConstruct.cs:760
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:761
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:767
+		    {                                                                                                                                     // FhirConstruct.cs:770
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:771
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:774
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:776
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:790
+		        temp4.CodeElement.Value = "consistentWithObservation";                                                                            // FhirConstruct.cs:792
+		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:798
+		        temp4.DisplayElement.Value = "Consistent With observation";                                                                       // FhirConstruct.cs:800
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:819
+		    }                                                                                                                                     // FhirConstruct.cs:820
+		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:825
+		    retVal.TextElement.Value = "Consistent With observation";                                                                             // FhirConstruct.cs:827
+		    return retVal;                                                                                                                        // FhirConstruct.cs:835
+		}                                                                                                                                         // FhirConstruct.cs:836
+		                                                                                                                                          // BuildMemberComponents.cs:128
+		//+ !Components
+		                                                                                                                                          // BuildMemberComponents.cs:131
+		// BuildMemberComponents.cs:132
+		/// <summary>
+		/// Read all component values from resource into this instance
+		/// </summary>
+		private void ReadComponents(BreastRadiologyDocument doc)                                                                                  // BuildMemberComponents.cs:135
+		{                                                                                                                                         // BuildMemberComponents.cs:136
+		    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();            // BuildMemberComponents.cs:137
+		    //+ ReadComponents
+		    this.Value.Read(this.Doc, items);                                                                                                     // BuildMemberComponents.cs:90
+		    this.Qualifier.Read(this.Doc, items);                                                                                                 // BuildMemberComponents.cs:90
+		    //- ReadComponents
+		}                                                                                                                                         // BuildMemberComponents.cs:139
+		                                                                                                                                          // BuildMemberComponents.cs:141
+		// BuildMemberComponents.cs:142
+		/// <summary>
+		/// Write all values from this instance into resource
+		/// </summary>
+		private void WriteComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:145
+		{                                                                                                                                         // BuildMemberComponents.cs:146
+		    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                              // BuildMemberComponents.cs:147
+		    //+ WriteComponents
+		    items.AddRange(this.Value.Write(this.Doc));                                                                                           // BuildMemberComponents.cs:108
+		    items.AddRange(this.Qualifier.Write(this.Doc));                                                                                       // BuildMemberComponents.cs:108
+		    //- WriteComponents
+		    this.Resource.SetValue("component", items);                                                                                           // BuildMemberComponents.cs:149
+		}                                                                                                                                         // BuildMemberComponents.cs:150
+		//- !Components
 		//- Methods
 	}
 }

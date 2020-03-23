@@ -18,30 +18,42 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Section value Report
+		/// Report
 		/// </summary>
-		Report_Accessor Report { get ; }                                                                                                          // BuildMemberListBase.cs:62
+		MReport Report { get ; }                                                                                                                  // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Section value Impressions
+		/// Impressions
 		/// </summary>
-		Impressions_Accessor Impressions { get ; }                                                                                                // BuildMemberListBase.cs:62
+		MImpressions Impressions { get ; }                                                                                                        // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Section value FindingsRightBreast
+		/// FindingsRightBreast
 		/// </summary>
-		FindingsRightBreast_Accessor FindingsRightBreast { get ; }                                                                                // BuildMemberListBase.cs:62
+		MFindingsRightBreast FindingsRightBreast { get ; }                                                                                        // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Section value FindingsLeftBreast
+		/// FindingsLeftBreast
 		/// </summary>
-		FindingsLeftBreast_Accessor FindingsLeftBreast { get ; }                                                                                  // BuildMemberListBase.cs:62
+		MFindingsLeftBreast FindingsLeftBreast { get ; }                                                                                          // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Section value RelatedResources
+		/// RelatedResources
 		/// </summary>
-		RelatedResources_Accessor RelatedResources { get ; }                                                                                      // BuildMemberListBase.cs:62
+		MRelatedResources RelatedResources { get ; }                                                                                              // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Section value Recommendations
+		/// Recommendations
 		/// </summary>
-		Recommendations_Accessor Recommendations { get ; }                                                                                        // BuildMemberListBase.cs:62
+		MRecommendations Recommendations { get ; }                                                                                                // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods
