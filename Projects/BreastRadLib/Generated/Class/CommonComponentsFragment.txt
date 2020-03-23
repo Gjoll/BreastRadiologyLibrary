@@ -10,7 +10,6 @@
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
 			//- WriteCode

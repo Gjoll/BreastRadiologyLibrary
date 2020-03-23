@@ -20,6 +20,7 @@ namespace BreastRadLib
 		/// It feels different from the surrounding tissue.
 		/// Breast pain, nipple discharge, or skin changes may be present.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI.
 		/// </summary>
 		public static Coding Code_Mass = new Coding(System, "Mass", "Mass");                                                                      // Builder.cs:408
@@ -28,12 +29,14 @@ namespace BreastRadLib
 		/// An intraductal mass has been identified in the breast.
 		/// It is a lump that originates in one or more of the milk ducts in the breast.
 		/// 
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_MassIntraductal = new Coding(System, "MassIntraductal", "Mass intraductal");                                    // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// A mass that is partially solid has been identified in the breast.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -44,6 +47,7 @@ namespace BreastRadLib
 		/// 
 		/// This finding may be described in the mammography report or annotated on the mammographic image when it projects over the breast (especially on two different projections) and may be mistaken for an intramammary lesion.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MassSkinATLASIsSkinLesion = new Coding(System, "MassSkinATLASIsSkinLesion", "Mass skin ATLAS is skin lesion");  // Builder.cs:408
@@ -52,6 +56,7 @@ namespace BreastRadLib
 		/// The mammogram and/or ultrasound show solid mass of the breast.
 		/// This can be nodules, fibrocystic tissue, phylloides tumor, breast cancer or metastatic.
 		/// May need a biopsy confirmation.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

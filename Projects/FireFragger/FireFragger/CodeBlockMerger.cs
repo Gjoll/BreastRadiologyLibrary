@@ -1,6 +1,7 @@
 ﻿using FhirKhit.Tools;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace FireFragger
@@ -52,15 +53,26 @@ namespace FireFragger
                 switch (mergeBlockChild)
                 {
                     case CodeBlockText mergeBlockChildText:
-                        foreach (String line in mergeBlockChild.AllLines())
-                            codeBlock.AppendLine(line, "");
+                        // if the name starts with '!', then dont merge child
+                        // text blocks. Throw away merge text.
+                        if (mergeBlock.Name.StartsWith("!") == false)
+                        {
+                            foreach (String line in mergeBlockChild.AllLines())
+                                codeBlock.AppendLine(line, "");
+                        }
                         break;
 
                     case CodeBlockNested mergeBlockChildNested:
                         CodeBlockNested codeBlockChildNested = codeBlock.Find(mergeBlockChildNested.Name);
                         if (codeBlockChildNested == null)
+                        {
                             codeBlockChildNested = codeBlock.AppendBlock(mergeBlockChildNested.Name);
-                        this.Merge(codeBlockChildNested, mergeBlockChildNested);
+                            codeBlockChildNested.Load(mergeBlockChildNested.Lines(), false);
+                        }
+                        else
+                        {
+                            this.Merge(codeBlockChildNested, mergeBlockChildNested);
+                        }
                         break;
                 }
             }

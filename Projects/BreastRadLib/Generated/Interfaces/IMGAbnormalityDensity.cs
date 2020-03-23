@@ -31,10 +31,12 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access DensityType
+		/// DensityType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> DensityType { get ; }                                                                               // BuildElementItemComponent.cs:64
+		MDensityType DensityType { get ; }                                                                                                        // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

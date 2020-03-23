@@ -60,30 +60,48 @@ namespace FireFragger.CS
         {
             String baseName = this.fragBase.StructDef.Differential.Element[0].Path;
             String fhirPath = $"{baseName}.bodySite";
+
+            /*
+             * This is a bit kludgy. bodySite can be found in multiple fragments that are coalesced togother
+             * into one. It is actually only defined in one base fragment that is included in multiple
+             * intermediate fragments.
+             * To stop MBodySite from being defined multiple times, we only include it if it is in the differential,
+             * i.e. it has been modified, which as of right now only happens one place.
+             */
             if (this.fragBase.DiffNodes.TryGetElementNode(fhirPath,
+                out ElementTreeNode _) == false)
+                return;
+
+            if (this.fragBase.SnapNodes.TryGetElementNode(fhirPath,
                 out ElementTreeNode bodySiteNode) == false)
-                return;
-            if (this.fragBase.DiffNodes.TryGetElementNode($"{fhirPath}.extension",
-                out ElementTreeNode bodySiteExtensionNode) == false)
-                return;
-            if (bodySiteExtensionNode.Slices.Count <= 1)
-                return;
-            Int32 min = bodySiteNode.ElementDefinition.Min.Value;
-            Int32 max = CSMisc.ToMax(bodySiteNode.ElementDefinition.Max);
-            if (max != 1)
-                throw new Exception($"Expected bodySite max of 1");
-            this.fragBase.ClassProperties
-                .AppendCode($"public TItemElementSingle<BodySiteExtended> BodySite {{ get; private set; }}")
-                ;
-            this.fragBase.ClassConstructor
-                .AppendCode($"this.BodySite = new TItemElementSingle<BodySiteExtended>(\"{fhirPath}\", {min}, {max});")
-                ;
-            this.fragBase.ClassReadCode
-                .AppendCode($"this.BodySite.Read(this.Doc, this.Resource);")
-                ;
-            this.fragBase.ClassWriteCode
-                .AppendCode($"this.BodySite.Write(this.Doc, this.Resource);")
-                ;
+                throw new Exception($"Body site node found in differentiual, but not snapshot");
+
+            BuildMembers.BuildMemberElement bme = new BuildMembers.BuildMemberElement(this,
+                this.fragBase.CodeBlocks,
+                bodySiteNode);
+            bme.Build();
+
+            //if (this.fragBase.DiffNodes.TryGetElementNode($"{fhirPath}.extension",
+            //    out ElementTreeNode bodySiteExtensionNode) == false)
+            //    return;
+            //if (bodySiteExtensionNode.Slices.Count <= 1)
+            //    return;
+            //Int32 min = bodySiteNode.ElementDefinition.Min.Value;
+            //Int32 max = CSMisc.ToMax(bodySiteNode.ElementDefinition.Max);
+            //if (max != 1)
+            //    throw new Exception($"Expected bodySite max of 1");
+            //this.fragBase.ClassProperties
+            //    .AppendCode($"public TItemElementSingle<BodySiteExtended> BodySite {{ get; private set; }}")
+            //    ;
+            //this.fragBase.ClassConstructor
+            //    .AppendCode($"this.BodySite = new TItemElementSingle<BodySiteExtended>(\"{fhirPath}\", {min}, {max});")
+            //    ;
+            //this.fragBase.ClassReadCode
+            //    .AppendCode($"this.BodySite.Read(this.Doc, this.Resource);")
+            //    ;
+            //this.fragBase.ClassWriteCode
+            //    .AppendCode($"this.BodySite.Write(this.Doc, this.Resource);")
+            //    ;
         }
 
         public virtual void Build()
@@ -154,7 +172,7 @@ namespace FireFragger.CS
             String[] pathElements = elementDefinition.Path.Split('.').ToArray();
             if (pathElements.Length != 2)
                 return;
-            String methodName = DefineFixed(elementDefinition.ElementId, defaultValueElement);
+            String methodName = this.DefineFixed(elementDefinition.ElementId, defaultValueElement);
             constructCode
                 .AppendCode($"this.Resource.{elementDefinition.Path.LastPathPart().ToMachineName()} = {methodName}();")
                 ;

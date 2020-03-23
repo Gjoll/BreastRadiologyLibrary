@@ -28,17 +28,30 @@ namespace BreastRadLib
 	public class AssociatedFeature : ObservationBase, IAssociatedFeature
 	{
 		//+ Properties
-		public TItemElementSingle<BodySiteExtended> BodySite { get; private set; }                                                                // DefineBase.cs:76
-		                                                                                                                                          // BuildElementItemComponent.cs:68
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberElement.cs, Line 123
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access ObsCount
+		/// BodySite
+		/// Access fhir element 'Observation.bodySite'
 		/// </summary>
-		public TItemComponentSingle<Quantity, Range> ObsCount { get ; protected set; }                                                            // BuildElementItemComponent.cs:72
-		                                                                                                                                          // BuildElementItemComponent.cs:68
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access FeatureType
+		/// ObsCount
+		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public TItemComponentSingle<CodeableConcept> FeatureType { get ; protected set; }                                                         // BuildElementItemComponent.cs:72
+		public MObsCount ObsCount { get ; protected set; }                                                                                        // BuildMemberBase.cs:396
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:392
+		/// <summary>
+		/// FeatureType
+		/// Access fhir element 'Observation.component:featureType'
+		/// </summary>
+		public MFeatureType FeatureType { get ; protected set; }                                                                                  // BuildMemberBase.cs:396
 		//- Properties
 
 		/// <summary>
@@ -80,11 +93,14 @@ namespace BreastRadLib
 				resource = new Observation();
 			base.Init(doc, resource);
 			//+ Constructor
-			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:159
-			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:220
-			this.BodySite = new TItemElementSingle<BodySiteExtended>("Observation.bodySite", 1, 1);                                                  // DefineBase.cs:79
-			this.ObsCount = new TItemComponentSingle<Quantity, Range>("Observation.component:obsCount", 0, 1, FixedValue_ObservationComponentObsCountCode());// BuildElementItemComponent.cs:57
-			this.FeatureType = new TItemComponentSingle<CodeableConcept>("Observation.component:featureType", 1, 1, FixedValue_ObservationComponentFeatureTypeCode());// BuildElementItemComponent.cs:57
+			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
+			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature");                                          // DefineBase.cs:238
+			// Called from BuildMemberElement.cs, Line 123
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:375
+			// Called from BuildMemberComponents.cs, Line 202
+			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:375
+			// Called from BuildMemberComponents.cs, Line 202
+			this.FeatureType = new MFeatureType(1, 1);                                                                                               // BuildMemberBase.cs:375
 			//- Constructor
 		}
 
@@ -100,8 +116,6 @@ namespace BreastRadLib
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsCount.Validate(sb) == false) retVal = false;                                                                                 // BuildElementItemComponent.cs:81
-			if (this.FeatureType.Validate(sb) == false) retVal = false;                                                                              // BuildElementItemComponent.cs:81
 			//- ValidateCode
 			return retVal;
 		}
@@ -113,13 +127,12 @@ namespace BreastRadLib
 		{
 			base.Write();
 			//+ WriteCodeStart
-			this.ClearHasMember();
-			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.BodySite.Write(this.Doc, this.Resource);                                                                                            // DefineBase.cs:85
-			this.ObsCount.Write(this.Doc, this.Resource);                                                                                            // BuildElementItemComponent.cs:75
-			this.FeatureType.Write(this.Doc, this.Resource);                                                                                         // BuildElementItemComponent.cs:75
+			this.Resource.SetValue("bodySite", this.BodySite.Write(this.Doc));                                                                       // BuildMemberElement.cs:86
+			//+ !WriteComponents
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:164
+			//- !WriteComponents
 			//- WriteCode
 		}
 
@@ -132,68 +145,66 @@ namespace BreastRadLib
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.BodySite.Read(this.Doc, this.Resource);                                                                                             // DefineBase.cs:82
-			this.ObsCount.Read(this.Doc, this.Resource);                                                                                             // BuildElementItemComponent.cs:78
-			this.FeatureType.Read(this.Doc, this.Resource);                                                                                          // BuildElementItemComponent.cs:78
+			this.BodySite.Read(this.Doc, this.Resource.GetValue<CodeableConcept>("bodySite"));                                                       // BuildMemberElement.cs:71
+			//+ !ReadComponents
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:173
+			//- !ReadComponents
 			//- ReadCode
 		}
 
 		//+ Methods
+		// DefineBase.cs:155
 		/// <summary>
 		/// Method to create fixed value
 		/// </summary>
-		public CodeableConcept FixedValue_ObservationCode()                                                                                       // FhirConstruct.cs:753
-		{                                                                                                                                         // FhirConstruct.cs:754
-		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
-		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
-		    {                                                                                                                                     // FhirConstruct.cs:764
-		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
-		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
-		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:770
-		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
-		        temp4.CodeElement.Value = "associatedFeaturesObservation";                                                                        // FhirConstruct.cs:786
-		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:792
-		        temp4.DisplayElement.Value = "Associated Features observation";                                                                   // FhirConstruct.cs:794
-		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
-		    }                                                                                                                                     // FhirConstruct.cs:814
-		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:819
-		    retVal.TextElement.Value = "Associated Features observation";                                                                         // FhirConstruct.cs:821
-		    return retVal;                                                                                                                        // FhirConstruct.cs:829
-		}                                                                                                                                         // FhirConstruct.cs:830
+		public CodeableConcept FixedValue_ObservationCode()                                                                                       // FhirConstruct.cs:759
+		{                                                                                                                                         // FhirConstruct.cs:760
+		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:761
+		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:767
+		    {                                                                                                                                     // FhirConstruct.cs:770
+		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:771
+		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:774
+		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes";                                // FhirConstruct.cs:776
+		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:790
+		        temp4.CodeElement.Value = "associatedFeaturesObservation";                                                                        // FhirConstruct.cs:792
+		        temp4.DisplayElement = new FhirString();                                                                                          // FhirConstruct.cs:798
+		        temp4.DisplayElement.Value = "Associated Features observation";                                                                   // FhirConstruct.cs:800
+		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:819
+		    }                                                                                                                                     // FhirConstruct.cs:820
+		    retVal.TextElement = new FhirString();                                                                                                // FhirConstruct.cs:825
+		    retVal.TextElement.Value = "Associated Features observation";                                                                         // FhirConstruct.cs:827
+		    return retVal;                                                                                                                        // FhirConstruct.cs:835
+		}                                                                                                                                         // FhirConstruct.cs:836
+			                                                                                                                                         // BuildMemberComponents.cs:128
+		//+ !Components
+			                                                                                                                                         // BuildMemberComponents.cs:131
+			// BuildMemberComponents.cs:132
 			/// <summary>
-			/// Method to create fixed value
+			/// Read all component values from resource into this instance
 			/// </summary>
-			public CodeableConcept FixedValue_ObservationComponentObsCountCode()                                                                     // FhirConstruct.cs:753
-			{                                                                                                                                        // FhirConstruct.cs:754
-			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
-			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
-			    {                                                                                                                                    // FhirConstruct.cs:764
-			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
-			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
-			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
-			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
-			        temp4.CodeElement.Value = "obsCount";                                                                                            // FhirConstruct.cs:786
-			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
-			    }                                                                                                                                    // FhirConstruct.cs:814
-			    return retVal;                                                                                                                       // FhirConstruct.cs:829
-			}                                                                                                                                        // FhirConstruct.cs:830
-		/// <summary>
-		/// Method to create fixed value
-		/// </summary>
-		public CodeableConcept FixedValue_ObservationComponentFeatureTypeCode()                                                                   // FhirConstruct.cs:753
-		{                                                                                                                                         // FhirConstruct.cs:754
-		    CodeableConcept retVal = new CodeableConcept();                                                                                       // FhirConstruct.cs:755
-		    retVal.Coding = new List<Coding>();                                                                                                   // FhirConstruct.cs:761
-		    {                                                                                                                                     // FhirConstruct.cs:764
-		        var temp4 = new Coding();                                                                                                         // FhirConstruct.cs:765
-		        temp4.SystemElement = new FhirUri();                                                                                              // FhirConstruct.cs:768
-		        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                  // FhirConstruct.cs:770
-		        temp4.CodeElement = new Code();                                                                                                   // FhirConstruct.cs:784
-		        temp4.CodeElement.Value = "featureType";                                                                                          // FhirConstruct.cs:786
-		        retVal.Coding.Add(temp4);                                                                                                         // FhirConstruct.cs:813
-		    }                                                                                                                                     // FhirConstruct.cs:814
-		    return retVal;                                                                                                                        // FhirConstruct.cs:829
-		}                                                                                                                                         // FhirConstruct.cs:830
+			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:135
+			{                                                                                                                                        // BuildMemberComponents.cs:136
+			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:137
+			    //+ ReadComponents
+			    this.ObsCount.Read(this.Doc, items);                                                                                                 // BuildMemberComponents.cs:90
+			    this.FeatureType.Read(this.Doc, items);                                                                                              // BuildMemberComponents.cs:90
+			    //- ReadComponents
+			}                                                                                                                                        // BuildMemberComponents.cs:139
+			                                                                                                                                         // BuildMemberComponents.cs:141
+			// BuildMemberComponents.cs:142
+			/// <summary>
+			/// Write all values from this instance into resource
+			/// </summary>
+			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:145
+			{                                                                                                                                        // BuildMemberComponents.cs:146
+			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:147
+			    //+ WriteComponents
+			    items.AddRange(this.ObsCount.Write(this.Doc));                                                                                       // BuildMemberComponents.cs:108
+			    items.AddRange(this.FeatureType.Write(this.Doc));                                                                                    // BuildMemberComponents.cs:108
+			    //- WriteComponents
+			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:149
+			}                                                                                                                                        // BuildMemberComponents.cs:150
+		//- !Components
 		//- Methods
 	}
 }

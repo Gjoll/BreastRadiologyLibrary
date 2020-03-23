@@ -87,10 +87,20 @@ namespace FireFragger.CS
         public static String PropertyName(string name) => $"{MachineName(name)}";
 
         public static String LocalClassNameSpace(SDInfo fi) => $"BreastRadLib.{CSMisc.ClassName(fi)}Local;";
+        public static String LocalClassNameSpace(String name) => $"BreastRadLib.{CSMisc.ClassName(name)}Local;";
 
         public static String FhirPath(ElementTreeSlice slice)
         {
             return slice.ElementDefinition.ElementId;
         }
+
+        public static String ResourceClassName(String targetUrl)
+        {
+            String retVal = targetUrl.LastUriPart();
+            if (targetUrl.StartsWith("http://hl7.org/fhir/StructureDefinition/") == true)
+                return $"{retVal.ToMachineName()}Base";
+            return ClassName(retVal);
+        }
+
     }
 }

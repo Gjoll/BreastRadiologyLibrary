@@ -18,10 +18,12 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberReferences.cs, Line 191
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access ConsistentWith
+		/// ConsistentWith
 		/// </summary>
-		TItemReferenceMultiple<ConsistentWith> ConsistentWith { get ; }                                                                           // BuildElementItemReference.cs:54
+		MConsistentWith ConsistentWith { get ; }                                                                                                  // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

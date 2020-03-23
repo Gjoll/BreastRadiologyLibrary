@@ -21,14 +21,18 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Value
+		/// Value
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> Value { get ; }                                                                                     // BuildElementItemComponent.cs:64
+		MValue Value { get ; }                                                                                                                    // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Qualifier
+		/// Qualifier
 		/// </summary>
-		TItemComponentMultiple<CodeableConcept> Qualifier { get ; }                                                                               // BuildElementItemComponent.cs:64
+		MQualifier Qualifier { get ; }                                                                                                            // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

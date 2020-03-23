@@ -17,10 +17,12 @@ namespace BreastRadLib
 	public interface IPreviouslyDemonstratedByFragment 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access PreviouslyDemonstratedBy
+		/// PreviouslyDemonstratedBy
 		/// </summary>
-		TItemComponentMultiple<CodeableConcept> PreviouslyDemonstratedBy { get ; }                                                                // BuildElementItemComponent.cs:64
+		MPreviouslyDemonstratedBy PreviouslyDemonstratedBy { get ; }                                                                              // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

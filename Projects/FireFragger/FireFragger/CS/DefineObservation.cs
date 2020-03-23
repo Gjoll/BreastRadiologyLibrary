@@ -26,22 +26,24 @@ namespace FireFragger.CS
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.component", out ElementTreeNode componentNode) == false)
                 return;
-            BuildItemComponent bml = new BuildItemComponent(this, 
-                this.fragBase.CodeBlocks, 
-                "Component",
-                componentNode);
-            bml.Define();
+            {
+                BuildMembers.BuildMemberComponents bm = new BuildMembers.BuildMemberComponents(this,
+                    this.fragBase.CodeBlocks,
+                    componentNode);
+                bm.Build();
+            }
         }
 
         void DefineHasMembers()
         {
             if (this.fragBase.DiffNodes.TryGetElementNode("Observation.hasMember", out ElementTreeNode hasMemberNode) == false)
                 return;
-            BuildItemReference bcr = new BuildItemReference(this,
-                this.fragBase.CodeBlocks, 
-                "HasMembers", 
-                hasMemberNode);
-            bcr.Define();
+            {
+                BuildMembers.BuildMemberReferences bm = new BuildMembers.BuildMemberReferences(this,
+                    this.fragBase.CodeBlocks,
+                    hasMemberNode);
+                bm.Build();
+            }
         }
 
         public override void Build()
@@ -58,8 +60,6 @@ namespace FireFragger.CS
             this.DefineBodySite();
             this.DefineComponents();
             this.DefineHasMembers();
-            ClearDuplicateLines(this.fragBase.ClassWriteCodeStart);
-            ClearDuplicateLines(this.fragBase.ClassReadCodeStart);
             this.CSBuilder.ConversionInfo(this.GetType().Name,
                fcn,
                $"Completed {this.fragBase.StructDef.Url.LastUriPart()}");

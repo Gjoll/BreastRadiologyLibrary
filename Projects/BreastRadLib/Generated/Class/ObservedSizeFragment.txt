@@ -1,50 +1,67 @@
 		//+ Properties
-		                                                                                                                                          // BuildElementItemComponent.cs:68
+		                                                                                                                                          // BuildMemberBase.cs:390
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:392
 		/// <summary>
-		/// Access ObsSize
+		/// ObsSize
+		/// Access fhir element 'Observation.component:obsSize'
 		/// </summary>
-		public TItemComponentMultiple<Quantity, Range> ObsSize { get ; protected set; }                                                           // BuildElementItemComponent.cs:72
+		public MObsSize ObsSize { get ; protected set; }                                                                                          // BuildMemberBase.cs:396
 		//- Properties
 
 			//+ Constructor
-			this.ObsSize = new TItemComponentMultiple<Quantity, Range>("Observation.component:obsSize", 0, 3, FixedValue_ObservationComponentObsSizeCode());// BuildElementItemComponent.cs:57
+			// Called from BuildMemberComponents.cs, Line 202
+			this.ObsSize = new MObsSize(0, 3);                                                                                                       // BuildMemberBase.cs:375
 			//- Constructor
 
 			//+ ValidateCodeStart
 			//- ValidateCodeStart
 			//+ ValidateCode
-			if (this.ObsSize.Validate(sb) == false) retVal = false;                                                                                  // BuildElementItemComponent.cs:81
 			//- ValidateCode
 
 			//+ WriteCodeStart
-			this.ClearComponent();
 			//- WriteCodeStart
 			//+ WriteCode
-			this.ObsSize.Write(this.Doc, this.Resource);                                                                                             // BuildElementItemComponent.cs:75
+			//+ !WriteComponents
+			this.WriteComponents(this.Doc);                                                                                                          // BuildMemberComponents.cs:164
+			//- !WriteComponents
 			//- WriteCode
 
 			//+ ReadCodeStart
 			//- ReadCodeStart
 			//+ ReadCode
-			this.ObsSize.Read(this.Doc, this.Resource);                                                                                              // BuildElementItemComponent.cs:78
+			//+ !ReadComponents
+			this.ReadComponents(this.Doc);                                                                                                           // BuildMemberComponents.cs:173
+			//- !ReadComponents
 			//- ReadCode
 
 			//+ Methods
+			                                                                                                                                         // BuildMemberComponents.cs:128
+			//+ !Components
+			                                                                                                                                         // BuildMemberComponents.cs:131
+			// BuildMemberComponents.cs:132
 			/// <summary>
-			/// Method to create fixed value
+			/// Read all component values from resource into this instance
 			/// </summary>
-			public CodeableConcept FixedValue_ObservationComponentObsSizeCode()                                                                      // FhirConstruct.cs:753
-			{                                                                                                                                        // FhirConstruct.cs:754
-			    CodeableConcept retVal = new CodeableConcept();                                                                                      // FhirConstruct.cs:755
-			    retVal.Coding = new List<Coding>();                                                                                                  // FhirConstruct.cs:761
-			    {                                                                                                                                    // FhirConstruct.cs:764
-			        var temp4 = new Coding();                                                                                                        // FhirConstruct.cs:765
-			        temp4.SystemElement = new FhirUri();                                                                                             // FhirConstruct.cs:768
-			        temp4.SystemElement.Value = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes";                 // FhirConstruct.cs:770
-			        temp4.CodeElement = new Code();                                                                                                  // FhirConstruct.cs:784
-			        temp4.CodeElement.Value = "obsSize";                                                                                             // FhirConstruct.cs:786
-			        retVal.Coding.Add(temp4);                                                                                                        // FhirConstruct.cs:813
-			    }                                                                                                                                    // FhirConstruct.cs:814
-			    return retVal;                                                                                                                       // FhirConstruct.cs:829
-			}                                                                                                                                        // FhirConstruct.cs:830
+			private void ReadComponents(BreastRadiologyDocument doc)                                                                                 // BuildMemberComponents.cs:135
+			{                                                                                                                                        // BuildMemberComponents.cs:136
+			    List<Observation.ComponentComponent> items = this.Resource.GetValue<Observation.ComponentComponent>("component").ToList();           // BuildMemberComponents.cs:137
+			    //+ ReadComponents
+			    this.ObsSize.Read(this.Doc, items);                                                                                                  // BuildMemberComponents.cs:90
+			    //- ReadComponents
+			}                                                                                                                                        // BuildMemberComponents.cs:139
+			                                                                                                                                         // BuildMemberComponents.cs:141
+			// BuildMemberComponents.cs:142
+			/// <summary>
+			/// Write all values from this instance into resource
+			/// </summary>
+			private void WriteComponents(BreastRadiologyDocument doc)                                                                                // BuildMemberComponents.cs:145
+			{                                                                                                                                        // BuildMemberComponents.cs:146
+			    List<Observation.ComponentComponent> items = new List<Observation.ComponentComponent>();                                             // BuildMemberComponents.cs:147
+			    //+ WriteComponents
+			    items.AddRange(this.ObsSize.Write(this.Doc));                                                                                        // BuildMemberComponents.cs:108
+			    //- WriteComponents
+			    this.Resource.SetValue("component", items);                                                                                          // BuildMemberComponents.cs:149
+			}                                                                                                                                        // BuildMemberComponents.cs:150
+			//- !Components
 			//- Methods

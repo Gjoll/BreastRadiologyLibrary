@@ -19,6 +19,7 @@ namespace BreastRadLib
 		/// under the joint where the arm connects to the shoulder.
 		/// It also contains many sweat glands.
 		/// [https://en.wikipedia.org/wiki/Axilla]
+		/// 
 		/// Valid for the following modalities: US.
 		/// </summary>
 		public static Coding Code_Axilla = new Coding(System, "Axilla", "Axilla");                                                                // Builder.cs:408
@@ -30,6 +31,7 @@ namespace BreastRadLib
 		/// It passes into the axilla through an opening in the deep fascia called foramen of
 		/// Langer.
 		/// [https://en.wikipedia.org/wiki/Tail_of_Spence]
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_AxillaryTail = new Coding(System, "AxillaryTail", "Axillary tail");                                             // Builder.cs:408
@@ -55,6 +57,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The mass/lesion is located in the inframammary crease where the lower boundary of the breast and the chest meet.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_InframammaryFold = new Coding(System, "InframammaryFold", "Inframammary fold");                                 // Builder.cs:408
@@ -62,12 +65,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Located within the skin.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US MRI NM.
 		/// </summary>
 		public static Coding Code_InSkin = new Coding(System, "InSkin", "In skin");                                                               // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Central to the nipple (central portion of the breast-behind the nipple).
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

@@ -18,22 +18,30 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Orientation
+		/// Orientation
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> Orientation { get ; }                                                                               // BuildElementItemComponent.cs:64
+		MOrientation Orientation { get ; }                                                                                                        // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Shape
+		/// Shape
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> Shape { get ; }                                                                                     // BuildElementItemComponent.cs:64
+		MShape Shape { get ; }                                                                                                                    // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Margin
+		/// Margin
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> Margin { get ; }                                                                                    // BuildElementItemComponent.cs:64
+		MMargin Margin { get ; }                                                                                                                  // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access MgDensity
+		/// MgDensity
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> MgDensity { get ; }                                                                                 // BuildElementItemComponent.cs:64
+		MMgDensity MgDensity { get ; }                                                                                                            // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

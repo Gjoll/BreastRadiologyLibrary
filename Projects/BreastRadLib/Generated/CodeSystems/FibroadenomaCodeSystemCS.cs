@@ -22,6 +22,7 @@ namespace BreastRadLib
 		/// Most are only 1 or 2 centimeters in size.
 		/// www.webmd.com &gt; breast-cancer &gt; what-are-fibroadenomas
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_Fibroadenoma = new Coding(System, "Fibroadenoma", "Fibroadenoma");                                              // Builder.cs:408
@@ -31,6 +32,7 @@ namespace BreastRadLib
 		/// Fibroadenomas usually go away with age.
 		/// By the time a woman is menopausal, they will likely experience a degeneration of
 		/// the Fibroadenomas.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG.
 		/// </summary>

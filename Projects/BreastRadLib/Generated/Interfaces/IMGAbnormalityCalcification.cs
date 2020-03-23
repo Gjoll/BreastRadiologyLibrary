@@ -30,14 +30,18 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access CalcificationType
+		/// CalcificationType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> CalcificationType { get ; }                                                                         // BuildElementItemComponent.cs:64
+		MCalcificationType CalcificationType { get ; }                                                                                            // BuildMemberBase.cs:385
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access CalcificationDistribution
+		/// CalcificationDistribution
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> CalcificationDistribution { get ; }                                                                 // BuildElementItemComponent.cs:64
+		MCalcificationDistribution CalcificationDistribution { get ; }                                                                            // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

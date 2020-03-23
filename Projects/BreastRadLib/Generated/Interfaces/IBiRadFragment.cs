@@ -17,10 +17,12 @@ namespace BreastRadLib
 	public interface IBiRadFragment 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access BiRadsAssessmentCategory
+		/// BiRadsAssessmentCategory
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> BiRadsAssessmentCategory { get ; }                                                                  // BuildElementItemComponent.cs:64
+		MBiRadsAssessmentCategory BiRadsAssessmentCategory { get ; }                                                                              // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

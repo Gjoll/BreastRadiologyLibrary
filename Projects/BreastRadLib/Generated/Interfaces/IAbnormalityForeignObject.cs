@@ -27,10 +27,12 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberComponents.cs, Line 202
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access AbnormalityForeignObjectType
+		/// AbnormalityForeignObjectType
 		/// </summary>
-		TItemComponentSingle<CodeableConcept> AbnormalityForeignObjectType { get ; }                                                              // BuildElementItemComponent.cs:64
+		MAbnormalityForeignObjectType AbnormalityForeignObjectType { get ; }                                                                      // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods

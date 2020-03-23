@@ -20,6 +20,7 @@ namespace BreastRadLib
 		/// reference to a quadrant or &#39;clock position,&#39; and the depth within the breast.
 		/// Anterior depth is the outer most depth (closest to the nipple) of the breast.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_AnteriorDepth = new Coding(System, "AnteriorDepth", "Anterior depth");                                          // Builder.cs:408
@@ -27,12 +28,14 @@ namespace BreastRadLib
 		/// <summary>
 		/// Middle depth in between the anterior and posterior portion of the breast.
 		/// 
+		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
 		public static Coding Code_MiddleDepth = new Coding(System, "MiddleDepth", "Middle depth");                                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Posterior depth (closest to the chest wall) of the  breast.
+		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>

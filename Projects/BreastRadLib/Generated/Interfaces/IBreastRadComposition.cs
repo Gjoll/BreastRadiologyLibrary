@@ -18,30 +18,42 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Report
+		/// Report
 		/// </summary>
-		TItemSectionSingle<BreastRadReport> Report { get ; }                                                                                      // BuildElementItemSection.cs:67
+		MReport Report { get ; }                                                                                                                  // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Impressions
+		/// Impressions
 		/// </summary>
-		TItemSectionMultiple<ClinicalImpressionBase> Impressions { get ; }                                                                        // BuildElementItemSection.cs:67
+		MImpressions Impressions { get ; }                                                                                                        // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access FindingsRightBreast
+		/// FindingsRightBreast
 		/// </summary>
-		TItemSectionSingle<SectionFindingsRightBreast> FindingsRightBreast { get ; }                                                              // BuildElementItemSection.cs:67
+		MFindingsRightBreast FindingsRightBreast { get ; }                                                                                        // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access FindingsLeftBreast
+		/// FindingsLeftBreast
 		/// </summary>
-		TItemSectionSingle<SectionFindingsLeftBreast> FindingsLeftBreast { get ; }                                                                // BuildElementItemSection.cs:67
+		MFindingsLeftBreast FindingsLeftBreast { get ; }                                                                                          // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access RelatedResources
+		/// RelatedResources
 		/// </summary>
-		TItemSectionMultiple<ResourceBase> RelatedResources { get ; }                                                                             // BuildElementItemSection.cs:67
+		MRelatedResources RelatedResources { get ; }                                                                                              // BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:382
 		/// <summary>
-		/// Access Recommendations
+		/// Recommendations
 		/// </summary>
-		TItemSectionMultiple<MedicationRequestBase, ServiceRequestBase, ServiceRecommendation> Recommendations { get ; }                          // BuildElementItemSection.cs:67
+		MRecommendations Recommendations { get ; }                                                                                                // BuildMemberBase.cs:385
 		//- Properties
 
 		//+ Methods
