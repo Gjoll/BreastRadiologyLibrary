@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using BreastRadLib.ExtensionMethods;
 
 namespace BreastRadLib
 {
@@ -15,17 +16,22 @@ namespace BreastRadLib
     public class BreastRadiologyDocument
     {
         /// <summary>
+        /// Date when this document was instantiated.
+        /// </summary>
+        public FhirDateTime Date = new FhirDateTime(DateTimeOffset.Now);
+
+        /// <summary>
         /// Reference to Subject of document. This is propagated to all observations in this document that reference
         /// a subject.
         /// </summary>
-        public ResourceReference SubjectReference => new ResourceReference { Reference = this.Subject.Id };
+        public ResourceReference SubjectReference => this.Subject.ResourceReference();
 
 
         /// <summary>
         /// Reference to Encounter of document. This is propagated to all observations in this document that reference
         /// an encounter.
         /// </summary>
-        public ResourceReference EncounterReference => new ResourceReference { Reference = this.Encounter.Id };
+        public ResourceReference EncounterReference => this.Encounter.ResourceReference();
 
         /// <summary>
         /// 
@@ -170,49 +176,44 @@ namespace BreastRadLib
         /// <returns></returns>
         public Bundle Write()
         {
+            Bundle retVal = new Bundle
+            {
+                Type = Bundle.BundleType.Document,
+                Timestamp = DateTimeOffset.Now,
+                Identifier = new Identifier("system", "value")
+            };
+
+            void WriteItem(BaseBase baseItem)
+            {
+                if (String.IsNullOrEmpty(baseItem.Id) == true)
+                    throw new Exception($"Error saving resource. Resource has no id!");
+
+                baseItem.Write();
+                retVal.AddResourceEntry((Resource)baseItem.BaseResource,
+                    baseItem.RelativeUrl());
+            }
+
+
             if (this.Subject == null)
                 throw new Exception("Subject is null");
+            this.Index.Admin.Append(new ResourceBase(this, this.Subject));
+
             if (this.Encounter == null)
                 throw new Exception("Encounter is null");
+            this.Index.Admin.Append(new ResourceBase(this, this.Encounter));
+
             if (this.Author == null)
                 throw new Exception("Author is null");
-
-            Bundle retVal = new Bundle();
-            retVal.Type = Bundle.BundleType.Document;
-
-            List<BaseBase> entries = new List<BaseBase>();
-
-            void AddEntry(BaseBase r)
-            {
-                if (String.IsNullOrEmpty(r.Id) == true)
-                    throw new Exception($"Error saving resource. Resource has no id!");
-                entries.Add(r);
-            }
-
-            void WriteAdminItem(DomainResource r)
-            {
-                ResourceBase rb = new ResourceBase(this, r);
-                AddEntry(rb);
-                this.Index.Admin.Append(rb);
-            }
+            this.Index.Admin.Append(new ResourceBase(this, this.Author));
 
             // Composition must be written first....
-            AddEntry(this.Index);
-            WriteAdminItem(this.Subject);
-            WriteAdminItem(this.Encounter);
-            WriteAdminItem(this.Author);
+            WriteItem(this.Index);
 
             // now write all the others.
             foreach (BaseBase baseItem in this.items.Values)
             {
                 if (baseItem != this.Index)
-                    AddEntry(baseItem);
-            }
-
-            foreach (BaseBase entry in entries)
-            {
-                entry.Write();
-                retVal.AddResourceEntry((Resource) entry.BaseResource, entry.Id);
+                    WriteItem(baseItem);
             }
 
             return retVal;

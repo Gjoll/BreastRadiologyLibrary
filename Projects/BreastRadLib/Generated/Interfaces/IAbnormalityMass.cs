@@ -33,11 +33,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:386
+		// BuildMemberBase.cs:385
 		/// <summary>
 		/// MassType
 		/// </summary>
-		MMassType MassType { get ; }                                                                                                              // BuildMemberBase.cs:389
+		MMassType MassType { get ; }                                                                                                              // BuildMemberBase.cs:388
 		//- Properties
 
 		//+ Methods

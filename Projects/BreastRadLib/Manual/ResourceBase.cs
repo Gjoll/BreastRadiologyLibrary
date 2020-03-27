@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BreastRadLib.ExtensionMethods;
 
 namespace BreastRadLib
 {
@@ -16,6 +17,7 @@ namespace BreastRadLib
     public class ResourceBase : BaseBase, IResourceBase
     {
         DomainResource domainResource => (DomainResource)this.resource;
+        public ResourceReference ResourceReference() => this.domainResource.ResourceReference();
         public String profileUrl { get; private set; }
 
         public Meta Meta => this.GetMeta();

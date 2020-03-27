@@ -42,7 +42,7 @@ namespace BreastRadiology.XUnitTests
             {
                 Patient p = new Patient
                 {
-                    Id = "Patient/1"
+                    Id = "Patient1"
                 };
                 p.Name.Add(new HumanName
                 {
@@ -54,7 +54,7 @@ namespace BreastRadiology.XUnitTests
             {
                 Encounter e = new Encounter
                 {
-                    Id = "Encounter/1",
+                    Id = "Encounter1",
                     Status = Encounter.EncounterStatus.Finished,
                     Class = new Coding("http://terminology.hl7.org/CodeSystem/v3-ActCode",
                         "CASH")
@@ -65,7 +65,7 @@ namespace BreastRadiology.XUnitTests
             {
                 Device e = new Device
                 {
-                    Id = "Device/1"
+                    Id = "Device1"
                 };
                 e.DeviceName.Add(new Device.DeviceNameComponent
                 {
@@ -91,7 +91,7 @@ namespace BreastRadiology.XUnitTests
                 BreastRadiologyDocument doc = MakeDoc();
                 Assert.IsTrue(doc.Index != null);
                 {
-                    doc.Index.Resource.DateElement = new FhirDateTime(2019, 11, 1);
+                    doc.Index.Resource.DateElement = doc.Date;
                     BreastRadReport report = doc.Index.Report.Set(new BreastRadReport(doc));
 
                     DiagnosticReport r = report.Resource;

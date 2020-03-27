@@ -168,7 +168,6 @@ namespace FireFragger.CS.BuildMembers
         protected virtual void BuildContainerClass(String buildMsg)
         {
             Debug.Assert(String.IsNullOrEmpty(this.ContainerClassName) == false);
-            Debug.Assert(this.ContainerClassName != "MAdmin");
 
             this.containerCode
                 .AppendCode($"#region {this.pathName} Container Class")

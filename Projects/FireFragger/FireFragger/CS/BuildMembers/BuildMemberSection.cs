@@ -59,10 +59,7 @@ namespace FireFragger.CS.BuildMembers
         protected override void BuildItemWrite(CodeBlockNested b)
         {
             b
-                .AppendCode($"ResourceReference retVal = new ResourceReference")
-                .OpenBrace()
-                .AppendCode($"Reference = this.Value.Id")
-                .CloseBrace(";")
+                .AppendCode("ResourceReference retVal = this.Value.ResourceReference();")
                 ;
         }
 

@@ -22,6 +22,16 @@ namespace BreastRadLib
         protected Base resource;
         public BreastRadiologyDocument Doc { get; private set; }
 
+        /// <summary>
+        /// Get relative bundle fullurl.
+        /// Must be resource.
+        /// </summary>
+        public String RelativeUrl()
+        {
+            Resource r = (Resource) this.BaseResource;
+            return $"{r.TypeName}/{r.Id}";
+        }
+
         public BaseBase()
         {
         }

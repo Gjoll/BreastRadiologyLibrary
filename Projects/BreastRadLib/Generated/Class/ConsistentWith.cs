@@ -26,22 +26,22 @@ namespace BreastRadLib
 	public class ConsistentWith : ObservationBase, IConsistentWith
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:394
+		                                                                                                                                          // BuildMemberBase.cs:393
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:396
+		// BuildMemberBase.cs:395
 		/// <summary>
 		/// Value
 		/// Access fhir element 'Observation.component:value'
 		/// </summary>
-		public MValue Value { get ; protected set; }                                                                                              // BuildMemberBase.cs:400
-		                                                                                                                                          // BuildMemberBase.cs:394
+		public MValue Value { get ; protected set; }                                                                                              // BuildMemberBase.cs:399
+		                                                                                                                                          // BuildMemberBase.cs:393
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:396
+		// BuildMemberBase.cs:395
 		/// <summary>
 		/// Qualifier
 		/// Access fhir element 'Observation.component:qualifier'
 		/// </summary>
-		public MQualifier Qualifier { get ; protected set; }                                                                                      // BuildMemberBase.cs:400
+		public MQualifier Qualifier { get ; protected set; }                                                                                      // BuildMemberBase.cs:399
 		//- Properties
 
 		/// <summary>
@@ -86,9 +86,9 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith");                                             // DefineBase.cs:238
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Value = new MValue(1, 1);                                                                                                           // BuildMemberBase.cs:379
+			this.Value = new MValue(1, 1);                                                                                                           // BuildMemberBase.cs:378
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Qualifier = new MQualifier(0, -1);                                                                                                  // BuildMemberBase.cs:379
+			this.Qualifier = new MQualifier(0, -1);                                                                                                  // BuildMemberBase.cs:378
 			//- Constructor
 		}
 
