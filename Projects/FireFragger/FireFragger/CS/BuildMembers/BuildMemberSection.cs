@@ -97,6 +97,8 @@ namespace FireFragger.CS.BuildMembers
             b
                 .AppendCode("public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)")
                 .OpenBrace()
+                .AppendCode($"if (this.Count == 0)")
+                .AppendCode($"    return new Composition.SectionComponent[0];")
                 .AppendCode($"Composition.SectionComponent section = new Composition.SectionComponent")
                 .OpenBrace()
                 .AppendCode($"Title = \"{this.title}\",")

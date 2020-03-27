@@ -74,7 +74,6 @@ namespace BreastRadiology.XUnitTests
                 });
                 doc.Author = e;
             }
-
             return doc;
         }
 
@@ -89,16 +88,18 @@ namespace BreastRadiology.XUnitTests
             Bundle b;
             {
                 BreastRadiologyDocument doc = MakeDoc();
-                Assert.IsTrue(doc.Index != null);
                 {
-                    doc.Index.Resource.DateElement = doc.Date;
-                    BreastRadReport report = doc.Index.Report.Set(new BreastRadReport(doc));
+                    BreastRadComposition index = doc.Index;
+                    index.Resource.DateElement = doc.Date;
+                    index.Resource.Status = CompositionStatus.Final;
+                    index.Resource.Title = "Simple Narrative Only Breast Radiology Report";
+                    BreastRadReport report = index.Report.Set(new BreastRadReport(doc));
 
                     DiagnosticReport r = report.Resource;
                     r.Id = "ReportId";
                     r.Status = DiagnosticReport.DiagnosticReportStatus.Final;
                     r.Category.Add(new CodeableConcept("http://terminology.hl7.org/CodeSystem/observation-category",
-                        "Imaging"));
+                        "imaging"));
                     r.Code = new CodeableConcept("http://loinc.org", "10193-1");
                     r.Conclusion = "Report Narrative conclusion.";
                     report.SetConclusionCode(BiRadsAssessmentCategoriesVS.Code_Category2);

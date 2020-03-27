@@ -16,7 +16,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 {
 	//+ LocalClassDefs
 	#region Composition.section:report Container Class                                                                                         // BuildMemberBase.cs:173
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 224
 	// BuildMemberBase.cs:175
 	/// <summary>
 	/// Container class for Composition.section:report.
@@ -24,7 +24,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class MReport : MContainer, ITMItem<Composition.SectionComponent>                                                                   // BuildMemberBase.cs:178
 	{                                                                                                                                          // BuildMemberBase.cs:179
 	    #region Composition.section:report Item Class                                                                                          // BuildMemberBase.cs:81
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 224
 	    // BuildMemberBase.cs:83
 	    /// <summary>
 	    /// Item class for Composition.section:report.
@@ -161,17 +161,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:98
 	    {                                                                                                                                      // BuildMemberSection.cs:99
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:100
-	        {                                                                                                                                  // BuildMemberSection.cs:101
-	            Title = "Breast Radiology Report",                                                                                             // BuildMemberSection.cs:102
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:103
-	        };                                                                                                                                 // BuildMemberSection.cs:104
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:105
-	        {                                                                                                                                  // BuildMemberSection.cs:106
-	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	        if (this.Count == 0)                                                                                                               // BuildMemberSection.cs:100
+	            return new Composition.SectionComponent[0];                                                                                    // BuildMemberSection.cs:101
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:102
+	        {                                                                                                                                  // BuildMemberSection.cs:103
+	            Title = "Breast Radiology Report",                                                                                             // BuildMemberSection.cs:104
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
+	        };                                                                                                                                 // BuildMemberSection.cs:106
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+	        {                                                                                                                                  // BuildMemberSection.cs:108
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
+	        }                                                                                                                                  // BuildMemberSection.cs:110
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:111
+	    }                                                                                                                                      // BuildMemberSection.cs:112
 	                                                                                                                                           // BuildMemberBase.cs:358
 	    // BuildMemberBase.cs:359
 	    /// <summary>
@@ -199,7 +201,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	}                                                                                                                                          // BuildMemberBase.cs:198
 	#endregion                                                                                                                                 // BuildMemberBase.cs:199
 	#region Composition.section:impressions Container Class                                                                                    // BuildMemberBase.cs:173
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 224
 	// BuildMemberBase.cs:175
 	/// <summary>
 	/// Container class for Composition.section:impressions.
@@ -207,7 +209,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class MImpressions : MContainer, ITMItem<Composition.SectionComponent>                                                              // BuildMemberBase.cs:178
 	{                                                                                                                                          // BuildMemberBase.cs:179
 	    #region Composition.section:impressions Item Class                                                                                     // BuildMemberBase.cs:81
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 224
 	    // BuildMemberBase.cs:83
 	    /// <summary>
 	    /// Item class for Composition.section:impressions.
@@ -345,17 +347,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:98
 	    {                                                                                                                                      // BuildMemberSection.cs:99
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:100
-	        {                                                                                                                                  // BuildMemberSection.cs:101
-	            Title = "Clinical Impressions",                                                                                                // BuildMemberSection.cs:102
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:103
-	        };                                                                                                                                 // BuildMemberSection.cs:104
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:105
-	        {                                                                                                                                  // BuildMemberSection.cs:106
-	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	        if (this.Count == 0)                                                                                                               // BuildMemberSection.cs:100
+	            return new Composition.SectionComponent[0];                                                                                    // BuildMemberSection.cs:101
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:102
+	        {                                                                                                                                  // BuildMemberSection.cs:103
+	            Title = "Clinical Impressions",                                                                                                // BuildMemberSection.cs:104
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
+	        };                                                                                                                                 // BuildMemberSection.cs:106
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+	        {                                                                                                                                  // BuildMemberSection.cs:108
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
+	        }                                                                                                                                  // BuildMemberSection.cs:110
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:111
+	    }                                                                                                                                      // BuildMemberSection.cs:112
 	                                                                                                                                           // BuildMemberBase.cs:358
 	    // BuildMemberBase.cs:359
 	    /// <summary>
@@ -383,7 +387,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	}                                                                                                                                          // BuildMemberBase.cs:198
 	#endregion                                                                                                                                 // BuildMemberBase.cs:199
 	#region Composition.section:findingsRightBreast Container Class                                                                            // BuildMemberBase.cs:173
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 224
 	// BuildMemberBase.cs:175
 	/// <summary>
 	/// Container class for Composition.section:findingsRightBreast.
@@ -391,7 +395,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class MFindingsRightBreast : MContainer, ITMItem<Composition.SectionComponent>                                                      // BuildMemberBase.cs:178
 	{                                                                                                                                          // BuildMemberBase.cs:179
 	    #region Composition.section:findingsRightBreast Item Class                                                                             // BuildMemberBase.cs:81
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 224
 	    // BuildMemberBase.cs:83
 	    /// <summary>
 	    /// Item class for Composition.section:findingsRightBreast.
@@ -528,17 +532,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:98
 	    {                                                                                                                                      // BuildMemberSection.cs:99
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:100
-	        {                                                                                                                                  // BuildMemberSection.cs:101
-	            Title = "Findings Right Breast",                                                                                               // BuildMemberSection.cs:102
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:103
-	        };                                                                                                                                 // BuildMemberSection.cs:104
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:105
-	        {                                                                                                                                  // BuildMemberSection.cs:106
-	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	        if (this.Count == 0)                                                                                                               // BuildMemberSection.cs:100
+	            return new Composition.SectionComponent[0];                                                                                    // BuildMemberSection.cs:101
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:102
+	        {                                                                                                                                  // BuildMemberSection.cs:103
+	            Title = "Findings Right Breast",                                                                                               // BuildMemberSection.cs:104
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
+	        };                                                                                                                                 // BuildMemberSection.cs:106
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+	        {                                                                                                                                  // BuildMemberSection.cs:108
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
+	        }                                                                                                                                  // BuildMemberSection.cs:110
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:111
+	    }                                                                                                                                      // BuildMemberSection.cs:112
 	                                                                                                                                           // BuildMemberBase.cs:358
 	    // BuildMemberBase.cs:359
 	    /// <summary>
@@ -566,7 +572,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	}                                                                                                                                          // BuildMemberBase.cs:198
 	#endregion                                                                                                                                 // BuildMemberBase.cs:199
 	#region Composition.section:findingsLeftBreast Container Class                                                                             // BuildMemberBase.cs:173
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 224
 	// BuildMemberBase.cs:175
 	/// <summary>
 	/// Container class for Composition.section:findingsLeftBreast.
@@ -574,7 +580,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class MFindingsLeftBreast : MContainer, ITMItem<Composition.SectionComponent>                                                       // BuildMemberBase.cs:178
 	{                                                                                                                                          // BuildMemberBase.cs:179
 	    #region Composition.section:findingsLeftBreast Item Class                                                                              // BuildMemberBase.cs:81
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 224
 	    // BuildMemberBase.cs:83
 	    /// <summary>
 	    /// Item class for Composition.section:findingsLeftBreast.
@@ -711,17 +717,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:98
 	    {                                                                                                                                      // BuildMemberSection.cs:99
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:100
-	        {                                                                                                                                  // BuildMemberSection.cs:101
-	            Title = "Findings Left Breast",                                                                                                // BuildMemberSection.cs:102
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:103
-	        };                                                                                                                                 // BuildMemberSection.cs:104
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:105
-	        {                                                                                                                                  // BuildMemberSection.cs:106
-	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	        if (this.Count == 0)                                                                                                               // BuildMemberSection.cs:100
+	            return new Composition.SectionComponent[0];                                                                                    // BuildMemberSection.cs:101
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:102
+	        {                                                                                                                                  // BuildMemberSection.cs:103
+	            Title = "Findings Left Breast",                                                                                                // BuildMemberSection.cs:104
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
+	        };                                                                                                                                 // BuildMemberSection.cs:106
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+	        {                                                                                                                                  // BuildMemberSection.cs:108
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
+	        }                                                                                                                                  // BuildMemberSection.cs:110
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:111
+	    }                                                                                                                                      // BuildMemberSection.cs:112
 	                                                                                                                                           // BuildMemberBase.cs:358
 	    // BuildMemberBase.cs:359
 	    /// <summary>
@@ -749,7 +757,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	}                                                                                                                                          // BuildMemberBase.cs:198
 	#endregion                                                                                                                                 // BuildMemberBase.cs:199
 	#region Composition.section:relatedResources Container Class                                                                               // BuildMemberBase.cs:173
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 224
 	// BuildMemberBase.cs:175
 	/// <summary>
 	/// Container class for Composition.section:relatedResources.
@@ -757,7 +765,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class MRelatedResources : MContainer, ITMItem<Composition.SectionComponent>                                                         // BuildMemberBase.cs:178
 	{                                                                                                                                          // BuildMemberBase.cs:179
 	    #region Composition.section:relatedResources Item Class                                                                                // BuildMemberBase.cs:81
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 224
 	    // BuildMemberBase.cs:83
 	    /// <summary>
 	    /// Item class for Composition.section:relatedResources.
@@ -895,17 +903,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:98
 	    {                                                                                                                                      // BuildMemberSection.cs:99
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:100
-	        {                                                                                                                                  // BuildMemberSection.cs:101
-	            Title = "Related Resources",                                                                                                   // BuildMemberSection.cs:102
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:103
-	        };                                                                                                                                 // BuildMemberSection.cs:104
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:105
-	        {                                                                                                                                  // BuildMemberSection.cs:106
-	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	        if (this.Count == 0)                                                                                                               // BuildMemberSection.cs:100
+	            return new Composition.SectionComponent[0];                                                                                    // BuildMemberSection.cs:101
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:102
+	        {                                                                                                                                  // BuildMemberSection.cs:103
+	            Title = "Related Resources",                                                                                                   // BuildMemberSection.cs:104
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
+	        };                                                                                                                                 // BuildMemberSection.cs:106
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+	        {                                                                                                                                  // BuildMemberSection.cs:108
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
+	        }                                                                                                                                  // BuildMemberSection.cs:110
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:111
+	    }                                                                                                                                      // BuildMemberSection.cs:112
 	                                                                                                                                           // BuildMemberBase.cs:358
 	    // BuildMemberBase.cs:359
 	    /// <summary>
@@ -933,7 +943,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	}                                                                                                                                          // BuildMemberBase.cs:198
 	#endregion                                                                                                                                 // BuildMemberBase.cs:199
 	#region Composition.section:recommendations Container Class                                                                                // BuildMemberBase.cs:173
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 224
 	// BuildMemberBase.cs:175
 	/// <summary>
 	/// Container class for Composition.section:recommendations.
@@ -941,7 +951,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class MRecommendations : MContainer, ITMItem<Composition.SectionComponent>                                                          // BuildMemberBase.cs:178
 	{                                                                                                                                          // BuildMemberBase.cs:179
 	    #region Composition.section:recommendations Item Class                                                                                 // BuildMemberBase.cs:81
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 224
 	    // BuildMemberBase.cs:83
 	    /// <summary>
 	    /// Item class for Composition.section:recommendations.
@@ -1103,17 +1113,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:98
 	    {                                                                                                                                      // BuildMemberSection.cs:99
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:100
-	        {                                                                                                                                  // BuildMemberSection.cs:101
-	            Title = "Recommendations",                                                                                                     // BuildMemberSection.cs:102
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:103
-	        };                                                                                                                                 // BuildMemberSection.cs:104
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:105
-	        {                                                                                                                                  // BuildMemberSection.cs:106
-	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	        if (this.Count == 0)                                                                                                               // BuildMemberSection.cs:100
+	            return new Composition.SectionComponent[0];                                                                                    // BuildMemberSection.cs:101
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:102
+	        {                                                                                                                                  // BuildMemberSection.cs:103
+	            Title = "Recommendations",                                                                                                     // BuildMemberSection.cs:104
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
+	        };                                                                                                                                 // BuildMemberSection.cs:106
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+	        {                                                                                                                                  // BuildMemberSection.cs:108
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
+	        }                                                                                                                                  // BuildMemberSection.cs:110
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:111
+	    }                                                                                                                                      // BuildMemberSection.cs:112
 	                                                                                                                                           // BuildMemberBase.cs:358
 	    // BuildMemberBase.cs:359
 	    /// <summary>
@@ -1141,7 +1153,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	}                                                                                                                                          // BuildMemberBase.cs:198
 	#endregion                                                                                                                                 // BuildMemberBase.cs:199
 	#region Composition.section:admin Container Class                                                                                          // BuildMemberBase.cs:173
-	// Called from BuildMemberSection.cs, Line 222
+	// Called from BuildMemberSection.cs, Line 224
 	// BuildMemberBase.cs:175
 	/// <summary>
 	/// Container class for Composition.section:admin.
@@ -1149,7 +1161,7 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	public class MAdmin : MContainer, ITMItem<Composition.SectionComponent>                                                                    // BuildMemberBase.cs:178
 	{                                                                                                                                          // BuildMemberBase.cs:179
 	    #region Composition.section:admin Item Class                                                                                           // BuildMemberBase.cs:81
-	    // Called from BuildMemberSection.cs, Line 222
+	    // Called from BuildMemberSection.cs, Line 224
 	    // BuildMemberBase.cs:83
 	    /// <summary>
 	    /// Item class for Composition.section:admin.
@@ -1287,17 +1299,19 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	    /// </summary>
 	    public IEnumerable<Composition.SectionComponent> Write(BreastRadiologyDocument doc)                                                    // BuildMemberSection.cs:98
 	    {                                                                                                                                      // BuildMemberSection.cs:99
-	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:100
-	        {                                                                                                                                  // BuildMemberSection.cs:101
-	            Title = "Admin",                                                                                                               // BuildMemberSection.cs:102
-	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:103
-	        };                                                                                                                                 // BuildMemberSection.cs:104
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:105
-	        {                                                                                                                                  // BuildMemberSection.cs:106
-	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:107
-	        }                                                                                                                                  // BuildMemberSection.cs:108
-	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:109
-	    }                                                                                                                                      // BuildMemberSection.cs:110
+	        if (this.Count == 0)                                                                                                               // BuildMemberSection.cs:100
+	            return new Composition.SectionComponent[0];                                                                                    // BuildMemberSection.cs:101
+	        Composition.SectionComponent section = new Composition.SectionComponent                                                            // BuildMemberSection.cs:102
+	        {                                                                                                                                  // BuildMemberSection.cs:103
+	            Title = "Admin",                                                                                                               // BuildMemberSection.cs:104
+	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
+	        };                                                                                                                                 // BuildMemberSection.cs:106
+	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+	        {                                                                                                                                  // BuildMemberSection.cs:108
+	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
+	        }                                                                                                                                  // BuildMemberSection.cs:110
+	        return new Composition.SectionComponent[] { section };                                                                             // BuildMemberSection.cs:111
+	    }                                                                                                                                      // BuildMemberSection.cs:112
 	                                                                                                                                           // BuildMemberBase.cs:358
 	    // BuildMemberBase.cs:359
 	    /// <summary>

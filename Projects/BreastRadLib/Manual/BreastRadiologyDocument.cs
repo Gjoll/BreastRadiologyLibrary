@@ -180,7 +180,7 @@ namespace BreastRadLib
             {
                 Type = Bundle.BundleType.Document,
                 Timestamp = DateTimeOffset.Now,
-                Identifier = new Identifier("system", "value")
+                Identifier = new Identifier("http://www.FrostBiteFallsLocalHospital/fhir/documents", "DocumentIdentifier")
             };
 
             void WriteItem(BaseBase baseItem)
@@ -193,18 +193,20 @@ namespace BreastRadLib
                     baseItem.RelativeUrl());
             }
 
+            void AppendAdmin(DomainResource r, String name)
+            {
+                if (r == null)
+                    throw new Exception("Required field {name} is null");
+                this.Index.Admin.Append(new ResourceBase(this, r));
+            }
 
-            if (this.Subject == null)
-                throw new Exception("Subject is null");
-            this.Index.Admin.Append(new ResourceBase(this, this.Subject));
+            AppendAdmin(this.Subject, "Subject");
+            AppendAdmin(this.Encounter, "Encounter");
+            AppendAdmin(this.Author, "Author");
 
-            if (this.Encounter == null)
-                throw new Exception("Encounter is null");
-            this.Index.Admin.Append(new ResourceBase(this, this.Encounter));
-
-            if (this.Author == null)
-                throw new Exception("Author is null");
-            this.Index.Admin.Append(new ResourceBase(this, this.Author));
+            this.Index.Resource.Author.Add(this.Author.ResourceReference());
+            this.Index.Resource.Subject = this.Subject.ResourceReference();
+            //this.Index.Resource.Type = this.Subject.ResourceReference();
 
             // Composition must be written first....
             WriteItem(this.Index);
