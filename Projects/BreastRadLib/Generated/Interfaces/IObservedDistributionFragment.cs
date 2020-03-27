@@ -18,17 +18,17 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// ObsDistribution
 		/// </summary>
-		MObsDistribution ObsDistribution { get ; }                                                                                                // BuildMemberBase.cs:385
+		MObsDistribution ObsDistribution { get ; }                                                                                                // BuildMemberBase.cs:389
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// ObsDistRegionSize
 		/// </summary>
-		MObsDistRegionSize ObsDistRegionSize { get ; }                                                                                            // BuildMemberBase.cs:385
+		MObsDistRegionSize ObsDistRegionSize { get ; }                                                                                            // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

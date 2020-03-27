@@ -16,8 +16,10 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Duct is considered normal.
-		/// It is surrounded by normal cells and collagen in the breast with no abnormalities.
-		/// A system of ducts in your breast carries milk to the nipples.
+		/// It is surrounded by normal cells and collagen in
+		/// the breast with no abnormalities.
+		/// A system of ducts in the breast carries milk to the
+		/// nipples.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG.
@@ -25,8 +27,11 @@ namespace BreastRadLib
 		public static Coding Code_DuctNormal = new Coding(System, "DuctNormal", "Duct normal");                                                   // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// When it is malignant,&#160;solitary dilated duct&#160;appears to indicate the presence of DCIS.
-		/// In almost all&#160;solitary dilated duct&#160;cases, the&#160;dilated duct&#160;appears to be filled with some debris, with or without accompanying fluid, as seen at ultrasound.
+		/// When it is malignant,&#160;solitary dilated duct&#160;appears
+		/// to indicate the presence of DCIS.
+		/// In almost all&#160;solitary dilated duct&#160;cases, the&#160;dilated
+		/// duct&#160;appears to be filled with some debris, with
+		/// or without accompanying fluid, as seen at ultrasound.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
@@ -34,10 +39,13 @@ namespace BreastRadLib
 		public static Coding Code_SolitaryDilatedDuct = new Coding(System, "SolitaryDilatedDuct", "Solitary dilated duct");                       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A noncancerous condition that results in clogged ducts around the nipple.
-		/// While it sometimes causes pain, irritation and discharge, it&#39;s generally not a cause
+		/// A noncancerous condition that results in clogged
+		/// ducts around the nipple.
+		/// While it sometimes causes pain, irritation and discharge,
+		/// it&#39;s generally not a cause
 		/// for concern.
-		/// If left untreated, it can eventually obliterate the breast duct.
+		/// If left untreated, it can eventually obliterate the
+		/// breast duct.
 		/// www.healthline.com &gt; health &gt; duct-ectasia-of-the-breast
 		/// 
 		/// 

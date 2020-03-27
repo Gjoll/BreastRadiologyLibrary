@@ -15,13 +15,13 @@ namespace BreastRadLib
 		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/FibroadenomaCodeSystemCS";                                      // Builder.cs:377
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A fibroadenoma is a benign, or noncancerous, breast tumor.
-		/// Unlike a breast cancer, which grows larger over time and can spread to other organs,
+		/// A fibroadenoma is a benign, or noncancerous, breast
+		/// tumor.
+		/// Unlike a breast cancer, which grows larger over time
+		/// and can spread to other organs,
 		/// a fibroadenoma remains in the breast tissue.
-		/// They&#39;re pretty small, too.
 		/// Most are only 1 or 2 centimeters in size.
-		/// www.webmd.com &gt; breast-cancer &gt; what-are-fibroadenomas
-		/// 
+		/// [www.webmd.com &gt; breast-cancer &gt; what-are-fibroadenomas]
 		/// 
 		/// Valid for the following modalities: MG US.
 		/// </summary>
@@ -30,8 +30,8 @@ namespace BreastRadLib
 		/// <summary>
 		/// These are non-cancerous breast lumps.
 		/// Fibroadenomas usually go away with age.
-		/// By the time a woman is menopausal, they will likely experience a degeneration of
-		/// the Fibroadenomas.
+		/// By the time an individual is menopausal, Fibroadenomas
+		/// degenerate.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG.

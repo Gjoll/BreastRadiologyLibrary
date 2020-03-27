@@ -24,46 +24,46 @@ namespace BreastRadLib
 	public class SectionFindingsRightBreast : ObservationBase, ISectionFindingsRightBreast
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:390
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// MGFinding
 		/// Access fhir element 'Observation.hasMember:mGFinding'
 		/// </summary>
-		public MMGFinding MGFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
-		                                                                                                                                          // BuildMemberBase.cs:390
+		public MMGFinding MGFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// MRIFinding
 		/// Access fhir element 'Observation.hasMember:mRIFinding'
 		/// </summary>
-		public MMRIFinding MRIFinding { get ; protected set; }                                                                                    // BuildMemberBase.cs:396
-		                                                                                                                                          // BuildMemberBase.cs:390
+		public MMRIFinding MRIFinding { get ; protected set; }                                                                                    // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// NMFinding
 		/// Access fhir element 'Observation.hasMember:nMFinding'
 		/// </summary>
-		public MNMFinding NMFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
-		                                                                                                                                          // BuildMemberBase.cs:390
+		public MNMFinding NMFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// USFinding
 		/// Access fhir element 'Observation.hasMember:uSFinding'
 		/// </summary>
-		public MUSFinding USFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
-		                                                                                                                                          // BuildMemberBase.cs:390
+		public MUSFinding USFinding { get ; protected set; }                                                                                      // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberElement.cs, Line 123
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// BodySite
 		/// Access fhir element 'Observation.bodySite'
 		/// </summary>
-		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:396
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:400
 		//- Properties
 
 		/// <summary>
@@ -109,15 +109,15 @@ namespace BreastRadLib
 			this.Resource.BodySite = FixedValue_ObservationBodySite();                                                                               // DefineBase.cs:177
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindingsRightBreast");                                 // DefineBase.cs:238
 			// Called from BuildMemberReferences.cs, Line 191
-			this.MGFinding = new MMGFinding(0, 1);                                                                                                   // BuildMemberBase.cs:375
+			this.MGFinding = new MMGFinding(0, 1);                                                                                                   // BuildMemberBase.cs:379
 			// Called from BuildMemberReferences.cs, Line 191
-			this.MRIFinding = new MMRIFinding(0, 1);                                                                                                 // BuildMemberBase.cs:375
+			this.MRIFinding = new MMRIFinding(0, 1);                                                                                                 // BuildMemberBase.cs:379
 			// Called from BuildMemberReferences.cs, Line 191
-			this.NMFinding = new MNMFinding(0, 1);                                                                                                   // BuildMemberBase.cs:375
+			this.NMFinding = new MNMFinding(0, 1);                                                                                                   // BuildMemberBase.cs:379
 			// Called from BuildMemberReferences.cs, Line 191
-			this.USFinding = new MUSFinding(0, 1);                                                                                                   // BuildMemberBase.cs:375
+			this.USFinding = new MUSFinding(0, 1);                                                                                                   // BuildMemberBase.cs:379
 			// Called from BuildMemberElement.cs, Line 123
-			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:375
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:379
 			//- Constructor
 		}
 

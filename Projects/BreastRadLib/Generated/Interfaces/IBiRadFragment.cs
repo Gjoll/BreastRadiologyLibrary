@@ -18,11 +18,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// </summary>
-		MBiRadsAssessmentCategory BiRadsAssessmentCategory { get ; }                                                                              // BuildMemberBase.cs:385
+		MBiRadsAssessmentCategory BiRadsAssessmentCategory { get ; }                                                                              // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

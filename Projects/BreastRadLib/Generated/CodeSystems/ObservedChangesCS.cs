@@ -15,7 +15,8 @@ namespace BreastRadLib
 		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservedChangesCS";                                             // Builder.cs:377
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// There is a decrease in the number of calcifications found in this mammogram versus
+		/// There is a decrease in the number of calcifications
+		/// found in this mammogram versus
 		/// the prior mammogram.
 		/// 
 		/// 
@@ -24,7 +25,8 @@ namespace BreastRadLib
 		public static Coding Code_DecreaseInCalcifications = new Coding(System, "DecreaseInCalcifications", "Decrease in calcifications");        // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// There is a decrease in the number of calcifications found in this mammogram versus
+		/// There is a decrease in the number of calcifications
+		/// found in this mammogram versus
 		/// the prior mammogram.
 		/// 
 		/// 
@@ -33,7 +35,8 @@ namespace BreastRadLib
 		public static Coding Code_DecreaseInNumber = new Coding(System, "DecreaseInNumber", "Decrease in number");                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// The lesion/mass has decreased in size since prior MRI, Nuclear Medicine, Ultrasound and or/Mammogram.
+		/// The lesion/mass has decreased in size since prior
+		/// MRI, Nuclear Medicine, Ultrasound and or/Mammogram.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
@@ -41,7 +44,8 @@ namespace BreastRadLib
 		public static Coding Code_DecreaseInSize = new Coding(System, "DecreaseInSize", "Decrease in size");                                      // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// Calcifications have increased in number from previous Mammogram.
+		/// Calcifications have increased in number from previous
+		/// Mammogram.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG.
@@ -49,7 +53,8 @@ namespace BreastRadLib
 		public static Coding Code_IncreaseInCalcifications = new Coding(System, "IncreaseInCalcifications", "Increase in calcifications");        // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// There is an increase in the number of calcifications found in this mammogram versus
+		/// There is an increase in the number of calcifications
+		/// found in this mammogram versus
 		/// the prior mammogram.
 		/// 
 		/// 
@@ -58,7 +63,8 @@ namespace BreastRadLib
 		public static Coding Code_IncreaseInNumber = new Coding(System, "IncreaseInNumber", "Increase in number");                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// The mass has increased in size from the last Nuclear Medicine, ultrasound, MRI or mammogram.
+		/// The mass has increased in size from the last Nuclear
+		/// Medicine, ultrasound, MRI or mammogram.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
@@ -82,7 +88,8 @@ namespace BreastRadLib
 		public static Coding Code_MoreProminent = new Coding(System, "MoreProminent", "More prominent");                                          // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// There are new masses/lesions present since last Mammogram, MRI, Nuclear Medicine and/or Ultrasound.
+		/// There are new masses/lesions present since last Mammogram,
+		/// MRI, Nuclear Medicine and/or Ultrasound.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
@@ -90,7 +97,8 @@ namespace BreastRadLib
 		public static Coding Code_New = new Coding(System, "New", "New");                                                                         // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// The lesion or mass is no longer seen from previous Mammogram, Ultrasound and/or MRI.
+		/// The lesion or mass is no longer seen from previous
+		/// Mammogram, Ultrasound and/or MRI.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
@@ -98,7 +106,8 @@ namespace BreastRadLib
 		public static Coding Code_NoLongerSeen = new Coding(System, "NoLongerSeen", "No longer seen");                                            // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// The mass/lesion has not significantly changed since the last Mammogram.
+		/// The mass/lesion has not significantly changed since
+		/// the last Mammogram.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
@@ -122,7 +131,8 @@ namespace BreastRadLib
 		public static Coding Code_RepresentsChange = new Coding(System, "RepresentsChange", "Represents change");                                 // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// The condition has remained stable since the last Mammogram, Ultrasound, MRI or Nuclear
+		/// The condition has remained stable since the last
+		/// Mammogram, Ultrasound, MRI or Nuclear
 		/// Medicine exam.
 		/// 
 		/// 

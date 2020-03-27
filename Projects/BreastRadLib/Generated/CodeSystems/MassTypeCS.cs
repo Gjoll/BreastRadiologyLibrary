@@ -18,7 +18,8 @@ namespace BreastRadLib
 		/// A breast mass has been identified in the breast.
 		/// This is also known as a breast lump.
 		/// It feels different from the surrounding tissue.
-		/// Breast pain, nipple discharge, or skin changes may be present.
+		/// Breast pain, nipple discharge, or skin changes may
+		/// be present.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
@@ -27,7 +28,8 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// An intraductal mass has been identified in the breast.
-		/// It is a lump that originates in one or more of the milk ducts in the breast.
+		/// It is a lump that originates in one or more of the
+		/// milk ducts in the breast.
 		/// 
 		/// 
 		/// Valid for the following modalities: US.
@@ -35,7 +37,8 @@ namespace BreastRadLib
 		public static Coding Code_MassIntraductal = new Coding(System, "MassIntraductal", "Mass intraductal");                                    // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A mass that is partially solid has been identified in the breast.
+		/// A mass that is partially solid has been identified
+		/// in the breast.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US.
@@ -44,8 +47,12 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The mammogram and/or ultrasound show a skin lesion.
+		/// This finding may be described in the mammography
+		/// report or annotated on the mammographic image when
+		/// it projects over the breast (especially on two different
+		/// projections) and may be mistaken for an intramammary
 		/// 
-		/// This finding may be described in the mammography report or annotated on the mammographic image when it projects over the breast (especially on two different projections) and may be mistaken for an intramammary lesion.
+		/// lesion.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// 
 		/// Valid for the following modalities: MG US.
@@ -53,9 +60,11 @@ namespace BreastRadLib
 		public static Coding Code_MassSkinATLASIsSkinLesion = new Coding(System, "MassSkinATLASIsSkinLesion", "Mass skin ATLAS is skin lesion");  // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// The mammogram and/or ultrasound show solid mass of the breast.
-		/// This can be nodules, fibrocystic tissue, phylloides tumor, breast cancer or metastatic.
-		/// May need a biopsy confirmation.
+		/// The mammogram and/or ultrasound show solid mass of
+		/// the breast.
+		/// This can be nodules, fibrocystic tissue, phylloides
+		/// tumor, breast cancer or metastatic.
+		/// A biopsy confirmation may be required.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US.

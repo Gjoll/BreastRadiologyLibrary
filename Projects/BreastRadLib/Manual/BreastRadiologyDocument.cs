@@ -15,17 +15,17 @@ namespace BreastRadLib
     public class BreastRadiologyDocument
     {
         /// <summary>
-        /// Reference to Subject of document. This is propogated to all observations in this document that reference
+        /// Reference to Subject of document. This is propagated to all observations in this document that reference
         /// a subject.
         /// </summary>
-        public ResourceReference Subject { get; set; }
+        public ResourceReference SubjectReference => new ResourceReference { Reference = this.Subject.Id };
 
 
         /// <summary>
-        /// Reference to Encounter of document. This is propogated to all observations in this document that reference
+        /// Reference to Encounter of document. This is propagated to all observations in this document that reference
         /// an encounter.
         /// </summary>
-        public ResourceReference Encounter { get; set; }
+        public ResourceReference EncounterReference => new ResourceReference { Reference = this.Encounter.Id };
 
         /// <summary>
         /// 
@@ -43,6 +43,12 @@ namespace BreastRadLib
         /// fhir document, and must be the first item in the bundle.
         /// </summary>
         public BreastRadComposition Index;
+
+        public Patient Subject { get; set; }
+
+        public Encounter Encounter { get; set; }
+        public DomainResource Author { get; set; }
+
 
         /// <summary>
         /// Private constructor. Use the static helper methods.
@@ -97,8 +103,8 @@ namespace BreastRadLib
                 baseItem.Read(); ;
             }
 
-            retVal.Subject = retVal.Index.Resource.Subject;
-            retVal.Encounter = retVal.Index.Resource.Encounter;
+            //$retVal.Subject = retVal.Index.Resource.Subject;
+            //$retVal.Encounter = retVal.Index.Resource.Encounter;
             return retVal;
         }
 
@@ -164,28 +170,52 @@ namespace BreastRadLib
         /// <returns></returns>
         public Bundle Write()
         {
+            if (this.Subject == null)
+                throw new Exception("Subject is null");
+            if (this.Encounter == null)
+                throw new Exception("Encounter is null");
+            if (this.Author == null)
+                throw new Exception("Author is null");
+
             Bundle retVal = new Bundle();
             retVal.Type = Bundle.BundleType.Document;
 
-            void WriteItem(BaseBase baseItem)
+            List<BaseBase> entries = new List<BaseBase>();
+
+            void AddEntry(BaseBase r)
             {
-                baseItem.Write();
-                if (String.IsNullOrEmpty(baseItem.Id) == true)
+                if (String.IsNullOrEmpty(r.Id) == true)
                     throw new Exception($"Error saving resource. Resource has no id!");
-                retVal.AddResourceEntry((Resource)baseItem.BaseResource, baseItem.Id);
+                entries.Add(r);
+            }
+
+            void WriteAdminItem(DomainResource r)
+            {
+                ResourceBase rb = new ResourceBase(this, r);
+                AddEntry(rb);
+                this.Index.Admin.Append(rb);
             }
 
             // Composition must be written first....
-            WriteItem(this.Index);
+            AddEntry(this.Index);
+            WriteAdminItem(this.Subject);
+            WriteAdminItem(this.Encounter);
+            WriteAdminItem(this.Author);
 
             // now write all the others.
             foreach (BaseBase baseItem in this.items.Values)
             {
                 if (baseItem != this.Index)
-                    WriteItem(baseItem);
+                    AddEntry(baseItem);
             }
 
-            return this.ResourceBag.Bundle;
+            foreach (BaseBase entry in entries)
+            {
+                entry.Write();
+                retVal.AddResourceEntry((Resource) entry.BaseResource, entry.Id);
+            }
+
+            return retVal;
         }
 
         public T ReferencedResource<T>(ResourceReference resRef)

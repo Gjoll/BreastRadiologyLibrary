@@ -19,83 +19,83 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AbnormalityCyst
 		/// </summary>
-		MAbnormalityCyst AbnormalityCyst { get ; }                                                                                                // BuildMemberBase.cs:385
+		MAbnormalityCyst AbnormalityCyst { get ; }                                                                                                // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AbnormalityDuct
 		/// </summary>
-		MAbnormalityDuct AbnormalityDuct { get ; }                                                                                                // BuildMemberBase.cs:385
+		MAbnormalityDuct AbnormalityDuct { get ; }                                                                                                // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AbnormalityForeignObject
 		/// </summary>
-		MAbnormalityForeignObject AbnormalityForeignObject { get ; }                                                                              // BuildMemberBase.cs:385
+		MAbnormalityForeignObject AbnormalityForeignObject { get ; }                                                                              // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AbnormalityLymphNode
 		/// </summary>
-		MAbnormalityLymphNode AbnormalityLymphNode { get ; }                                                                                      // BuildMemberBase.cs:385
+		MAbnormalityLymphNode AbnormalityLymphNode { get ; }                                                                                      // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AbnormalityMass
 		/// </summary>
-		MAbnormalityMass AbnormalityMass { get ; }                                                                                                // BuildMemberBase.cs:385
+		MAbnormalityMass AbnormalityMass { get ; }                                                                                                // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AssociatedFeature
 		/// </summary>
-		MAssociatedFeature AssociatedFeature { get ; }                                                                                            // BuildMemberBase.cs:385
+		MAssociatedFeature AssociatedFeature { get ; }                                                                                            // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AbnormalityFibroadenoma
 		/// </summary>
-		MAbnormalityFibroadenoma AbnormalityFibroadenoma { get ; }                                                                                // BuildMemberBase.cs:385
+		MAbnormalityFibroadenoma AbnormalityFibroadenoma { get ; }                                                                                // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MGAbnormalityArchitecturalDistortion
 		/// </summary>
-		MMGAbnormalityArchitecturalDistortion MGAbnormalityArchitecturalDistortion { get ; }                                                      // BuildMemberBase.cs:385
+		MMGAbnormalityArchitecturalDistortion MGAbnormalityArchitecturalDistortion { get ; }                                                      // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MGAbnormalityAsymmetry
 		/// </summary>
-		MMGAbnormalityAsymmetry MGAbnormalityAsymmetry { get ; }                                                                                  // BuildMemberBase.cs:385
+		MMGAbnormalityAsymmetry MGAbnormalityAsymmetry { get ; }                                                                                  // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MGAbnormalityCalcification
 		/// </summary>
-		MMGAbnormalityCalcification MGAbnormalityCalcification { get ; }                                                                          // BuildMemberBase.cs:385
+		MMGAbnormalityCalcification MGAbnormalityCalcification { get ; }                                                                          // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MGAbnormalityDensity
 		/// </summary>
-		MMGAbnormalityDensity MGAbnormalityDensity { get ; }                                                                                      // BuildMemberBase.cs:385
+		MMGAbnormalityDensity MGAbnormalityDensity { get ; }                                                                                      // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MGAbnormalityFatNecrosis
 		/// </summary>
-		MMGAbnormalityFatNecrosis MGAbnormalityFatNecrosis { get ; }                                                                              // BuildMemberBase.cs:385
+		MMGAbnormalityFatNecrosis MGAbnormalityFatNecrosis { get ; }                                                                              // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 191
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MGBreastDensity
 		/// </summary>
-		MMGBreastDensity MGBreastDensity { get ; }                                                                                                // BuildMemberBase.cs:385
+		MMGBreastDensity MGBreastDensity { get ; }                                                                                                // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

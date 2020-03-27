@@ -16,13 +16,17 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Grouped (historically, &quot;clustered&quot;)
-		/// This term should be used when relatively few calcifications occupy a small portion
+		/// This term should be used when relatively few calcifications
+		/// occupy a small portion
 		/// of breast
 		/// tissue.
-		/// The lower limit for use of this descriptor is usually when 5 calcifications are grouped
-		/// within 1 cm of each other or when a definable pattern is identified.
+		/// The lower limit for use of this descriptor is usually
+		/// when 5 calcifications are grouped
+		/// within 1 cm of each other or when a definable pattern
+		/// is identified.
 		/// The upper limit for use
-		/// of this descriptor is when larger numbers of calcifications are grouped within 2
+		/// of this descriptor is when larger numbers of calcifications
+		/// are grouped within 2
 		/// cm of each
 		/// other.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 73]
@@ -32,9 +36,13 @@ namespace BreastRadLib
 		public static Coding Code_ClusteredDistribution = new Coding(System, "ClusteredDistribution", "Clustered distribution");                  // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// Diffuse or Scattered: diffuse calcifications may be scattered calcifications or multiple similar appearing clusters of calcifications throughout the whole breast.
-		/// Diffuse or scattered distribution is typically seen in benign entities.
-		/// Even when clusters of calcifications are scattered throughout the breast, this favors a benign entity.
+		/// Diffuse or Scattered: diffuse calcifications may
+		/// be scattered calcifications or multiple similar appearing
+		/// clusters of calcifications throughout the whole breast.
+		/// Diffuse or scattered distribution is typically seen
+		/// in benign entities.
+		/// Even when clusters of calcifications are scattered
+		/// throughout the breast, this favors a benign entity.
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// 
 		/// Valid for the following modalities: MG.
@@ -42,11 +50,15 @@ namespace BreastRadLib
 		public static Coding Code_DiffuseDistribution = new Coding(System, "DiffuseDistribution", "Diffuse distribution");                        // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// This term should be used when relatively few calcifications occupy a
+		/// This term should be used when relatively few calcifications
+		/// occupy a
 		/// small portion of breast tissue.
-		/// The lower limit for use of this descriptor is usually when 5 calcifications
-		/// are grouped within 1 cm of each other or when a definable pattern is identified.
-		/// The upper limit for use of this descriptor is when larger numbers of
+		/// The lower limit for use of this descriptor is usually
+		/// when 5 calcifications
+		/// are grouped within 1 cm of each other or when a definable
+		/// pattern is identified.
+		/// The upper limit for use of this descriptor is when
+		/// larger numbers of
 		/// 
 		/// calcifications are grouped within 2 cm of each other.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 74]
@@ -57,10 +69,14 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// These are calcifications arrayed in a line.
-		/// This distribution may elevate suspicion for malignancy, as it suggests deposits in a duct.
-		/// Note that both vascular and large rod-like calcifications also are usually linear in distribution, but that these typically
+		/// This distribution may elevate suspicion for malignancy,
+		/// as it suggests deposits in a duct.
+		/// Note that both vascular and large rod-like calcifications
+		/// also are usually linear in distribution, but that
+		/// these typically
+		/// benign calcifications have a characteristically benign
 		/// 
-		/// benign calcifications have a characteristically benign morphology.
+		/// morphology.
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition]
 		/// 
 		/// Valid for the following modalities: MG.
@@ -68,8 +84,10 @@ namespace BreastRadLib
 		public static Coding Code_LinearDistribution = new Coding(System, "LinearDistribution", "Linear distribution");                           // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// Scattered in a larger volume (&gt; 2 cc) of breast tissue and not in the expected ductal distribution.
-		/// Regional distribution according to the BI-RADS atlas would favor a non-ductal distribution (i.e.
+		/// Scattered in a larger volume (&gt; 2 cc) of breast tissue
+		/// and not in the expected ductal distribution.
+		/// Regional distribution according to the BI-RADS atlas
+		/// would favor a non-ductal distribution (i.e.
 		/// 
 		/// benignity)
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
@@ -80,8 +98,10 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Scattered distributions are also called diffuse distributions.
-		/// These are calcifications that are distributed randomly throughout the breast.
-		/// Punctate and amorphous calcifications in this distribution are almost always benign, especially
+		/// These are calcifications that are distributed randomly
+		/// throughout the breast.
+		/// Punctate and amorphous calcifications in this distribution
+		/// are almost always benign, especially
 		/// if bilateral (in both breasts).
 		/// [Breast Imaging Reporting and Data System—Ultrasound, Second Edition page 70]
 		/// 
@@ -90,10 +110,16 @@ namespace BreastRadLib
 		public static Coding Code_ScatteredDistribution = new Coding(System, "ScatteredDistribution", "Scattered distribution");                  // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// Segmental: calcium deposits in ducts and branches of a segment or lobe.
-		/// Segmental distribution would favor a ductal distribution (i.e.
+		/// Segmental: calcium deposits in ducts and branches
+		/// of a segment or lobe.
+		/// Segmental distribution would favor a ductal distribution
+		/// (i.e.
 		/// malignancy).
-		/// Sometimes this differentiation can be made, but in many cases the differentiation between &#39;regional&#39; and &#39;segmental&#39; is problematic, because it is not clear on a mammogram or MRI where the bounderies of a segment (or a lobe) exactly are.
+		/// Sometimes this differentiation can be made, but in
+		/// many cases the differentiation between &#39;regional&#39;
+		/// and &#39;segmental&#39; is problematic, because it is not
+		/// clear on a mammogram or MRI where the bounderies
+		/// of a segment (or a lobe) exactly are.
 		/// [https://radiologyassistant.nl/breast/breast-calcifications-differential-diagnosis]
 		/// 
 		/// Valid for the following modalities: MG.

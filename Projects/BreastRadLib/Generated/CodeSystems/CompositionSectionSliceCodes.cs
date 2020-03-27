@@ -43,6 +43,11 @@ namespace BreastRadLib
 		/// Slicing CompositionSection Code - Findings Right Breast.
 		/// </summary>
 		public static Coding Code_SectionCodeFindingsRightBreast = new Coding(System, "sectionCodeFindingsRightBreast", "Code to identify the 'Findings Right Breast' section slice");// Builder.cs:408
+		                                                                                                                                          // Builder.cs:389
+		/// <summary>
+		/// Slicing CompositionSection Code - Admin.
+		/// </summary>
+		public static Coding Code_SectionCodeAdmin = new Coding(System, "sectionCodeAdmin", "Code to identify the 'Admin' section slice");        // Builder.cs:408
 		//- Fields
 	}
 }

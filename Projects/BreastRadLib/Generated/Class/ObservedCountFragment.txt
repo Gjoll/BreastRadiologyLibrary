@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:390
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public MObsCount ObsCount { get ; protected set; }                                                                                        // BuildMemberBase.cs:396
+		public MObsCount ObsCount { get ; protected set; }                                                                                        // BuildMemberBase.cs:400
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:375
+			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:379
 			//- Constructor
 
 			//+ ValidateCodeStart

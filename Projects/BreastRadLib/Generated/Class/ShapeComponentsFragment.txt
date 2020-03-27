@@ -1,47 +1,47 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:390
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// Orientation
 		/// Access fhir element 'Observation.component:orientation'
 		/// </summary>
-		public MOrientation Orientation { get ; protected set; }                                                                                  // BuildMemberBase.cs:396
-		                                                                                                                                          // BuildMemberBase.cs:390
+		public MOrientation Orientation { get ; protected set; }                                                                                  // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// Shape
 		/// Access fhir element 'Observation.component:shape'
 		/// </summary>
-		public MShape Shape { get ; protected set; }                                                                                              // BuildMemberBase.cs:396
-		                                                                                                                                          // BuildMemberBase.cs:390
+		public MShape Shape { get ; protected set; }                                                                                              // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// Margin
 		/// Access fhir element 'Observation.component:margin'
 		/// </summary>
-		public MMargin Margin { get ; protected set; }                                                                                            // BuildMemberBase.cs:396
-		                                                                                                                                          // BuildMemberBase.cs:390
+		public MMargin Margin { get ; protected set; }                                                                                            // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:392
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// MgDensity
 		/// Access fhir element 'Observation.component:mgDensity'
 		/// </summary>
-		public MMgDensity MgDensity { get ; protected set; }                                                                                      // BuildMemberBase.cs:396
+		public MMgDensity MgDensity { get ; protected set; }                                                                                      // BuildMemberBase.cs:400
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Orientation = new MOrientation(0, 1);                                                                                               // BuildMemberBase.cs:375
+			this.Orientation = new MOrientation(0, 1);                                                                                               // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Shape = new MShape(0, 1);                                                                                                           // BuildMemberBase.cs:375
+			this.Shape = new MShape(0, 1);                                                                                                           // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Margin = new MMargin(0, 1);                                                                                                         // BuildMemberBase.cs:375
+			this.Margin = new MMargin(0, 1);                                                                                                         // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.MgDensity = new MMgDensity(0, 1);                                                                                                   // BuildMemberBase.cs:375
+			this.MgDensity = new MMgDensity(0, 1);                                                                                                   // BuildMemberBase.cs:379
 			//- Constructor
 
 			//+ ValidateCodeStart

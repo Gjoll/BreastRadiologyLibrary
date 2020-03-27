@@ -33,8 +33,8 @@ namespace BreastRadLib
 		public static TCoding Code_Dystrophic = new TCoding(MammoCalcificationTypeCS.Code_Dystrophic);                                            // Builder.cs:353
 		public static TCoding Code_Eggshell = new TCoding(MammoCalcificationTypeCS.Code_Eggshell);                                                // Builder.cs:353
 		public static TCoding Code_Fine = new TCoding(MammoCalcificationTypeCS.Code_Fine);                                                        // Builder.cs:353
-		public static TCoding Code_GenericCalcification = new TCoding(MammoCalcificationTypeCS.Code_GenericCalcification);                        // Builder.cs:353
-		public static TCoding Code_CourseHeterogeneous = new TCoding(MammoCalcificationTypeCS.Code_CourseHeterogeneous);                          // Builder.cs:353
+		public static TCoding Code_Generic = new TCoding(MammoCalcificationTypeCS.Code_Generic);                                                  // Builder.cs:353
+		public static TCoding Code_CoarseHeterogeneous = new TCoding(MammoCalcificationTypeCS.Code_CoarseHeterogeneous);                          // Builder.cs:353
 		public static TCoding Code_Indistinct = new TCoding(MammoCalcificationTypeCS.Code_Indistinct);                                            // Builder.cs:353
 		public static TCoding Code_LargeRodlike = new TCoding(MammoCalcificationTypeCS.Code_LargeRodlike);                                        // Builder.cs:353
 		public static TCoding Code_Layering = new TCoding(MammoCalcificationTypeCS.Code_Layering);                                                // Builder.cs:353
@@ -59,8 +59,8 @@ namespace BreastRadLib
 		    yield return Code_Dystrophic;                                                                                                         // Builder.cs:356
 		    yield return Code_Eggshell;                                                                                                           // Builder.cs:356
 		    yield return Code_Fine;                                                                                                               // Builder.cs:356
-		    yield return Code_GenericCalcification;                                                                                               // Builder.cs:356
-		    yield return Code_CourseHeterogeneous;                                                                                                // Builder.cs:356
+		    yield return Code_Generic;                                                                                                            // Builder.cs:356
+		    yield return Code_CoarseHeterogeneous;                                                                                                // Builder.cs:356
 		    yield return Code_Indistinct;                                                                                                         // Builder.cs:356
 		    yield return Code_LargeRodlike;                                                                                                       // Builder.cs:356
 		    yield return Code_Layering;                                                                                                           // Builder.cs:356

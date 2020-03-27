@@ -20,6 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="FhirKhit.Tools">
+      <HintPath>..\..\Lib\FhirKhit.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="FhirKhit.Tools.R4">
+      <HintPath>..\..\Lib\FhirKhit.Tools.R4.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

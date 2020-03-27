@@ -56,8 +56,8 @@ namespace BreastRadiology.XUnitTests
         BreastRadiologyDocument MakeDoc()
         {
             BreastRadiologyDocument doc = BreastRadiologyDocument.Create();
-            doc.Subject = new ResourceReference { Reference = "xxyyz" };
-            doc.Encounter = new ResourceReference { Reference = "xxyyz" };
+            //$doc.Subject = new ResourceReference { Reference = "xxyyz" };
+            //$doc.Encounter = new ResourceReference { Reference = "xxyyz" };
             return doc;
         }
 

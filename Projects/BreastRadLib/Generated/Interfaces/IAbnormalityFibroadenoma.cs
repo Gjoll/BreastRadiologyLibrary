@@ -29,11 +29,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// FibroAdenomaType
 		/// </summary>
-		MFibroAdenomaType FibroAdenomaType { get ; }                                                                                              // BuildMemberBase.cs:385
+		MFibroAdenomaType FibroAdenomaType { get ; }                                                                                              // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

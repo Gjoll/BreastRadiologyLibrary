@@ -15,11 +15,15 @@ namespace BreastRadLib
 		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGBreastDensityCS";                                             // Builder.cs:377
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A term used to describe breast tissue that is made up of almost all fatty tissue.
-		/// Fatty breast tissue does not look dense on a mammogram, which may make it easier
+		/// A term used to describe breast tissue that is made
+		/// up of almost all fatty tissue.
+		/// Fatty breast tissue does not look dense on a mammogram,
+		/// which may make it easier
 		/// to find tumors or other changes in the breast.
-		/// Fatty breast tissue is more common in older women than in younger women.
-		/// Fatty breast tissue is one of four categories used to describe a level of breast
+		/// Fatty breast tissue is more common in older women
+		/// than in younger women.
+		/// Fatty breast tissue is one of four categories used
+		/// to describe a level of breast
 		/// density seen on a mammogram.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/search?contains=false&amp;q=fatty]
 		/// 
@@ -28,11 +32,15 @@ namespace BreastRadLib
 		public static Coding Code_AlmostEntirelyFat = new Coding(System, "AlmostEntirelyFat", "Almost entirely fat");                             // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A term used to describe breast tissue that is made up of mostly fatty tissue and
-		/// also has some dense fibrous tissue and glandular tissue.
-		/// On a mammogram, the dense areas of the breast make it harder to find tumors or other
+		/// A term used to describe breast tissue that is made
+		/// up of mostly fatty tissue and
+		/// also has some dense fibrous tissue and glandular
+		/// tissue.
+		/// On a mammogram, the dense areas of the breast make
+		/// it harder to find tumors or other
 		/// changes.
-		/// Scattered fibroglandular breast tissue is one of four categories used to describe
+		/// Scattered fibroglandular breast tissue is one of
+		/// four categories used to describe
 		/// a level of breast density seen on a mammogram.
 		/// About 40% of women have this type of breast tissue.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/scattered-fibroglandular-breast-tissue]
@@ -42,11 +50,14 @@ namespace BreastRadLib
 		public static Coding Code_ScatteredAreasOfFibroglandularDensity = new Coding(System, "ScatteredAreasOfFibroglandularDensity", "Scattered areas of fibroglandular density");// Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A term used to describe breast tissue that has large areas of dense fibrous tissue
+		/// A term used to describe breast tissue that has large
+		/// areas of dense fibrous tissue
 		/// and glandular tissue and also has some fatty tissue.
-		/// The dense areas of the breast make it harder to find tumors or other changes on a
+		/// The dense areas of the breast make it harder to find
+		/// tumors or other changes on a
 		/// mammogram.
-		/// Heterogeneously dense breast tissue is one of four categories used to describe a
+		/// Heterogeneously dense breast tissue is one of four
+		/// categories used to describe a
 		/// level of breast density seen on a mammogram.
 		/// About 40% of women have this type of breast tissue.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/heterogeneously-dense-breast-tissue]
@@ -57,13 +68,17 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Also called extremely dense breast tissue.
-		/// A term used to describe breast tissue that is made up of almost all dense fibrous
+		/// A term used to describe breast tissue that is made
+		/// up of almost all dense fibrous
 		/// tissue and glandular tissue.
-		/// On a mammogram, the dense areas of the breast make it harder to find tumors or other
+		/// On a mammogram, the dense areas of the breast make
+		/// it harder to find tumors or other
 		/// changes.
-		/// Women who have extremely dense breast tissue have a higher risk of breast cancer
+		/// Women who have extremely dense breast tissue have
+		/// a higher risk of breast cancer
 		/// than those who have little or no dense breast tissue.
-		/// Extremely dense breast tissue is one of four categories used to describe a level
+		/// Extremely dense breast tissue is one of four categories
+		/// used to describe a level
 		/// of breast density seen on a mammogram.
 		/// About 10% of women have this type of breast tissue.
 		/// [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/extremely-dense-breast-tissue]

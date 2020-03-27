@@ -30,8 +30,8 @@ namespace BreastRadLib
         public override void Write()
         {
             base.Write();
-            this.Resource.Encounter = this.Doc.Encounter;
-            this.Resource.Subject = this.Doc.Subject;
+            this.Resource.Encounter = this.Doc.EncounterReference;
+            this.Resource.Subject = this.Doc.SubjectReference;
         }
     }
 }

@@ -18,11 +18,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// ObsSize
 		/// </summary>
-		MObsSize ObsSize { get ; }                                                                                                                // BuildMemberBase.cs:385
+		MObsSize ObsSize { get ; }                                                                                                                // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

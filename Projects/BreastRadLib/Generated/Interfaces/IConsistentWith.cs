@@ -22,17 +22,17 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// Value
 		/// </summary>
-		MValue Value { get ; }                                                                                                                    // BuildMemberBase.cs:385
+		MValue Value { get ; }                                                                                                                    // BuildMemberBase.cs:389
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:382
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// Qualifier
 		/// </summary>
-		MQualifier Qualifier { get ; }                                                                                                            // BuildMemberBase.cs:385
+		MQualifier Qualifier { get ; }                                                                                                            // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

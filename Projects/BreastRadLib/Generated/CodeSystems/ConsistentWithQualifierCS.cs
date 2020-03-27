@@ -15,8 +15,9 @@ namespace BreastRadLib
 		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithQualifierCS";                                     // Builder.cs:377
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// More than one possibility for your diagnosis.
-		/// The process of weighing the probability of one disease versus that of other diseases
+		/// More than one possibility for a diagnosis.
+		/// The process of weighing the probability of one disease
+		/// versus that of other diseases
 		/// possibly accounting for a patient&#39;s illness.
 		/// 
 		/// 

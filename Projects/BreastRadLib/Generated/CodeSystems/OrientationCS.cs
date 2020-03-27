@@ -32,7 +32,9 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The nodule is taller than wide.
-		/// A nodule is said to be taller than wide when it is greater in the direction normal to the skin than in the parallel ones.
+		/// A nodule is said to be taller than wide when it is
+		/// greater in the direction normal to the skin than
+		/// in the parallel ones.
 		/// 
 		/// 
 		/// Valid for the following modalities: US MRI.
@@ -41,7 +43,9 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// The nodule is wider than tall.
-		/// A nodule is said to be wider than tall when it is larger in the direction not parallel to the direction of the skin.
+		/// A nodule is said to be wider than tall when it is
+		/// larger in the direction not parallel to the direction
+		/// of the skin.
 		/// 
 		/// 
 		/// Valid for the following modalities: US MRI.

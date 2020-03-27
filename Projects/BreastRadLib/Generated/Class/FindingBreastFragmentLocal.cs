@@ -15,14 +15,14 @@ using BreastRadLib.ObservationLocal;
 namespace BreastRadLib.FindingBreastFragmentLocal
 {
 	//+ LocalClassDefs
-	#region Observation.hasMember:mGFinding Container Class                                                                                    // BuildMemberBase.cs:173
+	#region Observation.hasMember:mGFinding Container Class                                                                                    // BuildMemberBase.cs:174
 	// Called from BuildMemberReferences.cs, Line 191
-	// BuildMemberBase.cs:175
+	// BuildMemberBase.cs:176
 	/// <summary>
 	/// Container class for Observation.hasMember:mGFinding.
 	/// </summary>
-	public class MMGFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:178
-	{                                                                                                                                          // BuildMemberBase.cs:179
+	public class MMGFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:179
+	{                                                                                                                                          // BuildMemberBase.cs:180
 	    #region Observation.hasMember:mGFinding Item Class                                                                                     // BuildMemberBase.cs:81
 	    // Called from BuildMemberReferences.cs, Line 191
 	    // BuildMemberBase.cs:83
@@ -71,84 +71,84 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberBase.cs:127
 	    }                                                                                                                                      // BuildMemberBase.cs:130
 	    #endregion                                                                                                                             // BuildMemberBase.cs:131
-	                                                                                                                                           // BuildMemberBase.cs:182
-	    // Properties                                                                                                                          // BuildMemberBase.cs:183
+	                                                                                                                                           // BuildMemberBase.cs:183
+	    // Properties                                                                                                                          // BuildMemberBase.cs:184
 	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:154
 	    {                                                                                                                                      // BuildMemberBase.cs:155
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding"                                                            // BuildMemberBase.cs:162
 	    };                                                                                                                                     // BuildMemberBase.cs:163
-	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:207
-	                                                                                                                                           // BuildMemberBase.cs:209
-	    // BuildMemberBase.cs:210
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:208
+	                                                                                                                                           // BuildMemberBase.cs:210
+	    // BuildMemberBase.cs:211
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:213
-	    {                                                                                                                                      // BuildMemberBase.cs:214
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:215
-	    }                                                                                                                                      // BuildMemberBase.cs:216
-	                                                                                                                                           // BuildMemberBase.cs:218
-	    // BuildMemberBase.cs:219
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:214
+	    {                                                                                                                                      // BuildMemberBase.cs:215
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:216
+	    }                                                                                                                                      // BuildMemberBase.cs:217
+	                                                                                                                                           // BuildMemberBase.cs:219
+	    // BuildMemberBase.cs:220
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:222
-	    {                                                                                                                                      // BuildMemberBase.cs:223
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:224
-	        {                                                                                                                                  // BuildMemberBase.cs:225
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:226
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:227
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:228
-	        }                                                                                                                                  // BuildMemberBase.cs:229
-	    }                                                                                                                                      // BuildMemberBase.cs:230
-	                                                                                                                                           // BuildMemberBase.cs:232
-	    // BuildMemberBase.cs:233
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:223
+	    {                                                                                                                                      // BuildMemberBase.cs:224
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:225
+	        {                                                                                                                                  // BuildMemberBase.cs:226
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:227
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:228
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:229
+	        }                                                                                                                                  // BuildMemberBase.cs:230
+	    }                                                                                                                                      // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
+	    // BuildMemberBase.cs:234
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:236
-	                                                                                                                                           // BuildMemberBase.cs:238
-	    // BuildMemberBase.cs:239
+	    Item item;                                                                                                                             // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
+	    // BuildMemberBase.cs:240
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:242
-	                                                                                                                                           // BuildMemberBase.cs:244
-	    // BuildMemberBase.cs:245
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
+	    // BuildMemberBase.cs:246
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public MGFinding Get()                                                                                                                 // BuildMemberBase.cs:248
-	    {                                                                                                                                      // BuildMemberBase.cs:249
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:250
-	            return null;                                                                                                                   // BuildMemberBase.cs:251
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:252
-	    }                                                                                                                                      // BuildMemberBase.cs:253
-	                                                                                                                                           // BuildMemberBase.cs:259
-	    // BuildMemberBase.cs:260
+	    public MGFinding Get()                                                                                                                 // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:251
+	            return null;                                                                                                                   // BuildMemberBase.cs:252
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:253
+	    }                                                                                                                                      // BuildMemberBase.cs:254
+	                                                                                                                                           // BuildMemberBase.cs:260
+	    // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public MGFinding Set(MGFinding value)                                                                                                  // BuildMemberBase.cs:263
-	    {                                                                                                                                      // BuildMemberBase.cs:264
-	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:265
-	        item.Value = value;                                                                                                                // BuildMemberBase.cs:266
-	        this.item = item;                                                                                                                  // BuildMemberBase.cs:267
-	        return value;                                                                                                                      // BuildMemberBase.cs:268
-	    }                                                                                                                                      // BuildMemberBase.cs:269
-	    #endregion                                                                                                                             // BuildMemberBase.cs:345
-	                                                                                                                                           // BuildMemberBase.cs:186
-	    // BuildMemberBase.cs:187
+	    public MGFinding Set(MGFinding value)                                                                                                  // BuildMemberBase.cs:264
+	    {                                                                                                                                      // BuildMemberBase.cs:265
+	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:266
+	        item.Value = value;                                                                                                                // BuildMemberBase.cs:267
+	        this.item = item;                                                                                                                  // BuildMemberBase.cs:268
+	        return value;                                                                                                                      // BuildMemberBase.cs:269
+	    }                                                                                                                                      // BuildMemberBase.cs:270
+	    #endregion                                                                                                                             // BuildMemberBase.cs:349
+	                                                                                                                                           // BuildMemberBase.cs:187
+	    // BuildMemberBase.cs:188
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MMGFinding(Int32 min, Int32 max) : base("Observation.hasMember:mGFinding", min, max)                                            // BuildMemberBase.cs:190
-	    {                                                                                                                                      // BuildMemberBase.cs:191
-	    }                                                                                                                                      // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
-	    // Methods                                                                                                                             // BuildMemberBase.cs:196
-	                                                                                                                                           // BuildMemberBase.cs:349
-	    // BuildMemberBase.cs:350
+	    public MMGFinding(Int32 min, Int32 max) : base("Observation.hasMember:mGFinding", min, max)                                            // BuildMemberBase.cs:191
+	    {                                                                                                                                      // BuildMemberBase.cs:192
+	    }                                                                                                                                      // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
+	    // Methods                                                                                                                             // BuildMemberBase.cs:197
+	                                                                                                                                           // BuildMemberBase.cs:353
+	    // BuildMemberBase.cs:354
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
@@ -160,8 +160,8 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:93
 	        }                                                                                                                                  // BuildMemberReferences.cs:94
 	    }                                                                                                                                      // BuildMemberReferences.cs:95
-	                                                                                                                                           // BuildMemberBase.cs:355
-	    // BuildMemberBase.cs:356
+	                                                                                                                                           // BuildMemberBase.cs:359
+	    // BuildMemberBase.cs:360
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
@@ -180,16 +180,16 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:75
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:76
 	    }                                                                                                                                      // BuildMemberReferences.cs:77
-	}                                                                                                                                          // BuildMemberBase.cs:198
-	#endregion                                                                                                                                 // BuildMemberBase.cs:199
-	#region Observation.hasMember:mRIFinding Container Class                                                                                   // BuildMemberBase.cs:173
+	}                                                                                                                                          // BuildMemberBase.cs:199
+	#endregion                                                                                                                                 // BuildMemberBase.cs:200
+	#region Observation.hasMember:mRIFinding Container Class                                                                                   // BuildMemberBase.cs:174
 	// Called from BuildMemberReferences.cs, Line 191
-	// BuildMemberBase.cs:175
+	// BuildMemberBase.cs:176
 	/// <summary>
 	/// Container class for Observation.hasMember:mRIFinding.
 	/// </summary>
-	public class MMRIFinding : MContainer, ITMItem<ResourceReference>                                                                          // BuildMemberBase.cs:178
-	{                                                                                                                                          // BuildMemberBase.cs:179
+	public class MMRIFinding : MContainer, ITMItem<ResourceReference>                                                                          // BuildMemberBase.cs:179
+	{                                                                                                                                          // BuildMemberBase.cs:180
 	    #region Observation.hasMember:mRIFinding Item Class                                                                                    // BuildMemberBase.cs:81
 	    // Called from BuildMemberReferences.cs, Line 191
 	    // BuildMemberBase.cs:83
@@ -238,84 +238,84 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberBase.cs:127
 	    }                                                                                                                                      // BuildMemberBase.cs:130
 	    #endregion                                                                                                                             // BuildMemberBase.cs:131
-	                                                                                                                                           // BuildMemberBase.cs:182
-	    // Properties                                                                                                                          // BuildMemberBase.cs:183
+	                                                                                                                                           // BuildMemberBase.cs:183
+	    // Properties                                                                                                                          // BuildMemberBase.cs:184
 	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:154
 	    {                                                                                                                                      // BuildMemberBase.cs:155
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding"                                                           // BuildMemberBase.cs:162
 	    };                                                                                                                                     // BuildMemberBase.cs:163
-	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:207
-	                                                                                                                                           // BuildMemberBase.cs:209
-	    // BuildMemberBase.cs:210
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:208
+	                                                                                                                                           // BuildMemberBase.cs:210
+	    // BuildMemberBase.cs:211
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:213
-	    {                                                                                                                                      // BuildMemberBase.cs:214
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:215
-	    }                                                                                                                                      // BuildMemberBase.cs:216
-	                                                                                                                                           // BuildMemberBase.cs:218
-	    // BuildMemberBase.cs:219
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:214
+	    {                                                                                                                                      // BuildMemberBase.cs:215
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:216
+	    }                                                                                                                                      // BuildMemberBase.cs:217
+	                                                                                                                                           // BuildMemberBase.cs:219
+	    // BuildMemberBase.cs:220
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:222
-	    {                                                                                                                                      // BuildMemberBase.cs:223
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:224
-	        {                                                                                                                                  // BuildMemberBase.cs:225
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:226
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:227
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:228
-	        }                                                                                                                                  // BuildMemberBase.cs:229
-	    }                                                                                                                                      // BuildMemberBase.cs:230
-	                                                                                                                                           // BuildMemberBase.cs:232
-	    // BuildMemberBase.cs:233
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:223
+	    {                                                                                                                                      // BuildMemberBase.cs:224
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:225
+	        {                                                                                                                                  // BuildMemberBase.cs:226
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:227
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:228
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:229
+	        }                                                                                                                                  // BuildMemberBase.cs:230
+	    }                                                                                                                                      // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
+	    // BuildMemberBase.cs:234
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:236
-	                                                                                                                                           // BuildMemberBase.cs:238
-	    // BuildMemberBase.cs:239
+	    Item item;                                                                                                                             // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
+	    // BuildMemberBase.cs:240
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:242
-	                                                                                                                                           // BuildMemberBase.cs:244
-	    // BuildMemberBase.cs:245
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
+	    // BuildMemberBase.cs:246
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public MRIFinding Get()                                                                                                                // BuildMemberBase.cs:248
-	    {                                                                                                                                      // BuildMemberBase.cs:249
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:250
-	            return null;                                                                                                                   // BuildMemberBase.cs:251
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:252
-	    }                                                                                                                                      // BuildMemberBase.cs:253
-	                                                                                                                                           // BuildMemberBase.cs:259
-	    // BuildMemberBase.cs:260
+	    public MRIFinding Get()                                                                                                                // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:251
+	            return null;                                                                                                                   // BuildMemberBase.cs:252
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:253
+	    }                                                                                                                                      // BuildMemberBase.cs:254
+	                                                                                                                                           // BuildMemberBase.cs:260
+	    // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public MRIFinding Set(MRIFinding value)                                                                                                // BuildMemberBase.cs:263
-	    {                                                                                                                                      // BuildMemberBase.cs:264
-	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:265
-	        item.Value = value;                                                                                                                // BuildMemberBase.cs:266
-	        this.item = item;                                                                                                                  // BuildMemberBase.cs:267
-	        return value;                                                                                                                      // BuildMemberBase.cs:268
-	    }                                                                                                                                      // BuildMemberBase.cs:269
-	    #endregion                                                                                                                             // BuildMemberBase.cs:345
-	                                                                                                                                           // BuildMemberBase.cs:186
-	    // BuildMemberBase.cs:187
+	    public MRIFinding Set(MRIFinding value)                                                                                                // BuildMemberBase.cs:264
+	    {                                                                                                                                      // BuildMemberBase.cs:265
+	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:266
+	        item.Value = value;                                                                                                                // BuildMemberBase.cs:267
+	        this.item = item;                                                                                                                  // BuildMemberBase.cs:268
+	        return value;                                                                                                                      // BuildMemberBase.cs:269
+	    }                                                                                                                                      // BuildMemberBase.cs:270
+	    #endregion                                                                                                                             // BuildMemberBase.cs:349
+	                                                                                                                                           // BuildMemberBase.cs:187
+	    // BuildMemberBase.cs:188
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MMRIFinding(Int32 min, Int32 max) : base("Observation.hasMember:mRIFinding", min, max)                                          // BuildMemberBase.cs:190
-	    {                                                                                                                                      // BuildMemberBase.cs:191
-	    }                                                                                                                                      // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
-	    // Methods                                                                                                                             // BuildMemberBase.cs:196
-	                                                                                                                                           // BuildMemberBase.cs:349
-	    // BuildMemberBase.cs:350
+	    public MMRIFinding(Int32 min, Int32 max) : base("Observation.hasMember:mRIFinding", min, max)                                          // BuildMemberBase.cs:191
+	    {                                                                                                                                      // BuildMemberBase.cs:192
+	    }                                                                                                                                      // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
+	    // Methods                                                                                                                             // BuildMemberBase.cs:197
+	                                                                                                                                           // BuildMemberBase.cs:353
+	    // BuildMemberBase.cs:354
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
@@ -327,8 +327,8 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:93
 	        }                                                                                                                                  // BuildMemberReferences.cs:94
 	    }                                                                                                                                      // BuildMemberReferences.cs:95
-	                                                                                                                                           // BuildMemberBase.cs:355
-	    // BuildMemberBase.cs:356
+	                                                                                                                                           // BuildMemberBase.cs:359
+	    // BuildMemberBase.cs:360
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
@@ -347,16 +347,16 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:75
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:76
 	    }                                                                                                                                      // BuildMemberReferences.cs:77
-	}                                                                                                                                          // BuildMemberBase.cs:198
-	#endregion                                                                                                                                 // BuildMemberBase.cs:199
-	#region Observation.hasMember:nMFinding Container Class                                                                                    // BuildMemberBase.cs:173
+	}                                                                                                                                          // BuildMemberBase.cs:199
+	#endregion                                                                                                                                 // BuildMemberBase.cs:200
+	#region Observation.hasMember:nMFinding Container Class                                                                                    // BuildMemberBase.cs:174
 	// Called from BuildMemberReferences.cs, Line 191
-	// BuildMemberBase.cs:175
+	// BuildMemberBase.cs:176
 	/// <summary>
 	/// Container class for Observation.hasMember:nMFinding.
 	/// </summary>
-	public class MNMFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:178
-	{                                                                                                                                          // BuildMemberBase.cs:179
+	public class MNMFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:179
+	{                                                                                                                                          // BuildMemberBase.cs:180
 	    #region Observation.hasMember:nMFinding Item Class                                                                                     // BuildMemberBase.cs:81
 	    // Called from BuildMemberReferences.cs, Line 191
 	    // BuildMemberBase.cs:83
@@ -405,84 +405,84 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberBase.cs:127
 	    }                                                                                                                                      // BuildMemberBase.cs:130
 	    #endregion                                                                                                                             // BuildMemberBase.cs:131
-	                                                                                                                                           // BuildMemberBase.cs:182
-	    // Properties                                                                                                                          // BuildMemberBase.cs:183
+	                                                                                                                                           // BuildMemberBase.cs:183
+	    // Properties                                                                                                                          // BuildMemberBase.cs:184
 	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:154
 	    {                                                                                                                                      // BuildMemberBase.cs:155
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding"                                                            // BuildMemberBase.cs:162
 	    };                                                                                                                                     // BuildMemberBase.cs:163
-	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:207
-	                                                                                                                                           // BuildMemberBase.cs:209
-	    // BuildMemberBase.cs:210
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:208
+	                                                                                                                                           // BuildMemberBase.cs:210
+	    // BuildMemberBase.cs:211
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:213
-	    {                                                                                                                                      // BuildMemberBase.cs:214
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:215
-	    }                                                                                                                                      // BuildMemberBase.cs:216
-	                                                                                                                                           // BuildMemberBase.cs:218
-	    // BuildMemberBase.cs:219
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:214
+	    {                                                                                                                                      // BuildMemberBase.cs:215
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:216
+	    }                                                                                                                                      // BuildMemberBase.cs:217
+	                                                                                                                                           // BuildMemberBase.cs:219
+	    // BuildMemberBase.cs:220
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:222
-	    {                                                                                                                                      // BuildMemberBase.cs:223
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:224
-	        {                                                                                                                                  // BuildMemberBase.cs:225
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:226
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:227
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:228
-	        }                                                                                                                                  // BuildMemberBase.cs:229
-	    }                                                                                                                                      // BuildMemberBase.cs:230
-	                                                                                                                                           // BuildMemberBase.cs:232
-	    // BuildMemberBase.cs:233
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:223
+	    {                                                                                                                                      // BuildMemberBase.cs:224
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:225
+	        {                                                                                                                                  // BuildMemberBase.cs:226
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:227
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:228
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:229
+	        }                                                                                                                                  // BuildMemberBase.cs:230
+	    }                                                                                                                                      // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
+	    // BuildMemberBase.cs:234
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:236
-	                                                                                                                                           // BuildMemberBase.cs:238
-	    // BuildMemberBase.cs:239
+	    Item item;                                                                                                                             // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
+	    // BuildMemberBase.cs:240
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:242
-	                                                                                                                                           // BuildMemberBase.cs:244
-	    // BuildMemberBase.cs:245
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
+	    // BuildMemberBase.cs:246
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public NMFinding Get()                                                                                                                 // BuildMemberBase.cs:248
-	    {                                                                                                                                      // BuildMemberBase.cs:249
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:250
-	            return null;                                                                                                                   // BuildMemberBase.cs:251
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:252
-	    }                                                                                                                                      // BuildMemberBase.cs:253
-	                                                                                                                                           // BuildMemberBase.cs:259
-	    // BuildMemberBase.cs:260
+	    public NMFinding Get()                                                                                                                 // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:251
+	            return null;                                                                                                                   // BuildMemberBase.cs:252
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:253
+	    }                                                                                                                                      // BuildMemberBase.cs:254
+	                                                                                                                                           // BuildMemberBase.cs:260
+	    // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public NMFinding Set(NMFinding value)                                                                                                  // BuildMemberBase.cs:263
-	    {                                                                                                                                      // BuildMemberBase.cs:264
-	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:265
-	        item.Value = value;                                                                                                                // BuildMemberBase.cs:266
-	        this.item = item;                                                                                                                  // BuildMemberBase.cs:267
-	        return value;                                                                                                                      // BuildMemberBase.cs:268
-	    }                                                                                                                                      // BuildMemberBase.cs:269
-	    #endregion                                                                                                                             // BuildMemberBase.cs:345
-	                                                                                                                                           // BuildMemberBase.cs:186
-	    // BuildMemberBase.cs:187
+	    public NMFinding Set(NMFinding value)                                                                                                  // BuildMemberBase.cs:264
+	    {                                                                                                                                      // BuildMemberBase.cs:265
+	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:266
+	        item.Value = value;                                                                                                                // BuildMemberBase.cs:267
+	        this.item = item;                                                                                                                  // BuildMemberBase.cs:268
+	        return value;                                                                                                                      // BuildMemberBase.cs:269
+	    }                                                                                                                                      // BuildMemberBase.cs:270
+	    #endregion                                                                                                                             // BuildMemberBase.cs:349
+	                                                                                                                                           // BuildMemberBase.cs:187
+	    // BuildMemberBase.cs:188
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MNMFinding(Int32 min, Int32 max) : base("Observation.hasMember:nMFinding", min, max)                                            // BuildMemberBase.cs:190
-	    {                                                                                                                                      // BuildMemberBase.cs:191
-	    }                                                                                                                                      // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
-	    // Methods                                                                                                                             // BuildMemberBase.cs:196
-	                                                                                                                                           // BuildMemberBase.cs:349
-	    // BuildMemberBase.cs:350
+	    public MNMFinding(Int32 min, Int32 max) : base("Observation.hasMember:nMFinding", min, max)                                            // BuildMemberBase.cs:191
+	    {                                                                                                                                      // BuildMemberBase.cs:192
+	    }                                                                                                                                      // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
+	    // Methods                                                                                                                             // BuildMemberBase.cs:197
+	                                                                                                                                           // BuildMemberBase.cs:353
+	    // BuildMemberBase.cs:354
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
@@ -494,8 +494,8 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:93
 	        }                                                                                                                                  // BuildMemberReferences.cs:94
 	    }                                                                                                                                      // BuildMemberReferences.cs:95
-	                                                                                                                                           // BuildMemberBase.cs:355
-	    // BuildMemberBase.cs:356
+	                                                                                                                                           // BuildMemberBase.cs:359
+	    // BuildMemberBase.cs:360
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
@@ -514,16 +514,16 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:75
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:76
 	    }                                                                                                                                      // BuildMemberReferences.cs:77
-	}                                                                                                                                          // BuildMemberBase.cs:198
-	#endregion                                                                                                                                 // BuildMemberBase.cs:199
-	#region Observation.hasMember:uSFinding Container Class                                                                                    // BuildMemberBase.cs:173
+	}                                                                                                                                          // BuildMemberBase.cs:199
+	#endregion                                                                                                                                 // BuildMemberBase.cs:200
+	#region Observation.hasMember:uSFinding Container Class                                                                                    // BuildMemberBase.cs:174
 	// Called from BuildMemberReferences.cs, Line 191
-	// BuildMemberBase.cs:175
+	// BuildMemberBase.cs:176
 	/// <summary>
 	/// Container class for Observation.hasMember:uSFinding.
 	/// </summary>
-	public class MUSFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:178
-	{                                                                                                                                          // BuildMemberBase.cs:179
+	public class MUSFinding : MContainer, ITMItem<ResourceReference>                                                                           // BuildMemberBase.cs:179
+	{                                                                                                                                          // BuildMemberBase.cs:180
 	    #region Observation.hasMember:uSFinding Item Class                                                                                     // BuildMemberBase.cs:81
 	    // Called from BuildMemberReferences.cs, Line 191
 	    // BuildMemberBase.cs:83
@@ -572,84 +572,84 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberBase.cs:127
 	    }                                                                                                                                      // BuildMemberBase.cs:130
 	    #endregion                                                                                                                             // BuildMemberBase.cs:131
-	                                                                                                                                           // BuildMemberBase.cs:182
-	    // Properties                                                                                                                          // BuildMemberBase.cs:183
+	                                                                                                                                           // BuildMemberBase.cs:183
+	    // Properties                                                                                                                          // BuildMemberBase.cs:184
 	    String[] targetUrls = new string[]                                                                                                     // BuildMemberBase.cs:154
 	    {                                                                                                                                      // BuildMemberBase.cs:155
 	        "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding"                                                            // BuildMemberBase.cs:162
 	    };                                                                                                                                     // BuildMemberBase.cs:163
-	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:207
-	                                                                                                                                           // BuildMemberBase.cs:209
-	    // BuildMemberBase.cs:210
+	    #region Common Properties (Singleton)                                                                                                  // BuildMemberBase.cs:208
+	                                                                                                                                           // BuildMemberBase.cs:210
+	    // BuildMemberBase.cs:211
 	    /// <summary>
 	    /// Get All Items
 	    /// </summary>
-	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:213
-	    {                                                                                                                                      // BuildMemberBase.cs:214
-	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:215
-	    }                                                                                                                                      // BuildMemberBase.cs:216
-	                                                                                                                                           // BuildMemberBase.cs:218
-	    // BuildMemberBase.cs:219
+	    IEnumerable<Item> GetAllItems()                                                                                                        // BuildMemberBase.cs:214
+	    {                                                                                                                                      // BuildMemberBase.cs:215
+	        if (this.item != null) yield return this.item;                                                                                     // BuildMemberBase.cs:216
+	    }                                                                                                                                      // BuildMemberBase.cs:217
+	                                                                                                                                           // BuildMemberBase.cs:219
+	    // BuildMemberBase.cs:220
 	    /// <summary>
 	    /// Set All Items
 	    /// </summary>
-	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:222
-	    {                                                                                                                                      // BuildMemberBase.cs:223
-	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:224
-	        {                                                                                                                                  // BuildMemberBase.cs:225
-	            case 0: break;                                                                                                                 // BuildMemberBase.cs:226
-	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:227
-	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:228
-	        }                                                                                                                                  // BuildMemberBase.cs:229
-	    }                                                                                                                                      // BuildMemberBase.cs:230
-	                                                                                                                                           // BuildMemberBase.cs:232
-	    // BuildMemberBase.cs:233
+	    void SetAllItems(IEnumerable<Item> items)                                                                                              // BuildMemberBase.cs:223
+	    {                                                                                                                                      // BuildMemberBase.cs:224
+	        switch (items.Count())                                                                                                             // BuildMemberBase.cs:225
+	        {                                                                                                                                  // BuildMemberBase.cs:226
+	            case 0: break;                                                                                                                 // BuildMemberBase.cs:227
+	            case 1: this.item = items.First(); break;                                                                                      // BuildMemberBase.cs:228
+	            default: throw new Exception("Found multiple elements while reading single item");                                             // BuildMemberBase.cs:229
+	        }                                                                                                                                  // BuildMemberBase.cs:230
+	    }                                                                                                                                      // BuildMemberBase.cs:231
+	                                                                                                                                           // BuildMemberBase.cs:233
+	    // BuildMemberBase.cs:234
 	    /// <summary>
 	    /// Item
 	    /// </summary>
-	    Item item;                                                                                                                             // BuildMemberBase.cs:236
-	                                                                                                                                           // BuildMemberBase.cs:238
-	    // BuildMemberBase.cs:239
+	    Item item;                                                                                                                             // BuildMemberBase.cs:237
+	                                                                                                                                           // BuildMemberBase.cs:239
+	    // BuildMemberBase.cs:240
 	    /// <summary>
 	    /// Count property
 	    /// </summary>
-	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:242
-	                                                                                                                                           // BuildMemberBase.cs:244
-	    // BuildMemberBase.cs:245
+	    public override Int32 Count => this.item == null ? 0 : 1;                                                                              // BuildMemberBase.cs:243
+	                                                                                                                                           // BuildMemberBase.cs:245
+	    // BuildMemberBase.cs:246
 	    /// <summary>
 	    /// Get Item's Value
 	    /// </summary>
-	    public USFinding Get()                                                                                                                 // BuildMemberBase.cs:248
-	    {                                                                                                                                      // BuildMemberBase.cs:249
-	        if (item == null)                                                                                                                  // BuildMemberBase.cs:250
-	            return null;                                                                                                                   // BuildMemberBase.cs:251
-	        return item.Value;                                                                                                                 // BuildMemberBase.cs:252
-	    }                                                                                                                                      // BuildMemberBase.cs:253
-	                                                                                                                                           // BuildMemberBase.cs:259
-	    // BuildMemberBase.cs:260
+	    public USFinding Get()                                                                                                                 // BuildMemberBase.cs:249
+	    {                                                                                                                                      // BuildMemberBase.cs:250
+	        if (item == null)                                                                                                                  // BuildMemberBase.cs:251
+	            return null;                                                                                                                   // BuildMemberBase.cs:252
+	        return item.Value;                                                                                                                 // BuildMemberBase.cs:253
+	    }                                                                                                                                      // BuildMemberBase.cs:254
+	                                                                                                                                           // BuildMemberBase.cs:260
+	    // BuildMemberBase.cs:261
 	    /// <summary>
 	    /// Set Item's Value
 	    /// </summary>
-	    public USFinding Set(USFinding value)                                                                                                  // BuildMemberBase.cs:263
-	    {                                                                                                                                      // BuildMemberBase.cs:264
-	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:265
-	        item.Value = value;                                                                                                                // BuildMemberBase.cs:266
-	        this.item = item;                                                                                                                  // BuildMemberBase.cs:267
-	        return value;                                                                                                                      // BuildMemberBase.cs:268
-	    }                                                                                                                                      // BuildMemberBase.cs:269
-	    #endregion                                                                                                                             // BuildMemberBase.cs:345
-	                                                                                                                                           // BuildMemberBase.cs:186
-	    // BuildMemberBase.cs:187
+	    public USFinding Set(USFinding value)                                                                                                  // BuildMemberBase.cs:264
+	    {                                                                                                                                      // BuildMemberBase.cs:265
+	        Item item = new Item();                                                                                                            // BuildMemberBase.cs:266
+	        item.Value = value;                                                                                                                // BuildMemberBase.cs:267
+	        this.item = item;                                                                                                                  // BuildMemberBase.cs:268
+	        return value;                                                                                                                      // BuildMemberBase.cs:269
+	    }                                                                                                                                      // BuildMemberBase.cs:270
+	    #endregion                                                                                                                             // BuildMemberBase.cs:349
+	                                                                                                                                           // BuildMemberBase.cs:187
+	    // BuildMemberBase.cs:188
 	    /// <summary>
 	    /// Constructor
 	    /// </summary>
-	    public MUSFinding(Int32 min, Int32 max) : base("Observation.hasMember:uSFinding", min, max)                                            // BuildMemberBase.cs:190
-	    {                                                                                                                                      // BuildMemberBase.cs:191
-	    }                                                                                                                                      // BuildMemberBase.cs:193
-	                                                                                                                                           // BuildMemberBase.cs:195
-	    // Methods                                                                                                                             // BuildMemberBase.cs:196
-	                                                                                                                                           // BuildMemberBase.cs:349
-	    // BuildMemberBase.cs:350
+	    public MUSFinding(Int32 min, Int32 max) : base("Observation.hasMember:uSFinding", min, max)                                            // BuildMemberBase.cs:191
+	    {                                                                                                                                      // BuildMemberBase.cs:192
+	    }                                                                                                                                      // BuildMemberBase.cs:194
+	                                                                                                                                           // BuildMemberBase.cs:196
+	    // Methods                                                                                                                             // BuildMemberBase.cs:197
+	                                                                                                                                           // BuildMemberBase.cs:353
+	    // BuildMemberBase.cs:354
 	    /// <summary>
 	    /// Write container items.
 	    /// </summary>
@@ -661,8 +661,8 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	            yield return reference;                                                                                                        // BuildMemberReferences.cs:93
 	        }                                                                                                                                  // BuildMemberReferences.cs:94
 	    }                                                                                                                                      // BuildMemberReferences.cs:95
-	                                                                                                                                           // BuildMemberBase.cs:355
-	    // BuildMemberBase.cs:356
+	                                                                                                                                           // BuildMemberBase.cs:359
+	    // BuildMemberBase.cs:360
 	    /// <summary>
 	    /// Read container items.
 	    /// </summary>
@@ -681,7 +681,7 @@ namespace BreastRadLib.FindingBreastFragmentLocal
 	        }                                                                                                                                  // BuildMemberReferences.cs:75
 	        this.SetAllItems(items);                                                                                                           // BuildMemberReferences.cs:76
 	    }                                                                                                                                      // BuildMemberReferences.cs:77
-	}                                                                                                                                          // BuildMemberBase.cs:198
-	#endregion                                                                                                                                 // BuildMemberBase.cs:199
+	}                                                                                                                                          // BuildMemberBase.cs:199
+	#endregion                                                                                                                                 // BuildMemberBase.cs:200
 	//- LocalClassDefs
 }

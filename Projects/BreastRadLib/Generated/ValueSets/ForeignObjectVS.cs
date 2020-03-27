@@ -33,11 +33,8 @@ namespace BreastRadLib
 		public static TCoding Code_BiopsyClip = new TCoding(ForeignObjectCS.Code_BiopsyClip);                                                     // Builder.cs:353
 		public static TCoding Code_BiopsyClips = new TCoding(ForeignObjectCS.Code_BiopsyClips);                                                   // Builder.cs:353
 		public static TCoding Code_BreastMarker = new TCoding(ForeignObjectCS.Code_BreastMarker);                                                 // Builder.cs:353
-		public static TCoding Code_BreastMarkers = new TCoding(ForeignObjectCS.Code_BreastMarkers);                                               // Builder.cs:353
 		public static TCoding Code_CatheterSleeves = new TCoding(ForeignObjectCS.Code_CatheterSleeves);                                           // Builder.cs:353
 		public static TCoding Code_ChemotherapyPort = new TCoding(ForeignObjectCS.Code_ChemotherapyPort);                                         // Builder.cs:353
-		public static TCoding Code_Clip = new TCoding(ForeignObjectCS.Code_Clip);                                                                 // Builder.cs:353
-		public static TCoding Code_Clips = new TCoding(ForeignObjectCS.Code_Clips);                                                               // Builder.cs:353
 		public static TCoding Code_Coil = new TCoding(ForeignObjectCS.Code_Coil);                                                                 // Builder.cs:353
 		public static TCoding Code_Glass = new TCoding(ForeignObjectCS.Code_Glass);                                                               // Builder.cs:353
 		public static TCoding Code_GoldSeed = new TCoding(ForeignObjectCS.Code_GoldSeed);                                                         // Builder.cs:353
@@ -70,11 +67,8 @@ namespace BreastRadLib
 		    yield return Code_BiopsyClip;                                                                                                         // Builder.cs:356
 		    yield return Code_BiopsyClips;                                                                                                        // Builder.cs:356
 		    yield return Code_BreastMarker;                                                                                                       // Builder.cs:356
-		    yield return Code_BreastMarkers;                                                                                                      // Builder.cs:356
 		    yield return Code_CatheterSleeves;                                                                                                    // Builder.cs:356
 		    yield return Code_ChemotherapyPort;                                                                                                   // Builder.cs:356
-		    yield return Code_Clip;                                                                                                               // Builder.cs:356
-		    yield return Code_Clips;                                                                                                              // Builder.cs:356
 		    yield return Code_Coil;                                                                                                               // Builder.cs:356
 		    yield return Code_Glass;                                                                                                              // Builder.cs:356
 		    yield return Code_GoldSeed;                                                                                                           // Builder.cs:356

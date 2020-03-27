@@ -15,7 +15,8 @@ namespace BreastRadLib
 		const string System = "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ShapeCS";                                                       // Builder.cs:377
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A mass that can&#39;t be characterized by any specific shape.
+		/// A mass that can&#39;t be characterized by any specific
+		/// shape.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.
@@ -23,7 +24,8 @@ namespace BreastRadLib
 		public static Coding Code_IrregularInShape = new Coding(System, "IrregularInShape", "Irregular in shape");                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A mass that has an undulating  (having a smoothly rising and falling form or outline)
+		/// A mass that has an undulating  (having a smoothly
+		/// rising and falling form or outline)
 		/// contour.
 		/// 
 		/// 
@@ -40,7 +42,8 @@ namespace BreastRadLib
 		public static Coding Code_OvalInShape = new Coding(System, "OvalInShape", "Oval in shape");                                               // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// There is a mass that is reniform (kidney shape) in shape.
+		/// There is a mass that is reniform (kidney shape) in
+		/// shape.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG.
@@ -48,7 +51,8 @@ namespace BreastRadLib
 		public static Coding Code_Reniform = new Coding(System, "Reniform", "Reniform");                                                          // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// There is a mass that is spherical, ball-shaped, circular or global.
+		/// There is a mass that is spherical, ball-shaped, circular
+		/// or global.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI.

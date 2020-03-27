@@ -24,11 +24,14 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Breast ductography (a.k.a.
-		/// galactography) is an imaging technique which is used to evaluate lesions causing
+		/// galactography) is an imaging technique which is used
+		/// to evaluate lesions causing
 		/// nipple discharge.
-		/// It helps in precisely locating the mass within breast tissue and gives useful information
+		/// It helps in precisely locating the mass within breast
+		/// tissue and gives useful information
 		/// for surgical approach and planning.
-		/// A blunt-tipped sialogram needle (30-gauge) is used for performing the ductogram.
+		/// A blunt-tipped sialogram needle (30-gauge) is used
+		/// for performing the ductogram.
 		/// The abnormal duct is identified and cannulated.
 		/// [https://radiopaedia.org/articles/breast-ductography-1?lang=us]
 		/// 
@@ -46,8 +49,10 @@ namespace BreastRadLib
 		public static Coding Code_Mammogram = new Coding(System, "Mammogram", "Mammogram");                                                       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// Magnetic Resonance Imaging (MRI) is a test that uses powerful magnets, radio waves,
-		/// and a computer to make detailed pictures inside your body.
+		/// Magnetic Resonance Imaging (MRI) is a test that uses
+		/// powerful magnets, radio waves,
+		/// and a computer to make detailed pictures inside the
+		/// body.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
@@ -55,7 +60,8 @@ namespace BreastRadLib
 		public static Coding Code_MRI = new Coding(System, "MRI", "MRI");                                                                         // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// The findings on the Mammogram were not previously seen on the outside exam.
+		/// The findings on the Mammogram were not previously
+		/// seen on the outside exam.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG.
@@ -63,7 +69,8 @@ namespace BreastRadLib
 		public static Coding Code_OutsideExam = new Coding(System, "OutsideExam", "Outside exam");                                                // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// This is a type of breast imaging that is used to detect cancer cells in the breasts
+		/// This is a type of breast imaging that is used to
+		/// detect cancer cells in the breasts
 		/// of some women who have had abnormal mammograms.
 		/// 
 		/// 
@@ -73,7 +80,8 @@ namespace BreastRadLib
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
 		/// Uses soundwaves to develop ultrasound images.
-		/// This information is relayed in real time to produce images on a computer screen.
+		/// This information is relayed in real time to produce
+		/// images on a computer screen.
 		/// This can help diagnose and treat disease or conditions.
 		/// 
 		/// 

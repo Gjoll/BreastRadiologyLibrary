@@ -168,6 +168,7 @@ namespace FireFragger.CS.BuildMembers
         protected virtual void BuildContainerClass(String buildMsg)
         {
             Debug.Assert(String.IsNullOrEmpty(this.ContainerClassName) == false);
+            Debug.Assert(this.ContainerClassName != "MAdmin");
 
             this.containerCode
                 .AppendCode($"#region {this.pathName} Container Class")
@@ -322,6 +323,9 @@ namespace FireFragger.CS.BuildMembers
                     .SummaryClose()
                     .AppendCode($"public void Clear() => this.items.Clear();")
                     ;
+
+                if (this.ElementSetNames.Count() == 0)
+                    throw new Exception("No set names defined");
 
                 foreach (String elementSetName in this.ElementSetNames)
                 {
