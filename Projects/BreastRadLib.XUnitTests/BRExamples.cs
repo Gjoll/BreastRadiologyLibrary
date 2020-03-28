@@ -86,6 +86,8 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void A_CreateExamples()
         {
+            if (Directory.Exists(this.OutDir) == false)
+                Directory.CreateDirectory(this.OutDir);
             this.SimpleNarrative();
         }
 
