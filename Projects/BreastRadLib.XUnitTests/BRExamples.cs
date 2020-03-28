@@ -102,10 +102,9 @@ namespace BreastRadiology.XUnitTests
         /// <param name="prefix"></param>
         /// <returns></returns>
         DomainResource SetReferencesContained(Dictionary<String, DomainResource> entryDict,
+            List<String> containNames,
             DomainResource dr)
         {
-            List<String> containNames = new List<string>();
-
             String FixRef(String json)
             {
                 Int32 start = 0;
@@ -133,21 +132,6 @@ namespace BreastRadiology.XUnitTests
 
             FhirJsonParser parser = new FhirJsonParser();
             dr = parser.Parse<DomainResource>(json);
-
-            // If there are contained resource to add, parse this into a domain resource
-            // add the contained resources and write it out again.
-            if (containNames.Count > 0)
-            {
-                foreach (String containName in containNames)
-                {
-                    if (entryDict.TryGetValue(containName,
-                            out DomainResource containedResource) == false)
-                        throw new Exception($"Can not find bundle entry {containName}");
-                    containedResource = this.SetReferencesContained(entryDict, containedResource);
-                    dr.Contained.Add(containedResource);
-                }
-            }
-
             return dr;
         }
 
@@ -168,7 +152,25 @@ namespace BreastRadiology.XUnitTests
                 if (profile.StartsWith("http://hl7.org/fhir/us/breast-radiology/") == false)
                     return;
 
-                dr = this.SetReferencesContained(entryDict, dr);
+                List<String> containNames = new List<string>();
+                dr = this.SetReferencesContained(entryDict, containNames, dr);
+
+                // If there are contained resource to add, parse this into a domain resource
+                // add the contained resources and write it out again.
+                if (containNames.Count > 0)
+                {
+                    foreach (String containName in containNames)
+                    {
+                        if (entryDict.TryGetValue(containName,
+                                out DomainResource containedResource) == false)
+                            throw new Exception($"Can not find bundle entry {containName}");
+                        containedResource = this.SetReferencesContained(entryDict,
+                            containNames,
+                            containedResource);
+                        dr.Contained.Add(containedResource);
+                    }
+                }
+
                 String json = dr.ToFormatedJson();
                 String path = this.ExamplePath(prefix, dr);
                 File.WriteAllText(path, json);
