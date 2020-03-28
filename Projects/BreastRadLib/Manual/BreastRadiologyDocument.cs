@@ -28,6 +28,13 @@ namespace BreastRadLib
 
 
         /// <summary>
+        /// Reference to Author of document.
+        /// a subject.
+        /// </summary>
+        public ResourceReference AuthorReference => this.Author.ResourceReference();
+
+
+        /// <summary>
         /// Reference to Encounter of document. This is propagated to all observations in this document that reference
         /// an encounter.
         /// </summary>
@@ -89,7 +96,9 @@ namespace BreastRadLib
         {
             BreastRadiologyDocument retVal = new BreastRadiologyDocument();
             retVal.ResourceBag = new ResourceBag();
-            retVal.Index = new BreastRadComposition(retVal);
+            Composition index = new Composition();
+            index.Id = "Index";
+            retVal.Index = new BreastRadComposition(retVal, index);
             retVal.ResourceBag.AddResource(retVal.Index.Resource);
             return retVal;
         }
@@ -180,7 +189,12 @@ namespace BreastRadLib
             {
                 Type = Bundle.BundleType.Document,
                 Timestamp = DateTimeOffset.Now,
-                Identifier = new Identifier("http://www.FrostBiteFallsLocalHospital/fhir/documents", "DocumentIdentifier")
+                Identifier = new Identifier("urn:ietf:rfc:3986", Guid.NewGuid().ToString()),
+                Id = "FhirDocumentBundle"
+            };
+            retVal.Meta = new Meta
+            {
+                LastUpdated = DateTimeOffset.Now
             };
 
             void WriteItem(BaseBase baseItem)
@@ -204,9 +218,9 @@ namespace BreastRadLib
             AppendAdmin(this.Encounter, "Encounter");
             AppendAdmin(this.Author, "Author");
 
-            this.Index.Resource.Author.Add(this.Author.ResourceReference());
-            this.Index.Resource.Subject = this.Subject.ResourceReference();
-            //this.Index.Resource.Type = this.Subject.ResourceReference();
+            this.Index.Resource.Author.Add(this.AuthorReference);
+            this.Index.Resource.Subject = this.SubjectReference;
+            //this.Index.Resource.Type = this.SubjectReference;
 
             // Composition must be written first....
             WriteItem(this.Index);

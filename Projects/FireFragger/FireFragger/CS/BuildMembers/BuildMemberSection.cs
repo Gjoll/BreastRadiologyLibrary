@@ -104,6 +104,7 @@ namespace FireFragger.CS.BuildMembers
                 .AppendCode($"Title = \"{this.title}\",")
                 .AppendCode($"Code = {this.sectionCodeMethodName}()")
                 .CloseBrace(";")
+                .AppendCode($"section.Author.Add(doc.Author.ResourceReference());")
                 .AppendCode($"foreach (Item item in this.GetAllItems())")
                 .OpenBrace()
                 .AppendCode($"section.Entry.Add(item.WriteItem(doc));")

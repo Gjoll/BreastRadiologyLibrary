@@ -46,7 +46,7 @@ namespace BreastRadiology.XUnitTests
                 };
                 p.Name.Add(new HumanName
                 {
-                    Given = new String[] {"Bullwinkle"},
+                    Given = new String[] { "Bullwinkle" },
                     Family = "Moose"
                 });
                 doc.Subject = p;
@@ -77,26 +77,141 @@ namespace BreastRadiology.XUnitTests
             return doc;
         }
 
+        void DeleteExamples(String prefix)
+        {
+            foreach (String fileName in Directory.GetFiles(this.OutDir, $"{prefix}*.json"))
+                File.Delete(fileName);
+        }
+
         [TestMethod]
         public void A_CreateExamples()
         {
-            SimpleNarrative();
+            this.SimpleNarrative();
+        }
+
+        String ExamplePath(String prefix, Resource r)
+        {
+            return Path.Combine(this.OutDir,
+                $"{prefix}.{r.TypeName}.{r.Id}.json");
+        }
+
+        /// <summary>
+        /// Make all references in resource contained local references.
+        /// </summary>
+        /// <param name="b"></param>
+        /// <param name="prefix"></param>
+        /// <returns></returns>
+        DomainResource SetReferencesContained(Dictionary<String, DomainResource> entryDict,
+            DomainResource dr)
+        {
+            List<String> containNames = new List<string>();
+
+            String FixRef(String json)
+            {
+                Int32 start = 0;
+                while (true)
+                {
+                    Int32 i = json.IndexOf("\"reference\":", start);
+                    if (i < 0)
+                        return json;
+                    Int32 refStart = json.IndexOf("\"", i + 12) + 1;
+                    String firstPart = json.Substring(0, refStart);
+                    Int32 refEnd = json.IndexOf("\"", refStart + 1);
+                    String lastPart = json.Substring(refEnd);
+                    String reference = json.Substring(refStart, refEnd - refStart);
+                    if (containNames.Contains(reference) == false)
+                        containNames.Add(reference);
+                    reference = reference.Replace("/", ".");
+                    json = firstPart + "#" + reference;
+                    start = json.Length;
+                    json = json + lastPart;
+                }
+            }
+
+            String json = dr.ToFormatedJson();
+            json = FixRef(json);
+
+            FhirJsonParser parser = new FhirJsonParser();
+            dr = parser.Parse<DomainResource>(json);
+
+            // If there are contained resource to add, parse this into a domain resource
+            // add the contained resources and write it out again.
+            if (containNames.Count > 0)
+            {
+                foreach (String containName in containNames)
+                {
+                    if (entryDict.TryGetValue(containName,
+                            out DomainResource containedResource) == false)
+                        throw new Exception($"Can not find bundle entry {containName}");
+                    containedResource = this.SetReferencesContained(entryDict, containedResource);
+                    dr.Contained.Add(containedResource);
+                }
+            }
+
+            return dr;
+        }
+
+
+        /// <summary>
+        /// Note: This modifies the resource in b.
+        /// </summary>
+        void SplitExampleBundle(Bundle b, String prefix)
+        {
+            Dictionary<String, DomainResource> entryDict = new Dictionary<string, DomainResource>();
+
+            void Write(Bundle.EntryComponent entry)
+            {
+                DomainResource dr = (DomainResource) entry.Resource;
+                String profile = dr?.Meta?.Profile?.FirstOrDefault();
+                if (profile == null)
+                    return;
+                if (profile.StartsWith("http://hl7.org/fhir/us/breast-radiology/") == false)
+                    return;
+
+                dr = this.SetReferencesContained(entryDict, dr);
+                String json = dr.ToFormatedJson();
+                String path = this.ExamplePath(prefix, dr);
+                File.WriteAllText(path, json);
+            }
+
+            foreach (Bundle.EntryComponent entry in b.Entry)
+            {
+                DomainResource dr = (DomainResource) entry.Resource;
+
+                // make a copy so we dont change the original id.
+                String json = dr.ToFormatedJson();
+                FhirJsonParser parser = new FhirJsonParser();
+                dr = parser.Parse<DomainResource>(json);
+
+                dr.Id = $"{dr.TypeName}.{dr.Id}";
+                entryDict.Add(entry.FullUrl, dr);
+            }
+
+            foreach (Bundle.EntryComponent entry in b.Entry)
+                Write(entry);
+
         }
 
         void SimpleNarrative()
         {
+            const String prefix = "SimpleNarrativeOnlyReport";
+
+            this.DeleteExamples(prefix);
             Bundle b;
             {
-                BreastRadiologyDocument doc = MakeDoc();
+                BreastRadiologyDocument doc = this.MakeDoc();
                 {
                     BreastRadComposition index = doc.Index;
                     index.Resource.DateElement = doc.Date;
                     index.Resource.Status = CompositionStatus.Final;
                     index.Resource.Title = "Simple Narrative Only Breast Radiology Report";
-                    BreastRadReport report = index.Report.Set(new BreastRadReport(doc));
+                    DiagnosticReport diagnosticReport = new DiagnosticReport
+                    {
+                        Id = "Report"
+                    };
+                    BreastRadReport report = index.Report.Set(new BreastRadReport(doc, diagnosticReport));
 
                     DiagnosticReport r = report.Resource;
-                    r.Id = "ReportId";
                     r.Status = DiagnosticReport.DiagnosticReportStatus.Final;
                     r.Category.Add(new CodeableConcept("http://terminology.hl7.org/CodeSystem/observation-category",
                         "imaging"));
@@ -105,7 +220,12 @@ namespace BreastRadiology.XUnitTests
                     report.SetConclusionCode(BiRadsAssessmentCategoriesVS.Code_Category2);
                 }
                 b = doc.Write();
-                b.SaveJson(Path.Combine(OutDir, "FhirDocument.SimpleNarrativeOnlyReport.json"));
+                String path = this.ExamplePath(prefix, b);
+                b.SaveJson(path);
+
+                this.SplitExampleBundle(b, prefix);
+                //doc.Index.Resource.SaveJson(Path.Combine(OutDir, "SimpleNarrativeOnlyReport.BreastRadComposition.json"));
+                //doc.Index.Report.Get().Resource.SaveJson(Path.Combine(OutDir, "SimpleNarrativeOnlyReport.BreastRadReport.json"));
             }
         }
     }

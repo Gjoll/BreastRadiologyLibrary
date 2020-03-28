@@ -8,6 +8,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using BreastRadLib;
 using BreastRadLib.CompositionLocal;
+using BreastRadLib.ExtensionMethods;
 
 //+Usings
 //-Usings
@@ -354,7 +355,9 @@ namespace BreastRadLib.BreastRadCompositionLocal
 	            Title = "Clinical Impressions",                                                                                                // BuildMemberSection.cs:104
 	            Code = SectionCode()                                                                                                           // BuildMemberSection.cs:105
 	        };                                                                                                                                 // BuildMemberSection.cs:106
-	        foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
+			section.Author.Add(doc.AuthorReference);
+
+            foreach (Item item in this.GetAllItems())                                                                                          // BuildMemberSection.cs:107
 	        {                                                                                                                                  // BuildMemberSection.cs:108
 	            section.Entry.Add(item.WriteItem(doc));                                                                                        // BuildMemberSection.cs:109
 	        }                                                                                                                                  // BuildMemberSection.cs:110
