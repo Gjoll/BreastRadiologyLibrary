@@ -198,6 +198,12 @@ namespace BreastRadiology.XUnitTests
 
         }
 
+        AbnormalityCyst MakeCyst()
+        {
+            AbnormalityCyst c = new AbnormalityCyst();
+            return c;
+        }
+
         void Complex()
         {
             const String prefix = "ComplexReport";
@@ -230,8 +236,8 @@ namespace BreastRadiology.XUnitTests
                 SectionFindingsLeftBreast flb = findingLeft.Set(new SectionFindingsLeftBreast());
                 flb.Resource.Value = BiRadsAssessmentCategoriesCS.Code_Category2;
 
-                var mgFinding = findingLeft.Get().MGFinding;
-
+                MGFinding mgFinding = flb.MGFinding.Set(new MGFinding());
+                mgFinding.AbnormalityCyst.Append(MakeCyst());
                 b = doc.Write();
                 String path = this.ExamplePath(prefix, b);
                 b.SaveJson(path);
