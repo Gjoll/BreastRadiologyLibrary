@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:393
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// TumorSatellite
 		/// Access fhir element 'Observation.hasMember:tumorSatellite'
 		/// </summary>
-		public MTumorSatellite TumorSatellite { get ; protected set; }                                                                            // BuildMemberBase.cs:399
+		public MTumorSatellite TumorSatellite { get ; protected set; }                                                                            // BuildMemberBase.cs:400
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberReferences.cs, Line 188
-			this.TumorSatellite = new MTumorSatellite(0, -1);                                                                                        // BuildMemberBase.cs:378
+			this.TumorSatellite = new MTumorSatellite(0, -1);                                                                                        // BuildMemberBase.cs:379
 			//- Constructor
 
 			//+ ValidateCodeStart

@@ -40,8 +40,8 @@ namespace BreastRadLib
 		public static Coding Code_Ductogram = new Coding(System, "Ductogram", "Ductogram");                                                       // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// An X-Ray picture of the breast.
-		/// It&#39;s used to look for early signs of breast cancer.
+		/// A mammogram is an X-Ray picture of the breast.
+		/// It is used to look for early signs of breast cancer.
 		/// 
 		/// 
 		/// Valid for the following modalities: MG US MRI NM.
@@ -71,7 +71,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// This is a type of breast imaging that is used to
 		/// detect cancer cells in the breasts
-		/// of some women who have had abnormal mammograms.
+		/// of some patients who have had abnormal mammograms.
 		/// 
 		/// 
 		/// Valid for the following modalities: NM.

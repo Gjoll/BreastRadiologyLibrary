@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:393
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// Access fhir element 'Observation.component:biRadsAssessmentCategory'
 		/// </summary>
-		public MBiRadsAssessmentCategory BiRadsAssessmentCategory { get ; protected set; }                                                        // BuildMemberBase.cs:399
+		public MBiRadsAssessmentCategory BiRadsAssessmentCategory { get ; protected set; }                                                        // BuildMemberBase.cs:400
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 202
-			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 1);                                                                     // BuildMemberBase.cs:378
+			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 1);                                                                     // BuildMemberBase.cs:379
 			//- Constructor
 
 			//+ ValidateCodeStart

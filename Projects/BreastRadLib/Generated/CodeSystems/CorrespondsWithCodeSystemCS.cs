@@ -168,7 +168,7 @@ namespace BreastRadLib
 		/// <summary>
 		/// The initial Mammogram corresponds with the Scinti
 		/// results.
-		/// Scintigraphy definition is - a diagnostic technique
+		/// Scintigraphy definition is a diagnostic technique
 		/// in which a two-dimensional picture
 		/// of internal body tissue is produced through the detection
 		/// of radiation emitted by

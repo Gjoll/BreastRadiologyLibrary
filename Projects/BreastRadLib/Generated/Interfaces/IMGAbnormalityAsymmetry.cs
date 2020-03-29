@@ -30,11 +30,11 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:385
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// AsymmetryType
 		/// </summary>
-		MAsymmetryType AsymmetryType { get ; }                                                                                                    // BuildMemberBase.cs:388
+		MAsymmetryType AsymmetryType { get ; }                                                                                                    // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

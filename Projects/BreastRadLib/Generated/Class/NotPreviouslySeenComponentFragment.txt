@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:393
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// NotPreviouslySeen
 		/// Access fhir element 'Observation.component:notPreviouslySeen'
 		/// </summary>
-		public MNotPreviouslySeen NotPreviouslySeen { get ; protected set; }                                                                      // BuildMemberBase.cs:399
+		public MNotPreviouslySeen NotPreviouslySeen { get ; protected set; }                                                                      // BuildMemberBase.cs:400
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 202
-			this.NotPreviouslySeen = new MNotPreviouslySeen(0, -1);                                                                                  // BuildMemberBase.cs:378
+			this.NotPreviouslySeen = new MNotPreviouslySeen(0, -1);                                                                                  // BuildMemberBase.cs:379
 			//- Constructor
 
 			//+ ValidateCodeStart

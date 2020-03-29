@@ -169,6 +169,7 @@ namespace FireFragger.CS.BuildMembers
         {
             Debug.Assert(String.IsNullOrEmpty(this.ContainerClassName) == false);
 
+            
             this.containerCode
                 .AppendCode($"#region {this.pathName} Container Class")
                 .AppendLine($"// {buildMsg}")
@@ -187,7 +188,7 @@ namespace FireFragger.CS.BuildMembers
                 .SummaryOpen()
                 .Summary($"Constructor")
                 .SummaryClose()
-                .AppendCode($"public {this.ContainerClassName}(Int32 min, Int32 max) : base(\"{this.pathName}\", min, max)")
+                .AppendCode($"public {this.ContainerClassName}(Int32 min = {this.Min}, Int32 max = {this.Max}) : base(\"{this.pathName}\", min, max)")
                 .OpenBrace()
                 .DefineBlock(out this.containerCodeBlocks.ClassConstructor)
                 .CloseBrace()

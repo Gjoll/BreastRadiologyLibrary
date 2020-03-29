@@ -39,134 +39,134 @@ namespace BreastRadLib
 	public class MGAbnormalityFatNecrosis : ObservationBase, IMGAbnormalityFatNecrosis
 	{
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:393
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberElement.cs, Line 123
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// BodySite
 		/// Access fhir element 'Observation.bodySite'
 		/// </summary>
-		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MBodySite BodySite { get ; protected set; }                                                                                        // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsChanges
 		/// Access fhir element 'Observation.component:obsChanges'
 		/// </summary>
-		public MObsChanges ObsChanges { get ; protected set; }                                                                                    // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MObsChanges ObsChanges { get ; protected set; }                                                                                    // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// BiRadsAssessmentCategory
 		/// Access fhir element 'Observation.component:biRadsAssessmentCategory'
 		/// </summary>
-		public MBiRadsAssessmentCategory BiRadsAssessmentCategory { get ; protected set; }                                                        // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MBiRadsAssessmentCategory BiRadsAssessmentCategory { get ; protected set; }                                                        // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// Orientation
 		/// Access fhir element 'Observation.component:orientation'
 		/// </summary>
-		public MOrientation Orientation { get ; protected set; }                                                                                  // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MOrientation Orientation { get ; protected set; }                                                                                  // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// Shape
 		/// Access fhir element 'Observation.component:shape'
 		/// </summary>
-		public MShape Shape { get ; protected set; }                                                                                              // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MShape Shape { get ; protected set; }                                                                                              // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// Margin
 		/// Access fhir element 'Observation.component:margin'
 		/// </summary>
-		public MMargin Margin { get ; protected set; }                                                                                            // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MMargin Margin { get ; protected set; }                                                                                            // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// MgDensity
 		/// Access fhir element 'Observation.component:mgDensity'
 		/// </summary>
-		public MMgDensity MgDensity { get ; protected set; }                                                                                      // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MMgDensity MgDensity { get ; protected set; }                                                                                      // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// NotPreviouslySeen
 		/// Access fhir element 'Observation.component:notPreviouslySeen'
 		/// </summary>
-		public MNotPreviouslySeen NotPreviouslySeen { get ; protected set; }                                                                      // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MNotPreviouslySeen NotPreviouslySeen { get ; protected set; }                                                                      // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsCount
 		/// Access fhir element 'Observation.component:obsCount'
 		/// </summary>
-		public MObsCount ObsCount { get ; protected set; }                                                                                        // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MObsCount ObsCount { get ; protected set; }                                                                                        // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsSize
 		/// Access fhir element 'Observation.component:obsSize'
 		/// </summary>
-		public MObsSize ObsSize { get ; protected set; }                                                                                          // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MObsSize ObsSize { get ; protected set; }                                                                                          // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsDistribution
 		/// Access fhir element 'Observation.component:obsDistribution'
 		/// </summary>
-		public MObsDistribution ObsDistribution { get ; protected set; }                                                                          // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MObsDistribution ObsDistribution { get ; protected set; }                                                                          // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsDistRegionSize
 		/// Access fhir element 'Observation.component:obsDistRegionSize'
 		/// </summary>
-		public MObsDistRegionSize ObsDistRegionSize { get ; protected set; }                                                                      // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MObsDistRegionSize ObsDistRegionSize { get ; protected set; }                                                                      // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// CorrespondsWith
 		/// Access fhir element 'Observation.component:correspondsWith'
 		/// </summary>
-		public MCorrespondsWith CorrespondsWith { get ; protected set; }                                                                          // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MCorrespondsWith CorrespondsWith { get ; protected set; }                                                                          // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// PreviouslyDemonstratedBy
 		/// Access fhir element 'Observation.component:PreviouslyDemonstratedBy'
 		/// </summary>
-		public MPreviouslyDemonstratedBy PreviouslyDemonstratedBy { get ; protected set; }                                                        // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MPreviouslyDemonstratedBy PreviouslyDemonstratedBy { get ; protected set; }                                                        // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// AssociatedFeature
 		/// Access fhir element 'Observation.hasMember:associatedFeature'
 		/// </summary>
-		public MAssociatedFeature AssociatedFeature { get ; protected set; }                                                                      // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MAssociatedFeature AssociatedFeature { get ; protected set; }                                                                      // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ConsistentWith
 		/// Access fhir element 'Observation.hasMember:consistentWith'
 		/// </summary>
-		public MConsistentWith ConsistentWith { get ; protected set; }                                                                            // BuildMemberBase.cs:399
+		public MConsistentWith ConsistentWith { get ; protected set; }                                                                            // BuildMemberBase.cs:400
 		//- Properties
 
 		/// <summary>
@@ -211,37 +211,37 @@ namespace BreastRadLib
 			this.Resource.Code = FixedValue_ObservationCode();                                                                                       // DefineBase.cs:177
 			SetProfileUrl("http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAbnormalityFatNecrosis");                                   // DefineBase.cs:238
 			// Called from BuildMemberElement.cs, Line 123
-			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:378
+			this.BodySite = new MBodySite(1, 1);                                                                                                     // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:378
+			this.ObsChanges = new MObsChanges(0, -1);                                                                                                // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 1);                                                                     // BuildMemberBase.cs:378
+			this.BiRadsAssessmentCategory = new MBiRadsAssessmentCategory(0, 1);                                                                     // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Orientation = new MOrientation(0, 1);                                                                                               // BuildMemberBase.cs:378
+			this.Orientation = new MOrientation(0, 1);                                                                                               // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Shape = new MShape(0, 1);                                                                                                           // BuildMemberBase.cs:378
+			this.Shape = new MShape(0, 1);                                                                                                           // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.Margin = new MMargin(0, 1);                                                                                                         // BuildMemberBase.cs:378
+			this.Margin = new MMargin(0, 1);                                                                                                         // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.MgDensity = new MMgDensity(0, 1);                                                                                                   // BuildMemberBase.cs:378
+			this.MgDensity = new MMgDensity(0, 1);                                                                                                   // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.NotPreviouslySeen = new MNotPreviouslySeen(0, -1);                                                                                  // BuildMemberBase.cs:378
+			this.NotPreviouslySeen = new MNotPreviouslySeen(0, -1);                                                                                  // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:378
+			this.ObsCount = new MObsCount(0, 1);                                                                                                     // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsSize = new MObsSize(0, 3);                                                                                                       // BuildMemberBase.cs:378
+			this.ObsSize = new MObsSize(0, 3);                                                                                                       // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsDistribution = new MObsDistribution(0, -1);                                                                                      // BuildMemberBase.cs:378
+			this.ObsDistribution = new MObsDistribution(0, -1);                                                                                      // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsDistRegionSize = new MObsDistRegionSize(0, 3);                                                                                   // BuildMemberBase.cs:378
+			this.ObsDistRegionSize = new MObsDistRegionSize(0, 3);                                                                                   // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.CorrespondsWith = new MCorrespondsWith(0, -1);                                                                                      // BuildMemberBase.cs:378
+			this.CorrespondsWith = new MCorrespondsWith(0, -1);                                                                                      // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, -1);                                                                    // BuildMemberBase.cs:378
+			this.PreviouslyDemonstratedBy = new MPreviouslyDemonstratedBy(0, -1);                                                                    // BuildMemberBase.cs:379
 			// Called from BuildMemberReferences.cs, Line 188
-			this.AssociatedFeature = new MAssociatedFeature(0, -1);                                                                                  // BuildMemberBase.cs:378
+			this.AssociatedFeature = new MAssociatedFeature(0, -1);                                                                                  // BuildMemberBase.cs:379
 			// Called from BuildMemberReferences.cs, Line 188
-			this.ConsistentWith = new MConsistentWith(0, -1);                                                                                        // BuildMemberBase.cs:378
+			this.ConsistentWith = new MConsistentWith(0, -1);                                                                                        // BuildMemberBase.cs:379
 			//- Constructor
 		}
 

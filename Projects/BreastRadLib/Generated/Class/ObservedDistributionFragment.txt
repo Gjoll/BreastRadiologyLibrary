@@ -1,27 +1,27 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:393
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsDistribution
 		/// Access fhir element 'Observation.component:obsDistribution'
 		/// </summary>
-		public MObsDistribution ObsDistribution { get ; protected set; }                                                                          // BuildMemberBase.cs:399
-		                                                                                                                                          // BuildMemberBase.cs:393
+		public MObsDistribution ObsDistribution { get ; protected set; }                                                                          // BuildMemberBase.cs:400
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberComponents.cs, Line 202
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ObsDistRegionSize
 		/// Access fhir element 'Observation.component:obsDistRegionSize'
 		/// </summary>
-		public MObsDistRegionSize ObsDistRegionSize { get ; protected set; }                                                                      // BuildMemberBase.cs:399
+		public MObsDistRegionSize ObsDistRegionSize { get ; protected set; }                                                                      // BuildMemberBase.cs:400
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsDistribution = new MObsDistribution(0, -1);                                                                                      // BuildMemberBase.cs:378
+			this.ObsDistribution = new MObsDistribution(0, -1);                                                                                      // BuildMemberBase.cs:379
 			// Called from BuildMemberComponents.cs, Line 202
-			this.ObsDistRegionSize = new MObsDistRegionSize(0, 3);                                                                                   // BuildMemberBase.cs:378
+			this.ObsDistRegionSize = new MObsDistRegionSize(0, 3);                                                                                   // BuildMemberBase.cs:379
 			//- Constructor
 
 			//+ ValidateCodeStart

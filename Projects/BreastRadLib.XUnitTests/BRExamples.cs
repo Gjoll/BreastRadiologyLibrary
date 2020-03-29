@@ -15,6 +15,7 @@ using System.Linq;
 using Newtonsoft.Json.Linq;
 using BreastRadLib;
 using BreastRadLib.BodyDistanceFromExtensionLocal;
+using BreastRadLib.BreastRadCompositionLocal;
 using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 
@@ -89,6 +90,7 @@ namespace BreastRadiology.XUnitTests
             if (Directory.Exists(this.OutDir) == false)
                 Directory.CreateDirectory(this.OutDir);
             this.SimpleNarrative();
+            this.Complex();
         }
 
         String ExamplePath(String prefix, Resource r)
@@ -147,7 +149,7 @@ namespace BreastRadiology.XUnitTests
 
             void Write(Bundle.EntryComponent entry)
             {
-                DomainResource dr = (DomainResource) entry.Resource;
+                DomainResource dr = (DomainResource)entry.Resource;
                 String profile = dr?.Meta?.Profile?.FirstOrDefault();
                 if (profile == null)
                     return;
@@ -180,7 +182,7 @@ namespace BreastRadiology.XUnitTests
 
             foreach (Bundle.EntryComponent entry in b.Entry)
             {
-                DomainResource dr = (DomainResource) entry.Resource;
+                DomainResource dr = (DomainResource)entry.Resource;
 
                 // make a copy so we dont change the original id.
                 String json = dr.ToFormatedJson();
@@ -194,6 +196,48 @@ namespace BreastRadiology.XUnitTests
             foreach (Bundle.EntryComponent entry in b.Entry)
                 Write(entry);
 
+        }
+
+        void Complex()
+        {
+            const String prefix = "ComplexReport";
+
+            this.DeleteExamples(prefix);
+            Bundle b;
+            {
+                BreastRadiologyDocument doc = this.MakeDoc();
+                BreastRadComposition index = doc.Index;
+                {
+                    index.Resource.DateElement = doc.Date;
+                    index.Resource.Status = CompositionStatus.Final;
+                    index.Resource.Title = "Complex Breast Radiology Report";
+                    DiagnosticReport diagnosticReport = new DiagnosticReport
+                    {
+                        Id = "Report"
+                    };
+                    BreastRadReport report = index.Report.Set(new BreastRadReport(doc, diagnosticReport));
+
+                    DiagnosticReport r = report.Resource;
+                    r.Status = DiagnosticReport.DiagnosticReportStatus.Final;
+                    r.Category.Add(new CodeableConcept("http://terminology.hl7.org/CodeSystem/observation-category",
+                        "imaging"));
+                    r.Code = new CodeableConcept("http://loinc.org", "10193-1");
+                    r.Conclusion = "Report Narrative conclusion.";
+                    report.SetConclusionCode(BiRadsAssessmentCategoriesVS.Code_Category2);
+                }
+
+                MFindingsLeftBreast findingLeft = index.FindingsLeftBreast;
+                SectionFindingsLeftBreast flb = findingLeft.Set(new SectionFindingsLeftBreast());
+                flb.Resource.Value = BiRadsAssessmentCategoriesCS.Code_Category2;
+
+                var mgFinding = findingLeft.Get().MGFinding;
+
+                b = doc.Write();
+                String path = this.ExamplePath(prefix, b);
+                b.SaveJson(path);
+
+                this.SplitExampleBundle(b, prefix);
+            }
         }
 
         void SimpleNarrative()
@@ -228,8 +272,6 @@ namespace BreastRadiology.XUnitTests
                 b.SaveJson(path);
 
                 this.SplitExampleBundle(b, prefix);
-                //doc.Index.Resource.SaveJson(Path.Combine(OutDir, "SimpleNarrativeOnlyReport.BreastRadComposition.json"));
-                //doc.Index.Report.Get().Resource.SaveJson(Path.Combine(OutDir, "SimpleNarrativeOnlyReport.BreastRadReport.json"));
             }
         }
     }

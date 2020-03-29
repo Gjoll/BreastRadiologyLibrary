@@ -298,7 +298,7 @@ namespace BreastRadLib
 		public static Coding Code_SurgicalClips = new Coding(System, "SurgicalClips", "Surgical clips");                                          // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// A Retained surgical swab appears to have been idenified
+		/// A Retained surgical swab appears to have been identified
 		/// in the breast during the
 		/// mammogram, ultrasound and/or MRI.
 		/// 

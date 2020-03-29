@@ -20,29 +20,29 @@ namespace BreastRadLib
 	{
 		//+ Properties
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:385
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MGFinding
 		/// </summary>
-		MMGFinding MGFinding { get ; }                                                                                                            // BuildMemberBase.cs:388
+		MMGFinding MGFinding { get ; }                                                                                                            // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:385
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// MRIFinding
 		/// </summary>
-		MMRIFinding MRIFinding { get ; }                                                                                                          // BuildMemberBase.cs:388
+		MMRIFinding MRIFinding { get ; }                                                                                                          // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:385
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// NMFinding
 		/// </summary>
-		MNMFinding NMFinding { get ; }                                                                                                            // BuildMemberBase.cs:388
+		MNMFinding NMFinding { get ; }                                                                                                            // BuildMemberBase.cs:389
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:385
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// USFinding
 		/// </summary>
-		MUSFinding USFinding { get ; }                                                                                                            // BuildMemberBase.cs:388
+		MUSFinding USFinding { get ; }                                                                                                            // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

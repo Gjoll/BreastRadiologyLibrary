@@ -18,48 +18,48 @@ namespace BreastRadLib
 
 	{
 		//+ Properties
-		// Called from BuildMemberSection.cs, Line 224
-		// BuildMemberBase.cs:385
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// Report
 		/// </summary>
-		MReport Report { get ; }                                                                                                                  // BuildMemberBase.cs:388
-		// Called from BuildMemberSection.cs, Line 224
-		// BuildMemberBase.cs:385
+		MReport Report { get ; }                                                                                                                  // BuildMemberBase.cs:389
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// Impressions
 		/// </summary>
-		MImpressions Impressions { get ; }                                                                                                        // BuildMemberBase.cs:388
-		// Called from BuildMemberSection.cs, Line 224
-		// BuildMemberBase.cs:385
+		MImpressions Impressions { get ; }                                                                                                        // BuildMemberBase.cs:389
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// FindingsRightBreast
 		/// </summary>
-		MFindingsRightBreast FindingsRightBreast { get ; }                                                                                        // BuildMemberBase.cs:388
-		// Called from BuildMemberSection.cs, Line 224
-		// BuildMemberBase.cs:385
+		MFindingsRightBreast FindingsRightBreast { get ; }                                                                                        // BuildMemberBase.cs:389
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// FindingsLeftBreast
 		/// </summary>
-		MFindingsLeftBreast FindingsLeftBreast { get ; }                                                                                          // BuildMemberBase.cs:388
-		// Called from BuildMemberSection.cs, Line 224
-		// BuildMemberBase.cs:385
+		MFindingsLeftBreast FindingsLeftBreast { get ; }                                                                                          // BuildMemberBase.cs:389
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// RelatedResources
 		/// </summary>
-		MRelatedResources RelatedResources { get ; }                                                                                              // BuildMemberBase.cs:388
-		// Called from BuildMemberSection.cs, Line 224
-		// BuildMemberBase.cs:385
+		MRelatedResources RelatedResources { get ; }                                                                                              // BuildMemberBase.cs:389
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// Recommendations
 		/// </summary>
-		MRecommendations Recommendations { get ; }                                                                                                // BuildMemberBase.cs:388
-		// Called from BuildMemberSection.cs, Line 224
-		// BuildMemberBase.cs:385
+		MRecommendations Recommendations { get ; }                                                                                                // BuildMemberBase.cs:389
+		// Called from BuildMemberSection.cs, Line 225
+		// BuildMemberBase.cs:386
 		/// <summary>
 		/// Admin
 		/// </summary>
-		MAdmin Admin { get ; }                                                                                                                    // BuildMemberBase.cs:388
+		MAdmin Admin { get ; }                                                                                                                    // BuildMemberBase.cs:389
 		//- Properties
 
 		//+ Methods

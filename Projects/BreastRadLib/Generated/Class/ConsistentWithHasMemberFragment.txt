@@ -1,17 +1,17 @@
 		//+ Properties
-		                                                                                                                                          // BuildMemberBase.cs:393
+		                                                                                                                                          // BuildMemberBase.cs:394
 		// Called from BuildMemberReferences.cs, Line 188
-		// BuildMemberBase.cs:395
+		// BuildMemberBase.cs:396
 		/// <summary>
 		/// ConsistentWith
 		/// Access fhir element 'Observation.hasMember:consistentWith'
 		/// </summary>
-		public MConsistentWith ConsistentWith { get ; protected set; }                                                                            // BuildMemberBase.cs:399
+		public MConsistentWith ConsistentWith { get ; protected set; }                                                                            // BuildMemberBase.cs:400
 		//- Properties
 
 			//+ Constructor
 			// Called from BuildMemberReferences.cs, Line 188
-			this.ConsistentWith = new MConsistentWith(0, -1);                                                                                        // BuildMemberBase.cs:378
+			this.ConsistentWith = new MConsistentWith(0, -1);                                                                                        // BuildMemberBase.cs:379
 			//- Constructor
 
 			//+ ValidateCodeStart

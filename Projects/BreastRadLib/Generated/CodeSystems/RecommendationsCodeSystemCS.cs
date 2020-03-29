@@ -558,8 +558,8 @@ namespace BreastRadLib
 		public static Coding Code_MagnificationViews = new Coding(System, "MagnificationViews", "Magnification views");                           // Builder.cs:408
 		                                                                                                                                          // Builder.cs:389
 		/// <summary>
-		/// An X-Ray picture of the breast.
-		/// It&#39;s used to look for early signs of breast cancer.
+		/// A mammogram is an X-Ray picture of the breast.
+		/// It is used to look for early signs of breast cancer.
 		/// 
 		/// 
 		/// Valid for the following modalities: MRI.

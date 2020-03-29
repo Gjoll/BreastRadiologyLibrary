@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Hl7.Fhir.Model;
 
-namespace BreastRadLib.ExtensionMethods
+namespace BreastRadLib
 {
     public static class ResourceExtensions
     {
